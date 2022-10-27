@@ -9,6 +9,11 @@ window.MathJax = {
     
 
     loader: {load: ['[tex]/color']},
+    tex: {packages: {'[+]': ['color']}},
+
+    svg: {
+        fontCache: 'global'
+      },
 
     tex: {
         packages: {'[+]': ['color']},
@@ -25,6 +30,8 @@ window.MathJax = {
             ds: "\\displaystyle",
             ba: "\\begin{aligned}",
             ea: "\\end{aligned}",
+            baat: "\\begin{alignedat}",
+            eaat: "\\end{alignedat}",
             bc: "\\begin{cases}",
             ec: "\\end{cases}",
             nspace: "\\hspace{2.52mm}",
@@ -34,34 +41,33 @@ window.MathJax = {
             deg: "\\textrm{deg}",
             be: "\\begin{equation}",
             ee: "\\end{equation}",
+            andThree: ["#1 \\; \\comma \\; #2 \\; \\comma \\text{and} \\; #3", 3],
             and: "\\qquad \\text{and} \\qquad",
             as: "\\qquad \\text{as} \\qquad",
             or: "\\qquad \\text{or} \\qquad",
             for: "\\qquad \\text{for} \\qquad",
+            lspace: "\\hspace{6.5em}",
             comma: "\\, , \\,",
             period: "\\, .",
+            pd: "\\period",
+            cma:"\\comma",
             ques: "\\; ?",
             col: "\\! :",
             scol: "\\, ; \\,",
-            // eqref: ["\\color{pink}{(\\ref{#1})}", 1],
             eqRefer: ["\\text{Equation } \\eqref{#1}", 1],
+            eqReferTwo: ["\\text{Equations } \\eqref{#1} \\text{ and } \\eqref{#2}", 2],
             deriv: ["\\frac{\\dd #1}{\\dd #2}", 2],
+            textDeriv: ["\\dd #1 / \\dd #2", 2],
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
             di: "\\, \\dd",
             nl: "\\\\[1ex]",
             indZero: "\\frac{0}{0}",
-            indInfty: "\\infty/\\infty"
+            indInfty: "\\infty/\\infty",
+            qed: "\\tag*{$\\blacksquare$}",
+            un: ["\\, \\textrm{#1} ", 1],
+            undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2]
         }
-    },
-
-    svg: {
-        fontCache: 'global',
-        styles:{
-            "svg-href": {
-                fill: "red", stroke: "red"
-              },
-        },
     },
 };
     
