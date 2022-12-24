@@ -6,20 +6,20 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/Valculus/images/favicon.png" rel="icon">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/Valculus/css/notes-style.css" rel="stylesheet">
-    <link href="/Valculus/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/Valculus/index.html">
     <img src="/Valculus/Valculus/images/logo.png" class="logo-image" alt="">
 </a>
-    <script src="/Valculus/Valculus/js/header-load.js" type="text/javascript"></script>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
     <h1>3.1 — Related Rates</h1>
     <main>
       <div class="pdf-panel">
@@ -54,18 +54,18 @@
       <!--[[[crefId.Related-Rates]]]--> 
 <p>
     When you inflate a basketball, both its volume and radius are expanding; 
-    we call these corresponding <i>related rates</i>.
+    we call these <i>related rates</i>.
     In this section, we manage multiple related rates. 
     You'll learn to determine the rate at which the basketball's radius is increasing 
     when given another rate—the rate at which the basketball's volume expands.
-    This topic applies the Chain Rule, which we discussed in Section <a href="/Valculus/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>,
+    This topic applies the Chain Rule, which we discussed in Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>,
     to physical phenomena.
 </p>
 <p>
     In <span class="emph">related rates</span> problems, 
     one or more quantities are changing with respect to time.
     When given a problem, it is important to read carefully, draw a diagram, and assign symbols. 
-    The objective is write an equation that relates changing quantities,
+    The objective is to write an equation that relates changing quantities,
     and then differentiate with respect to time. 
     We use the Chain Rule because we treat each quantity—for example, 
     height, volume, length—as a function of time.
@@ -77,7 +77,7 @@
     &= (2x + 4)(3) = 6x + 12 \pd 
     \ea 
     \]
-    The rate \(Q'(2)\) represents how quickly \(Q\) is changing when \(x = 2.\)
+    The rate \(Q'(2) = 24\) represents how quickly \(Q\) is changing when \(x = 2.\)
 
     Since we treat physical quantities as functions of time, \(t,\) we may write a physical quantity \(Q\) 
     as \(Q(t).\)
@@ -157,7 +157,7 @@
 
 <p>
     <a href="#ex-tank">Example 1</a> shows a situation in which the rates are constant.
-    In other words, \(\textDeriv{h}{t}\) does not change depending on \(h,\)
+    In other words, \(\textDeriv{h}{t}\) does not depend on \(h,\)
     the depth of the water.
     But in other problems, rates are not constant: 
     Sometimes we must evaluate a derivative at a given point.
@@ -165,7 +165,7 @@
 </p>
 <p>
     It is best practice to plug in numbers as the <i>final</i> step.
-    In other words, after differentiating you should immediately solve for the quantity you desire, before substituting values.
+    In other words, after differentiating you should immediately solve for the quantity you need, before substituting values.
     This practice reduces the risk of committing arithmetic errors.
 </p>
 
@@ -210,7 +210,7 @@
         \end{align}
         <aside class="box-remark">
             In \(\eqRefer{eq:snowball-V}\) we <i>first</i> differentiate \(V\) <i>before</i> substituting \(r = 10 \un{in}.\)
-            The other way around modifies function \(V(t)\) and yields \(\textDeriv{V}{t} = 0,\) a nonsensical result.
+            The other way around modifies function \(V(t)\) such that \(\textDeriv{V}{t} = 0,\) a nonsensical result.
         </aside>
         In \(\eqRefer{eq:snowball-dV/dt},\) we substitute \(r = 10 \un{in}\)
         and the given \(\textDeriv{V}{t} = -15 \un{in}^3/\un{sec}\) to find 
@@ -620,11 +620,11 @@
         </p>
     </div>
 </footer> -->
-    <script src="/Valculus/Valculus/js/mathjax-config.js"></script>
+    <script src="/Valculus/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/Valculus/js/toggle-solutions.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
   </body>
 </html>
