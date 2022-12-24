@@ -42,6 +42,7 @@ h4{
 
 h4, .page-anchor{
     font-variant: small-caps;
+<<<<<<< HEAD
     /* color: rgb(194, 126, 0); */
     color: rgb(83, 198, 198);
 }
@@ -96,6 +97,14 @@ main tr{
 
 .emph{ /* emphasize something, like a definition */ 
     text-decoration: underline;
+=======
+    color: rgb(83, 198, 198);
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+.emph{ /* emphasize something, like a definition */ 
+    font-weight: bold;
+>>>>>>> 5fc3516 (related rates done; display modifications)
 }
 
 .proof{
@@ -113,10 +122,21 @@ main tr{
     padding-bottom: 0;
     margin-top: 8%;    
     padding: 0.7rem 0.4rem 0.4rem 0.4rem;
+<<<<<<< HEAD
     font-size: 1.7rem;
     line-height: 1.5;
 }
 
+=======
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+.box-title, .steps-title, .example-title, .section-summary::before, .solution-button{
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+>>>>>>> 5fc3516 (related rates done; display modifications)
 .box{ /* for theorems and facts */
     text-align: left;
     line-height: 2.5;
@@ -145,6 +165,17 @@ main tr{
     background-color: rgb(63, 124, 73);
 }
 
+<<<<<<< HEAD
+=======
+.example figure, img{
+    /* width: 350px; */
+    position: static;
+    margin-left: auto;
+    margin-left: 3%;
+    /* margin-left: auto; */
+}
+
+>>>>>>> 5fc3516 (related rates done; display modifications)
 .example, .solution{
     border: 0.4rem solid rgb(194, 126, 0);
 }
@@ -152,7 +183,11 @@ main tr{
 .example{ /* for example problems */
     border-bottom: none;
     text-align: left;
+<<<<<<< HEAD
     background-color: rgb(53, 46, 46);
+=======
+    /* background-color: rgb(53, 46, 46); */
+>>>>>>> 5fc3516 (related rates done; display modifications)
 }
 
 .example-title, .solution-button{ /* Example 1, 2, 3, etc. */
@@ -185,8 +220,12 @@ main tr{
 }
 
 .solution-button { /*button to show/hide solution */
+<<<<<<< HEAD
     font-size: 1.6rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
+=======
+    font-size: 120%;
+>>>>>>> 5fc3516 (related rates done; display modifications)
     border: none;
     transition-duration: 0.9s;
     width: 100%;
@@ -241,7 +280,11 @@ main tr{
     border: 0.5rem solid rgb(163, 123, 48);
 }
 
+<<<<<<< HEAD
 .section-summary li{
+=======
+.section-summary li, .section-summary p{
+>>>>>>> 5fc3516 (related rates done; display modifications)
     margin: 2% 4% 2% 4%;
 }
 
@@ -255,10 +298,17 @@ main tr{
     margin-top: 6%;
 } */
 
+<<<<<<< HEAD
 .section-summary li{ 
     padding-top: 20px;
     padding-bottom: 20px;
 }
+=======
+/* .section-summary li{ 
+    padding-top: 20px;
+    padding-bottom: 20px;
+} */
+>>>>>>> 5fc3516 (related rates done; display modifications)
 
 .list-item{
     display: flex;
@@ -277,8 +327,17 @@ main tr{
     
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1050px) {
     .example-list{
         margin-left: 4%;
     }
 }
+=======
+@media screen and (max-width: 1350px) {
+    .example figure, .example figure img{
+        width: 55vw;
+    }
+}
+
+>>>>>>> 5fc3516 (related rates done; display modifications)

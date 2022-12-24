@@ -87,4 +87,35 @@ function toggle10(){
     } else {
         clicked.style.display = "none";
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+function toggle11(){
+    var clicked = document.getElementById("solution11");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle12(){
+    var clicked = document.getElementById("solution12");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle13(){
+    var clicked = document.getElementById("solution13");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+>>>>>>> 5fc3516 (related rates done; display modifications)

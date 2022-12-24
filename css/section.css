@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 h1, .background-text{
     width: 1350px;
+=======
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, main, .footer-body, .tab div, .footer-disclaimer{
+    /* width: 1150px; */
+>>>>>>> 5fc3516 (related rates done; display modifications)
     margin-left: auto;
     margin-right: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -13,7 +23,10 @@ h1, .background-text{
 
 h1{ /* section title */
     font-size: 200%;
+<<<<<<< HEAD
     margin-top: 3%;
+=======
+>>>>>>> 5fc3516 (related rates done; display modifications)
     margin-bottom: 2%;
     font-weight: bold;
 }
@@ -54,3 +67,13 @@ h1{ /* section title */
     margin-left: 0%;
     padding-left: 0%;
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 1720px) {
+    h1, main, .footer-body, .tab div, .footer-disclaimer{
+        margin-left: auto;
+        width: 70vw;
+    }
+}
+>>>>>>> 5fc3516 (related rates done; display modifications)

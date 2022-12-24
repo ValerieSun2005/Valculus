@@ -39,6 +39,10 @@ window.MathJax = {
             leq: "\\leqslant",
             txt: "\\textrm",
             deg: "\\textrm{deg}",
+<<<<<<< HEAD
+=======
+            degree: "^{\\circ}",
+>>>>>>> 5fc3516 (related rates done; display modifications)
             be: "\\begin{equation}",
             ee: "\\end{equation}",
             andThree: ["#1 \\; \\comma \\; #2 \\; \\comma \\text{and} \\; #3", 3],
@@ -66,7 +70,14 @@ window.MathJax = {
             indInfty: "\\infty/\\infty",
             qed: "\\tag*{$\\blacksquare$}",
             un: ["\\, \\textrm{#1} ", 1],
+<<<<<<< HEAD
             undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2]
+=======
+            undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2],
+            subsuper:["_{\\hspace{0.1em} #1}^{\\Large^#2}",2],
+            // labelandremember: ["{\\expandafter\\gdef\\csname labeled:#1\\endcsname{#2}\\label{#1}#2}", 2],
+            // recalllabel: ["\\csname labeled:#1\\endcsname\\tag{\\ref{#1}}", 1]
+>>>>>>> 5fc3516 (related rates done; display modifications)
         }
     },
 };

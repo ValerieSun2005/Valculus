@@ -4,7 +4,11 @@ body{
 }
 
 .background-text{ /* background body */
+<<<<<<< HEAD
     margin-left: 17%;
+=======
+    /* margin-left: 17%; */
+>>>>>>> 5fc3516 (related rates done; display modifications)
     margin-right: 17%;
     margin-top: 3%;
     color: white;
