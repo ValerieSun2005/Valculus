@@ -52,12 +52,13 @@ window.MathJax = {
             period: "\\, .",
             pd: "\\period",
             cma:"\\comma",
-            ques: "\\; ?",
+            ques: "\\, ?",
             col: "\\! :",
             scol: "\\, ; \\,",
             eqRefer: ["\\text{Equation } \\eqref{#1}", 1],
             eqReferTwo: ["\\text{Equations } \\eqref{#1} \\text{ and } \\eqref{#2}", 2],
-            deriv: ["\\frac{\\dd #1}{\\dd #2}", 2],
+            eqrefer: ["\\text{Equation } \\eqref{#1}", 1],
+            deriv: ["\\, \\frac{\\dd #1}{\\dd #2} \\, ", 2],
             textDeriv: ["\\dd #1 / \\dd #2", 2],
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
@@ -69,8 +70,10 @@ window.MathJax = {
             un: ["\\, \\textrm{#1} ", 1],
             undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2],
             subsuper:["_{\\hspace{0.1em} #1}^{\\Large^#2}",2],
-            // labelandremember: ["{\\expandafter\\gdef\\csname labeled:#1\\endcsname{#2}\\label{#1}#2}", 2],
-            // recalllabel: ["\\csname labeled:#1\\endcsname\\tag{\\ref{#1}}", 1]
+            textAbove: ["\\buildrel \\rm #1 \\over #2", 2],
+            equalsCheck: "\\textAbove{\\checkmark}{=}",
+            orange: ["{\\color{orange}#1}", 1],
+            teal: ["{\\color{teal}#1}", 1]
         }
     },
 };

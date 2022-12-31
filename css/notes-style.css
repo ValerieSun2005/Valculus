@@ -35,11 +35,6 @@ h4{
     margin-top: 0%;
 }
 
-/* style of <a> tag when linking to subheading */
-.page-anchor{
-    text-decoration: underline;
-}
-
 h4, .page-anchor{
     font-variant: small-caps;
     color: rgb(83, 198, 198);
@@ -58,6 +53,12 @@ h4, .page-anchor{
 
 .warning{
     color: rgb(212, 75, 75);
+    font-style: italic;
+}
+
+.good{
+    color: rgb(62, 156, 62);
+    font-style: italic;
 }
 
 .box-title, .steps-title, .example-title, .section-summary::before{
@@ -111,6 +112,11 @@ h4, .page-anchor{
 
 .example, .solution{
     border: 0.4rem solid rgb(194, 126, 0);
+}
+
+.solution hr{
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .example{ /* for example problems */

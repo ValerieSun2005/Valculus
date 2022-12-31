@@ -73,7 +73,7 @@
     We use the Chain Rule to calculate \(\textDeriv{Q}{t} \col\)
     \[
     \ba 
-    \deriv{Q}{t} &= \deriv{Q}{x} \, \deriv{x}{t} \nl 
+    \deriv{Q}{t} &= \deriv{Q}{x} \deriv{x}{t} \nl 
     &= (2x + 4)(3) = 6x + 12 \pd 
     \ea 
     \]
@@ -146,8 +146,8 @@
         We use the Chain Rule to differentiate both sides of \(\eqRefer{eq:tank-V}\) with respect to time, \(t.\)
         Differentiating and solving for \(\textDeriv{h}{t},\) we get 
         \begin{align} 
-        \deriv{V}{t} &= 100 \pi \, \deriv{h}{t} \nonumber \nl 
-        \deriv{h}{t} &= \frac{1}{100 \pi} \, \deriv{V}{t} \pd \label{eq:tank-dh/dt}
+        \deriv{V}{t} &= 100 \pi \deriv{h}{t} \nonumber \nl 
+        \deriv{h}{t} &= \frac{1}{100 \pi} \deriv{V}{t} \pd \label{eq:tank-dh/dt}
         \end{align}
         Since \(\textDeriv{V}{t} = 30 \un{in}^3/\text{sec},\) \(\eqRefer{eq:tank-dh/dt}\) becomes  
         \[\deriv{h}{t} = \frac{1}{100 \pi}(30) = \frac{3}{10 \pi} \pd\]
@@ -205,8 +205,8 @@
         In \(\eqRefer{eq:snowball-V}\) we differentiate both sides with respect to time by using the Chain Rule.
         Doing so and solving for \(\textDeriv{r}{t}\) yield
         \begin{align} 
-        \deriv{V}{t} &= 4 \pi r^2 \, \deriv{r}{t} \nonumber \nl 
-        \deriv{r}{t} &= \frac{1}{4 \pi r^2} \, \deriv{V}{t} \pd \label{eq:snowball-dV/dt}
+        \deriv{V}{t} &= 4 \pi r^2 \deriv{r}{t} \nonumber \nl 
+        \deriv{r}{t} &= \frac{1}{4 \pi r^2} \deriv{V}{t} \pd \label{eq:snowball-dV/dt}
         \end{align}
         <aside class="box-remark">
             In \(\eqRefer{eq:snowball-V}\) we <i>first</i> differentiate \(V\) <i>before</i> substituting \(r = 10 \un{in}.\)
@@ -257,8 +257,8 @@
         Differentiating both sides of \(\eqRefer{eq:ladder-xy}\) with respect to time 
         and solving for \(\textDeriv{y}{t},\) we obtain 
         \begin{align} 
-        2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} &= 0 \nonumber \nl 
-        \deriv{y}{t} &= -\frac{x}{y} \, \deriv{x}{t} \pd \label{eq:ladder-diff}
+        2x \deriv{x}{t} + 2y \deriv{y}{t} &= 0 \nonumber \nl 
+        \deriv{y}{t} &= -\frac{x}{y} \deriv{x}{t} \pd \label{eq:ladder-diff}
         \end{align}
         <aside class="box-remark">
             Instead of \(\eqRefer{eq:ladder-xy},\) we also could have written the relationship 
@@ -334,7 +334,7 @@
         Solving for \(s\) gives \(s = 3x/7.\)
         Differentiating both sides with respect to time then yields 
         \begin{equation} 
-        \deriv{s}{t} = \tfrac{3}{7} \, \deriv{x}{t} \pd \label{eq:shadow-ds/dt}
+        \deriv{s}{t} = \tfrac{3}{7} \deriv{x}{t} \pd \label{eq:shadow-ds/dt}
         \end{equation}
         <aside class="box-remark">
             In \(\eqRefer{eq:shadow-ds/dt}\) no \(x\) is present.
@@ -405,8 +405,8 @@
         Differentiating both sides with respect to time and solving for \(\textDeriv{h}{t},\) 
         we attain
         \begin{align} 
-        \deriv{V}{t} &= \tfrac{1}{9} \pi h^2 \, \deriv{h}{t} \nonumber \nl 
-        \deriv{h}{t} &= \frac{9}{\pi h^2} \, \deriv{V}{t} \pd \label{eq:cone-dh/dt}
+        \deriv{V}{t} &= \tfrac{1}{9} \pi h^2 \deriv{h}{t} \nonumber \nl 
+        \deriv{h}{t} &= \frac{9}{\pi h^2} \deriv{V}{t} \pd \label{eq:cone-dh/dt}
         \end{align}
         In \(\eqRefer{eq:cone-dh/dt}\) we substitute \(h = 2 \un{ft}\) and the given \(\textDeriv{V}{t} = 5 \un{ft}^3/\un{sec} \col\)
         \[
@@ -458,8 +458,8 @@
         with respect to time.
         Differentiating and solving for \(\textDeriv{z}{t}\) produce
         \begin{align} 
-        2z \, \deriv{z}{t} &= 2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} \nonumber \nl 
-        \deriv{z}{t} &= \tfrac{1}{z} \left[2x \, \deriv{x}{t} + 2y \, \deriv{y}{t}\right] \pd \label{eq:cars-pythag-diff}
+        2z \deriv{z}{t} &= 2x \deriv{x}{t} + 2y \deriv{y}{t} \nonumber \nl 
+        \deriv{z}{t} &= \tfrac{1}{z} \left[2x \deriv{x}{t} + 2y \deriv{y}{t}\right] \pd \label{eq:cars-pythag-diff}
         \end{align}
     </p>
     <aside class="box-remark">
@@ -517,18 +517,18 @@
         Differentiating both sides of \(\eqRefer{eq:balloon-tan-theta}\) with respect to time, 
         we obtain 
         \begin{equation}    
-        \sec^2 \theta \, \deriv{\theta}{t} = \tfrac{1}{50} \, \deriv{h}{t} \pd \label{eq:balloon-diff}
+        \sec^2 \theta \deriv{\theta}{t} = \tfrac{1}{50} \deriv{h}{t} \pd \label{eq:balloon-diff}
         \end{equation}
         For simplicity we express \(\eqref{eq:balloon-diff}\) solely in terms of \(h \col \)
         Since \(\sec^2 \theta = \tan^2 \theta + 1\) and \(\tan \theta = h/50\) [\(\eqref{eq:balloon-tan-theta}\)],
         \(\eqref{eq:balloon-diff}\) becomes 
         \begin{align} 
-        \left[\left(\tfrac{h}{50}\right)^2 + 1\right] \, \deriv{\theta}{t} &= \tfrac{1}{50} \, \deriv{h}{t} \nonumber \nl 
-        \deriv{\theta}{t} &= \frac{1}{(h/50)^2 + 1} \left(\tfrac{1}{50} \, \deriv{h}{t}\right) \pd \label{eq:balloon-dtheta/dt}
+        \left[\left(\tfrac{h}{50}\right)^2 + 1\right] \deriv{\theta}{t} &= \tfrac{1}{50} \deriv{h}{t} \nonumber \nl 
+        \deriv{\theta}{t} &= \frac{1}{(h/50)^2 + 1} \left(\tfrac{1}{50} \deriv{h}{t}\right) \pd \label{eq:balloon-dtheta/dt}
         \end{align}
         <aside class="box-remark">
             In \(\eqRefer{eq:balloon-dtheta/dt}\) it is also correct to write 
-            \[\deriv{\theta}{t} = \cos^2 \theta \left(\tfrac{1}{50} \, \deriv{h}{t}\right)\]
+            \[\deriv{\theta}{t} = \cos^2 \theta \left(\tfrac{1}{50} \deriv{h}{t}\right)\]
             and solve for \(\cos^2\theta\) when \(h = 40 \un{m}.\)
             But working only with \(h\) avoids this extra step.
         </aside>

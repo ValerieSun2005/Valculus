@@ -94,6 +94,7 @@ main figure::after{
 .problems-note{ /* prompt; ex. "Problems 2–4 refer to the following:" */
     color: gray;
     font-style: italic;
+    font-family: Geneva, Tahoma, sans-serif;
 }
 
 .problem-row{

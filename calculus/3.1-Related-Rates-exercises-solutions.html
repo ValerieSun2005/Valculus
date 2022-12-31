@@ -119,7 +119,7 @@
     And so we differentiate both sides of \(\eqRefer{eq:square-A}\)
     with respect to time (by the Chain Rule), obtaining 
     \begin{equation} 
-    \deriv{A}{t} = 2x \, \deriv{x}{t} \pd \label{eq:square-dA/dt}
+    \deriv{A}{t} = 2x \deriv{x}{t} \pd \label{eq:square-dA/dt}
     \end{equation}
     We are interested in the <i>instant</i> at which \(x = 6,\)
     and we are given that \(\textDeriv{x}{t} = -2.\) 
@@ -160,7 +160,7 @@
     All three quantities vary with time, so when we differentiate \(\eqRefer{eq:rectangle-wh}\)
     we need the Chain Rule:
     \begin{equation} 
-    \deriv{A}{t} = \deriv{w}{t} \, h + w \, \deriv{h}{t} \pd \label{eq:rectangle-wh-dA/dt}
+    \deriv{A}{t} = \deriv{w}{t} \, h + w \deriv{h}{t} \pd \label{eq:rectangle-wh-dA/dt}
     \end{equation}
     We can now substitute the given quantities—namely, \(\textDeriv{w}{t} = 2\) and 
     \(\textDeriv{h}{t} = 0.5.\) 
@@ -188,7 +188,7 @@
     The givens establish that \(x\) is a function of \(t.\)
     The Chain Rule states that 
     \begin{equation} 
-    \deriv{y}{t} = \deriv{y}{x} \, \deriv{x}{t} \pd \label{eq:chain-rule-dy/dt}
+    \deriv{y}{t} = \deriv{y}{x} \deriv{x}{t} \pd \label{eq:chain-rule-dy/dt}
     \end{equation}
     We find \(\textDeriv{y}{x} = 4x + 3,\) and we're given \(\textDeriv{x}{t} = -2.\)
     Plugging these expressions into \(\eqRefer{eq:chain-rule-dy/dt}\) yields 
@@ -215,7 +215,7 @@
     The problem implies that \(x\) is a function of \(t.\)
     By the Chain Rule 
     \begin{equation} 
-    \deriv{y}{t} = \deriv{y}{x} \, \deriv{x}{t} \pd \label{eq:chain-rule-dy/dt-2}
+    \deriv{y}{t} = \deriv{y}{x} \deriv{x}{t} \pd \label{eq:chain-rule-dy/dt-2}
     \end{equation}
     We find 
     \[\deriv{y}{x} = \frac{1}{2 \sqrt{x + 4}} \cma\]
@@ -286,10 +286,10 @@
     We want to find \(\textDeriv{h}{t}.\)
     We therefore differentiate \(\eqRefer{eq:water-tank-cylinder}\) with respect to time to get 
     \begin{equation} 
-    \deriv{V}{t} = 25 \pi \, \deriv{h}{t} \pd \label{eq:water-tank-cylinder-dV/dt}
+    \deriv{V}{t} = 25 \pi \deriv{h}{t} \pd \label{eq:water-tank-cylinder-dV/dt}
     \end{equation}
     Substituting \(\textDeriv{V}{t} = 15\) in \(\eqRefer{eq:water-tank-cylinder-dV/dt}\) gives 
-    \[15 = 25 \pi \, \deriv{h}{t} \implies \deriv{h}{t} = \frac{3}{5 \pi} \pd\]
+    \[15 = 25 \pi \deriv{h}{t} \implies \deriv{h}{t} = \frac{3}{5 \pi} \pd\]
     Thus, the tank's water level is rising at a rate of \(3/(5 \pi)\) \(\approx 0.191 \undiv{in}{min}.\)  
     Note that \(\textDeriv{h}{t}\) is constant; it does <i>not</i> change when \(h\) is changed. 
 </span> 
@@ -322,8 +322,8 @@
     We differentiate both sides of \(\eqRefer{eq:V-trough}\) with respect to time, obtaining 
     \[
     \ba 
-    \deriv{V}{t} &amp;= 64 \, \deriv{h}{t} \nl 
-    7 &amp;= 64 \, \deriv{h}{t} \nl 
+    \deriv{V}{t} &amp;= 64 \deriv{h}{t} \nl 
+    7 &amp;= 64 \deriv{h}{t} \nl 
     \deriv{h}{t} &amp;= \frac{7}{64} \pd
     \ea 
     \]
@@ -356,8 +356,8 @@
     We differentiate both sides of \(PV = C\) with respect to time,
     noting that \(C\) is a constant:
     \begin{align} 
-    \deriv{P}{t} \, V + P \, \deriv{V}{t} &amp;= 0 \nonumber \nl 
-    \deriv{V}{t} &amp;= -\frac{V}{P} \, \deriv{P}{t} \pd \label{eq:gas-diff}
+    \deriv{P}{t} \, V + P \deriv{V}{t} &amp;= 0 \nonumber \nl 
+    \deriv{V}{t} &amp;= -\frac{V}{P} \deriv{P}{t} \pd \label{eq:gas-diff}
     \end{align}
     We substitute \(V = 60,\) \(P = 200,\) and \(\textDeriv{P}{t} = 30\) in \(\eqRefer{eq:gas-diff}\) 
     to obtain 
@@ -401,11 +401,11 @@
     We differentiate the given relationship using the Chain Rule, and we plug in the given \(\textDeriv{F}{t} = -0.4.\)
     Doing so yields 
     \begin{align}
-    \deriv{F}{t} &amp;= \deriv{F}{r} \, \deriv{r}{t} \nonumber \nl 
-    -0.4 &amp;= -\frac{0.8}{r^3} \, \deriv{r}{t} \pd \label{eq:force-diff}
+    \deriv{F}{t} &amp;= \deriv{F}{r} \deriv{r}{t} \nonumber \nl 
+    -0.4 &amp;= -\frac{0.8}{r^3} \deriv{r}{t} \pd \label{eq:force-diff}
     \end{align}
     In \(\eqRefer{eq:force-diff}\) we plug in the moment of interest—when \(r = 2\)—to get  
-    \[-0.4 = -\frac{0.8}{8} \, \deriv{r}{t} \implies \deriv{r}{t} = 4 \pd\]
+    \[-0.4 = -\frac{0.8}{8} \deriv{r}{t} \implies \deriv{r}{t} = 4 \pd\]
     Thus, the distance between the two charges is increasing at a rate of \(4\) meters per second.
 </span> 
         </div> 
@@ -437,8 +437,8 @@
     Differentiating both sides of \(\eqRefer{eq:sheet-area}\) 
     with respect to time and solving for \(\textDeriv{y}{t},\) we get 
     \begin{align} 
-    0 &amp;= x \, \deriv{y}{t} + \deriv{x}{t} \, y \nonumber \nl 
-    \deriv{y}{t} &amp;= -\frac{y}{x} \, \deriv{x}{t} \pd \label{eq:sheet-dy/dt} 
+    0 &amp;= x \deriv{y}{t} + \deriv{x}{t} \, y \nonumber \nl 
+    \deriv{y}{t} &amp;= -\frac{y}{x} \deriv{x}{t} \pd \label{eq:sheet-dy/dt} 
     \end{align}
     When \(x = 14,\) \(\eqRefer{eq:sheet-area}\) gives \(y = 70/14 = 5.\)
     We therefore substitute these quantities and the given \(\textDeriv{x}{t} = 3\)  
@@ -473,7 +473,7 @@
     We want to find \(\textDeriv{V}{t},\) the rate at which the cone's volume is changing.
     Differentiating \(\eqRefer{eq:cone-V}\) with respect to time gives 
     \begin{equation} 
-    \deriv{V}{t} = \tfrac{1}{3} \pi \left(2r \, \deriv{r}{t} h + r^2 \, \deriv{h}{t}\right) \pd \label{eq:cone-dV/dt}
+    \deriv{V}{t} = \tfrac{1}{3} \pi \left(2r \deriv{r}{t} h + r^2 \deriv{h}{t}\right) \pd \label{eq:cone-dV/dt}
     \end{equation}
     We are given that \(\textDeriv{r}{t} = -7\) and \(\textDeriv{h}{t} = 8.\)
     When \(r = 4\) and \(h = 3,\) \(\eqRefer{eq:cone-dV/dt}\) becomes 
@@ -519,7 +519,7 @@
     with respect to time.
     Quantities \(p,\) \(m,\) and \(v\) all vary with time, so we use the Chain Rule to differentiate:
     \begin{align} 
-    \deriv{p}{t} &amp;= \deriv{m}{t} \, v + m \, \deriv{v}{t} \nonumber \nl 
+    \deriv{p}{t} &amp;= \deriv{m}{t} \, v + m \deriv{v}{t} \nonumber \nl 
     &amp;= -0.5v -4m \pd \label{eq:meteor-dp/dt}
     \end{align}
     When \(m = 10 \un{g}\) and \(v = 40 \undiv{km}{sec},\) \(\eqRefer{eq:meteor-dp/dt}\) becomes 
@@ -558,14 +558,14 @@
     Since \(r\) and \(V\) vary with time, we treat them as functions of time.
     Thus, we use the Chain Rule to differentiate \(\eqRefer{eq:sphere-V}\) with respect to time, \(t \col\)
     \begin{align} 
-    \deriv{V}{t} &amp;= 4 \pi r^2 \, \deriv{r}{t} \pd \label{eq:sphere-dV/dt}
+    \deriv{V}{t} &amp;= 4 \pi r^2 \deriv{r}{t} \pd \label{eq:sphere-dV/dt}
     \end{align}
     We now need to find \(\textDeriv{V}{t}\) when \(V = 4000 \pi/3.\)
     At this instant, we find the sphere's radius using \(\eqRefer{eq:sphere-V} \col\) 
     \[\frac{4000 \pi}{3} = \frac{4}{3} \pi r^3 \implies r = 10 \pd\]
     Thus, we substitute \(r = 10\) in \(\eqRefer{eq:sphere-dV/dt};\) also recall that \(\textDeriv{V}{t} = 50.\)
     These values give 
-    \[50 = 4 \pi (10)^2 \, \deriv{r}{t} \implies \deriv{r}{t} = \frac{1}{8 \pi} \pd\]
+    \[50 = 4 \pi (10)^2 \deriv{r}{t} \implies \deriv{r}{t} = \frac{1}{8 \pi} \pd\]
     We therefore conclude that, when its volume is \(4000 \pi/3 \un{mL},\) the ballon's radius is increasing at a rate 
     of \(1/(8 \pi)\) \(\approx 0.040 \undiv{cm}{min}.\)
 </span> 
@@ -610,13 +610,13 @@
     We treat all three quantities as functions of time, 
     so we use the Chain Rule to differentiate both sides of \(\eqRefer{eq:intersection-pythag} \col\)
     \begin{equation} 
-    2z \, \deriv{z}{t} = 2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} \pd \label{eq:intersection-pythag-diff}
+    2z \deriv{z}{t} = 2x \deriv{x}{t} + 2y \deriv{y}{t} \pd \label{eq:intersection-pythag-diff}
     \end{equation}
     We now consider the moment we need—when \(x = 3\) and \(y = 4.\)
     We also need \(z\) at this instant; we find \(z\) from \(\eqRefer{eq:intersection-pythag}\)
     to be \(\sqrt{3^2 + 4^2} = 5.\)
     Substituting these quantities in \(\eqRefer{eq:intersection-pythag-diff}\) gives 
-    \[2(5) \, \deriv{z}{t} = 2(3)(-30) + 2(4)(-25) \implies \deriv{z}{t} = -38 \pd\]
+    \[2(5) \deriv{z}{t} = 2(3)(-30) + 2(4)(-25) \implies \deriv{z}{t} = -38 \pd\]
     Thus, the distance between cars A and B is <i>decreasing</i>
     at a rate of \(38 \undiv{mi}{hr}.\)
 </span> 
@@ -655,8 +655,8 @@
     thus, we use the Chain Rule to differentiate \(\eqRefer{eq:candy-cane}.\)
     Doing so gives 
     \begin{align} 
-    2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} &amp;= 0 \nonumber \nl 
-    \deriv{x}{t} &amp;= -\frac{y}{x} \, \deriv{y}{t} \pd \label{eq:candy-cane-diff}
+    2x \deriv{x}{t} + 2y \deriv{y}{t} &amp;= 0 \nonumber \nl 
+    \deriv{x}{t} &amp;= -\frac{y}{x} \deriv{y}{t} \pd \label{eq:candy-cane-diff}
     \end{align}
     We now plug in values:
     We're given \(\textDeriv{y}{t} = -0.1.\) 
@@ -700,7 +700,7 @@
     Differentiating \(\eqRefer{eq:ladder-A}\) with respect to time—noting 
     that \(x\) and \(y\) are functions of time—gives
     \begin{equation} 
-    \deriv{A}{t} = \tfrac{1}{2} \left(\deriv{x}{t} y + x \, \deriv{y}{t} \right) \pd \label{eq:ladder-dA/dt}
+    \deriv{A}{t} = \tfrac{1}{2} \left(\deriv{x}{t} y + x \deriv{y}{t} \right) \pd \label{eq:ladder-dA/dt}
     \end{equation}
     In \(\eqRefer{eq:ladder-dA/dt}\) we need the value of \(\textDeriv{y}{t}.\)
     This value isn't given, so we obtain it by forming another relationship between \(x\) 
@@ -710,7 +710,7 @@
     \end{equation}
     Differentiating \(\eqRefer{eq:ladder-area-pythag}\) gives 
     \begin{align} 
-    2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} &amp;= 0 \nonumber \nl 
+    2x \deriv{x}{t} + 2y \deriv{y}{t} &amp;= 0 \nonumber \nl 
     \deriv{y}{t} &amp;= -\frac{x}{y} \deriv{x}{t} \pd \label{eq:ladder-area-dy/dt}
     \end{align}
     In \(\eqRefer{eq:ladder-area-dy/dt}\) we plug in values:
@@ -754,7 +754,7 @@
     use the Chain Rule to differentiate \(P\) with respect to time.
     We get 
     \begin{equation} 
-    \deriv{P}{t} = 2I \, \deriv{I}{t} R + I^2 \, \deriv{R}{t} \pd \label{eq:power-diff}
+    \deriv{P}{t} = 2I \deriv{I}{t} R + I^2 \deriv{R}{t} \pd \label{eq:power-diff}
     \end{equation}
     We are given that the resistance is increasing at \(3 \, \Omega/\text{sec}\) and current is increasing at \(0.1 \undiv{A}{sec}.\)
     Thus, \(\textDeriv{R}{t} = 3\) and \(\textDeriv{I}{t} = 0.1.\)
@@ -796,7 +796,7 @@
     We want to find \(\textDeriv{z}{t}\) after one hour.
     In \(\eqRefer{eq:pythag-jack-jorge}\) we differentiate both sides with respect to time:
     \begin{equation} 
-    2z \, \deriv{z}{t} = 2(10 + x) \, \deriv{x}{t} + 2y \, \deriv{y}{t} \pd \label{eq:pythag-jack-jorge-diff}
+    2z \deriv{z}{t} = 2(10 + x) \deriv{x}{t} + 2y \deriv{y}{t} \pd \label{eq:pythag-jack-jorge-diff}
     \end{equation}
     From the men's speeds, we have \(\textDeriv{x}{t} = 4 \undiv{mi}{hr}\) and \(\textDeriv{y}{t} = 3 \undiv{mi}{hr}.\)
     After one hour, Jorge will have walked \(3\) miles and Jack will have walked \(4\) miles.
@@ -804,7 +804,7 @@
     The distance between them will be, by \(\eqRefer{eq:pythag-jack-jorge},\) 
     \(z = \sqrt{(10 + 4)^2 + 3^2} = \sqrt{205}.\)
     Substituting these values in \(\eqRefer{eq:pythag-jack-jorge-diff}\) gives 
-    \[2 \sqrt{205} \, \deriv{z}{t} = 2(10 + 4)(4) + 2(3)(3) \implies \deriv{z}{t} = \frac{65}{\sqrt{205}} \pd\]
+    \[2 \sqrt{205} \deriv{z}{t} = 2(10 + 4)(4) + 2(3)(3) \implies \deriv{z}{t} = \frac{65}{\sqrt{205}} \pd\]
     Therefore, the distance between Jack and Jorge is increasing at a rate of \(65/\sqrt{205}\) \(\approx 4.540 \undiv{mi}{hr}.\)
 </span> 
         </div> 
@@ -841,8 +841,8 @@
     Differentiating both sides of \(\eqRefer{eq:string-length}\) with respect to time 
     and solving for \(\textDeriv{\ell}{t},\) we get 
     \begin{align} 
-    2 \ell \, \deriv{\ell}{t} &amp;= 2x \, \deriv{x}{t} \nonumber \nl 
-    \deriv{\ell}{t} &amp;= \frac{x}{\ell} \, \deriv{x}{t} \pd \label{eq:string-length-diff}
+    2 \ell \deriv{\ell}{t} &amp;= 2x \deriv{x}{t} \nonumber \nl 
+    \deriv{\ell}{t} &amp;= \frac{x}{\ell} \deriv{x}{t} \pd \label{eq:string-length-diff}
     \end{align}
     When \(x = 8,\) \(\eqRefer{eq:string-length}\) gives \(\ell = \sqrt{10^2 + 8^2} = \sqrt{164}.\)
     In \(\eqRefer{eq:string-length-diff}\) 
@@ -885,8 +885,8 @@
     Differentiating \(\eqRefer{eq:pier-pythag}\) with respect to time and solving for \(\textDeriv{\ell}{t},\)
     we get 
     \begin{align} 
-    2 \ell \, \deriv{\ell}{t} &amp;= 2x \, \deriv{x}{t} \nonumber \nl 
-    \deriv{\ell}{t} &amp;= \frac{x}{\ell} \, \deriv{x}{t} \pd \label{eq:pier-dl/dt}
+    2 \ell \deriv{\ell}{t} &amp;= 2x \deriv{x}{t} \nonumber \nl 
+    \deriv{\ell}{t} &amp;= \frac{x}{\ell} \deriv{x}{t} \pd \label{eq:pier-dl/dt}
     \end{align}
     When \(x = 7,\) \(\eqRefer{eq:pier-pythag}\) gives \(\ell = \sqrt{7^2 + 12^2} = \sqrt{193}.\)
     Therefore, in \(\eqRefer{eq:pier-dl/dt}\) we substitute \(x = 7,\) \(\ell = \sqrt{193},\)
@@ -921,10 +921,10 @@
     so we treat them as functions of time.
     Differentiating both sides of the given equation with respect to time, we get 
     \begin{align} 
-    -\frac{1}{\par{R_{\text{eq}}}^2} \, \deriv{R_{\text{eq}}}{t} 
-    &amp;= -\frac{1}{\par{R_1}^2} \, \deriv{R_1}{t} -\frac{1}{\par{R_2}^2} \, \deriv{R_2}{t} \nonumber \nl 
+    -\frac{1}{\par{R_{\text{eq}}}^2} \deriv{R_{\text{eq}}}{t} 
+    &amp;= -\frac{1}{\par{R_1}^2} \deriv{R_1}{t} -\frac{1}{\par{R_2}^2} \deriv{R_2}{t} \nonumber \nl 
     \deriv{R_{\text{eq}}}{t} 
-    &amp;= \par{R_{\text{eq}}}^2 \par{\frac{1}{\par{R_1}^2} \, \deriv{R_1}{t} + \frac{1}{\par{R_2}^2} \, \deriv{R_2}{t}}
+    &amp;= \par{R_{\text{eq}}}^2 \par{\frac{1}{\par{R_1}^2} \deriv{R_1}{t} + \frac{1}{\par{R_2}^2} \deriv{R_2}{t}}
     \pd \label{eq:res-diff} 
     \end{align}
     We are given that \(\textDeriv{R_1}{t} = 2 \, \Omega/\text{sec}\) and \(\textDeriv{R_2}{t} = 3 \, \Omega/\text{sec}.\)
@@ -977,7 +977,7 @@
     obtaining \(s = 5x/12.\) 
     Both \(s\) and \(x\) are functions of time, so we differentiate to obtain 
     \begin{equation} 
-    \deriv{s}{t} = \frac{5}{12} \, \deriv{x}{t} \pd \label{eq:shadow-man-diff}
+    \deriv{s}{t} = \frac{5}{12} \deriv{x}{t} \pd \label{eq:shadow-man-diff}
     \end{equation}
     We are given \(\textDeriv{x}{t} = 3,\) so \(\eqRefer{eq:shadow-man-diff}\) becomes 
     \[\deriv{s}{t} = \frac{5}{12} \cdot 3 = \frac{5}{4} \pd\]
@@ -1024,7 +1024,7 @@
     In \(\eqRefer{eq:shadow-jog}\) we get \(s = 6x/19.\)
     Differentiating this expression with respect to time then yields 
     \begin{equation*} 
-    \deriv{s}{t} = \frac{6}{19} \, \deriv{x}{t} \pd
+    \deriv{s}{t} = \frac{6}{19} \deriv{x}{t} \pd
     \end{equation*}
     We're given that \(\textDeriv{x}{t} = 9,\) so we have 
     \begin{equation} 
@@ -1081,8 +1081,8 @@
     We differentiate both sides of \(\eqRefer{eq:inverted-cone-V-h}\) with respect to time
     and solve for \(\textDeriv{h}{t} \col\)
     \begin{align} 
-    \deriv{V}{t} &amp;= \tfrac{1}{4} \pi h^2 \, \deriv{h}{t} \nonumber \nl 
-    \deriv{h}{t} &amp;= \frac{4}{\pi h^2} \, \deriv{V}{t} \pd \label{eq:inverted-cone-dh/dt}
+    \deriv{V}{t} &amp;= \tfrac{1}{4} \pi h^2 \deriv{h}{t} \nonumber \nl 
+    \deriv{h}{t} &amp;= \frac{4}{\pi h^2} \deriv{V}{t} \pd \label{eq:inverted-cone-dh/dt}
     \end{align}
     We now substitute \(h = 4\) and the given \(\textDeriv{V}{t} = 8\) 
     in \(\eqRefer{eq:inverted-cone-dh/dt}\) to get 
@@ -1118,15 +1118,15 @@
     Both \(\theta\) and \(x\) vary with time, so 
     we differentiate both sides of \(\eqRefer{eq:theta-sqrt}\) with respect to time to get 
     \begin{equation} 
-    \sec^2 \theta \, \deriv{\theta}{t} = -\tfrac{1}{2} x^{-3/2} \, \deriv{x}{t} \pd \label{eq:theta-sqrt-diff}
+    \sec^2 \theta \deriv{\theta}{t} = -\tfrac{1}{2} x^{-3/2} \deriv{x}{t} \pd \label{eq:theta-sqrt-diff}
     \end{equation}
     It's easiest to express \(\eqRefer{eq:theta-sqrt-diff}\) only in terms of \(x.\)
     Since \(\sec^2 \theta = \tan^2 \theta + 1\) and \(\tan \theta = 1/\sqrt{x}\) 
     [from \(\eqRefer{eq:theta-sqrt}\)], 
     \(\eqRefer{eq:theta-sqrt-diff}\) becomes 
     \begin{align} 
-    \par{\tfrac{1}{x} + 1} \, \deriv{\theta}{t} &amp;= -\tfrac{1}{2} x^{-3/2} \, \deriv{x}{t} \nonumber \nl 
-    \deriv{\theta}{t} &amp;= \frac{1}{1 + 1/x} \par{-\tfrac{1}{2} x^{-3/2}} \, \deriv{x}{t} \pd \label{eq:theta-sqrt-dtheta}
+    \par{\tfrac{1}{x} + 1} \deriv{\theta}{t} &amp;= -\tfrac{1}{2} x^{-3/2} \deriv{x}{t} \nonumber \nl 
+    \deriv{\theta}{t} &amp;= \frac{1}{1 + 1/x} \par{-\tfrac{1}{2} x^{-3/2}} \deriv{x}{t} \pd \label{eq:theta-sqrt-dtheta}
     \end{align}
     We are given that \(\textDeriv{x}{t} = 3,\) and we plug \(x = 4\) into \(\eqRefer{eq:theta-sqrt-dtheta}\) to find 
     \[\deriv{\theta}{t} = \frac{1}{1 + 1/4} \left(-\tfrac{1}{2}(4)^{-3/2}\right)(3) = \frac{-3}{20} \pd\]
@@ -1164,8 +1164,8 @@
     Both \(x\) and \(h\) vary with time.
     We differentiate both sides of \(\eqRefer{eq:kite-pythag}\) to obtain 
     \begin{align} 
-    2x \, \deriv{x}{t} + 2h \, \deriv{h}{t} &amp;= 0 \nonumber \nl 
-    \deriv{x}{t} &amp;= \frac{-h}{x} \, \deriv{h}{t} \pd \label{eq:kite-diff} 
+    2x \deriv{x}{t} + 2h \deriv{h}{t} &amp;= 0 \nonumber \nl 
+    \deriv{x}{t} &amp;= \frac{-h}{x} \deriv{h}{t} \pd \label{eq:kite-diff} 
     \end{align}
     When \(h = 10,\) \(\eqRefer{eq:kite-pythag}\) gives 
     \(x = \sqrt{20^2 - 10^2} = \sqrt{300}.\)
@@ -1208,14 +1208,14 @@
     \end{equation}
     We differentiate both sides of \(\eqRefer{eq:balloon-angle}\) with respect to time, finding 
     \begin{equation} 
-    \sec^2 \theta \, \deriv{\theta}{t} = \tfrac{1}{100} \, \deriv{y}{t} \pd \label{eq:balloon-angle-diff}
+    \sec^2 \theta \deriv{\theta}{t} = \tfrac{1}{100} \deriv{y}{t} \pd \label{eq:balloon-angle-diff}
     \end{equation}
     It is simpler to continue using only \(y.\) 
     Because \(\sec^2 \theta = \tan^2 \theta + 1\) and \(\tan \theta = y/100\) [see \(\eqRefer{eq:balloon-angle}\)],
     \(\eqRefer{eq:balloon-angle-diff}\) becomes 
     \begin{align} 
-    \left[\par{\tfrac{y}{100}}^2 + 1\right] \, \deriv{\theta}{t} &amp;= \tfrac{1}{100} \, \deriv{y}{t} \nonumber \nl 
-    \deriv{\theta}{t} &amp;= \frac{1}{(y/100)^2 + 1} \par{\tfrac{1}{100} \, \deriv{y}{t}} \pd \label{eq:balloon-angle-dtheta/dt}
+    \left[\par{\tfrac{y}{100}}^2 + 1\right] \deriv{\theta}{t} &amp;= \tfrac{1}{100} \deriv{y}{t} \nonumber \nl 
+    \deriv{\theta}{t} &amp;= \frac{1}{(y/100)^2 + 1} \par{\tfrac{1}{100} \deriv{y}{t}} \pd \label{eq:balloon-angle-dtheta/dt}
     \end{align}
     In \(\eqRefer{eq:balloon-angle-dtheta/dt}\) we substitute \(\textDeriv{y}{t} = 3\) and \(y = 200\) to get 
     \[\deriv{\theta}{t} = \frac{1}{(200/100)^2 + 1} \par{\tfrac{1}{100} \cdot 3} = \frac{3}{500} \pd\]
@@ -1253,8 +1253,8 @@
     We want to find \(\textDeriv{h}{t}\) when \(r = 6 \un{in}.\)
     We differentiate both sides of \(\eqRefer{eq:cylinder-V}\) with respect to time, obtaining 
     \begin{align} 
-    \pi \left[2r \, \deriv{r}{t} h + r^2 \, \deriv{h}{t} \right] &amp;= 0 \nonumber \nl
-    \deriv{h}{t} &amp;= \frac{-2h}{r} \, \deriv{r}{t} \pd \label{eq:cylinder-V-diff}
+    \pi \left[2r \deriv{r}{t} h + r^2 \deriv{h}{t} \right] &amp;= 0 \nonumber \nl
+    \deriv{h}{t} &amp;= \frac{-2h}{r} \deriv{r}{t} \pd \label{eq:cylinder-V-diff}
     \end{align}
     When \(r = 6,\) \(\eqRefer{eq:cylinder-V}\) gives \(h = 300/(36 \pi) = 25/(3 \pi).\)
     Also, \(\textDeriv{r}{t} = 4\) is given. 
@@ -1293,7 +1293,7 @@
     We want to find \(\textDeriv{A}{t}.\)
     Differentiating both sides of \(\eqRefer{eq:clock-A}\) with respect to time, we obtain 
     \begin{equation} 
-    \deriv{A}{t} = \tfrac{1}{2} \ell^2 \, \deriv{\theta}{t} \pd \label{eq:clock-dA/dt}
+    \deriv{A}{t} = \tfrac{1}{2} \ell^2 \deriv{\theta}{t} \pd \label{eq:clock-dA/dt}
     \end{equation}
     Since the problem needs \(\textDeriv{A}{t}\) to be in terms of square inches per minute,
     \(t\) needs to be in minutes.
@@ -1355,13 +1355,13 @@
     In \(\eqRefer{eq:ladder-angle}\) \(x\) and \(y\) are functions of time.
     Therefore, we use the Chain Rule in differentiating both sides with respect to time:
     \begin{equation} 
-    \sec^2 \theta \, \deriv{\theta}{t} = \frac{\deriv{y}{t} \, x - y \, \deriv{x}{t}}{x^2} \pd \label{eq:ladder-angle-diff} 
+    \sec^2 \theta \deriv{\theta}{t} = \frac{\deriv{y}{t} \, x - y \deriv{x}{t}}{x^2} \pd \label{eq:ladder-angle-diff} 
     \end{equation}
     We want to express \(\eqRefer{eq:ladder-angle-diff}\) in terms of solely \(x\) and \(y.\)
     Since \(\sec^2 \theta = 1 + \tan^2 \theta\) and \(\tan \theta = y/x\) [from \(\eqRefer{eq:ladder-angle}\)],
     \(\eqRefer{eq:ladder-angle-diff}\) becomes 
     \begin{equation} 
-    \par{1 + \frac{y^2}{x^2}} \deriv{\theta}{t} = \frac{\deriv{y}{t} \, x - y \, \deriv{x}{t}}{x^2} \pd \label{eq:ladder-angle-diff-x-y}
+    \par{1 + \frac{y^2}{x^2}} \deriv{\theta}{t} = \frac{\deriv{y}{t} \, x - y \deriv{x}{t}}{x^2} \pd \label{eq:ladder-angle-diff-x-y}
     \end{equation}
     The value of \(\textDeriv{x}{t}\) isn't given. 
     We find it by constructing another relationship between \(x\) and \(y\) using the Pythagorean Theorem:
@@ -1370,8 +1370,8 @@
     \end{equation}
     Differentiating \(\eqRefer{eq:ladder-angle-pythag}\) and solving for \(\textDeriv{x}{t}\) give 
     \begin{align} 
-    2x \, \deriv{x}{t} + 2y \, \deriv{y}{t} &amp;= 0 \nonumber \nl 
-    \deriv{x}{t} &amp;= -\frac{y}{x} \, \deriv{y}{t} \pd \label{eq:ladder-angle-dx/dt}
+    2x \deriv{x}{t} + 2y \deriv{y}{t} &amp;= 0 \nonumber \nl 
+    \deriv{x}{t} &amp;= -\frac{y}{x} \deriv{y}{t} \pd \label{eq:ladder-angle-dx/dt}
     \end{align}
     When \(x = 6,\) \(\eqRefer{eq:ladder-angle-pythag}\) gives \(y = \sqrt{10^2 - 6^2} = 8\) 
     and so \(\eqRefer{eq:ladder-angle-dx/dt}\) becomes 
@@ -1423,14 +1423,14 @@
     \end{equation}
     Differentiating both sides of \(\eqRefer{eq:camera}\) with respect to time, we get 
     \begin{equation} 
-    \sec^2 \theta \, \deriv{\theta}{t} = \tfrac{1}{40} \, \deriv{x}{t} \pd \label{eq:camera-diff}
+    \sec^2 \theta \deriv{\theta}{t} = \tfrac{1}{40} \deriv{x}{t} \pd \label{eq:camera-diff}
     \end{equation}
     We want to express all quantities in terms of \(x.\)
     Using the identity \(\sec^2 \theta = \tan^2 \theta + 1\) and \(\tan \theta = x/40\) [\(\eqRefer{eq:camera}\)],
     from \(\eqRefer{eq:camera-diff}\) we get  
     \begin{align} 
-    \left[\par{\tfrac{x}{40}}^2 + 1\right] \, \deriv{\theta}{t} &amp;= \tfrac{1}{40} \, \deriv{x}{t} \nonumber \nl 
-    \deriv{x}{t} &amp;= 40 \left[\par{\tfrac{x}{40}}^2 + 1\right] \, \deriv{\theta}{t} \pd \label{eq:camera-diff-dx/dt}
+    \left[\par{\tfrac{x}{40}}^2 + 1\right] \deriv{\theta}{t} &amp;= \tfrac{1}{40} \deriv{x}{t} \nonumber \nl 
+    \deriv{x}{t} &amp;= 40 \left[\par{\tfrac{x}{40}}^2 + 1\right] \deriv{\theta}{t} \pd \label{eq:camera-diff-dx/dt}
     \end{align}
     In \(\eqRefer{eq:camera-diff-dx/dt}\) we plug in \(\textDeriv{\theta}{t} = 20 \pi\) and \(x = 20 \col\)
     \[\deriv{x}{t} = 40 \left[\par{\tfrac{20}{40}}^2 + 1 \right] \cdot 20 \pi = 1000 \pi \pd\]
@@ -1474,11 +1474,11 @@
     \end{equation}
     We differentiate both sides of \(\eqRefer{eq:lighthouse-theta}\) with respect to time, obtaining 
     \begin{equation} 
-    \sec^2 \theta \, \deriv{\theta}{t} = \tfrac{1}{5} \, \deriv{x}{t} \pd \label{eq:lighthouse-theta-diff}
+    \sec^2 \theta \deriv{\theta}{t} = \tfrac{1}{5} \deriv{x}{t} \pd \label{eq:lighthouse-theta-diff}
     \end{equation}
     We use the identity \(\sec^2 \theta = \tan^2 \theta + 1\) 
     combined with \(\tan \theta = x/5\) [\(\eqRefer{eq:lighthouse-theta}\)] to rewrite \(\eqRefer{eq:lighthouse-theta-diff}\) as 
-    \[\left[\par{\tfrac{x}{5}}^2 + 1\right] \, \deriv{\theta}{t} = \tfrac{1}{5} \, \deriv{x}{t} \pd\]
+    \[\left[\par{\tfrac{x}{5}}^2 + 1\right] \deriv{\theta}{t} = \tfrac{1}{5} \deriv{x}{t} \pd\]
     Solving for \(\textDeriv{x}{t},\) and substituting \(x = 3\) and \(\textDeriv{\theta}{t} = 4 \pi,\)
     we have 
     \[\deriv{x}{t} = 5 \left[\par{\tfrac{3}{5}}^2 + 1\right] \cdot 4 \pi = \frac{136 \pi}{5} \pd\]
@@ -1564,8 +1564,8 @@
     \end{equation}
     We differentiate both sides of \(\eqRefer{eq:baseball-pythag}\) with respect to time, obtaining 
     \begin{align} 
-    -2(90 - x) \, \deriv{x}{t} &amp;= 2z \, \deriv{z}{t} \nonumber \nl
-    \deriv{z}{t} &amp;= \frac{x - 90}{z} \, \deriv{x}{t} \pd \label{eq:baseball-dz/dt} 
+    -2(90 - x) \deriv{x}{t} &amp;= 2z \deriv{z}{t} \nonumber \nl
+    \deriv{z}{t} &amp;= \frac{x - 90}{z} \deriv{x}{t} \pd \label{eq:baseball-dz/dt} 
     \end{align}
     When \(x = 60,\) \(\eqRefer{eq:baseball-pythag}\) gives 
     \[z = \sqrt{(90 - 60)^2 + 90^2} = \sqrt{9000} = 30 \sqrt{10} \pd\]
@@ -1610,8 +1610,8 @@
     \end{equation}
     We differentiate both sides of \(\eqRefer{eq:baseball-cos}\) to get 
     \begin{align} 
-    2z \, \deriv{z}{t} &amp;= 2x \, \deriv{x}{t} - 90 \sqrt 2 \, \deriv{x}{t} \nonumber \nl 
-    \deriv{z}{t} &amp;= \frac{x - 45 \sqrt 2}{z} \, \deriv{x}{t} \pd \label{eq:baseball-cos-dz/dt}
+    2z \deriv{z}{t} &amp;= 2x \deriv{x}{t} - 90 \sqrt 2 \deriv{x}{t} \nonumber \nl 
+    \deriv{z}{t} &amp;= \frac{x - 45 \sqrt 2}{z} \deriv{x}{t} \pd \label{eq:baseball-cos-dz/dt}
     \end{align}
     When \(x = 61,\) \(\eqRefer{eq:baseball-cos}\) gives 
     \[z = \sqrt{61^2 + 90^2 - 90(61) \sqrt 2} \pd\]
