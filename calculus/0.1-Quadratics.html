@@ -51,7 +51,727 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      
+      <!--[[[crefId.Quadratics]]]-->
+<figure class="fig-1">
+    <img src="../images/sectionImages/0/quadratics-standard-form.jpg" alt="Figure 1">
+</figure>
+
+<style>
+    .fig-1::before{
+        content:'FIGURE 1';
+    }
+</style>
+<p>
+    In this section we review 
+    <a class="page-anchor" href="#forms-and-features-of-quadratics">Forms and Features of Quadratics</a>,
+    <a class="page-anchor" href="#identifying-vertex-of-a-quadratic">Identifying the Vertex of a Quadratic</a>,
+    <a class="page-anchor" href="#completing-the-square">Completing the Square</a>, and using the 
+    <a class="page-anchor" href="#quadratic-formula-and-discriminant">Quadratic Formula and Discriminant</a>.
+    We conclude with solving 
+    <a class="page-anchor" href="#quadratic-inequalities">Quadratic Inequalities</a>.
+</p>
+<h4 id="forms-and-features-of-quadratics">Forms and Features of Quadratics</h4>
+<p>
+    A quadratic is a second-degree polynomial whose graph 
+    is a 
+    <span class="emph">parabola</span>:
+    a symmetrical, U-shaped curve.
+    <figure class="fig-2">
+        <img src="../images/sectionImages/0/quadratics-intercept-form.jpg" alt="Figure 2">
+    </figure>
+
+    <style>
+        .fig-2::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The 
+    <span class="emph">standard form</span>
+    of a quadratic is 
+    \begin{equation} 
+        f(x) = ax^2 + bx + c \label{eq:standard-form}
+    \end{equation}
+    where \(a\) is the 
+    <span class="emph">leading coefficient</span> of \(f\)
+    and \((0, c)\) is the 
+    <span class="emph">\(y\)-intercept</span>,
+    the point at which the graph of \(y = f(x)\) crosses the \(y\)-axis (Figure 1).
+</p>
+<p>
+    The 
+    <span class="emph">intercept form</span>
+    of a quadratic is 
+    \begin{equation} 
+        f(x) = a(x - p)(x - q) \comma \label{eq:intercept-form}
+    \end{equation}
+    where \(x = p\) and \(x = q\) are zeros of \(y = f(x)\) (Figure 2).
+</p>
+
+<p>
+    <figure class="fig-3">
+        <img src="../images/sectionImages/0/quadratics-vertex-form.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .fig-3::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    The 
+    <span class="emph">vertex form</span>
+    is 
+    \begin{equation} 
+        f(x) = a(x - h)^2 + k \period \label{eq:vertex-form}
+    \end{equation} 
+    Here \((h, k)\) is the 
+    <span class="emph">vertex</span>, the maximum or minimum the parabola.
+    We call the vertical line \(x = h\) the 
+    <span class="emph">axis of symmetry</span> since
+    it's the line to which the graph of \(y = f(x)\) is symmetrical.
+    In any of these three forms, if \(a\) is negative,
+    then the parabola opens downward and the vertex is a maximum (Figure 3). 
+    Conversely, if \(a\) is positive, then the parabola opens upward and the vertex is a minimum (Figures 1 and 2).
+</p>
+
+<!-- quadratics written -->
+<div class="box-title"> FORMS OF A QUADRATIC EXPRESSION </div>
+<div class="box">
+    <ul>
+        <li>
+            <u>Standard Form:</u> 
+            \[y = ax^2 + bx + c \comma \] where \((0, c)\) is the \(y\)-intercept of the parabola.
+        </li>
+        <li>
+            <u>Vertex Form:</u> 
+            \[y = a(x - h)^2 + k \comma \] where \((h, k)\) is the vertex of the parabola.
+        </li>
+        <li>
+            <u>Intercept Form:</u> 
+            \[y = a(x - p)(x - q) \comma \] where \(p\) and \(q\) are the zeros of the parabola.
+        </li>
+    </ul>
+</div>
+
+<div class="example-title"> EXAMPLE 1</div>
+<div class="example">
+    <div class="example-problem">  
+        For each of (i)–(iii), classify the form in which the quadratic is written.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(y = 4(x - 2)(x + 4)\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(y = -2x^2 + 8x - 7\)
+                </span>
+            </li>  
+            <li>
+                <span>
+                    \(y = 2(x + 8)^2 - 1\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"> </button>
+<div id="solution1" class="solution">
+    <ol class="list-roman">
+        <li>
+            Intercept form.
+        </li>
+        <li>
+            Standard form.
+        </li>  
+        <li>
+            Vertex form.
+        </li>
+    </ol>
+</div>
+
+<h4 id="identifying-vertex-of-a-quadratic">Identifying the Vertex of a Quadratic</h4>
+<p>
+    From \(\eqRefer{eq:standard-form},\)
+    we may find vertex of the graph of \(y = f(x)\) by noting that the axis of symmetry, \(x = h,\) is 
+    \[h = \frac{-b}{2a} \period \]
+    Then the \(y\)-coordinate of the vertex is \(k = f(-b/2a).\)
+    For example, the vertex of 
+    \[g(x) = x^2 - 2x + 8\]
+    has \(x\)-coordinate 
+    \[
+    \ba 
+    h = \frac{-b}{2a} &= \frac{-(-2)}{2(1)} \nl
+    &= 1 \period
+    \ea 
+    \]
+    Then the \(y\)-coordinate of the vertex of \(g(x)\) is 
+    \[k = (1)^2 - 2(1) + 8 = 7 \period\]
+    Thus, \(g(x)\) has a vertex of \((1 , 7).\)
+</p>
+
+<h4 id="completing-the-square">Completing the Square</h4>
+<p>
+    We convert standard form to vertex form by 
+    <span class="emph">completing the square</span>.
+    Consider the example 
+    \[y = 3x^2 - 9x + 2 \period \]
+    We factor out the leading coefficient, \(3,\) to obtain
+    \[y = 3 \left(x^2 - 3x + \frac{2}{3}\right) \period\]
+    In the parentheses, we insert the term \(9/4,\)
+    the square of half of \(-3;\) that is, \((-3/2)^2 = 9/4.\)
+    But we also subtract \(9/4\) to avoid changing the value of the expression:
+    \[3 \left(x^2 - 3x + \underline{\frac{9}{4}} - \underline{\frac{9}{4}} + \frac{2}{3} \right)\period \]
+    The term \(x^2 - 3x + 9/4\) creates the perfect square \((x - 3/2)^2,\) 
+    so we have 
+    \[
+    \ba 
+    3 \left[\left(x - \frac{3}{2}\right)^2 - \frac{9}{4} + \frac{2}{3} \right] 
+    &= 3 \left[\left(x - \frac{3}{2}\right)^2 - \frac{19}{12} \right] \nl
+    &= \boxed{3 \left(x - \frac{3}{2}\right)^2 - \frac{19}{4}}  
+    \ea 
+    \] 
+    The strategic insertion of the square of \(9/4\) (half the coefficient of the 
+    \(x\)-term) forces the expression into a perfect square that corresponds to vertex form. 
+</p>
+
+<!-- table for completing square steps -->
+<div class="steps-title"> COMPLETING THE SQUARE </div>
+<div class="steps">
+    <ol class="list-num">
+        <li>
+            Factor out the leading coefficient, \(a.\)
+        </li>
+        <li>
+            Analyze the coefficient of the \(x\)-term,  
+            and insert the square of half the coefficient.
+            Be sure to also subtract the quantity to maintain equality.
+        </li>
+        <li>
+            Verify that you have a perfect square. 
+            Simplify the resulting expression to obtain vertex form.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        For each of (i)–(iii), complete the square.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(y = x^2 - 5x + 6\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(y = 3x^2 - 7x + 5\)
+                </span>
+            </li>  
+            <li>
+                <span>
+                    \(y = -2x^2 - 8x + 11\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <ol class="list-roman">
+        <li>
+            There is no leading coefficient to factor out, 
+            so we can immediately analyze the coefficient of the \(x\)-term,
+            \(-5.\) 
+            We need to insert \((-5/2)^2 = 25/4\) into the expression to force the existence of the perfect square 
+            \(\left(x - \frac{5}{2} \right)^2 :\)
+            \[
+            \ba 
+            x^2 - 5x + 6 
+            &= x^2 - 5x + \underline{\frac{25}{4}} - \underline{\frac{25}{4}} + 6 \nl
+            &= \left(x - \frac{5}{2}\right)^2 + 6 -\frac{25}{4} \nl
+            &= \boxed{\left(x - \frac{5}{2}\right)^2 - \frac{1}{4}}
+            \ea 
+            \]
+        </li>
+        <li>
+            We must first factor out the leading coefficient, \(3,\) to get 
+            \[3 \left(x^2 - \frac{7}{3} x + \frac{5}{3}\right) \period\]
+            The coefficient of the \(x\)-term is \(-7/3.\) 
+            Half of the coefficient is \(-7/6,\) whose square is \(49/36.\) 
+            Thus, we need to insert this quantity into the parentheses to create the perfect square 
+            \(\left(x - \frac{7}{6} \right)^2.\)
+            \[
+            \ba 
+            3 \left(x^2 - \frac{7}{3} x + \underline{\frac{49}{36}} - \underline{\frac{49}{36}} + \frac{5}{3} \right)
+            &= 3 \left(x - \frac{7}{6} \right)^2 + 3 \left(\frac{5}{3} - \frac{49}{36} \right) \nl 
+            &= \boxed{3 \left(x - \frac{7}{6} \right)^2 + \frac{11}{12}}
+            \ea
+            \]
+        </li>  
+        <li>
+            Let us factor out the leading coefficient, \(-2,\) to obtain 
+            \[-2 \left(x^2 + 4x - \frac{11}{2} \right) \period\]
+            The coefficient of the linear term is \(4,\) 
+            so \((4/2)^2 = 4\) is the quantity we need to insert. 
+            We get 
+            \[
+            \ba 
+            -2 \left(x^2 + 4x + \underline{4} - \underline{4} - \frac{11}{2}\right)
+            &= -2(x + 2)^2 - 2 \left(-4 - \frac{11}{2}\right) \nl 
+            &= \boxed{-2(x + 2)^2 + 19}
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+<h4 id="quadratic-formula-and-discriminant">Quadratic Formula and Discriminant</h4>
+<p>
+    To find the zeros of a quadratic equation, we factor if possible.
+    But for any nonfactorable quadratic, we may use the 
+    <span class="emph">quadratic formula</span>:
+    For the quadratic equation 
+    \[f(x) = ax^2 + bx + c = 0 \comma \] where \(a \ne 0,\) 
+    the quadratic formula states that 
+    \[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \period\]
+    A quadratic may have two, one, or no zeros, depending on the sign of the
+    <span class="emph">discriminant</span>:
+    \(\Delta = b^2 - 4ac,\) the expression in the square root of the quadratic formula. 
+</p>
+
+<ul>
+    <li>
+        If \(\Delta \gt 0,\) then \(f\) has two real zeros.
+    </li>
+    <li>
+        If \(\Delta = 0,\) then \(f\) has one real zero.
+    </li>
+    <li>
+        If \(\Delta \lt 0,\) then \(f\) has no real zeros.
+    </li>
+</ul>
+
+<p>
+    <!--figure 4-->
+    <figure class="fig-4">
+        <img src="../images/sectionImages/0/quadratics-discriminant.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .fig-4::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    These facts are intuitive since if \(\Delta \lt 0,\) then
+    the quadratic formula produces a negative square root, which is undefined. 
+    Similarly, if \(\Delta = 0,\) then the quantity to which the \(\pm\) sign applies is \(0\)
+    and so the only solution is \(x = -b/2a.\) 
+</p>
+
+<p>
+    Figure 4 shows three parabolas: \(A,\) \(B,\) and \(C.\)
+    Parabola \(A\) has a positive discriminant because it has two zeros, while
+    parabola \(B\) has a discriminant equal to \(0\) since its graph only has one \(x\)-intercept.  
+    Lastly, parabola \(C\) never touches the \(x\)-axis and so its equation has negative discriminant.
+</p>
+
+<!-- quadratics written -->
+<div class="box-title"> SOLUTIONS OF A QUADRATIC </div>
+<div class="box">
+    The quadratic  
+    \[f(x) = ax^2 + bx + c\] 
+    has solutions given by the 
+    <span class="emph">quadratic formula</span>:
+    \[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+    for nonzero \(a.\) 
+    The 
+    <span class="emph">discriminant</span>
+    is the quantity in the square root, \(\Delta = b^2 - 4ac.\)
+    <ul>
+        <li>
+            If \(\Delta \gt 0,\) then the quadratic has two real zeros.
+        </li>
+        <li>
+            If \(\Delta = 0,\) then the quadratic has one real zero.
+        </li>
+        <li>
+            If \(\Delta \lt 0,\) then the quadratic has no real zeros.
+        </li>
+    </ul>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the following equations.
+        <ol class="list-roman">
+            <li>
+                <span>
+                   \(x^2 = 16\) 
+                </span>
+                
+            </li>
+            <li>
+                <span>
+                    \(x^2 - 4x + 3 = 0\)
+                </span>
+            </li>  
+            <li>
+                <span>
+                    \(2x^2 - 4x = 6\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(x^2 - 2x + 2 = 0\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(3x^2 - 5x - 7 = 0\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"> </button>
+<div id="solution3" class="solution">
+    <ol class="list-roman">
+        <li>
+            We take the square root of both sides to get
+            \[
+            \ba 
+            x^2 &= 16 \nl
+            |x| &= \sqrt{16} \nl 
+            &= \boxed{\pm 4} 
+            \ea 
+            \]
+        </li>
+
+        <hr>
+        
+        <li>
+            We factor the equation by identifying two numbers that multiply to \(3\) 
+            and add to \(-4.\) They are \(-1\) and \(-3,\) so we have 
+            \[(x - 1)(x - 3) = 0 \period\]
+            By the zero-product property of multiplication, 
+            if one of these factors equals \(0,\) then the entire product \((x - 1)(x - 3)\) equals \(0.\)
+            Each of \(x = 1\) and \(x = 3\) causes one factor—and, thus, the entire expression—to equal zero.
+            Therefore, \(\boxed{x = 1}\) and \(\boxed{x = 3.}\)
+        </li>  
+
+        <hr>
+        
+        <li>
+            We move all the terms to one side: 
+            \[2x^2 - 4x - 6 = 0 \period \]
+            Dividing everything by \(2\) yields 
+            \[x^2 - 2x - 3 = 0 \comma \]
+            which we can factor to obtain 
+            \[(x - 3)(x + 1) = 0\period \]
+            Thus, \(\boxed{x = -1}\) and \(\boxed{x = 3.}\)
+        </li>
+
+        <hr>
+        
+        <li>
+            The expression \(x^2 - 2x + 2\) cannot be factored,
+            so we instead resort to either completing the square or using the quadratic formula.
+            There is no leading coefficient, 
+            so completing the square is arguably the simplest method. 
+            The coefficient of the \(x\)-term is \(-2\) 
+            and so we insert the term \((-2/2)^2 = 1:\)
+            \[
+            \ba 
+            \underbrace{x^2 - 2x + \underline{1}}_{(x - 1)^2} - \underline{1} + 2 &= 0 \nl
+            (x - 1)^2 + 1 &= 0 \nl
+            (x - 1)^2 &= -1. 
+            \ea 
+            \]
+            Note that the term \((x - 1)^2\) is never negative because a term squared is always positive or zero. 
+            Likewise, if we take the square root of both sides,
+            we get 
+            \[|x - 1| = \sqrt{-1} \comma \]
+            where \(\sqrt{-1}\) is a nonreal quantity. 
+            Thus, this equation has no solution.
+            The discriminant for this expression is 
+            \[\Delta = b^2 - 4ac = (-2)^2 - 4(1)(2) = -4 \comma \]
+            which is negative. 
+            Since a negative discriminant implies that a quadratic has no zeros, this result is affirmed.
+        </li>
+
+        <hr>
+        
+        <li>
+            For \(3x^2 - 5x - 7 = 0,\)
+            the leading coefficient of \(3\) and uneven numbers make it inconvenient to complete the square,
+            as we did in part (iv). Instead, we will use the quadratic formula:
+            \[ 
+            \ba 
+            x &= \frac{5 \pm \sqrt{(-5)^2 - 4(3)(-7)}}{2(3)} \nl
+            &= \boxed{\frac{5 \pm \sqrt{109}}{6}.}
+            \ea 
+            \]
+        </li>
+    </ol>
+    </div>
+
+<h4 id="quadratic-inequalities">Quadratic inequalities</h4>
+<p>
+    Let us now discuss quadratic inequalities. 
+    Consider, as an example, the inequality 
+    \[x^2 - 5x + 6 \gt 0\period \]
+    Factoring, we get 
+    \[(x - 3)(x - 2) \gt 0\period \]
+    The factors \((x - 3)\) and \((x - 2)\) must both be positive or negative.
+    For \(x \lt 2\) both factors are negative; for \(x \gt 3,\) both factors are positive.
+    But for \(2 \lt x \lt 3,\) 
+    \[(x - 3)(x - 2) \lt 0 \period\]
+    Therefore, the only correct interval is \(\boxed{x \lt 2 \comma x \gt 3.}\)
+    Alternatively, a shortcut is to consider two intervals:
+    The interval between the zeros, \(2 \lt x \lt 3;\)
+    and the interval outside, \(x \lt 2 \comma x \gt 3.\)
+    For convenience, we can plug \(x = 0\) into the inequality:
+    \[(0 - 3)(0 - 2) \gt 0 \comma \]
+    which is a true inequality and so 
+    the interval \(x \lt 2, x \gt 3\) 
+    is correct.
+</p>
+
+<!-- solving quadratic inequalities steps -->
+<div class="steps-title"> SOLVING QUADRATIC INEQUALITIES </div>
+<div class="steps">
+    To solve a quadratic inequality, follow these steps:
+    <ol class="list-num">
+        <li>
+            Find the zeros of the quadratic expression.
+        </li>
+        <li>
+            Identity whether the solution set of the inequality is 
+            between the zeros or beyond the zeros. 
+            It is easiest to plug in \(x = 0\) to determine the correct interval.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the following inequalities.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(x^2 - 2x - 3 \gt 0\)  
+                </span>
+            </li>
+            
+            <li>
+                <span>
+                    \(2x^2 - 5x + 3 \geq 0\)
+                </span>
+            </li>  
+            
+            <li>
+                <span>
+                    \(x^2 - 4x \leq -3\)
+                </span>
+            </li>
+            
+            <li>
+                <span>
+                    \(2x^2 + 4 \lt 6x\)
+                </span>
+            </li>
+            
+            <li>
+                <span>
+                    \(5x - 2 \gt -4x^2\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"> </button>
+<div>
+    <div id="solution4" class="solution">
+        <ol class="list-roman">
+            <li>
+                The factors of \[x^2 - 2x - 3 = 0\] are \(x = -1\) and \(x = 3.\)
+                We need to consider two intervals: 
+                \[-1 \lt x \lt 3 \or x \lt -1 \comma x \gt 3 \period \] 
+                For simplicity we plug \(x = 0\) into the inequality: 
+                \[0^2 - 2(0) - 3 \gt 0 \comma \]
+                which isn't true. 
+                So the interval \(-1 \lt x \lt 3\) is incorrect,
+                leaving us with \(\boxed{x \lt -1, x \gt 3.}\)
+            </li>
+
+            <hr>
+
+            
+            <li>
+                We factor the expression \(2x^2 - 5x + 3\) as \((2x - 3)(x - 1),\)
+                whose its zeros are \(x = 1\) and \(x = 3/2.\) 
+                We test two intervals: 
+                \[1 \lt x \lt \frac{3}{2} \and x \lt 1 \comma x \gt 3/2 \period \]
+                At \(x = 0\) the inequality becomes 
+                \[2(0)^2 - 5(0) + 3 \geq 0 \comma \]
+                which is true. 
+                So the correct interval is \(\boxed{x \lt 1, x \gt 3/2.}\)
+            </li>  
+
+            <hr>
+            
+            <li>
+                We first move all the terms to one side to obtain
+                \[x^2 - 4x + 3 \leq 0\period \]
+                The zeros of \(x^2 - 4x + 3\) are \(x = -3\) and \(x = -1.\) 
+                We test the intervals 
+                \[-3 \lt x \lt -1 \and x \lt -3 \comma x \gt -1.\] 
+                At \(x = 0\) we have 
+                \[(0)^2 - 4(0) + 3 \leq 0\period \]
+                This inequality is false, so the interval \(-3 \lt x \lt -1\) is invalid.
+                Thus, the interval \(\boxed{x \lt -3, x \gt -1}\) is correct.
+            </li>
+
+            <hr>
+
+            <li>
+                We move each term to one side to get 
+                \[2x^2 - 6x + 4 \lt 0 \comma \]
+                which we factor as 
+                \[2(x - 2)(x - 1) \lt 0 \period \]
+                The zeros of \(2(x - 2)(x - 1)\) are \(x = 1\) and \(x = 2.\)
+                Now we determine which of 
+                \[1 \lt x \lt 2 \and x \lt 1 \comma x \gt 2 \] 
+                is correct:
+                Plugging in \(x = 0,\) we get 
+                \[2(0)^2 - 6(0) + 4 \lt 0 \comma \]
+                a false inequality. 
+                So we're left with \(\boxed{1 \lt x \lt 2.}\)
+            </li>
+
+            <hr>
+            
+            <li>
+                Let's rewrite the inequality as 
+                \[4x^2 + 5x - 2 \gt 0\period \]
+                Using the quadratic formula gives  
+                \[
+                \frac{-5 \pm \sqrt{(5)^2 - 4(4)(-2)}}{2(4)} &= \frac{-5 \pm \sqrt{57}}{8} \period 
+                \] 
+                The zeros are then 
+                \[
+                x = \underbrace{\frac{-5 - \sqrt{57}}{8}}_{\lt 0} \quad 
+                &\and 
+                x = \underbrace{\frac{-5 + \sqrt{57}}{8}}_{\gt 0} \period
+                \ea 
+                \]
+                Plugging \(0\) into the inequality yields
+                \[4(0)^2 + 5(0) - 2 \gt 0 \comma \]
+                which is false. Therefore, 
+                \[\boxed{x \lt \frac{-5 - \sqrt{57}}{8} \comma x \gt \frac{-5 + \sqrt{57}}{8}}\]
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="section-summary">
+    <ul>
+        <li>
+            <span class="emph">Quadratics</span> 
+            are second-degree polynomials whose graphs are 
+            <span class="emph">parabolas</span>, 
+            U-shaped curves.
+        </li>
+        <li>
+            The 
+            <span class="emph">standard form</span> 
+            of a quadratic is 
+            \[ax^2 + bx + c \comma \]
+            where \((0, c)\) is the 
+            <span class="emph">\(y\)-intercept</span> 
+            of the parabola.
+        </li>
+        <li>
+            The 
+            <span class="emph">vertex form</span>
+            of a quadratic is \[a(x - h)^2 + k \comma \]
+            where \((h, k)\) is the vertex of the parabola.
+        </li>
+        <li>
+            The 
+            <span class="emph">intercept form</span> 
+            of a quadratic is \[a(x - p)(x - q) \comma \]
+            where \(x = p\) and \(x = q\) are zeros of the parabola.
+        </li>
+        <li>
+            If the leading coefficient, \(a,\) is positive, 
+            then the parabola opens upward and the vertex is a minimum. 
+            If \(a\) is negative, then the parabola opens downward and the vertex is a maximum.
+        </li>
+        <li>
+            The \(x\)-coordinate of the vertex of the quadratic \[f(x) = ax^2 + bx + c\]
+            is given by \(h = -b/2a.\) The \(y\)-coordinate of the vertex is \(k = f(-b/2a).\)
+        </li>
+        <li>
+            Completing the square is a process to convert a standard-form quadratic into vertex form. 
+            The steps are as follows:
+            <ol class="list-num">
+                <li>
+                    Factor out the leading coefficient, \(a.\)
+                </li>
+                <li>
+                    Analyze the coefficient of the \(x\)-term,  
+                    and insert the square of half the coefficient.
+                    Be sure to also subtract the quantity to maintain equality.
+                </li>
+                <li>
+                    Verify you have a perfect square. 
+                    Simplify the resulting expression to obtain vertex form.
+                </li>
+            </ol>
+        </li>
+        <li>
+            A quadratic equation can be solved either by factoring (if possible), 
+            utilizing the quadratic formula, or completing the square.
+        </li>
+        <li>
+            For the equation \(ax^2 + bx + c = 0,\) the 
+            <span class="emph">quadratic formula</span>
+            provides the solutions 
+            \[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+            for nonzero \(a.\)
+        </li>
+        <li>
+            The <span class="emph">discriminant</span>, \(\Delta = b^2 - 4ac,\) is the quantity in the square root of the quadratic formula.
+            <ul>
+                <li>
+                    If \(\Delta \gt 0,\) then the quadratic has two real zeros.
+                </li>
+                <li>
+                    If \(\Delta = 0,\) then the quadratic has one real zero.
+                </li>
+                <li>
+                    If \(\Delta \lt 0,\) then the quadratic has no real zeros.
+                </li>
+            </ul>
+        </li>
+        <li>
+            To solve a quadratic inequality, follow these steps:
+            <ol class="list-num">
+                <li>
+                    Find the zeros of the quadratic expression.
+                </li>
+                <li>
+                    Identity whether the solution set of the inequality is 
+                    between the zeros or beyond the zeros. 
+                    It is easiest to plug in \(x = 0\) to determine the correct interval.
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">
