@@ -53,73 +53,66 @@
       <hr id="mainBodyBegin">
       <!--[[[crefId.Logarithmic-Differentiation]]]--> 
 <p>
-    This section discusses a tool for differentiating complicated expressions: logarithmic differentiation.
-    This method is an application of implicit differentiation 
-    and is best used for differentiating combinations of powers, products, and quotients. 
-    Let's first recall some logarithmic properties. 
+    In Section <a href="/Valculus/calculus/2.5-Implicit-Differentiation.html">2.5</a>, we introduced the method of Implicit Differentiation.
+    We now present an application: <span class="emph">Logarithmic Differentiation</span>.
+    If we wish to differentiate an expression that contains many powers, products, and quotients,
+    then it is strenuous to use solely the differentiation rules we have learned so far.
+    But logarithms transform products and quotients into sums and differences, and they convert powers into multiples.
+    Thus, Logarithmic Differentiation
+    is an alternate method that works well for differentiating combinations of powers, multiples, and quotients.
+    The properties of logarithms are shown below.
+</p>
+
+<div class="box-title">PROPERTIES OF LOGARITHMS</div>
+<div class="box">
     For all real \(n\) and positive \(a\) and \(b,\) 
-    \[
-    \ba 
-    \log(ab) &= \log a + \log b \nl 
-    \log \left( \frac{a}{b} \right) &= \log a - \log b \nl 
-    \log(a^n) &= n \log a \period
-    \ea 
-    \]
-    Consider, as an example, the function \(y = x \sin^2 x.\)
-    To find \(\textDeriv{y}{x},\) it's possible to use the product rule and chain rule,
-    but logarithms facilitate an easier differentiation process. 
-    We take the natural log of both sides to get    
-    \[
-    \ba 
-    \ln y &= \ln \left(x (\sin x)^2 \right) \nl
-    \ln y &= \ln x + 2 \ln(\sin x) \period
-    \ea 
-    \]
-    Differentiating both sides gives, through implicit differentiation,
-    \[
-    \ba 
-    \frac{1}{y} \deriv{y}{x} &= \frac{1}{x} + \frac{2 \cos x}{\sin x} \period
-    \ea 
-    \]
-    At this point, we solve for \(\textDeriv{y}{x}.\)
-    Remember that \(y = x \sin^2 x,\) so we find 
-    \[
-    \ba 
-    \frac{1}{x \sin^2 x} \deriv{y}{x} &= \frac{1}{x} + \frac{2 \cos x}{\sin x} \nl 
-    \deriv{y}{x} &= \boxed{\sin^2 x + 2 x \cos x \sin x \period}
-    \ea 
-    \]
-    From this example, we see it's useful to break up a complicated expression
-    using logarithms. Doing so allows for smoother differentiating 
-    through implicit differentiation.
+    <ol class="list-alpha">
+        <li id="prop-a">
+            \(\log(ab) = \log a + \log b.\)
+        </li>
+        <li id="prob-b">
+            \(\ds \log \left(\frac{a}{b}\right) = \log a - \log b.\)
+        </li>
+        <li id="prop-c">
+            \(\log \left(a^n\right) = n \log a.\)
+        </li>
+    </ol>
+</div>
+
+<p>
+    To perform Logarithmic Differentiation on \(y = f(x),\)
+    we take the natural logarithm of both sides. 
+    Doing so transforms the products, quotients, and powers in \(f(x)\) into 
+    sums, differences, and multiples, respectively—producing a form that is easier to differentiate.
 </p>
 
 <!-- table for log. diff -->
 <div class="steps-title"> LOGARITHMIC DIFFERENTIATION </div>
 <div class="steps">
     Consider the function \(y = f(x).\)
-    To find \(\textDeriv{y}{x}\) using logarithmic differentiation:
+    To find \(\textDeriv{y}{x}\) using Logarithmic Differentiation,
     <ol class="list-num">
         <li>
-            Reexpress \(y\) as \(\ln y\) to get  
-            \begin{equation} \label{eq:step-1}
+            Take the natural logarithm of both sides to get  
+            \begin{equation*}
                 \ln y = \ln[f(x)] \period
-            \end{equation}
-            This process decomposes the powers, products, and quotients of \(f(x).\) 
+            \end{equation*}
+            Use logarithm properties to transform the products and quotients in \(f(x)\) into 
+            sums and differences, respectively, of logarithms. 
         </li>
         <li>
-            Differentiate both sides of \(\eqRefer{eq:step-1}.\)
-            Use implicit differentiation to differentiate \(\ln y\) with respect to \(x.\)
-            The resulting left-hand expression is \(\frac{1}{y} \deriv{y}{x},\) 
-            but remember that \(y = f(x).\)
+            Perform Implicit Differentiation:
+            Differentiate both sides of \(\ln y = \ln[f(x)]\) with respect to \(x,\)
+            using the Chain Rule to differentiate expressions with \(y.\)
+            The resulting left-hand expression is \(\frac{1}{y} \deriv{y}{x}.\) 
         </li>
         <li>
-            Solve for \(\textDeriv{y}{x}.\) 
+            Solve for \(\textDeriv{y}{x}\) by multiplying both sides by \(y = f(x).\)
         </li>
     </ol>
 </div>
 
-<div class="example-title"> EXAMPLE 1 </div>
+<div class="example-title" id="ex-1"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
         If \(y = e^{\sin x},\) 
@@ -127,80 +120,141 @@
     </div>
 </div>
 <button onclick="toggle1()" class="solution-button"> </button>
-<!--example 1 solution-->
 <div id="solution1" class="solution">
-    <p>
-        Taking the natural logarithm of both sides of \(y = e^{\sin x},\) we get 
-        \[
-        \ba 
-        \ln y &= \ln \left(e^{\sin x}\right) \nonumber \nl
-        &= \sin x \ln e \period \nonumber \nl
-        \ea 
-        \]
-        Because \(\ln e = 1,\) we have 
-        \begin{equation} \label{eq:ex-1-lny}
-        \ln y = \sin x \period 
-        \end{equation}
-        We now proceed to perform implicit differentiation to solve for \(\textDeriv{y}{x}.\)
-        Differentiating both sides of \(\eqRefer{eq:ex-1-lny}\) gives 
-        \[\frac{1}{y} \deriv{y}{x} = \cos x \period\]
-        Recall, however, that \(y = e^{\sin x}.\) 
-        Thus, we get 
-        \[
-        \ba 
-        \frac{1}{e^{\sin x}} \deriv{y}{x} &= \cos x \nl
-        \deriv{y}{x} &= \boxed{e^{\sin x} \cos x \period}
-        \ea 
-        \]
-        When performing logarithmic differentiation, 
-        it's universal to solve for \(\textDeriv{y}{x}\) 
-        by multiplying both sides by \(y = f(x).\) 
-        It's usually the hardest part to keep up with the algebra in these problems, 
-        as opposed to ensuring that the chain rule is correctly used to immediately differentiate \(e^{\sin x}.\)
-    </p>
+    It's possible to use the Chain Rule to find \(\textDeriv{y}{x},\)
+    but using logarithms is an alternate method.
+    Taking the natural logarithm of both sides of \(y = e^{\sin x}\)
+    and using Property <a href="#prop-c">(c)</a>, we get 
+    \[
+    \ba 
+    \ln y &= \ln \left(e^{\sin x}\right) \nonumber \nl
+    &= \sin(x) \ln e \period \nonumber \nl
+    \ea 
+    \]
+    Because \(\ln e = 1,\) we have 
+    \begin{equation} \label{eq:ex-1-lny}
+    \ln y = \sin x \period 
+    \end{equation}
+    We perform Implicit Differentiation with respect to \(x\) to solve for \(\textDeriv{y}{x}.\)
+    Differentiating both sides of \(\eqRefer{eq:ex-1-lny}\) gives 
+    \[\tfrac{1}{y} \deriv{y}{x} = \cos x \period\]
+    We multiply both sides by \(y = e^{\sin x}\) to isolate \(\textDeriv{y}{x} \col\)
+    \[
+    \ba 
+    \deriv{y}{x} &= \boxed{e^{\sin x} \cos x}
+    \ea 
+    \]  
 </div>
 
-<div class="example-title"> EXAMPLE 2 </div>
+<div class="example-title" id="ex-2"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Let \(f\) be the function defined by 
-        \(f(x) = \frac{x^2 - 6}{2^{\cos x}} \period\)
-        Find \(f'(x).\)
+        If \(y = x \sin^2 x,\) 
+        then find \(\textDeriv{y}{x}.\)
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button"> </button>
 <div id="solution2" class="solution">
-    <p>
-        Let's refer to the function \(f(x)\) as simply \(y.\)
-        Then taking the natural logarithm of both sides produces
-        \begin{align}
-        \ln y &= \ln(x^2 - 6) - \ln(2^{\cos x}) \nonumber \nl 
-        \ln y &= \ln(x^2 - 6) - \cos(x) \ln 2 \period \label{eq:ex-2-lny}
-        \end{align}
-        We now differentiate both sides of \(\eqRefer{eq:ex-2-lny}\):
-        \[
-        \ba 
-        \frac{1}{y} \deriv{y}{x} &= \frac{2x}{x^2 - 6} + \sin(x) \ln 2 \nl
-        \frac{1}{\frac{x^2 - 6}{2^{\cos x}}} \deriv{y}{x} &= \frac{2x}{x^2 - 6} + \sin(x) \ln 2 \nl
-        f'(x) &= \boxed{\frac{x^2 - 6}{2^{\cos x}} \left(\frac{2x}{x^2 - 6} + \sin(x) \ln 2\right) \period}
-        \ea 
-        \]
-    </p>
+    We take the natural logarithm of both sides and use logarithm properties 
+    <a href="#prop-a">(a)</a> and <a href="#prop-c">(c)</a> to get    
+    \[
+    \ba 
+    \ln y &= \ln \left[x (\sin x)^2 \right] \nl
+    &= \ln x + 2 \ln(\sin x) \period
+    \ea 
+    \]
+    We differentiate both sides gives with respect to \(x.\)
+    We treat \(y\) as a function of \(x,\) so we use the Chain Rule:
+    \[
+    \ba 
+    \tfrac{1}{y} \deriv{y}{x} &= \frac{1}{x} + \frac{2 \cos x}{\sin x} \period
+    \ea 
+    \]
+    At this point we solve for \(\textDeriv{y}{x}.\)
+    Multiplying both sides by \(y = x \sin^2 x\) yields 
+    \[
+    \ba     
+    \deriv{y}{x} &= x \sin^2 x \left[\frac{1}{x} + \frac{2 \cos x}{\sin x}\right] \nl 
+    &= \boxed{\sin^2 x + 2 x \cos x \sin x}
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-3"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\textDeriv{y}{x}\) if 
+        \[y = \sqrt{\frac{x^2 \sin x}{e^x}} \pd \]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"> </button>
+<div id="solution3" class="solution">
+    We take the natural logarithm of both sides:
+    \begin{equation} 
+    \ln y = \ln \sqrt{\frac{x^2 \sin x}{e^x}} \pd \label{eq:sqrt}
+    \end{equation}
+    The square root of a value is equivalent to raising the value to the power of \(1/2.\)
+    Thus, logarithm properties allow us to rewrite the right side of \(\eqref{eq:sqrt}\) as 
+    \[
+    \ba 
+    \tfrac{1}{2} \ln \frac{x^2 \sin x}{e^x} &= \tfrac{1}{2} \ln \left[x^2 \sin x\right] - \tfrac{1}{2} \ln(e^x) \nl
+    &= \tfrac{1}{2} \ln(x^2) + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \nl 
+    &= \ln x + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \pd 
+    \ea 
+    \]
+    Hence, \(\eqRefer{eq:sqrt}\) becomes 
+    \[\ln y = \ln x + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \pd\]
+    We use Implicit Differentiation with respect to \(x\) to find \(\textDeriv{y}{x} \col\)
+    \[
+    \ba 
+    \tfrac{1}{y} \deriv{y}{x} &= \frac{1}{x} + \frac{\cos x}{2 \sin x} - \frac{1}{2} \nl 
+    \deriv{y}{x} &= y \left[\frac{1}{x} + \frac{\cos x}{2 \sin x} - \frac{1}{2}\right] \nl 
+    &= \boxed{\sqrt{\frac{x^2 \sin x}{e^x}} \left[\frac{1}{x} + \frac{1}{2} \cot x - \frac{1}{2}\right]}
+    \ea 
+    \]
 </div>
 
 <!--section summary-->
 <div class="section-summary">
-    <ul>
-       <li>
-           Logarithmic differentiation is an application of implicit differentiation 
-           that allows for simplier differentiation of products, quotients, and powers of functions.
-       </li>
-       <li>
-            For the function \(y = f(x),\) we first take the natural log of both sides to get 
-            \[\ln y = \ln[f(x)] \period\]
-            We then differentiate both sides, using implicit differentiation to solve for \(\textDeriv{y}{x}.\) 
-       </li>
-    </ul>
+    <p>
+        Logarithmic Differentiation is an application of Implicit Differentiation 
+        that allows for simpler differentiation of products, quotients, and powers of functions.
+        The properties of logarithms are as follows:
+        For all real \(n\) and positive \(a\) and \(b,\) 
+        <ol class="list-alpha">
+            <li>
+                \(\log(ab) = \log a + \log b.\)
+            </li>
+            <li>
+                \(\ds \log \left(\frac{a}{b}\right) = \log a - \log b.\)
+            </li>
+            <li>
+                \(\log \left(a^n\right) = n \log a.\)
+            </li>
+        </ol>
+    </p>
+    <p>
+        If \(y = f(x),\) then to find \(\textDeriv{y}{x}\) using Logarithmic Differentiation,
+        <ol class="list-num">
+            <li>
+                Take the natural logarithm of both sides to get  
+                \begin{equation} \label{eq:step-1}
+                    \ln y = \ln[f(x)] \period
+                \end{equation}
+                Use logarithm properties to transform the products and quotients in \(f(x)\) into 
+                sums and differences, respectively, of logarithms. 
+            </li>
+            <li>
+                Perform Implicit Differentiation:
+                Differentiate both sides of \(\eqRefer{eq:step-1}\) with respect to \(x,\)
+                using the Chain Rule to differentiate expressions with \(y.\)
+                The resulting left-hand expression is \(\frac{1}{y} \deriv{y}{x}.\) 
+            </li>
+            <li>
+                Solve for \(\textDeriv{y}{x}\) by multiplying both sides by \(y = f(x).\)
+            </li>
+        </ol>
+    </p>
 </div>
     </main>
     <!-- <footer>

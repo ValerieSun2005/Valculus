@@ -54,8 +54,8 @@
       <!--[[[crefId.Improper-Integrals]]]--> 
 <p>
     Up to this point, we have covered integrals that featured finite bounds or were well defined over the interval over which we integrated.
-    In this section, however, we discuss integrals \(\int_a^b f(x) \di x\) in which \([a, b]\) is infinite 
-    or in which \(f\) <i>does</i> have an infinite discontinuity in \([a, b].\)
+    But in this section, we discuss integrals \(\int_a^b f(x) \di x\) in which \([a, b]\) is infinite 
+    or in which \(f\) has an infinite discontinuity in \([a, b].\)
     We call these integrals <span class="emph">improper integrals</span>, examples of which are
     \[\int_1^\infty \frac{1}{x^2} \di x \and \int_{-1}^0 \frac{1}{x^2} \di x \period\]
 </p>
@@ -88,12 +88,11 @@
     \[\int_a^\infty f(x) \di x = \lim_{k \to \infty} \int_a^k f(x) \di x \period\]
     We <i>first</i> evaluate \(\int_a^k f(x) \di x\)
     and <i>then</i> take the limit of the resulting expression.
-    Geometrically, allowing \(k\) to grow shifts the line \(x = k\) 
-    farther to the right, thus expanding Region \(R;\) 
-    see <a href="#type-i-improper">Figure 1</a>.
+    Geometrically, in <a href="#type-i-improper">Figure 1</a> allowing \(k\) to grow shifts the line \(x = k\) 
+    farther to the right, thus expanding Region \(R.\) 
 </p>
 <aside class="box-tip">
-    We say a limit that approaches \(-\infty\) or \(+\infty\)
+    We say that a limit that approaches \(-\infty\) or \(+\infty\)
     does <i>not</i> exist.
 </aside>
 <p>
@@ -146,14 +145,16 @@
             \[\int_{-\infty}^b f(x) \di x = \lim_{k \to -\infty} \int_k^b f(x) \di x \period\]
         </li>
         <li>
-            If \(c\) is any real number, then 
+            If \(c\) is any real number, and \(\int_{-\infty}^c f(x) \di x\) and \(\int_c^\infty f(x) \di x\) 
+            both converge, then 
             \[\int_{-\infty}^\infty f(x) \di x = \int_{-\infty}^c f(x) \di x + \int_c^\infty f(x) \di x \period\]
+            If either \(\int_{-\infty}^c f(x) \di x\) or \(\int_c^\infty f(x) \di x\) 
+            diverges, then \(\int_{-\infty}^\infty f(x) \di x\) diverges.
         </li>
     </ol>
     An improper integral <span class="emph">converges</span>
     if its corresponding limit exists;
     otherwise, it <span class="emph">diverges</span>.
-    In part (c), the improper integral converges if and only if both limits exist.
 </div>
 
 <div class="example-title"> EXAMPLE 1 </div>
@@ -228,12 +229,10 @@
     \[I = \int_1^\infty \frac{1}{x^p} \di x \period\]
     Of course, \(I\) diverges if \(p = 1.\) 
     For \(p \ne 1,\) we rewrite the integrand as \(x^{-p}.\) The improper integral then becomes   
-    \[\lim_{k \to \infty} \frac{x^{1 - p}}{1 - p} \Big|_1^k = \lim_{k \to \infty} \frac{k^{1 - p}}{1 - p} - \frac{1}{1 - p} \period\]
-    If \(p \lt 1,\) then 
-    \[k^{1 - p} \to \infty \as k \to \infty\]
-    and so \(I\) diverges.
-    In contrast, if \(p \gt 1,\) then 
-    \[k^{1 - p} \to 0 \as k \to \infty \comma \]
+    \[I = \lim_{k \to \infty} \frac{x^{1 - p}}{1 - p} \Big|_1^k = \lim_{k \to \infty} \frac{k^{1 - p}}{1 - p} - \frac{1}{1 - p} \period\]
+    If \(p \lt 1,\) then \(k^{1 - p} \to \infty\) as \(k \to \infty,\)
+    so \(I\) diverges.
+    But if \(p \gt 1,\) then \(k^{1 - p} \to 0\) as \(k \to \infty,\) 
     and 
     \[I = 0 - \frac{1}{1 - p} = \frac{1}{p - 1} \pd \]
 </p>
@@ -290,8 +289,8 @@
 
 <h4 id="type-II-improper-integrals">Type II Improper Integrals</h4>
 <p> 
-    A <span class="emph">Type II</span> improper integral 
-    features a discontinuity at a bound of integration.
+    In a <span class="emph">Type II</span> improper integral,
+    the integrand has an infinite discontinuity in the region of integration.
     <a href="#type-ii-improper">Figure 4</a> shows the graph of \(y = f(x),\)
     and the area of Region \(R\) is \(\int_a^b f(x) \di x.\) 
     This is an example of a <i>Type II</i> improper integral 
@@ -315,7 +314,7 @@
 <div class="box-title"> TYPE II IMPROPER INTEGRALS </div>
 <div class="box">
     A <span class="emph">Type II</span> improper integral takes the form \(\int_a^b f(x) \di x\)
-    where \(f(x)\) has a discontinuity in \([a, b].\)
+    where \(f(x)\) has an infinite discontinuity in \([a, b].\)
     <ol class="list-alpha">
         <li>
             If \(f\) is continuous over \([a, b)\) and discontinuous at \(x = b,\) then 
@@ -528,11 +527,11 @@
             An improper integral <span class="emph">converges</span>
             if its corresponding limit exists;
             otherwise, it <span class="emph">diverges</span>.
-            In part (c), the improper integral converges if and only if both limits exist.
+            In part (c), the improper integral converges if and only if both integrals exist.
         </li>
         <li>
             A <span class="emph">Type II</span> improper integral takes the form \(\int_a^b f(x) \di x\)
-            where \(f(x)\) has a discontinuity in \([a, b].\)
+            where \(f(x)\) has an infinite discontinuity in \([a, b].\)
             <ol class="list-alpha">
                 <li>
                     If \(f\) is continuous over \([a, b)\) and discontinuous at \(x = b,\) then 
