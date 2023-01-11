@@ -35,10 +35,14 @@ h4{
     margin-top: 0%;
 }
 
-h4, .page-anchor{
+h4, .page-anchor, .summary-anchor{
     font-variant: small-caps;
     color: rgb(83, 198, 198);
     font-family: Geneva, Tahoma, sans-serif;
+}
+
+.summary-anchor{
+    margin-right: 0.8%;
 }
 
 .emph{ /* emphasize something, like a definition */ 
@@ -46,9 +50,9 @@ h4, .page-anchor{
 }
 
 .proof{
-    color: rgb(147, 98, 151);
-    text-decoration: underline;
+    color: rgb(0, 169, 157);
     padding-right: 0.5%;
+    font-family: Geneva, Tahoma, sans-serif;
 }
 
 .warning{

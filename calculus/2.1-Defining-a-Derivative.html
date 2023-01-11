@@ -53,60 +53,106 @@
       <hr id="mainBodyBegin">
       <!--[[[crefId.Defining-a-Derivative]]]--> 
 <p>
-    <figure class="fig-1">
-        <img src="../images/sectionImages/2/tangent-line.jpg" alt="Fig. 1.">
-    </figure>
-    <style>
-        .fig-1::before{
-            content:'FIGURE 1';
-        }
-    </style> 
-    When you drive a car, the speedometer tells you your <i>instantaneous</i> speed—your 
-    change in position at an exact moment. 
-    A <span class="emph">derivative</span> is the tool we use in calculus to model this behavior. 
-    We might define a derivative as measuring a function's <i>sensitivity to change</i> at a certain moment. 
-    In this section we introduce a derivative and construct tangent lines. 
+    <ul>
+        In this section we discuss the following:
+        <li>
+            Using limits to <a class="page-anchor" href="#definition-of-a-derivative">Define a Derivative</a> and interpret a derivative's meaning
+            at a point and as a function
+        </li>
+        <li>
+            Determining <a class="page-anchor" href="#differentiability">Differentiability</a> by introducing 
+            one-sided derivatives 
+        </li>
+        <li>
+            Applying and proving <a class="page-anchor" href="#derivative-properties">Derivative Properties</a>
+        </li>
+        <li>
+            Computing <a class="page-anchor" href="#higher-order-derivatives">Higher-Order Derivatives</a>
+        </li>
+        <li>
+            Relating <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>
+        </li>
+    </ul>
 </p>
-<h4 id="definition-of-derivative">Definition of a Derivative</h4>
+<h4 id="definition-of-a-derivative">Definition of a Derivative</h4>
+
+<figure class="tangent-line" id="tangent-line">
+    <img src="../images/sectionImages/tangent-line.jpg" alt="Fig. 1.">
+</figure>
+<style>
+    .tangent-line::before{
+        content:'FIGURE 1';
+    }
+</style> 
+
 <p>
-    The graph of a function \(f\) is shown in Figure 1. 
-    A line intersects the graph of \(y = f(x)\) at the point \(P(x, f(x)).\)
-    We call this line a <span class="emph">tangent line</span> to \(y = f(x)\) at \(P.\)
-    Loosely speaking, a tangent line "just touches" a curve at a given point. 
-    We can't say the tangent line only touches the graph at \(P,\) however,
-    because the line could strike the curve anywhere farther away.
-    <figure class="fig-2">
-        <img src="../images/sectionImages/2/secant-line.jpg" alt="Fig. 2.">
-    </figure>
-    <style>
-        .fig-2::before{
-            content:'FIGURE 2';
-        }
-    </style>
+    A fundamental part of calculus is calculating a function's slope at a point.
+    This slope represents the function's <i>rate of change</i> at an exact moment. 
+    Calculating slopes allows us to delve into the environment of <i>instantaneous rates</i>; 
+    we can find how rapidly a population is increasing or how quickly a deflating balloon's radius is shrinking—fundamental 
+    skills in the study of <span class="emph">differential calculus</span>.
+    The question is, what method do we use to find a function's slope?
 </p>
 <p>
-    The slope of a tangent line is called the <span class="emph">derivative</span>.
-    We calculate the derivative of \(f\) at \(x\) by constructing a <span class="emph">secant line</span>—a line that 
-    intersects the graph of \(y = f(x)\) at \(P\) and another nearby point \(Q;\)
-    see Figure 2.
-    If the horizontal distance between \(P\) and \(Q\) is \(h,\) 
-    then the vertical distance is \(f(x + h) - f(x).\)
+    <span class="label-emph">Geometry with Tangents</span>
+    The first half of the answer is to construct a <span class="emph">tangent line</span> to the function's graph.
+    This line's slope matches the slope of the function.
+    <a href="#tangent-line">Figure 1</a> shows the graph of function \(f\)   
+    and the tangent line to \(f\) at point \(P(x, f(x)),\)
+    which "just touches" the graph of \(f\) at \(P.\)
+    The slope of \(f\) at \(P\)—and, accordingly, of the tangent line at \(P\)—has slope \(f'(x),\) called a <span class="emph">derivative</span>.
+    Derivative \(f'(x)\) measures the <i>rate of change</i> of \(f\) at \(x \col\)
+    If \(f\) increases steeply at \(x,\) then \(f'(x)\)—the slope of \(f(x)\)—is a large <i>positive</i> number.
+    In contrast, if \(f\) is decreasing at \(x,\) then \(f'(x)\) is <i>negative</i> because the slope of \(f(x)\) is negative.
+    We formally define a tangent line using the derivative, as follows.
+</p>
+
+<div class="box-title">DEFINITION OF A TANGENT LINE</div>
+<div class="box">
+    A line is <span class="emph">tangent</span> to the graph of \(f\) at point \(P(x, f(x))\)
+    if the line passes through point \(P\) with slope \(f'(x).\)
+</div>
+
+<p>
+    The tangent line <i>doesn't necessarily</i> only touch the graph once,
+    because the line could strike the graph at any point farther away.
+    The second part of our question is set: 
+    what is our procedure to compute the slope of the tangent line?
+</p>
+
+<figure class="secant-line" id="secant-line">
+    <img src="../images/sectionImages/secant-line.jpg" alt="Fig. 2.">
+</figure>
+<style>
+    .secant-line::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Calculating a Derivative</span>
+    The second half of our answer is to construct a line that <i>collapses into</i>  
+    the tangent line, and calculate the slope as the line transforms into a tangent line.
+    As in <a href="#secant-line">Figure 2</a>, 
+    we construct a <span class="emph">secant line</span> that 
+    intersects \(f\) at points \(P\) and \(Q,\)
+    both on the graph of \(f.\)
+    If the horizontal difference between \(P\) and \(Q\) is \(h,\) 
+    then the vertical difference is \(f(x + h) - f(x).\)
     Therefore, the slope of the secant line is 
     \[m_{PQ} = \frac{\Delta y}{\Delta x} = \frac{f(x + h) - f(x)}{h} \period\]
-</p>
-<p>
-    If \(Q\) is made closer to \(P\)—that is, \(h\) is smaller—then the secant line better resembles the tangent line \(P.\)
-    If \(h\) is <i>infinitely</i> close to \(0,\) 
-    then the secant line collapses into a tangent line; see Animation 1.
-    Therefore, we find the slope of the tangent line by taking the <i>limit</i> of \(m_{PQ}\) as \(h \to 0.\)
-    We denote a derivative as either \(\deriv{y}{x}\) or \(f'(x).\)
-    Thus, 
+    We call \(m_{PQ}\) a <span class="emph">difference quotient</span> because it's a ratio of two differences.
+    If we move \(Q\) along the graph of \(f\) to be closer to \(P\)—that is, if \(h\) 
+    shrinks—then the secant line better resembles the tangent line to \(P.\)
+    If \(h\) is made <i>infinitely</i> close to \(0,\) 
+    then the secant line becomes the tangent line, as in <a href="#anm-1">Animation 1</a>.
+    Therefore, we find the slope of the tangent line by taking the <i>limit</i> of \(m_{PQ}\) as \(h \to 0;\) namely,
     \begin{equation} 
     f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period \label{eq:lim-defn}  
     \end{equation}
-    <figure class="anm-1">
+    <figure class="anm-1" id="anm-1">
         <video controls>
-            <source src="../images/sectionImages/2/tangent-animation.mp4" type="video/mp4" alt="Animation 1">
+            <source src="../images/sectionImages/tangent-animation.mp4" type="video/mp4" alt="Animation 1">
         </video>
     </figure>
     <style>
@@ -114,49 +160,936 @@
             content:'ANIMATION 1';
         }
     </style>
-    We can also write 
-    \[\deriv{y}{x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period\]
+    And we have accomplished our goal—\(\eqrefer{eq:lim-defn}\) gives the slope of \(f\) at \(x.\)
+    Another notation for the derivative is \(\textDeriv{y}{x}\) or \(\textDeriv{f}{x}\)—called 
+    <span class="emph">Leibniz</span> notation.
+    For example, \(\eqrefer{eq:lim-defn}\) can also be written using Leibniz notation as 
+    \[\deriv{f}{x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period\]
     Loosely speaking, \(\dd x\) can be thought of as an infinitely small \(\Delta x,\) 
     and \(\dd y\) is similar to an infinitely small \(\Delta y.\)
-    We call these terms <span class="emph">differentials</span>. 
-    Thus, \(\deriv{y}{x}\) is, roughly speaking, the slope composed of these differentials.
+    We call these expressions <span class="emph">differentials</span>. 
+    The slope \(\textDeriv{y}{x}\) is then analogous to the ratio of these differentials.
+    We will discuss differentials in later sections;
+    for now, we treat derivatives as distinct from fractions.
+    The expression \(\textDeriv{y}{x}\) represents the derivative of \(y\) 
+    <i>with respect to</i> \(x\)—in other words, the <i>rate</i> at which \(y\)
+    changes with \(x.\)
+    
 </p>
 
-<!-- table for definition of derivative-->
-<div class="box-title"> LIMIT DEFINITION OF A DERIVATIVE </div>
+<div class="box-title" id="deriv-function"> DEFINITION OF A DERIVATIVE </div>
 <div class="box">
-    The slope of the line tangent to the graph of \(y = f(x)\) at \((x, f(x))\) is 
-    \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period \]
+    The <span class="emph">derivative</span> of function \(f\) at \(x\) is \(f'(x),\)
+    given by 
+    \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]
+    if the limit exists.
+    Quantity \(f'(x)\) is the <i>slope</i> of \(f\) at the point \((x, f(x)).\)
 </div>
+
+<figure class="secant-line-alternate" id="secant-line-alternate">
+    <img src="../images/sectionImages/secant-line-alternate.jpg" alt="Fig. 3.">
+</figure>
+<style>
+    .secant-line-alternate::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    There is another definition of the derivative.
+    If we draw a secant line that intersects the graph of \(f\) at points \(P(a, f(a))\) and \(Q(x, f(x)),\)
+    then the secant line's slope is 
+    \[m_{PQ} = \frac{f(x) - f(a)}{x - a} \pd\]
+    (See <a href="#secant-line-alternate">Figure 3</a>.)
+    Then as \(x\) is made closer to \(a,\) the <i>secant</i> line
+    begins to collapse into the <i>tangent</i> line to \(f\) at \(P.\)
+    We then get
+    \begin{equation} 
+    f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \pd \label{eq:lim-defn-point}
+    \end{equation} 
+    We use \(\eqrefer{eq:lim-defn-point}\) to find a derivative of \(f\) at a <i>specific point</i> \((a, f(a)).\)
+    In contrast, \(\eqrefer{eq:lim-defn}\) gives the derivative of \(f\) as
+    a <i>function</i> of \(x\)—that is, the slope of \(f\) as a function of \(x.\)
+    To find a derivative of a function at a point, 
+    we can use either difference quotient in \(\eqref{eq:lim-defn}\) or \(\eqref{eq:lim-defn-point}.\)
+    Sometimes one form is easier to use than the other.
+</p>
+
+<div class="box-title" id="deriv-point"> DERIVATIVE AT A POINT (ALTERNATE DEFINITION) </div>
+<div class="box">
+    The derivative of function \(f(x)\) at \(x = a\) is 
+    \[f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}\]
+    if this limit exists.
+</div>
+
+<aside class="box-remark">
+    The verb for taking a derivative is 
+    <i>differentiate</i>, not <i>derive</i>.
+    To <i>derive</i> is to obtain an idea based on another concept—for example, 
+    <i>deriving</i> an equation from another equation.
+</aside>
+
+<p>
+    We pronounce \(\textDeriv{y}{x}\) as "\(\dd y\) by \(\dd x\)" or simply "\(\dd y,\) \(\dd x.\)"
+    Using Leibniz notation, we can also write 
+    \[\deriv{y}{x} = \deriv{}{x} [y] \pd\]
+    The expression \(\textDeriv{}{x}\) is an <i>operator</i>, whereas \(\textDeriv{y}{x}\) is a quantity.
+    An analogy is as follows: \(\textDeriv{}{x}\) is a verb, and \(\textDeriv{y}{x}\) is a noun.
+    To denote the derivative of \(y = f(x)\) at a point \(x = a,\) 
+    in Leibniz notation we write \(\textDeriv{f}{x}|_{x = a}\) or \(\textDeriv{y}{x}|_{x = a},\)
+    and in prime notation we write \(f'(a)\) or \(y'(a).\) 
+    Taking a derivative is called <span class="emph">differentiation</span>. 
+</p>
 
 <div class="example-title"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
         Let \(f(x) = 1/x.\)
-        <ol class="list-alpha">
-            <li>
-                Find \(f'(2).\) Interpret this value.
-            </li>
-            <li>
-                Write an equation of the line tangent to the graph of \(y = f(x)\) at \(x = 2.\)
-            </li>
-        </ol>
+        Evaluate \(f'(2)\) and interpret your answer.
     </div>
 </div>
 <button onclick="toggle1()" class="solution-button">  </button>
 <div id="solution1" class="solution">
-    <ol class="list-alpha">
+    <aside class="box-tip">
+        If a limit expression contains nested fractions, 
+        then it may be easier to write the expression as a product of two terms—for example, 
+        \[\frac{\frac{1}{x} - \frac{1}{2}}{x - 2} = \frac{1}{x - 2} \left(\frac{1}{x} - \frac{1}{2}\right) \pd\]
+    </aside>
+    <p>
+        We seek the derivative at a specific point.
+        Hence, we can use either \(\eqref{eq:lim-defn}\) or \(\eqref{eq:lim-defn-point},\) with \(x = 2.\)
+        If we use \(\eqref{eq:lim-defn-point},\) then \(f(x) = 1/x\) and \(f(2) = 1/2,\) and
+        \[f'(2) = \lim_{x \to 2} \frac{1}{x - 2} \left(\frac{1}{x} - \frac{1}{2}\right) \pd\]
+        We cannot perform direct substitution by immediately substituting \(x = 2,\)
+        because this limit is of the indeterminate form \(\indZero.\)
+        Our strategy is then to combine the fractions using a common denominator and attempt to cancel a common factor. 
+        (See Section <a href="/Valculus/calculus/1.3-Evaluating-Limits-Algebraically.html">1.3</a> 
+        for a review of finding indeterminate limits.)
+        Doing so gives 
+        \[
+        \ba  
+        f'(x) &= \lim_{x \to 2} \frac{1}{x - 2} \left(\frac{2 - x}{2x}\right) \nl 
+        &= \lim_{x \to 2} \frac{1}{x - 2} \left(\frac{-(x - 2)}{2x}\right) \nl 
+        &= \lim_{x \to 2} \frac{-1}{2x} \nl 
+        &= \boxed{-\frac{1}{4}}
+        \ea 
+        \]
+    </p>
+    <figure class="deriv-ex-1-over-x" id="deriv-ex-1-over-x">
+        <img src="../images/sectionImages/deriv-ex-1-over-x.jpg" alt="Fig. 4.">
+    </figure>
+    <style>
+        .deriv-ex-1-over-x::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    <p>
+        We interpret this value as follows: The tangent line to the graph of \(y = 1/x\) at \(x = 2\) 
+        has a slope of \(-1/4.\) 
+        (See <a href="#deriv-ex-1-over-x">Figure 4</a>.)
+    </p>
+    <p>
+        If we chose to use \(\eqref{eq:lim-defn}\) to find \(f'(2),\) then our limit would have been 
+        \[f'(2) = \lim_{h \to 0} \frac{1}{h} \left(\frac{1}{2 + h} - \frac{1}{2}\right) \pd\]
+        You may verify that this limit also equals \(-1/4,\) 
+        matching the answer we obtained using \(\eqref{eq:lim-defn-point}.\)
+    </p>
+</div>
+
+<div class="example-title" id="ex-2"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Compute the following derivatives.
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds \deriv{}{x}[3x + 2]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \left[x^2 \right]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \sqrt x\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    In each part, we need a derivative <i>function</i>. 
+    Thus, we use \(\eqrefer{eq:lim-defn}\) for each part.
+    <ol class="list-roman">
         <li>
-            The expression \(f'(2)\) represents the derivative of \(f(x)\) at \(x = 2.\)
-            We use \(\eqRefer{eq:lim-defn}\) to find 
+            Using \(\eqref{eq:lim-defn},\) we have \(f(x) = 3x + 2\) and \(f(x + h) = 3(x + h) + 2.\)  
+            Thus, 
             \[
             \ba 
-            f'(2) &= \lim_{h \to 0} \frac{f(2 + h) - f(2)}{h} \nl 
-            &= \lim_{h \to 0} \frac{\frac{1}{2 + h} - \frac{1}{2}}{h}
+            \deriv{}{x}[3x + 2] &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nl 
+            &= \lim_{h \to 0} \frac{[3(x + h) + 2] - [3x + 2]}{h} \pd
+            \ea 
+            \]
+            Simplification of the limit gives 
+            \[
+            \ba 
+            \deriv{}{x}[3x + 2] &= \lim_{h \to 0} \frac{3h}{h} \nl
+            &= \lim_{h \to 0} 3 \nl
+            &= \boxed{3} 
             \ea 
             \]
         </li>
+        <hr>
+        <li>
+            Using \(\eqref{eq:lim-defn},\) with \(f(x) = x^2\) and \(f(x + h) = (x + h)^2,\) we obtain 
+            \[\deriv{}{x} \left[x^2 \right] = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h} \pd\]
+            We cannot immediately substitute \(h = 0\) in the difference quotient, as 
+            we get the indeterminate form \(\indZero.\)
+            Instead, we expand \((x + h)^2\) and cancel terms.
+            This strategy gives
+            \[
+            \ba 
+            \deriv{}{x} \left[x^2 \right] &= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \nl 
+            &= \lim_{h \to 0} \frac{2xh + h^2}{h} \nl 
+            &= \lim_{h \to 0} (2x + h) \nl 
+            &= \boxed{2x}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We use \(\eqref{eq:lim-defn}\) with \(f(x) = \sqrt x\) and \(f(x + h) = \sqrt{x + h}.\)
+            The derivative is then 
+            \[\deriv{}{x} \sqrt x = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt x}{h} \pd\]
+            This limit is in the indeterminate form \(\indZero.\)
+            Since the fraction contains radicals, our strategy is to multiply the numerator and denominator by the 
+            <i>conjugate</i> of the numerator—namely, \(\sqrt{x + h} + \sqrt x.\)
+            Doing so, we find 
+            \[
+            \ba 
+            \deriv{}{x} \sqrt x 
+            &= \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt x}{h} \cdot \frac{\sqrt{x + h} + \sqrt x}{\sqrt{x + h} + \sqrt x} \nl 
+            &= \lim_{h \to 0} \frac{(x + h) - x}{h \par{\sqrt{x + h} + \sqrt x}} \nl 
+            &= \lim_{h \to 0} \frac{h}{h \par{\sqrt{x + h} + \sqrt x}} \nl 
+            &= \lim_{h \to 0} \frac{1}{\sqrt{x + h} + \sqrt x} \nl 
+            &= \frac{1}{\sqrt{x + 0} + \sqrt x} \nl 
+            &= \boxed{\frac{1}{2 \sqrt x}}
+            \ea 
+            \] 
+        </li>
     </ol>
+</div>
+
+<h4 id="differentiability">Differentiability</h4>
+
+<figure class="deriv-abs-value-graph" id="deriv-abs-value-graph">
+    <img src="../images/sectionImages/deriv-abs-value-graph.jpg" alt="Fig. 5.">
+</figure>
+<style>
+    .deriv-abs-value-graph::before{
+        content:'FIGURE 5';
+    }
+</style>
+<p>
+    If \(f'(a)\) is defined,
+    then we say function \(f\) is <span class="emph">differentiable</span> at \(a.\)
+    We call a <i>function</i> differentiable if its derivative is defined at each point in its domain.
+    Differentiability implies continuity:
+    if \(f\) is differentiable at \(a,\)
+    then \(f\) is continuous at \(a.\)
+    But the converse statement is <span class="warning">not</span> necessarily true—a 
+    function can be continuous but not differentiable at a point.
+    <i>All</i> differentiable functions are continuous, 
+    but <span class="warning">not</span> all continuous functions are differentiable.
+</p>
+
+
+<p>
+    A derivative may fail to exist for several reasons:
+    If \(f\) is discontinuous at \(a,\) 
+    then \(f'(a)\) doesn't exist because differentiability requires continuity. 
+    If \(f\) is continuous at \(a,\) then \(f'(a)\) fails to exist 
+    <ul>
+        <li>
+            if at \(x = a\) the <span class="emph">left-hand</span> derivative and 
+            <span class="emph">right-hand</span> derivative of \(f\) don't match; or 
+        </li>
+        <li>
+            if \(f\) has a vertical tangent line at \(x = a.\)
+        </li>
+    </ul> 
+    Just as the limit at a point doesn't exist if the one-sided limits don't match, 
+    the derivative at a point doesn't exist if the left- and right-hand derivatives aren't equivalent.
+    If \(f\) has a sharp turn or cusp at \(x = a,\) 
+    then the one-sided derivatives are not equivalent.
+    For example, the function \(|x|\) is <span class="warning">not</span> 
+    differentiable at \(x = 0,\) as its graph
+    has a sharp corner at \(x = 0\) (<a href="#deriv-abs-value-graph">Figure 5</a>).
+    The slope of \(|x|\) is \(-1\) for \(x \lt 0\) and \(1\) for \(x \gt 0;\)
+    therefore, the derivative function of \(|x|\) is 
+    \[
+    \deriv{}{x} |x| = 
+    \begin{cases}
+    -1 & x \lt 0 \nl 
+    1 & x \gt 0 \pd
+    \end{cases}
+    \]
+    Hence, at \(x = 0\) the <i>left</i>-hand derivative of \(|x|\) is \(-1\)
+    and the <i>right</i>-hand derivative is \(1.\)
+    These values don't match, so \(\textDeriv{}{x} \, |x|\) is undefined at \(x = 0.\)
+    On the other hand, the derivative of \(\sqrt[3]{x}\) at \(x = 0\) is undefined 
+    since the graph of \(y = \sqrt[3]{x}\) has a <i>vertical tangent</i> at \(x = 0.\)
+    (See <a href="#deriv-cbrt-x">Figure 6</a>.)
+</p>
+
+<figure class="deriv-cbrt-x" id="deriv-cbrt-x">
+    <img src="../images/sectionImages/deriv-cbrt-x.jpg" alt="Fig. 6.">
+</figure>
+<style>
+    .deriv-cbrt-x::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<div class="steps-title">WHEN A DERIVATIVE DOES NOT EXIST</div>
+<div class="steps">
+    Derivative \(f'(a)\) does not exist if any of the following is true:
+    <ol class="list-alpha">
+        <li>
+            \(f(x)\) is discontinuous at \(x = a.\)
+        </li>
+        <li>
+            The one-sided derivatives of \(f(x)\) at \(x = a\) are not equivalent. 
+        </li>
+        <li>
+            \(f(x)\) has an vertical tangent at \(x = a.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-3"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="deriv-ex-graph" id="deriv-ex-graph">
+            <img src="../images/sectionImages/deriv-ex-graph.jpg" alt="Fig. 7.">
+        </figure>
+        <style>
+            .deriv-ex-graph::before{
+                content:'FIGURE 7';
+            }
+        </style>
+        In <a href="#deriv-ex-graph">Figure 7</a>, evaluate the following derivatives if they exist. 
+        <ol class="list-roman">
+            <li>
+                <span>\(g'(-4)\)</span>
+            </li>
+            <li>
+                <span>\(g'(-3)\)</span>
+            </li>
+            <li>
+                <span>\(g'(0)\)</span>
+            </li>
+            <li>
+                <span>\(g'(2)\)</span>
+            </li>
+            <li>
+                <span>\(g'(3)\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    It is important not to confuse \(g\) and \(g'.\)
+    The value \(g'(x)\) is the <i>slope</i> of \(g\) at \(x.\)
+    <ol class="list-roman">
+        <li>
+            At \(x = -4\) the slope of \(g\) is \(1.\)
+            Therefore, \(g'(-4) = 1.\)
+        </li>
+        <hr>
+        <li>
+            Because \(g(-3)\) is undefined, \(g\) is discontinuous at \(x = -3.\)
+            Hence, \(g'(-3)\) is undefined.
+        </li>
+        <hr>
+        <li>
+            Function \(g\) has a sharp turn at \(x = 0.\)
+            Specifically, at \(x = 0\) the left-hand derivative of \(g\) is \(-1\)
+            and the right-hand derivative is a positive number. 
+            Since these values are not equivalent, \(g'(0)\) is undefined. 
+        </li>
+        <hr>
+        <li>
+            The tangent line to \(g\) at \(x = 2\) is horizontal and therefore has slope \(0.\)
+            Thus, \(g'(2) = 0.\)
+        </li>
+        <hr>
+        <li>
+            If we draw a tangent line to \(g\) at \(x = 3,\)
+            then we see this line has slope \(-2.\)
+            Hence, \(g'(3) = -2.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-4"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="deriv-sketch-f" id="deriv-sketch-f">
+            <img src="../images/sectionImages/deriv-sketch-f.jpg" alt="Fig. 8.">
+        </figure>
+        <style>
+            .deriv-sketch-f::before{
+                content:'FIGURE 8';
+            }
+        </style>
+        The graph of \(y = f(x)\) is shown in <a href="#deriv-sketch-f">Figure 8</a>.
+        Sketch a rough graph of \(y = f'(x).\)
+        <div class="white-space"></div>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="deriv-sketch-f-deriv" id="deriv-sketch-f-deriv">
+        <img src="../images/sectionImages/deriv-sketch-f-deriv.jpg" alt="Fig. 9.">
+    </figure>
+    <style>
+        .deriv-sketch-f-deriv::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    <p>
+        The key idea is that \(f'(x)\) is the <i>slope</i> of \(f(x).\)
+        We want to identify the intervals over which \(f\) is increasing or decreasing.
+        We make the following remarks:
+        <ul>
+            <li>
+                \(f(x)\) has <i>horizontal</i> tangent lines when \(x = -1\) and \(x = 1.\)
+                Since these lines each have slope \(0,\)
+                \(f'(-1) = f'(1) = 0.\)
+            </li>
+            <li>
+                \(f(x)\) is <i>increasing</i> over \(-3 \leq x \leq -1\) and \(1 \leq x \leq 3.\)
+                Thus, \(f'\)—the slope of \(f\)—is positive for \(-3 \lt x \lt -1\) and \(1 \lt x \lt 3.\)
+            </li>
+            <li>
+                \(f(x)\) is <i>decreasing</i> over \(-1 \leq x \leq 1.\)
+                Accordingly, \(f'\) is negative for \(-1 \lt x \lt 1.\)
+            </li>
+        </ul>
+        These notes enable us to sketch the graph of \(f'\) in 
+        <a href="#deriv-sketch-f-deriv">Figure 9</a>.
+    </p>
+</div>
+
+<h4 id="derivative-properties">Derivative Properties</h4>
+
+<figure class="deriv-graph-uniform" id="deriv-graph-uniform">
+    <img src="../images/sectionImages/deriv-graph-uniform.jpg" alt="Fig. 10.">
+</figure>
+<style>
+    .deriv-graph-uniform::before{
+        content:'FIGURE 10';
+    }
+</style>
+
+<p>
+    The derivative of any constant \(c\) is \(0.\)
+    We affirm this result geometrically because the graph of \(y = c\) 
+    is flat and therefore has a slope of \(0\) at all points (<a href="#deriv-graph-uniform">Figure 10</a>).
+    The proof of this fact is as follows.
+</p>
+<p>
+    <span class="proof">PROOF</span> Let \(f(x) = c,\) where \(c\) is a constant.
+    We want to prove that \(f'(x) = 0.\)
+    Using \(\eqrefer{eq:lim-defn},\) both \(f(x)\) and \(f(x + h)\)
+    equal \(c\) because \(f(x)\) does not depend on \(x.\)
+    Thus, we have  
+    \begin{align*} 
+    f'(x) &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nl 
+    &= \lim_{h \to 0} \frac{c - c}{h} \nl 
+    &= \lim_{h \to 0} \frac{0}{h} \nl 
+    &= 0 \pd 
+    \end{align*}
+    \[\qedproof\]
+    Note that the limit \(\lim_{h \to 0} (0/h)\) is 
+    <span class="warning">not</span> in the indeterminate form \(\indZero,\)
+    since the numerator is <i>fixed</i> at \(0.\)
+</p>
+
+<aside class="box-remark">
+    Recall function notation:
+    \((f + g)(x) = f(x) + g(x),\)
+    and \((f - g)(x) = f(x) - g(x).\)
+    Hence, \((f \pm g)'(x) = \left[f(x) \pm g(x) \right]'.\)
+</aside>
+
+<p>
+    Derivatives are said to be <i>linear</i>; that is, 
+    if \(f\) and \(g\) are differentiable, and \(c\) is a constant, then the following properties hold:
+    <ul>
+        <li>
+            \([cf(x)]' = c f'(x).\)
+        </li>
+        <li>
+            \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+        </li>
+    </ul>
+    We can also write these properties in Leibniz notation as, respectively, 
+    \[
+    \ba 
+    &\deriv{}{x} [cf(x)] = c \deriv{}{x}[f(x)] \nl 
+    &\deriv{}{x} [f(x) \pm g(x)] = \deriv{}{x} [f(x)] \pm \deriv{}{x} [g(x)] \pd
+    \ea 
+    \]
+    In words, the former property states that the derivative of a function multiplied by a constant 
+    is the constant multiplied by the derivative. 
+    The latter property asserts the derivative of a sum or difference is 
+    the sum or difference of derivatives.
+    The proofs of these properties are as follows.
+</p>
+
+<figure class="deriv-slope-scale" id="deriv-slope-scale">
+    <img src="../images/sectionImages/deriv-slope-scale.jpg" alt="Fig. 11.">
+</figure>
+<style>
+    .deriv-slope-scale::before{
+        content:'FIGURE 11';
+    }
+</style>
+
+<p>
+    <span class="proof">PROOF</span>
+    The limit definition of \([cf(x)]'\) is 
+    \[[cf(x)]' = \lim_{h \to 0} \frac{[cf(x + h)] - [cf(x)]}{h} \pd\]
+    We need to show that this form equals \(c f'(x).\) 
+    We factor out \(c \col\) 
+    \[
+    \ba 
+    \left[cf(x)\right]' &= c \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nl 
+    &= c f'(x) \pd
+    \ea 
+    \]
+    \[\qedproof\]
+    A visual interpretation of this property is shown by <a href="#deriv-slope-scale">Figure 11</a>.
+</p>
+<p>
+    <span class="proof">PROOF</span>
+    The limit definition of \((f + g)'(x)\) is 
+    \[(f + g)'(x) = \lim_{h \to 0} \frac{[f(x + h) + g(x + h)] - [f(x) + g(x)]}{h} \pd\]
+    We regroup the terms in the numerator and split the limit by the Sum Property of limits. 
+    (See Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a> for a review of limit properties.)
+    We find 
+    \[
+    \ba 
+    (f + g)'(x) &= \lim_{h \to 0} \frac{[f(x + h) - f(x)] + [g(x + h) - g(x)]}{h} \nl 
+    &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} + \lim_{h \to 0} \frac{g(x + h) - g(x)}{h} \nl 
+    &= f'(x) + g'(x) \pd
+    \ea 
+    \]
+    Similarly, the limit definition of \((f - g)'(x)\) is 
+    \[(f - g)'(x) = \lim_{h \to 0} \frac{[f(x + h) - g(x + h)] - [f(x) - g(x)]}{h} \pd\]
+    Rearranging and splitting the limit, using the Difference Property of limits, give 
+    \[
+    \ba 
+    (f - g)'(x) &= \lim_{h \to 0} \frac{[f(x + h) - f(x)] - [g(x + h) - g(x)]}{h} \nl 
+    &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} - \lim_{h \to 0} \frac{g(x + h) - g(x)}{h} \nl 
+    &= f'(x) - g'(x) \pd
+    \ea 
+    \]
+    Hence, \((f + g)'(x) = f'(x) + g'(x)\) and \((f - g)'(x) = f'(x) - g'(x).\)
+    \[\qedproof\]
+</p>
+
+
+<div class="box-title">PROPERTIES OF DERIVATIVES</div>
+<div class="box">
+    Let \(f\) and \(g\) be differentiable functions, and let \(c\) be a constant. 
+    <ul>
+        <li>
+            <span class="label-emph" id="prop-1">Property 1</span> \([c]' = 0.\)
+        </li>
+        <li>
+            <span class="label-emph" id="prop-2">Property 2</span> \([cf(x)]' = c f'(x).\)
+        </li>
+        <li>
+            <span class="label-emph" id="prop-3">Property 3</span> \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+        </li>
+    </ul>
+</div>
+
+<div class="example-title" id="ex-5"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="deriv-ex-graph-properties" id="deriv-ex-graph-properties">
+            <img src="../images/sectionImages/deriv-ex-graph-properties.jpg" alt="Fig. 12.">
+        </figure>
+        <style>
+            .deriv-ex-graph-properties::before{
+                content:'FIGURE 12';
+            }
+        </style>
+        In <a href="#deriv-ex-graph-properties">Figure 12</a>, evaluate the following derivatives if they exist. 
+        <ol class="list-roman">
+            <li>
+                <span>\((f + g)'(2)\)</span>
+            </li>
+            <li>
+                <span>\((f - g)'(-3)\)</span>
+            </li>
+            <li>
+                <span>\((2f)'(1)\)</span>
+            </li>
+            <li>
+                <span>\((2f - 3g)'(3)\)</span>
+            </li>
+        </ol>
+        <br>
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <ol class="list-roman">
+        <li>
+            By <a href="#prop-3">Property 3</a>, 
+            the derivative of a sum is the sum of derivatives. 
+            Thus,
+            \[
+            (f + g)'(2) = f'(2) + g'(2) \pd 
+            \]
+            In <a href="#deriv-ex-graph-properties">Figure 12</a>, 
+            at \(x = 2\) the slope of \(f\) is \(-1/2\) and the slope of \(g\) is \(-2.\)
+            Accordingly, \(f'(2) = -1/2\) and \(g'(2) = -2,\) and
+            \[(f + g)'(2) = -\tfrac{1}{2} - 2 = \boxed{-\tfrac{5}{2}}\]
+        </li>
+        <hr>
+        <li>
+            <a href="#prop-3">Property 3</a> states that the derivative of a difference is 
+            the difference of derivatives:
+            \[(f - g)'(-3) = f'(-3) - g'(-3) \pd\]
+            At \(x = -3,\) the slope of \(f\) is \(0\)
+            and the slope of \(g\) is \(1.\)
+            Thus, \(f'(-3) = 0\) and \(g'(-3) = 1,\) so
+            \[(f - g)'(-3) = 0 - 1 = \boxed{-1}\]
+        </li>
+        <hr>
+        <li>
+            By <a href="#prop-2">Property 2</a> we can take out the constant in the derivative:
+            \[(2f)'(1) = 2 f'(1) \pd\]
+            At \(x = -1\) the slope of \(f\) is \(-1/2.\)
+            We therefore have 
+            \[(2f)'(1) = 2 \left(-\tfrac{1}{2}\right) = \boxed{-1}\]
+        </li>
+        <hr>
+        <li>
+            Using <a href="#prop-2">Property 2</a> and <a href="#prop-3">Property 3</a> gives 
+            \[(2f - 3g)'(3) = (2f)'(3) - (3g)'(3) = 2f'(3) - 3g'(3) \pd\]
+            At \(x = 3,\) the slope of \(f\) is \(-1/2\) and the slope of \(g\) is \(-2.\)
+            Hence, \(f'(3) = -1/2\) and \(g'(3) = -2;\) therefore,
+            \[(2f - 3g)'(3) = 2 \left(-\tfrac{1}{2}\right) - 3(-2) = \boxed{5}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-6"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let 
+        \[g(x) = 
+        \begin{cases}
+        4x - 1 & x \lt 2 \nl 
+        x^2 + 3 & x \geq 2 \pd
+        \end{cases}
+        \]
+        Is \(g(x)\) differentiable at \(x = 2 \ques\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <p>
+        Function \(g\) is differentiable at \(2\) if 
+        \(g\) is continuous at \(2\) and the one-sided derivatives of \(g\) at \(2\) are equal.
+        We assert that \(g\) is continuous at \(2\) if \(\lim_{x \to 2} g(x) = g(2).\)
+        (See Section <a href="/Valculus/calculus/1.4-Determining-Continuity.html">1.4</a> for a review of continuity.)
+        The left-hand limit of \(g\) at \(2\) is 
+        \[\lim_{x \to 2^-} g(x) = 4(2) - 1 = 7 \pd\]
+        The right-hand limit of \(g\) at \(2\) is 
+        \[\lim_{x \to 2^+} g(x) = (2)^2 + 3 = 7 \pd\]
+        Since these values are the same, \(\lim_{x \to 2} g(x)\) exists and equals \(7,\) 
+        which is \(g(2).\)
+        Hence, \(g\) is continuous at \(x = 2.\)
+    </p>    
+    <figure class="deriv-piecewise" id="deriv-piecewise">
+        <img src="../images/sectionImages/deriv-piecewise.jpg" alt="Fig. 13.">
+    </figure>
+    <style>
+        .deriv-piecewise::before{
+            content:'FIGURE 13';
+        }
+    </style>
+    <p>
+        The one-sided derivatives of \(g\) at \(2\) must equal each other. 
+        The left-hand derivative of \(g(x)\) at \(x = 2\) is \(\textDeriv{}{x} \, [4x - 1]_{x = 2},\) 
+        which by \(\eqref{eq:lim-defn}\) is 
+        \[
+        \ba 
+        \lim_{h \to 0} \frac{[4(2 + h) - 1] - [4(2) - 1]}{h} 
+        &= \lim_{h \to 0} \frac{4h}{h} \nl 
+        &= 4 \pd
+        \ea 
+        \]
+        Likewise, at \(x = 2\) the right-hand derivative of \(g\) is \(\textDeriv{}{x} \, [x^2 + 3]_{x = 2},\)
+        which is 
+        \[
+        \ba 
+        \lim_{h \to 0} \frac{[(2 + h)^2 + 3] - [(2)^2 + 3]}{h} 
+        &= \lim_{h \to 0} \frac{4h + h^2}{h} \nl 
+        &= \lim_{h \to 0} (4 + h) \nl 
+        &= 4 \pd 
+        \ea 
+        \]
+        Since both one-sided derivatives of \(g\) at \(2\) are equivalent, \(g'(2)\) exists. 
+        Hence, \(g(x)\) is differentiable at \(x = 2.\)
+        The graph of \(y = g(x)\) is shown by <a href="#deriv-piecewise">Figure 13</a>.
+    </p>
+</div>
+
+
+
+<h4 id="higher-order-derivatives">Higher-Order Derivatives</h4>
+<p>
+    Physical scenarios often exhibit <i>higher-order</i> derivatives. 
+    We denote the second derivative of \(y\) with respect to \(x\) as \(\textDeriv{^2y}{x^2};\) that is, 
+    \[\deriv{^2 y}{x^2} = \deriv{}{x} \left(\deriv{y}{x} \right) \pd\]
+    The \(n\)th derivative of \(y\) is \(\textDeriv{^n y}{x^n}.\)
+    (Be careful of the superscript position.)
+    In prime notation the second derivative of \(y = f(x)\) with respect to \(x\) is \(f''(x)\) or \(y''(x),\)
+    and the \(n\)th derivative is \(f^{(n)}(x)\) or \(y^{(n)}(x).\)
+    [Do <span class="warning">not</span> write \(f^{n}(x).\)]
+    The key to taking higher-order derivatives is to differentiate incrementally:
+    Differentiate once to determine the first derivative, 
+    and then differentiate the resulting expression to find the second derivative. 
+    Repeat this process as many times as necessary.
+</p>
+<p>
+    Another notation for the derivative is the <i>dot</i> notation, named after Isaac Newton.
+    This form solely denotes a derivative with respect to time; 
+    for example, the derivative of \(y\) with respect to time is \(\dot y.\)
+    Likewise, the second derivative of \(y\) with respect to time is \(\ddot y.\)
+    This notation is most commonly used in physics.
+</p>
+
+<div class="example-title" id="ex-7"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(g(x) = 3x^2 - 5.\) 
+        Find \(g''(x).\)
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <figure class="deriv-g" id="deriv-g">
+        <img src="../images/sectionImages/deriv-g.jpg" alt="Fig. 13.">
+    </figure>
+    <style>
+        .deriv-g::before{
+            content:'FIGURE 14';
+        }
+    </style>
+    The key idea is to compute the derivatives one at a time.
+    Using \(\eqref{eq:lim-defn}\) gives the first derivative of \(g\) to be
+    \[
+    \ba 
+    g'(x) &= \lim_{h \to 0} \frac{[3(x + h)^2 - 5] - [3x^2 - 5]}{h} \nl 
+    &= \lim_{h \to 0} \frac{[3(x^2 + 2xh + h^2) - 5] - [3x^2 - 5]}{h} \nl 
+    &= \lim_{h \to 0} \frac{6xh + 3h^2}{h} \nl 
+    &= \lim_{h \to 0} \, (6x + 3h) \nl 
+    &= 6x \pd 
+    \ea 
+    \]
+    The <i>second</i> derivative of \(g\) is then \(\textDeriv{}{x} \, [6x].\)
+    We use \(\eqref{eq:lim-defn}\) to obtain 
+    \[
+    \ba 
+    g''(x) &= \lim_{h \to 0} \frac{6(x + h) - 6x}{h} \nl 
+    &= \lim_{h \to 0} \frac{6h}{h} \nl 
+    &= \lim_{h \to 0} 6 \nl 
+    &= \boxed{6}
+    \ea 
+    \]
+    See <a href="#deriv-g">Figure 14</a> for the graphs of \(g,\) \(g',\) and \(g''.\)
+    Note that since \(g'\) has a constant slope, \(g''\) is uniform.
+</div>
+
+<h4 id="pos-vel-acc">Position, Velocity, and Acceleration</h4>
+
+<p>
+    We define an object's <span class="emph">position</span> to be how far the object is 
+    from a reference point. 
+    If \(s(t)\) gives an object's position at time \(t,\)
+    then the object's <span class="emph">velocity</span> \(v(t)\) is 
+    the rate at which the object's position changes with respect to time—that is, 
+    \begin{equation}
+    v(t) = \deriv{s}{t} \pd \label{eq:v(t)-deriv}
+    \end{equation}  
+    Velocity is an object's speed in a certain direction; 
+    we choose an axis orientation such that one direction is positive and the other is negative.
+    For example, if we select east to be the positive direction, then a car driving east has <i>positive</i> velocity, 
+    while a car driving west has <i>negative</i> velocity.
+    \(\eqrefer{eq:v(t)-deriv}\) gives the rate at which an object's position changes at an instant.
+    Accordingly, we can call \(v(t)\) the object's <i>instantaneous</i> velocity.
+    The rate at which velocity changes with respect to time is <span class="emph">acceleration</span>, \(a(t)\)—namely, 
+    \begin{equation}
+    a(t) = \deriv{v}{t} = \deriv{^2 s}{t^2} \pd \label{eq:a(t)-deriv}
+    \end{equation}
+    Suppose that you're driving a car and the positive direction of motion is the direction you're facing.
+    The car's velocity increases when you step on the gas pedal, so the car is accelerating.
+    In contrast, pressing the brake pedal decreases the car's velocity, thus decelerating the car.
+</p>
+<p>
+    <span class="label-emph">Units</span>
+    Since velocity is the rate at which position is changing with time, 
+    the unit of velocity is the position unit <i>per</i> time unit.
+    Similarly, acceleration is the rate at which velocity changes with time, 
+    so the unit of acceleration is the velocity unit per time unit. 
+    For example, if position is measured in meters and time is measured in seconds, 
+    then the velocity's unit is meters per second. 
+    Likewise, acceleration's unit is meters per second per second, or meters per second squared.
+    
+</p>
+
+<div class="example-title" id="ex-8"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        A particle moves in a straight line such that its position with respect to time is 
+        \(s(t) = 3t^2 + 2,\) where \(s(t)\) is measured in inches and \(t\) is measured in minutes. 
+        Find the particle's velocity and acceleration functions with respect to \(t.\)
+        What are the particle's velocity and acceleration after \(2\) minutes?
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <p>
+        By \(\eqrefer{eq:v(t)-deriv}\) the particle's velocity function is the derivative of position with respect to time—namely, 
+        \(v(t) = s'(t).\)
+        We seek the derivative of position as a function, so we use \(\eqref{eq:lim-defn}\) to get 
+        \[
+        \ba 
+        v(t) &= s'(t) \nl 
+        &= \lim_{h \to 0} \frac{[3(t + h)^2 + 2] - [3t^2 + 2]}{h} \nl 
+        &= \lim_{h \to 0} \frac{6ht + 3h^2}{h} \nl 
+        &= \lim_{h \to 0} (6t + h) \nl 
+        &= 6t \pd 
+        \ea 
+        \]
+        Hence, the particle's velocity function is \(v(t) = 6t.\)
+    </p>
+    <figure class="deriv-s-v-a" id="deriv-s-v-a">
+        <img src="../images/sectionImages/deriv-s-v-a.jpg" alt="Fig. 15.">
+    </figure>
+    <style>
+        .deriv-s-v-a::before{
+            content:'FIGURE 15';
+        }
+    </style>
+    <p>
+        The particle's acceleration function is, by \(\eqref{eq:a(t)-deriv},\) 
+        the derivative of the velocity function. Hence, \(a(t) = v'(t) = \textDeriv{}{t} \, [6t].\)
+        We obtain 
+        \[
+        \ba 
+        a(t) &= v'(t) \nl 
+        &= \lim_{h \to 0} \frac{6(t + h) - 6t}{h} \nl 
+        &= \lim_{h \to 0} \frac{6h}{h} \nl 
+        &= \lim_{h \to 0} 6 \nl 
+        &= 6 \pd 
+        \ea 
+        \]
+        The particle's acceleration function is therefore \(a(t) = 6.\)
+    </p>
+    <p>
+        The graphs of \(s(t),\) \(v(t),\) and \(a(t)\) are shown by 
+        <a href="#deriv-s-v-a">Figure 15</a>.
+        Their domains are each \(t \geqslant 0\) since time can't be negative.
+        When \(t = 2,\) the particle's velocity is \(v(2) = 12\) inches per minute
+        and the particle's acceleration is \(a(2) = 6\) inches per minute squared.
+    </p>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a class="summary-anchor" href="#definition-of-a-derivative">Definition of a Derivative</a>
+        The <span class="emph">derivative</span> of function \(f\) at \(x\) 
+        measures the slope of \(f\) at \(x.\)
+        We denote the derivative either using <i>prime notation</i> \((f')\) or <i>Leibniz notation</i> \((\textDeriv{f}{x}).\)
+        In Leibniz notation \(\textDeriv{}{x}\) is an operator, whereas \(\textDeriv{f}{x}\) is a quantity.
+        <i>Dot notation</i> \((\dot f)\) represents the derivative of a function with respect to time
+        and is commonly seen in physics.
+    </p>
+    <p>
+        <a class="summary-anchor" href="#deriv-function">Derivative as a Function</a>
+        The process of calculating the derivative of \(f\) at point \(P(x, f(x))\) is as follows:
+        Construct a <span class="emph">secant</span> line that passes through point \(P\)
+        and another point \(Q(x + h, f(x + h))\) on the graph of \(f.\) 
+        Taking \(h \to 0,\) the secant line becomes the tangent line, whose slope is 
+        \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd\]
+        If the limit exists, then this expression gives the derivative of \(f\) as a <i>function</i> of \(x.\)
+    </p>
+    <p>
+        <a class="summary-anchor" href="#deriv-point">Derivative at a Point</a>
+        The derivative of function \(f(x)\) at the point \(x = a\) is 
+        \[f'(a) = \lim_{h \to 0} \frac{f(x) - f(a)}{x - a}\]
+        if the limit exists.
+        This form is an <i>alternate</i> definition of the derivative.
+    </p>
+    <p>
+        <a class="summary-anchor" href="#differentiability">Differentiability</a>
+        If \(f'(a)\) is defined, then function \(f\) is <span class="emph">differentiable</span> at \(a.\)
+        A <i>function</i> is called differentiable if its derivative is defined at each point in its domain. 
+        Differentiability requires continuity. All differentiable functions are continuous, 
+        but <span class="warning">not</span> all continuous functions are differentiable.
+        A derivative \(f'(a)\) fails to exist due to any of the following reasons:
+        <ol class="list-alpha">
+            <li>
+                \(f(x)\) is discontinuous at \(x = a.\)
+            </li>
+            <li>
+                The one-sided derivatives of \(f(x)\) at \(x = a\) are not equivalent. 
+            </li>
+            <li>
+                \(f(x)\) has an vertical tangent at \(x = a.\)
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a class="summary-anchor" href="#derivative-properties">Derivative Properties</a>
+        Let \(f\) and \(g\) be differentiable functions, and let \(c\) be a constant. 
+        Then the following properties hold:
+        <ul>
+            <li>
+                <span class="label-emph">Property 1</span> \([c]' = 0.\)
+            </li>
+            <li>
+                <span class="label-emph">Property 2</span> \([cf(x)]' = c f'(x).\)
+            </li>
+            <li>
+                <span class="label-emph">Property 3</span> \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+            </li>
+        </ul>
+    </p>
+    <p>
+        <a class="summary-anchor" href="#higher-order-derivatives">Higher-Order Derivatives</a>
+        Using prime notation, the second derivative of \(y = f(x)\) is \(f''(x)\) or \(y''(x).\)
+        The \(n\)th derivative is \(f^{(n)}(x)\) or \(y^{(n)}(x).\)
+        Do <span class="warning">not</span> write \(f^{n}(x).\)
+    </p>
+    <p>
+        <a class="summary-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>
+        An object's <span class="emph">position</span> measures how far it is from an 
+        arbitrary reference point. 
+        The <span class="emph">velocity</span> is the rate at which the object's position changes with time, 
+        and the <span class="emph">acceleration</span> is the rate at which the object's velocity changes with time. 
+        If \(s(t)\) is position, \(v(t)\) is velocity, and \(a(t)\) is acceleration—all functions of time, \(t\)—then 
+        \[v(t) = \deriv{s}{t} \and a(t) = \deriv{v}{t} = \deriv{^2s}{t^2} \pd \]
+    </p>
 </div>
     </main>
     <!-- <footer>

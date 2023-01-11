@@ -483,6 +483,19 @@ ol li{
     visibility: hidden;
 }
 
+.label-emph{  /*used for text like "*Interpretation*. f is decreasing . . ."*/
+    font-style: italic;
+    font-family: Geneva, Tahoma, sans-serif;
+    text-indent: 0%;
+    margin-right: 0.8%;
+    color: rgb(184, 188, 190);
+}
+
+.label-emph::after{
+    content: '.'
+}
+
+
 .true-or-false{
     
 }
@@ -550,6 +563,21 @@ ol li{
     } */
     
 
+}
+
+@media screen and (max-width: 1300px){
+    h1, main, .footer-body, .tab div, .footer-disclaimer{
+        width: 600px;
+        margin-left: 19%;
+        margin-right: auto;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: white;
+    }
+
+    main{ /* background body */
+        font-size: 17px;
+    }
+    
 }
 
 @media screen and (max-width:1000px){

@@ -73,7 +73,8 @@ window.MathJax = {
             textAbove: ["\\buildrel \\rm #1 \\over #2", 2],
             equalsCheck: "\\textAbove{\\checkmark}{=}",
             orange: ["{\\color{orange}#1}", 1],
-            teal: ["{\\color{teal}#1}", 1]
+            teal: ["{\\color{teal}#1}", 1],
+            qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
         }
     },
 };
