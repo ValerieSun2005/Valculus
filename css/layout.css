@@ -301,7 +301,9 @@ th{
 }
 
 .table-full-width{
-    width: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
     position: relative;
     margin-top: 20px;
