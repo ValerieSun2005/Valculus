@@ -62,6 +62,7 @@ window.MathJax = {
             textDeriv: ["\\dd #1 / \\dd #2", 2],
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
+            parbr: ["\\left [ #1 \\right ]", 1],
             di: "\\, \\dd",
             nl: "\\\\[1ex]",
             indZero: "\\frac{0}{0}",
@@ -75,6 +76,7 @@ window.MathJax = {
             orange: ["{\\color{orange}#1}", 1],
             teal: ["{\\color{teal}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
+            arrowTwoWay: "\\; \\Longleftrightarrow \\;",
         }
     },
 };
