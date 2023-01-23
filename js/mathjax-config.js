@@ -77,6 +77,7 @@ window.MathJax = {
             teal: ["{\\color{teal}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
             arrowTwoWay: "\\; \\Longleftrightarrow \\;",
+            intEval: "{\\Bigg|}"
         }
     },
 };

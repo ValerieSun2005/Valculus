@@ -467,7 +467,7 @@ ol li{
 }
 
 .logo-image{
-    max-width: 190px;
+    max-width: 150px;
     margin: 0.6% 0% 1% 3%;
     position: fixed;
     display: block;
@@ -532,7 +532,7 @@ ol li{
     }
 } */
 
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1570px) {
     h1, main, .footer-body, .tab div, .footer-disclaimer{
         margin-left: 10%;
         width: 62vw;
