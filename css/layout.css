@@ -311,6 +311,10 @@ th{
     table-layout: fixed;
 }
 
+.table-full-width thead{
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
 main tr{
     width: 50%;
 }
@@ -440,8 +444,9 @@ ol li{
 }
 
 .list-num > li:before {
-    content: "(" counter(list, decimal) ") ";
+    content: counter(list, decimal) ". ";
     counter-increment: list;
+    font-weight: bold;
 }
 
 .list-roman > li:before {
@@ -580,6 +585,9 @@ ol li{
         font-size: 17px;
     }
     
+    .table-full-width{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:1000px){
