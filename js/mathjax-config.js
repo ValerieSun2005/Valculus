@@ -7,9 +7,11 @@ window.MathJax = {
         "disabled": false 
     }, 
     
-
     loader: {load: ['[tex]/color']},
     tex: {packages: {'[+]': ['color']}},
+
+    loader: {load: ['[tex]/mhchem']},
+    tex: {packages: {'[+]': ['mhchem']}},
 
     svg: {
         fontCache: 'global'
@@ -17,6 +19,7 @@ window.MathJax = {
 
     tex: {
         packages: {'[+]': ['color']},
+        packages: {'[+]': ['mhchem']},
         tags: 'ams',
         macros: {
             RR: "{\\bf R}",
@@ -34,14 +37,16 @@ window.MathJax = {
             eaat: "\\end{alignedat}",
             bc: "\\begin{cases}",
             ec: "\\end{cases}",
+            be: "\\begin{equation}",
+            ee: "\\end{equation}",
             nspace: "\\hspace{2.52mm}",
             geq: "\\geqslant",
             leq: "\\leqslant",
             txt: "\\textrm",
             deg: "\\textrm{deg}",
             degree: "^{\\circ}",
-            be: "\\begin{equation}",
-            ee: "\\end{equation}",
+            farenheit: "\\degree \\text{F}",
+            celcius: "\\degree \\text{C}",
             andThree: ["#1 \\; \\comma \\; #2 \\; \\comma \\text{and} \\; #3", 3],
             and: "\\qquad \\text{and} \\qquad",
             as: "\\qquad \\text{as} \\qquad",
@@ -72,12 +77,17 @@ window.MathJax = {
             undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2],
             subsuper:["_{\\hspace{0.1em} #1}^{\\Large^#2}",2],
             textAbove: ["\\buildrel \\rm #1 \\over #2", 2],
+            slashFrac: ["{}^{#1} \\hspace{-0.4em} / \\hspace{-0.4em} {}_{#2}", 2],
             equalsCheck: "\\textAbove{\\checkmark}{=}",
             orange: ["{\\color{orange}#1}", 1],
             teal: ["{\\color{teal}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
             arrowTwoWay: "\\; \\Longleftrightarrow \\;",
-            intEval: "{\\Bigg|}"
+            intEval: "{\\Bigg|}",
+            doublingTime: "\\mathcal{t_2}",
+            halfLife: "\\mathcal{t_{\\slashFrac{1}{2}}}",
+            triplingTime: "\\mathcal{t_3}",
+            chem: ["\\text{}", 1],
         }
     },
 };

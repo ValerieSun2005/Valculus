@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>9.1: Overview of Polar Functions</title>
+    <title>9.1: Polar Coordinates and Functions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
@@ -20,7 +20,7 @@
     <img src="/Valculus/images/logo.png" class="logo-image" alt="">
 </a>
     <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>9.1 — Overview of Polar Functions</h1>
+    <h1>9.1 — Polar Coordinates and Functions</h1>
     <main>
       <div class="pdf-panel">
         <div class="pdf-panel-left">
@@ -34,14 +34,14 @@
             </li>
             <li>
               <button>
-                <a href="9.1-Overview-of-Polar-Functions-exercises.html">Exercises
+                <a href="9.1-Polar-Coordinates-and-Functions-exercises.html">Exercises
                   <i class="fa fa-external-link"></i>
                 </a>
               </button>
             </li>
             <li>
               <button>
-                <a href="9.1-Overview-of-Polar-Functions-exercises-solutions.html">Exercise Solutions
+                <a href="9.1-Polar-Coordinates-and-Functions-exercises-solutions.html">Exercise Solutions
                   <i class="fa fa-external-link"></i>
                 </a>
               </button>
@@ -51,7 +51,7 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      <!--[[[crefId.Overview-of-Polar-Functions]]]--> 
+      <!--[[[crefId.Polar-Coordinates-and-Functions]]]--> 
 <p>
     In this section we introduce a new coordinate system—polar coordinates. 
     We cover the following:
@@ -192,7 +192,7 @@
             Use \(r = \sqrt{x^2 + y^2}\) to rewrite \(r\) in terms of \(x\) and \(y.\)  
         </li>
         <li>
-            If any terms of \(\theta\) remain, then use \(\theta = \tan^{-1}(y/x)\) to express them 
+            Use \(\theta = \tan^{-1}(y/x)\) to express any remaining terms of \(\theta\) 
             in terms of \(x\) and \(y.\)
         </li>
     </ol>
@@ -212,7 +212,8 @@
             to express \(x\) and \(y\) in terms of \(r\) and \(\theta.\)
         </li>
         <li>
-            Re-express any remaining terms of \(r\) using \(r = \sqrt{x^2 + y^2}.\)
+            Convert any remaining terms of \(r\) to \(x\) and \(y\) by using \(r = \sqrt{x^2 + y^2}\) 
+            and \(\tan \theta = y/x.\)
         </li>
         <li>
             Isolate \(r\) if possible.
@@ -338,7 +339,7 @@
     On the other hand, the point \((r, \pi - \theta)\) is a reflection of \((r, \theta)\) across the \(y\)-axis. 
     If a polar function \(f\) satisfies \(f(\theta) = f(\pi - \theta),\)
     then the graph of \(r = f(\theta)\) is said to be <i>symmetric about the \(y\)-axis</i>
-    (or about the line \(\theta = \pi/2\), as in <a href="#polar-coord-y-axis-symmetry">Figure 7</a>.
+    (or about the line \(\theta = \pi/2\)), as in <a href="#polar-coord-y-axis-symmetry">Figure 7</a>.
 </p>
 
 <p>
@@ -392,22 +393,21 @@
 </style>
 
 <p>
-    A simple polar graph is a circle of radius \(k\) centered at the origin.
+    A simple polar graph is a circle of radius \(|k|\) centered at the origin.
     In Cartesian coordinates, this circle's equation is \(x^2 + y^2 = k^2.\)
     But we can convert this form to polar by using \(\eqref{eq:polar-x-y}\) [\(x = r \cos \theta\) and 
-    \(y = r \sin \theta\)], obtaining 
+    \(y = r \sin \theta\)]: 
+    Noting that \(\cos^2 \theta + \sin^2 \theta = 1,\) we obtain  
     \begin{align}
     [r\cos \theta]^2 + [r \sin \theta]^2 &= k^2 \nonumber \nl 
     r^2 (\cos^2 \theta + \sin^2 \theta) &= k^2 \nonumber \nl 
-    r &= k \pd \label{eq:polar-circle} 
+    r &= |k| \pd \label{eq:polar-circle} 
     \end{align}
     This equation is intuitive: 
     at any value of \(\theta,\)
-    the length of the line segment connecting the pole to a point on the circle is \(k.\) 
+    the length of the line segment connecting the pole to a point on the circle is \(|k|.\) 
     (See <a href="#polar-coord-circle">Figure 9</a>.)
     Representing this circle is easier in polar form than in Cartesian form.
-    In \(\eqref{eq:polar-circle}\) the negative solution \(r = -k\) yields the same graph
-    because the circle is symmetric about the origin.
 </p>
 
 <div class="example-title" id="ex-2costheta"> EXAMPLE 4 </div>
@@ -499,7 +499,7 @@
         </table> 
         The graph makes a full loop in \(\pi\) radians.
         For \(\theta \gt \pi,\) 
-        we obtain the same points and so the graph of \(r = 2 \cos \theta\) stacks on top of itself for \(\theta \gt \pi.\)
+        the graph of \(r = 2 \cos \theta\) stacks on top of itself.
         We therefore plot the graph in <a href="#polar-coord-2costheta">Figure 10</a>.
     </p>
     <p>
@@ -543,7 +543,7 @@
     \par{x - \frac{k}{2}}^2 + y^2 &= \frac{k^2}{4} \pd \label{eq:polar-kcostheta}
     \end{align}
     Hence, the graph of the polar function \(r = k \cos \theta\) is a circle centered at \((x, y) = \par{k/2, \, 0}\) 
-    with a radius of \(k/2.\)
+    with a radius of \(|k/2|.\)
     By \(\eqrefer{eq:polar-kcostheta},\) if \(k \lt 0,\) then the circle is centered on the <i>negative</i> \(x\)-axis;
     if \(k \gt 0,\) then the circle is centered on the <i>positive</i> \(x\)-axis.
     <a href="#polar-coord-kcostheta">Figure 11</a> shows a pair of circles: 
@@ -570,8 +570,10 @@
     x^2 + y^2 - ky + \orange{\frac{k^2}{4}} &= \orange{\frac{k^2}{4}} \nonumber \nl 
     x^2 + \par{y - \frac{k}{2}}^2 &= \frac{k^2}{4} \pd \label{eq:polar-ksintheta}
     \end{align}
-    Thus, graphing \(r = k \sin \theta\) produces a circle centered at \((x, y) = \par{0, k/2}\) with a radius of \(k/2.\)
+    Thus, graphing \(r = k \sin \theta\) produces a circle centered at \((x, y) = \par{0, k/2}\) with a radius of \(|k/2|.\)
     Similar to the case of \(\eqref{eq:polar-kcostheta},\)
+    in 
+    \(\eqref{eq:polar-ksintheta}\)
     the circle \(r = k \sin \theta\) is centered on the <i>positive</i> \(y\)-axis if \(k \gt 0\)
     and on the <i>negative</i> \(y\)-axis if \(k \lt 0.\)
     In <a href="#polar-coord-ksintheta">Figure 12</a> the top circle represents the graph of 
@@ -598,7 +600,7 @@
                 \(x^2 + y^2 = k^2\)
             </td>
             <td>
-                Circle of radius \(k\) centered at origin
+                Circle of radius \(|k|\) centered at origin
             </td>
         </tr>
         <!-- r = k cos theta -->
@@ -610,7 +612,7 @@
                 \(\ds \par{x - \frac{k}{2}}^2 + y^2 = \frac{k^2}{4}\)
             </td>
             <td>
-                Circle of radius \(k/2\) centered at \((x, y) = (k/2, \, 0)\)
+                Circle of radius \(|k/2|\) centered at \((x, y) = (k/2, \, 0)\)
             </td>
         </tr>
         <!-- r = k sin theta -->
@@ -622,7 +624,7 @@
                 \(\ds x^2 + \par{y - \frac{k}{2}}^2 = \frac{k^2}{4}\)
             </td>
             <td>
-                Circle of radius \(k/2\) centered at \((x, y) = (0, \, k/2)\)
+                Circle of radius \(|k/2|\) centered at \((x, y) = (0, \, k/2)\)
             </td>
         </tr>
     </table>
@@ -666,7 +668,7 @@
         <li>
             For \(r = k \cos \theta,\)
             the graph is centered on the <i>negative</i> \(x\)-axis if \(k \lt 0.\)
-            The center is \((x, y)\) \(=(-7/2, 0)\) and the radius is \(7/2.\)
+            The center is \((x, y)\) \(=(-7/2, 0),\) and the radius is \(7/2.\)
         </li>
     </ol>
 </div>
@@ -683,7 +685,6 @@
 </style>
 
 <p>
-    We can represent lines using polar coordinates.
     Suppose a line passes through the origin with slope \(m.\)
     Then the angle between the positive \(x\)-axis and the line is constant; 
     hence, in polar form \(\theta\) is fixed and \(r\) doesn't change with \(\theta.\)
@@ -698,7 +699,7 @@
     (See <a href="#polar-coord-line">Figure 13</a>.)
     If the line is steep with a positive slope, then \(m\) is large and so \(\theta\)
     is also large. 
-    Conversely, is the line has negative slope, then \(m\) and \(\theta\) are both negative.
+    Conversely, if the line has a negative slope, then \(m\) and \(\theta\) are both negative.
 </p>
 
 <figure class="polar-coord-vertical-line" id="polar-coord-vertical-line">
@@ -722,7 +723,7 @@
     if you trace the vertical line upward—that is, as \(\theta\) approaches \(\pi/2\)—then \(r\) increases. 
     In fact, \(\eqrefer{eq:polar-vertical-line}\) proves this observation because \(\lim_{\theta \to (\pi/2)^-} (c \sec \theta) = \infty.\)
     Similarly, \(\lim_{\theta \to (-\pi/2)^+} (c \sec \theta)\) \(= \infty,\) so the distance between the pole and the vertical line 
-    is increasing if you trace the vertical line downward. 
+    is increasing infinitely if you trace the vertical line downward. 
     And when \(\theta = 0,\) the line segment connecting the pole to \((r, \theta)\) is a straight, horizontal line of length 
     \(r = c.\)
 </p>
@@ -746,18 +747,18 @@
     (See <a href="#polar-coord-horizontal-line">Figure 15</a>.)
     As you trace the horizontal line in the direction of positive \(x,\)
     the angle \(\theta\) is shrinking to \(0.\)
-    During this process the distance between the horizontal line and the point \(O\) is increasing,
+    During this process the distance between the horizontal line and the point \(O\) is increasing to infinity,
     which we confirm by noting that \(\eqrefer{eq:polar-horizontal-line}\) satisfies \(\lim_{\theta \to 0^+} r = \infty.\)
     Likewise, \(\lim_{\theta \to \pi^-} r = \infty,\) so if we trace the horizontal line in the direction of negative \(x,\) 
-    then the distance between \(O\) and the horizontal line is also increasing.
+    then the distance between \(O\) and the horizontal line is also increasing to infinity.
     When \(\theta = \pi/2,\) the line segment connecting \(O\) to the point \((r, \theta)\) 
     is vertical and has length \(r = c.\)
 </p>
 <p>
     In \(\eqref{eq:polar-vertical-line}\) 
-    if \(c \lt 0,\) then the polar graph represents the line \(x = -c.\)
+    if \(c \lt 0,\) then the polar graph of \(r = c \sec \theta\) represents the line \(x = -c.\)
     Likewise, in \(\eqref{eq:polar-horizontal-line}\) if \(c \lt 0,\)
-    then the polar graph is equivalent to the line \(y = -c.\)
+    then the polar graph of \(r = c \csc \theta\) is equivalent to the line \(y = -c.\)
 </p>
 
 <div class="box-title" id="#table-polar-lines">LINES IN POLAR FORM</div>
@@ -840,7 +841,7 @@
             The line's slope \(m\) is \(\tan \theta,\) or 
             \[m = \tan \frac{\pi}{3} = \sqrt 3 \pd\]
             In Cartesian form a line that passes through the origin with slope \(m\) is \(y = mx.\)
-            Because \(m = \sqrt 3\) we write the polar function in Cartesian form as 
+            Because \(m = \sqrt 3,\) we write the polar function in Cartesian form as 
             \[\boxed{y = x \sqrt 3}\]
         </li>
         <hr>
@@ -885,6 +886,7 @@
     </style>
     We note that \(r\) is increasing directly with \(\theta.\)
     Hence, plotting some values of \((r, \theta)\) shows that the graph is a spiral 
+    that passes through the pole 
     (<a href="#polar-coord-theta">Figure 16</a>).
 </div>
 
@@ -896,25 +898,41 @@
     \end{equation}
     This form asserts that a particle's position from its starting point 
     is proportional to the angle \(\theta.\)
-    Changing \(a\) shifts the starting point of the spiral:
-    positive \(a\) shifts the spiral toward the positive \(x\)-axis, 
+    Positive \(a\) shifts the spiral toward the positive \(x\)-axis, 
     and negative \(a\) shifts the spiral toward the negative \(x\)-axis.
-    Changing \(b\) controls the distance between the loops. 
-    Attempting to write \(\eqrefer{eq:polar-spiral}\) as a Cartesian equation 
-    yields 
-    \[\sqrt{x^2 + y^2} = a + b \tan^{-1} \par{\frac{y}{x}} \cma \]
-    a more complicated form. 
+    The spiral in \(\eqref{eq:polar-spiral}\) curls in the counterclockwise direction if \(b \gt 0,\)
+    and in the clockwise direction if \(b \lt 0.\)
+    In <a href="#ex:r=theta">Example 7</a>, \(r\) increases as \(\theta\) increases—meaning 
+    each point on the graph of \(r = \theta\) grows farther away from the pole as 
+    we trace the angle \(\theta\) in the counterclockwise direction. 
+    So we say the graph of \(r = \theta\) <i>curls</i> in the counterclockwise direction.
 </p>
 <p>
     If you wrap a strand of rope around your finger
     and spin your finger, then the uncoiling motion of the string 
     forms a shape that resembles an Archimedean spiral.
+    Attempting to write \(\eqrefer{eq:polar-spiral}\) as a Cartesian equation 
+    yields 
+    \[\sqrt{x^2 + y^2} = a + b \tan^{-1} \par{\frac{y}{x}} \cma \]
+    a more complicated form. 
+    This form is very difficult to visualize, whereas \(\eqref{eq:polar-spiral}\)
+    is much easier to understand.
 </p>
 
 <div class="box-title">THE ARCHIMEDEAN SPIRAL</div>
 <div class="box">
     The graph of \(r = a + b \theta\) 
     forms an <span class="emph">Archimedean</span> spiral.
+    <ul>
+        <li>
+            If \(a \gt 0,\) then the spiral begins at the positive \(x\)-axis.
+            If \(a \lt 0,\) then the spiral begins at the negative \(x\)-axis.
+        </li>
+        <li>
+            If \(b \gt 0,\) then the spiral curls in the counterclockwise direction. 
+            If \(b \lt 0,\) then the spiral curls in the clockwise direction.
+        </li>
+    </ul>
 </div>
 
 <h4 id="limacons-and-cardioids">Limacons and Cardioids</h4>
@@ -982,9 +1000,9 @@
         Alternatively, we could have noticed that, because cosine 
         is an even function, 
         \[1 + \cos \theta = 1 + \cos(-\theta) \pd\]
-        Hence, the polar graph of \(r = 1 + \cos \theta\) is symmetrical about the \(x\)-axis.
+        Hence, the polar graph of \(r = 1 + \cos \theta\) is symmetrical about the \(x\)-axis by <a href="#prop-1">Property 1</a>.
         So we could have traced the upper half of the graph \((0 \leq \theta \leq \pi)\)
-        and mirrored it to obtain the bottom half \((\pi \leq \theta \leq 2\pi).\)
+        and mirrored it across the \(x\)-axis to obtain the bottom half of the graph \((\pi \leq \theta \leq 2\pi).\)
     </p>
 </div>
 
@@ -1024,9 +1042,9 @@
             and \((r, \theta) = (1, \pi).\)
         </li>
         <li>
-            The Cartesian graph of \(r = 1 + 2 \sin \theta\) has a zero when \(\theta = 7 \pi/6.\)
+            In III, the Cartesian graph of \(r = 1 + 2 \sin \theta\) has a zero when \(\theta = 7 \pi/6.\)
             The polar graph therefore crosses the pole when \(\theta = 7 \pi/6.\)
-            So in III, we connect the point \((r, \theta) = (1, \pi)\)
+            So we connect the point \((r, \theta) = (1, \pi)\)
             to \((r, \theta) = (0, 7 \pi/6).\) 
         </li>
         <figure class="polar-coord-1sintheta" id="polar-coord-1sintheta">
@@ -1051,7 +1069,7 @@
             In V, \(r\) has another zero when \(\theta = 11 \pi/6.\)
             So we draw an arc connecting the polar curve from 
             \((r, \theta) = (-1, 3\pi/2)\) to the pole at \(\theta = 11 \pi/6.\)
-            Steps IV and V trace an inner loop of the function.
+            Steps IV and V trace an inner loop of the graph.
         </li>
         <li>
             Because \((r, \theta) = (1, 2 \pi)\) represents the same point as \((r, \theta) = (1, 0),\)
@@ -1196,8 +1214,8 @@
             <li>
                 In VI the polar graph runs through points \((r, \theta) = (0, 5 \pi/4)\) and \((r, \theta) = (-1, 3\pi/2).\)
                 Since \(r \lt 0,\) instead of the points tracing an arc in the third quadrant, 
-                they form an arc in the first quadrant. 
-                This arc begins at the origin and ends at the positive \(y\)-axis. 
+                they form an arc in the first quadrant 
+                that begins at the origin and ends at the positive \(y\)-axis. 
             </li>
             <li>
                 During VII \(r\) increases from \(-1\) to \(0\) as \(\theta\) increases from \(3\pi/2\) to \(7 \pi/4.\)
@@ -1254,7 +1272,7 @@
     <ul>
         <li>
             As in stage I, the polar graph passes the origin when \(\theta = 0.\)
-            Quantity \(r\) then increases to \(1\) when \(\theta = \pi/6\) but then falls to \(0\) 
+            Quantity \(r\) then increases to \(1\) when \(\theta = \pi/6\) before falling to \(0\) 
             at \(\theta = \pi/3.\)
             Consequently, for the polar graph of \(r = \sin 3 \theta\)  
             we trace a petal in the first quadrant that intersects the origin at \(\theta = 0\)
@@ -1298,7 +1316,7 @@
     has \(2 n\) petals. 
     For example, in <a href="#ex:cos2theta">Example 10</a> we see \(n = 2,\) so the graph has \(4\) petals. 
     The function in <a href="#ex:sin3theta">Example 11</a> has \(n = 3,\) so its graph has \(3\) petals.
-    In <a href="#polar-coord-rose-petals">Figure 25</a>, two graphs of \(r = \sin n \theta\) are shown. 
+    In <a href="#polar-coord-rose-petals">Figure 25</a>, two graphs of \(r = \sin n \theta\) are shown: 
     The first graph has even \(n,\) so its graph has \(2n\) petals. 
     Because the rose has eight petals, \(n = 8/2 = 4.\)
     Conversely, in the second graph \(n\) is odd, so the graph has \(n\) petals.
@@ -1336,8 +1354,8 @@
 
 <p>
     A <span class="emph">lemniscate</span> is an \(\infty\)-shaped curve. 
-    It is formed by the functions 
-    \[r^2 = a^2 \cos 2 \theta \and r^2 = a^2 \sin 2 \theta \pd \]
+    It is formed by either function 
+    \[r^2 = a^2 \cos 2 \theta \or r^2 = a^2 \sin 2 \theta \pd \]
     We graph a lemniscate by splitting \(r^2\) into two functions of \(r\)—one positive and one negative. 
     Graphing both functions yields the full lemniscate.
 </p>
@@ -1364,15 +1382,15 @@
     \end{equation}
     Since \(\cos 2 \theta\) cannot be negative in these equations, 
     \(\sqrt{\cos 2 \theta}\) is defined for \(0 \leq \theta \leq \pi/4\) and \(3 \pi/4 \leq \theta \leq \pi.\) 
-    We sketch the graph of each part in \(\eqref{eq:ex-lemniscate-parts}\) 
+    We sketch the graph of each part of \(\eqref{eq:ex-lemniscate-parts}\) 
     and combine the curves.
     Both graphs pass through the points 
     \((r, \theta) = (\sqrt 2, 0)\) and \((r, \theta) = (\sqrt 2, \pi).\)
     At \(\theta = \pi/4\) and \(\theta = 3 \pi/4,\) both graphs 
     hit the pole. 
     The graph of \(r = \sqrt 2 \sqrt{\cos 2 \theta}\) forms the upper half of the lemniscate, 
-    and the graph of \(r = -\sqrt 2 \sqrt{\cos 2 \theta}\) forms the bottom half 
-    (<a href="#polar-coord-ex-lemniscate">Figure 26</a>).
+    and the graph of \(r = -\sqrt 2 \sqrt{\cos 2 \theta}\) forms the bottom half.
+    (See <a href="#polar-coord-ex-lemniscate">Figure 26</a>.)
 </div>
 
 <aside class="box-caution">
@@ -1438,7 +1456,7 @@
                     \(x^2 + y^2 = k^2\)
                 </td>
                 <td>
-                    Circle of radius \(k\) centered at origin
+                    Circle of radius \(|k|\) centered at origin
                 </td>
             </tr>
             <!-- r = k cos theta -->
@@ -1450,7 +1468,7 @@
                     \(\ds \par{x - \frac{k}{2}}^2 + y^2 = \frac{k^2}{4}\)
                 </td>
                 <td>
-                    Circle of radius \(k/2\) centered at \((x, y) = (k/2, \, 0)\)
+                    Circle of radius \(|k/2|\) centered at \((x, y) = (k/2, \, 0)\)
                 </td>
             </tr>
             <!-- r = k sin theta -->
@@ -1462,7 +1480,7 @@
                     \(\ds x^2 + \par{y - \frac{k}{2}}^2 = \frac{k^2}{4}\)
                 </td>
                 <td>
-                    Circle of radius \(k/2\) centered at \((x, y) = (0, \, k/2)\)
+                    Circle of radius \(|k/2|\) centered at \((x, y) = (0, \, k/2)\)
                 </td>
             </tr>
         </table>
@@ -1521,10 +1539,17 @@
     <p>
         <a class="summary-anchor" href="#archimedean-spiral">Spirals</a>
         A <span class="emph">spiral</span> (or <span class="emph">Archimedean spiral</span>) is the graph of 
-        \(r = a + b \theta,\) where \(a\) and \(b\) are constants. If \(a \gt 0,\) then the starting position of the spiral 
-        is shifted toward the positive \(x\)-axis; if \(a \lt 0,\) then the spiral's initial position 
-        is shifted toward the negative \(x\)-axis. 
-        Quantity \(b\) changes the distance between the spiral's loops. 
+        \(r = a + b \theta,\) where \(a\) and \(b\) are constants. 
+        <ul>
+            <li>
+                If \(a \gt 0,\) then the spiral begins at the positive \(x\)-axis.
+                If \(a \lt 0,\) then the spiral begins at the negative \(x\)-axis.
+            </li>
+            <li>
+                If \(b \gt 0,\) then the spiral curls in the counterclockwise direction. 
+                If \(b \lt 0,\) then the spiral curls in the clockwise direction.
+            </li>
+        </ul>
     </p>
     <p>
         <a class="summary-anchor" href="#limacons-and-cardioids">Limacons and Cardioids</a>

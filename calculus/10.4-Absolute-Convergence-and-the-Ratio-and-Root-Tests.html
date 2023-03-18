@@ -53,7 +53,22 @@
       <hr id="mainBodyBegin">
       <!--[[[crefId.Absolute-Convergence-and-the-Ratio-and-Root-Tests]]]--> 
 <p>
-    A series \(\sum a_n\) <span class="emph">converges absolutely</span>
+    In this section we discuss the following:
+    <ul>
+        <li>
+            <a class="page-anchor" href="#absolute-and-conditional-convergence">Absolute and Conditional Convergence</a>
+        </li>
+        <li>
+            <a class="page-anchor">Absolute and Conditional Convergence</a>.
+        </li>
+    </ul>
+</p>
+
+<h4 id="absolute-and-conditional-convergence">Absolute and Conditional Convergence</h4>
+<p>
+    If a series \(\sum a_n\) converges, then we may wish to classify the convergence 
+    either as <i>absolute</i> or <i>conditional</i>. 
+    The series \(\sum a_n\) <span class="emph">converges absolutely</span>
     if \(\sum \abs{a_n}\) converges. 
     Conversely, \(\sum a_n\) <span class="emph">converges conditionally</span> 
     if \(\sum a_n\) converges but \(\sum \abs{a_n}\) diverges.
@@ -72,72 +87,319 @@
     </ol>
 </div>
 
-<p>
-    If \(\sum a_n\) converges <i>absolutely</i>, then \(\sum a_n\) converges.
-    In other words, we can consider \(\sum \abs{a_n}\)—if this sum converges, 
-    then \(\sum a_n\) also converges. 
-    This fact can serve as another series convergence test, 
-    useful if we know how to work with \(\sum \abs{a_n}\) but not \(\sum \abs a_n.\)
-</p>
-
-<div class="box-title"> THEOREM 1 </div>
-<div class="box">
-    If \(\sum a_n\) is absolutely convergent, then it is convergent.
-</div>
-
 <div class="example-title"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
         Determine whether the following series converges conditionally, converges absolutely, or diverges:
-        \[\sum_{n = 3}^{\infty} \frac{(-1)^n}{\sqrt{n}} \period \]
+        \[\sum_{n = 3}^{\infty} \frac{(-1)^n}{\sqrt{n}} \pd \]
     </div>
 </div>
 <button onclick="toggle1()" class="solution-button"></button>
 <div id="solution1" class="solution">
     Let \(a_n = (-1)^n/\sqrt{n}.\)
-    The terms of {\(a_n\)} are alternating and decrease in magnitude to zero. 
-    Also, \(\lim_{n \to \infty} a_n = 0,\)
-    so \(\sum a_n\) converges by the Alternating Series Test.
+    The terms of \(\{a_n\} \subsuper{3}{\infty}\) are alternating and decreasing in magnitude to zero, 
+    and \(\lim_{n \to \infty} a_n = 0.\)
+    Hence, \(\sum a_n\) converges by the Alternating Series Test.
     But 
-    \[\sum \abs{a_n} = \sum \frac{1}{\sqrt{n}} \period \] 
-    This is a p-series with \(p = 0.5,\) so \(\sum \abs{a_n}\) diverges.
+    \[\sum \abs{a_n} = \sum \frac{1}{\sqrt{n}}\] 
+    is a p-series with \(p = 1/2 \lt 1,\) so \(\sum \abs{a_n}\) diverges.
     Since \(\sum a_n\) converges but \(\sum \abs{a_n}\) diverges, 
-    we say \(\sum a_n\) <span class="emph">converges conditionally</span>.
+    we say \(\sum a_n\) <b>converges conditionally</b>.
+</div>
+
+<p>
+    If \(\sum a_n\) converges <i>absolutely</i>, then \(\sum a_n\) converges.
+    We may use this fact as a convergence test; that is, if we can establish that \(\sum \abs{a_n}\)
+    converges, then we can assert that \(\sum a_n\) also converges. 
+    We use this pathway if we can test the convergence or divergence of \(\sum \abs{a_n}.\)
+</p>
+
+<div class="box-title"> THEOREM </div>
+<div class="box">
+    If \(\sum a_n\) is absolutely convergent, then \(\sum a_n\) is convergent.
 </div>
 
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Determine whether \(\ds \sum_{n = 1}^{\infty} \frac{\sin n}{n^2}\) converges or diverges.
+        Determine whether \(\sum_{n = 1}^{\infty} (\sin n)/n^2\) converges or diverges.
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button"></button>
 <div id="solution2" class="solution">
     <p>
-        It's difficult to test this series in its raw form. 
-        Instead, we can determine whether the series converges <i>absolutely</i>.
+        It is difficult to test this series' convergence or divergence in its raw form. 
+        This is because we cannot readily perform a comparison test with \(a_n = (\sin n)/n^2,\)
+        since we cannot bound the sum of \(\sum a_n\) in any useful way.
+        But we <i>can</i> bound the sum of \(\sum \abs{a_n}\) between two positive numbers, 
+        allowing us to establish that \(\sum \abs{a_n}\) converges by Direct Comparison. 
+        So our question is whether the series converges <i>absolutely</i>.
         In other words, if we find that \(\sum_{n = 1}^\infty \abs{(\sin n)/n^2}\)
         is convergent, then Theorem 1 states that \(\sum_{n = 1}^\infty (\sin n)/n^2\)
         also converges.
     </p>
     <p>
-        We find convergence of
-        \[\sum_{n = 1}^{\infty} \abs{\frac{\sin(n)}{n^2}}\]
-        by using Direct Comparison:
         Since \(0 \leq \abs{\sin n} \leq 1,\) we have 
         \[
         0 \leq \sum_{n = 1}^{\infty} \abs{\frac{\sin n}{n^2}} \leq 
         \sum_{n = 1}^{\infty} \frac{1}{n^2} \period 
         \]
         The sum \(\sum_{n = 1}^\infty 1/n^2\) converges and \(\sum_{n = 1}^{\infty} \abs{(\sin n)/n^2} \gt 0.\)
-        Hence, \(\sum_{n = 1}^{\infty} \abs{(\sin n)/n^2}\) converges.
-     </p>
-     <p>
+        Hence, \(\sum_{n = 1}^{\infty} \abs{(\sin n)/n^2}\) converges by the Direct Comparison Test.
         Because \(\sum_{n = 1}^{\infty} \abs{(\sin n)/n^2}\) converges,
         \(\sum_{n = 1}^{\infty} (\sin n)/n^2\) converges absolutely and therefore 
-        <span class="emph">converges</span>.
+        <b>converges</b>.
      </p>
 </div>
+
+<h4 id="ratio-test">Ratio Test</h4>
+<p>
+    Consider the infinite series \(\sum a_n.\)
+    The <span class="emph">Ratio Test</span> enables us to determine 
+    whether the series converges by computing the ratio \(\abs{a_{n + 1}/a_n}\) 
+    as \(n\) grows large. 
+    The test is as follows. 
+</p>
+
+<div class="box-title">RATIO TEST</div>
+<div class="box">
+    To test \(\sum a_n\) for convergence or divergence, let 
+    \[L = \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \pd\]
+    <ol class="list-alpha">
+        <li>
+            If \(L \lt 1,\) then \(\sum a_n\) converges absolutely.
+        </li>
+        <li>
+            If \(L \gt 1,\) then \(\sum a_n\) diverges.
+        </li>
+        <li>
+            If \(L = 1,\) then the test is <span class="warning">inconclusive</span>.
+        </li>
+    </ol>
+</div>
+
+<p>
+    This test is particularly useful when \(a_n\) contains factorial or exponential terms.
+    The following property is applicable when we decompose factorials:
+    \begin{equation}
+    (n + k)! = (n + k) (n + k - 1) (n + k - 2) \cdot \, \cdots \, \cdot n! \pd \label{eq:factorial-decompose}
+    \end{equation}
+    For example, 
+    \[(n + 3)! = (n + 3)(n + 2)(n + 1) n! \pd\]
+    You may confirm this fact with numbers; 
+    for example, \(5! = (5)(4)(3!).\)
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using the Ratio Test, 
+        determine whether \(\sum_{n = 1}^{\infty} e^n/n!\) converges or diverges.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <aside class="box-remark">
+        In \(a_{n + 1},\)
+        we use \(\eqref{eq:factorial-decompose}\) to write 
+        \((n + 1)!\) as \((n + 1) n! \, .\)
+    </aside>
+    Let \(a_n = e^n/n! \,.\) 
+    We note that 
+    \[a_{n + 1} = \frac{e^{n + 1}}{(n + 1)!} = \frac{e^n \, e}{(n + 1) n!}\]
+    To use the Ratio Test, we define \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)
+    The series \(\sum_{n = 1}^\infty e^n/n!\) converges if \(L \lt 1\)
+    and diverges if \(L \gt 1.\)
+    (If \(L = 0,\) then the Ratio Test is inconclusive.)
+    Simplifying the limit \(L,\) we attain 
+    \[
+    \ba 
+    L &= \lim_{n \to \infty} \abs{\frac{e^n \, e}{(n + 1) n!} \cdot \frac{n!}{e^n}} \nl 
+    &= \lim_{n \to \infty} \frac{e}{n + 1} \nl 
+    &= 0 \pd
+    \ea 
+    \]
+    Since \(L = 0 \lt 1,\) the series \(\sum_{n = 1}^\infty a_n\) <b>converges</b>.
+</div>
+
+<h4 id="ratio-test-proof">Proof of the Ratio Test</h4>
+<p>
+    <span class="proof">PROOF</span>
+    Consider the infinite series \(\sum_{n = 1}^\infty a_n.\)
+    We begin the index at \(n = 1\) with no loss of generality;
+    that is, this proof applies for other starting indices as well.
+    Let \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)
+    We aim to show that \(\sum_{n = 1}^\infty a_n\) 
+    converges absolutely if \(L \lt 1\)
+    and that \(\sum_{n = 1}^\infty a_n\) 
+    diverges if \(L \gt 1.\)
+    For \(L = 1\) we will select values of \(a_n\) such that \(\sum_{n = 1}^\infty a_n\) 
+    may either converge absolutely, converge conditionally, or diverge.
+</p>
+<p>
+    <span class="label-emph">Case 1</span>
+    We want to show that \(\sum_{n = 1}^\infty a_n\) converges absolutely—that 
+    is, \(\sum_{n = 1}^\infty \abs{a_n}\) converges—if \(L \lt 1.\)
+    To do so, we compare \(\sum_{n = 1}^\infty a_n\) to an infinite geometric series. 
+    Let \(r\) be a number such that \(L \lt r \lt 1.\)
+    Then eventually, as \(n\) grows large, the ratio \(\abs{a_{n + 1}/a_n}\)
+    becomes bounded by \(r.\)
+    For some integer \(N,\) if \(n \geq N,\) then   
+    \[\abs{\frac{a_{n + 1}}{a_n}} \lt r \or \abs{a_{n + 1}} \lt r \abs{a_n} \pd\]
+    We consider the following: 
+    \[
+    \baat{2}
+    \abs{a_{N + 1}} & \lt r \abs{a_{N}} \nl 
+    \abs{a_{N + 2}} & \lt r \abs{a_{N + 1}} && \lt r^2 \abs{a_N} \nl 
+    \abs{a_{N + 3}} & \lt r \abs{a_{N + 2}} && \lt r^3 \abs{a_N} \nl    
+    & \; \; \vdots \nl
+    \abs{a_{N + k}} & \lt r \abs{a_{N + k - 1}} && \lt r^k \abs{a_N} \nl
+    \eaat 
+    \]
+    Note that \(\sum_{n = k}^\infty \abs{a_N} r^k\) 
+    is a convergent geometric series since \(0 \lt r \lt 1.\)
+    Because \(\abs{a_{N + k}} \lt r^k \abs{a_N},\) using the Direct Comparison test shows that 
+    \[\sum_{n = N+1}^\infty \abs{a_n} = \sum_{k = 1}^\infty \abs{a_{N + k}}\]
+    converges. 
+    But 
+    \[\sum_{n = 1}^\infty \abs{a_n} = \sum_{n = 1}^N \abs{a_n} + \sum_{n = N + 1}^\infty \abs{a_n} \pd\]
+    On the right-hand side, the first series is a sum of finite terms,
+    and we established that the second series is convergent.  
+    Thus, \(\sum_{n = 1}^\infty \abs{a_n}\) converges and so \(\sum_{n = 1}^\infty a_n\)
+    converges absolutely.
+</p>
+<p>
+    <span class="label-emph">Case 2</span>
+    We must now show that if \(L \gt 1,\) then \(\sum_{n = 1}^\infty a_n\) diverges. 
+    Because \(L \gt 1,\) there exists an integer \(N\) such that for \(n \geq N,\)
+    \[\abs{\frac{a_{n + 1}}{a_n}} \gt 1 \or \abs{a_{n + 1}} \gt \abs{a_n} \pd\]
+    This inequality asserts that the terms of \(\abs{a_n}\) 
+    are growing and never negative. 
+    Consequently, \(\lim_{n \to \infty} a_n \ne 0,\)
+    so by the Divergence Test \(\sum_{n = 1}^\infty a_n\) diverges. 
+</p>
+<p>
+    <span class="label-emph">Case 3</span>
+    To show that the Ratio Test is inconclusive for \(L = 1,\)
+    we need to prove that no consistent result exists. 
+    We may brainstorm series \(\sum_{n = 1}^\infty a_n\) that satisfy 
+    \[L = \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} = 1 \pd\]
+    For example, \(\sum_{n = 1}^\infty (1/n)\) is divergent and satisfies \(L = 1.\)
+    But \(\sum_{n = 1}^\infty (-1)^n/n\) is conditionally convergent while also satisfying \(L = 1.\)
+    And \(\sum_{n = 1}^\infty (1/n^2)\) is an absolutely convergent series 
+    that satisfies \(L = 1.\)
+    Thus, the Ratio Test is inconclusive for \(L = 1.\)
+    \[\qedproof\]
+</p>
+
+<h4 id="root-test">Root Test</h4>
+<p>
+    Consider the infinite series \(\sum a_n.\)
+    If the summation function \(a_n\) contains a power of \(n,\)
+    then we may find value in using the <span class="emph">Root Test</span>, as follows. 
+</p>
+
+<div class="box-title">ROOT TEST</div>
+<div class="box">
+    To test \(\sum a_n\) for convergence or divergence, let 
+    \[L = \lim_{n \to \infty} \abs{a_n}^{1/n} \pd\]
+    <ol class="list-alpha">
+        <li>
+            If \(L \lt 1,\) then \(\sum a_n\) converges absolutely.
+        </li>
+        <li>
+            If \(L \gt 1,\) then \(\sum a_n\) diverges.
+        </li>
+        <li>
+            If \(L = 1,\) then the test is <span class="warning">inconclusive</span>.
+        </li>
+    </ol>
+</div>
+
+<p>
+    Note the similarity of the conclusions in the Root Test and the <a href="#ratio-test" class="page-anchor">Ratio Test</a>.
+    In many cases, using either test yields the same conclusion about a series' convergence or divergence. 
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using the Root Test, 
+        determine whether \(\sum_{n = 1}^{\infty} e^n/\par{5^{2n + 5}}\) converges or diverges.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Let \(a_n = e^n/\par{5^{2n + 5}} \,.\) 
+    To use the Root Test, we must consider \(\lim_{n \to \infty} \sqrt[n]{a_n}.\)
+    To take the \(n\)th root of \(a_n,\)
+    we raise \(a_n\) to the power of \(1/n,\) as follows: 
+    \[\par{\frac{e^n}{5^{2n + 5}}}^{1/n} = \frac{e}{5^{2 + 5/n}} \pd\]
+    The limit of this expression is 
+    \[\lim_{n \to \infty} \frac{e}{5^{2 + 5/n}} = \frac{e}{5^{2 + 0}} = \frac{e}{25} \lt 1 \pd\]
+    Hence, \(\sum_{n = 1}^{\infty} e^n/\par{5^{2n + 5}}\) <b>converges</b>.
+    Using the Ratio Test also would assert that this series is absolutely convergent.
+</div>
+
+<h4 id="root-test-proof">Proof of the Root Test</h4>
+<p>
+    <span class="proof">PROOF</span>
+    This proof is very similar to the <a href="#ratio-test-proof" class="page-anchor">Proof of the Ratio Test</a>.
+    We start with the infinite series \(\sum_{n = 1}^\infty a_n,\)
+    where we begin the index at \(n = 1\) with no loss of generality,
+    just as we did when proving the Ratio Test.
+    Let 
+    \[L = \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = \lim_{n \to \infty} \abs{a_n}^{1/n} \pd\]
+    Our goal is to show that \(\sum_{n = 1}^\infty a_n\) 
+    converges absolutely if \(L \lt 1\)
+    and that \(\sum_{n = 1}^\infty a_n\) 
+    diverges if \(L \gt 1.\)
+    If \(L = 1,\) then we 
+    select values of \(a_n\) such that \(\sum_{n = 1}^\infty a_n\) 
+    may either converge absolutely, converge conditionally, or diverge—just as we did when we proved the Ratio Test. 
+</p>
+<p>
+    <span class="label-emph">Case 1</span> 
+    If \(L = 1,\) then we want to show that \(\sum_{n = 1}^\infty a_n\) is absolutely convergent. 
+    Define a number \(r\) such that \(L \lt r \lt 1\)
+    as \(n\) grows large—say, for \(n \geq N.\) 
+    But since \(L = \abs{a_n}^{1/n}\) we have, for \(n \geq N,\) 
+    \[\abs{a_n}^{1/n} \lt r \implies \abs{a_n} = r^n \pd\]
+    The series \(\sum_{n = 1}^\infty r^n\) is an infinite geometric series that converges because \(0 \lt r \lt 1.\)
+    Therefore, by the Direct Comparison Test the series \(\sum_{n = N}^\infty \abs{a_n}\) is also convergent. 
+    But
+    \[\sum_{n = 1}^\infty \abs{a_n} = \sum_{n = 1}^{N - 1} \abs{a_n} + \sum_{n = N}^\infty \abs{a_n} \pd\]
+    On the right-hand side the term \(\sum_{n = 1}^{N - 1} \abs{a_n}\) is a finite sum and so is finite,
+    and we established that \(\sum_{n = N}^\infty \abs{a_n}\) is convergent. 
+    Hence, \(\sum_{n = 1}^\infty \abs{a_n}\) converges and \(\sum_{n = 1}^\infty a_n\)
+    converges absolutely.  
+</p>
+<p>
+    <span class="label-emph">Case 2</span>
+    We now show that \(\sum_{n = 1}^\infty a_n\) is divergent if \(L \gt 1.\)
+    Since \(L \gt 1,\) we know that \(\abs{a_n}^{1/n}\) approaches a number greater than \(1\) 
+    as \(n\) grows large—say, for \(n \geq N \col\)
+    \[\abs{a_n}^{1/n} \lt 1 \implies \abs{a_n} \gt 1^n = 1 \pd\]
+    But because \(\abs{a_n} \gt 1\) for all \(n \geq N,\)
+    we assert that \(\lim_{n \to \infty} \abs{a_n} \ne 0\)
+    and \(\lim_{n \to \infty} a_n \ne 0.\)
+    Thus, the Divergence Test asserts that \(\sum_{n = 1}^\infty a_n\)
+    diverges. 
+</p>
+<p>
+    <span class="label-emph">Case 3</span>
+    To show that the Root Test is inconclusive for \(L = 1,\)
+    we simply show that no consistent result exists. 
+    We may brainstorm series \(\sum_{n = 1}^\infty a_n\) that satisfy 
+    \[L = \lim_{n \to \infty} \abs{a_n}^{1/n} = 1 \pd\]
+    For example, \(\sum_{n = 1}^\infty (1/n)\) is divergent and satisfies \(L = 1.\)
+    Yet \(\sum_{n = 1}^\infty (-1)^n/n\) is conditionally convergent while also satisfying \(L = 1,\)
+    and \(\sum_{n = 1}^\infty (1/n^2)\) is an absolutely convergent series 
+    that satisfies \(L = 1.\)
+    Thus, the Root Test is inconclusive for \(L = 1.\)
+    \[\qedproof\]
+</p>
+    
     </main>
     <!-- <footer>
     <div class="footer-body">

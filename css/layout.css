@@ -336,6 +336,9 @@ main tr{
 
 .table-function-label{
     border-right: 3px solid white;
+}
+
+.table-function-label, .label-cell{
     background-color: rgb(63, 62, 62);
 }
 
@@ -492,10 +495,10 @@ ol li{
 
 .label-emph{  /*used for text like "*Interpretation*. f is decreasing . . ."*/
     font-style: italic;
-    font-family: Geneva, Tahoma, sans-serif;
+    /* font-family: Geneva, Tahoma, sans-serif; */
     text-indent: 0%;
     margin-right: 0.8%;
-    color: rgb(184, 188, 190);
+    color: rgb(123, 156, 173);
 }
 
 .label-emph::after{
