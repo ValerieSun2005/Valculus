@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.4: Using the First and Second Derivatives</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>3.4 — Using the First and Second Derivatives</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="3.4-Using-the-First-and-Second-Derivatives-exercises.html">Exercises
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="3.4-Using-the-First-and-Second-Derivatives-exercises-solutions.html">Exercise Solutions
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Using-the-First-and-Second-Derivatives]]]-->
+<p>
+    When we analyze graphs, it is imperative that we be able to describe their properties. 
+    From algebra class, we categorized a graph either as <i>increasing</i> or <i>decreasing</i>
+    over an interval. 
+    But calculus provides us one more property—<i>concavity</i>, 
+    which describes the change in a function's rate of change.  
+    In this section we discuss the following:
+    <ul>
+        <li>
+            <a class="page-anchor" href="#first-deriv">Connecting \(f'\) to \(f\)</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#concavity">Concavity: Connecting \(f''\) to \(f\)</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#second-deriv-test">The Second-Derivative Test</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="first-deriv">Connecting \(f'\) to \(f\)</h4>
+
+<figure class="deriv-geometry-ABCD" id="deriv-geometry-ABCD">
+    <img src="../images/sectionImages/deriv-geometry-ABCD.jpg" alt="Figure 1">
+</figure>
+<style>
+    .deriv-geometry-ABCD::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    Let \(x_1\) and \(x_2\) be two numbers such that \(x_1 \lt x_1.\)
+    If a function \(f\) is increasing over an interval, then \(f(x_1) \lt f(x_2)\)
+    for \(x_1\) and \(x_2\) in that interval.
+    Conversely, \(f\) is decreasing if \(f(x_1) \gt f(x_2).\)
+    In <a href="#deriv-geometry-ABCD">Figure 1</a>, the graph of \(y = f(x)\)
+    is decreasing between points \(A\) and \(B,\) increasing between \(B\) and \(C,\)
+    and decreasing between \(C\) and \(D.\)
+    When \(f\) is increasing, we see that tangents to the curve have positive slope;
+    thus, \(f' \gt 0.\)
+    But when \(f\) is decreasing, the tangents have negative slope and so \(f' \lt 0.\)
+    We therefore conclude the following: \(f\) is increasing if \(f' \gt 0\) 
+    and \(f\) is decreasing if \(f' \lt 0.\)
+    We prove these facts using the Mean Value Theorem 
+    (from Section <a href="/Valculus/calculus/3.3-Mean-Value-Theorem-and-Rolle's-Theorem.html">3.3</a>). 
+</p>
+
+<div class="box-title">HOW \(f'\) AFFECTS \(f\)</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li id="first-deriv-a">
+            If \(f' \gt 0\) on an interval, then \(f\) is increasing on that interval.
+        </li>
+        <li id="first-deriv-b">
+            If \(f' \lt 0\) on an interval, then \(f\) is decreasing on that interval.
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Consider the interval \([x_1, x_2]\) with \(x_1 \lt x_2.\)
+    We must prove that if \(f'(x) \gt 0\) in this interval, then \(f(x_1) \lt f(x_2)\) 
+    and so \(f\) is increasing. 
+    Then we aim to show that if \(f'(x) \lt 0\) in this interval, then \(f(x_1) \gt f(x_2),\)
+    indicating that \(f\) is decreasing. 
+    We assume that \(f\) is continuous over \(x_1 \leq x \leq x_2\) and differentiable over 
+    \(x_1 \lt x \lt x_2.\)
+    Thus, the Mean Value Theorem guarantees a number \(c\) in \((x_1, x_2)\) such that 
+    \begin{equation} 
+    f(x_2) - f(x_1) = f'(c) (x_2 - x_1) \pd \label{eq:proof-f'-mvt}
+    \end{equation}
+    If \(f' \gt 0\) over \((x_1, x_2),\) then the right-hand side of \(\eqref{eq:proof-f'-mvt}\)
+    becomes a product of positive numbers because \(f'(c) \gt 0\) and \(x_2 - x_1 \gt 0.\)
+    Consequently, 
+    \[f(x_2) - f(x_1) \gt 0 \or f(x_1) \lt f(x_2) \cma\] 
+    so \(f\) is increasing on \([x_1, x_2].\) 
+    Hence, part <a href="#first-deriv-a">(a)</a> is proved. 
+    If \(f' \lt 0\) over \((x_1, x_2),\) then in \(\eqref{eq:proof-f'-mvt}\) \(f'(c) \lt 0,\)
+    so the right-hand side 
+    is a negative quantity. 
+    Thus, 
+    \[f(x_2) - f(x_1) \lt 0 \or f(x_1) \gt f(x_2) \cma\] 
+    meaning \(f\) is decreasing over \([x_1, x_2].\)
+    Part <a href="#first-deriv-b">(b)</a> is proved. 
+    \[\qedproof\]
+</p>
+ 
+<!-- <p>
+    Although a derivative may be \(0\) at an endpoint, we still include that endpoint 
+    when we give intervals of increase or decrease. 
+    In other words, we use <i>closed</i> intervals to describe where a function 
+    is increasing or decreasing. 
+</p> -->
+
+<div class="example-title" id="ex-inc-dec"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = \tfrac{1}{3} x^3 - 2x^2 + 3x + 2.\)
+        Find the intervals on which \(f\) is increasing and on which \(f\) is decreasing.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="deriv-geometry-f-ex" id="deriv-geometry-f-ex">
+        <img src="../images/sectionImages/deriv-geometry-f-ex.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .deriv-geometry-f-ex::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The function \(f\) is increasing if \(f'(x) \gt 0\) and decreasing if \(f'(x) \lt 0.\)
+    Differentiating \(f\) gives 
+    \[f'(x) = x^2 - 4x + 3 = (x - 3)(x - 1) \pd\]
+    We find that \(f'(x) \lt 0\) for \(x\) in \((1, 3),\)
+    so \(f(x)\) is increasing over \([1, 3].\) 
+    Also, \(f'(x) \gt 0\) for \(x\) in \((-\infty, 1)\) and \((3, \infty),\) 
+    so \(f\) is decreasing for \((-\infty, 1]\) and \([3, \infty).\) 
+    (See <a href="#deriv-geometry-f-ex">Figure 2</a>.)
+    Note that we write intervals of increase or decrease as <i>closed</i>
+    intervals when \(f\) continuous at the endpoints.
+</div>
+
+<div class="example-title" id="ex-g'"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="interpreting-derivatives-geometrically-g-deriv" id="interpreting-derivatives-geometrically-g-deriv">
+            <img src="../images/sectionImages/interpreting-derivatives-geometrically-g-deriv.jpg" alt="Figure 3">
+        </figure>
+        <style>
+            .interpreting-derivatives-geometrically-g-deriv::before{
+                content:'FIGURE 3';
+            }
+        </style>
+        In <a h ref="#interpreting-derivatives-geometrically-g-deriv">Figure 3</a>, 
+        the graph of \(y = g'(x)\) is shown. 
+        Where is \(g\) increasing, and where is \(g\) decreasing?
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    This graph is of \(g',\) <span class="warning">not</span> \(g.\)
+    Function \(g\) increases when \(g'(x) \gt 0\) and decreases when \(g'(x) \lt 0.\)
+    We see \(g'(x) \gt 0\) for \(-4 \lt x \lt 3,\) so \(g(x)\) is 
+    <i>increasing</i> over \([-4, 3].\)
+    Conversely, \(g'(x) \lt 0\) for \(-6 \leq x \lt -4\) and \(3 \lt x \leq 6.\)
+    Thus, \(g(x)\) is <i>decreasing</i> over \([-6, -4]\) and \([3, 6].\)
+</div>
+
+<h4 id="concavity">Concavity: Connecting \(f''\) to \(f\)</h4>
+
+<div class="figure-center">
+    <figure class="concave-up" id="concave-up">
+        <img src="../images/sectionImages/concave-up.jpg" class="concave-up" alt="Figure 4A">
+    </figure>
+    <figure class="concave-down" id="concave-down">
+        <img src="../images/sectionImages/concave-down.jpg" class="concave-down" alt="Figure 4B">
+    </figure>
+</div>
+<style>
+    .concave-up::before{
+        content:'FIGURE 4A';
+    }
+
+    .concave-down::before{
+        content:'FIGURE 4B';
+    }
+</style>
+
+<p>
+    We can determine whether a function is increasing or decreasing over an interval. 
+    But we delve one step deeper to consider <i>concavity</i>. 
+    In <a href="#concave-up">Figure 4A</a> and <a href="#concave-down">Figure 4B</a>, 
+    both functions \(f\) and \(g\) are increasing,
+    but they are bent differently: 
+    We call \(f\) <span class="emph">concave upward</span> 
+    (or simply <span class="emph">concave up</span>)
+    and \(g\) <span class="emph">concave downward</span> 
+    (or <span class="emph">concave down</span>).
+    The word <i>concave</i> means curving inward;
+    it's easy to remember the phrase "cave in."
+    The graph of \(f\) appears to bend inward when viewed from above,
+    whereas the graph of \(g\) looks to arch inward if we view it from below. 
+</p>
+
+<div class="figure-center">
+    <figure class="concave-up-tangents" id="concave-up-tangents">
+        <img src="../images/sectionImages/concave-up-tangents.jpg" class="concave-up-tangents" alt="Figure 5A">
+    </figure>
+    <figure class="concave-down-tangents" id="concave-down-tangents">
+        <img src="../images/sectionImages/concave-down-tangents.jpg" class="concave-down-tangents" alt="Figure 5B">
+    </figure>
+</div>
+<style>
+    .concave-up-tangents::before{
+        content:'FIGURE 5A';
+    }
+
+    .concave-down-tangents::before{
+        content:'FIGURE 5B';
+    }
+</style>
+
+<p>
+    If we draw tangents to the graph of \(f,\)
+    whose graph is concave up, then we see that the graph lies above all the tangents 
+    (<a href="#concave-up-tangents">Figure 5A</a>). 
+    Thus, the <i>rate of change</i> of \(f\) is increasing.
+    In other words, the derivative \(f'\) is an increasing function;
+    accordingly, the second derivative \(f''\) is positive.
+    By contrast, drawing tangents to the graph of \(g\)
+    (whose graph is concave <i>down</i>) shows that 
+    the graph lies below all the tangents 
+    (<a href="#concave-down-tangents">Figure 5B</a>).
+    Because the slopes of the tangents are decreasing, \(f'\) is a decreasing function
+    and so \(f''\) is negative.
+</p>
+
+<div class="box-title">CONCAVITY</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If \(f''(x) \gt 0\) for all \(x\) in an interval, then the graph of \(f\) 
+            is <span class="emph">concave up</span> on that interval.
+        </li>
+        <li>
+            If \(f''(x) \lt 0\) for all \(x\) in an interval, then the graph of \(f\) 
+            is <span class="emph">concave down</span> on that interval.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-concavity-f-pt"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = \tfrac{1}{6}x^3 - x^2 + 6x + 1.\)
+        Describe the characteristics of the graph of \(f(x)\)
+        when \(x = 1.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="concavity-example-pt" id="concavity-example-pt">
+        <img src="../images/sectionImages/concavity-example-pt.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .concavity-example-pt::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    We first need to determine whether \(f\) is increasing or decreasing when \(x = 1;\)
+    we'll then identify the graph's <b>concavity</b>. 
+    Taking derivatives, we find 
+    \[f'(x) = \tfrac{1}{2} x^2 - 2x + 6 \and f''(x) = x - 2 \pd\]
+    Then 
+    \[
+    \ba 
+    f'(1) &= \tfrac{1}{2}(1)^2 - 2(1) + 6 = \tfrac{5}{2} \nl 
+    f''(1) &= 1 - 2 = -1 \pd 
+    \ea 
+    \]
+    Because \(f'(1) \gt 0,\) \(f\) is <b>increasing</b> when \(x = 1.\)
+    Also, \(f''(1) \lt 0,\) meaning the graph of \(f\) is <b>concave down</b>
+    at \(x = 1.\)
+    Drawing a tangent line to \(f\) at \(x = 1,\)  
+    we see that the graph lies below this tangent—the geometric meaning of \(f\) being <i>concave down</i>.
+    (See <a href="#concavity-example-pt">Figure 6</a>.) 
+    
+</div>
+
+<div class="example-title" id="ex-concavity-f-1/3"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = \tfrac{1}{3}x^3 - 2x^2 + x + 4.\)
+        Where is the graph of \(f\) concave up, and where is it concave down?
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="concavity-example-f" id="concavity-example-f">
+        <img src="../images/sectionImages/concavity-example-f.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .concavity-example-f::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    The graph of \(f\) is concave up when \(f''(x) \gt 0\)
+    and concave down when \(f''(x) \lt 0.\)
+    Differentiating \(f,\) we find 
+    \[
+    f'(x) = x^2 - 4x + 1 \and f''(x) = 2x - 4 \pd
+    \]
+    Then \(f''(x) \gt 0\) when \(x \gt 2\) and \(f''(x) \lt 0\)
+    when \(x \lt 2.\)
+    Thus, the graph of \(f(x)\) is concave up 
+    over \((2, \infty)\) 
+    and concave down over \((-\infty, 2).\)
+    In <a href="#concavity-example-f">Figure 7</a>, 
+    the tangents to the graph of \(f\) are <i>above</i>
+    the graph for \(x \lt 2\)
+    and <i>below</i> the graph for \(x \gt 2.\)
+</div>
+
+<p>
+    A point at which the graph of \(f\) changes concavity—from 
+    concave up to concave down or from concave down to concave up—is 
+    called an <span class="emph">inflection point</span>.
+    For example, in 
+    <a href="#ex-concavity-f-1/3">Example 4</a> 
+    the graph of \(f\) switches from concave down to concave up at \(x = 2.\)
+    Thus, \(x = 2\) is the location of an inflection point of \(f.\)
+    An easy way to estimate the location of an inflection point of \(f\) 
+    is to identify a point at which \(f\) crosses its tangent.
+</p>
+
+<div class="box-title">INFLECTION POINT</div>
+<div class="box">
+    The function \(f\) has an <span class="emph">inflection point</span> at 
+    \(x = a\) if the graph of \(f\) switches concavity at \(x = a.\)
+</div>
+
+<div class="example-title" id="ex-inflection-pt"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = x^4 - 2x^3 - 12x^2 - 17x + 4.\)
+        Find all inflection points of \(f.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="concavity-ex-inflection-pt" id="concavity-ex-inflection-pt">
+        <img src="../images/sectionImages/concavity-ex-inflection-pt.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .concavity-ex-inflection-pt::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    At an <b>inflection point</b>, the graph of \(f\) changes concavity,
+    so we seek sign changes in \(f''.\)
+    Because \(f''\) is continuous, 
+    we find the solutions to \(f''(x) = 0.\)
+    At these values of interest, we analyze whether \(f''(x)\) changes sign.
+    Differentiating gives 
+    \[f'(x) = 4x^3 - 6x^2 - 24x - 17 \and f''(x) = 12x^2 - 12x - 24 \pd\]
+    We then solve \(f''(x) = 0 \col\)
+    \[
+    \ba 
+    12x^2 - 12x - 24 &= 0 \nl 
+    x^2 - x - 2 &= 0 \nl 
+    (x - 2)(x + 1) &= 0 \nl 
+    \implies x &= -1 \cma x = 2 \pd 
+    \ea 
+    \]
+    Because \(f''(x) \gt 0\) for \(x \lt -1\) 
+    and \(f''(x) \lt 0\) for \(-1 \lt x \lt 2,\)
+    we confirm that \(x = -1\) is an inflection point 
+    because at that point \(f\) changes from concave up to concave down. 
+    Likewise, \(f''(x) \gt 0\) for \(x \gt 2;\)
+    accordingly, \(f\) has an inflection point at \(x = 2\) 
+    because \(f\) switches from concave down to concave up at that point. 
+    (See <a href="#concavity-ex-inflection-pt">Figure 8</a>.)
+</div>
+
+<p>
+    To find inflection points of \(f,\) it is not sufficient to solve \(f''(x) = 0.\)
+    You must also determine whether \(f''(x)\) changes sign at that point.
+</p>
+
+<h4 id="second-deriv-test">The Second-Derivative Test</h4>
+<p>
+    Another application of second derivatives is the <span class="emph">Second-Derivative Test</span>, 
+    shown below. This test is an alternative to the First-Derivative Test (from 
+    Section <a href="/Valculus/calculus/3.2-Minimum-and-Maximum-Values.html">3.2</a>). 
+</p>
+
+<div class="box-title">SECOND-DERIVATIVE TEST</div>
+<div class="box">
+    Let \(f''(x)\) be continuous near \(x = c.\)
+    <ol class="list-alpha">
+        <li id="second-deriv-test-a">
+            If \(f'(c) = 0\) and \(f''(c) \gt 0,\)
+            then \(f\) has a relative minimum at \(x = c.\)
+        </li>
+        <li id="second-deriv-test-b">
+            If \(f'(c) = 0\) and \(f''(c) \lt 0,\)
+            then \(f\) has a relative maximum at \(x = c.\)
+        </li>
+        <li id="second-deriv-test-c">
+            If \(f'(c) = 0\) and \(f''(c) = 0\) 
+            or \(f''(c)\) does not exist, then 
+            the test is <span class="warning">inconclusive</span>.
+        </li>
+    </ol>
+</div>
+
+<aside class="box-remark">
+    The Second-Derivative Test has its limitations:
+    The test fails if \(f''(c)\) equals \(0\)
+    or does not exist.
+    In either case, we must instead use the First-Derivative Test.
+</aside>
+
+<p>
+    In part <a href="#second-deriv-test-a">(a)</a>,
+    because \(f''(c) \gt 0,\) \(f\) is concave up at \(c.\)
+    Accordingly, the graph of \(f\) must lie <i>above</i>
+    its tangent at \(c,\) so \(f\) has a relative minimum at \(c.\)
+    (See <a href="#second-deriv-test-min">Figure 9A</a>.) 
+    Conversely, in part <a href="#second-deriv-test-b">(b)</a>
+    \(f''(c) \lt 0,\) meaning \(f\) is concave down at \(c.\)
+    So the graph of \(f\) lies <i>below</i>
+    its tangent at \(c,\) meaning \(c\) must be a relative maximum of \(f,\)
+    as in <a href="#second-deriv-test-max">Figure 9B</a>.
+    Part <a href="#second-deriv-test-c">(c)</a> states that \(f\) 
+    can have either a relative minimum, relative maximum, or neither at
+    the critical number \(c\) if \(f''(c)\) equals \(0\) or does not exist.
+</p>
+<div class="figure-center">
+    <figure class="second-deriv-test-min" id="second-deriv-test-min">
+        <img src="../images/sectionImages/second-deriv-test-min.jpg" class="second-deriv-test-min" alt="Figure 9A">
+    </figure>
+    <figure class="second-deriv-test-max" id="second-deriv-test-max">
+        <img src="../images/sectionImages/second-deriv-test-max.jpg" class="second-deriv-test-max" alt="Figure 9B">
+    </figure>
+</div>
+<style>
+    .second-deriv-test-min::before{
+        content:'FIGURE 9A';
+    }
+
+    .second-deriv-test-max::before{
+        content:'FIGURE 9B';
+    }
+</style>
+
+<div class="example-title" id="ex-second-deriv-test"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find and classify the relative extrema of 
+        \(f(x) = 2x^3 - 6x^2 - 18x + 5\)
+        using the Second-Derivative Test.
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <figure class="second-deriv-test-ex" id="second-deriv-test-ex">
+        <img src="../images/sectionImages/second-deriv-test-ex.jpg" class="second-deriv-test-ex" alt="Figure 10">
+    </figure>
+    <style>
+        .second-deriv-test-ex::before{
+            content:'FIGURE 10';
+        }
+    </style>
+    We locate the critical numbers of \(f\) by letting \(f'(x) = 0.\)
+    Differentiating gives 
+    \[f'(x) = 6x^2 - 12x - 18 = 6(x - 3)(x + 1) \cma\]
+    whose zeros are \(x = -1\) and \(x = 3.\)
+    Thus, these are the critical numbers of \(f.\)
+    We will use the Second-Derivative Test to determine whether each critical number corresponds to a  
+    relative minimum, relative maximum, or neither of \(f.\)
+    The second derivative of \(f\) is 
+    \[f''(x) = 12x - 12 \pd \]
+    We have 
+    \[f''(-1) = -24 \and f''(3) = 24 \pd\]
+    Because \(f''(-1) \lt 0,\) \(f\)
+    has a relative <i>maximum</i> at \(x = -1.\)
+    Since \(f''(3) \gt 0,\) \(f\) has a 
+    relative <i>minimum</i> at \(x = 3.\)
+    (See <a href="#second-deriv-test-ex">Figure 10</a>.)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#first-deriv" class="summary-anchor">Connecting \(f'\) to \(f\)</a>
+        The function \(f',\) the first derivative of \(f,\)
+        signifies whether \(f\) is increasing or decreasing over an interval. 
+        <ol class="list-alpha">
+            <li id="first-deriv-a">
+                If \(f' \gt 0\) on an interval, then \(f\) is increasing on that interval.
+            </li>
+            <li id="first-deriv-b">
+                If \(f' \lt 0\) on an interval, then \(f\) is decreasing on that interval.
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#concavity" class="summary-anchor">Concavity: Connecting \(f''\) to \(f\)</a>
+        We use the second derivative \(f''\) to determine the concavity of the graph of \(f.\)
+        The graph of \(f\) is <span class="emph">concave up</span>
+        over an interval if the graph lies above its tangents on that interval.
+        Conversely, the graph is <span class="emph">concave down</span>
+        if the graph lies below its tangents. 
+        <ol class="list-alpha">
+            <li>
+                If \(f''(x) \gt 0\) for all \(x\) in an interval, then the graph of \(f\) 
+                is <span class="emph">concave up</span> on that interval.
+            </li>
+            <li>
+                If \(f''(x) \lt 0\) for all \(x\) in an interval, then the graph of \(f\) 
+                is <span class="emph">concave down</span> on that interval.
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        The function \(f\) has an <span class="emph">inflection point</span> at 
+        \(x = a\) if the graph of \(f\) switches concavity at \(x = a.\)
+    </p>
+    <p>
+        <a href="#second-deriv-test" class="summary-anchor">Second-Derivative Test</a>
+        The <span class="emph">Second-Derivative Test</span> enables us to classify 
+        critical points of \(f\) as relative minima or relative maxima. 
+        <ol class="list-alpha">
+            <li id="second-deriv-test-a">
+                If \(f'(c) = 0\) and \(f''(c) \gt 0,\)
+                then \(f\) has a relative minimum at \(x = c.\)
+            </li>
+            <li id="second-deriv-test-b">
+                If \(f'(c) = 0\) and \(f''(c) \lt 0,\)
+                then \(f\) has a relative maximum at \(x = c.\)
+            </li>
+            <li id="second-deriv-test-c">
+                If \(f'(c) = 0\) and \(f''(c) = 0\) or \(f''(c)\) does not exist, then 
+                the test is <span class="warning">inconclusive</span>.
+            </li>
+        </ol>
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

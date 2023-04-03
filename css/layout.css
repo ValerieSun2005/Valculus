@@ -81,6 +81,47 @@ aside p{
     text-indent: 15%;
 }
 
+.figure-center{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 12%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+.figure-center figure{
+    margin-left: 2%;
+    margin-right: 2%;
+    position: initial;
+}
+
+.figure-center figure img{
+    position: initial;
+    /* margin-left: initial; */
+}
+
+@media screen and (max-width: 800px) {
+
+    .figure-center{
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    /* .figure-center figure{
+        width: 100%;
+    } */
+
+    /* .figure-center figure image{
+        width: 100%;
+    } */
+}
+
+.p-no-indent{
+    text-indent: 0%;
+}
+
 aside::before{
     font-variant: small-caps;
     /* text-decoration: underline; */
@@ -617,12 +658,15 @@ ol li{
         margin-left: auto;
     }
     
-    main figure, aside{
-        width: 100%;
-        margin-left: 0;
+    main figure, aside, .figure-center figure{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
         left: 0; 
         display: block;
         padding-top: 4%;
+        margin-top: 1%;
+        margin-bottom: 4%;
     }
 
     main img, main figure video, aside{
@@ -643,7 +687,7 @@ ol li{
         display: block;
         width: 100%;
         left: 0%;
-        margin-top: 12%;
+        margin-top: 1%;
         position: relative;
     }
 
