@@ -88,6 +88,7 @@ window.MathJax = {
             halfLife: "\\mathcal{t_{\\slashFrac{1}{2}}}",
             triplingTime: "\\mathcal{t_3}",
             chem: ["\\text{}", 1],
+            avg: ["#1_{\\text{avg}}", 1],
         }
     },
 };

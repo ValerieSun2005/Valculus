@@ -52,7 +52,574 @@
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
       <!--[[[crefId.Areas-Between-Curves]]]--> 
+<p>
+    In Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>, 
+    we calculated areas of regions bounded between a function and the \(x\)-axis.
+    But we now compute areas of regions bounded between two or more functions. 
+    In doing so, we discuss the following:
+    <ul>
+        <li>
+            <a class="page-anchor" href="#areas-x">Areas with \(x\)</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#areas-y">Areas with \(y\)</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#tips">Problem-Solving Tips</a>
+        </li>
+    </ul>
+</p>
 
+<h4 id="areas-x">Areas with \(x\)</h4>
+
+<figure class="areas-between-curves-x" id="areas-between-curves-x">
+    <img src="../images/sectionImages/areas-between-curves-x.jpg" alt="Figure 1">
+</figure>
+<style>
+    .areas-between-curves-x::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    In <a href="#areas-between-curves-x">Figure 1</a>, region \(R\) 
+    is bounded between two continuous functions \(f(x)\) and \(g(x)\) 
+    and between the lines \(x = a\) and \(x = b.\)
+    We proceed by demanding that \(f(x) \geq g(x)\) for all \(x\) in \([a, b].\) 
+    To find the area, we construct a Riemann sum in which we cut \(R\) into \(n\)
+    rectangles of equal width \(\Delta x.\)
+    Each rectangle's height is the <i>difference</i> between \(f(x_i^*)\) and \(g(x_i^*).\)
+    The height \(f(x)\) is bigger than the height \(g(x),\)
+    so the difference \(f - g\) is a positive quantity, as we expect.
+    (See <a href="#areas-between-curves-x-rectangles">Figure 2A</a>.)
+</p>
+
+<div class="figure-center">
+    <figure class="areas-between-curves-x-rect" id="areas-between-curves-x-rect">
+        <img src="../images/sectionImages/areas-between-curves-x-rect.jpg" class="areas-between-curves-x-rect" alt="Figure 2A">
+    </figure>
+    <figure class="areas-between-curves-x-rectangles" id="areas-between-curves-x-rectangles">
+        <img src="../images/sectionImages/areas-between-curves-x-rectangles.jpg" class="areas-between-curves-x-rectangles" alt="Figure 2B">
+    </figure>
+</div>
+
+<style>
+    .areas-between-curves-x-rect::before{
+        content:'FIGURE 2A';
+    }
+
+    .areas-between-curves-x-rectangles::before{
+        content:'FIGURE 2B';
+    }
+</style>
+
+<aside class="box-remark">
+    It is irrelevant whether we use a left-hand, midpoint, or right-hand Riemann sum.
+    As \(n \to \infty,\)
+    the summation approaches \(A.\)  
+</aside>
+<p>
+    As in <a href="#areas-between-curves-x-rectangles">Figure 2B</a>, 
+    we wish to sum up \(n\) of these rectangles to approximate the area \(A.\) 
+    If \(n \to \infty,\) then the rectangles become thinner and therefore better approximate \(A.\)
+    Our Riemann sum is therefore
+    \[A = \lim_{n \to \infty} \sum_{i = 1}^n [f(x_i^*) - g(x_i^*)] \, \Delta x \pd\]
+    This limit is the definite integral of \(f(x) - g(x),\) so we have 
+    \begin{equation} 
+    A = \int_a^b f(x) - g(x) \di x \pd \label{eq:area-x}
+    \end{equation}
+</p>
+
+<figure class="areas-between-curves-special-case" id="areas-between-curves-special-case">
+    <img src="../images/sectionImages/areas-between-curves-special-case.jpg" alt="Figure 1">
+</figure>
+<style>
+    .areas-between-curves-special-case::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    In the special case where \(f\) and \(g\) are both positive, 
+    \(\eqref{eq:area-x}\) asserts that the area between the graphs is the 
+    area under \(f\) minus the area under \(g.\)
+    That is, 
+    \[
+    \ba 
+    A &= [\textrm{area under} \; y = f(x)] - [\textrm{area under} \; y = g(x)] \nl 
+    &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \nl 
+    &= \int_a^b f(x) - g(x) \di x \pd 
+    \ea 
+    \]
+    (See <a href="#areas-between-curves-special-case">Figure 3</a>;
+    the pink area under the graph of \(g\) is subtracted from the total orange area under the graph of \(f.\))
+    It is easy to note \(\eqref{eq:area-x}\) as integrating the top function 
+    minus the bottom function, or "top minus bottom."
+    This idea enables us to find any area over an interval when one function is always 
+    greater than another.
+    We are interested in area as a <i>positive</i>, geometric quantity.
+</p>
+
+<div class="box-title">AREAS WITH \(x\)</div>
+<div class="box">
+    If \(f\) and \(g\) are continuous functions with \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) 
+    then the area bounded by \(y = f(x),\) \(y = g(x),\) the line \(x = a,\)
+    and the line \(x = b\) is 
+    \[A = \int_a^b f(x) - g(x) \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
+</div>
+
+<p>
+    When we solve problems, we need to visualize the situation.
+    Thus, <span class="good">always</span> draw a sketch of the bounded area in question.
+    Before you integrate, ensure that in the bounded area one function is greater than the other.
+</p>
+
+<div class="example-title" id="ex-e^x-1"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area bounded by the curve \(y = e^x,\)
+        the \(y\)-axis, 
+        and the lines \(y = 1\) and \(x = 2.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="areas-between-curves-exp-1" id="areas-between-curves-exp-1">
+        <img src="../images/sectionImages/areas-between-curves-exp-1.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .areas-between-curves-exp-1::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    It is imperative to sketch the bounded area (<a href="#areas-between-curves-exp-1">Figure 4</a>).
+    For \(0 \leq x \leq 2,\) the graph of \(y = e^x\) is above the graph of \(y = 1.\)
+    The bounded region is between the \(y\)-axis (or \(x = 0\)) and \(x = 2,\) 
+    so these are the integral bounds. 
+    Thus, we use \(\eqref{eq:area-x},\)
+    integrating the difference \(e^x - 1,\) to get 
+    \[
+    \ba 
+    A &= \int_0^2 e^x - 1 \di x \nl 
+    &= (e^x - x) \intEval_0^2 \nl 
+    &= (e^2 - 2) - (e^0 - 0) \nl 
+    &= \boxed{e^2 - 3} \approx 4.389 \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-x-sqrt"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area bounded by the graphs of \(y = x\)
+        and \(y = \sqrt x\) in the first quadrant.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="areas-between-curves-ex-x-sqrt" id="areas-between-curves-ex-x-sqrt">
+        <img src="../images/sectionImages/areas-between-curves-ex-x-sqrt.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .areas-between-curves-ex-x-sqrt::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    We need to determine the points of intersection; 
+    their \(x\)-coordinates are the bounds for our integral. 
+    We do so by equating the two functions:
+    \[x = \sqrt x \implies x = 0 \cma x = 1 \pd\]
+    The graph of \(y = \sqrt x\) is above the graph of \(y = x\) over \(0 \leq x \leq 1,\)
+    as in <a href="#areas-between-curves-ex-x-sqrt">Figure 5</a>.
+    So we use \(\eqref{eq:area-x},\) subtracting the lower function from the upper function: 
+    \[
+    \ba 
+    A &= \int_0^1 \sqrt x - x \di x \nl 
+    &= \par{\tfrac{2}{3} x^{3/2} - \tfrac{1}{2} x^2} \intEval_0^1 \nl 
+    &= \par{\tfrac{2}{3} - \tfrac{1}{2}} - 0 \nl 
+    &= \boxed{\tfrac{1}{6}} 
+    \ea 
+    \]
+</div>
+
+<p>
+    To use \(\eqref{eq:area-x},\)
+    we need \(f(x) \geq g(x)\) for all \(x\) in \([a, b].\)
+    But if \(g(x) \geq f(x)\) for some \(x\) in this interval,
+    then we need the absolute value of the difference: 
+    \[A = \int_a^b \abs{f(x) - g(x)} \di x \pd\]
+    We evaluate this integral by splitting the region \(R\) into 
+    subregions; in each, one function is greater than the other. 
+    Summing the areas of these subregions ensures that the total area \(A\) is a positive quantity.
+</p>
+
+<div class="example-title" id="ex-x-x^2"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="areas-between-curves-cos-sin" id="areas-between-curves-cos-sin">
+            <img src="../images/sectionImages/areas-between-curves-cos-sin.jpg" alt="Figure 6">
+        </figure>
+        <style>
+            .areas-between-curves-cos-sin::before{
+                content:'FIGURE 6';
+            }
+        </style>
+        In <a href="#areas-between-curves-cos-sin">Figure 6</a>,
+        calculate the shaded area bounded by the graphs of \(y = \sin x\) and \(y = \cos x.\)
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <aside class="box-caution">
+        Because \(\int_{\pi/4}^{\pi/2} \cos x - \sin x \di x\) is negative,
+        using \(A = \int_{0}^{\pi/2} \cos x - \sin x \di x\)
+        would give \(0.\)
+        This is the <i>difference</i>, not the sum, of the two areas!
+    </aside>
+    Because \(\cos x \geq \sin x\) for \(0 \leq x \leq \pi/4\)
+    but \(\sin x \geq \cos x\) for \(\pi/4 \leq x \leq \pi/2,\)
+    the boundaries of the region do not stay the same.
+    We therefore split the region at \(x = \pi/4\)
+    and write two integrals, using \(\eqref{eq:area-x}\) for each.
+    The left region's area is 
+    \[
+    \ba 
+    A_1 &= \int_0^{\pi/4} \cos x - \sin x \di x \nl 
+    &= (\sin x + \cos x) \intEval_0^{\pi/4} \nl 
+    &= \par{\sin \tfrac{\pi}{4} + \cos \tfrac{\pi}{4}} - (\sin 0 + \cos 0) \nl 
+    &= \sqrt{2} - 1 \pd 
+    \ea 
+    \]
+    The area of the right region is 
+    \[
+    \ba 
+    A_2 &= \int_{\pi/4}^{\pi/2} \sin x - \cos x \di x \nl 
+    &= (-\cos x - \sin x) \intEval_{\pi/4}^{\pi/2} \nl 
+    &= \par{-\cos \tfrac{\pi}{2} - \sin \tfrac{\pi}{4}} - \par{-\cos \tfrac{\pi}{2} - \sin \tfrac{\pi}{4}} \nl 
+    &= \sqrt{2} - 1 \pd 
+    \ea 
+    \]
+    So the total area is 
+    \[A = A_1 + A_2 = \boxed{2 \sqrt{2} - 2}\]
+</div>
+
+<h4 id="areas-y">Areas with \(y\)</h4>
+
+<figure class="areas-between-curves-y" id="areas-between-curves-y">
+    <img src="../images/sectionImages/areas-between-curves-y.jpg" alt="Figure 7">
+</figure>
+<style>
+    .areas-between-curves-y::before{
+        content:'FIGURE 7';
+    }
+</style>
+
+<p>
+    We may wish to find areas bounded by functions of \(y.\)
+    In <a href="#areas-between-curves-y">Figure 7</a>, region \(S\) is bounded by the functions 
+    \(x = f(y)\) and \(x = g(y)\) as well as by the horizontal lines \(y = c\) and \(y = d.\)
+    To compute this area, we arrange Riemann sums in which the rectangles are <i>horizontal</i>;
+    <a href="#areas-between-curves-y-rect">Figure 8A</a>
+    shows a typical rectangle in this scenario.
+    The rectangle's area is the <i>height</i> \(\Delta y\) 
+    multiplied by the <i>length</i> \(f(y_i^*) - g(y_i^*).\)
+    Note that since the graph of \(f\) is to the right of \(g,\)
+    \(x = f(y)\) takes on greater values of \(x\) than does \(x = g(y).\)
+    Accordingly, the difference \(f - g\) is a positive quantity.
+</p>
+
+<div class="figure-center">
+    <figure class="areas-between-curves-y-rect" id="areas-between-curves-y-rect">
+        <img src="../images/sectionImages/areas-between-curves-y-rect.jpg" class="areas-between-curves-y-rect" alt="Figure 8A">
+    </figure>
+    <figure class="areas-between-curves-y-rectangles" id="areas-between-curves-y-rectangles">
+        <img src="../images/sectionImages/areas-between-curves-y-rectangles.jpg" class="areas-between-curves-y-rectangles" alt="Figure 8B">
+    </figure>
+</div>
+
+<style>
+    .areas-between-curves-y-rect::before{
+        content:'FIGURE 8A';
+    }
+
+    .areas-between-curves-y-rectangles::before{
+        content:'FIGURE 8B';
+    }
+</style>
+
+<p>
+    The Riemann sum for infinitely many rectangles,
+    if \(f(y) \geq g(y)\) for \(c \leq y \leq d,\) is 
+    \[A = \lim_{n \to \infty} \sum_{i = 1}^n [f(y_i^*) - g(y_i^*)] \, \Delta y \pd\]
+    (See <a href="#areas-between-curves-y-rectangles">Figure 8B</a>.)
+    This limit is the definite integral 
+    \begin{equation} 
+    A = \int_c^d f(y) - g(y) \di y \pd \label{eq:area-y}
+    \end{equation}
+    When we integrate a region with respect to \(y,\) we use "right minus left"
+    instead of "top minus bottom," as we do with <a href="#areas-x" class="page-anchor">Areas with \(x\)</a>.
+    Integrating horizontally may be unfamiliar to you.
+    If so, you may find it helpful to rotate the graph counterclockwise such that 
+    the horizontal cuts become rotated, vertical strips.
+    Doing so shows a parallel between heights in <a href="#areas-x" class="page-anchor">Areas with \(x\)</a>
+    and widths in areas with \(y.\)
+</p>
+
+<div class="box-title">AREAS WITH \(y\)</div>
+<div class="box">
+    If \(f\) and \(g\) are continuous functions with \(f(y) \geq g(y)\) for \(c \leq y \leq d,\) 
+    then the area bounded by \(x = f(y),\) \(x = g(y),\) the line \(y = c,\)
+    and the line \(y = d\) is 
+    \[A = \int_c^d f(y) - g(y) \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
+</div>
+
+<div class="example-title" id="ex-y-1-y^2"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area bounded by the graphs of \(x = 1 - y^2\)
+        and \(x = (1 - y)/2.\)
+        Note that the two graphs intersect when \(y = -1/2\) 
+        and \(y = 1.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="areas-between-curves-y-ex" id="areas-between-curves-y-ex">
+        <img src="../images/sectionImages/areas-between-curves-y-ex.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .areas-between-curves-y-ex::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    After sketching the bounded area (<a href="#areas-between-curves-y-ex">Figure 9</a>),
+    it's apparent that slicing the region vertically (that is, integrating with respect to \(x\)) would be very difficult.
+    But cutting the region horizontally (integrating with respect to \(y\)) 
+    is convenient because 
+    the function \(1 - y^2\) is to the right of the line \((1 - y)/2\)
+    for all \(y\) in our region.
+    This means the boundaries are the same functions, so we can just write one integral.
+    We are given the intersection points, so we apply \(\eqref{eq:area-y}\) to obtain 
+    \[
+    \ba 
+    A &= \int_{-1/2}^1 (1 - y^2) - \tfrac{1}{2} (1 - y) \di y \nl 
+    &= \par{\tfrac{1}{2} y + \tfrac{1}{4} y^2 - \tfrac{1}{3} y^3} \intEval_{-1/2}^1 \nl 
+    &= \parbr{\tfrac{1}{2} + \tfrac{1}{4} - \tfrac{1}{3}} 
+    - \parbr{\tfrac{1}{2} \par{-\tfrac{1}{2}} + \tfrac{1}{4} \par{-\tfrac{1}{2}}^2 - \tfrac{1}{3} \par{-\tfrac{1}{2}}^3} \nl 
+    &= \boxed{\tfrac{9}{16}}
+    \ea 
+    \]
+</div>
+
+<p>
+    We now present problem-solving guidelines for calculating the area between curves. 
+    Keep in mind that in many problems, integration with either \(x\) or \(y\) is possible.
+    In these cases, using either yields the same area. 
+    In the following examples,
+    you decide how to execute the integration. 
+</p>
+
+<div class="steps-title" id="tips">CALCULATING AREAS BETWEEN CURVES</div>
+<div class="steps">
+    <ol class="list-num">
+        <li>
+            Sketch the graphs and the region they enclose.
+        </li>
+        <li>
+            Identify points at which the boundary equations shift. 
+            Split the region at these points. 
+            Commit to integrating with respect to \(x\) or \(y\)
+            and express all equations in terms of that variable. 
+        </li>
+        <li>
+            Find the intersection points of the graphs.
+        </li>
+
+        <li>
+            Use \(\eqref{eq:area-x}\) for integration with \(x\)
+            and \(\eqref{eq:area-y}\) for integration with \(y.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-hybrid"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area bounded by the curve \(x = 5 - y^2\) 
+        and the lines \(y = 1 + x\) and \(y = 1.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="areas-between-curves-hybrid" id="areas-between-curves-hybrid">
+        <img src="../images/sectionImages/areas-between-curves-hybrid.jpg" alt="Figure 10">
+    </figure>
+    <style>
+        .areas-between-curves-hybrid::before{
+            content:'FIGURE 10';
+        }
+    </style>
+    <p>
+        To sketch the curves, we note that \(x = 5 - y^2\) has a vertex at \((5, 0).\)
+        As \(y\) increases, the graph arches through the first quadrant 
+        and hits the \(y\)-axis sometime after \(y = 2.\)
+        To find when \(y = 1 + x\) intersects \(x = 5 - y^2,\)
+        we express both functions in terms of one common variable.
+        For example, we rearrange the former equation to get \(x = y - 1;\) then we find 
+        \[
+        \ba 
+        y - 1 &= 5 - y^2 \nl 
+        y^2 + y - 6 &= 0 \nl 
+        (y + 3)(y - 2) &= 0 \nl 
+        \implies y &= -3 \cma y = 2 \pd
+        \ea 
+        \] 
+        Thus, in the first quadrant the line \(y = 1 + x\) crosses the parabola at \((1, 2).\)
+        The line \(y = 1\) hits the parabola at the point \((4, 1).\)
+        We therefore obtain the sketch in <a href="#areas-between-curves-hybrid">Figure 10</a>.
+    </p>
+    <p>
+        <span class="label-emph">Integrating with \(y\)</span>
+        It is easier to integrate with \(y\)  
+        because for all \(y\) in the region, the function \(x = 5 - y^2\) is to the right of the line \(y = 1 + x.\)
+        This means that the boundaries of the region remain the same.
+        We therefore commit to integrating with \(y,\) so we must express all functions and bounds using \(y.\)
+        We write the latter equation as \(x = y - 1.\)
+        The region goes from \(y = 1\) to \(y = 2;\) thus, \(\eqrefer{eq:area-y}\) gives 
+        \[
+        \ba 
+        A &= \int_1^2 (5 - y^2) - (y - 1) \di y \nl 
+        &= \int_1^2 6 - y - y^2 \di y \nl 
+        &= \par{6y - \tfrac{1}{2} y^2 - \tfrac{1}{3} y^3} \intEval_1^2 \nl 
+        &= \parbr{6(2) - \tfrac{1}{2}(2)^2 - \tfrac{1}{3}(2)^3} 
+        - \parbr{6(1) - \tfrac{1}{2}(1)^2 - \tfrac{1}{3}(1)^3} \nl 
+        &= \boxed{\tfrac{13}{6}}
+        \ea 
+        \]
+    </p>
+
+    <p>
+        <span class="label-emph">Integrating with \(x\)</span>
+        For \(0 \leq x \leq 1,\) the region's upper boundary is \(y = 1 + x\) 
+        and its lower boundary is \(y = 1.\)
+        But for \(1 \leq x \leq 4,\) the upper boundary changes to \(x = 5 - y^2.\)
+        Since these boundary functions are different, we must split the region at \(x = 1\)
+        and add the areas of each region.
+        Using \(\eqref{eq:area-x},\) the area of the left region is given by 
+        \[\int_0^1 (1 + x) - 1 \di x \pd\]
+        To find the area to the right of \(x = 1,\) 
+        we rewrite \(x = 5 - y^2\) as \(y = \sqrt{5 - x}.\)
+        We then have 
+        \[\int_1^4 \sqrt{5 - x} - 1 \di x \pd\]
+        So the total area is 
+        \[A = \int_0^1 (1 + x) - 1 \di x + \int_1^4 \sqrt{5 - x} - 1 \di x \pd\]
+        This integral setup also delivers the answer \(A = \boxed{13/6}.\)
+    </p>
+</div>
+
+<div class="example-title" id="ex-hybrid2"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area bounded by the parabola \(y = x^2,\)
+        the \(y\)-axis,  
+        and the lines \(y = 4\) and \(x = 2 - y.\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <figure class="areas-between-curves-hybrid2" id="areas-between-curves-hybrid2">
+        <img src="../images/sectionImages/areas-between-curves-hybrid2.jpg" alt="Figure 11">
+    </figure>
+    <style>
+        .areas-between-curves-hybrid2::before{
+            content:'FIGURE 11';
+        }
+    </style>
+    <p>
+        We obtain the sketch in <a href="#areas-between-curves-hybrid2">Figure 11</a>. 
+        The parabola intersects \(x = 2 - y\) at \((1, 1)\)
+        and crosses \(y = 4\) at \((2, 4).\) 
+        We now decide whether to cut the region vertically (integrating with \(x\))
+        or horizontally (integrating with \(y\)). 
+        In either case, we need to split the region
+        and express all equations in terms of the respective variable.
+    </p>
+    <p>
+        <span class="label-emph">Integrating with \(x\)</span>
+        For \(0 \leq x \leq 1,\) the upper boundary is \(y = 4\)
+        and the lower boundary is \(x = 2 - y.\)
+        Yet for \(1 \leq x \leq 2,\) the upper boundary is \(y = 4\)
+        but the lower boundary is \(y = x^2.\)
+        Thus, we divide the region at \(x = 1\)
+        and use \(\eqref{eq:area-x}\) to calculate the area of each subregion.
+        Our next goal is to express all equations in terms of \(x.\)
+        Solving for \(y\) in \(x = 2 - y\) gives \(y = 2 - x.\)
+        Our area is therefore the sum
+        \[A = \int_0^1 4 - (2 - x) \di x + \int_1^2 4 - x^2 \di x \pd\]
+    </p>
+    <p>
+        <span class="label-emph">Integrating with \(y\)</span>
+        If we integrate horizontally, then we need to be aware for any shifts in the region's boundaries. 
+        The shaded region for \(1 \leq y \leq 2\) is bounded right by \(y = x^2\) and left by \(x = 2 - y.\)
+        But for \(2 \leq y \leq 4,\) the right boundary is \(y = x^2\) and the left boundary changes to the line \(x = 0.\)
+        Thus, we split the region at \(y = 2\) and take the area of each subregion. 
+        Solving for \(x\) in \(y = x^2\) yields \(x = \sqrt y.\) 
+        Then using \(\eqref{eq:area-y}\) for each, we get 
+        \[A = \int_1^2 \sqrt y - (2 - y) \di y + \int_2^4 \sqrt y - 0 \di y \pd \]
+    </p>
+    <p>
+        Either integral setup supplies the answer of \(A = \boxed{25/6}.\)
+        Thus, identify your options when choosing to integrate. 
+        When integrating with either \(x\) or \(y\) is convenient, 
+        the moral of the story is to be creative and use the method with which you feel most comfortable.
+    </p>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#areas-x" class="summary-anchor">Areas with \(x\)</a>
+        If \(f\) and \(g\) are continuous functions with \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) 
+        then the area bounded by \(y = f(x),\) \(y = g(x),\) the line \(x = a,\)
+        and the line \(x = b\) is 
+        \[A = \int_a^b f(x) - g(x) \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
+        The geometric interpretation of this form is "top function minus bottom function."
+    </p>
+    <p>
+        <a href="#areas-y" class="summary-anchor">Areas with \(y\)</a>
+        If \(f\) and \(g\) are continuous functions with \(f(y) \geq g(y)\) for \(c \leq y \leq d,\) 
+        then the area bounded by \(x = f(y),\) \(x = g(y),\) the line \(y = c,\)
+        and the line \(y = d\) is 
+        \[A = \int_c^d f(y) - g(y) \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
+        In this form, we integrate "right function minus left function."
+    </p>
+    <p>
+        <a href="#tips" class="summary-anchor">Problem-Solving Tips</a>
+        <ol class="list-num">
+            <li>
+                Sketch the graphs and the region they enclose.
+            </li>
+            <li>
+                Identify points at which the boundary equations shift. 
+                Split the region at these points. 
+                Commit to integrating with respect to \(x\) or \(y\)
+                and express all equations in terms of that variable. 
+            </li>
+            <li>
+                Find the intersection points of the graphs.
+            </li>
+    
+            <li>
+                Use \(\eqref{eq:area-x}\) for integration with \(x\)
+                and \(\eqref{eq:area-y}\) for integration with \(y.\)
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        The key lesson is to be creative and execute integrations using the method 
+        with which you feel most comfortable. 
+    </p>
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">
