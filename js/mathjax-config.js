@@ -65,6 +65,7 @@ window.MathJax = {
             eqrefer: ["\\text{Equation } \\eqref{#1}", 1],
             deriv: ["\\, \\frac{\\dd #1}{\\dd #2} \\, ", 2],
             textDeriv: ["\\dd #1 / \\dd #2", 2],
+            textderiv: ["\\dd #1 / \\dd #2", 2],
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
             parbr: ["\\left [ #1 \\right ]", 1],

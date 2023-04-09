@@ -494,7 +494,7 @@ ol li{
 }
 
 .list-roman > li:before {
-    content: "(" counter(list, lower-roman) ") ";
+    content: counter(list, lower-roman) ". ";
     counter-increment: list;
 }
 

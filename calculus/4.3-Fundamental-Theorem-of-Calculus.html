@@ -52,7 +52,496 @@
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
       <!--[[[crefId.Fundamental-Theorem-of-Calculus]]]--> 
+<p>
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>
+    we discussed <i>antiderivatives</i>, 
+    and in Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a> 
+    we introduced <i>definite integrals</i> to calculate areas.
+    In this section, we connect both topics 
+    using the appropriately named <i>Fundamental Theorem of Calculus</i>, 
+    which links differential calculus to integral calculus. 
+    This section covers the following topics:
+    <ul>
+        <li>
+            <a href="#ftc1" class="page-anchor">Part I of the Fundamental Theorem of Calculus</a>
+        </li>
+        <li>
+            <a href="#ftc-1-chain-rule" class="page-anchor">Using the Chain Rule in Part I of the Fundamental Theorem of Calculus</a>
+        </li>
+        <li>
+            <a href="#ftc2" class="page-anchor">Part II of the Fundamental Theorem of Calculus</a>
+        </li>
+        <li>
+            <a href="#net-change-theorem" class="page-anchor">Net Change Theorem</a>
+        </li>
+    </ul>
+</p>
 
+<h4 id="ftc1">Part I of the Fundamental Theorem of Calculus</h4>
+<figure class="ftc-area" id="ftc-area">
+    <img src="../images/sectionImages/ftc-area.jpg" alt="Figure 1">
+</figure>
+<style>
+    .ftc-area::before{
+        content:'FIGURE 1';
+    }
+</style>
+<p>
+    Let \(f(t)\) be a continuous function over the interval \(a \leq t \leq b,\) and let 
+    \begin{equation} 
+    g(x) = \int_a^x f(t) \di t \pd \label{eq:g}
+    \end{equation}
+    Note that \(x\) is a specific value of \(t\)
+    and that \(g\) depends only on \(x.\) 
+    If \(f(t) \geq 0,\)
+    then we interpret \(g\) as a function of <i>area</i> under
+    the graph of \(y = f(t)\) from \(t = a\) to \(t = x.\)
+    The area \(g(x)\) changes with \(x\) because 
+    adjusting \(x\) fluctuates the size of the region enclosed by \(f.\) 
+    (See <a href="#ftc-area">Figure 1</a>:
+    Increasing \(x\) makes the region bigger, so \(g\) increases.
+    Conversely, decreasing \(x\) shrinks the region, so \(g\) decreases.)
+    If the enclosed region is below the \(t\)-axis, then the integral \(g(x) = \int_a^x f(t) \di t\)
+    is a negative quantity.
+    Note that if \(f\) is positive
+    (as in <a href="#ftc-area">Figure 1</a>), then \(f(x)\) is the height of the curve 
+    above the \(t\)-axis when \(t = x.\)
+    But if \(f\) is negative, then \(f(x)\) 
+    is the height of the curve <i>under</i> the \(t\)-axis.
+</p>
+<p>
+    Part I of the <b>Fundamental Theorem of Calculus</b> 
+    (which we abbreviate as <b>FTC I</b>) then asserts that 
+    \(g'(x) = f(x).\)
+    If \(f(t) \geq 0,\)
+    then FTC I asserts that the area \(g(x)\) 
+    <i>is increasing at a rate equal to the height</i> \(f(x).\)
+    This interpretation is nearly the same if \(f(t) \leq 0 \col\)
+    In this case, \(g\) is negative since the region enclosed by \(f\)
+    is under the \(t\)-axis.
+    So \(g\) is <i>decreasing at a rate equal to the magnitude of the height</i> \(f(x)\)
+    below the \(t\)-axis. 
+    From another perspective, FTC I states that \(g\) is an <i>antiderivative</i> of \(f.\)
+    (See Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>
+    to review antiderivatives.)
+    The theorem may be written equivalently in Leibniz notation as 
+    \begin{equation} 
+    \deriv{}{x} \int_a^x f(t) \di t = f(x) \pd \label{eq:ftc-I}
+    \end{equation}
+    In words, \(\eqref{eq:ftc-I}\) tells us that 
+    integrating a function \(f\) and then differentiating the result 
+    returns us the original function \(f.\)
+    Thus, <i>FTC I asserts that integration and differentiation are inverse operations</i>—connecting
+    rates of change to areas under curves.
+    In \(\eqref{eq:ftc-I},\) we use \(t\) as a "dummy variable"
+    because \(x\) is already used for the upper bound of the integral. 
+    Do not concern yourself with this distinction; the identity of \(f\) 
+    is the same regardless of whether we write \(f(t)\) or \(f(x).\)
+</p>
+
+<div class="box-title">FUNDAMENTAL THEOREM OF CALCULUS, PART I</div>
+<div class="box">
+    If \(f\) is continuous over \([a, b],\) 
+    then 
+    \begin{equation*} 
+    \deriv{}{x} \int_a^x f(t) \di t = f(x) \pd \tag*{\(\eqref{eq:ftc-I}\)}
+    \end{equation*}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(g(x) = \int_0^x \sqrt{t^3 + 1} \di t.\)
+        Calculate \(g'(2).\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    By FTC I, we differentiate \(g\) by replacing \(t\) in the integrand with \(x \col\)
+    \[g'(x) = \sqrt{x^3 + 1} \pd\]
+    Then 
+    \[g'(2) = \sqrt{2^3 + 1} = \boxed 3\]
+</div>
+
+<figure class="ftc-1-proof" id="ftc-1-proof">
+    <img src="../images/sectionImages/ftc-1-proof.jpg" alt="Figure 2">
+</figure>
+<style>
+    .ftc-1-proof::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let \(g(x) = \int_a^x f(t) \di t,\)
+    and let \(h \gt 0\) be a small number.  
+    In <a href="#ftc-1-proof">Figure 2</a>, 
+    the difference \(g(x + h) - g(x)\) 
+    is the pink region between \(t = x\) and \(t = x + h.\)
+    We approximate this region as a rectangle of width \(h\) and height \(f(x) \col\)
+    \[g(x + h) - g(x) \approx f(x) h \pd\]
+    As the width \(h\) becomes smaller, this region becomes closer to a rectangle.
+    Thus, the limiting value of \(f(x)\) as \(h \to 0\) is 
+    \[f(x) = \lim_{h \to 0} \frac{g(x + h) - g(x)}{h} \pd\]
+    But the right-hand side is the limit definition of \(g'(x).\)
+    We therefore have \(f(x) = g'(x).\)  
+    \[\qedproof\]
+</p>
+
+<h4 id="ftc-1-chain-rule">Using the Chain Rule in Part I of the Fundamental Theorem of Calculus</h4>
+<p>
+    We now discuss definite integrals of \(f(t)\)
+    in which the bounds are functions of \(x.\)
+    In each case, assume \(f\) is continuous between the bounds. 
+</p>
+
+<p>
+    Consider the derivative \(\textDeriv{}{x} \int_k^{u(x)} f(t) \di t,\)
+    where \(k\) is a constant.
+    We differentiate using the Chain Rule, treating the definite integral as a composite function 
+    in which \(u(x)\) is the inner function.
+    In the integrand we replace \(t\) with \(u(x),\)
+    but we then multiply by \(u'(x) \col\)
+    \begin{equation} 
+    \deriv{}{x} \int_k^{u(x)} f(t) \di t = f(u(x)) \, u'(x) \pd \label{eq:ftc-chain-u}
+    \end{equation}
+    Now consider 
+    \(\textDeriv{}{x} \int_{v(x)}^k f(t) \di t.\)
+    We rewrite the definite integral as \(-\int_k^{v(x)} f(t) \di t,\)
+    and by analogy to \(\eqref{eq:ftc-chain-u}\) we have 
+    \begin{equation} 
+    \deriv{}{x} \int_{v(x)}^k f(t) \di t = -f(v(x)) \, v'(x) \pd \label{eq:ftc-chain-v}
+    \end{equation}
+    The most general case is \(\textDeriv{}{x} \int_{v(x)}^{u(x)} f(t) \di t.\)
+    We split this integral at \(t = k,\) where \(v(x) \leq k \leq u(x).\)
+    Therefore, 
+    \[
+    \ba 
+    \deriv{}{x} \int_{v(x)}^{u(x)} f(t) \di t &= \deriv{}{x} \parbr{\int_{v(x)}^k f(t) \di t + \int_k^{u(x)} f(t) \di t} \nl 
+    &= \deriv{}{x} \int_{v(x)}^k f(t) \di t + \deriv{}{x} \int_k^{u(x)} f(t) \di t \pd
+    \ea 
+    \]
+    Then, by \(\eqref{eq:ftc-chain-u}\) and \(\eqref{eq:ftc-chain-v},\) we have
+    \begin{equation} 
+    \deriv{}{x} \int_{v(x)}^{u(x)} f(t) \di t = f(u(x)) \, u'(x) - f(v(x)) \, v'(x) \pd \label{eq:ftc-chain}
+    \end{equation}
+</p>
+
+<div class="box-title">FTC I WITH CHAIN RULE</div>
+<div class="box">
+    If \(f(t)\) is continuous, then 
+    \begin{equation*} 
+    \deriv{}{x} \int_{v(x)}^{u(x)} f(t) \di t = f(u(x)) \, u'(x) - f(v(x)) \, v'(x) \pd \tag*{\(\eqref{eq:ftc-chain}\)}
+    \end{equation*}
+</div>
+
+<p>
+    At first, \(\eqrefer{eq:ftc-chain}\) looks intimidating.
+    This equation is difficult to memorize; instead, become familiar with the following procedure:
+    First, replace \(t\) in the integrand with the upper function \(u(x)\)
+    and multiply the result by \(u'(x).\)
+    Then, replace \(t\) in the integrand with the lower function \(v(x)\) and multiply the result by \(v'(x).\)
+    Finally, subtract the second term from the first term.
+</p>
+<p>
+    
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following derivatives. 
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds \deriv{}{x} \int_0^{2x} \cos t \di t\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \int_{3x^2}^4 \frac{2}{t^2} \di t\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \int_{\sin x}^{1/x} t^2 \di t\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <ol class="list-roman">
+        <li>
+            When we take the derivative of a definite integral whose 
+            upper bound is a function of \(x,\)
+            we replace \(t\) in the integrand with that function and then multiply the result by the derivative of the function.
+            See \(\eqrefer{eq:ftc-chain-u}.\)
+            In this case, the upper bound is \(2x\) and the integrand is \(\cos t.\)
+            So we replace \(t\) with \(2x\) and multiply by \(\textDeriv{}{x} \, [2x] = 2.\)
+            The derivative is therefore
+            \[(\cos 2x) \cdot 2 = \boxed{2 \cos 2x}\]
+        </li>
+        <hr>
+        <li>
+            To differentiate, we replace \(t\) in the integrand with the bottom function \(3x^2\)
+            multiplied by \(\textDeriv{}{x} \, [3x^2] = 6x,\) 
+            and this entire quantity is negative;
+            see \(\eqrefer{eq:ftc-chain-v}.\)
+            We therefore have 
+            \[-\frac{2}{(3x^2)^2} \cdot 6x = \boxed{-\frac{4}{3x^3}}\]
+        </li>
+        <hr>
+        <li>
+            Following \(\eqrefer{eq:ftc-chain},\)
+            we use the following steps to differentiate:
+            First, in the integrand 
+            \(t^2\) we replace \(t\) with the upper function \(1/x\)
+            and then multiply by \(\textderiv{}{x} \, [1/x] = -1/x^2.\)
+            Doing so gives 
+            \[\par{\frac{1}{x}}^2 \cdot \par{-\frac{1}{x^2}} = -\frac{1}{x^4}\]
+            Then, in \(t^2\) we replace \(t\) with the bottom function \(\sin x\)
+            and then multiply by \(\textderiv{}{x} \, [\sin x] = \cos x.\)
+            We have 
+            \[(\sin x)^2 \cdot \cos x = \sin^2 x \cos x \pd\]
+            Our final answer is the former term minus the latter term:
+            \[\parbr{\par{\frac{1}{x}}^2 \cdot -\frac{1}{x^2}} - \parbr{(\sin x)^2 \cdot \cos x} 
+            = \boxed{-\frac{1}{x^4} - \sin^2 x \cos x}\]
+        </li>
+    </ol>
+</div>
+
+<h4 id="ftc2">Part II of the Fundamental Theorem of Calculus</h4>
+<p>
+    In Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>, 
+    we calculated definite integrals using limits of Riemann sums.
+    But what is the relationship between antidifferentiation and areas under curves?
+    <span class="emph">Part II of the Fundamental Theorem of Calculus</span>
+    (<span class="emph">FTC II</span>) relates the area under a graph to the difference in an antiderivative.
+    If \(f\) is continuous over \([a, b]\) and \(F\) is an antiderivative of \(f,\)
+    then 
+    \begin{equation} 
+    \int_a^b f(x) \di x = F(b) - F(a) \pd \label{eq:ftc-ii}
+    \end{equation}
+    Using \(\eqref{eq:ftc-ii}\) to calculate a definite integral is <i>much</i> easier 
+    than taking the limit of a Riemann sum.  
+    It is very remarkable that \(\int_a^b f(x) \di x\) 
+    is equivalent to the difference \(F(b) - F(a),\)
+    which we may write as 
+    \(F(x) \Big|_a^b.\)
+    The only limitation of \(\eqref{eq:ftc-ii}\) exists if 
+    it's difficult to determine an antiderivative of \(f.\)
+    Hence, we sometimes define functions as a definite integral [such as in \(\eqref{eq:g}\)] if we cannot compute an antiderivative 
+    in terms of elementary functions (for example, polynomials, trigonometric functions, exponential functions, logarithmic functions).
+</p>
+
+<div class="box-title">FUNDAMENTAL THEOREM OF CALCULUS, PART II</div>
+<div class="box">
+    If \(f\) is continuous over \([a, b]\) and \(F\) is an antiderivative of \(f,\)
+    then 
+    \begin{equation*} 
+    \int_a^b f(x) \di x = F(b) - F(a) \pd \tag*{\(\eqref{eq:ftc-ii}\)}
+    \end{equation*}
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let \(g(x) = \int_a^x f(t) \di t,\)
+    where \(f\) is continuous over \([a, b].\)
+    Let \(F\) be an antiderivative of \(f.\)
+    We know, from FTC I, 
+    that \(g'(x) = f(x)\) and so \(g\) is another antiderivative of \(f.\)
+    Since antiderivatives all differ by a constant,
+    we have \(g(x) = F(x) + C,\)
+    where \(C\) is a constant.
+    Note that 
+    \[g(a) = \int_a^a f(t) \di t = 0 \and g(b) = \int_a^b f(t) \di t \pd\]
+    Thus, 
+    \begin{align} 
+    \int_a^b f(t) \di t &= g(b) - g(a) \label{eq:proof-ftc-2} \nl 
+    &= [F(b) + C] - [F(a) + C] \nonumber \nl 
+    &= F(b) - F(a) \nonumber \cma 
+    \end{align}
+    where the constant term \(C\) cancels out. 
+    We can write the left-hand side of \(\eqref{eq:proof-ftc-2}\) as \(\int_a^b f(x) \di x\)
+    to match the form of \(\eqref{eq:ftc-ii},\)
+    the equation we have proved.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate \(\int_0^3 x^2 \di x.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    By FTC II, we first determine an antiderivative of the integrand \(x^2.\)
+    (See Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>
+    to review finding antiderivatives.)
+    The <b>Reverse Power Rule</b> states that an antiderivative of \(x^2\) is \(x^3/3.\)
+    Thus, \(\eqrefer{eq:ftc-ii}\) gives the integral to be
+    \[\frac{x^3}{3} \intEval_0^3 = \frac{3^3}{3} - \frac{0^3}{3} = \boxed 9\]
+    We are finished—the procedure is that simple!
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate \(\int_1^3 (1/x) \di x.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    An antiderivative of the integrand \(1/x\) is \(\ln \abs x.\)
+    So FTC II, as in \(\eqref{eq:ftc-ii},\) asserts that the integral is 
+    \[\ln \abs{x} \intEval_1^3 = \ln 3 - \ln 1 = \boxed{\ln 3}\]
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area under the graph of \(y = \cos x\)
+        from \(x = 0\) to \(x = \pi/2.\) 
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="area-cosx" id="area-cosx">
+        <img src="../images/sectionImages/area-cosx.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .area-cosx::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    The enclosed region is shown by <a href="#area-cosx">Figure 3</a>. 
+    The integral expression for this area is 
+    \[\int_0^{\pi/2} \cos x \di x \pd\]
+    An antiderivative of \(\cos x\) is \(\sin x.\)
+    Thus, \(\eqrefer{eq:ftc-ii}\) states that the integral is 
+    \[\sin x \intEval_0^{\pi/2} = \sin \tfrac{\pi}{2} - \sin 0 = \boxed 1\]
+    This area is \(1.\)
+</div>
+
+<p>
+    When you first use FTC II, you're likely to commit sign errors. 
+    To rectify these mistakes, keep practicing. 
+    As you become familiar with the procedure of substituting the bounds, 
+    you'll begin to drop fewer negative signs and become more fluent with integration—the skill 
+    you need for the next sections of calculus.
+</p>
+<p>
+    Be careful <span class="warning">not to write</span> \(+ C\) 
+    when evaluating a definite integral. 
+    Only add this arbitrary constant when taking an <i>indefinite</i> integral.
+</p>
+
+<h4 id="net-change-theorem">Net Change Theorem</h4>
+<p>
+    Consider \(f',\) the derivative of \(f.\) 
+    \(\eqrefer{eq:ftc-ii}\) can be written as  
+    \[\int_a^b f'(x) \di x = f(b) - f(a) \pd\]
+    Adding \(f(a)\) to both sides gives 
+    \begin{equation} 
+    f(b) = f(a) + \int_a^b f'(x) \di x \pd \label{eq:net-change}
+    \end{equation}
+    \(\eqrefer{eq:net-change}\) is called the <span class="emph">Net Change Theorem</span>. 
+    It is very intuitive if we view \(f(a)\) as the initial quantity and \(f(b)\)
+    as the final quantity.
+    Then \(\int_a^b f'(x) \di x\) is the net change in \(f\)—the 
+    accumulation of its rate, \(f'.\)
+</p>
+
+<div class="box-title">NET CHANGE THEOREM</div>
+<div class="box">
+    \begin{equation*} 
+    f(b) = f(a) + \int_a^b f'(x) \di x \pd \tag*{\(\eqref{eq:net-change}\)}
+    \end{equation*}
+</div>
+
+<div class="example-title" id="particle-x-axis"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        A particle starts moving along the \(x\)-axis at \(x = 2.\)
+        Its velocity as a function of time \(t\) is 
+        \(v(t) = 3t + 2.\)
+        Find the particle's position when \(t = 4.\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    By the Net Change Theorem, 
+    \[x(4) = x(0) + \int_0^4 v(t) \di t \pd\]
+    In words, this form asserts that the particle's final position \(x(4)\)
+    is the sum of its initial position \(x(0)\) and the accumulation \(\int_0^4 v(t) \di t.\)
+    By FTC II, the accumulation is 
+    \[
+    \ba 
+    \int_0^4 3t + 2 \di t &= \par{\frac{3t^2}{2} + 2t} \intEval_0^4 \nl 
+    &= \parbr{\frac{3(4)^2}{2} + 2(4)} - 0 \nl 
+    &= 32 \pd
+    \ea 
+    \]
+    Hence, 
+    \[x(4) = 2 + 32 = \boxed{34}\]
+</div>
+
+<p>
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>
+    we tackled particle motion problems by using antidifferentiation, substituting an initial condition,
+    and solving for a constant of integration. 
+    But using the Net Change Theorem, as in <a href="#particle-x-axis">Example 6</a>, 
+    yields the same result, often through an easier process—another serendipity in the realm of calculus,
+    unexpected by the student yet crafted by the FTC.
+</p>
+
+<div class="section-summary">
+    <p>
+        <a class="summary-anchor" href="#ftc1">Part I of the Fundamental Theorem of Calculus</a>
+        If \(f\) is continuous over \([a, b],\) then 
+        <span class="emph">Part I of the Fundamental Theorem of Calculus</span>
+        (<span class="emph">FTC I</span>) states that 
+        \begin{equation*} 
+        \deriv{}{x} \int_a^x f(t) \di t = f(x) \pd \tag*{\(\eqref{eq:ftc-I}\)}
+        \end{equation*}
+        This equation asserts that if we integrate \(f\) and then differentiate the result,
+        then we arrive back to \(f.\)
+        FTC I tells us that integration and differentiation are inverse operations,
+        thus linking rates of change to areas under curves—connecting 
+        differential calculus to integral calculus.
+    </p>
+    <p>
+        <a class="summary-anchor" href="#ftc-1-chain-rule">Using the Chain Rule in Part I of the Fundamental Theorem of Calculus</a>
+        If \(f(t)\) is continuous, then 
+        \begin{equation*} 
+        \deriv{}{x} \int_{v(x)}^{u(x)} f(t) \di t = f(u(x)) \, u'(x) - f(v(x)) \, v'(x) \pd \tag*{\(\eqref{eq:ftc-chain}\)}
+        \end{equation*}
+        Because this equation is difficult to memorize, familiarize yourself with the following procedure:
+        First, replace \(t\) in the integrand with the upper function \(u(x)\)
+        and multiply the result by \(u'(x).\)
+        Then, replace \(t\) in the integrand with the lower function \(v(x)\) and multiply the result by \(v'(x).\)
+        Finally, subtract the second term from the first term.
+    </p>
+    <p>
+        <a class="summary-anchor" href="#ftc2">Part II of the Fundamental Theorem of Calculus</a>
+        If \(f\) is continuous over \([a, b]\) and \(F\) is an antiderivative of \(f,\)
+        <span class="emph">Part II of the Fundamental Theorem of Calculus</span>
+        (<span class="emph">FTC II</span>) states that 
+        \begin{equation*} 
+        \int_a^b f(x) \di x = F(b) - F(a) \pd \tag*{\(\eqref{eq:ftc-ii}\)}
+        \end{equation*}
+        It's much easier to use this equation to evaluate a definite integral than to 
+        take the limit of a Riemann sum. 
+    </p>
+    <p>
+        <a class="summary-anchor" href="#net-change-theorem">Net Change Theorem</a>
+        The 
+        <span class="emph">Net Change Theorem</span> gives 
+        \begin{equation*} 
+        f(b) = f(a) + \int_a^b f'(x) \di x \pd \tag*{\(\eqref{eq:net-change}\)}
+        \end{equation*}
+        This equation can be interpreted as 
+        \[(\textrm{final quantity}) = (\textrm{initial quantity}) + (\textrm{net change in quantity}) \pd\]
+    </p>
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">
