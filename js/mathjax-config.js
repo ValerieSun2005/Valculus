@@ -90,6 +90,7 @@ window.MathJax = {
             triplingTime: "\\mathcal{t_3}",
             chem: ["\\text{}", 1],
             avg: ["#1_{\\text{avg}}", 1],
+            sinLim: "\\lim_{x \\to 0} (\\sin x)/x"
         }
     },
 };

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4.4: Integration by Substitution</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>4.4 — Integration by Substitution</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="4.4-Integration-by-Substitution-exercises.html">Exercises
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="4.4-Integration-by-Substitution-exercises-solutions.html">Exercise Solutions
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Integration-by-Substitution]]]-->
+<p>
+    In Section <a href="/Valculus/calculus/2.3-Chain-Rule.html">2.3</a>, 
+    we learned to differentiate composite functions. 
+    We now learn to <i>integrate</i> composite functions, 
+    which requires a variable change using a substitution. 
+    At the end of this section, you'll build your pattern recognition 
+    and be able to compute simple substitutions in your head.  
+    This module is split into the following subsections:
+    <ul>
+        <li>
+            <a href="#sub-rule" class="page-anchor">The Substitution Rule</a>
+        </li>
+        <li>
+            <a href="#ax+b" class="page-anchor">Integrating \(f(ax + b)\)</a>
+        </li>
+        <li>
+            <a href="#changing-bounds" class="page-anchor">Changing Bounds</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="sub-rule">The Substitution Rule</h4>
+
+<p>
+    The theme of the Integration chapter has been learning to go backward. 
+    The Chain Rule states that, for differentiable functions \(F\) and \(g,\)
+    \begin{equation} 
+    \deriv{}{x} [F(g(x))] = F'(g(x)) \, g'(x) \pd \label{eq:chain-rule}
+    \end{equation}
+    Now let us discuss a strategy to transform \(F'(g(x)) \, g'(x)\) back to the composite function \(F(g(x)).\)
+    Consider 
+    \begin{equation} 
+    \int F'(g(x)) \, g'(x) \di x \pd \label{eq:composite-integral}
+    \end{equation}
+    We know, from \(\eqref{eq:chain-rule},\)
+    that this integral equals \(F(g(x)) + C.\)
+    But we need to map the integral to this answer; 
+    we need to determine a procedure to allow antidifferentiation. 
+    We convert the integral into a simpler form by performing a substitution:
+    Let \(u = g(x).\)
+    Differentiating both sides of this equality gives 
+    \[\deriv{u}{x} = g'(x) \or \di u = g'(x) \di x \pd\]
+    If we compare these components to \(\eqref{eq:composite-integral},\) then we see 
+    \[
+    \int F'(\underbrace{g(x)}_{u}) \, \underbrace{g'(x) \di x}_{\di u}
+    = \int F'(u) \di u = F(u) + C \pd 
+    \]
+    This substitution gave the much easier integral \(\int F'(u) \di u.\)
+    Since \(u = g(x),\)
+    reexpressing the answer in terms of \(x\) gives  
+    \[F(g(x)) + C \pd\]
+    This procedure, called a <span class="emph">\(\bf u\)-substitution</span>
+    (or using the <span class="emph">Substitution Rule</span>),
+    enabled us to convert the integral in \(\eqref{eq:composite-integral}\)
+    to the antiderivative \(F(g(x)) + C.\)
+    Or if \(F' = f,\) then we can write the Substitution Rule as 
+    \begin{equation} 
+    \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \label{eq:u-sub-f}
+    \end{equation}
+    if \(u = g(x).\)
+</p>
+<p>
+    Our strategy in integrating composite functions, therefore, 
+    is to let \(u\) be the inner function. 
+    The integrand should contain the derivative of the inner function; 
+    we then change the entire integral to be in terms of \(u,\) 
+    including the differential. 
+    This transformation gives us an easier integral. 
+    The full Substitution Rule is as follows.
+</p>
+
+<div class="box-title">THE SUBSTITUTION RULE</div>
+<div class="box">
+    Let \(g\) be a differentiable function whose range is an interval \(I,\)
+    and let \(f\) be continuous over \(I.\)
+    To evaluate the integral \(\int f(g(x)) \, g'(x) \di x,\)
+    substitute \(u = g(x).\)
+    Then \(\di u = g'(x) \di x,\) and 
+    \[
+    \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \pd \tag*{\(\eqref{eq:u-sub-f}\)}
+    \]
+</div>
+
+<div class="example-title" id="2x-cos(x^2)"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate \(\int 2x \cos(x^2) \di x.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    In the composite function \(\cos(x^2),\) the inner function is \(x^2.\)
+    Its derivative is \(2x,\) which is in the integrand.
+    Or, by analogy to \(\eqref{eq:u-sub-f},\)
+    we have \(f(g(x)) = \cos(x^2)\) and \(g'(x) = 2x.\)
+    Thus, it is useful to perform a \(u\)-substitution with \(u = x^2.\)
+    Then \(\dd u = 2x \di x.\) 
+    We have 
+    \[\int \cos\underbrace{(x^2)}_u \underbrace{(2x) \di x}_{\dd u} = \int \cos u \di u = \sin u + C \cma\]
+    where \(C\) is an arbitrary constant. 
+    This substitution transforms \(\int 2x \cos(x^2) \di x\) to \(\int \cos u \di u,\)
+    an easier integral for which we readily identify the answer \(\sin u + C.\)
+    Finally, we convert back in terms of \(x.\)
+    Since we chose \(u = x^2,\) our answer becomes 
+    \[\boxed{\sin(x^2) + C}\]
+    Our answer is correct because differentiating this function gives 
+    \(2x \cos(x^2),\) which is our integrand. 
+</div>
+
+<p>
+    When we perform a \(u\)-substitution, <i>all</i>
+    quantities in the integral must be expressed in terms of \(u.\)
+    <span class="warning">No \(x\)-terms should remain</span>; 
+    they must be converted to \(u.\)
+    Think of the new integral as being in the <i>\(u\)-world</i>,
+    since we perform the subsequent operations in terms of \(u.\)
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate \(\int x^3 \sqrt{x^4 + 3} \di x.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    If we substitute \(u = x^4 + 3,\) then \(\dd u = 4x^3 \di x.\)
+    Apart from the constant \(4,\) the term \(x^3\) shows up in the integrand.
+    To proceed with the substitution, we rewrite the integral as 
+    \[\int \par{\tfrac{1}{4}} 4x^3 \sqrt{x^4 + 3} \pd\]
+    The integral therefore becomes 
+    \[\int \tfrac{1}{4} \underbrace{\sqrt{x^4 + 3}}_{\sqrt u} \, \underbrace{(4x^3) \di x}_{\dd u} = \int \tfrac{1}{4} \sqrt u \di u \pd\]
+    Because \(1/4\) is a constant, we move it out of the integral by the Constant Multiple Rule
+    (see Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>). 
+    Thus, we have 
+    \[\tfrac{1}{4} \int u^{1/2} \di u = \tfrac{1}{4} \par{\tfrac{2}{3} u^{3/2}} + C = \tfrac{1}{6} u^{3/2} + C \pd\]
+    Our final step is to reexpress the integral in terms of \(x;\)
+    we declared \(u = x^4 + 3,\) so our final answer is 
+    \[\boxed{\tfrac{1}{6} (x^4 + 3)^{3/2} + C}\] 
+</div>
+
+<h4 id="ax+b">Integrating \(f(ax + b)\)</h4>
+
+<div class="example-title" id="ex-e^kx"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\int e^{kx} \di x\) if \(k\) is a nonzero constant. 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    The composite function is \(e^{kx}.\)
+    If we use the Substitution Rule with the inner function \(u = kx,\)
+    then \(\dd u = k \di x.\)
+    The term \(k\) isn't in the integrand, but we rewrite the integral as 
+    \[\int \par{\tfrac{1}{k}} k e^{kx} \di x \pd\]
+    Now we see 
+    \[\int \tfrac{1}{k} \underbrace{e^{kx}}_{e^u} \, \underbrace{k \di x}_{\dd u} 
+    = \int \tfrac{1}{k} e^u \di u \pd\]
+    This substitution is successful because we obtain the integral \(\int \tfrac{1}{k} e^u \di u,\)
+    which is expressed entirely in terms of \(u.\)
+    Since \(1/k\) is a constant, we take it out of the integral by the Constant Multiple Rule
+    (see Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>).  
+    We therefore have, for any number \(C,\)
+    \[\tfrac{1}{k} \int e^u \di u = \tfrac{1}{k} e^u + C \pd\]
+    Finally, we reexpress our answer in terms of \(x.\)
+    Since we let \(u = kx,\)
+    we have 
+    \[\boxed{\tfrac{1}{k} e^{kx} + C}\]
+</div>
+
+<p>
+    In <a href="#ex-e^kx">Example 3</a>, we showed that 
+    \[\int e^{kx} \di x = \tfrac{1}{k} e^{kx} \pd\]
+    Observe that 
+    \[\deriv{}{x} [e^{kx}] = k e^{kx} \pd\]
+    When we integrate \(e^{kx},\) we divide by \(k,\)
+    whereas our answer contains the factor \(k\) when we differentiate \(e^{kx}.\)
+</p>
+<p>
+    Now let us generalize this notion:
+    Consider the composite function \(f(ax + b)\) for \(a \ne 0.\)
+    The family of these functions appear frequently, so we want to easily recognize 
+    its derivatives and integrals.
+    By the Chain Rule, if \(f\) is differentiable, then 
+    \[\deriv{}{x} [f(ax + b)] = af'(ax + b) \pd\]
+    Now consider \(\int f(ax + b) \di x.\)
+    We want to substitute the inner function \(ax + b,\)
+    whose derivative is \(a.\)
+    Thus, we rearrange the integral as 
+    \[\int \par{\tfrac{1}{a}} \, a f(ax + b) \di x \pd\]
+    Now letting \(u = ax + b,\) we have \(\dd u = a \di x\) and so the integral becomes 
+    \[\int \tfrac{1}{a} f(\underbrace{ax + b}_{u}) \, \underbrace{a \di x}_{\dd u}
+    = \tfrac{1}{a} \int f(u) \di u \pd 
+    \]
+    If \(F\) is an antiderivative of \(f,\) then the integral becomes,
+    for any value \(C,\)
+    \[\tfrac{1}{a} F(u) + C = \tfrac{1}{a} F(ax + b) + C \pd\]
+    Thus,
+    \begin{equation}
+    \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \label{eq:int-reverse-chain}
+    \end{equation}
+</p>
+
+<div class="box-title">INTEGRATING \(f(ax + b)\)</div>
+<div class="box">
+    Let \(F\) be an antiderivative of \(f.\) 
+    If \(a \ne 0,\) then, for any constant \(C,\)
+    \[
+    \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following integrals.
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds \int \cos(3x + 1) \di x\)</span>
+            </li>
+            <li>
+                <span>\(\ds \int (6x - 2)^3 \di x\)</span>
+            </li>
+            <li>
+                <span>\(\ds \int \frac{1}{5x + 8} \di x\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <ol class="list-roman">
+        <li>
+            The inner function \(3x + 1\) takes the form \(ax + b.\)
+            An antiderivative of cosine is sine.
+            Hence, by \(\eqref{eq:int-reverse-chain}\) the integral becomes 
+            \[\boxed{\tfrac{1}{3} \sin(3x + 1) + C}\]
+        </li>
+        <hr>
+        <li>
+            We identify the inner function to be \(6x - 2,\) which is linear. 
+            An antiderivative of \(u^3\) is \(u^4/4,\) so using \(\eqref{eq:int-reverse-chain}\) gives 
+            \[\tfrac{1}{6} \cdot \tfrac{1}{4} (6x - 2)^4 + C = \boxed{\tfrac{1}{24} (6x - 2)^4 + C}\]
+        </li>
+        <hr>
+        <li>
+            In the composite function, the inner function is \(5x + 8.\)
+            An antiderivative of \(1/u\) is \(\ln \abs{u},\) 
+            so \(\eqref{eq:int-reverse-chain}\) gives 
+            \[\boxed{\tfrac{1}{5}\ln \abs{5x + 8} + C}\]
+        </li>
+    </ol>
+</div>
+
+<h4 id="changing-bounds">Changing Bounds</h4>
+<p>
+    Consider the definite integral 
+    \[\int_a^b f(g(x)) g'(x) \di x \cma\] 
+    whose bounds are \(x = a\) and \(x = b.\)
+    When we perform \(u\)-substitution on a definite integral,
+    we need to convert <i>everything</i> to \(u,\)
+    but the integral's bounds are in terms of \(x.\)
+    Thus, if you substitute \(u = g(x),\) then you have two options:
+    The first option is to write your answer in terms of \(x\)  
+    and substitute the bounds \(b\) and \(a.\)
+    The second option is to change the bounds to be in terms of \(u \col\) 
+    When \(x = a,\) \(u = g(a);\) when \(x = b,\) \(u = g(b).\)
+    The integral then becomes 
+    \[\int_{g(a)}^{g(b)} f(u) \di u \cma\]
+    and you evaluate <i>without converting back to \(x.\)</i>
+    Usually, the second option is easier.
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate 
+        \[\int_0^1 x^2 (x^3 + 1)^4 \di x \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <p>
+        We substitute \(u = x^3 + 1\) because \(\dd u = 3x^2 \di x.\)
+        The term \(x^2\) appears in the integrand, so this substitution takes us into the \(u\)-world:
+        \[\int \tfrac{1}{3} (\underbrace{x^3 + 1}_{u})^4 \, \underbrace{3x^2 \di x}_{\dd u} 
+        = \tfrac{1}{3} \int u^4 \di u \pd\]
+        Thus, the <i>definite</i> integral becomes 
+        \[\tfrac{1}{3} \int_{x = 0}^{x = 1} u^4 \di u \pd\]
+        We now have two subsequent options; 
+        this solution covers both methods.
+    </p>
+    <p>
+        <span class="label-emph">Method 1</span>
+        We find an antiderivative of \(u^4\) in terms of \(x.\)
+        Doing so gives 
+        \[\tfrac{1}{5} u^5 + C = \tfrac{1}{5} (x^3 + 1)^5 + C \pd\]
+        Now we use Part II of the Fundamental Theorem of Calculus (FTC II)
+        with our original bounds in terms of \(x \col\) 
+        \[
+        \ba 
+        \tfrac{1}{3} \int_{x = 0}^{x = 1} u^4 \di u 
+        &= \tfrac{1}{3} \cdot \tfrac{1}{5} (x^3 + 1)^5 \intEval_0^1 \nl 
+        &= \tfrac{1}{15} \parbr{(1^3 + 1)^5 - (0^3 + 1)^5} \nl 
+        &= \boxed{\tfrac{31}{15}} 
+        \ea 
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>
+        After we perform the substitution to obtain the definite integral 
+        \(\tfrac{1}{3} \int_{x = 0}^{x = 1} u^4 \di u,\)
+        we change the bounds to be in terms of \(u.\)
+        When \(x = 0,\) \(u = 0^3 + 1 = 1;\)
+        when \(x = 1,\) \(u = 1^3 + 1 = 2.\)
+        Expressing the bounds in terms of \(u\) yields 
+        \[\tfrac{1}{3} \int_1^2 u^4 \di u \pd\]
+        Now we integrate <i>strictly with \(u\)</i>; 
+        we don't return to the \(x\)-world. 
+        We get 
+        \[
+        \ba 
+        \tfrac{1}{3} \cdot \tfrac{1}{5} u^5 \intEval_1^2
+        &= \tfrac{1}{15} (2^5 - 1^5) \nl 
+        &= \boxed{\tfrac{31}{15}}
+        \ea 
+        \]
+    </p>
+</div>  
+
+<p>
+    There is no wrong substitution, but some substitutions are more useful than others. 
+    With practice, you'll be able to identify useful substitutions.
+</p>
+
+<div class="section-summary">
+    <p>
+        <a href="#sub-rule" class="summary-anchor">The Substitution Rule</a>
+        We use <span class="emph">\(\bf u\)-substitution</span> to integrate composite functions 
+        in which the derivative of the inner function lies in the integrand.
+        Let \(g\) be a differentiable function whose range is an interval \(I,\)
+        and let \(f\) be continuous over \(I.\)
+        To evaluate the integral \(\int f(g(x)) \, g'(x) \di x,\)
+        substitute \(u = g(x).\)
+        Then \(\di u = g'(x) \di x,\) and 
+        \[
+        \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \pd \tag*{\(\eqref{eq:u-sub-f}\)}
+        \]
+    </p>
+    <p>
+        <a href="#ax+b" class="summary-anchor">Integrating \(f(ax + b)\)</a>
+        Let \(F\) be an antiderivative of \(f.\) 
+        If \(a \ne 0,\) then, for any constant \(C,\)
+        \[
+        \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
+        \]
+    </p>
+    <p>
+        <a href="#changing-bounds" class="summary-anchor">Changing Bounds</a>
+        When we integrate \(\int_a^b f(g(x)) g'(x) \di x,\) we have a choice:
+        The first option is to convert our final answer to \(x\) and substitute the bounds \(b\) and \(a.\)
+        The second option is to change the bounds to be in terms of \(u \col\)
+        \[\int_a^b f(g(x)) g'(x) \di x = \int_{g(a)}^{g(b)} f(u) \di u \cma\]
+        and evaluate without converting back to \(x.\)
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

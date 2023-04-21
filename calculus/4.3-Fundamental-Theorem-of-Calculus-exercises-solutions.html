@@ -610,8 +610,7 @@
             <span class="solution-text">SOLUTION</span> 
             <span>
         The hardest part of problems is to determine an antiderivative.
-        In general, when we see a rational expression in which the degree of the numerator is 
-        greater than or equal to the degree of the denominator, we want to divide the expression. 
+        In general, to integrate a rational expression, we want to divide the expression. 
         Performing polynomial division enables us to rewrite the integrand as 
         \[1 - \frac{1}{x^2 + 1} \pd\]
         Alternatively, the following algebraic trick exists.
@@ -1627,7 +1626,7 @@
         By FTC II, we find an antiderivative of \(1/x\)—one antiderivative is \(\ln \abs x\)—and 
         evaluate it at \(2m\) and \(m.\)
         Doing so gives 
-        \[\ln \abs x \intEval_m^{2m} = \ln(2m) - \ln m = \ln \tfrac{2m}{m} = \boxed{\ln 2}\]
+        \[\ln \abs x \intEval_m^{2m} = \ln(2m) - \ln m = \ln \tfrac{2m}{m} = \ln 2\]
         Thus, the area is fixed at \(\ln 2\)
         and does not depend on \(m.\)
     </span> 
@@ -1656,7 +1655,7 @@
         when \(m = 16.\)
         But we need a way to relate this rate to the given rates. 
         (See Section <a href="/Valculus/calculus/3.1-Related-Rates.html">3.1</a>
-        to review the procedures of working with related rates.)
+        to review the procedure of working with related rates.)
         Note that \(\textDeriv{m}{t} = 3.\)
         By the Chain Rule, 
         \[\deriv{A}{t} = \deriv{A}{m} \deriv{m}{t} = 3 \deriv{A}{m} \pd\]
@@ -1698,6 +1697,94 @@
         Since \(f\) and \(g\) are differentiable, we have 
         \[Q''(t) = f'(t) - g'(t) \pd\]
         Thus, \(Q''(c) \lt 0\) is satisfied if \(f'(c) \lt g'(c).\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-57"> 
+  <div class="box-solution__head">     EXERCISE 57 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0} \frac{1}{x^2} \int_0^{x^2} e^t \di t\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-57"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        View this expression as a fraction whose numerator is \(\int_0^{x^2} e^t \di t\)
+        and whose denominator is \(x^2.\)
+        As \(x \to 0,\) each function approaches \(0;\)
+        thus, this limit is of the indeterminate form \(\indZero.\)
+        Both functions are differentiable,  
+        so we apply L'Hopital's Rule (see Section
+        <a href="/Valculus/calculus/3.6-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.6</a>)
+        by differentiating the numerator and denominator 
+        and reevaluating the limit.
+        The derivative of the numerator, by FTC I, is 
+        \(2xe^{x^2}.\)
+        Differentiating the denominator gives \(2x.\)
+        So our limit is 
+        \[\lim_{x \to 0} \frac{2xe^{x^2}}{2x} = \lim_{x \to 0} e^{x^2} = \boxed 1\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-58"> 
+  <div class="box-solution__head">     EXERCISE 58 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0} \frac{2}{x^2} \int_0^{x} \sin u \di u\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-58"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We treat this expression as a fraction whose numerator is \(2 \int_0^x \sin u \di u\)
+        and whose denominator is \(x^2.\)
+        Each function approaches \(0\) as \(x \to 0,\)
+        so this limit is of the indeterminate form \(\indZero.\)
+        Because both functions are differentiable,  
+        we apply L'Hopital's Rule:
+        FTC I gives the derivative of the numerator to be \(2 \sin x,\) 
+        and differentiating the denominator gives \(2x.\)
+        So our limit is 
+        \[\lim_{x \to 0} \frac{2 \sin x}{2x} = \lim_{x \to 0} \frac{\sin x}{x} = \boxed 1\]
+        You may remember \(\lim_{x \to 0} (\sin x)/x = 1;\)
+        if not, then you can apply L'Hopital's Rule again to attain this result.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-59"> 
+  <div class="box-solution__head">     EXERCISE 59 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{h \to 0} \frac{1}{h} \int_{\pi}^{\pi + h} \sin t \di t\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-59"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We manipulate this expression to match the limit definition of a derivative 
+        (see Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>). 
+        Our goal is to write the integral as a difference.
+        For some \(c,\) the integral is equivalent to
+        \[\int_c^{\pi + h} \sin t \di t - \int_c^{\pi} \sin t \di t \pd\]
+        So our limit is 
+        \[\lim_{h \to 0} \frac{1}{h} \parbr{\int_c^{\pi + h} \sin t \di t - \int_c^{\pi} \sin t \di t} \pd\]
+        This is the limit definition of \(\textDeriv{}{x} \int_c^x \sin t \di t\)
+        at \(x = \pi.\)
+        By FTC I, this derivative is \(\sin \pi = \boxed{0}.\)
+        Alternatively, you could use L'Hopital's Rule to evaluate this limit.
     </span> 
         </div> 
        </div>  

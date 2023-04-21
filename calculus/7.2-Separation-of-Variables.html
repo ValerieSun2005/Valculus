@@ -52,7 +52,117 @@
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
       <!--[[[crefId.Separation-of-Variables]]]--> 
+<p>
+    We have interpreted differential equations 
+    and verified whether a function satisfies a differential equation. 
+    In this section, we find functions that satisfy a differential equation;
+    this procedure is called <i>solving a differential equation</i>.
+</p>
+<p>
+    A <span class="emph">separable differential equation</span>
+    is a first-order differential equation in the form 
+    \begin{equation} 
+    \deriv{y}{x} = \frac{g(x)}{h(y)} \pd \label{eq:sep-diff-eq}
+    \end{equation}
+    We isolate the \(y\) terms on one side and all the \(x\) terms on the other; 
+    this procedure is called solving by <span class="emph">Separation of Variables</span>.  
+    In \(\eqref{eq:sep-diff-eq},\) multiplying both sides by \(h(y) \di x\) gives 
+    \[h(y) \di y = g(x) \di x \pd\]
+    We then take the integral of both sides:
+    \begin{equation} 
+    \int h(y) \di y = \int g(x) \di x \pd \label{eq:sep-diff-eq-int}
+    \end{equation}
+    We ideally evaluate each integral to solve for \(y\) explicitly.
+</p>
 
+<div class="box-title">SEPARATION OF VARIABLES</div>
+<div class="box">
+    A <span class="emph">separable differential equation</span> is of the form 
+    \begin{equation*} 
+    \deriv{y}{x} = \frac{g(x)}{h(y)} \pd \tag*{\(\eqref{eq:sep-diff-eq}\)}
+    \end{equation*}
+    Using <span class="emph">Separation of Variables</span> gives the form 
+    \begin{equation*} 
+    \int h(y) \di y = \int g(x) \di x \pd \tag*{\(\eqref{eq:sep-diff-eq-int}\)}
+    \end{equation*}
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    To prove the validity of Separation of Variables, we must show that 
+    \(\eqref{eq:sep-diff-eq-int}\) satisfies \(\eqref{eq:sep-diff-eq}.\)
+    We differentiate both sides of \(\eqref{eq:sep-diff-eq-int}\)
+    with respect to \(x.\)
+    The left-hand side requires using the Chain Rule.
+    Doing so gives 
+    \[
+    \ba 
+    \deriv{}{x} \int h(y) \di y &= \deriv{}{x} \int g(x) \di x \nl 
+    \deriv{}{y} \par{\int h(y) \di y} \deriv{y}{x} &= g(x) \nl 
+    h(y) \deriv{y}{x} &= g(x) \pd 
+    \ea 
+    \]
+    Then we find \(\textDeriv{y}{x} = g(x)/h(y),\) which is \(\eqref{eq:sep-diff-eq}.\)
+    Hence, \(\eqref{eq:sep-diff-eq-int}\) satisfies \(\eqref{eq:sep-diff-eq}\)
+    and so Separation of Variables is justifiable.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the general solution to the differential equation \(\textDeriv{y}{x} = 2x/y^2.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    This differential equation is <b>separable</b> because we can isolate all the \(y\)'s 
+    on one side and all the \(x\)'s on the other.
+    Multiplying both sides by \(y^2 \di x\) gives 
+    \[y^2 \di y = 2x \di x \pd\]
+    Now we integrate both sides, obtaining 
+    \[\tfrac{1}{3} y^3 + C_1 = x^2 + C_2 \cma\]
+    where \(C_1\) and \(C_2\) are both arbitrary constants. 
+    But for simplicity, we combine these constants into one.
+    Let \(C = C_2 - C_1;\)
+    we then have 
+    \[\tfrac{1}{3} y^3 = x^2 + C \pd\]
+    Finally, we solve for \(y \col\)
+    \[y = \sqrt[3]{3x^2 + 3C} \pd\]
+    Since \(C\) is an arbitrary constant, we can write \(3C\) as simply \(C.\)
+    Our general solution is therefore 
+    \[y = \boxed{\sqrt[3]{3x^2 + C}}\]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the solution to \(y' = 3x^2 y\) whose graph passes through the point 
+        \((1, 1).\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    We perform Separation of Variables by isolating all the \(y\)'s on the left side 
+    and all the \(x\)'s on the right side. 
+    Note that \(y' = \textDeriv{y}{x},\) so we have 
+    \[\frac{1}{y} \di y = 3x^2 \di x \pd\]
+    Integrating both sides (and writing one constant \(C\) on the right side) gives 
+    \begin{equation} 
+    \ln \abs y = x^3 + C \pd \label{eq:ex-C}
+    \end{equation}
+    Since the graph passes through the point \((1, 1),\)
+    we substitute in \(\eqref{eq:ex-C}\) 
+    this initial condition to solve for \(C \col\)
+    \[\ln 1 = (1)^3 + C \implies C = -1 \pd\]
+    Hence, \(\eqref{eq:ex-C}\) becomes
+    \[
+    \ln \abs y = x^3 - 1  
+    \or \boxed{y = e^{x^3 - 1}}
+    \]
+    We could have solved for \(y\) in \(\eqref{eq:ex-C}\) before substituting the initial condition,
+    but immediately solving for \(C\) is often easier.
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">
