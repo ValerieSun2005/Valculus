@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9.2: Differentiating Polar Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>9.2 — Differentiating Polar Functions</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.2-Differentiating-Polar-Functions-exercises.html">Exercises
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.2-Differentiating-Polar-Functions-exercises-solutions.html">Exercise Solutions
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Differentiating-Polar-Functions]]]--> 
+<p>
+    In this section we analyze rates of change of polar functions. 
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#dr/dtheta" class="page-anchor">Calculating and Interpreting \(\textderiv{r}{\theta}\)</a>
+        </li>
+        <li>
+            <a href="#dx/dtheta" class="page-anchor">Calculating and Interpreting \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}\)</a>
+        </li>
+        <li>
+            <a href="#dy/dx" class="page-anchor">Tangents to Polar Curves</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="dr/dtheta">Calculating and Interpreting \(\textderiv{r}{\theta}\)</h4>
+
+<p>
+    Consider the function \(r = f(\theta).\)
+    Recall, from Section <a href="/Valculus/Valculus/calculus/9.1-Polar-Coordinates-and-Functions.html">9.1</a>, 
+    that \(\abs r\) is the distance from a point \((r, \theta)\) to the pole. 
+    How do we interpret \(\textderiv{r}{\theta} \ques\)
+</p>
+<p>
+    <span class="label-emph">For \(r \gt 0\)</span> 
+    If \(r \gt 0,\) then the function \(r = f(\theta)\) gives the distance from the pole to the point \((r, \theta).\)
+    The function \(f\) is increasing if \(f'(\theta) \gt 0\)
+    (or \(\textderiv{r}{\theta} \gt 0\)), meaning the distance \(r\) is growing.
+    Hence, as we trace out larger values of \(\theta,\)
+    the points on the graph extend farther from the pole.
+    See <a href="#r-increasing">Figure 1A</a>:
+    As \(\theta\) is extended, \(\Delta r \gt 0\)
+    because the point \((r + \Delta r, \theta + \Delta \theta)\)
+    is farther from the pole than is the point 
+    \((r, \theta).\)
+    Thus, we conclude that, as \(\theta\) increases, 
+    points on the graph of \(r = f(\theta)\) 
+    are <i>moving away from the pole</i> if \(\textderiv{r}{\theta} \gt 0\)
+    and \(r \gt 0.\)
+    But if \(\textderiv{r}{\theta} \lt 0,\)
+    then this interpretation is flipped:
+    \(r\) is shrinking,
+    so the graph of \(r = f(\theta)\) is <i>moving toward the pole</i>.
+    See <a href="#r-decreasing">Figure 1B</a>:
+    When we increase \(\theta,\) we see \(\Delta r \lt 0\)
+    since the point \((r + \Delta r, \theta + \Delta \theta)\)
+    is located closer to the pole than is the point \((r, \theta).\)
+</p>
+
+<div class="figure-center">
+    <figure class="r-increasing" id="r-increasing">
+        <img src="../images/sectionImages/r-increasing.jpg" class="r-increasing" alt="Figure 1A">
+    </figure>
+    <figure class="r-decreasing" id="r-decreasing">
+        <img src="../images/sectionImages/r-decreasing.jpg" class="r-decreasing" alt="Figure 1B">
+    </figure>
+    
+    <style>
+        .r-increasing::before{
+            content:'FIGURE 1A';
+        }
+        .r-decreasing::before{
+            content:'FIGURE 1B';
+        }
+    </style>
+</div>
+
+
+<p>
+    <span class="label-emph">For \(r \lt 0\)</span>
+    If \(r\) is negative, then the line segment connecting the pole to \((r, \theta)\)
+    is flipped \(180\degree\) about the pole.
+    Therefore, the distance from the pole to \((r, \theta)\) is the <i>magnitude</i> of \(r.\)
+    If \(\textderiv{r}{\theta} \gt 0,\)
+    then \(\abs r\) is decreasing and so the distance is shrinking. 
+    Thus, points on the graph of \(r = f(\theta)\) are <i>moving toward the pole</i> if \(r \lt 0\)
+    and \(\textderiv{r}{\theta} \gt 0.\)
+    But if \(\textderiv{r}{\theta} \lt 0\) and \(r \lt 0,\)
+    then \(\abs r\) is increasing and so the distance is extending.
+    So the graph of \(r = f(\theta)\) is <i>moving away from the pole</i>
+    if \(r \lt 0\) and \(\textderiv{r}{\theta} \lt 0.\)
+</p>
+
+<div class="box-title">INTERPRETING \(\textderiv{r}{\theta}\)</div>
+<div class="box">
+    As \(\theta\) increases, the following table summarizes the behavior of the graph of \(r = f(\theta).\)
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>If . . .</th>
+                <th>\(\ds \deriv{r}{\theta} \gt 0\)</th>
+                <th>\(\ds \deriv{r}{\theta} \lt 0\)</th>
+            </tr>
+        </thead>
+        
+        <!-- r > 0 -->
+        <tr>
+            <td>
+                \(r \gt 0\)
+            </td>
+            <td>
+                graph moves away from the pole
+            </td>
+            <td>
+                graph moves toward the pole
+            </td>
+        </tr>
+
+        <!-- r < 0 -->
+        <tr>
+            <td>
+                \(r \lt 0\)
+            </td>
+            <td>
+                graph moves toward the pole
+            </td>
+            <td>
+                graph moves away from the pole
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    There is an easy way to remember this table:
+    <ul>
+        <li>
+            If \(r\) and \(\textderiv{r}{\theta}\) have the <i>same sign</i>,
+            then the graph is moving <i>away from the pole</i> as \(\theta\) increases. 
+        </li>
+        <li>
+            If \(r\) and \(\textderiv{r}{\theta}\) have <i>different signs</i>,
+            then the graph is moving <i>toward the pole</i> as \(\theta\) increases. 
+        </li>
+    </ul>
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(r = 1 + 2 \sin \theta.\)
+        Calculate and interpret 
+        <ol class="list-alpha">
+            <li>
+                \(\ds \deriv{r}{\theta} \intEval_{\theta = \pi/3}\)
+            </li>
+            <li>
+                \(\ds \deriv{r}{\theta} \intEval_{\theta = 5\pi/6}\)
+            </li>
+            <li>
+                \(\ds \deriv{r}{\theta} \intEval_{\theta = -\pi/4}\)
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    The derivative of \(r\) with respect to \(\theta\) is 
+    \[\deriv{r}{\theta} = 2 \cos \theta \pd\]
+    <ol class="list-alpha">
+        <li>
+            We find the derivative to be 
+            \[2 \cos \tfrac{\pi}{3} = \boxed 1\]
+            Notice that, when \(\theta = \pi/3,\) 
+            \(r \gt 0\) and \(\textderiv{r}{\theta} \gt 0;\)
+            each quantity has the same sign.
+            We therefore conclude the following:
+            as \(\theta\) is increased, the graph of \(r = 1 + 2 \sin \theta\)
+            is <b>extending away from the pole</b>
+            when \(\theta = \pi/3.\)
+        </li>
+        <hr>
+        <li>
+            The derivative is 
+            \[2 \cos \tfrac{5\pi}{6} = \boxed{-\sqrt 3}\]
+            When \(\theta = 5 \pi/6,\) we see \(r \gt 0\) and \(\textderiv{r}{\theta} \lt 0;\)
+            these signs are different.
+            Accordingly, as \(\theta\) increases, the graph of \(r = 1 + 2 \sin \theta\)
+            is <b>moving toward the pole</b>
+            when \(\theta = 5 \pi/6.\)
+        </li>
+        <hr>
+        <li>
+            Our derivative is 
+            \[2 \cos \par{-\tfrac{\pi}{4}} = \boxed{\sqrt 2}\]
+            Note that at \(\theta = -\pi/4,\) \(r\) is negative and \(\textderiv{r}{\theta}\) is positive;
+            these quantities have different signs.
+            As \(\theta\) increases, the graph of \(r = 1 + 2 \sin \theta\)
+            is therefore <b>moving toward the pole</b>
+            when \(\theta = - \pi/4.\)
+        </li>
+    </ol>
+</div>
+
+<h4 id="dx/dtheta">Calculating and Interpreting \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}\)</h4>
+<p>
+    From Section <a href="/Valculus/Valculus/calculus/9.1-Polar-Coordinates-and-Functions.html">9.1</a>, 
+    a polar function \(r = f(\theta)\) can be expressed parametrically as 
+    \begin{equation} 
+    x = f(\theta) \cos \theta \lspace y = f(\theta) \sin \theta \pd \label{eq:xy}
+    \end{equation}
+    These equations permit us to find the \(x\)- and \(y\)-coordinates of any point 
+    on the graph of \(r = f(\theta).\)
+    If \(f\) is differentiable, then we find \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}\)
+    of the polar function using the Product Rule, as follows:
+    \begin{align}
+    \deriv{x}{\theta} &= f'(\theta) \cos \theta - f(\theta) \sin \theta \label{eq:dx/dtheta} \nl 
+    \deriv{y}{\theta} &= f'(\theta) \sin \theta + f(\theta) \cos \theta \pd \label{eq:dy/dtheta}
+    \end{align}
+</p>
+
+<div class="box-title">CALCULATING \(\textderiv{x}{\theta}\) AND \(\textderiv{y}{\theta}\)</div>
+<div class="box">
+    If \(f\) is differentiable and \(r = f(\theta)\) defines a polar curve, then
+    \begin{align}
+    \deriv{x}{\theta} &= f'(\theta) \cos \theta - f(\theta) \sin \theta \tag*{\(\eqref{eq:dx/dtheta}\)} \nl 
+    \deriv{y}{\theta} &= f'(\theta) \sin \theta + f(\theta) \cos \theta \pd \tag*{\(\eqref{eq:dy/dtheta}\)}
+    \end{align}
+</div>
+
+<figure class="polar-x-increasing" id="polar-x-increasing">
+    <img src="../images/sectionImages/polar-x-increasing.jpg" class="polar-x-increasing" alt="Figure 2">
+</figure>
+<style>
+    .polar-x-increasing::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    Now the question is how to interpret \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}.\)
+    The key idea is that these are <i>rates</i> in which \(\theta\)
+    causes changes in \(x\) and \(y.\)
+</p>
+
+<p>
+    <span class="label-emph">Interpreting \(\textderiv{x}{\theta}\)</span>
+    If \(\textderiv{x}{\theta} \gt 0,\)
+    then the \(x\)-coordinates on the polar graph of \(r = f(\theta)\)
+    are increasing as \(\theta\) grows.
+    If \(x\) is positive, then the graph <i>moves away from the \(y\)-axis</i>.
+    But if \(x \gt 0\) and \(\textderiv{x}{\theta} \lt 0,\)
+    then the graph <i>moves toward</i> the \(y\)-axis.
+    For example, see <a href="#polar-x-increasing">Figure 2</a>:
+    The polar graph of \(r = f(\theta)\) forms a loop in the first quadrant,
+    and the graph has positive \(x.\) 
+    For \(\theta\) in \([0, c],\)
+    the \(x\)-coordinates of points on the graph are increasing until 
+    they reach \(x_c = f(c) \cos c.\)
+    So for \(0 \lt \theta \lt c\), \(\textderiv{x}{\theta} \gt 0\)
+    and so the graph is moving <i>away</i> from the \(y\)-axis.
+    But for \(c \lt \theta \lt \pi/2,\)
+    the graph is contracting <i>toward</i> the \(y\)-axis;
+    thus, \(\textderiv{x}{\theta} \lt 0\)
+    over this interval.
+    In addition, the function \(x(\theta) = f(\theta) \cos \theta\)
+    has a <i>relative maximum</i> at \(\theta = c\)
+    by the First-Derivative Test 
+    (see Section <a href="/Valculus/Valculus/calculus/3.2-Minimum-and-Maximum-Values.html">3.2</a>)
+    because \(\textderiv{x}{\theta}\) changes sign from positive to negative at \(\theta = c.\)
+</p>
+<p>
+    If \(x \lt 0,\)
+    then the graph of \(r = f(\theta)\) 
+    is moving <i>away</i> from the \(y\)-axis if 
+    \(\textderiv{x}{\theta} \lt 0\)
+    and <i>toward</i> the \(y\)-axis if \(\textderiv{x}{\theta} \gt 0.\)
+    The graph moves <i>away</i> from the \(y\)-axis if 
+    \(x\) and \(\textderiv{x}{\theta}\) have the same sign. 
+    But the graph moves <i>toward</i> the \(y\)-axis if \(x\) and \(\textderiv{x}{\theta}\)
+    have different signs.
+</p>
+
+<div class="box-title">INTERPRETING \(\textderiv{x}{\theta}\)</div>
+<div class="box">
+    As \(\theta\) increases, the following table summarizes the behavior of the graph of \(r = f(\theta).\)
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>If . . .</th>
+                <th>\(\ds \deriv{x}{\theta} \gt 0\)</th>
+                <th>\(\ds \deriv{x}{\theta} \lt 0\)</th>
+            </tr>
+        </thead>
+        
+        <!-- x > 0 -->
+        <tr>
+            <td>
+                \(x \gt 0\)
+            </td>
+            <td>
+                graph moves away from the \(y\)-axis
+            </td>
+            <td>
+                graph moves toward the \(y\)-axis
+            </td>
+        </tr>
+
+        <!-- x < 0 -->
+        <tr>
+            <td>
+                \(x \lt 0\)
+            </td>
+            <td>
+                graph moves toward the \(y\)-axis
+            </td>
+            <td>
+                graph moves away from the \(y\)-axis
+            </td>
+        </tr>
+    </table>
+</div>
+
+<figure class="polar-y-increasing" id="polar-y-increasing">
+    <img src="../images/sectionImages/polar-y-increasing.jpg" class="polar-y-increasing" alt="Figure 3">
+</figure>
+
+<style>
+    .polar-y-increasing::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Interpreting \(\textderiv{y}{\theta}\)</span>
+    If \(\textderiv{y}{\theta} \gt 0,\)
+    then \(y\) increases as \(\theta\) increases.
+    Graphically, the height of the polar graph \(r = f(\theta)\) is rising.
+    For the special case \(y \gt 0,\)
+    the graph is <i>moving away from the \(x\)-axis</i> (or the line \(\theta = 0\)).
+    If \(y \gt 0\) but \(\textderiv{y}{\theta} \lt 0,\)
+    then the graph is <i>moving toward the \(x\)-axis</i>. 
+    For example, consider <a href="#polar-y-increasing">Figure 3</a>:
+    The loop has positive \(y\) for all \(\theta\) in the first quadrant.
+    The graph rises to a maximum height of \(y_c = f(c) \sin c\) before falling back down. 
+    So for \(0 \lt \theta \lt c,\)
+    \(\textderiv{y}{\theta} \gt 0\)
+    and so the graph is rising, moving away from the \(x\)-axis.
+    For \(c \lt \theta \lt \pi/2,\)
+    \(\textderiv{y}{\theta} \lt 0\)
+    and so the graph is approaching the \(x\)-axis.
+    We also identify \(\theta = c\) as the location of a <i>relative maximum</i>
+    of \(y(\theta) = f(\theta) \sin \theta.\)
+</p>
+
+<p>
+    Now let's suppose \(y \lt 0.\)
+    The graph of \(r = f(\theta)\) 
+    is moving <i>away</i> from the \(x\)-axis if 
+    \(\textderiv{y}{\theta} \lt 0\)
+    and <i>toward</i> the \(x\)-axis if \(\textderiv{y}{\theta} \gt 0.\)
+    This pattern is identical to what we've discussed with \(\textderiv{r}{\theta}\) and \(\textderiv{x}{\theta} \col\)
+    The graph moves <i>away</i> from the \(x\)-axis if 
+    \(y\) and \(\textderiv{y}{\theta}\) have the same sign. 
+    The graph moves <i>toward</i> the \(x\)-axis if \(y\) and \(\textderiv{y}{\theta}\)
+    have different signs.
+</p>
+
+<div class="box-title">INTERPRETING \(\textderiv{y}{\theta}\)</div>
+<div class="box">
+    As \(\theta\) increases, the following table summarizes the behavior of the graph of \(r = f(\theta).\)
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>If . . .</th>
+                <th>\(\ds \deriv{y}{\theta} \gt 0\)</th>
+                <th>\(\ds \deriv{y}{\theta} \lt 0\)</th>
+            </tr>
+        </thead>
+        
+        <!-- y > 0 -->
+        <tr>
+            <td>
+                \(y \gt 0\)
+            </td>
+            <td>
+                graph moves away from the \(x\)-axis
+            </td>
+            <td>
+                graph moves toward the \(x\)-axis
+            </td>
+        </tr>
+
+        <!-- y < 0 -->
+        <tr>
+            <td>
+                \(y \lt 0\)
+            </td>
+            <td>
+                graph moves toward the \(x\)-axis
+            </td>
+            <td>
+                graph moves away from the \(x\)-axis
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(r = 3 \cos \theta.\)
+        Calculate and interpret \(\textderiv{x}{\theta}|_{\theta = \pi/4}.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="polar-ex-3costheta" id="polar-ex-3costheta">
+        <img src="../images/sectionImages/polar-ex-3costheta.jpg" class="polar-ex-3costheta" alt="Figure 4">
+    </figure>
+    
+    <style>
+        .polar-ex-3costheta::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    We need an expression for \(x\) in terms of \(\theta.\)
+    From \(\eqref{eq:xy},\) we have 
+    \[x(\theta) = (3 \cos \theta) \cos \theta = 3 \cos^2 \theta \pd\]
+    Differentiating, we find 
+    \[\deriv{x}{\theta} = 3(2 \cos \theta)(-\sin \theta) = -6 \sin \theta \cos \theta \pd\]
+    When \(\theta = \pi/4,\) we have 
+    \[\deriv{x}{\theta} \intEval_{\theta = \pi/4} = -6 \sin \tfrac{\pi}{4} \cos \tfrac{\pi}{4} = \boxed{-3}\]
+    Also, \(x(\pi/4) = 3/2.\)
+    The signs of \(x\) and \(\textderiv{x}{\theta}\) are opposite; thus, at \(\theta = \pi/4\)
+    the graph of \(r = 3 \cos \theta\) is <b>moving toward the \(\bf y\)-axis</b> as \(\theta\) increases.
+    (See <a href="#polar-ex-3costheta">Figure 4</a>.)
+    <aside class="box-remark">
+        Instead of first finding an expression for \(x,\)
+        you could memorize \(\eqref{eq:dx/dtheta}\)
+        and use it with \(f(\theta) = 3 \cos \theta.\)
+        But doing so is more difficult.
+    </aside>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(r = 4 \theta.\)
+        Calculate and interpret \(\textderiv{y}{\theta}|_{\theta = \pi/2}.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <aside class="box-remark">
+        Instead of first finding an expression for \(y,\)
+        you could memorize \(\eqref{eq:dy/dtheta}\)
+        and use it with \(f(\theta) = 4 \cos \theta.\)
+    </aside>
+    From \(\eqref{eq:xy},\) we express \(y\) in terms of \(\theta \col\)
+    \[y(\theta) = 4 \theta \sin \theta \pd\]
+    Differentiating, we find 
+    \[\deriv{y}{\theta} = 4 \sin \theta + 4 \theta \cos \theta \pd\]
+    Then 
+    \[\deriv{y}{\theta} \intEval_{\theta = \pi/2} = 4 \sin \tfrac{\pi}{2} + 4 \par{\tfrac{\pi}{2}} \cos \tfrac{\pi}{2} = \boxed 4\]
+    Also, \(y(\pi/2) = 2 \pi.\)
+    Because \(y\) and \(\textderiv{y}{\theta}\) are both positive (same sign),
+    the graph of \(r = 4 \theta\) is <b>moving away from the \(\bf x\)-axis</b> as \(\theta\) increases.
+</div>
+
+<h4 id="dy/dx">Tangents to Polar Curves</h4>
+<p>
+    The tangent to the graph of \(r = f(\theta)\) has slope \(\textderiv{y}{x}.\)
+    To find this value, we regard \(\theta\) as a parameter; 
+    in other words, \(\theta\) models our quantities of interest: \(x\) and \(y.\)
+    If \(f\) is differentiable, then \(x\) and \(y\) are differentiable. By the Chain Rule,
+    \[\deriv{y}{\theta} = \deriv{y}{x} \deriv{x}{\theta} \pd\]
+    Dividing both sides by \(\textderiv{x}{\theta}\) gives 
+    \begin{equation} 
+    \deriv{y}{x} = \frac{\textderiv{y}{\theta}}{\textderiv{x}{\theta}} \pd \label{eq:dy/dx}
+    \end{equation}
+    This expression enables us to find the slope of \(r = f(\theta)\) at any angle \(\theta.\)
+</p>
+
+<div class="box-title">CALCULATING AND INTERPRETING \(\textderiv{y}{x}\)</div>
+<div class="box">
+    If \(f\) is differentiable, then the slope of the polar graph \(r = f(\theta)\) is 
+    \[\deriv{y}{x} = \frac{\textderiv{y}{\theta}}{\textderiv{x}{\theta}} \pd \tag*{\(\eqref{eq:dy/dx}\)}\]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find an equation of the tangent line to the polar graph \(r = 2 - 2 \cos \theta\)
+        when \(\theta = \pi/2.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <p>
+        We first need the slope of the curve \(r = 2 - 2 \cos \theta\) at \(\theta = \pi/2.\)
+        \(\eqrefer{eq:dy/dx}\) expresses the slope in terms of \(\theta\) as 
+        \[\deriv{y}{x} = \frac{\textderiv{y}{\theta}}{\textderiv{x}{\theta}} \pd\]
+        Thus, we evaluate this ratio at \(\theta = \pi/2.\) 
+        From \(\eqref{eq:xy}\) we have  
+        \[
+        \ba 
+        x &= (2 - 2 \cos \theta) \cos \theta = 2 \cos \theta - 2 \cos^2 \theta \nl 
+        y &= (2 - 2 \cos \theta) \sin \theta = 2 \sin \theta - 2 \sin \theta \cos \theta \pd 
+        \ea 
+        \]
+        Differentiating each expression with respect to \(\theta,\) we attain
+        \[
+        \ba 
+        \deriv{x}{\theta} &= -2 \sin \theta + 4 \sin \theta \cos \theta \nl 
+        \deriv{y}{\theta} &= 2 \cos \theta - 2 \cos^2 \theta + 2 \sin^2 \theta \pd 
+        \ea 
+        \]
+        So the slope to \(r\) at \(\theta = \pi/2\) is 
+        \[
+        \ba 
+        \deriv{y}{x} \intEval_{\theta = \pi/2} 
+        &= \frac{2 \cos \tfrac{\pi}{2} - 2 \cos^2 \tfrac{\pi}{2} + 2 \sin^2 \tfrac{\pi}{2}}{-2 \sin \tfrac{\pi}{2} + 4 \sin \tfrac{\pi}{2} \cos \tfrac{\pi}{2}} \nl 
+        &= \frac{2}{-2} = -1 \pd
+        \ea 
+        \]
+    </p>
+    <figure class="polar-tan-ex" id="polar-tan-ex">
+        <img src="../images/sectionImages/polar-tan-ex.jpg" class="polar-tan-ex" alt="Figure 5">
+    </figure>
+    
+    <style>
+        .polar-tan-ex::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    <p>
+        We now construct the equation of our line in point-slope form. 
+        When \(\theta = \pi/2,\)
+        \[
+        \ba 
+        x &= 2 \cos \tfrac{\pi}{2} - 2 \cos^2 \tfrac{\pi}{2} = 0 \nl 
+        y &= 2 \sin \tfrac{\pi}{2} - 2 \sin \tfrac{\pi}{2} \cos \tfrac{\pi}{2} = 2 \pd 
+        \ea 
+        \]
+        Hence, our equation of the line is 
+        \[y - 2 = -1(x - 0) \or \boxed{y = 2 -x}\]
+        (See <a href="#polar-tan-ex">Figure 5</a>.)
+    </p>
+</div>
+
+<p>
+    We can use \(\textderiv{y}{x}\) to identify locations of horizontal tangents and vertical tangents.
+    A polar graph has a <i>horizontal tangent</i> at a point if \(\textderiv{y}{\theta} = 0\)
+    but \(\textderiv{x}{\theta} \ne 0.\)
+    The graph has a <i>vertical tangent</i> at a point if \(\textderiv{x}{\theta} = 0\)
+    but \(\textderiv{y}{\theta} \ne 0.\)
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the locations at which the polar graph \(r = 2 + \cos \theta\)
+        has a vertical tangent.
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="polar-vertical-tan-ex" id="polar-vertical-tan-ex">
+        <img src="../images/sectionImages/polar-vertical-tan-ex.jpg" class="polar-vertical-tan-ex" alt="Figure 6">
+    </figure>
+
+    <style>
+        .polar-vertical-tan-ex::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    The graph has a vertical tangent at a point if \(\textderiv{x}{\theta} = 0\)
+    but \(\textderiv{y}{\theta} \ne 0.\)
+    We find, from \(\eqref{eq:xy},\)
+    \[
+    \ba 
+    x &= (2 + \cos \theta) \cos \theta \nl 
+    y &= (2 + \cos \theta) \sin \theta \pd 
+    \ea 
+    \]
+    So 
+    \[
+    \ba 
+    \deriv{y}{x} &= \frac{\textderiv{y}{\theta}}{\textderiv{x}{\theta}} \nl 
+    &= \frac{2 \cos \theta + \cos^2 \theta - \sin^2 \theta}{-2 \sin \theta - 2 \sin \theta \cos \theta} \pd 
+    \ea 
+    \]
+    We equate the denominator to \(0 \col\)
+    \[
+    \ba 
+    -2 \sin \theta - 2 \sin \theta \cos \theta &= 0 \nl 
+    -2 \sin \theta (1 + \cos \theta) &= 0 \nl 
+    \implies \theta &= 0 \cma \theta = \pi \pd
+    \ea 
+    \]
+    Neither of these values results in a numerator of \(0.\)
+    Hence, the graph has vertical tangents when \(\theta = 0\) and \(\theta = \pi\)
+    (<a href="#polar-vertical-tan-ex">Figure 6</a>).
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#dr/dtheta" class="summary-anchor">Calculating and Interpreting \(\textderiv{r}{\theta}\)</a>
+        Let \(f\) be a differentiable function, and let \(r = f(\theta)\) define a polar curve. 
+        If \(r\) and \(\textderiv{r}{\theta}\) have the same sign, 
+        then the graph of \(r = f(\theta)\) is moving away from the pole. 
+        Conversely, if \(r\) and \(\textderiv{r}{\theta}\) have opposite signs,
+        then the graph is moving toward the pole.
+        As \(\theta\) increases, the following table summarizes the behavior of the graph of \(r = f(\theta).\)
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>If . . .</th>
+                    <th>\(\ds \deriv{r}{\theta} \gt 0\)</th>
+                    <th>\(\ds \deriv{r}{\theta} \lt 0\)</th>
+                </tr>
+            </thead>
+            
+            <!-- r > 0 -->
+            <tr>
+                <td>
+                    \(r \gt 0\)
+                </td>
+                <td>
+                    graph moves away from the pole
+                </td>
+                <td>
+                    graph moves toward the pole
+                </td>
+            </tr>
+
+            <!-- r < 0 -->
+            <tr>
+                <td>
+                    \(r \lt 0\)
+                </td>
+                <td>
+                    graph moves toward the pole
+                </td>
+                <td>
+                    graph moves away from the pole
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#dx/dtheta" class="summary-anchor">Calculating and Interpreting \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}\)</a>
+        If \(f\) is differentiable and \(r = f(\theta)\) defines a polar curve, then
+        \begin{align}
+        \deriv{x}{\theta} &= f'(\theta) \cos \theta - f(\theta) \sin \theta \tag*{\(\eqref{eq:dx/dtheta}\)} \nl 
+        \deriv{y}{\theta} &= f'(\theta) \sin \theta + f(\theta) \cos \theta \pd \tag*{\(\eqref{eq:dy/dtheta}\)}
+        \end{align}
+        As \(\theta\) increases, the following tables summarize the behavior of the graph of \(r = f(\theta)\)
+        for conditions of \(\textderiv{x}{\theta}\) and \(\textderiv{y}{\theta}.\)
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>If . . .</th>
+                    <th>\(\ds \deriv{x}{\theta} \gt 0\)</th>
+                    <th>\(\ds \deriv{x}{\theta} \lt 0\)</th>
+                </tr>
+            </thead>
+            
+            <!-- x > 0 -->
+            <tr>
+                <td>
+                    \(x \gt 0\)
+                </td>
+                <td>
+                    graph moves away from the \(y\)-axis
+                </td>
+                <td>
+                    graph moves toward the \(y\)-axis
+                </td>
+            </tr>
+    
+            <!-- x < 0 -->
+            <tr>
+                <td>
+                    \(x \lt 0\)
+                </td>
+                <td>
+                    graph moves toward the \(y\)-axis
+                </td>
+                <td>
+                    graph moves away from the \(y\)-axis
+                </td>
+            </tr>
+        </table>
+
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>If . . .</th>
+                    <th>\(\ds \deriv{y}{\theta} \gt 0\)</th>
+                    <th>\(\ds \deriv{y}{\theta} \lt 0\)</th>
+                </tr>
+            </thead>
+            
+            <!-- y > 0 -->
+            <tr>
+                <td>
+                    \(y \gt 0\)
+                </td>
+                <td>
+                    graph moves away from the \(x\)-axis
+                </td>
+                <td>
+                    graph moves toward the \(x\)-axis
+                </td>
+            </tr>
+    
+            <!-- y < 0 -->
+            <tr>
+                <td>
+                    \(y \lt 0\)
+                </td>
+                <td>
+                    graph moves toward the \(x\)-axis
+                </td>
+                <td>
+                    graph moves away from the \(x\)-axis
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#dy/dx" class="summary-anchor">Tangents to Polar Curves</a>
+        If \(f\) is differentiable, then the slope of the polar graph \(r = f(\theta)\) is 
+        \[\deriv{y}{x} = \frac{\textderiv{y}{\theta}}{\textderiv{x}{\theta}} \pd \tag*{\(\eqref{eq:dy/dx}\)}\]
+        A polar graph has a <i>horizontal tangent</i> at a point if \(\textderiv{y}{\theta} = 0\)
+        but \(\textderiv{x}{\theta} \ne 0.\)
+        The graph has a <i>vertical tangent</i> at a point if \(\textderiv{x}{\theta} = 0\)
+        but \(\textderiv{y}{\theta} \ne 0.\)
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>
