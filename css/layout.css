@@ -553,7 +553,9 @@ ol li{
 
 .true-or-false::before{
     content: 'True or False?';
+    margin-right: 1%;
     font-style: italic;
+    color: rgb(123, 156, 173);
 }
 
 /* 

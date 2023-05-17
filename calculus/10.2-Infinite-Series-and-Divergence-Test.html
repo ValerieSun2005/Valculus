@@ -52,7 +52,681 @@
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
       <!--[[[crefId.Infinite-Series-and-Divergence-Test]]]--> 
+<p>
+    In Section <a href="/Valculus/calculus/10.1-Infinite-Sequences.html">10.1</a> we discussed infinite <i>sequences</i>. 
+    We now investigate infinite <i>series</i>. 
+    Series are fundamental to model the world when ordinary functions fall short,
+    and we investigate various types of series and their convergence or divergence.
+    We cover the following topics:
+    <ul>
+        <li>
+            <a href="#defining-inf-series" class="page-anchor">Defining an Infinite Series</a>
+        </li>
+        <li>
+            <a href="#divergence-test" class="page-anchor">Divergence Test</a>
+        </li>
+        <li>
+            <a href="#inf-geometric" class="page-anchor">Infinite Geometric Series</a>
+        </li>
+        <li>
+            <a href="#telescoping" class="page-anchor">Telescoping Series</a>
+        </li>
+        <li>
+            <a href="#properties-series" class="page-anchor">Properties of Infinite Series</a>
+        </li>
+    </ul>
+</p>
+<h4 id="defining-inf-series">Defining an Infinite Series</h4>
+<p>
+    A <span class="emph">series</span> is the <i>sum</i> of a pattern of numbers.
+    For example, consider the <i>sequence</i> 
+    \[\{a_n\} = \{1, 2, 3, 4, 5\} \pd\]
+    Then a <i>series</i> with \(a_n\) is 
+    \[1 + 2 + 3 + 4 + 5 = \sum_{n = 1}^5 a_n \pd\]
+    An <span class="emph">infinite series</span> is the sum of infinitely many numbers—namely, 
+    \begin{equation}
+    S = a_1 + a_2 + a_3 + \cdots = \sum_{n = 1}^\infty a_n \pd \label{eq:inf-series}
+    \end{equation}
+    It may seem paradoxical to add infinitely many numbers; shouldn't 
+    the sum be \(\infty\) or \(-\infty \ques\)
+    The answer is <i>not always</i>; 
+    we'll see that if we add numbers whose magnitudes decrease to \(0,\) then the sum 
+    may approach a finite value.
+</p>
+<p>
+    A <span class="emph">partial sum</span> approximates an infinite series to a finite number of terms;
+    examples of partial sums to \(\eqref{eq:inf-series}\) are 
+    \[
+    \ba 
+    S_1 &= a_1 \nl 
+    S_2 &= a_1 + a_2 \nl 
+    S_3 &= a_1 + a_2 + a_3 \pd 
+    \ea 
+    \]
+    The general, \(N\)th partial sum to \(\eqref{eq:inf-series}\) is 
+    \begin{equation}
+    S_N = a_1 + a_2 + a_3 + \cdots + a_N = \sum_{i = 1}^N a_i \pd \label{eq:partial-sum}
+    \end{equation}
+    As we add more terms to a partial sum, it becomes closer to the sum of infinitely many terms,
+    assuming the infinite sum exists.
+    In \(\eqref{eq:partial-sum}\) allowing \(N\) to grow arbitrarily enables \(\sum_{i = 1}^N a_i\)
+    to become a better and better approximation to \(\sum_{n = 1}^\infty a_n.\)
+    Thus, \(\sum_{n = 1}^\infty a_n\) is the <i>limiting value</i> of \(\sum_{i = 1}^N a_i\) as \(N \to \infty;\) that is,
+    \[\sum_{n = 1}^\infty a_n = \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
+</p>
 
+<p>
+    If \(\lim_{N \to \infty} \sum_{i = 1}^N a_i\) exists, then \(\sum_{n = 1}^\infty a_n\)
+    is called <span class="emph">convergent</span>.
+    But if the limit of the partial sum does not exist, then \(\sum_{n = 1}^\infty a_n\)
+    is called <span class="emph">divergent</span>. 
+    In words, an infinite series is <i>convergent</i> if adding more terms allows the sum 
+    to approach a fixed number, and <i>divergent</i> if the sum does not approach a final number
+    as we add more terms.
+</p>
+
+<div class="box-title">DEFINING AN INFINITE SERIES</div>
+<div class="box">
+    An <span class="emph">infinite series</span> is the sum of infinitely many numbers:
+    \[
+    a_1 + a_2 + a_3 + \cdots = \sum_{n = 1}^\infty a_n \pd \tag*{\(\eqref{eq:inf-series}\)}
+    \]
+    An infinite series is the limit of a <span class="emph">partial sum</span> as its number of terms increases:
+    \[\sum_{n = 1}^\infty a_n = \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
+    The series \(\sum_{n = 1}^\infty a_n\) is <span class="emph">convergent</span> if this limit exists;
+    otherwise, \(\sum_{n = 1}^\infty a_n\) is <span class="emph">divergent</span>.
+</div>
+
+<h4 id="divergence-test">Divergence Test</h4>
+
+<p>
+    Consider the series 
+    \[S = 1 + 2 + 3 + \cdots \pd\]
+    As more terms are added, \(S\) grows arbitrarily and does not settle to a fixed number;
+    thus, we say the series is <i>divergent</i> (or that the series <i>diverges</i>). 
+    The same conclusion applies to 
+    \[S = 1 + 1 + 1 + \cdots \pd\]
+    We infer the following rule:
+    If the terms of an infinite series are <i>not decreasing in magnitude</i>, then the infinite series <i>must be divergent</i>.
+    Mathematically, we say \(\sum_{n = 1}^\infty a_n\)
+    diverges if \(\lim_{n \to \infty} a_n \ne 0.\)
+    This rule is called the <span class="emph">Divergence Test</span>
+    (or <span class="emph">\(\bf n\)th Term Test</span>).
+
+</p>
+
+<div class="box-title">DIVERGENCE TEST</div>
+<div class="box">
+    The series \(\sum_{n = 1}^\infty a_n\)
+    diverges if \(\lim_{n \to \infty} a_n \ne 0.\)
+</div>
+
+<aside class="box-remark">
+    We begin the summation index at \(n = 1\)
+    as the most general case. But the Divergence Test—and all subsequent discussion 
+    about infinite limits—applies to <i>any</i> starting index; 
+    we see why in <a href="#properties-series" class="page-anchor">Properties of Infinite Series</a>.
+</aside>
+
+<p>
+    We can also express the Divergence Test as follows: 
+    \[\lim_{n \to \infty} a_n = 0 \if \sum_{n = 1}^\infty a_n \; \textrm{converges} \pd\]
+    Thus, if the series \(\sum_{n = 1}^\infty a_n\) converges, then the corresponding sequence 
+    \(\{a_n\}\) converges to \(0.\)
+    (The converse of this statement is <i>not</i> necessarily true,
+    so <span class="warning">be very careful with this test</span>.)
+</p>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let \(S = \sum_{n = 1}^\infty a_n.\)
+    Consider the \(N\)th partial sum of \(S \col\)
+    \[S_N = \sum_{i = 1}^N a_i \pd\]
+    If \(\sum_{n = 1}^\infty a_n\) is convergent, then
+    as \(N\) grows to infinity, \(S_N\)
+    approaches some value and so the difference \(S_N - S_{N - 1}\)
+    becomes \(0.\) 
+    We see 
+    \[
+    \ba 
+    S_N - S_{N - 1} &= \sum_{i = 1}^N a_i - \sum_{i = 1}^{N - 1} a_i \nl 
+    &= (a_1 + a_2 + a_3 + \cdots a_N) - (a_1 + a_2 + a_3 + \cdots + a_{N - 1}) \nl 
+    &= a_N \pd 
+    \ea 
+    \]
+    If \(\sum_{n = 1}^\infty a_n\) diverges, 
+    then \(S_N\) does not settle to a final value as \(N \to \infty.\)
+    Accordingly, \(\lim_{N \to \infty} (S_N - S_{N - 1}) \ne 0,\)
+    or \(\lim_{N \to \infty} a_N \ne 0.\)
+    Thus, \(\sum_{n = 1}^\infty a_n\) is divergent if \(\lim_{n \to \infty} a_n \ne 0.\)
+    \[\qedproof\]
+</p>
+
+<p>
+    If \(\lim_{n \to \infty} a_n = 0,\) 
+    then the Divergence Test gives <i>no information</i> about whether \(\sum_{n = 1}^\infty a_n\)
+    converges or diverges.
+    In other words, the condition \(\lim_{n \to \infty} a_n = 0\)
+    is a necessary but insufficient condition for convergence.
+    For example, the series  
+    \[1 + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \sum_{n = 1}^\infty \frac{1}{n^2}\] 
+    turns out to be convergent.
+    But the series 
+    \begin{equation} 
+    1 + \frac{1}{2} + \frac{1}{3} + \cdots = \sum_{n = 1}^\infty \frac{1}{n} \cma \label{eq:harmonic-series}
+    \end{equation}
+    called the <span class="emph">Harmonic Series</span>, is divergent. 
+    (We see why in Section <a href="/Valculus/calculus/10.4-Integral-Test.html">10.4</a>.)
+    Both \(1/n^2\) and \(1/n\) approach \(0\) as \(n \to \infty,\)
+    so the Divergence Test is inconclusive about whether each series converges or diverges.
+</p>
+
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Apply the Divergence Test to each series.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(\ds \sum_{n = 1}^\infty \sqrt n\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \sum_{n = 2}^\infty \frac{5}{n^3}\)
+                </span>
+            </li>   
+            <li>
+                <span>
+                    \(\ds \sum_{n = 1}^\infty (-1)^n\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <ol class="list-roman">
+        <li>
+            We identify \(a_n = \sqrt n.\)
+            If \(a_n\) does <i>not</i> approach \(0\) as \(n \to \infty,\)
+            then \(\sum a_n\) diverges. 
+            Because 
+            \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} \sqrt n = \infty \ne 0 \cma\]
+            the series \(\sum_{n = 1}^\infty \sqrt n\)
+            is <b>divergent</b>.
+        </li>
+        <hr>
+        <li>
+            We see \(a_n = 5/n^3.\)
+            As \(n \to \infty,\) \(a_n \to 0.\)
+            Thus, the Divergence Test for \(\sum_{n = 2}^\infty 5/n^3\) is <b>inconclusive</b>. 
+            It does not matter that the starting index is \(n = 2;\)
+            this fact is irrelevant to how \(a_n\) behaves as \(n \to \infty.\)
+        </li>
+        <hr>
+        <li>
+            The limit 
+            \(\lim_{n \to \infty} (-1)^n\)
+            does not exist, because as \(n \to \infty,\) \((-1)^n\)
+            alternates continually between \(-1\) and \(1,\)
+            never settling to a final value. 
+            Because \(\lim_{n \to \infty} (-1)^n \ne 0,\)
+            the series \(\sum_{n = 1}^\infty (-1)^n\)
+            <b>diverges</b>.
+        </li>
+    </ol>
+</div>
+
+<h4 id="inf-geometric">Infinite Geometric Series</h4>
+<p>
+    It is rare to be able to find the exact sum of a convergent series. 
+    In this chapter, we primarily investigate methods to determine whether an infinite series has a finite sum.
+    We discuss two types of infinite series whose exact sums we can calculate, however:
+    <i>geometric series</i> and <i>telescoping series</i>.
+</p>
+<p>
+    A <span class="emph">geometric series</span> is a sum in which each term is obtained by 
+    multiplying the previous term by a constant number.
+    We define a <i>finite</i> geometric sum of \(N\) terms as follows:
+    \[S_N = a + ar + ar^2 + \cdots + ar^{N - 1} = \sum_{i = 0}^{N - 1} ar^i \cma\]
+    where \(r\) is called the <span class="emph">common ratio</span>.
+    To find its sum, we multiply the terms of \(S_N\) by \(r\) and subtract the result from the terms of \(S_N,\)
+    as follows:
+    \begin{align} 
+    S_N &= a + \cancel{ar} + \cancel{ar^2} + \cdots + \cancel{ar^{N - 1}} \nonum \nl 
+    -(rS_N &= \cancel{ar} + \cancel{ar^2} + \cancel{ar^3} + \cdots + ar^{N}) \nonum \nl
+    S_N - rS_N &= a - ar^N \nonumber \nl 
+    S_N(1 - r) &= a(1 - r^N) \nonumber \nl 
+    S_N &= \frac{a(1 - r^N)}{1 - r} \pd \label{eq:finite-geo-series}
+    \end{align}
+    We define an <span class="emph">infinite geometric series</span> as follows:
+    \begin{equation} 
+    S = \sum_{n=0}^\infty ar^n = a + ar + ar^2 + \cdots \pd \label{eq:geo-series}
+    \end{equation}
+    To find the sum \(S,\) we allow \(N\) to grow arbitrarily large in \(\eqref{eq:finite-geo-series}.\) 
+    Thus, we represent \(S\) as \(\lim_{N \to \infty} S_N\)
+    if the limit exists.
+    In \(\eqref{eq:finite-geo-series}\) if \(\abs r \lt 1,\) then \(r^N \to 0\)
+    as \(N \to \infty.\) Thus, 
+    \[\lim_{N \to \infty} S_N = \frac{a}{1 - r} \cma\]
+    meaning \(S\) is finite and so the geometric series is convergent.
+    By contrast, if \(\abs r \geq 1,\) then \(\lim_{N \to \infty} S_N\) doesn't exist,
+    so \(\sum_{n = 0}^\infty ar^n\) diverges by the Divergence Test. 
+    Thus, an infinite geometric series converges for \(r\) in the interval \((-1, 1)\) 
+    (called the <span class="emph">interval of convergence</span>),
+    and its sum is given by
+    \begin{equation} 
+    \sum_{n = 0}^\infty ar^n = \frac{a}{1 - r} \cma \abs r \lt 1 \pd \label{eq:inf-geo-series}
+    \end{equation}
+    It is easiest to think of the result of \(\eqrefer{eq:inf-geo-series}\) as 
+    the <i>first term</i> divided by \((1 - r).\)
+    This result is intuitive: If \(\abs r \lt 1,\) then the terms are decreasing in magnitude to \(0\)
+    and so the sum \(S\) is finite. But if \(\abs r \geq 1,\)
+    then the terms do not approach \(0,\) so the series \(\sum_{n = 0}^\infty ar^n\) is divergent.
+</p>
+
+<div class="box-title">INFINITE GEOMETRIC SERIES</div>
+<div class="box">
+    An <span class="emph">infinite geometric series</span> takes the form
+    \begin{equation} 
+    S = \sum_{n=0}^\infty ar^n = a + ar + ar^2 + \cdots \cma \eqlabel{eq:geo-series}
+    \end{equation}
+    where \(r\) is the <span class="emph">common ratio</span>.
+    If \(\abs r \lt 1,\) then the infinite geometric series converges, and the sum is given by 
+    \begin{equation} 
+    \sum_{n=0}^\infty ar^n = \frac{a}{1 - r} \cma \abs r \lt 1 \pd \eqlabel{eq:inf-geo-series}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-geo-series"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Compute the sum of each series or justify why it diverges.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(\ds \sum_{n = 0}^{\infty} 2 \left(\frac{1}{5} \right)^n \)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \sum_{n = 1}^\infty \frac{2}{8^n} \)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \sum_{n = 1}^{\infty} 4^n \cdot e^{-n} \)
+                </span>
+            </li> 
+            <li>
+                <span>
+                    \(\ds 2 - \frac{2}{3} + \frac{2}{9} - \frac{2}{27} + \cdots\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <ol class="list-roman">
+        <li>
+            We identify the <b>common ratio</b> to be \(r = 1/5,\) so the series converges since \(-1 \lt r \lt 1.\)
+            Then by \(\eqrefer{eq:inf-geo-series}\) the series evaluates to 
+            \[\frac{2}{1 - r} = \frac{2}{1- \frac{1}{5}} = 
+            \boxed{\tfrac{5}{2}} \]  
+        </li>
+        <hr>
+        <li>
+            We rewrite the sum as 
+            \[\sum_{n = 1}^\infty 2 \par{\tfrac{1}{8}}^n \pd\]
+            The <b>common ratio</b> is \(r = 1/8,\) which is between \(-1\) and \(1,\)
+            so the series converges. 
+            Since the sum starts at \(n = 1,\)
+            we rewrite the sum as 
+            \[\sum_{n = 0}^\infty 2 \par{\tfrac{1}{8}}^{n + 1} = \sum_{n = 0}^\infty 2 \par{\tfrac{1}{8}} \par{\tfrac{1}{8}}^{n} \pd\]
+            The series therefore, by \(\eqrefer{eq:inf-geo-series},\) evaluates to  
+            \[ 
+            \frac{2 \par{\frac{1}{8}}}{1 - \frac{1}{8}} 
+            = \boxed{\tfrac{2}{7}} 
+            \]
+        </li>
+        <hr>
+        <li>
+            We rewrite the series as 
+            \[\sum_{n = 1}^\infty \left(\frac{4}{e}\right)^n \pd\]
+            The <b>common ratio</b> is \(r = 4/e \gt 1,\)
+            so the series <b>diverges</b>.
+        </li>   
+        <hr>
+        <li>
+            Each subsequent term is multiplied by \(-1/3,\)
+            so this is our <b>common ratio</b> \(r.\)
+            By \(\eqrefer{eq:inf-geo-series}\)
+            we divide the first term \(2\) by \((1 - r);\)
+            the infinite sum is therefore 
+            \[\frac{2}{1 - \par{-\frac{1}{3}}} = \boxed{\tfrac{3}{2}}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem"> 
+        Express the repeating decimal \(0.5\overline{3}\)
+        as a fraction. 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    This repeating decimal is
+    \[0.5\overline{3} = 0.5333 \dots \period\]
+    We express each digit of the decimal as its own term,
+    so we construct an infinite geometric series of common ratio \(r = 0.1 \col\)
+    \[0.5 \overline{3} = 0.5 + 0.03 + 0.003 + 0.0003 + \cdots 
+    = 0.5 + 0.03\sum_{n = 0}^\infty (0.1)^n \pd\]
+    We use \(\eqrefer{eq:inf-geo-series}\) to evaluate the geometric series:  
+    \[
+    \ba 
+    0.5 + \frac{0.03}{1 - 0.1} 
+    &= \frac{1}{2} + \frac{3/100}{9/10} \nl
+    &= \frac{1}{2} + \frac{1}{30} \nl
+    &= \boxed{\frac{8}{15}}
+    \ea 
+    \]
+</div>
+
+<h4 id="telescoping">Telescoping Series</h4>
+<p>
+    In a <span class="emph">telescoping series</span>, all terms cancel except for the first and last.
+    The partial sum of a telescoping series is 
+    \begin{equation}
+    \ba 
+    S_N &= \sum_{i = 1}^N \par{a_i - a_{i + 1}} \nl 
+    &= \par{a_1 - a_2} + \par{a_2 - a_3} + \cdots + \par{a_{N - 2} - a_{N - 1}} + \par{a_{N + 1} - a_N} + \par{a_N - a_{N + 1}} \nl 
+    &= a_1 + a_{N + 1} \pd 
+    \ea 
+    \label{eq:telescoping-sum}
+    \end{equation}
+    In this form, the infinite sum \(\sum_{n = 1}^\infty \par{a_n - a_{n + 1}}\)
+    is easily found by taking \(\lim_{N \to \infty} S_N.\)
+</p>
+<p>
+    When the summation function \(a_i\) is a rational expression, 
+    it is difficult to inspect whether \(\sum a_i\) is a telescoping sum.
+    Thus, <b>partial fraction decomposition</b> 
+    (see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>)
+    may be needed to 
+    reexpress \(a_i\) as a difference of fractions.
+    Most telescoping series are not obvious, so it's helpful to write out terms and 
+    try to find a pattern of canceling.
+</p>
+
+<div class="box-title">TELESCOPING SERIES</div>
+<div class="box">
+    In a <span class="emph">telescoping series</span>, 
+    all terms cancel except for the first and last terms:
+    \begin{equation*}
+    \ba 
+    S_N &= \sum_{i = 1}^N \par{a_i - a_{i + 1}} \nl 
+    &= \par{a_1 - a_2} + \par{a_2 - a_3} + \cdots + \par{a_{N - 2} - a_{N - 1}} + \par{a_{N + 1} - a_N} + \par{a_N - a_{N + 1}} \nl 
+    &= a_1 + a_{N + 1} \pd 
+    \ea 
+    \eqlabel{eq:telescoping-sum}
+    \end{equation*}
+    The exact value of \(\sum_{n = 1}^\infty \par{a_n - a_{n + 1}}\) is \(\lim_{N \to \infty} S_N.\)
+</div>
+
+<div class="example-title" id="ex-telescoping"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate
+        \[\sum_{n = 1}^\infty \frac{1}{n(n + 1)} \pd\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Consider the partial sum 
+    \[S_N = \sum_{i = 1}^N \frac{1}{i(i + 1)} \pd\]
+    The summation function is a rational function, 
+    so we use partial fraction decomposition to see whether the series is telescoping. 
+    Doing so, we attain 
+    \[\frac{1}{i(i + 1)} = \frac{1}{i} - \frac{1}{i + 1} \pd\]
+    This difference of fractions matches \(\eqrefer{eq:telescoping-sum}\) with \(a_i = 1/i\)
+    and \(a_{i + 1} = 1/(i + 1).\)
+    Thus, the sum is telescoping. 
+    We write out the terms of \(S_N \col\)
+    \[
+    \ba 
+    S_N &= \sum_{i = 1}^N \par{\frac{1}{i} - \frac{1}{i + 1}} \nl 
+    &= \underbrace{\par{1 - \cancelColor{orange}{\frac{1}{2}}}}_{i = 1}
+    + \underbrace{\par{\cancelColor{orange}{\frac{1}{2}} - \cancelColor{teal}{\frac{1}{3}}}}_{i = 2} 
+    + \underbrace{\par{\cancelColor{teal}{\frac{1}{3}} - \cancelColor{orange}{\frac{1}{4}}}}_{i = 3} \nl 
+    &+ \cdots 
+    + \underbrace{\par{\cancelColor{teal}{\frac{1}{N - 1}} - \cancelColor{orange}{\frac{1}{N}}}}_{i = N - 1} 
+    + \underbrace{\par{\cancelColor{orange}{\frac{1}{N}} - \frac{1}{N + 1}}}_{i = N} \nl 
+    &= 1 - \frac{1}{N + 1} \pd 
+    \ea 
+    \]
+    Thus, 
+    \[\sum_{n = 1}^\infty \frac{1}{n(n + 1)} = \lim_{N \to \infty} S_N = \lim_{N \to \infty} \par{1 - \frac{1}{N + 1}} = \boxed 1\]
+    This result is logical: only the first term remains, since the 
+    pattern of canceling repeats infinitely.
+</div>
+
+<h4 id="properties-series">Properties of Infinite Series</h4>
+<p>
+    We now discuss the addition and subtraction of infinite series,
+    as well as multiplying a series by a constant.  
+    Note the following properties. 
+</p>
+
+<div class="box-title">ADDING AND SUBTRACTING INFINITE SERIES</div>
+<div class="box">
+    If \(\sum a_n\) and \(\sum b_n\) are convergent series, then the 
+    following series converge and equal the given quantity.
+    <ol class="list-alpha">
+        <li>
+            <span>\(\ds \sum_{n = 1}^\infty \par{a_n + b_n} = \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n\)</span>
+        </li>
+        <li id="part-subtract-series">
+            <span>\(\ds \sum_{n = 1}^\infty \par{a_n - b_n} = \sum_{n = 1}^\infty a_n - \sum_{n = 1}^\infty b_n\)</span>
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let the \(N\)th partial sums of \(\sum_{n = 1}^\infty a_n\) and \(\sum_{n = 1}^\infty b_n\) be, respectively, 
+    \[\sum_{i = 1}^N a_i \and \sum_{i = 1}^N b_i \pd\]
+    The \(N\)th partial sum of \(\sum_{n = 1}^\infty (a_n + b_n)\) is given by 
+    \[\sum_{i = 1}^N (a_i + b_i) \pd\]
+    Taking the limit as \(N\) approaches infinity, we attain 
+    \[
+    \ba 
+    \lim_{N \to \infty} \sum_{i = 1}^N \par{a_i + b_i} 
+    &= \lim_{N \to \infty} \sum_{i = 1}^N a_i + \lim_{N \to \infty} \sum_{i = 1}^N b_i \nl     
+    &= \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n \pd
+    \ea 
+    \]
+    The last step is true because \(\sum_{n = 1}^\infty a_n\) and \(\sum_{n = 1}^\infty b_n\)
+    are convergent series 
+    (see <a href="#defining-inf-series" class="page-anchor">Defining an Infinite Series</a>).
+    Thus, 
+    \[\sum_{n = 1}^\infty (a_n + b_n) = \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n \pd\]
+    The proof for <a href="#part-subtract-series">(b)</a> is nearly identical 
+    if we consider \(\sum_{n = 1}^\infty (a_n - b_n).\)
+    \[\qedproof\]
+</p>
+
+<div class="box-title">INFINITE SERIES WITH CONSTANTS</div>
+<div class="box">
+    Let \(c\) be any real number. 
+    If \(\sum_{n = 1}^\infty a_n\) converges, then so do the following series;
+    if \(\sum_{n = 1}^\infty a_n\) diverges, then so do the following series.
+    <ol class="list-alpha">
+        <li>
+            <span>\(\ds c + \sum_{n = 1}^\infty a_n\)</span>
+        </li>
+        <li id="constant-(b)">
+            <span>\(\ds c - \sum_{n = 1}^\infty a_n\)</span>
+        </li>
+        <li id="constant-(c)">
+            <span>\(\ds c \sum_{n = 1}^\infty a_n\)</span>
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let \(S = \sum_{n = 1}^\infty a_n.\)
+    Also let \(T = c + S;\)
+    the \(N\)th partial sum of \(T\) is
+    \[T_N = c + \sum_{i = 1}^N a_i \pd\]
+    Taking the limit of \(T_N\) as \(N \to \infty\) gives 
+    \[T = \lim_{N \to \infty} \parbr{c + \sum_{i = 1}^N a_i} \pd\]
+    Using the Sum Law of Limits 
+    (see Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), we attain 
+    \[T = \lim_{N \to \infty} c + \lim_{N \to \infty} \sum_{i = 1}^N a_i = c + \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
+    If \(\sum_{n = 1}^\infty a_n\) converges, 
+    then \(\sum_{i = 1}^N a_i\) approaches \(S\) as \(N\) grows to infinity, 
+    so \(T\) converges to \(c + S.\)
+    But if \(\sum_{n = 1}^\infty a_n\) diverges, then \(\lim_{N \to \infty} \sum_{i = 1}^N a_i\)
+    doesn't exist.
+    Accordingly, \(T\) does not approach a finite value as \(N \to \infty,\) so \(c + \sum_{n = 1}^\infty a_n\) diverges.
+    This same process applies to prove the convergence or divergence of \(T = c - S.\)
+    Proving part <a href="#constant-(c)">(c)</a> is left as an exercise. 
+    \[\qedproof\]
+</p>
+
+<p>
+    Because of parts <a href="#constant-(b)">(b)</a> and <a href="#constant-(c)">(c)</a>,
+    <i>the starting index of an infinite series does not change its convergence or divergence</i>. 
+    For example, if \(a_n\) is defined for \(n \geq 1\) and \(\sum a_n\) converges, then 
+    \[\andThree{\sum_{n = 1}^\infty a_n}{\sum_{n = 3}^\infty a_n}{\sum_{n = 100}^\infty a_n}\]
+    are <i>all</i> convergent because they only vary by a finite number of terms (whose sums are finite). 
+    Adding a constant to a finite sum yields a finite result,
+    and multiplying a finite sum by a constant produces a finite answer; thus, the following example series all converge:
+    \[\andThree{2 + \sum_{n = 1}^\infty a_n}{-6 + \sum_{n = 1}^\infty a_n}{100 \sum_{n = 1}^\infty a_n} \pd\] 
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate
+        \[S = \sum_{n = 1}^\infty \parbr{\frac{5}{n(n + 1)} + \frac{2}{8^n}} \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    From <a href="#ex-telescoping">Example 4</a> and <a href="#ex-geo-series">Example 2</a>, respectively, 
+    \[\sum_{n = 1}^\infty \frac{1}{n(n + 1)} = 1 \and \sum_{n = 1}^\infty 2 \par{\tfrac{1}{8}}^n = \tfrac{2}{7} \pd\]
+    Thus, we split the sum as follows:
+    \[
+    \ba 
+    S &= \sum_{n = 1}^\infty \frac{5}{n(n + 1)} + \sum_{n = 1}^\infty \frac{2}{8^n} \nl 
+    &= 5 \sum_{n = 1}^\infty \frac{1}{n(n + 1)} + \sum_{n = 1}^\infty 2 \par{\tfrac{1}{8}}^n \nl 
+    \ea 
+    \]
+    because both series are convergent.
+    Thus, 
+    \[S = 5(1) + \tfrac{2}{7} = \boxed{\tfrac{37}{7}}\]
+</div>
+
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-inf-series" class="summary-anchor">Defining an Infinite Series</a>
+        An <span class="emph">infinite series</span> is the sum of infinitely many numbers:
+        \[
+        a_1 + a_2 + a_3 + \cdots = \sum_{n = 1}^\infty a_n \pd \tag*{\(\eqref{eq:inf-series}\)}
+        \]
+        An infinite series is the limit of a <span class="emph">partial sum</span> as its number of terms increases:
+        \[\sum_{n = 1}^\infty a_n = \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
+        The series \(\sum_{n = 1}^\infty a_n\) is <span class="emph">convergent</span> if this limit exists;
+        otherwise, \(\sum_{n = 1}^\infty a_n\) is <span class="emph">divergent</span>.
+        The starting index \(n = 1\) is the most general case, but the same rules we discuss apply to any starting index.
+    </p>
+    <p>
+        <a href="#divergence-test" class="summary-anchor">Divergence Test</a>
+        According to the <span class="emph">Divergence Test</span>, 
+        the series \(\sum_{n = 1}^\infty a_n\)
+        diverges if \(\lim_{n \to \infty} a_n \ne 0.\)
+        But <span class="warning">the converse of this statement is not always true</span>; 
+        if \(\lim_{n \to \infty} a_n = 0,\) then the Divergence Test gives <i>no information</i>
+        about whether \(\sum_{n = 1}^\infty a_n\) converges or diverges. 
+        The <span class="emph">Harmonic Series</span> is the <i>divergent</i> sum 
+        of the reciprocals of positive integers:
+        \begin{equation*} 
+        1 + \frac{1}{2} + \frac{1}{3} + \cdots = \sum_{n = 1}^\infty \frac{1}{n} \pd \eqlabel{eq:harmonic-series}
+        \end{equation*} 
+    </p>
+
+    <p>
+        <a href="#inf-geometric" class="summary-anchor">Infinite Geometric Series</a>
+        An <span class="emph">infinite geometric series</span> takes the form
+        \begin{equation} 
+            S = \sum_{n=0}^\infty ar^n = a + ar + ar^2 + \cdots \cma \eqlabel{eq:geo-series}
+        \end{equation}
+        where \(r\) is the <span class="emph">common ratio</span>.
+        If \(\abs r \lt 1,\) then the infinite geometric series converges, and the sum is given by 
+        \begin{equation} 
+        S = \frac{a}{1 - r} \cma \abs r \lt 1 \pd \eqlabel{eq:inf-geo-series}
+        \end{equation}
+        Think of this form as the <i>first term</i> divided by \((1 - r).\)
+    </p>
+
+    <p>
+        <a href="#telescoping" class="summary-anchor">Telescoping Series</a>
+        A <span class="emph">telescoping series</span> is a special type of convergent series in which
+        all terms cancel except for the first and last terms:
+        \begin{equation*}
+        \ba 
+        S_N &= \sum_{i = 1}^N \par{a_i - a_{i + 1}} \nl 
+        &= \par{a_1 - a_2} + \par{a_2 - a_3} + \cdots + \par{a_{N - 2} - a_{N - 1}} + \par{a_{N + 1} - a_N} + \par{a_N - a_{N + 1}} \nl 
+        &= a_1 + a_{N + 1} \pd 
+        \ea 
+        \eqlabel{eq:telescoping-sum}
+        \end{equation*}
+        We find the value of \(\sum_{n = 1}^\infty \par{a_n - a_{n + 1}}\) by taking \(\lim_{N \to \infty} S_N.\)
+        It is often difficult to determine when a series is telescoping;
+        <b>partial fraction decomposition</b> can be used to rewrite a rational function 
+        as the difference of fractions.
+    </p>
+
+    <p>
+        <a href="#properties-series" class="summary-anchor">Properties of Infinite Series</a>
+        Understanding properties of infinite series enables us to further determine which series converge 
+        and which diverge. 
+        If \(\sum a_n\) and \(\sum b_n\) are convergent series, then the 
+        following series converge and equal the given quantity.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \sum_{n = 1}^\infty \par{a_n + b_n} = \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n\)</span>
+            </li>
+            <li id="part-subtract-series">
+                <span>\(\ds \sum_{n = 1}^\infty \par{a_n - b_n} = \sum_{n = 1}^\infty a_n - \sum_{n = 1}^\infty b_n\)</span>
+            </li>
+        </ol>
+    </p>
+    <p class="no-indent">
+        Let \(c\) be any real number. 
+        If \(\sum_{n = 1}^\infty a_n\) converges, then so do the following series;
+        if \(\sum_{n = 1}^\infty a_n\) diverges, then so do the following series.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds c + \sum_{n = 1}^\infty a_n\)</span>
+            </li>
+            <li id="constant-(b)">
+                <span>\(\ds c - \sum_{n = 1}^\infty a_n\)</span>
+            </li>
+            <li id="constant-(c)">
+                <span>\(\ds c \sum_{n = 1}^\infty a_n\)</span>
+            </li>
+        </ol>
+    </p>
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">

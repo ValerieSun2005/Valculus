@@ -50,7 +50,1609 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      
+      <div id="problem-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        How do we define an <b>infinite series</b>?
+        When does an infinite series <b>converge</b>, 
+        and when does one <b>diverge</b>?
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We define an <b>infinite series</b>
+        as the limit of a partial sum as its number of terms increases. 
+        Namely, we define the infinite series \(\sum_{n = 1}^\infty a_n\)
+        as the limit 
+        \[\lim_{N \to \infty} \sum_{i = 1}^N a_i\]
+        if this limit exists. 
+        The sum \(\sum_{n = 1}^\infty a_n\) <b>converges</b>
+        if the limit exists but <b>diverges</b>
+        if the limit does not exist.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        State the <b>Divergence Test</b>. 
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The <b>Divergence Test</b> enables us to determine whether a series diverges. 
+        The series \(\sum_{n = 1}^\infty a_n\) 
+        diverges if \(\lim_{n \to \infty} a_n \ne 0.\)
+        But the test is inconclusive if the limit equals \(0\) or does not exist.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 2}^\infty \frac{2n^2}{5n^2 + 11n - 7}\]
+     use the Divergence Test. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We see 
+        \[\lim_{n \to \infty} \frac{2n^2}{5n^2 + 11n - 7} = \frac{2}{5} \pd\]
+        This limit doesn't equal \(0,\) 
+        so the Divergence Test states that the series <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \cos n\]
+     use the Divergence Test. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The function \(\cos n\) oscillates continually as \(n \to \infty,\)
+        never settling to any final value. 
+        The limit \(\lim_{n \to \infty} \cos n\) therefore does not exist. 
+        So the Divergence Test asserts that the sum <b>diverges</b>. 
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty e^n \cdot 3^{-n}\]
+     use the Divergence Test. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the series as 
+        \[\sum_{n = 1}^\infty \par{\frac{e}{3}}^n \pd\]
+        Then  
+        \[\lim_{n \to \infty} \par{\frac{e}{3}}^n = \lim_{n \to \infty} \frac{e^n}{3^n} = 0 \pd\]
+        [The denominator's base in \((e/3)^n\) is greater than the numerator's base,
+        so the denominator grows faster and thus forces the limit to \(0.\)]
+        Because this limit is \(0,\) 
+        the Divergence Test is 
+        <b>inconclusive</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 2 + \frac{1}{2} + \frac{1}{8} + \frac{1}{32} + \cdots\]
+     use the Divergence Test. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The sum can be expressed in summation notation as 
+        \[\sum_{n = 0}^\infty 2 \par{\frac{1}{4}}^n \pd\]
+        We see 
+        \[\lim_{n \to \infty} 2 \par{\frac{1}{4}}^n = \lim_{n \to \infty} \frac{2}{4^n} = 0 \pd\]
+        Thus, the Divergence Test is <b>inconclusive</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{n!}{n^{1234567890}}\]
+     use the Divergence Test. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Factorials grow faster than do exponential functions. 
+        Thus, 
+        \[\lim_{n \to \infty} \frac{n!}{n^{1234567890}} = \infty \pd\]
+        Since this limit doesn't equal \(0,\) the sum <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \left(\frac{1}{2}\right)^n \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This series has common ratio \(r = 1/2.\) 
+        Since \(|r| \lt 1,\) the sum converges.
+        The series starts at \(n = 0,\) so the first term is \((1/2)^0 = 1.\)
+        So the value of the sum is 
+        \[
+        \frac{1}{1 - \tfrac{1}{2}} = \boxed{2}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \left(\frac{2}{3}\right)^n \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We find the common ratio to be \(r = 2/3.\)
+        The magnitude of \(r\) is less than \(1,\) so the infinite geometric series is convergent. 
+        The first term in the sum is \((2/3)^1 = 2/3.\)
+        Thus, the sum is 
+        \[\frac{2/3}{1 - \tfrac{2}{3}} = \boxed{2}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{3}{5^n} \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        At first glance, the series does not appear to be geometric.
+        But we rewrite the series as 
+        \[3 \sum_{n = 0}^\infty \par{\frac{1}{5}}^n \cma \]
+        which we easily identify as a geometric series of common ratio \(r = 1/5.\)
+        The first term in the series is \(3 \par{1/5}^0 = 3.\)
+        Thus, the sum of the series is 
+        \[\frac{3}{1 - \tfrac{1}{5}} = \boxed{\frac{15}{4}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{5^n}{e^{n + 1}} \]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the series as 
+        \[\sum_{n = 0}^\infty \frac{5^n}{e^n \, e} = \frac{1}{e} \sum_{n = 0}^\infty \par{\frac{5}{e}}^n \pd\]
+        The common ratio is \(r = 5/e,\) which is greater than \(1.\)
+        Therefore, the series <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 3 - \frac{3}{5} + \frac{3}{25} - \frac{3}{125} + \cdots \]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We identify the series as geometric with common ratio \(r = -1/5.\)
+        The first term is \(3,\) so the sum is 
+        \[\frac{3}{1 + \tfrac{1}{5}} = \boxed{\frac{5}{2}}\] 
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 2 \pi + 2 \pi^2 + 2 \pi^3 + 2 \pi^4 + \cdots \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This series is geometric with common ratio \(r = \pi.\)
+        Because \(r \gt 1,\) the series <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{5}{16} + \frac{5}{64} + \frac{5}{256} + \frac{5}{1024} + \cdots\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the sum either as  
+        \[5\sum_{n = 2}^\infty \left(\frac{1}{4} \right)^n \]
+        or 
+        \[\frac{5}{16} \left(1 + \frac{1}{4} + \frac{1}{16} + \frac{1}{64} + \cdots \right) 
+        = \frac{5}{16} \sum_{n = 0}^\infty \frac{1}{4^n} \period 
+        \]
+        In either case we get  
+        \[\frac{5/16}{1 - \frac{1}{4}} = \boxed{\frac{5}{12}} \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty n^2\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Because 
+        \[\lim_{n \to \infty} n^2 = \infty \ne 0 \cma\]
+        this series <b>diverges</b> by the Divergence Test.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{2^{n - 2}}{3^n}\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Using exponent properties, we rewrite the sum as 
+        \[ 
+        \ba 
+        \sum_{n = 0}^\infty \frac{2^n \cdot 2^{-2}}{3^n} 
+        &amp;= \frac{1}{4} \sum_{n = 0}^\infty \left(\frac{2}{3}\right)^n \nl
+        &amp;= \frac{1/4}{1 - \frac{2}{3}} \nl
+        &amp;= \boxed{\frac{3}{4}}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{e^{n + 3}}{\pi^n} \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the series as 
+        \[\sum_{n = 0}^\infty \frac{e^n \, e^3}{\pi^n} = e^3 \sum_{n = 0}^\infty \par{\frac{e}{\pi}}^n \cma\]
+        a geometric series with common ratio \(r = e/\pi.\)
+        Note that \(-1 \lt r \lt 1,\) so the series is convergent.
+        The first term of the series is \(e^3 \par{e/\pi}^0 = e^3.\)
+        Thus, the sum becomes
+        \[\frac{e^3}{1 - \tfrac{e}{\pi}} = \boxed{\frac{\pi e^3}{\pi - e}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 2}^\infty \frac{1}{n^2 - n}\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        When the summation function is a rational function, 
+        the sum may be <b>telescoping</b>. 
+        We perform partial fraction decomposition;
+        see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a> 
+        if you need a review.
+        We factor the denominator as \(n(n - 1),\) and our setup is as follows:
+        \[\frac{1}{n^2 - n} = \frac{1}{n(n - 1)} = \frac{A}{n} + \frac{B}{n - 1} \pd\]
+        To solve for \(A\) and \(B,\)
+        we multiply to attain a common denominator, with the numerator expressed in terms of \(A\) and \(B \col\)
+        \[\frac{A}{n} \cdot \frac{n - 1}{n - 1}+ \frac{B}{n - 1} \cdot \frac{n}{n} 
+        = \frac{A(n - 1) + Bn}{n^2 - n} 
+        =
+        \frac{1}{n^2 - n} \pd\]
+        Thus, 
+        \[A(n - 1) + Bn = 1 \pd\]
+        Substituting \(n = 0\) shows 
+        \[A(0 - 1) + 0 = 1 \implies A = -1 \pd\]
+        Likewise, substituting \(n = 1\) gives 
+        \[A(1 - 1) + B = 1 \implies B = 1 \pd\]
+        Thus, 
+        \[\sum_{n = 2}^\infty \frac{1}{n^2 - n} = \sum_{n = 2}^\infty \par{\frac{-1}{n} + \frac{1}{n - 1}} \pd\]
+        Now consider the partial sum 
+        \[S_N = \sum_{i = 2}^N \par{\frac{-1}{i} + \frac{1}{i - 1}} \pd\]
+        Expanding gives 
+        \[
+        \ba
+        S_N &amp;=
+        \par{\frac{-1}{2} + \frac{1}{1}} 
+        + \par{\frac{-1}{3} + \frac{1}{2}} 
+        + \par{\frac{-1}{4} + \frac{1}{3}} \nl 
+        &amp;+ \cdots 
+        + \par{\frac{-1}{N - 1} + \frac{1}{N - 2}} 
+        + \par{\frac{-1}{N} + \frac{1}{N - 1}} \cma 
+        \ea 
+        \]
+        where all terms cancel except \(1/1\) and \(-1/N.\)
+        Thus, \(S_N = 1 - 1/N.\)
+        Accordingly, 
+        \[\sum_{n = 2}^\infty \frac{1}{n^2 - n} = \lim_{N \to \infty} S_N = \lim_{N \to \infty} \par{1 - \frac{1}{N}} = \boxed 1\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 2}^\infty \frac{n^3 + 2}{4n^2 - 1}\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Because 
+        \[\lim_{n \to \infty} \frac{n^3 + 2}{4n^2 - 1} = \infty \ne 0 \cma\]
+        this series <b>diverges</b> by the Divergence Test.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{3}{n^2 + 9n + 20}\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The sum may be <b>telescoping</b> because we see a rational expression.
+        We perform partial fraction decomposition 
+        (to review, see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>). 
+        We factor the denominator as \((n + 4)(n + 5),\) and the partial fractions take the form 
+        \[\frac{A}{n + 4} + \frac{B}{n + 5} \pd\]
+        To solve for \(A\) and \(B,\)
+        we multiply to attain a common denominator, with the numerator expressed in terms of \(A\) and \(B \col\)
+        \[\frac{A}{n + 4} \cdot \frac{n + 5}{n + 5}+ \frac{B}{n + 5} \cdot \frac{n + 4}{n + 4} 
+        = \frac{A(n + 5) + B(n + 4)}{(n + 4)(n + 5)} 
+        =
+        \frac{3}{n^2 + 9n + 20} \pd\]
+        Thus, 
+        \[A(n + 5) + B(n + 4) = 3 \pd\]
+        Substituting \(n = -4\) shows 
+        \[A(-4 + 5) + B(-4 + 4) = 3 \implies A = 3 \pd\]
+        Also, letting \(n = -5\) gives 
+        \[A(-5 + 5) + B(-5 + 4) = 3 \implies B = -3 \pd\]
+        Thus, 
+        \[\sum_{n = 0}^\infty \frac{3}{n^2 + 9n + 20} = \sum_{n = 0}^\infty \par{\frac{3}{n + 4} - \frac{3}{n + 5}} \pd\]
+        Now let the \(N\)th partial sum be  
+        \[S_N = \sum_{i = 0}^N \par{\frac{3}{i + 4} - \frac{3}{i + 5}} \pd\]
+        We expand to find 
+        \[
+        \ba
+        S_N &amp;=
+        \par{\frac{3}{4} - \frac{3}{5}} 
+        + \par{\frac{3}{5} - \frac{3}{6}} 
+        + \par{\frac{3}{6} - \frac{3}{7}}  \nl 
+        &amp;+ \cdots 
+        + \par{\frac{3}{N + 3} - \frac{3}{N + 4}} 
+        + \par{\frac{3}{N + 4} - \frac{3}{N + 5}} \cma 
+        \ea 
+        \]
+        where all terms cancel except \(3/4\) and \(-3/(N + 5).\)
+        Thus, \(S_N = 3/4 - 3/(N + 5)\)
+        and so 
+        \[\sum_{n = 0}^\infty \frac{3}{n^2 + 9n + 20} = \lim_{N \to \infty} S_N 
+        = \lim_{N \to \infty} \par{\frac{3}{4} - \frac{3}{N + 5}} = \boxed{\frac{3}{4}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{3}{n^2 + 3n}\]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The sum may be <b>telescoping</b> because we see a rational expression.
+        We perform partial fraction decomposition.
+        (For a review, see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>.)
+        We factor the denominator as \(n(n + 3),\) and the partial fractions take the form 
+        \[\frac{A}{n} + \frac{B}{n + 3} \pd\]
+        To solve for \(A\) and \(B,\)
+        we multiply to attain a common denominator, with the numerator expressed in terms of \(A\) and \(B \col\)
+        \[\frac{A}{n} \cdot \frac{n + 3}{n + 3}+ \frac{B}{n + 3} \cdot \frac{n}{n} 
+        = \frac{A(n + 3) + Bn}{n(n + 3)} 
+        =
+        \frac{3}{n^2 + 3n} \pd\]
+        We therefore have 
+        \[A(n + 3) + Bn = 3 \pd\]
+        Letting \(n = 0\) yields 
+        \[A(0 + 3) + 0 = 3 \implies A = 1 \pd\]
+        Also, letting \(n = -3\) gives 
+        \[A(-3 + 3) + B(-3) = 3 \implies B = -1 \pd\]
+        Thus, 
+        \[\sum_{n = 1}^\infty \frac{3}{n^2 + 3n} 
+        = \sum_{n = 1}^\infty \par{\frac{1}{n} - \frac{1}{n + 3}} \pd\]
+        Let the \(N\)th partial sum be  
+        \[S_N = \sum_{i = 1}^N \par{\frac{1}{i} - \frac{1}{i + 3}} \pd\]
+        We expand to find 
+        \[
+        \ba
+        S_N &amp;=
+        \par{\frac{1}{1} - \frac{1}{4}} 
+        + \par{\frac{1}{2} - \frac{1}{5}} 
+        + \par{\frac{1}{3} - \frac{1}{6}} 
+        + \par{\frac{1}{4} - \frac{1}{7}} \nl 
+        &amp;+ \cdots 
+        + \par{\frac{1}{N - 1} - \frac{1}{N + 2}} 
+        + \par{\frac{1}{N} - \frac{1}{N + 3}} \nl 
+        &amp;= 1 + \frac{1}{2} + \frac{1}{3}  + \frac{1}{N + 1} 
+        + \frac{1}{N + 2} + \frac{1}{N + 3} \pd
+        \ea 
+        \]
+        As \(N \to \infty,\) 
+        \[S_N \to 1 + \frac{1}{2} + \frac{1}{3} = \boxed{\frac{11}{6}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{2^{3n - 1}}{7^n} \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The series is equivalent to 
+        \[\sum_{n = 0}^\infty \frac{2^{3n} \cdot 2^{-1}}{7^n} = \frac{1}{2} \sum_{n = 0}^\infty \frac{8^n}{7^n} \pd\]
+        We identify that the common ratio is \(r = 8/7.\)
+        Since \(r \gt 1,\) the series <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{5^{2n}}{e^{n + 1}} \] 
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the series as 
+        \[\sum_{n = 0}^\infty \frac{25^n}{e^n \cdot e} \pd\]
+        We see that the common ratio is \(r = 25/e,\) which is greater than \(1.\)
+        Therefore, the series <b>diverges</b>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{2}{3} - \frac{2 e}{9} + \frac{2 e^2}{27} - \frac{2e^3}{81} + \cdots \]
+     evaluate the infinite series or show that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        If you find it difficult to identify the common ratio of a known geometric series, 
+        then you may divide a term by its preceding term. 
+        For example, dividing the second term by the first term shows  
+        \[r = \frac{-2e/9}{2/3} = -\frac{e}{3} \pd\]
+        The first term is \(2/3,\) so the sum is 
+        \[
+        \frac{2/3}{1 - \par{-\tfrac{e}{3}}} = \boxed{\frac{2}{3 + e}}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty (5k)^n \] 
+     determine the values of \(k\) for which the geometric series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The common ratio \(5k\) must be within \((-1, 1)\)
+        for the infinite series to converge.
+        We therefore find 
+        \[
+        \abs{5k} \lt 1 \arrowTwoWay \boxed{-\tfrac{1}{5} \lt k \lt \tfrac{1}{5}}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \left(\frac{2k}{3}\right)^n \] 
+     determine the values of \(k\) for which the geometric series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We identify the common ratio to be \(r = 2k/3.\)
+        For convergence, we require \(-1 \lt r \lt 1,\) so the series converges for 
+        \[
+        \boxed{-\tfrac{3}{2} \lt \; k \lt \tfrac{3}{2}}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty (3 + 7k)^n \] 
+     determine the values of \(k\) for which the geometric series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The common ratio \(3 + 7k\) must be within \((-1, 1)\)
+        for the infinite series to converge.
+        We therefore find 
+        \[
+        \abs{3 + 7k} \lt 1 \arrowTwoWay -1 \lt 3 + 7k \lt 1 \arrowTwoWay \boxed{-\tfrac{4}{7} \lt k \lt -\tfrac{2}{7}}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{k^n}{3^{n + 2}} \] 
+     determine the values of \(k\) for which the geometric series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Rewriting the series as 
+        \[\sum_{n = 0}^\infty \frac{k^n}{3^n \, 3^2} = \frac{1}{3^2} \sum_{n = 0}^\infty \par{\frac{k}{3}}^n \cma\]
+        we find the common ratio to be \(r = k/3.\)
+        We need \(-1 \lt r \lt 1,\) so the series converges for 
+        \[\boxed{-3 \lt k \lt 3}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 0.\overline{4} \]  
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The series representation of the repeating decimal \(0.444 \dots\) is 
+        \[\frac{4}{10} \par{1 + \frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \cdots} \cma\]
+        a geometric series of common ratio \(r = 1/10.\)
+        The first term of the series is \(4/10,\) so the sum is 
+        \[\frac{4/10}{1 - \tfrac{1}{10}} = \boxed{\frac{4}{9}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4.\overline{3}\]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We express the decimal as \(4 + 0.333 \dots.\)
+        We write the latter term as 
+        \[3 \par{\frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \cdots} \pd\]
+        This series has common ratio \(r = 1/10\) and first term \(3/10,\)
+        and therefore sums to 
+        \[\frac{3/10}{1 - \tfrac{1}{10}} = \frac{1}{30} = \frac{1}{3} \pd\]
+        We add this value to \(4\) to obtain 
+        \[4 + \frac{1}{3} = \boxed{\frac{13}{3}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[0.1\overline{2}\]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We represent the repeating decimal as follows:
+        \[
+        \ba
+        0.1\overline{2} &amp;= 0.1 + 0.02 + 0.002 + 0.0002 + \cdots \nl
+        &amp;= 0.1 + 0.02\sum_{n = 0}^\infty \left(0.1\right)^n \nl
+        &amp;= 0.1 + \frac{0.02}{1 - 0.1} \nl
+        &amp;= 0.1 + \frac{2/100}{9/10} \nl
+        &amp;= \frac{1}{10} + \frac{1}{45} \nl
+        &amp;= \boxed{\frac{11}{90}}\nl
+        \ea
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[0.64\overline{1}\]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We attain 
+        \[
+        \ba 
+        0.64\bar{1} &amp;= 0.64 + 0.001 + 0.0001 + 0.00001 + \cdots \nl
+        &amp;= 0.64 + 0.001\sum_{n = 0}^\infty \left(0.1\right)^n \nl
+        &amp;= 0.64 + \frac{0.001}{1 - 0.1} \nl
+        &amp;= 0.64 + \frac{1/1000}{9/10} \nl
+        &amp;= \frac{64}{100} + \frac{1}{900} \nl
+        &amp;= \boxed{\frac{577}{900}}\nl
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[0.7\overline{6}\]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        A series representation is as follows:
+        \[
+        \begin{aligned}
+        0.7\overline{6} &amp;= 0.7 + 0.06 + 0.006 + 0.0006 + \cdots \nl
+        &amp;= 0.7 + 0.06\sum_{n = 0}^\infty \left(0.1\right)^n \nl
+        &amp;= 0.7 + \frac{0.06}{1 - 0.1} \nl
+        &amp;= 0.7 + \frac{6/100}{9/10} \nl
+        &amp;= \frac{7}{10} + \frac{1}{15} \nl
+        &amp;= \boxed{\frac{23}{30}}\nl
+        \end{aligned}
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 5.3\overline{2} \]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The repeating decimal is the same as \(5.3 + 0.0\overline{2}.\)
+        We express \(0.0\overline{2}\) as 
+        \[2\par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma \]
+        a geometric series of common ratio \(r = 1/10\) and first term \(2/100.\)
+        We therefore find 
+        \[0.0\overline{2} = \frac{2/100}{1 - \tfrac{1}{10}} = \frac{2}{90} = \frac{1}{45} \pd\]
+        The decimal \(5.3\) is \(5 + 3/10\) \(= 53/10.\)
+        The repeating decimal \(5.3\overline{2}\) is then 
+        \[\frac{53}{10} + \frac{1}{45} = \boxed{\frac{479}{90}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 2.8\overline{5} \]
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Note that the decimal is equivalent to \(2.8 + 0.0\overline{5}.\)
+        We write \(0.0\overline{5}\) as 
+        \[5 \par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma\]
+        a geometric series of common ratio \(r = 1/10\) and first term \(5/100.\)
+        Its sum is then 
+        \[\frac{5/100}{1 - \tfrac{1}{10}} = \frac{5}{90} = \frac{1}{18} \pd\]
+        We write \(2.8\) as \(28/10 = 14/5,\) 
+        so \(2.8\overline{5}\) equals 
+        \[\frac{14}{5} + \frac{1}{18} = \boxed{\frac{257}{90}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4.6\overline{7} \] 
+     express the repeating decimal as a fraction. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We split the decimal as \(4.6 + 0.0\overline{7}.\)
+        The piece \(0.0\overline{7}\) is equivalent to 
+        \[7 \par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma\]
+        an infinite geometric series of common ratio \(r = 1/10\) and first term \(7/100.\)
+        It therefore has sum 
+        \[\frac{7/100}{1 - \tfrac{1}{10}} = \frac{7}{90} \pd\]
+        We add this value to \(4.6 = 46/10,\) getting 
+        \[\frac{46}{10} + \frac{7}{90} = \boxed{\frac{421}{90}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Consider the two infinite geometric series 
+        \[S = \sum_{n = 1}^\infty \frac{1}{9^n} \and T = \sum_{n = 0}^\infty (-1)^n \, \frac{e^n}{5^n} \pd\]
+        <ol class="list-alpha">
+<li>
+                Both geometric series are convergent.
+                Calculate \(S\) and \(T.\)
+            </li>
+<li>
+                Find the values of \(S + T\) and \(S - T.\)
+            </li>
+<li>
+                Evaluate \(ST.\)
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                We rewrite the series as 
+                \[S = \sum_{n = 1}^\infty \par{\frac{1}{9}}^n \and T = \sum_{n = 0}^\infty \par{-\frac{e}{5}}^n \pd\]
+                The common ratio of \(S\) is \(r = 1/9,\)
+                and the common ratio of \(T\) is \(r = -e/5.\)
+                In each series, dividing the first term by \(1 - r\) gives  
+                \[
+                \ba 
+                S &amp;= \frac{1/9}{1 - \frac{1}{9}} = \boxed{\frac{1}{8}} \nl 
+                T &amp;= \frac{1}{1 + \frac{e}{5}} = \boxed{\frac{5}{5 + e}}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Because both sums are finite, 
+                \[
+                \ba 
+                S + T &amp;= \boxed{\frac{1}{8} + \frac{5}{5 + e}} \nl 
+                S - T &amp;= \boxed{\frac{1}{8} - \frac{5}{5 + e}} 
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Be careful <i>not</i> to multiply the summation functions. 
+                Instead, we must multiply the sums:
+                \[ST = \par{\frac{1}{8}} \par{\frac{5}{5 + e}} = \boxed{\frac{5}{40 + 8e}}\] 
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        The series \(\sum_{n = 1}^\infty a_n\) converges to \(S.\)
+        Let \(c\) be a positive integer.
+        Decide whether each of the following series converges or diverges. 
+        <ol class="list-alpha">
+<li>
+                \(c + \sum_{n = 1}^\infty a_n\)
+            </li>
+<li>
+                \(\sum_{n = c}^\infty a_n\)
+            </li>
+<li>
+                \(c \sum_{n = 1}^\infty a_n\)
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                Adding a finite number \(c\) to \(S\) results in a finite number.
+                Thus, this series <b>converges</b>. 
+            </li>
+<hr/>
+<li>
+                Changing the initial index does not alter the convergence or divergence of the series, 
+                since the starting point does not change the behavior of the sum as \(n \to \infty.\)
+                This series therefore <b>converges</b>. 
+            </li>
+<hr/>
+<li>
+                Multiplying \(S\) by a finite number \(c\) gives another finite number. 
+                So this series <b>converges</b>.
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> If \(\lim_{n \to \infty} a_n = 0,\) 
+        then \(\sum a_n\) converges.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>false</b>. 
+        The Divergence Test asserts that \(\sum a_n\) <i>diverges</i>
+        if \(\lim_{n \to \infty} a_n \ne 0;\)
+        the test gives no information when \(\lim_{n \to \infty} = 0.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> If \(\{a_n\}\) 
+        diverges, then \(\sum a_n\) also diverges.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>true</b>. 
+        If \(\{a_n\}\) diverges, then \(\lim_{n \to \infty} a_n\) does not exist. 
+        The Divergence Test states that \(\sum a_n\) <i>diverges</i>
+        if \(\lim_{n \to \infty} a_n \ne 0.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> If \(\{a_n\}\) 
+        converges, then \(\sum a_n\) also converges.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>false</b>. 
+        If \(\{a_n\}\) converges, then \(\lim_{n \to \infty} a_n\) 
+        equals a finite value. 
+        But this says nothing about \(\sum a_n \col\)
+        If \(\lim_{n \to \infty} a_n \ne 0,\)
+        then the Divergence Test states that \(\sum a_n\) <i>diverges</i>.
+        And if \(\lim_{n \to \infty} a_n = 0,\)
+        then the test is <i>inconclusive</i>.
+        For example, the sequence 
+        \[\{1, 1, 1, \dots\}\]
+        converges to \(1.\)
+        But the sum 
+        \[1 + 1 + 1 + \cdots\]
+        diverges.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> Adding or subtracting two convergent 
+        series results in a convergent series.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>true</b>. 
+        If two series converge, then the limits of their partial sums are existent. 
+        The limit of a sum is the sum of limits,
+        and the limit of a difference is the difference of limits. 
+        Hence, the partial sums of the combination of series settle to a final value.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> Adding or subtracting two divergent 
+        series gives a divergent series.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>false</b>. 
+        Consider the functions 
+        \[a_n = n \and b_n = -n \pd\]
+        Both \(\sum n\) and \(\sum (-n)\) diverge by the Divergence Test because 
+        the summation functions do not approach \(0.\)
+        We therefore have
+        \[\sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n = 0 \cma\]
+        so the sum is convergent. 
+        In fact, this premise allows us to consider telescoping series, in which we subtract 
+        terms of otherwise divergent series to attain a finite sum.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<label class="true-or-false"></label> If \(\sum a_n\) and \(\sum b_n\)
+        both diverge, then \(\sum [a_n b_n]\) is divergent.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This statement is <b>false</b>. 
+        Consider 
+        \[a_n = b_n = \frac{1}{n} \pd\]
+        Then \(\sum (1/n)\) diverges because it is the Harmonic Series; but 
+        \(a_n b_n = 1/n^2,\)
+        and \(\sum (1/n^2)\) happens to converge. 
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let 
+        \[S = \sum_{n=2}^{\infty} \left(\frac{k^2 + 1}{5}\right)^n \period \]
+        Find the values of \(k\) for which \(S\) converges. 
+        Then determine the value \(S\) in terms of \(k.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The common ratio of the series is \(r = (k^2 + 1)/5.\)
+        The series converges if \(|r| \lt 1.\)
+        Since \((k^2 + 1)/5\) is positive for all \(k,\) we find 
+        \[ 
+        \ba 
+        \frac{k^2 + 1}{5} \lt 1 \implies k^2 &amp;\lt 4 \nl
+        |k| &amp;\lt 2 \nl
+        -2 \lt k &amp;\lt 2 \period 
+        \ea 
+        \]
+        Therefore, \(S\) converges if \(-2 \lt k \lt 2.\)
+        On this interval, we find 
+        \[
+        \ba 
+        S &amp;= 
+        \frac{\textrm{FIRST TERM}}{1 - r} \nl
+        &amp;= \frac{(\frac{k^2+1}{5})^2}{1-\frac{k^2+1}{5}} \nl
+        &amp;= \boxed{\frac{(k^2+1)^2}{25-5(k^2+1)}}
+        \ea   
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let \(k\) be any real number. 
+        In terms of \(k,\) find the value of 
+        \[\sum_{n = 1}^\infty \frac{k}{n^2 + n} \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Performing partial fraction decomposition reveals that 
+        \[\frac{k}{n^2 + n} = \frac{k}{n} - \frac{k}{n + 1} \pd\]
+        Consider the partial sum 
+        \[S_N = \sum_{i = 1}^N \par{\frac{k}{i} - \frac{k}{i + 1}} \pd\]
+        Writing out some terms gives 
+        \[
+        \ba 
+        S_N &amp;= \par{\frac{k}{1} - \frac{k}{2}} + \par{\frac{k}{2} - \frac{k}{3}} + \par{\frac{k}{3} - \frac{k}{4}} \nl 
+        &amp;+ \cdots + \par{\frac{k}{N} - \frac{k}{N + 1}} \nl 
+        &amp;= k - \frac{k}{N + 1} \pd 
+        \ea
+        \]
+        Thus, 
+        \[\sum_{n = 1}^\infty \frac{k}{n^2 + n} = \lim_{N \to \infty} \par{k - \frac{k}{N + 1}} = \boxed k\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Consider the family of sums 
+        \[S = \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n \pd\]
+        <ol class="list-alpha">
+<li>
+                Find formulas for \(a_n\) and \(b_n\) such that 
+                \(\sum_{n = 1}^\infty a_n\) and \(\sum_{n = 1}^\infty b_n\) 
+                both diverge 
+                and \(S\) diverges. 
+            </li>
+<li>
+                Find formulas for \(a_n\) and \(b_n\) such that 
+                \(\sum_{n = 1}^\infty a_n\) and \(\sum_{n = 1}^\infty b_n\) 
+                both diverge 
+                and \(S\) converges. 
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                If \(a_n = n\) and \(b_n = n,\) then both 
+                \[\sum_{n = 1}^\infty a_n \and \sum_{n = 1}^\infty b_n\]
+                diverge by the Divergence Test because 
+                both \(\lim_{n \to \infty} a_n\) and \(\lim_{n \to \infty} b_n\) approach \(\infty.\)
+                Then
+                \[S = \sum_{n = 1}^\infty n + \sum_{n = 1}^\infty n \pd\]
+                The terms of \(S\) are 
+                \[\par{1 + 2 + 3 + \cdots} + \par{1 + 2 + 3 + \cdots} \cma\]
+                a divergent series.
+                Thus, \(a_n = n\) and \(b_n = -n\)
+                represent <i>one</i> satisfactory option. 
+            </li>
+<hr/>
+<li>
+                If \(a_n = n\) and \(b_n = -n,\) then both 
+                \[\sum_{n = 1}^\infty a_n \and \sum_{n = 1}^\infty b_n\]
+                diverge by the Divergence Test because 
+                both \(\lim_{n \to \infty} a_n\) and \(\lim_{n \to \infty} b_n\) do not equal \(0.\)
+                These choices of \(a_n\) and \(b_n\) show 
+                \[
+                \ba 
+                S &amp;= \sum_{n = 1}^\infty n + \sum_{n = 1}^\infty (-n) \nl 
+                &amp;= \par{1 + 2 + 3 + \cdots} - \par{1 + 2 + 3 + \cdots} \nl 
+                &amp;= 0 \pd 
+                \ea
+                \]
+                So \(S\) is convergent. 
+                Thus, \(a_n = n\) and \(b_n = -n\)
+                represent <i>one</i> satisfactory option. 
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        A bouncy ball is dropped from \(100\) feet.
+        Each time the ball hits the floor, it rebounds to one-third of the height from which it fell. 
+        What is the total vertical distance the ball travels?
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        When the ball is initially dropped, it travels \(100\) feet. 
+        On the first rebound, it travels up \(100/3\) feet before falling back down \(100/3\) feet—thus 
+        traveling a distance of \(200/3\) feet. 
+        The total distance the ball travels from rebounds only is  
+        \[2 \par{\frac{100}{3} + \frac{100}{9} + \frac{100}{27} + \cdots} \cma\]
+        a geometric series of common ratio \(r = 1/3\) and first term \(200/3.\)
+        Its sum is therefore 
+        \[\frac{200/3}{1 - \tfrac{1}{3}} = 100 \un{feet}.\]
+        Since the ball was initially dropped from \(100 \un{feet},\)
+        the total distance the ball travels is \(\boxed{200 \un{feet}.}\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        In physics, the <b>coefficient of restitution</b> measures an object's ability to bounce.
+        If an object is dropped from a height \(H\) and rebounds to a height \(h,\) then 
+        its coefficient of restitution is  
+        \[C_R = \sqrt{\frac{h}{H}} \pd\]
+        A basketball is dropped from a height of \(7\) feet and rebounds to a height of \(5\) feet. 
+        <ol class="list-alpha">
+<li>
+                Calculate \(C_R\) for the trial.
+            </li>
+<li>
+                The ball continues to rebound under the same coefficient of restitution.
+                What is the total vertical distance traveled by the ball?
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                The coefficient of restitution is 
+                \[C_R = \sqrt{\frac{5}{7}} = \boxed{0.845}\]
+            </li>
+<hr/>
+<li>
+                The ball first travels \(7\) feet.
+                It then rebounds to a height of \(7C_R\)
+                and falls a height \(7C_R;\)
+                this total distance is \(2 \cdot 7 C_R.\)
+                The total distance traveled is therefore given by the following infinite geometric series:
+                \[
+                \ba 
+                7 + 2 \par{7C_R + 7 C_R^2 + 7 C_R^3 + \cdots} &amp;= 7 + 2 \parbr{7(0.845) + 7(0.845)^2 + 7(0.845)^3 + \cdots} \nl 
+                &amp;= 7 + 7 \cdot \frac{2}{1 - 0.845} \nl 
+                &amp;= \boxed{97.323 \; \textrm{feet}}
+                \ea 
+                \]
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Suppose that a country's citizens, on average, spend \(70\) percent of their income and save \(30\) percent.
+        Because money changes hands indefinitely, the government can spend \(x\) dollars to generate  
+        \[x + 0.7x + (0.7)^2 x + (0.7)^3 x + \cdots\]
+        dollars of economic activity. 
+        How much money must the government spend to generate \(\$60\) billion of economic activity?
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We must solve for \(x\) in 
+        \[x + 0.7x + (0.7)^2x + (0.7)^3 x + \cdots = 60 \pd\]
+        (For simplicity we let \(x\) be in billions.)
+        The left-hand side is an infinite geometric series of common ratio \(r = 0.7\) and first term \(x,\)
+        so its sum is 
+        \[\frac{x}{1 - 0.7} = 60 \pd\]
+        Thus, 
+        \[x = 60(0.3) = \boxed{\$18 \; \textrm{billion}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        When banks provide loans, a country's money supply increases.
+        Banks loan money to other banks, 
+        but banks are required to hold a certain proportion—called the 
+        <b>reserve ratio</b> \((R)\)—of their total assets. 
+        Suppose a deposit of \(x\) dollars is made to a bank account.
+        To maximize its revenue, the bank holds on to \(xR\)
+        dollars and lends out \(x(1 - R)\) dollars to another bank. 
+        That bank then lends out \(x(1 - R)^2\) dollars, 
+        and this repetition leads to rapid multiplication of the initial deposit of \(x\) dollars. 
+        <ol class="list-alpha">
+<li>
+                Based on an infinite series, derive an expression for \(M,\) the increase in the money supply when 
+                an initial deposit of \(x\) dollars is made in a country whose reserve ratio is \(R.\)
+            </li>
+<li>
+                During times of inflation or rapid growth, the reserve ratio is often increased 
+                because a growing money supply accelerates inflation. 
+                In the early \(1980\)s, amid a period of <b>stagflation</b> (inflation with contracting productivity), 
+                the <b>Federal Reserve</b> (the Fed) hiked the reserve ratio to \(10 \%.\)
+                Determine, in terms of \(x\) and \(R,\) 
+                how much less money is added to the money supply when \(R\) is increased by \(0.1.\)
+            </li>
+<li>
+                The reserve ratio is often decreased during times of recession to encourage economic growth. 
+                In \(2020,\) amid the onset of quarantine and lockdowns due to the COVID-19 pandemic, 
+                the Fed dropped the reserve ratio to \(0.\)
+                Calculate and interpret \(\lim_{R \to 0^+} M.\)
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                The total money produced is the sum of lent money:
+                \[
+                \ba 
+                M &amp;= x(1 - R) + x(1 - R)^2 + x(1 - R)^3 + \cdots \nl 
+                &amp;= \frac{x(1 - R)}{1 - (1 - R)} \nl 
+                &amp;= \boxed{\frac{x(1 - R)}{R}}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                The difference in the values of \(M\) is 
+                \[\frac{x(1 - (R + 0.1))}{R + 0.1} - \frac{x(1 - R)}{R} = \boxed{\frac{x(0.9 - R)}{R + 0.1} - \frac{x(1 - R)}{R}}\]
+            </li>
+<hr/>
+<li>
+                The limit is 
+                \[\lim_{R \to 0^+} \frac{x(1 - R)}{R} \pd\]
+                As \(R \to 0^+,\) the numerator approaches \(x\) and the denominator approaches \(0.\)
+                The fraction therefore approaches positive infinity, 
+                so the limit equals \(\boxed{\infty}.\)
+                Thus, if the reserve ratio is \(0,\)
+                then infinite money is added to the money supply. 
+                In reality, however, loans are not made indefinitely;
+                during times of recession, overall economic activity is slowed and so fewer bank transactions are seen.
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let \(c\) be any real number, and consider the series \(\sum_{n = 1}^\infty a_n.\)
+        <ol class="list-alpha">
+<li>
+                If \(\sum_{n = 1}^\infty a_n\) converges, then prove that \(c\sum_{n = 1}^\infty a_n\)
+                also converges.
+            </li>
+<li>
+                If \(\sum_{n = 1}^\infty a_n\) diverges, then prove that \(c\sum_{n = 1}^\infty a_n\)
+                also diverges.
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                Let \(T = c\sum_{n = 1}^\infty a_n,\)
+                and suppose \(\sum_{n = 1}^\infty a_n\) converges to \(S.\)
+                Consider the partial sum 
+                \[T_N = c \sum_{i = 1}^N a_i \pd\]
+                An infinite series is the limit of a partial sum as its number of terms \(N\) increases.
+                Thus, 
+                \[T = \lim_{N \to \infty} T_N = \lim_{N \to \infty} c \sum_{i = 1}^N a_i \pd\]
+                By the Constant Multiple Law of Limits 
+                (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), we have 
+                \[T = c \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
+                Since \(\sum_{n = 1}^\infty a_n\) converges to \(S,\) \(T\)
+                approaches \(cS\) as \(N \to \infty\) and so \(T\) converges.
+            </li>
+<hr/>
+<li>
+                Let \(T = c\sum_{n = 1}^\infty a_n,\)
+                and suppose \(\sum_{n = 1}^\infty a_n\) diverges. 
+                We represent \(T\) as the partial sum 
+                \[T_N = c \sum_{i = 1}^N a_i \pd\]
+                An infinite series is the limit of a partial sum as its number of terms \(N\) increases: 
+                \[T = \lim_{N \to \infty} c \sum_{i = 1}^N a_i \pd\]
+                Because \(\sum_{n = 1}^\infty a_n\) diverges, the limit \(\lim_{N \to \infty} \sum_{i = 1}^N a_i\)
+                does not exist. 
+                Thus, \(T\) does not approach a final value as \(N \to \infty,\)
+                so \(c \sum_{n = 1}^\infty a_n\) is divergent.
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="problem-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        An infinite geometric series converges to a positive value \(S.\)
+        If the second term in the series is \(2,\)
+        then what is the smallest possible value of \(S \ques\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-53"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Because the second term of the series is \(2,\)
+        the first term must be \(2/r\) where \(r\) is the common ratio. 
+        Thus, we express \(S\) as 
+        \[S = \frac{2/r}{1 - r} = \frac{2}{r - r^2} \pd\]
+        Now we minimize \(S \col\)
+        Taking its derivative and equating it to \(0,\) we attain 
+        \[\deriv{S}{r} = \frac{-2(1 - 2r)}{(r - r^2)^2} = 0 \implies r = \tfrac{1}{2} \pd\]
+        This value corresponds to an absolute minimum of \(S.\)
+        Accordingly, 
+        \[S_{\text{min}} = \frac{2}{\frac{1}{2} - \par{\frac{1}{2}}^2} = \frac{2}{1/4} = \boxed 8\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">
