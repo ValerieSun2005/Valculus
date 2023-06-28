@@ -27,23 +27,17 @@
           <ul>
             <li>
               <button>
-                <a class="link-deactivate" rel="noopener">Section
-                  <i class="fa fa-external-link"></i>
-                </a>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
               </button>
             </li>
             <li>
               <button>
-                <a href="2.1-Defining-a-Derivative-exercises.html">Exercises
-                  <i class="fa fa-external-link"></i>
-                </a>
+                <a href="2.1-Defining-a-Derivative-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
               </button>
             </li>
             <li>
               <button>
-                <a href="2.1-Defining-a-Derivative-exercises-solutions.html">Exercise Solutions
-                  <i class="fa fa-external-link"></i>
-                </a>
+                <a href="2.1-Defining-a-Derivative-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
               </button>
             </li>
           </ul>
@@ -53,8 +47,8 @@
       <hr id="mainBodyBegin">
       <!--[[[crefId.Defining-a-Derivative]]]--> 
 <p>
+    In this section we discuss the following:
     <ul>
-        In this section we discuss the following:
         <li>
             Using limits to <a class="page-anchor" href="#definition-of-a-derivative">Define a Derivative</a> and interpret a derivative's meaning
             at a point and as a function
@@ -97,7 +91,7 @@
     <span class="label-emph">Geometry with Tangents</span>
     The first half of the answer is to construct a <span class="emph">tangent line</span> to the function's graph.
     This line's slope matches the slope of the function.
-    <a href="#tangent-line">Figure 1</a> shows the graph of function \(f\)   
+    <a href="#tangent-line">Figure 1</a> shows the graph of a function \(f\)   
     and the tangent line to \(f\) at point \(P(x, f(x)),\)
     which "just touches" the graph of \(f\) at \(P.\)
     The slope of \(f\) at \(P\)—and, accordingly, of the tangent line at \(P\)—has slope \(f'(x),\) called a <span class="emph">derivative</span>.
@@ -140,7 +134,7 @@
     If the horizontal difference between \(P\) and \(Q\) is \(h,\) 
     then the vertical difference is \(f(x + h) - f(x).\)
     Therefore, the slope of the secant line is 
-    \[m_{PQ} = \frac{\Delta y}{\Delta x} = \frac{f(x + h) - f(x)}{h} \period\]
+    \[m_{PQ} = \frac{\Delta y}{\Delta x} = \frac{f(x + h) - f(x)}{h} \pd\]
     We call \(m_{PQ}\) a <span class="emph">difference quotient</span> because it's a ratio of two differences.
     If we move \(Q\) along the graph of \(f\) to be closer to \(P\)—that is, if \(h\) 
     shrinks—then the secant line better resembles the tangent line to \(P.\)
@@ -148,7 +142,7 @@
     then the secant line becomes the tangent line, as in <a href="#anm-1">Animation 1</a>.
     Therefore, we find the slope of the tangent line by taking the <i>limit</i> of \(m_{PQ}\) as \(h \to 0;\) namely,
     \begin{equation} 
-    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period \label{eq:lim-defn}  
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd \label{eq:lim-defn}  
     \end{equation}
     <figure class="anm-1" id="anm-1">
         <video controls>
@@ -160,11 +154,13 @@
             content:'ANIMATION 1';
         }
     </style>
-    And we have accomplished our goal—\(\eqrefer{eq:lim-defn}\) gives the slope of \(f\) at \(x.\)
+    And we have accomplished our goal—\(\eqref{eq:lim-defn}\) gives the slope of \(f\) at \(x.\)
+    We interpret \(\eqref{eq:lim-defn}\) as a <span class="emph">derivative function</span>, 
+    which gives the slope to \(f\) at any input \(x.\)
     Another notation for the derivative is \(\textDeriv{y}{x}\) or \(\textDeriv{f}{x}\)—called 
     <span class="emph">Leibniz</span> notation.
     For example, \(\eqrefer{eq:lim-defn}\) can also be written using Leibniz notation as 
-    \[\deriv{f}{x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \period\]
+    \[\deriv{f}{x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd\]
     Loosely speaking, \(\dd x\) can be thought of as an infinitely small \(\Delta x,\) 
     and \(\dd y\) is similar to an infinitely small \(\Delta y.\)
     We call these expressions <span class="emph">differentials</span>. 
@@ -177,13 +173,16 @@
     
 </p>
 
-<div class="box-title" id="deriv-function"> DEFINITION OF A DERIVATIVE </div>
+<div class="box-title" id="deriv-function"> DEFINITION OF A DERIVATIVE (DERIVATIVE FUNCTION) </div>
 <div class="box">
-    The <span class="emph">derivative</span> of function \(f\) at \(x\) is \(f'(x),\)
+    The <span class="emph">derivative</span> of the function \(f\) at \(x\) is \(f'(x),\)
     given by 
-    \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]
+    \begin{equation} 
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \eqlabel{eq:lim-defn}  
+    \end{equation}
     if the limit exists.
-    Quantity \(f'(x)\) is the <i>slope</i> of \(f\) at the point \((x, f(x)).\)
+    This form is called a <span class="emph">derivative function</span>. 
+    The quantity \(f'(x)\) is the <i>slope</i> of \(f\) at the point \((x, f(x)).\)
 </div>
 
 <figure class="secant-line-alternate" id="secant-line-alternate">
@@ -217,8 +216,10 @@
 
 <div class="box-title" id="deriv-point"> DERIVATIVE AT A POINT (ALTERNATE DEFINITION) </div>
 <div class="box">
-    The derivative of function \(f(x)\) at \(x = a\) is 
-    \[f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}\]
+    The derivative of the function \(f(x)\) at \(x = a\) is 
+    \begin{equation} 
+    f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \eqlabel{eq:lim-defn-point}
+    \end{equation} 
     if this limit exists.
 </div>
 
@@ -623,27 +624,30 @@
 </aside>
 
 <p>
-    Derivatives are said to be <i>linear</i>; that is, 
-    if \(f\) and \(g\) are differentiable, and \(c\) is a constant, then the following properties hold:
+    If \(f\) and \(g\) are differentiable, and \(c\) is a constant, then the following properties hold:
     <ul>
         <li>
             \([cf(x)]' = c f'(x).\)
         </li>
         <li>
-            \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+            \((f + g)'(x) = f'(x) + g'(x).\)
+        </li>
+        <li>
+            \((f - g)'(x) = f'(x) - g'(x).\)
         </li>
     </ul>
     We can also write these properties in Leibniz notation as, respectively, 
     \[
     \ba 
-    &\deriv{}{x} [cf(x)] = c \deriv{}{x}[f(x)] \nl 
-    &\deriv{}{x} [f(x) \pm g(x)] = \deriv{}{x} [f(x)] \pm \deriv{}{x} [g(x)] \pd
+    &\deriv{}{x} \parbr{cf(x)} = c \deriv{}{x}[f(x)] \nl 
+    &\deriv{}{x} \parbr{f(x) + g(x)} = \deriv{}{x} [f(x)] + \deriv{}{x} [g(x)] \nl 
+    &\deriv{}{x} \parbr{f(x) - g(x)} = \deriv{}{x} [f(x)] - \deriv{}{x} [g(x)] \pd
     \ea 
     \]
-    In words, the former property states that the derivative of a function multiplied by a constant 
+    In words, the derivative of a function multiplied by a constant 
     is the constant multiplied by the derivative. 
-    The latter property asserts the derivative of a sum or difference is 
-    the sum or difference of derivatives.
+    Also, the derivative of a sum is the sum of derivatives, 
+    and the derivative of a difference is the difference of derivatives.
     The proofs of these properties are as follows.
 </p>
 
@@ -705,13 +709,16 @@
     Let \(f\) and \(g\) be differentiable functions, and let \(c\) be a constant. 
     <ul>
         <li>
-            <span class="label-emph" id="prop-1">Property 1</span> \([c]' = 0.\)
+            <span class="label-emph">The Constant Rule</span> \([c]' = 0.\)
         </li>
         <li>
-            <span class="label-emph" id="prop-2">Property 2</span> \([cf(x)]' = c f'(x).\)
+            <span class="label-emph">The Constant Multiple Rule</span> \([cf(x)]' = c f'(x).\)
         </li>
         <li>
-            <span class="label-emph" id="prop-3">Property 3</span> \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+            <span class="label-emph">The Sum Rule</span> \((f + g)'(x) = f'(x) + g'(x).\)
+        </li>
+        <li>
+            <span class="label-emph">The Difference Rule</span> \((f - g)'(x) = f'(x) - g'(x).\)
         </li>
     </ul>
 </div>
@@ -749,7 +756,7 @@
 <div id="solution5" class="solution">
     <ol class="list-roman">
         <li>
-            By <a href="#prop-3">Property 3</a>, 
+            By the Sum Rule for Derivatives,
             the derivative of a sum is the sum of derivatives. 
             Thus,
             \[
@@ -762,7 +769,7 @@
         </li>
         <hr>
         <li>
-            <a href="#prop-3">Property 3</a> states that the derivative of a difference is 
+            The Difference Rule states that the derivative of a difference is 
             the difference of derivatives:
             \[(f - g)'(-3) = f'(-3) - g'(-3) \pd\]
             At \(x = -3,\) the slope of \(f\) is \(0\)
@@ -772,7 +779,7 @@
         </li>
         <hr>
         <li>
-            By <a href="#prop-2">Property 2</a> we can take out the constant in the derivative:
+            By the Constant Multiple Rule, we can take out the constant in the derivative:
             \[(2f)'(1) = 2 f'(1) \pd\]
             At \(x = -1\) the slope of \(f\) is \(-1/2.\)
             We therefore have 
@@ -780,7 +787,7 @@
         </li>
         <hr>
         <li>
-            Using <a href="#prop-2">Property 2</a> and <a href="#prop-3">Property 3</a> gives 
+            Combining the Constant Multiple Rule and Difference Rule gives 
             \[(2f - 3g)'(3) = (2f)'(3) - (3g)'(3) = 2f'(3) - 3g'(3) \pd\]
             At \(x = 3,\) the slope of \(f\) is \(-1/2\) and the slope of \(g\) is \(-2.\)
             Hence, \(f'(3) = -1/2\) and \(g'(3) = -2;\) therefore,
@@ -1017,7 +1024,7 @@
 <div class="section-summary">
     <p>
         <a class="summary-anchor" href="#definition-of-a-derivative">Definition of a Derivative</a>
-        The <span class="emph">derivative</span> of function \(f\) at \(x\) 
+        The <span class="emph">derivative</span> of a function \(f\) at \(x\) 
         measures the slope of \(f\) at \(x.\)
         We denote the derivative either using <i>prime notation</i> \((f')\) or <i>Leibniz notation</i> \((\textDeriv{f}{x}).\)
         In Leibniz notation \(\textDeriv{}{x}\) is an operator, whereas \(\textDeriv{f}{x}\) is a quantity.
@@ -1030,13 +1037,18 @@
         Construct a <span class="emph">secant</span> line that passes through point \(P\)
         and another point \(Q(x + h, f(x + h))\) on the graph of \(f.\) 
         Taking \(h \to 0,\) the secant line becomes the tangent line, whose slope is 
-        \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd\]
-        If the limit exists, then this expression gives the derivative of \(f\) as a <i>function</i> of \(x.\)
+        \begin{equation} 
+        f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd \eqlabel{eq:lim-defn}  
+        \end{equation}
+        If the limit exists, then \(\eqref{eq:lim-defn}\) gives the derivative of \(f\) as a <i>function</i> of \(x;\)
+        we call \(\eqref{eq:lim-defn}\) the <span class="emph">derivative function</span> of \(f.\)
     </p>
     <p>
         <a class="summary-anchor" href="#deriv-point">Derivative at a Point</a>
-        The derivative of function \(f(x)\) at the point \(x = a\) is 
-        \[f'(a) = \lim_{h \to 0} \frac{f(x) - f(a)}{x - a}\]
+        The derivative of the function \(f(x)\) at the point \(x = a\) is 
+        \begin{equation} 
+        f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \eqlabel{eq:lim-defn-point}
+        \end{equation}
         if the limit exists.
         This form is an <i>alternate</i> definition of the derivative.
     </p>
@@ -1065,13 +1077,16 @@
         Then the following properties hold:
         <ul>
             <li>
-                <span class="label-emph">Property 1</span> \([c]' = 0.\)
+                <span class="label-emph">The Constant Rule</span> \([c]' = 0.\)
             </li>
             <li>
-                <span class="label-emph">Property 2</span> \([cf(x)]' = c f'(x).\)
+                <span class="label-emph">The Constant Multiple Rule</span> \([cf(x)]' = c f'(x).\)
             </li>
             <li>
-                <span class="label-emph">Property 3</span> \((f \pm g)'(x) = f'(x) \pm g'(x).\)
+                <span class="label-emph">The Sum Rule</span> \((f + g)'(x) = f'(x) + g'(x).\)
+            </li>
+            <li>
+                <span class="label-emph">The Difference Rule</span> \((f - g)'(x) = f'(x) - g'(x).\)
             </li>
         </ul>
     </p>

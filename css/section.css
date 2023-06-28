@@ -11,6 +11,12 @@ h1, main, .footer-body, .tab div, .footer-disclaimer{
     color: white;
 }
 
+.section-link{
+    position: relative;
+    text-indent: -2.5em;
+    right: -2.5em
+}
+
 .background-text{ /* background body */
     font-size: 1.5rem;
     line-height: 2.5;

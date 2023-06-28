@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.2 Exercise Solutions: Differentiating Power, Exponential, and Sinusoidal Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>2.2 Exercise Solutions — Differentiating Power, Exponential, and Sinusoidal Functions</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        What is the <b>Power Rule</b>?
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The <b>Power Rule</b> enables us to differentiate <i>power functions</i>, 
+        in which the base is variable and the exponent is constant. 
+        If \(n\) is any integer, then the Power Rule gives 
+        \[\deriv{}{x} \par{x^n} = nx^{n - 1} \pd\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        How do we write equations of <b>tangent lines</b> and <b>normal lines</b>?
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<p>
+<label class="label-emph">Tangent Lines</label>
+            We write an equation for a <b>tangent line</b> to \(f\) at \(a\)
+            by using point-slope form: Since the tangent line passes the point \((a, f(a))\)
+            with slope \(f'(a),\)
+            its equation is given by 
+            \[y - f(a) = f'(a)(x - a) \pd\]
+        </p>
+<p>
+<label class="label-emph">Normal Lines</label>
+            A <b>normal line</b> intersects the graph of \(f\) at an angle of \(90 \degree.\)
+            Thus, a normal line is perpendicular to a tangent line. 
+            So its slope is the negative reciprocal of the tangent line's slope—namely, \(-1/f'(a).\)
+            The equation for a normal line is similar to the equation for a tangent line, 
+            but we replace \(f'(a)\) with \(-1/f'(a) \col\)
+            \[y - f(a) = -\frac{1}{f'(a)}(x - a) \pd\]
+        </p>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{u} \par{e^u}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This derivative is a simple recall; the derivative of \(e^u\) is itself.
+        So 
+        \[\deriv{}{u} {e^u} = \boxed{e^u}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{y} \par{\sin y}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This derivative is a recall question. 
+        The derivative of sine is cosine, so 
+        \[\deriv{}{y} \par{\sin y} = \boxed{\cos y}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\cos x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Recall that the derivative of cosine is negative sine.
+        So 
+        \[\deriv{}{x} \par{\cos x} = \boxed{- \sin x}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^9}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Because this function is a power function, the <b>Power Rule</b>
+        gives the derivative to be  
+        \[9x^{9 - 1} = \boxed{9x^8}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\pi^3}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Since \(\pi^3\) is a constant, its derivative is \(\boxed 0\)
+        by the Constant Rule for Derivatives.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^5}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Since this function is a power function, the <b>Power Rule</b>
+        gives the derivative to be  
+        \[5x^{5 - 1} = \boxed{5x^4}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{e^{e^2}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This expression is simply a constant, so its derivative is \(\boxed 0.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \sqrt[3]{x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We rewrite the function as \(x^{1/3},\)
+        a power function. 
+        Thus, we apply the <b>Power Rule</b> to find the derivative to be 
+        \[\tfrac{1}{3} x^{1/3 - 1} = \tfrac{1}{3} x^{-2/3} = \boxed{\frac{1}{3 \sqrt[3]{x^2}}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \sqrt[9]{t^7}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Recall that \(\sqrt[b]{t^a} = t^{a/b}.\)
+        We rewrite the function as \(t^{7/9},\)
+        a power function. 
+        Thus, the <b>Power Rule</b> provides the derivative function  
+        \[\tfrac{7}{9} t^{7/9 - 1} = \tfrac{7}{9} t^{-2/9} = \boxed{\frac{7}{9 \sqrt[9]{t^2}}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^2 - 4x + 12}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        To differentiate this polynomial, we use a combination of the Sum, Difference, and Constant Multiple Rules 
+        for Derivatives.
+        The Sum and Difference Rules for Derivatives permit us to split the derivative into 
+        \[\deriv{}{x} \par{x^2} - \deriv{}{x} \par{4x} + \deriv{}{x} \par{12} \pd\]
+        The Constant Rule for Derivatives asserts that the derivative of a constant is \(0.\)
+        So we have 
+        \[\deriv{}{x} \par{x^2} - \deriv{}{x} \par{4x} \pd\]
+        The Constant Multiple Rule for Derivatives enables us to write 
+        \[\deriv{}{x} \par{x^2} - 4 \deriv{}{x} \par{x} \pd\]
+        Now applying the Power Rule gives the derivative of \(x^2 - 4x + 12\) to be 
+        \[\par{2x^{2 - 1}} - \par{4 \cdot 1 x^{1 - 1}} = \boxed{2x - 4}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \derivOrder{}{\theta}{3} \par{2\sin \theta}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        By the Constant Multiple Rule and recalling that the derivative of sine is cosine, 
+        the first derivative is given by 
+        \[2 \deriv{}{\theta} \par{\sin \theta} = 2 \cos \theta \pd\]
+        Similarly, we see the following:
+        \[
+        \baat{2} 
+        \derivOrder{}{\theta}{2} \par{2\sin \theta} &amp;= \deriv{}{\theta} \par{2 \cos \theta} &amp;&amp;= -2 \sin \theta \cma \nl
+        \derivOrder{}{\theta}{3} \par{2 \sin \theta} &amp;= \deriv{}{\theta} \par{-2 \sin \theta} &amp;&amp;= \boxed{-2 \cos \theta} 
+        \eaat 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \par{t^3 + 8t^2 - t}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        To differentiate this polynomial, we use a combination of the Sum, Difference, and Constant Multiple Rules 
+        for Derivatives.
+        We see 
+        \[
+        \ba 
+        \deriv{}{t} \par{t^3 + 8t^2 - t} 
+        &amp;= \deriv{}{t} \par{t^3} + \deriv{}{t} \par{8t^2} - \deriv{}{t} (t) &amp;&amp; (\textrm{Sum and Difference Rules}) \nl
+        &amp;= \deriv{}{t} \par{t^3} + 8 \deriv{}{t} \par{t^2} - \deriv{}{t} (t) &amp;&amp; (\textrm{Constant Multiple Rule}) \nl
+        &amp;= 3t^2 + 8(2t) - 1 &amp;&amp; (\textrm{Power Rule}) \nl 
+        &amp;= \boxed{3t^2 + 16t - 1}
+        \ea
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\tfrac{1}{2} x^4 + 4x^{5/2} - 7}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Differentiating this expression requires the Power Rule in conjunction with the Sum, Difference, Constant Multiple, and Constant Rules 
+        for Derivatives.
+        We find
+        \[
+        \ba 
+        \deriv{}{x} \par{\tfrac{1}{2} x^4 + 4x^{5/2} - 7} 
+        &amp;= \deriv{}{x} \par{\tfrac{1}{2} x^4} + \deriv{}{x} \par{4x^{5/2}} - \deriv{}{t} (7) &amp;&amp; (\textrm{Sum and Difference Rules}) \nl
+        &amp;= \deriv{}{x} \par{\tfrac{1}{2} x^4} + \deriv{}{x} \par{4x^{5/2}} - 0 &amp;&amp; (\textrm{Constant Rule}) \nl
+        &amp;= \tfrac{1}{2} \deriv{}{x} \par{x^4} + 4 \deriv{}{x} \par{x^{5/2}} &amp;&amp; (\textrm{Constant Multiple Rule}) \nl
+        &amp;= \tfrac{1}{2} \par{4x^3} + 4 \par{\tfrac{5}{2} x^{3/2}} &amp;&amp; (\textrm{Power Rule}) \nl 
+        &amp;= \boxed{2x^3 + 10 \sqrt{x^3}}
+        \ea
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \parbr{(2x + 1)^2}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We expand the binomial into a sum of terms, as follows:
+        \[(2x + 1)^2 = (2x)^2 + 2(2x)(1) + (1)^2 = 4x^2 + 4x + 1 \pd\]
+        So 
+        \[
+        \ba 
+        \deriv{}{x} \parbr{(2x + 1)^2} 
+        &amp;= \deriv{}{x} \par{4x^2 + 4x + 1} \nl 
+        &amp;= 4 \deriv{}{x} \par{x^2} + 4 \deriv{}{x} (x) + \deriv{}{x} (1) \nl 
+        &amp;= 4(2x) + 4(1) + 0 \nl 
+        &amp;= \boxed{8x + 4}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{y} \parbr{(1 - 3y)^2}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Expanding the binomial gives 
+        \[(1)^2 - 2(1)(3y) + (3y)^2 = 9y^2 - 6y + 1 \pd\]
+        Thus,
+        \[
+        \ba 
+        \deriv{}{y} \parbr{(1 - 3y)^2} 
+        &amp;= \deriv{}{y} \par{9y^2 - 6y + 1} \nl 
+        &amp;= 9 \deriv{}{y} \par{y^2} - 6 \deriv{}{y} (y) + \deriv{}{x} (1) \nl 
+        &amp;= 9(2y) - 6(1) + 0 \nl 
+        &amp;= \boxed{18y - 6}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{e^x \cos 3}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Since \(\cos 3\) is a constant, the Constant Multiple Rule gives 
+        the derivative to be 
+        \[(\cos 3) \deriv{}{x} \par{e^x} = \boxed{e^x \cos 3}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^3 - \sin x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The derivative of \(\sin x\) is \(\cos x.\)
+        We therefore find 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^3 - \sin x} &amp;= \deriv{}{x} \par{x^3} - \deriv{}{x} \par{\sin x} \nl 
+        &amp;= \boxed{3x^2 - \cos x}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{3x^5 - e^x + \cos x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The derivative of \(\cos x\) is \(- \sin x,\)
+        and the derivative of \(e^x\) is \(e^x.\)
+        Hence, we find 
+        \[
+        \ba 
+        \deriv{}{x} \par{3x^5 - e^x + \cos x} &amp;= 3 \deriv{}{x} \par{x^5} - \deriv{}{x} \par{e^x} + \deriv{}{x} (\cos x) \nl 
+        &amp;= 3 \par{5x^4} - e^x - \sin x \nl 
+        &amp;= \boxed{15x^4 - e^x - \sin x}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \derivOrder{}{\theta}{2} \par{4 \theta - \cos \theta}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We find the first derivative to be 
+        \[
+        \ba 
+        4 \deriv{}{\theta} (\theta) - \deriv{}{\theta} \par{\cos \theta} &amp;= 4(1) - (-\sin \theta) \nl 
+        &amp;= 4 + \sin \theta \pd
+        \ea 
+        \]
+        The second derivative is 
+        \[\deriv{}{\theta} \par{4 + \sin \theta} = 0 + \cos \theta = \boxed{\cos \theta}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \par{e^{t + 6}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We see \(e^{t + 6} = e^t \, e^6,\) so 
+        \[
+        \ba 
+        \deriv{}{t} \par{e^{t + 6}} &amp;= \deriv{}{t} \par{e^{t} \, e^6} \nl 
+        &amp;= e^6 \deriv{}{t} \par{e^t} \nl 
+        &amp;= e^6 \cdot e^t \nl 
+        &amp;= \boxed{e^{t + 6}}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{e^{x - 8}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We see \(e^{x - 8} = e^x \, e^{-8},\) so 
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{x - 8}} &amp;= \deriv{}{x} \par{e^{x} \, e^{-8}} \nl 
+        &amp;= e^{-8} \deriv{}{x} \par{e^x} \nl 
+        &amp;= e^{-8} \cdot e^x \nl 
+        &amp;= \boxed{e^{x - 8}}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \derivOrder{}{x}{2} \par{8 x \sqrt x \,}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        We see 
+        \[x \sqrt x = x \cdot x^{1/2} = x^{3/2} \pd\]
+        We therefore find 
+        \[
+        \ba 
+        \deriv{}{x} \par{8 x \sqrt x \,} &amp;= 8 \deriv{}{x} \par{x^{3/2}} \nl
+        &amp;= 8 \par{\tfrac{3}{2} x^{1/2}} \nl 
+        &amp;= 12 \sqrt x \pd
+        \ea 
+        \]
+        Hence, 
+        \[
+        \ba 
+        \derivOrder{}{x}{2} \par{8 x \sqrt x \,} &amp;= \deriv{}{x} \par{12 \sqrt x} \nl
+        &amp;= 12 \par{\tfrac{1}{2} x^{-1/2}} \nl 
+        &amp;= \boxed{\frac{6}{\sqrt x}}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Consider the family of cubic functions whose coefficients are \(a,\) \(b,\) \(c,\) and \(d \col\)
+        \[f(x) = ax^3 + bx^2 + cx + d \pd\]
+        Determine \(f'(x)\) and \(f''(x).\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The coefficients \(a,\) \(b,\) \(c,\) and \(d\) 
+        are simply constants. 
+        Thus, with the Power Rule we see 
+        \[
+        \ba 
+        f'(x) &amp;= a \deriv{}{x} \par{x^3} + b \deriv{}{x} \par{x^2} + c \deriv{}{x} \par{x} + \deriv{}{x} \par{d} \nl 
+        &amp;= a \par{3x^2} + b \par{2x} + c(1) + 0 \nl 
+        &amp;= \boxed{3ax^2 + 2bx + c} 
+        \ea 
+        \]
+        Differentiating again, we find 
+        \[
+        \ba 
+        f''(x) &amp;= 3a \deriv{}{x} \par{x^2} + 2b \deriv{}{x} \par{x} + \deriv{}{x} \par{c} \nl 
+        &amp;= 3a(2x) + 2b(1) + 0 \nl 
+        &amp;= \boxed{6ax + 2b}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        For nonzero constants \(p\) and \(q,\) let \(f(x) = q x^{p/q}.\)
+        Show that 
+        \[f'(x) = \frac{p}{qx} \, f(x) \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Applying the Constant Rule and Power Rule, we see 
+        \[
+        \ba 
+        f'(x) &amp;= q \deriv{}{x} \par{x^{p/q}} \nl 
+        &amp;= q \par{\frac{p}{q} x^{p/q - 1}} \nl 
+        &amp;= p x^{p/q - 1} \pd
+        \ea 
+        \]
+        Through algebraic manipulation, we see 
+        \[
+        \ba 
+        p x^{p/q - 1} &amp;= p x^{p/q} \cdot x^{-1} \nl 
+        &amp;= p x^{p/q} \cdot \frac{q}{q} \cdot x^{-1} \nl 
+        &amp;= q x^{p/q} \cdot \frac{p}{qx} \nl 
+        &amp;= f(x) \cdot \frac{p}{qx} \cma 
+        \ea 
+        \]
+        as requested.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Find the \(x\)-values at which \(y = x - 2 \sqrt x\)
+        has horizontal tangents.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The graph has horizontal tangents when \(\textderiv{y}{x} = 0.\)
+        Rewriting \(2 \sqrt x\) as \(2x^{1/2},\) we find 
+        \[
+        \ba 
+        \deriv{y}{x} &amp;= \deriv{}{x} (x) - 2 \deriv{}{x} \par{x^{1/2}} \nl 
+        &amp;= 1 - 2 \par{\frac{1}{2 \sqrt x}} \nl 
+        &amp;= 1 - \frac{1}{\sqrt x} \pd 
+        \ea 
+        \]
+        We see 
+        \[1 - \frac{1}{\sqrt x} = 0 \implies \sqrt x = 1 \implies \boxed{x = 1}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Determine the \(x\)-values in \([0, 2 \pi]\) at which the graph of \(f(x) = 2x + 4 \sin x\)
+        has horizontal tangents.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The graph of \(f\) has a <b>horizontal tangent</b> at some \(x\) if \(f'(x) = 0.\)
+        We find 
+        \[
+        \ba 
+        f'(x) &amp;= \deriv{}{x} (2x) + \deriv{}{x} \par{4 \sin x} \nl 
+        &amp;= 2 + 4 \cos x \pd 
+        \ea
+        \]
+        So 
+        \[
+        \ba 
+        2 + 4 \cos x &amp;= 0 \nl 
+        \cos x &amp;= -\tfrac{1}{2} \nl 
+        \implies x &amp;= \boxed{\tfrac{2 \pi}{3}} \cma \boxed{\tfrac{4 \pi}{3}}
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let \(g(x) = x - e^x.\)
+        Show that the graph of \(y = g(x)\) has a horizontal tangent when it intersects the \(y\)-axis.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The graph of \(g\) has a horizontal tangent when \(g'(x) = 0.\)
+        We find 
+        \[
+        \ba 
+        g'(x) &amp;= \deriv{}{x} (x) - \deriv{}{x} \par{e^x} \nl 
+        &amp;= 1 - e^x \pd 
+        \ea 
+        \]
+        So we see 
+        \[1 - e^x = 0 \implies x = 0 \pd\]
+        Thus, \(g\) has a horizontal tangent when \(x = 0,\)
+        the location of the \(y\)-axis.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Determine the \(78\)th derivative of \(f(x) = \sin x.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            The notation \(f^{(n)}(x)\)
+            means the \(n\)th derivative of \(f(x).\)
+        </aside>
+        If we write out a few derivatives, then we see 
+        \[
+        \ba 
+        f'(x) &amp;= \cos x \cma \nl 
+        f''(x) &amp;= -\sin x \cma \nl
+        f'''(x) &amp;= - \cos x \cma \nl 
+        f^{(4)}(x) &amp;= \sin x \pd
+        \ea 
+        \]
+        This loop repeats every four derivatives.
+        The \(76\)th derivative (a number divisible by \(4\)) of \(\sin x\)
+        is therefore \(\sin x,\) so we find
+        \[
+        \ba 
+        f^{(76)}(x) &amp;= \sin x \cma \nl 
+        f^{(77)}(x) &amp;= \cos x \cma \nl
+        f^{(78)}(x) &amp;= \boxed{-\sin x} \nl
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Find the \(23\)rd derivative of \(f(x) = \cos x.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            The notation \(f^{(n)}(x)\)
+            means the \(n\)th derivative of \(f(x).\)
+        </aside>
+        Writing out a few derivatives, we see 
+        \[
+        \ba 
+        f'(x) &amp;= -\sin x \cma \nl
+        f''(x) &amp;= - \cos x \cma \nl 
+        f'''(x) &amp;= \sin x \cma \nl 
+        f^{(4)}(x) &amp;= \cos x \pd
+        \ea 
+        \]
+        Every fourth derivative of \(\cos x\) is \(\cos x.\)
+        The \(20\)th derivative (a number divisible by \(4\)) of \(\cos x\)
+        is therefore \(\cos x,\) so we find
+        \[
+        \ba 
+        f^{(20)}(x) &amp;= \cos x \cma \nl 
+        f^{(21)}(x) &amp;= - \sin x \cma \nl
+        f^{(22)}(x) &amp;= - \cos x \cma \nl
+        f^{(23)}(x) &amp;= \boxed{\sin x} \nl
+        \ea 
+        \]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Write an equation of the line tangent to the graph of \(y = x^2 + 5x - 3\) when 
+        \(x = 1.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span> 
+        To construct an equation for the <b>tangent line</b>, 
+        we use point-slope form with the <i>point of tangency</i> 
+        and the slope.
+        When \(x = 1,\) we see 
+        \[y = (1)^2 + 5(1) - 3 = 3 \pd\]
+        So the point of tangency is \((1, 3).\)
+        The derivative of the function is given by 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 + 5x - 3} 
+        &amp;= \deriv{}{x} \par{x^2} + 5 \deriv{}{x} (x) - \deriv{}{x} (3) \nl 
+        &amp;= 2x + 5 \pd 
+        \ea 
+        \]
+        The slope to the curve when \(x = 1\) is therefore 
+        \[2(1) + 5 = 7 \pd\]
+        Thus, an equation of the tangent line is 
+        \[y - 3 = 7(x - 1) \or \boxed{y = 7x - 4}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let \(f(x) = 3 + 2 \sin x.\)
+        <ol class="list-alpha">
+<li>
+                Write an equation of the line tangent to \(y = f(x)\)
+                at \(x = \pi/4.\) 
+            </li>
+<li>
+                Determine an equation of the line <i>normal</i> to \(y = f(x)\)
+                at \(x = \pi/4.\) 
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<ol class="list-alpha">
+<li>
+                We see 
+                \[f \par{\tfrac{\pi}{4}} = 3 + 2 \sin \tfrac{\pi}{4} = 3 + \sqrt 2 \pd\]
+                So the <i>point of tangency</i> is \(\par{\pi/4 \cma 3 + \sqrt 2}.\)
+                At this point, the slope to \(f\) is 
+                \[
+                \ba 
+                f' \par{\tfrac{\pi}{4}} &amp;= \deriv{}{x} \par{3 + 2 \sin x} \intEval_{x = \pi/4} \nl 
+                &amp;= 2 \cos \tfrac{\pi}{4} \nl 
+                &amp;= \sqrt 2 \pd
+                \ea 
+                \]
+                Thus, an equation of the tangent line is 
+                \[\boxed{y - \par{3 + \sqrt 2} = \sqrt 2 \, \par{x - \tfrac{\pi}{4}}}\]
+            </li>
+<hr/>
+<li>
+                The <b>normal</b> line is perpendicular to the tangent line. 
+                The slope of the normal line is the negative reciprocal of the tangent line's slope—that is, 
+                \(-1/\sqrt 2.\)
+                So an equation for the normal line is 
+                \[\boxed{y - \par{3 + \sqrt 2} = -\tfrac{1}{\sqrt 2} \, \par{x - \tfrac{\pi}{4}}}\]
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        A line is normal to the curve \(y = e^x\) at \(x = a.\)
+        In terms of \(a,\)
+        find the point at which the normal line touches the \(x\)-axis.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The derivative of \(e^x\) is \(e^x,\) 
+        so the slope to the curve at \(x = a\) is \(e^a.\)
+        Since the normal line is perpendicular to the tangent line, 
+        its slope is the negative reciprocal of the tangent slope—that is, \(-1/e^a.\)
+        The point of tangency is \((a, e^a),\) so an equation of the normal line is 
+        \[y - e^a = -\frac{1}{e^a} \par{x - a} \pd\]
+        The line strikes the \(x\)-axis when \(y = 0,\) from which we find 
+        \[0 - e^a = -\frac{1}{e^a} \par{x - a} \implies x = \boxed{e^{2a} + a}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Find the point on the curve \(y = e^x\) 
+        to which the tangent line is parallel to the line \(y = 2x.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Since the tangent line is parallel to the line \(y = 2x,\)
+        its slope must be \(2.\)
+        Hence, the derivative of \(e^x,\) which is \(e^x,\) at some point must be \(2.\)
+        Solving gives 
+        \[e^x = 2 \implies x = \ln 2 \pd\]
+        At this point, \(y = e^{\ln 2} = 2.\)
+        So the tangent line at \(\boxed{(\ln 2, 2)}\) is parallel to the line \(y = 2x.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Suppose that an object moves back and forth along the \(x\)-axis with time \(t \geq 0\)
+        as modeled by the position function \(x(t) = 9 \sin t.\) 
+        <ol class="list-alpha">
+<li>
+                Determine the object's velocity function \(v(t)\) and acceleration function \(a(t).\)
+            </li>
+<li>
+                For \(0 \leq t \leq \pi,\)
+                when is the object's acceleration equal to \(0 \ques\)
+            </li>
+<li>
+                When \(t = \pi/3,\) is the object speeding up or slowing down?
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            \(v(t) = x'(t)\)
+            and \(a(t) = v'(t)\)
+            \(= x''(t).\)
+        </aside>
+<ol class="list-alpha">
+<li>
+                Velocity is the time derivative of position, so we find 
+                \[
+                \ba 
+                v(t) &amp;= x'(t) \nl 
+                &amp;= 9 \deriv{}{t} (\sin t) \nl 
+                &amp;= \boxed{9 \cos t}
+                \ea 
+                \]
+                Acceleration is the time derivative of velocity; thus, we have 
+                \[
+                \ba 
+                a(t) &amp;= v'(t) \nl 
+                &amp;= \deriv{}{t} (9 \cos t) \nl 
+                &amp;= \boxed{-9 \sin t}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Equating \(a(t) = 0\) shows 
+                \[-9 \sin t = 0 \implies t = \boxed{0} \cma \boxed{\pi}\]
+            </li>
+<hr/>
+<li>
+                The object is speeding up if and only if its velocity and acceleration have the same sign; 
+                it is slowing down if and only if velocity and acceleration have different signs.
+                When \(t = \pi/3,\) we see 
+                \[
+                \ba 
+                v \par{\tfrac{\pi}{3}} &amp;= 9 \cos \tfrac{\pi}{3} \gt 0 \cma \nl
+                a \par{\tfrac{\pi}{3}} &amp;= -9 \sin \tfrac{\pi}{3} \lt 0 \pd
+                \ea 
+                \]
+                Since \(v\) and \(a\) have opposite signs, the object is <b>slowing down</b>
+                when \(t = \pi/3.\)
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        A particle moves along a straight line with time \(t \geq 0\) as modeled by the position function 
+        \(s(t)\) \(= -t + 2 \sin t.\)
+        <ol class="list-alpha">
+<li>
+                Find the velocity function \(v(t)\) and acceleration function \(a(t).\)
+            </li>
+<li>
+                What is the first time \(t\) at which the object is stationary?
+            </li>
+<li>
+                When \(t = \pi/4,\) is the object speeding up or slowing down?
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            \(v(t) = s'(t)\)
+            and \(a(t) = v'(t)\)
+            \(= s''(t).\)
+        </aside>
+<ol class="list-alpha">
+<li>
+                Velocity is the time derivative of position, so we find 
+                \[
+                \ba 
+                v(t) &amp;= s'(t) \nl 
+                &amp;= -\deriv{}{t} (t) + 2 \deriv{}{t} (\sin t) \nl 
+                &amp;= \boxed{-1 + 2 \cos t}
+                \ea 
+                \]
+                Acceleration is the time derivative of velocity; thus, we have 
+                \[
+                \ba 
+                a(t) &amp;= v'(t) \nl 
+                &amp;= \deriv{}{t} (-1 + 2 \cos t) \nl 
+                &amp;= \deriv{}{t} (-1) + 2 \deriv{}{t} (\cos t) \nl 
+                &amp;= \boxed{-2 \sin t}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                The object is stationary when \(v = 0,\) so we find 
+                \[
+                \ba 
+                -1 + 2 \cos t &amp;= 0 \nl 
+                \cos t &amp;= \tfrac{1}{2} \nl 
+                \implies t &amp;= \boxed{\tfrac{\pi}{3}} 
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                A particle is speeding up if and only if its velocity and acceleration have the same sign; 
+                it is slowing down if and only if velocity and acceleration have different signs.
+                When \(t = \pi/4,\) we see 
+                \[
+                \ba 
+                v \par{\tfrac{\pi}{4}} &amp;= -1 + \cos \tfrac{\pi}{4} \gt 0 \cma \nl
+                a \par{\tfrac{\pi}{4}} &amp;= -2 \sin \tfrac{\pi}{4} \lt 0 \pd
+                \ea 
+                \]
+                Since \(v\) and \(a\) have opposite signs, the object is <b>slowing down</b>
+                when \(t = \pi/4.\)
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<figure class="deriv-horizontal-spring" id="deriv-horizontal-spring">
+<img alt="Figure 1" src="../images/sectionImages/deriv-horizontal-spring.jpg"/>
+</figure>
+<style>
+            .deriv-horizontal-spring::before{
+                content:'FIGURE 1';
+            }
+        </style>
+        A heavy object attached to a spring is extended a distance \(A\) from its
+        <b>equilibrium position</b> (<a href="#deriv-horizontal-spring">Figure 1</a>). 
+        The object's vibration with time \(t\) is modeled by the position function 
+        \[s(t) = A \cos t \pd\]
+        <ol class="list-alpha">
+<li>
+                Determine the block's velocity function \(v(t)\) 
+                and acceleration function \(a(t).\)
+            </li>
+<li>
+                What is the earliest time when the block's speed equal to \(A/2 \ques\)
+            </li>
+<li>
+                When is the magnitude of the block's acceleration the greatest?
+            </li>
+</ol>
+</div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            From Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>, 
+            \(v(t) = s'(t)\) and \(a(t) = v'(t)\) \(= s''(t).\)
+        </aside>
+<ol class="list-alpha">
+<li>
+                The <b>velocity</b> function \(v(t)\) is \(s'(t),\) or 
+                \[\deriv{}{t} \par{A \cos t} = A \deriv{}{t} \par{\cos t} = \boxed{-A \sin t}\]
+                The <b>acceleration</b> function \(a(t)\) is given by \(v'(t) \col\) 
+                \[\deriv{}{t} \par{-A \sin t} = -A \deriv{}{t} \par{\sin t} = \boxed{-A \cos t}\]
+            </li>
+<hr/>
+<li>
+                The block's <b>speed</b> function is \(\abs{v}.\) 
+                So we seek the solutions to  
+                \[\abs{v(t)} = A \abs{\sin t} = \frac{A}{2} \pd\]
+                We see  
+                \[\abs{\sin t} = \tfrac{1}{2} \implies \boxed{t = \tfrac{\pi}{6}}\]
+            </li>
+<hr/>
+<li>
+                Since \(s(t) = -a(t),\) 
+                the block's acceleration has greatest magnitude when its displacement from equilibrium is greatest—that is, 
+                at the <b>far-left and far-right positions</b>.
+            </li>
+</ol>
+</span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        By recognizing the limit as a <i>disguised derivative</i> of a power function, evaluate 
+        \[\lim_{h \to 0} \frac{\dfrac{1}{(2 + h)^8} - \dfrac{1}{2^8}}{h} \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The limit definition of a derivative asserts that 
+        \[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd\]
+        (See Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>.)
+        We therefore see \(f(x) = 1/x^8 = x^{-8}.\)
+        So this limit represents the derivative of \(x^{-8}\) evaluated at \(x = 2.\)
+        The Power Rule gives 
+        \[\deriv{}{x} \par{x^{-8}} = -8 x^{-9} = -\frac{8}{x^9} \pd\]
+        So the limit is 
+        \[-\frac{8}{2^9} = \boxed{-\frac{1}{64}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Calculate the limit 
+        \[\lim_{h \to 0} \frac{\sin(16) - \sin(16 + h)}{3h} \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Let us rewrite the limit as 
+        \[-\tfrac{1}{3} \lim_{h \to 0} \frac{\sin(16 + h) - \sin 16}{h} \pd\]
+        This limit is the definition of the derivative of \(\sin x\) at \(x = 16,\)
+        which is \(\cos 16.\)
+        So the limit evaluates to 
+        \[\boxed{-\tfrac{1}{3} \cos 16} \approx 0.319 \pd\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        The piecewise function \(f\) is defined by
+        \[f(x) = 
+        \bc 
+        2x^2 + 3x &amp;x \lt 1 \nl 
+        x^7 + 4 &amp;x \geq 1 \pd
+        \ec 
+        \]
+        Is \(f(x)\) differentiable at \(x = 1 \ques\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The function \(f\) is differentiable at \(1\) if and only if 
+        \(f\) is continuous at \(1\) and 
+        the one-sided derivatives of \(f\) at \(1\) are equal.
+        We see \(f\) is <i>continuous</i> at \(1\) because \(\lim_{x \to 1} f(x)\)
+        \(= f(1) = 5 \col\)   
+        \[
+        \baf
+        &amp;&amp;\lim_{x \to 1^-} f(x) &amp;= \lim_{x \to 1^+} f(x)  &amp;\nl
+        \laWord{or} &amp;&amp; 2(1)^2 + 3(1) &amp;= (1)^7 + 4 &amp;\nl 
+        &amp;&amp; &amp;= 5 \pd
+        \eaf
+        \]
+        (See Section <a href="/Valculus/calculus/1.3-Determining-Continuity.html">1.3</a> to review the definition of continuity.)
+        The left-hand derivative of \(f\) at \(1\) is 
+        \[\deriv{}{x} \par{2x^2 + 3x} \intEval_{x = 1} = 4(1) + 3 = 7 \pd\]
+        The right-hand derivative is 
+        \[\deriv{}{x} \par{x^7 + 4} \intEval_{x = 1} = 7(1)^6 = 7 \pd\]
+        Since both one-sided derivatives are equal, \(f\)
+        <b>is differentiable</b> at \(1.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Let 
+        \[g(t) = 
+        \bc 
+        t^3 + t + 1 &amp;t \lt 0 \nl 
+        e^t - 2 &amp;t \geq 0 \pd
+        \ec 
+        \]
+        Is \(g(t)\) differentiable at \(t = 0 \ques\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<aside class="box-recall">
+            Continuity is a requirement for differentiability
+            but not a sufficient condition.
+        </aside>
+        The function \(g\) is differentiable at \(0\) if and only if 
+        \(g\) is continuous at \(0\) and 
+        the one-sided derivatives of \(g\) at \(0\) are equal.
+        We see 
+        \[
+        \baf 
+        &amp;&amp;\lim_{t \to 0^-} g(t) &amp;= (0)^3 + (0) + 1 = 1 &amp;\nl 
+        \laWord{and} &amp;&amp; \lim_{t \to 0^+} g(t) &amp;= e^0 - 2 = -1 \pd
+        \eaf 
+        \]
+        Since these one-sided limits aren't equal, \(\lim_{t \to 0} g(t)\) does not exist.
+        Thus, \(g\) is discontinuous at \(0\) and so \(g\) <b>cannot be differentiable</b> at \(0.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        The function \(f(x) = ax^3 + 2x^2 - 6x + 1\)
+        has a horizontal tangent when \(x = 2.\)
+        Find the value of \(a.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The graph of \(f\) has a horizontal tangent at \(2\)
+        if and only if \(f'(2) = 0.\)
+        Differentiating \(f,\) we find 
+        \[f'(x) = 3ax^2 + 4x - 6 \pd\]
+        Setting \(f'(2) = 0\) shows 
+        \[3a(2)^2 + 4(2) - 6 = 0 \implies 12a = -2 \cma\]
+        whose solution is \(\boxed{a = -1/6}.\) 
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Calculate the values of \(a\) and \(b\) such that 
+        the line \(y = bx - 3\) is tangent to the parabola \(f(x) = ax^2 + 1\)
+        when \(x = 2.\) 
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        Because the line \(y = bx - 3\) is <i>tangent</i> to the parabola \(f(x) = ax^2 + 1\) 
+        at \(x = 2,\)
+        the two graphs must intersect when \(x = 2\)
+        with the same slope, \(f'(2).\)
+        Substituting \(x = 2\) into each function and equating them yield 
+        \begin{flalign}
+        &amp;&amp;2b - 3 &amp;= 4a + 1 \nonumber &amp;\nl
+        \laWord{or} &amp;&amp;4a - 2b &amp;= -4 \pd \label{eq:a-b-eq}
+        \end{flalign}
+        Observe that 
+        \[\deriv{}{x} (bx - 3) = b \and \deriv{}{x} \par{ax^2 + 1} = 2ax \pd\]
+        Equating the derivatives at \(x = 2,\) we find 
+        \[b = 2a(2) \implies b = 4a \pd\]
+        Hence, \(\eqref{eq:a-b-eq}\) shows 
+        \[(b) - 2b = -4 \implies b = 4 \pd\]
+        So \(\boxed{a = 1}\) and \(\boxed{b = 4}.\)
+        A link to an interactive graph in which you can toggle \(a\) and \(b\) can be found at 
+        <a class="external-link" href="https://www.desmos.com/calculator/meyjqazuig?lang=en" rel="noopener noreferrer" target="_blank">https://www.<wbr/>desmos.com/<wbr/>calculator/<wbr/>meyjqazuig?lang=en</a>.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        Find the \(x\)-value at which the line tangent to the parabola \(y = x^2 - 4x + 1\) 
+        is parallel to the secant line through the points \((2, -3)\) and \((4, 1)\) on the parabola.
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The <i>secant line</i> through the points \((2, -3)\) and \((4, 1)\) 
+        has slope 
+        \[\secText m = \frac{1 - (-3)}{4 - 2} = 2 \pd\]
+        The derivative function of the parabola is given by 
+        \[\deriv{y}{x} = \deriv{}{x} \par{x^2 - 4x + 1} = 2x - 4 \pd\]
+        Hence, at any \(x\) the slope to the parabola is \(2x - 4.\)
+        So we equate this expression to \(\secText m = 2\) to find 
+        \[2x - 4 = 2 \implies \boxed{x = 3}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+        For \(a \ne 1/2,\) prove that the tangent line to the graph of \(y = x^2\) at \(x = a\)
+        intersects the line \(y = x - 6\)
+        at the point 
+        \[\par{\frac{a^2 - 6}{2a - 1} \cma \frac{a^2 - 12a}{2a - 1}} \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        The slope to \(y = x^2\) when \(x = a\) is given by 
+        \[\deriv{}{x} \par{x^2} \intEval_{x = a} = 2a \pd\]
+        Therefore, an equation of the tangent line to the parabola at \(x = a\) is given by 
+        \[y - a^2 = 2a(x - a) \or y = 2ax - a^2 \pd\]
+        Since this line intersects the other line \(y = x - 6,\) we equate these functions to discover 
+        \[
+        \ba 
+        2ax - a^2 &amp;= x - 6 \nl 
+        x(2a - 1) &amp;= a^2 - 6 \nl 
+        \implies x &amp;= \frac{a^2 - 6}{2a - 1} \pd
+        \ea 
+        \]
+        Substituting this expression into the function \(y = x - 6\) shows 
+        \[y = \frac{a^2 - 6}{2a - 1} - 6 = \frac{a^2 - 6 - 6(2a - 1)}{2a - 1} = \frac{a^2 - 12a}{2a - 1} \pd\]
+        Thus, these two lines intersect at the given point for \(a \ne 1/2.\)
+        (In fact, for \(a = 1/2\) the lines are parallel to each other.)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<!--[[[HARD]]]-->
+        Let \(f(x) = x^2\) and \(g(x) = -x^2 - C.\)
+        Find the value of \(C\) such that the line tangent to \(f\)
+        at \(x = 2\) is also tangent to \(g.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<figure class="deriv-4x-4-tan" id="deriv-4x-4-tan">
+<img alt="deriv-4x-4-tan.jpg" src="../images/sectionImages/deriv-4x-4-tan.jpg"/>
+</figure>
+        The word <i>tangent</i> means that the line intersects \(g(x)\)
+        We anticipate that the tangent line to \(f\) at \(x = 2\) is also tangent to \(g\) in the third quadrant. 
+        So we are considering <i>only one tangent line</i>. 
+        We see \(f(2) = 4\) and \(f'(2) = 4,\)
+        so an equation of this tangent line is 
+        \[y - 4 = 4(x - 2) \or y = 4x - 4 \pd\]
+        This line has slope \(4\) and must be tangent to \(g(x) = -x^2 - C,\)
+        whose derivative is \(g'(x) = -2x.\)
+        Equating slopes shows 
+        \[-2x = 4 \implies x = -2 \pd\]
+        Thus, the line \(y = 4x - 4\) is tangent to \(f\) at \(x = 2\)
+        and tangent to \(g\) at \(x = -2.\)
+        The word <i>tangent</i> means that this line also intersects \(g(x)\) at \(x = -2.\)
+        When \(x = -2,\) the line's \(y\)-value is  
+        \[4(-2) - 4 = -12 \cma\]
+        so \(g(-2) = -12.\)
+        Thus, we see
+        \[g(-2) = -(-2)^2 - C = -12 \implies \boxed{C = 8}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<!--[[[HARD]]]-->
+        Find the value of \(b\) such that the parabola \(y = x^2 + b\)
+        is tangent to \(y = \abs x.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<figure class="deriv-x2-b" id="deriv-x2-b">
+<img alt="deriv-x2-b.jpg" src="../images/sectionImages/deriv-x2-b.jpg"/>
+</figure>
+        The word <i>tangent</i> means that the graphs of \(y = x^2 + b\)
+        and \(y = \abs x\)
+        intersect each other with the same slope. 
+        The graph of \(\abs x\) has slope \(-1\) for \(x \lt 0\)
+        and slope \(1\) for \(x \gt 0.\) 
+        The derivative function for the parabola is 
+        \[\deriv{}{x} \par{x^2 + b} = 2x \pd\]
+        We equate this expression to \(1\) and \(-1\) to find  
+        \[
+        \baat{2}
+        2x &amp;= 1 \lspace 2x &amp;&amp;= -1 \nl 
+        x &amp;= \tfrac{1}{2} \scol \lspace x &amp;&amp;= -\tfrac{1}{2} \pd
+        \eaat
+        \]
+        At each value of \(x,\) \(\abs x = 1/2.\)
+        Thus, the parabola must also reach the \(y\)-value \(1/2\) when \(x = 1/2\)
+        and \(x = -1/2 \col\) 
+        \[y = \par{\pm \tfrac{1}{2}}^2 + b = \tfrac{1}{2} \implies \boxed{b = \tfrac{1}{4}}\]
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<!--[[[HARD]]]-->
+        For any real number \(c,\)
+        use the limit definition of a derivative to prove that 
+        \[\deriv{}{x} \sin(x + c) = \cos(x + c) \pd\]
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+        This proof is nearly identical to the proof discussed in the section. 
+        By the limit definition of a derivative,
+        \[\deriv{}{x} \sin(x + c) = \lim_{h \to 0} \frac{\sin(x + c + h) - \sin(x + c)}{h} \pd\]
+        We now use the double-angle identity for sine, treating 
+        \((x + c)\) as one term. 
+        Doing so gives 
+        \[
+        \ba 
+        \deriv{}{x} \sin(x + c) 
+        &amp;= \lim_{h \to 0} \frac{\sin(x + c) \cos h + \cos(x + c) \sin h - \sin(x + c)}{h} \nl 
+        &amp;= \lim_{h \to 0} \frac{\sin(x + c) (\cos h - 1)}{h} + \lim_{h \to 0} \frac{\sin h \cos(x + c)}{h} \nl 
+        &amp;= \sin(x + c) \lim_{h \to 0} \frac{\cos h - 1}{h} + \cos(x + c) \lim_{h \to 0} \frac{\sin h}{h} \pd 
+        \ea 
+        \]
+        Recall that as \(h \to 0,\) \((\cos h - 1)/h \to 0\) and \(\sin h/h \to 1.\)
+        Thus, we see 
+        \[\deriv{}{x} \sin(x + c) = \sin(x + c) \cdot 0 + \cos(x + c) \cdot 1 = \cos(x + c) \cma\]
+        as requested.
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <div>
+<!--[[[HARD]]]-->
+        Let \(R\) be the region in the first quadrant bounded between the coordinate axes and the 
+        line tangent to the curve \(y = 1/x\) at any point \((a, 1/a).\)
+        Calculate the area of \(R\) and justify that it is independent of \(a.\)
+    </div> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            <span>
+<figure class="deriv-1x-R" id="deriv-1x-R">
+<img alt="deriv-1x-R.jpg" src="../images/sectionImages/deriv-1x-R.jpg"/>
+</figure>
+        Region \(R\) is a triangle whose hypotenuse is the tangent line. 
+        The derivative of \(1/x\) is, by the Power Rule, 
+        \[-x^{-2} = -\frac{1}{x^2} \pd\]
+        Thus, the slope to the curve \(1/x\) at \(x = a\) is \(-1/a^2.\)
+        The point of tangency is \((a, 1/a),\)
+        so an equation of the tangent line is 
+        \[y - \frac{1}{a} = -\frac{1}{a^2}(x - a) \or y = -\frac{x}{a^2} + \frac{2}{a} \pd\]
+        To find the triangle's <i>base</i> \(b,\) we set \(y = 0 \col\)
+        \[0 = -\frac{b}{a^2} + \frac{2}{a} \implies b = 2a \pd\]
+        The triangle's <i>height</i> \(h\) is found by letting \(x = 0 \col\)
+        \[h = -\frac{0}{a^2} + \frac{2}{a} \implies h = \frac{2}{a} \pd\]
+        Hence, the triangle's area is 
+        \[\tfrac{1}{2} bh = \tfrac{1}{2}(2a) \par{\tfrac{2}{a}} = \boxed{2}\]
+        It is surprising that the triangle's area is always \(2,\) regardless of the value of \(a.\)
+    </span> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

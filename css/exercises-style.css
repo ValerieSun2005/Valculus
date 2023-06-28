@@ -2,6 +2,15 @@ table{
     width: 100%;
 }
 
+.box-solution p{
+    text-indent: 5vmin;
+    margin-top: 5%;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
 .list-alpha li{
     margin-top: 2%;
 }
@@ -9,7 +18,7 @@ table{
 
 .problems-grid{
     table-layout: fixed;
-    width: 100%;
+    width: 130%;
 }
 
 .grid-problem-cell{ 
@@ -218,10 +227,64 @@ main figure::after{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* icons */
+
+.exercises-calculator-icon{
+    width: auto;
+    height: 30px;
+    display: flex;
+    position: absolute;
+}
+
+
+.exercises-calculator-body:hover::after{
+    content: "This exercise requires a graphing calculator.";
+    width: 13%;
+    margin-left: -12%;
+}
+
+.exercises-difficult-icon{
+    width: auto;
+    height: 30px;
+    display: flex;
+    position: absolute;
+}
+
+
+.exercises-difficult-body:hover::after{
+    content: "This exercise is difficult and may apply concepts from previous sections.";
+    width: 15%;
+    margin-left: -15%;
+}
+
+.exercises-calculator-body::after, .exercises-difficult-body::after{
+    content: attr(data-hover-text);
+    opacity: 0;
+    transition: opacity 0.4s;
+    transition-delay: 0.7s;
+}
+
+.exercises-calculator-body:hover::after, .exercises-difficult-body:hover::after{
+    opacity: 1;
+    color: rgb(216, 210, 210);
+    padding: .5% .5% .5% .5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-variant: small-caps;
+    position: absolute;
+    margin-top: 2%;
+    border-radius: 15px;
+    border: 3px solid plum;
+    background-color: rgb(68, 61, 61);
+    z-index: 1;
+}
+
 @media screen and (max-width: 900px) {
 
     main figure{
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     main img{

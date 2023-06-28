@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.4: Chain Rule</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>2.4 — Chain Rule</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.4-Chain-Rule-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.4-Chain-Rule-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Chain-Rule]]]--> 
+<p>
+    We know how to differentiate sums, differences, products, and quotients of functions. 
+    But we have yet to discuss how to differentiate <i>composite functions</i>—for example, 
+    the derivative of \(\sin(4x + 3)\) or the derivative of \(\sqrt{x^2 + 2}.\)
+    In this section, upon learning the <i>Chain Rule</i>, 
+    we'll be able to differentiate any function.
+    This topic is, arguably, the most important to differential calculus
+    since it is a stepping stone to further units. 
+    This section discusses the following topics:
+    <ul>
+        <li>
+            <a href="#chain-rule" class="page-anchor">The Chain Rule</a>
+        </li>
+        <li>
+            <a href="#general-power-rule" class="page-anchor">The General Power Rule</a>
+        </li>
+        <li>
+            <a href="#y=b^x" class="page-anchor">Differentiating \(y = b^x\)</a>
+        </li>
+        <li>
+            <a href="#chain-rule-multiple" class="page-anchor">Using the Chain Rule Multiple Times</a>
+        </li>
+        <li>
+            <a href="#proof-chain-rule" class="page-anchor">Proof of the Chain Rule</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="chain-rule">The Chain Rule</h4>
+
+<p>
+    A <b>composite function</b> can be written in the form 
+    \begin{equation*} 
+    F(x) = f(g(x)) \cma
+    \end{equation*}
+    where \(f\) is the <i>outer function</i> and \(g\) is the <i>inner function</i>. 
+    Alternatively, we could write \(F(x) = (f \circ g)(x).\)
+    Now consider \(F'(x),\) the rate of change of \(F\) with respect to \(x.\)
+    It is logical to assume that \(F'(x)\) depends on
+    both \(f'\) and \(g'.\)
+    In fact, it turns out that \(F'(x)\) is the product of these derivatives, as stated by the  
+    <span class="emph">Chain Rule</span>: 
+    \begin{equation} 
+    F'(x) = f'(g(x)) \cdot g'(x) \pd \label{eq:chain-rule}
+    \end{equation}
+</p>
+
+<aside class="box-tip">
+    To attain the composition \(f'(g(x))\) in 
+    \(\eqref{eq:chain-rule},\) first find \(f'(x)\)
+    and then replace \(x\) with \(g(x).\) 
+</aside>
+
+<p>
+    <span class="label-emph">Chain Rule Expressed in Leibniz Notation</span>
+    Alternatively, we can express \(\eqref{eq:chain-rule}\)
+    in Leibniz notation.
+    For the composite function \(y = f(g(x)),\)
+    we let \(u = g(x)\) to get \(y = f(u).\)
+    We note that 
+    \(y\) changes with the variable \(u,\)
+    which changes with \(x.\)
+    Calculating the rate at which \(y\) changes with \(u\) 
+    <i>doesn't</i> need the Chain Rule. 
+    But we <i>do</i> need the rule to determine the rate of change of \(y\)
+    with respect to \(x.\)
+    In Leibniz notation, we write the Chain Rule as 
+    \begin{equation} 
+    \deriv{y}{x} = \deriv{y}{u} \deriv{u}{x} \pd \label{eq:chain-leib}
+    \end{equation}
+    We could alternatively write 
+    \[\deriv{y}{x} = \deriv{f}{g} \deriv{g}{x} \cma\]
+    in which we view \(f\) and \(g\) as variables 
+    such that \(f\) depends on \(g\) and \(g\) depends on \(x.\)
+    Both forms reveal the magic of Leibniz's 
+    notation—\(\eqrefer{eq:chain-leib}\) is easy to remember 
+    if you imagine canceling the terms \(\dd u.\)
+    We see the following:
+    <blockquote>
+        If \(y\) changes \(a\) times as fast as \(u,\)
+        and \(u\) changes \(b\) times as fast as \(x,\)
+        then \(y\) changes \(ab\) times as fast as \(x.\)
+    </blockquote>
+    For example, imagine that a bicycle travels \(6\)
+    times faster than a walker, 
+    and that a car drives \(5\) times faster than the bicycle. 
+    The car therefore travels \(6 \times 5\) \(= 30\)
+    times faster than the walker.
+</p>
+<p>
+    Applying the Chain Rule is similar to peeling an onion, 
+    in which we peel starting from the outer layer (initially ignoring the inner core)
+    and gradually moving inward. 
+    Similarly, when differentiating a composite function, 
+    we use the differentiation operation on the outermost layer 
+    \((f)\)
+    before moving on to differentiate the inner layer \((g).\) 
+</p>
+
+<div class="box-title">THE CHAIN RULE</div>
+<div class="box">
+    If \(g\) is differentiable at \(x\) and \(f\) is differentiable at \(g(x),\)
+    then the derivative of the composite function \(F(x) = f(g(x))\) is given by 
+    \begin{equation} 
+    F'(x) = f'(g(x)) \cdot g'(x) \pd \eqlabel{eq:chain-rule}
+    \end{equation}
+    In Leibniz notation, if \(y = f(g(x))\) and \(u = g(x),\) then 
+    \begin{equation} 
+    \deriv{y}{x} = \deriv{y}{u} \deriv{u}{x} \pd \eqlabel{eq:chain-leib}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\sin(x^2 + 1)}\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <aside class="box-remark">
+        At first,
+        we suggest that you choose the method you feel most comfortable 
+        using. 
+        But as you become familiar with the Chain Rule, 
+        we recommend that you gain an appreciation for both methods.
+    </aside>
+    The function \(\sin(x^2 + 1)\) is composite, 
+    so differentiating it requires the <b>Chain Rule</b>. 
+    We have two methods to do so. 
+    <p>
+        <span class="label-emph">Method 1</span>  
+        In the composite function \(\sin(x^2 + 1),\) 
+        we identify the outer function to be \(f(x) = \sin x\)
+        and the inner function to be \(g(x) = x^2 + 1.\)
+        Note that 
+        \[f'(x) = \cos x \and g'(x) = 2x \pd\]
+        To obtain \(f'(g(x)),\)
+        in \(f'(x) = \cos x\)
+        we replace \(x\) with \(g(x) = x^2 + 1 \col\)
+        \[f'(g(x)) = \cos \parbr{g(x)} = \cos \par{x^2 + 1} \pd\]
+        Thus, by \(\eqref{eq:chain-rule}\) (the <b>Chain Rule</b>), 
+        the derivative of \(f(g(x))\) is 
+        \[
+        \ba 
+        f'(g(x)) \cdot g'(x) &= \cos \par{x^2 + 1} \cdot 2x \nl 
+        &= \boxed{2x \cos \par{x^2 + 1}} 
+        \ea 
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>  
+        In \(y = \sin(x^2 + 1),\) 
+        we assign some variable to be the inner function—say, 
+        \(u = x^2 + 1.\)
+        Then we have \(y = \sin u,\) from which we see 
+        \[\deriv{y}{u} = \cos u \pd\]
+        Also, 
+        \[\deriv{u}{x} = \deriv{}{x} \par{x^2 + 1} = 2x \pd\]
+        Hence, by \(\eqref{eq:chain-leib}\) the derivative of \(y\) with respect to \(x\) is
+        given by  
+        \[\deriv{y}{x} = \deriv{y}{u} \deriv{u}{x} = (\cos u) (2x) \pd\]
+        But since we chose \(u = x^2 + 1,\)
+        substituting back gives 
+        \[
+        \ba 
+        \deriv{y}{x} &= \cos \par{x^2 + 1} \cdot 2x \nl 
+        &= \boxed{2x \cos \par{x^2 + 1}}
+        \ea 
+        \]
+    </p>
+</div>
+
+<div class="example-title" id="ex-sqrt"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\sqrt{x^3 - 2} \,}\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <p>
+        <span class="label-emph">Method 1</span>
+        The function \(\sqrt{x^3 - 2}\) is composite; 
+        the outer function is \(f(x) = \sqrt x,\)
+        and the inner function is \(g(x) = x^3 - 2.\)
+        Observe that \(f'(x) = 1/(2 \sqrt x),\) so 
+        \[f'(g(x)) = \frac{1}{2 \sqrt{g(x)}} = \frac{1}{2 \sqrt{x^3 - 2}} \pd\]
+        Also, \(g'(x) = 3x^2.\)
+        Thus, the Chain Rule, as given by \(\eqrefer{eq:chain-rule},\) 
+        gives the derivative of \(\sqrt{x^3 - 2}\) to be 
+        \[
+        \ba 
+        f'(g(x)) \cdot g'(x) &= \frac{1}{2 \sqrt{x^3 - 2}} \cdot 3x^2 \nl 
+        &= \boxed{\frac{3x^2}{2 \sqrt{x^3 - 2}}}
+        \ea 
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>
+        In \(y = \sqrt{x^3 - 2},\)
+        we choose some variable \(u\) to be the inner function. 
+        Thus, let \(u = x^3 - 2.\)
+        Observe that 
+        \[\deriv{y}{u} = \deriv{}{u} \sqrt{u} = \frac{1}{2 \sqrt u} = \frac{1}{2 \sqrt{x^3 - 2}}\]
+        and 
+        \[\deriv{u}{x} = \deriv{}{x} \par{x^3 - 2} = 3x^2 \pd\]
+        Therefore, by \(\eqref{eq:chain-leib}\) 
+        \[
+        \ba 
+        \deriv{y}{x} &= \deriv{y}{u} \deriv{u}{x} \nl 
+        &= \frac{1}{2 \sqrt{x^3 - 2}} \cdot 3x^2 \nl 
+        &= \boxed{\frac{3x^2}{2 \sqrt{x^3 - 2}}}
+        \ea     
+        \]
+    </p>
+</div>
+
+<div class="example-title" id="ex-sin^2"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\sec^2 x}\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    The function \(\sec^2 x\) doesn't appear to be composite. 
+    But upon rewriting it as \((\sec x)^2,\)
+    we identify the outer function to be \(f(x) = x^2\) and the inner function to be \(g(x) = \sec x.\)
+    Notice that \(f'(x) = 2x\) and \(g'(x) = \sec x \tan x.\)
+    Thus, the Chain Rule gives the derivative of \(\sec^2 x\) to be 
+    \[f'(g(x)) \cdot g'(x) = (2 \sec x)(\sec x \tan x) = \boxed{2 \sec^2 x \tan x}\]
+</div>
+
+<h4 id="general-power-rule">The General Power Rule</h4>
+<p>
+    Very often, we use the Chain Rule in conjunction with other differentiation rules. 
+    <i>Differentiation rules aren't exclusive</i>; 
+    in other words, differentiating some functions requires a combination of rules.
+    In <a href="#ex-sqrt">Example 2</a> and <a href="#ex-sin^2">Example 3</a>,
+    we used the Power Rule in conjunction with the Chain Rule. 
+    Now let us generalize this combination:
+    Let \(g\) be a differentiable function,
+    and consider the family of functions 
+    \[y = [g(x)]^n\]
+    for some number \(n.\)
+    To differentiate \(y,\) we let \(u = g(x).\)
+    By the Power Rule, we see  
+    \[\deriv{y}{u} = \deriv{}{u} \par{u^n} = n u^{n - 1} \pd\]
+    Then by the Chain Rule, 
+    \[
+    \ba 
+    \deriv{y}{x} &= \deriv{y}{u} \deriv{u}{x} \nl 
+    &= n u^{n - 1} \cdot g'(x) \nl 
+    &= n[g(x)]^{n - 1} \cdot g'(x) \pd
+    \ea 
+    \]
+    This equation is called the <span class="emph">General Power Rule</span>.
+    It is a special case of the Chain Rule—an 
+    <i>application</i> of the Chain Rule—for when the outer function is a power function.
+    Because the General Power Rule is derived from the Chain Rule, 
+    it is not a new concept but rather a convenient formula to know. 
+</p>
+
+<div class="box-title">THE GENERAL POWER RULE</div>
+<div class="box">
+    If \(g\) is a differentiable function and \(n\) is a constant, then 
+    \begin{equation} 
+    \deriv{}{x} [g(x)]^n = n \parbr{g(x)}^{n - 1} \cdot g'(x) \pd \label{eq:chain-power}
+    \end{equation}
+</div>
+
+<p>
+    In \(\eqref{eq:chain-power}\) if \(g(x) = x,\)
+    then \(g'(x) = 1\) and so the formula becomes 
+    \[\deriv{}{x} x^n = nx^{n - 1} \cdot 1 = nx^{n - 1} \cma\]
+    the raw Power Rule.
+    In this special case of \(g,\)
+    the Chain Rule agrees with the Power Rule 
+    we have previously established. 
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\par{1 + 2x^3}^{100}}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    Using the <b>General Power Rule</b>, 
+    as in \(\eqref{eq:chain-power},\) with \(n = 100\) and \(g(x) = 1 + 2x^3\)
+    gives the derivative to be 
+    \[
+    \ba 
+    100 \par{1 + 2x^3}^{99} \cdot g'(x) 
+    &= 100 \par{1 + 2x^3}^{99} \cdot 6x^2 \nl 
+    &= \boxed{600 x^2 \par{1 + 2x^3}^{99}}
+    \ea 
+    \]
+    By using the Chain Rule, we solved—in about one minute—a 
+    problem that would otherwise require hundreds upon hundreds of hours expanding terms.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbrBig{(4 - 2x)^5 \par{9x^2 + 4}^{10}}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    We treat the expression as one product formed by two composite functions: 
+    \((4 - 2x)^5\) and \(\par{9x^2 + 4}^{10}.\) 
+    Thus, we first apply the Product Rule and then use the Chain Rule 
+    to differentiate each function.
+    Using \(\eqref{eq:chain-power},\) we see 
+    \[
+    \baf 
+    \deriv{}{x} \parbrBig{(4 - 2x)^5} &= -10(4 - 2x)^4 \cma \nl 
+    \deriv{}{x} \parbrBig{\par{9x^2 + 4}^{10}} &= 180x \par{9x^2 + 4}^9 \pd 
+    \eaf 
+    By the Product Rule, 
+    \[
+    \ba 
+    \deriv{}{x} \parbrBig{(4 - 2x)^5 \par{9x^2 + 4}^{10}} &=
+    \par{9x^2 + 4}^{10} \deriv{}{x} \parbrBig{(4 - 2x)^5} + (4 - 2x)^5 \deriv{}{x} \parbrBig{\par{9x^2 + 4}^{10}} \nl 
+    &= \boxed{180x \par{9x^2 + 4}^9 (4 - 2x)^5 - 10(4 - 2x)^4 \par{9x^2 + 4}^{10}}
+    \ea 
+    \]
+</div>
+
+<h4 id="y=b^x">Differentiating \(y = b^x\)</h4>
+<p>
+    We know that the derivative of \(e^x\) is \(e^x,\)
+    since \(e = 2.718 \dots\) is the only number whose
+    corresponding exponential function matches its derivative.
+    But to differentiate an exponential function whose base isn't \(e,\)
+    we force the base to be \(e\) (thus producing a composite function) and use the Chain Rule.
+    Let \(b\) be any positive number, 
+    in the family of functions \(y = b^x.\)
+    Our goal is to differentiate the family.
+    We use the Change of Base formula for exponents:
+    \[y = b^x = \par{e^{\ln b}}^x = e^{x \ln b} \pd\]
+    In this composite function, the outer function is \(f(x) = e^x\)
+    and the inner function is \(g(x) = x \ln b.\) 
+    Since \(b\) is a constant, \(\ln b\) is also a constant and so \(g'(x) = \ln b.\)
+    And of course, \(f'(x) = e^x.\)
+    Therefore, by \(\eqref{eq:chain-rule}\) we see 
+    \[\deriv{}{x} \parbr{b^x} = e^{x \ln b} \ln b = b^x \ln b \pd\]
+    In words, to differentiate an exponential function whose base isn't \(e,\)
+    we copy the exponential function and multiply it by the natural logarithm of the base.
+    If \(b = e,\) then \(\ln b = 1\) and so the derivative is simply \(e^x.\)
+</p>
+
+<aside class="box-caution">
+    Do not confuse \(\eqrefer{eq:diff-b^x}\) with the Power Rule, 
+    \[\deriv{}{x} \parbr{x^n} = nx^{n - 1} \pd\]
+</aside>
+
+<div class="box-title">DIFFERENTIATING \(y = b^x\)</div>
+<div class="box">
+    If \(b \gt 0,\) then
+    \begin{equation} 
+    \deriv{}{x} \parbr{b^x} = b^x \ln b \pd \label{eq:diff-b^x}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{6^x}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    From \(\eqrefer{eq:diff-b^x},\) we see \(b = 6\)
+    and so the derivative is  
+    \[\boxed{6^x \ln 6}\]
+</div>
+
+<h4 id="chain-rule-multiple">Using the Chain Rule Multiple Times</h4>
+<aside class="box-tip">
+    When you apply the Chain Rule to \(y = f(g(h(x))),\) think of 
+    \(g(h(x))\) as <i>one function</i>
+    composed within \(f.\)
+    Be organized by writing out each step of the differentiation process.
+</aside>
+<p>
+    The function \(y = f(g(h(x)))\)
+    has "three layers" of composition: the outermost layer \(f,\)
+    the middle layer \(g,\) and the innermost layer \(h.\)
+    To differentiate \(y,\) we use the Chain Rule twice, as follows:
+    \begin{align}
+    \deriv{y}{x} &= f'(g(h(x))) \cdot \deriv{}{x} [\orange{g(h(x))}] \nonumber \nl 
+    &= f'(g(h(x))) \parbr{\orange{g'(h(x)) \cdot h'(x)}} \nonumber \nl 
+    &= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x) \pd \label{eq:chain-rule-3}
+    \end{align}
+    Or in Leibniz notation, we can write 
+    \[\deriv{y}{x} = \deriv{f}{g} \deriv{g}{h} \deriv{h}{x} \pd\]
+    This form explains the name <i>Chain Rule</i>:
+    \(\textderiv{y}{x}\) is given by the product of a <i>chain</i>
+    of derivatives.   
+    In general, when a function has \(n\) layers of composition, 
+    we use the Chain Rule \(n - 1\) times.
+</p>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\sin^2(5x - 2)}\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    We rewrite the function as 
+    \[\parbr{\sin(5x - 2)}^2 \pd\]
+    It is apparent that this function is a composition of three layers; 
+    thus, we use the Chain Rule twice.
+    Let us treat \(\sin(5x - 2)\) as <i>one function composed within the squared function</i>. 
+    Thus, an initial application of the Chain Rule gives, following \(\eqref{eq:chain-power}\)
+    (the <b>General Power Rule</b>), 
+    \[2 \sin(5x - 2) \cdot \deriv{}{x} \parbr{\orange{\sin(5x - 2)}} \pd\]
+    Now we happen to use the Chain Rule again to differentiate \(\sin(5x - 2).\)
+    So our derivative becomes 
+    \[2 \sin(5x - 2) \cdot \parbr{\orange{5 \cos(5x - 2)}} = \boxed{10 \sin(5x - 2) \cos(5x - 2)}\]
+</div>
+
+<aside class="box-tip">
+    Once you've attained proficiency in differentiating, you'll be able to
+    apply the Chain Rule in your head.
+    So keep practicing! 
+</aside>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\sin(\tan(\cos x))}\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    <aside class="box-remark">
+        Do not forget that 
+        \[\deriv{}{u} \parbr{\tan u} = \sec^2 u \pd\]
+    </aside>
+    This function is a composition of three functions.
+    Treating \(\tan(\cos x)\)
+    as one function composed within the outermost layer sine, 
+    the first application of the Chain Rule gives 
+    \[\cos(\tan(\cos x)) \cdot \deriv{}{x} \parbr{\orange{\tan(\cos x)}} \pd\]
+    The second application of the Chain Rule yields 
+    \[\cos(\tan(\cos x)) \cdot \parbr{\orange{\sec^2(\cos x) \cdot (- \sin x)}} 
+    = \boxed{-\cos(\tan(\cos x)) \sec^2(\cos x) \sin x}
+    \]
+</div>
+
+<h4 id="proof-chain-rule">Proof of the Chain Rule</h4>
+<p>
+    <span class="proof">PROOF</span>
+    Let \(F(x) = f(g(x))\)
+    such that \(g\) is differentiable at \(c\)
+    and \(f\) is differentiable at \(g(c).\)
+    Our goal is to show that \(F'(c) = f'(g(c)) \cdot g'(c).\)
+    By the limit definition of a derivative at a point 
+    (see Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>), 
+    we assert that  
+    \[
+    \ba 
+    F'(c) &= \lim_{x \to c} \frac{F(x) - F(c)}{x - c} \nl 
+    &= \lim_{x \to c} \frac{f(g(x)) - f(g(c))}{x - c} \pd 
+    \ea 
+    \]
+    Our goal is to rewrite this limit to reveal that 
+    it's a product of two derivatives. 
+    By algebraic manipulation, we obtain
+    \[
+    F'(c) = \lim_{x \to c} \parbr{\frac{f(g(x)) - f(g(c))}{g(x) - g(c)} \cdot \frac{g(x) - g(c)}{x - c}} \cma 
+    \]
+    assuming that \(g(x) \ne g(c).\)
+    Using the Product Law for Limits (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), 
+    this limit becomes 
+    \[F'(c) = \par{\lim_{x \to c} \frac{f(g(x)) - f(g(c))}{g(x) - g(c)}} \par{\lim_{x \to c} \frac{g(x) - g(c)}{x - c}}\]
+    because each limit exists. 
+    The second limit is the definition of \(g'(c),\) so we have 
+    \[F'(c) = \par{\lim_{x \to c} \frac{f(g(x)) - f(g(c))}{g(x) - g(c)}} \cdot g'(c) \pd\]
+    Now we show that the first limit represents the derivative \(f'(g(c)) \col\)
+    Since \(g\) is differentiable at \(c,\)
+    \(g\) is continuous at \(c\) 
+    and so \(g(x) \to g(c)\) as \(x \to c.\)
+    If we let \(u = g(x),\) 
+    then we find 
+    \[
+    \ba 
+    F'(c) &= \par{\lim_{u \to g(c)} \frac{f(u) - f(g(c))}{u - g(c)}} \cdot g'(c) \nl 
+    &= f'(g(c)) \cdot g'(c) \pd
+    \ea 
+    \]
+    \[\qedproof\]
+</p>
+
+<div class="section-summary">
+    <p>
+        <a href="#chain-rule" class="summary-anchor">The Chain Rule</a>
+        We use the <span class="emph">Chain Rule</span> to differentiate composite functions. 
+        If \(g\) is differentiable at \(x\) and \(f\) is differentiable at \(g(x),\)
+        then the derivative of the composite function \(F(x) = f(g(x))\) is given by 
+        \begin{equation} 
+        F'(x) = f'(g(x)) \cdot g'(x) \pd \eqlabel{eq:chain-rule}
+        \end{equation}
+        In Leibniz notation, if \(y = f(g(x))\) and \(u = g(x),\) then we can write either 
+        \begin{flalign} 
+        && \deriv{y}{x} &= \deriv{y}{u} \deriv{u}{x} \eqlabel{eq:chain-leib} &\nl 
+        \laWord{or} && \deriv{y}{x} &= \deriv{f}{g} \deriv{g}{x} \nonumber \pd 
+        \end{flalign}
+        In words, to obtain the derivative of a composite function, 
+        we differentiate the outer layer—leaving alone the inner  
+        function—and then multiply by the derivative of the inner function. 
+    </p>
+    <p>
+        <a href="#general-power-rule" class="summary-anchor">The General Power Rule</a>
+        If \(g\) is a differentiable function and \(n\) is any constant, then 
+        \begin{equation} 
+        \deriv{}{x} [g(x)]^n = n \parbr{g(x)}^{n - 1} \cdot g'(x) \pd \eqlabel{eq:chain-power}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#y=b^x" class="summary-anchor">Differentiating \(y = b^x\)</a>
+        The function \(y = b^x\) can be rewritten as the composite function \(y = e^{x \ln b}.\)
+        If \(b \gt 0,\) then the Chain Rule gives 
+        \begin{equation} 
+        \deriv{}{x} \parbr{b^x} = b^x \ln b \pd \eqlabel{eq:diff-b^x}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#chain-rule-multiple" class="page-anchor">Using the Chain Rule Multiple Times</a>
+        We use the Chain Rule multiple times when a function is composed of more than two 
+        layers. In general, if a function is composed by \(n\) layers, 
+        then we apply the Chain Rule \(n - 1\) times. 
+        For example, the derivative of \(y = f(g(h(x)))\) (composed by three layers) is given by either 
+        \begin{flalign} 
+        && \deriv{y}{x} &= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x) \eqlabel{eq:chain-rule-3} &\nl
+        \laWord{or} && \deriv{y}{x} &= \deriv{f}{g} \deriv{g}{h} \deriv{h}{x} \nonumber \pd
+        \end{flalign}
+        You shouldn't memorize \(\eqref{eq:chain-rule-3};\)
+        instead, during your first application of the Chain Rule, 
+        we recommend that you view \(g(h(x))\) as a single, ordinary function 
+        composed within \(f.\)
+        Be organized in writing out the steps of your differentiation process. 
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

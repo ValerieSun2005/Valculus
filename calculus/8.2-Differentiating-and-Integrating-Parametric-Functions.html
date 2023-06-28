@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8.2: Differentiating and Integrating Parametric Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>8.2 — Differentiating and Integrating Parametric Functions</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.2-Differentiating-and-Integrating-Parametric-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.2-Differentiating-and-Integrating-Parametric-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Differentiating-and-Integrating-Parametric-Functions]]]--> 
+<p>
+    When we ventured into applications of integration, 
+    we well understood the importance of derivatives.
+    In this chapter, we investigate the utility of parametric functions to model a variety of situations,
+    so in this section we merge these topics.
+    We discuss the following: 
+    <ul>
+        <li>
+            <a href="#para-derivatives" class="page-anchor">Differentiating Parametric Functions</a>
+        </li>
+        <li>
+            <a href="#areas-parametric" class="page-anchor">Areas with Parametric Curves</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="para-derivatives">Differentiating Parametric Functions</h4>
+<p>
+    How do we calculate the slope to a graph parameterized by  
+    \(x = f(t)\) and \(y = g(t) \ques\) 
+    If \(f\) and \(g\) are differentiable functions, and \(y\) is differentiable with \(x,\) then the Chain Rule 
+    (from Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>)
+    states 
+    \[\deriv{y}{t} = \deriv{y}{x} \deriv{x}{t} \pd\]
+    Dividing both sides by \(\textderiv{x}{t}\) (assuming it is nonzero) gives 
+    \begin{equation} 
+    \deriv{y}{x} = \frac{\textderiv{y}{t}}{\textderiv{x}{t}} \pd \label{eq:dy/dx} 
+    \end{equation}
+    We can also write \(\textderiv{y}{x} = g'(t)/f'(t).\)
+    \(\eqrefer{eq:dy/dx}\) permits us to calculate slopes to a graph 
+    without eliminating the parameter \(t;\)
+    that is, \(\textderiv{y}{x}\) is a function of \(t.\) 
+    In words, we divide the derivative of \(y\) with \(t\) by 
+    the derivative of \(x\) with \(t.\)
+    This form is easy to remember if you think of canceling the \(\dd t\)'s. 
+</p>
+
+<div class="box-title">CALCULATING \(\textderiv{y}{x}\)</div>
+<div class="box">
+    If \(f\) and \(g\) are differentiable functions and \(y\) is differentiable with \(x,\) then 
+    \begin{equation} 
+    \deriv{y}{x} = \frac{\textderiv{y}{t}}{\textderiv{x}{t}} \pd \eqlabel{eq:dy/dx} 
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Consider the graph defined by the parametric equations 
+        \[x = 2t^2 - t \lspace y = 6t - 3t^2 \pd\]
+        <ol class="list-alpha">
+            <li>
+                Write an equation of the line tangent to the graph at \(t = 2.\)
+            </li>
+            <li>        
+                Locate all horizontal tangents and vertical tangents to the graph. 
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The slope is given by \(\textderiv{y}{x}\) when \(t = 2.\)
+            We first compute \(\textderiv{x}{t}\) and \(\textderiv{y}{t} \col\)
+            \[\deriv{x}{t} = 4t - 1 \lspace \deriv{y}{t} = 6 - 6t \pd\]
+            Then by \(\eqrefer{eq:dy/dx},\) we see 
+            \[\deriv{y}{x} \intEval_{t = 2} = \frac{6 - 6(2)}{4(2) - 1} 
+            = -\frac{6}{7} \pd\]
+            When \(t = 2,\)
+            \[x = 2(2)^2 - 2 = 6 \and y = 6(2) - 3(2)^2 =  0 \pd\]
+            Thus, an equation of the tangent line is 
+            \[y - 0 = -\tfrac{6}{7}(x - 6) \implies \boxed{y = -\tfrac{6}{7}(x - 6)}\]
+        </li>
+        <hr>
+        <figure class="diff-parametric-ex-slopes" id="diff-parametric-ex-slopes">
+            <img src="../images/sectionImages/diff-parametric-ex-slopes.jpg" alt="Figure 1">
+        </figure>
+        <style>
+            .diff-parametric-ex-slopes::before{
+                content:'FIGURE 1';
+            }
+        </style>
+        <li>
+            <p>
+                The graph has a <b>horizontal tangent</b> when \(\textderiv{y}{x} = 0,\)
+                which occurs when \(\textderiv{y}{t} = 0\) 
+                but \(\textderiv{x}{t} \ne 0.\)
+                We find 
+                \[\deriv{y}{t} = 6 - 6t = 0 \implies t = 1 \pd\]
+                At \(t = 1,\) \(\textderiv{x}{t}\) is nonzero. 
+                Thus, the graph has a horizontal tangent when \(t = 1,\)
+                which corresponds to the point \((1, 3).\)
+            </p>
+            <p>
+                Conversely, the graph has a <b>vertical tangent</b> when \(\textderiv{x}{t} = 0\) 
+                but \(\textderiv{y}{t} \ne 0.\)
+                We see 
+                \[\deriv{x}{t} = 4t - 1 = 0 \implies t = \tfrac{1}{4} \pd\]
+                At this value, \(\textderiv{y}{t} \ne 0.\) 
+                The graph therefore has a vertical tangent when \(t = 1/4,\)
+                or at the point \((-1/8, 21/16).\)
+            </p>
+        </li>
+        <hr>
+    </ol>
+    The graph is shown in <a href="#diff-parametric-ex-slopes">Figure 1</a>.
+</div>
+
+<aside class="box-caution">
+    Note that 
+    \[\deriv{^2y}{x^2} \ne \frac{\textderiv{^2y}{t^2}}{\textderiv{^2 x}{t^2}} \pd \]
+</aside>
+
+<p>
+    To determine <i>higher-order</i> derivatives, we use \(\eqrefer{eq:dy/dx}\) repeatedly. 
+    We replace \(y\) (a function of \(t\)) with \(\textderiv{y}{x}\)
+    (another function of \(t\))
+    to attain 
+    \begin{equation} 
+    \deriv{^2 y}{x^2} = \deriv{}{x} \par{\deriv{y}{x}} = \frac{\ds \deriv{}{t}\left(\deriv{y}{x}\right)}{\textderiv{x}{t}} \pd
+    \label{eq:2-dy/dx}
+    \end{equation} 
+    For the general, \(n\)th derivative we replace \(y\) with \(\textderiv{^{n - 1} y}{x^{n - 1}}\) to get
+    \begin{equation} 
+    \deriv{^n y}{x^n} = \deriv{}{x} \par{\deriv{^{n - 1}y}{x^{n - 1}}} 
+    = \frac{\ds \deriv{}{t}\left(\deriv{^{n - 1}y}{x^{n - 1}}\right)}{\textderiv{x}{t}} \pd 
+    \label{eq:n-dy/dx}
+    \end{equation}
+</p>
+
+<div class="box-title">HIGHER-ORDER DERIVATIVES</div>
+<div class="box">
+    If \(f\) and \(g\) are differentiable functions and \(y\) is twice-differentiable with \(x,\) then 
+    \begin{equation} 
+    \deriv{^2 y}{x^2} = \frac{\ds \deriv{}{t}\left(\deriv{y}{x}\right)}{\textderiv{x}{t}} \pd
+    \eqlabel{eq:2-dy/dx}
+    \end{equation} 
+    The \(n\)th derivative of \(y\) (if it exists) is 
+    \begin{equation} 
+    \deriv{^n y}{x^n} 
+    = \frac{\ds \deriv{}{t}\left(\deriv{^{n - 1}y}{x^{n - 1}}\right)}{\textderiv{x}{t}} \pd 
+    \eqlabel{eq:n-dy/dx}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        A graph is parameterized by the equations
+        \[x = 1 - 2t \lspace y = 4t^3 + 1 \pd\]
+        Find the intervals of \(t\) over which 
+        the graph is concave up and the intervals 
+        over which it is concave down.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="diff-parametric-ex-concavity" id="diff-parametric-ex-concavity">
+        <img src="../images/sectionImages/diff-parametric-ex-concavity.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .diff-parametric-ex-concavity::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    From Section <a href="/Valculus/calculus/3.4-Using-the-First-and-Second-Derivatives.html">3.4</a>, 
+    a graph is <b>concave up</b> if \(\textderiv{^2 y}{x^2} \gt 0\)
+    and <b>concave down</b> if \(\textderiv{^2 y}{x^2} \lt 0.\)
+    Using \(\eqrefer{eq:dy/dx},\) we attain 
+    \[\deriv{y}{x} = \frac{\textderiv{y}{t}}{\textderiv{x}{t}} = \frac{12t^2}{-2} = -6t^2 \pd\]
+    Then \(\eqref{eq:2-dy/dx}\) gives 
+    \[\deriv{^2 y}{x^2} = \frac{\ds \deriv{}{t}\left(-6t^2\right)}{\textderiv{x}{t}}
+    = \frac{-12t}{-2} = 6t \pd 
+    \]
+    The second derivative is positive for \(t \gt 0\) and negative for \(t \lt 0.\)
+    Hence, the graph is concave up over \(t \gt 0\) and concave down for \(t \lt 0.\)
+    The graph is shown in <a href="#diff-parametric-ex-concavity">Figure 2</a>,
+    in which arrowheads represent the direction of increasing \(t.\)
+</div>
+
+<h4 id="areas-parametric">Areas with Parametric Curves</h4>
+<p>
+    <span class="label-emph">Vertical Integrating</span>
+    In Cartesian coordinates,
+    the area bounded by a curve and the \(x\)-axis from \(x = a\) to \(x = b\) is \(\int_a^b y \di x.\)
+    Recall that the integral is positive if \(y \gt 0\) and negative if \(y \lt 0.\)
+    We now consider the area under a curve defined parametrically by 
+    \begin{equation} 
+    x = f(t) \lspace y = g(t) \cma \label{eq:par-eqs}
+    \end{equation}
+    where \(f\) and \(g\) are both differentiable.
+    Our goal is to use the Substitution Rule (from Section <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html">4.4</a>)
+    to convert \(\int_a^b y \di x\) to be in terms of \(t.\)
+    From \(\eqref{eq:par-eqs}\) we see \(\textderiv{x}{t} = f'(t),\) or \(\dd x = f'(t) \di t.\)
+    To express the bounds of the integral in terms of \(t,\)
+    let \(t_a\) and \(t_b\) be values of \(t\) such that \(f(t_a) = a\)
+    and \(f(t_b) = b.\)
+    Assuming the parametric curve is traced out once over \(t_a \leq t \leq t_b,\)
+    the integral \(\int_a^b y \di x\) becomes 
+    \begin{equation} 
+    \int_{t_a}^{t_b} g(t) f'(t) \di t \pd \label{eq:area-x}
+    \end{equation}
+</p>
+<p>
+    <span class="label-emph">Horizontal Integrating</span>
+    The area between a curve and the \(y\)-axis from \(y = c\) to \(y = d\) is \(\int_c^d x \di y,\)
+    which is positive if \(x \gt 0\) and negative if \(x \lt 0.\)
+    In \(\eqref{eq:par-eqs}\) we have \(\textderiv{y}{t} = g'(t),\) or \(\dd y = g'(t) \di t.\)
+    Let \(t_c\) and \(t_d\) satisfy \(g(t_c) = c\) and \(g(t_d) = d.\) 
+    The integral \(\int_c^d x \di y\) therefore becomes 
+    \begin{equation} 
+    \int_{t_c}^{t_d} f(t) g'(t) \di t \pd \label{eq:area-y}
+    \end{equation}
+</p>
+
+
+<div class="box-title">AREAS WITH PARAMETRIC CURVES</div>
+<div class="box">
+    Consider a curve defined parametrically by \(x = f(t)\) and \(y = g(t).\)
+    The area bounded by the curve and the \(x\)-axis from \(x = a\) to \(x = b,\)
+    where \(f(t_a) = a\) and \(f(t_b) = b,\) is 
+    \begin{equation} 
+    \int_{t_a}^{t_b} g(t) f'(t) \di t \pd \eqlabel{eq:area-x}
+    \end{equation}
+    The area bounded by the curve and the \(y\)-axis from \(y = c\) to \(y = d,\) 
+    where \(g(t_c) = c\) and \(g(t_d) = d,\) is 
+    \begin{equation} 
+    \int_{t_c}^{t_d} f(t) g'(t) \di t \pd \eqlabel{eq:area-y}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area in the first quadrant bounded by the curve 
+        parameterized by \(x = 2 \sin t\) and \(y = t^2.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="parametric-area-y-ex" id="parametric-area-y-ex">
+        <img src="../images/sectionImages/parametric-area-y-ex.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .parametric-area-y-ex::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    The graph of the curve and its enclosed region \(R\) are shown in <a href="#parametric-area-y-ex">Figure 3</a>.
+    The curve hits the \(y\)-axis when \(x = 0,\)
+    which occurs when \(t = 0\) and \(t = \pi;\) at these times, 
+    \(y = 0\) and \(y = \pi^2,\) respectively.
+    Thus, in <i>Cartesian coordinates</i> the area of \(R\) is 
+    \[\int_{y = 0}^{y = \pi^2} x \di y \pd\]
+    We now convert this integral to be entirely in terms of \(t\)
+    using the Substitution Rule:
+    We are given \(x = 2 \sin t,\)
+    and differentiating \(y\) shows \(\dd y = 2t \di t.\)
+    In addition, when \(y = 0,\) \(t = 0;\)
+    when \(y = \pi^2,\) \(t = \pi.\)
+    The integral \(\int_0^{\pi^2} x \di y\) therefore becomes 
+    \[\int_0^{\pi} (2 \sin t) (2t) \di t = 4 \int_0^\pi t \sin t \di t \pd\]
+    Using Integration by Parts 
+    (from Section <a href="/Valculus/calculus/6.1-Integration-by-Parts.html">6.1</a>), we find 
+    \[
+    \ba 
+    4 \par{-t \cos t + \sin t} \intEval_0^\pi &= 4 \par{-\pi \cos \pi + \sin \pi} - 4(0 + 0) \nl 
+    &= \boxed{4 \pi}
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area enclosed by the curve \(x = 4 \cos t,\)
+        \(y = \sin 2t.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="int-parametric-region-R" id="int-parametric-region-R">
+        <img src="../images/sectionImages/int-parametric-region-R.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .int-parametric-region-R::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    By symmetry, the entire enclosed area is \(4\) times the area of one subregion—say, region \(R,\)
+    enclosed in the first quadrant (see <a href="#int-parametric-region-R">Figure 4</a>).
+    The area of \(R\) in Cartesian coordinates is 
+    \[\int_{x = 0}^{x = 4} y \di x \pd\]
+    We use the Substitution Rule to convert all quantities to be in terms of \(t \col\)
+    The problem gives \(y = \sin 2t,\) and differentiating \(x\) shows 
+    \(\dd x = -4 \sin t \di t.\)
+    Also, \(x = 0\) when \(t = \pi/2\) and \(x = 4\) when \(t = 0.\)
+    The integral therefore becomes 
+    \[\int_{\pi/2}^0 (\sin 2t) (-4 \sin t) \di t = -4 \int_{\pi/2}^0 (\sin 2t) (\sin t) \di t \pd\]
+    Because \(\sin 2t = 2 \sin t \cos t,\) the integral becomes 
+    \[-4 \int_{\pi/2}^0 2 \sin^2 t \cos t \di t = -8 \int_{\pi/2}^0 \sin^2 t \cos t \di t = 8 \int_0^{\pi/2} \sin^2 t \cos t \di t \pd\]
+    Letting \(u = \sin t,\) we see \(\dd u = \cos t \di t.\)
+    When \(t = 0,\) \(u = 0;\) when \(t = \pi/2,\) \(u = 1.\)
+    The integral therefore becomes 
+    \[8 \int_0^1 u^2 \di u = \tfrac{8}{3} u^3 \intEval_0^1 = \tfrac{8}{3} (1)^3 - \tfrac{8}{3}(0)^3 = \tfrac{8}{3} \pd\]
+    Hence, the entire area is 
+    \[4 \par{\tfrac{8}{3}} = \boxed{\tfrac{32}{3}}\] 
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#para-derivatives" class="summary-anchor">Differentiating Parametric Functions</a>
+        If \(f\) and \(g\) are differentiable functions and \(y\) is differentiable with \(x,\) then 
+        \begin{equation} 
+        \deriv{y}{x} = \frac{\textderiv{y}{t}}{\textderiv{x}{t}} \pd \eqlabel{eq:dy/dx} 
+        \end{equation}
+        In this form, \(\textderiv{y}{x}\) is a function of \(t,\)
+        enabling us to find slopes of a parametric curve without eliminating the parameter. 
+        The higher-order derivatives are as follows:
+        The second derivative is 
+        \begin{equation} 
+        \deriv{^2 y}{x^2} = \frac{\ds \deriv{}{t}\left(\deriv{y}{x}\right)}{\textderiv{x}{t}} \pd
+        \eqlabel{eq:2-dy/dx}
+        \end{equation} 
+        The general, \(n\)th derivative is 
+        \begin{equation} 
+        \deriv{^n y}{x^n} 
+        = \frac{\ds \deriv{}{t}\left(\deriv{^{n - 1}y}{x^{n - 1}}\right)}{\textderiv{x}{t}} \pd 
+        \eqlabel{eq:n-dy/dx}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#areas-parametric" class="summary-anchor">Areas with Parametric Curves</a>
+        Consider a curve defined parametrically by \(x = f(t)\) and \(y = g(t).\)
+        The area bounded by the curve and the \(x\)-axis from \(x = a\) to \(x = b,\)
+        where \(f(t_a) = a\) and \(f(t_b) = b,\) is 
+        \begin{equation} 
+        \int_{t_a}^{t_b} g(t) f'(t) \di t \pd \eqlabel{eq:area-x}
+        \end{equation}
+        The area bounded by the curve and the \(y\)-axis from \(y = c\) to \(y = d,\) 
+        where \(g(t_c) = c\) and \(g(t_d) = d,\) is 
+        \begin{equation} 
+        \int_{t_c}^{t_d} f(t) g'(t) \di t \pd \eqlabel{eq:area-y}
+        \end{equation}
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

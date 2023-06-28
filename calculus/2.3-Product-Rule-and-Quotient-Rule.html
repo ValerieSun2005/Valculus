@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.3: Product Rule and Quotient Rule</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>2.3 — Product Rule and Quotient Rule</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.3-Product-Rule-and-Quotient-Rule-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.3-Product-Rule-and-Quotient-Rule-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Product-and-Quotient-Rules]]]--> 
+<p>
+    We've differentiated sums and differences of functions. 
+    In this section we extend our scope to differentiate 
+    <i>products</i> and <i>quotients</i> of functions.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#product-rule" class="page-anchor">Product Rule</a>
+        </li>
+        <li>
+            <a href="#quotient-rule" class="page-anchor">Quotient Rule</a>
+        </li>
+        <li>
+            <a href="#derivatives-trig" class="page-anchor">Derivatives of Tangent, Secant, Cosecant, and Cotangent</a>
+        </li>
+    </ul>
+</p>
+<h4 id="product-rule">Product Rule</h4>
+
+<p>
+    A <i>product</i> is the result of multiplication; 
+    for example, the product of the numbers \(5\) and \(3\) is \(15.\)
+    The <span class="emph">Product Rule</span> 
+    enables us to differentiate functions in the form \(f(x)g(x),\)
+    where \(f\) and \(g\) are differentiable functions.
+    The Product Rule states 
+    \[\deriv{}{x} \parbr{f(x) g(x)} = \deriv{}{x} [f(x)] \cdot g(x) + f(x) \cdot \deriv{}{x} [g(x)] \pd\]
+    This form can be condensed.
+    For convenience, we write \(f(x)\) as \(f\) and \(g(x)\) as \(g.\)
+    [In general, \(f\) is shorthand for \(f(x)\) and \(g\) is shorthand for \(g(x).\)]
+    If primes denote derivatives with respect to \(x,\)
+    then a condensed version of the Product Rule is 
+    \begin{equation} 
+    \par{fg}' = f'g + fg' \pd \label{eq:product-rule}
+    \end{equation}
+    Note the alternating pattern of the primes. 
+    In words, the Product Rule asserts that the derivative of a product of two functions 
+    <i>is the derivative of the first function multiplied by the second function, 
+        plus the first function multiplied by the derivative of the second function</i>. 
+</p>
+<p>
+    It is important to note that, generally,
+    <span class="warning">the derivative of a product of two functions 
+    isn't the product of their derivatives</span>. 
+    For example, if \(f(x) = x\) and \(g(x) = x^2,\) then 
+    the Power Rule (from Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>)
+    gives 
+    \[\par{fg}' = \par{x \cdot x^2}' = \par{x^3}' = 3x^2 \pd\]
+    But 
+    \[f' g' = \par{x}' \cdot \par{x^2}' = 1 \cdot 2x \ne 3x^2 \pd\]
+    Thus, \((fg)' \ne f' g'.\) 
+</p>
+
+<div class="box-title"> PRODUCT RULE </div>
+<div class="box">
+    If \(f\) and \(g\) are differentiable functions, then the <span class="emph">Product Rule</span> states
+    \begin{equation} 
+    \par{fg}' = f'g + fg' \pd \eqlabel{eq:product-rule}
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF OF THE PRODUCT RULE</span>
+    Let \(f\) and \(g\) be differentiable functions.
+    By the limit definition of a derivative, 
+    the derivative of \(f(x) g(x)\) is given by 
+    \[\deriv{}{x} \parbr{f(x)g(x)} = \lim_{h \to 0} \frac{f(x + h) g(x + h) - f(x) g(x)}{h} \pd\]
+    To show that this limit is equivalent to a product of derivatives, 
+    we add and subtract the same quantity \(f(x + h) g(x).\)
+    Doing so and using limit laws (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>)
+    demonstrate 
+    \begin{align}
+    \deriv{}{x} \parbr{f(x)g(x)} 
+    &= \lim_{h \to 0} \frac{f(x + h) g(x + h) \orange{- f(x + h) g(x) + f(x + h) g(x)} - f(x) g(x)}{h} \nonumber \nl 
+    &= \lim_{h \to 0} \parbr{f(x + h) \, \frac{g(x + h) - g(x)}{h} + g(x) \frac{f(x + h) - f(x)}{h}} \nonumber \nl 
+    &= \lim_{h \to 0} f(x + h) \cdot \lim_{h \to 0} \frac{g(x + h) - g(x)}{h} + g(x) \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nonumber \nl 
+    &= f(x) g'(x) + g(x) f'(x) \nonumber \nl 
+    &= f'g + fg' \eqlabel{eq:product-rule} \pd 
+    \end{align}
+    \[\qedproof\]
+</p>
+
+<figure class="product-rule-visualization" id="product-rule-visualization">
+    <img src="../images/sectionImages/product-rule-visualization.jpg" alt="Figure 1">
+</figure>
+<style>
+    .product-rule-visualization::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Visualization of the Product Rule</span>
+    Let \(f(x)\) and \(g(x)\) be positive differentiable functions. 
+    As \(x\) is changed by some amount \(\Delta x,\) then 
+    \[\Delta f = f(x + \Delta x) - f(x) \and \Delta g = g(x + \Delta x) - g(x) \pd\]
+    Observe that \(\Delta f \to 0\) and \(\Delta g \to 0\) 
+    as \(\Delta x \to 0.\)
+    We now interpret \(f\) and \(g\) geometrically.
+    In <a href="#product-rule-visualization">Figure 1</a>, a rectangle of area \(A\) 
+    has horizontal length \(f\) and vertical length \(g.\)
+    Then \(A = fg.\)
+    Suppose that the rectangle's sides are expanded horizontally by \(\Delta f\) and vertically by \(\Delta g.\)
+    By geometry, the <i>change in area</i> is given by 
+    \[\Delta A = f \Delta g + g \Delta f + \Delta f \Delta g \pd\]
+    Dividing both sides of the equation by \(\Delta x\) shows 
+    \[
+    \diffDelta{A}{x} = f \diffDelta{g}{x} + g \diffDelta{f}{x} + \Delta f \diffDelta{g}{x} \pd
+    \]
+    If we let \(\Delta x\) approach \(0,\) then all the ratios become derivatives. 
+    Using limit laws 
+    (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), 
+    we see 
+    \begin{align}
+    \deriv{A}{x} &= \lim_{\Delta x \to 0} \diffDelta{A}{x} \nonumber \nl 
+    &= \lim_{\Delta x \to 0} \par{f \diffDelta{g}{x} + g \diffDelta{f}{x} + \Delta f \diffDelta{g}{x}} \nonumber \nl 
+    &= f \lim_{\Delta x \to 0} \diffDelta{g}{x} + g \lim_{\Delta x \to 0} \diffDelta{f}{x} 
+    + \par{\lim_{\Delta x \to 0} \Delta f} \par{\lim_{\Delta x \to 0} \diffDelta{g}{x}} \nonumber \nl 
+    &= f \deriv{g}{x} + g \deriv{f}{x} + 0 \cdot \par{\lim_{\Delta x \to 0} \diffDelta{g}{x}} \nonumber \nl
+    &= f'g + fg' \pd \eqlabel{eq:product-rule}
+    \end{align}
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{x e^x}\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    The expression \(x e^x\) is a <i>product</i> of two functions: \(x\) and \(e^x.\)
+    We let 
+    \[f(x) = x \and g(x) = e^x \pd\]
+    The derivative of \(x\) is \(1,\) and the derivative of \(e^x\) is \(e^x\)
+    (recall from Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>). 
+    So 
+    \[f'(x) = 1 \and g'(x) = e^x \pd\]
+    Accordingly, the Product Rule, as in \(\eqref{eq:product-rule},\) gives 
+    \[
+    \ba 
+    \deriv{}{x} \par{x e^x} &= f'g + fg' \nl 
+    &= (1) e^x + x \par{e^x} \nl 
+    &= \boxed{e^x + xe^x}
+    \ea 
+    \]
+</div>
+
+<aside class="box-tip">
+    Always remember that differentiation rules are <i>not</i> exclusive; 
+    we must use a combination of rules to differentiate most functions.
+</aside>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbr{\par{2x - 1} \sqrt x \,}\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    We can use one of two methods to determine this derivative.
+    <p>
+        <span class="label-emph">Method 1</span>
+        Letting \(f(x) = 2x - 1\) and \(g(x) = \sqrt x,\)
+        we see 
+        \[f'(x) = 2 \and g'(x) = \frac{1}{2 \sqrt x} \pd\]
+        The Product Rule, as in \(\eqref{eq:product-rule},\) therefore gives 
+        \[
+        \ba 
+        \deriv{}{x} \parbr{\par{2x - 1} \sqrt x} 
+        &= f'g + fg' \nl 
+        &= (2) \sqrt x + (2x - 1) \cdot \frac{1}{2 \sqrt x} \nl 
+        &= 2 \sqrt x + \frac{2x - 1}{2 \sqrt x} \nl 
+        &= \boxed{\frac{6x - 1}{2 \sqrt x}}
+        \ea 
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>
+        We write \(\sqrt x\) as \(x^{1/2}\) and expand the product, as follows:
+        \[\par{2x - 1} \cdot x^{1/2} = 2 x^{3/2} - x^{1/2} \pd\]
+        Combining the Difference and Constant Multiple Rules for Derivatives (from Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>)
+        with the Power Rule,
+        we see 
+        \[
+        \ba 
+        \deriv{}{x} \par{2 x^{3/2} - x^{1/2}} 
+        &= 2 \deriv{}{x} \par{x^{3/2}} - \deriv{}{x} \par{x^{1/2}} \nl 
+        &= 2 \par{\tfrac{3}{2} x^{1/2}} - \par{\tfrac{1}{2} x^{-1/2}} \nl 
+        &= 3 \sqrt x - \frac{1}{2 \sqrt x} \nl 
+        &= \boxed{\frac{6x - 1}{2 \sqrt x}}
+        \ea 
+        \]
+        Method 2 is easier to use than Method 1. 
+        Thus, be aware of shortcuts that enable you to avoid the Product Rule.
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the \(x\)-coordinates at which the graph of \(y = x^2 e^x + 1\)
+        has horizontal tangents.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="deriv-horiz-tangent-x2ex-1" id="deriv-horiz-tangent-x2ex-1">
+        <img src="../images/sectionImages/deriv-horiz-tangent-x2ex-1.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .deriv-horiz-tangent-x2ex-1::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The graph has a <b>horizontal tangent</b> 
+    if its slope is \(0\)—that is, when \(\textderiv{y}{x} = 0.\) 
+    Using the Sum and Constant Rules for Derivatives 
+    (from Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>)
+    in conjunction with the Product Rule, we see 
+    \[
+    \ba 
+    \deriv{y}{x} &= \deriv{}{x} \par{x^2 e^x} + \deriv{}{x} \par{1} \nl 
+    &= \parbr{\par{2x} e^x + x^2 \par{e^x}} + (0) \nl 
+    &= e^x \par{x^2 + 2x} \pd 
+    \ea    
+    \]
+    We solve \(\textderiv{y}{x} = 0,\) as follows:
+    \[
+    \ba 
+    x^2 + 2x &= 0 \nl 
+    x(x + 2) &= 0 \nl 
+    \implies x &= -2 \cma x = 0 \pd
+    \ea 
+    \]
+    Thus, the graph has horizontal tangents when 
+    \(\boxed{x = -2}\) and \(\boxed{x = 0}\)
+    (<a href="#deriv-horiz-tangent-x2ex-1">Figure 2</a>).
+</div>
+
+<!-- <div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\ds \deriv{}{x} [e^x \sin x].\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The derivative of \(e^x\) is \(e^x,\)
+    and the derivative of \(\sin x\) is \(\cos x.\)
+    Thus, we have 
+    \[
+    \baat{2} 
+    f(x) &= e^x \lspace g(x) &&= \sin x \nl 
+    f'(x) &= e^x \lspace g'(x) &&= \cos x \period 
+    \eaat 
+    \]
+    So the product rule gives 
+    \[f(x) g'(x) + f'(x) g(x) = \boxed{e^x \cos x + e^x \sin x}\]
+</div> -->
+
+<h4 id="quotient-rule">Quotient Rule</h4>
+<aside class="box-caution">
+    A derivative of a quotient isn't a quotient of derivatives; that is,
+    \((f/g)' \ne f'/g'.\) 
+</aside>
+<p>
+    A <i>quotient</i> is the result of division; for example,
+    the quotient of \(12\) divided by \(6\) is \(2.\)
+    To differentiate expressions in the form \(f(x)/g(x),\)
+    where \(f\) and \(g\) are differentiable functions, 
+    we use the 
+    <span class="emph">Quotient Rule</span>, which states 
+    \[\deriv{}{x} \parbr{\frac{f(x)}{g(x)}} = \frac{f'(x) g(x) - f(x) g'(x)}{[g(x)]^2} \cma\]
+    given that \(g(x) \ne 0.\)
+    Or if primes denote derivatives with \(x,\) then we can 
+    write a condensed form of the Quotient Rule:
+    \begin{equation} 
+    \par{\frac{f}{g}}' = \frac{f'g - fg'}{g^2} \cma g \ne 0 \pd \label{eq:quotient-rule} 
+    \end{equation}
+    The expression \(f'g - fg'\) may look similar to the Product Rule, as in \(\eqref{eq:product-rule},\)
+    but <span class="warning">don't disregard the negative sign</span>. 
+    The following mnemonic may help you remember the Quotient Rule:
+    <blockquote>
+        The derivative is Low <i>Dee</i> High minus High <i>Dee</i> Low, all over the square of what's below,
+    </blockquote>
+    where <i>Dee</i> indicates the differentiation operator, 
+    <i>High</i> denotes the numerator, and <i>Low</i> references the denominator.
+    Accordingly, <i>Dee High</i> denotes \(f'\) and <i>Dee Low</i> references \(g'.\)
+</p>
+
+<div class="box-title">QUOTIENT RULE</div>
+<div class="box">
+    If \(f\) and \(g\) are differentiable functions and \(g \ne 0,\) then 
+    the <span class="emph">Quotient Rule</span> states that
+    \begin{equation} 
+    \par{\frac{f}{g}}' = \frac{f'g - fg'}{g^2} \pd \eqlabel{eq:quotient-rule} 
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF OF THE QUOTIENT RULE</span>
+    To prove the Quotient Rule, we employ a clever trick by adding and subtracting the same quantity. 
+    The limit definition of a derivative states 
+    \[
+    \ba 
+    \deriv{}{x} \parbr{\frac{f(x)}{g(x)}}
+    &= \lim_{h \to 0} \frac{\ds \frac{f(x + h)}{g(x + h)} - \frac{f(x)}{g(x)}}{h} \nl 
+    &= \lim_{h \to 0} \frac{g(x) f(x + h) - f(x) g(x + h)}{h g(x) g(x + h)} \pd 
+    \ea
+    \]
+    We now add and subtract the quantity \(f(x) g(x)\) so that the derivatives \(f'(x)\) and \(g'(x)\)
+    appear from this fraction:
+    \begin{align} 
+    \deriv{}{x} \parbr{\frac{f(x)}{g(x)}} 
+    &= \lim_{h \to 0} \frac{g(x) f(x + h) \orange{- f(x)g(x) + f(x)g(x)} - f(x) g(x + h)}{h g(x) g(x + h)} \nonumber \nl
+    &= \frac{\ds \lim_{h \to 0} \frac{g(x) \parbr{f(x + h) - f(x)}}{h} 
+    - \lim_{h \to 0} \frac{f(x) \parbr{g(x + h) - g(x)}}{h}}{\ds \lim_{h \to 0} [g(x) g(x + h)]} \nonumber \nl 
+    &= \frac{\ds g(x) \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} 
+    - f(x)\lim_{h \to 0} \frac{g(x + h) - g(x)}{h}}{\ds g(x) \lim_{h \to 0} g(x + h)} \nonumber \nl 
+    &= \frac{g(x) f'(x) - f(x) g'(x)}{[g(x)]^2} \nonumber \nl 
+    &= \frac{f'g - fg'}{g^2} \eqlabel{eq:quotient-rule}
+    \end{align}
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{\frac{\sin x}{x}}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    The expression \((\sin x)/x\) is a quotient of functions. 
+    We let \(f(x) = \sin x\) and \(g(x) = x,\) from which we see 
+    \[f'(x) = \cos x \and g'(x) = 1 \pd\]
+    Then the <b>Quotient Rule</b>, as in \(\eqref{eq:quotient-rule},\) 
+    gives the derivative of \(f(x)/g(x)\) to be 
+    \[
+    \ba 
+    \frac{f'g - fg'}{g^2} 
+    &= \frac{(\cos x) \, x - \sin x (1)}{x^2} \nl 
+    &= \boxed{\frac{x \cos x - \sin x}{x^2}} 
+    \ea
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{\frac{x^4}{e^x + 2}}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    The expression \(x^4/(e^x + 2)\) is a quotient of functions. 
+    Let \(f(x) = x^4\) and \(g(x) = e^x + 2.\) 
+    Then we have 
+    \[f'(x) = 4x^3 \and g'(x) = e^x \pd\]
+    The <b>Quotient Rule</b>, as in \(\eqref{eq:quotient-rule},\) 
+    therefore shows the derivative of \(f(x)/g(x)\) to be 
+    \[
+    \ba 
+    \frac{f'g - fg'}{g^2} 
+    &= \frac{\par{4x^3} \par{e^x + 2} - x^4 \par{e^x}}{\par{e^x + 2}^2} \nl 
+    &= \boxed{\frac{4x^3 e^x + 8x^3 - x^4 e^x}{\par{e^x + 2}^2}} 
+    \ea
+    \]
+</div>
+
+<p>
+    It's important to be vigilant: 
+    Some quotients of functions don't require the Quotient Rule,
+    since it may be easier to first simplify them into sums of powers.
+    A good example is 
+    \[\frac{x^4 - x^2 + \sqrt x}{x} \cma\]
+    which we can simplify as 
+    \[\frac{x^4 - x^2 + x^{1/2}}{x} = x^3 - x + x^{-1/2} \pd\]
+    Differentiating this new form is far easier, as it only requires 
+    the Power Rule.
+</p>
+
+<p>
+    <span class="proof">PROOF OF THE POWER RULE FOR NEGATIVE EXPONENTS</span>
+    In Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+    we asserted that the Power Rule is applicable to all powers—that is, for any \(n\)
+    \[\deriv{}{x} \par{x^n} = nx^{n - 1} \pd\] 
+    But we only proved the rule when \(n\) was a positive integer;
+    now let us quickly prove the rule for negative integer values of \(n.\)
+    If \(p\) is a positive integer, then \(-p\) is a negative integer
+    and so we want to show that 
+    \[\deriv{}{x} \par{x^{-p}} = -px^{-p - 1} \pd\]
+    We begin by writing \(x^{-p}\) as \(1/x^p,\) 
+    whose derivative is given by the Quotient Rule to be 
+    \[
+    \ba 
+    \frac{(0) x^p - 1 \deriv{}{x} \par{x^p}}{x^{2p}} &= -\frac{px^{p - 1}}{x^{2p}} \nl 
+    &= -p x^{-p - 1} \cma
+    \ea 
+    \]
+    as required. [Note that the derivative of \(x^p\) is \(px^{p - 1}\) because 
+    we previously proved the Power Rule for positive powers.]
+    \[\qedproof\]
+</p>
+
+<h4 id="derivatives-trig">Derivatives of Tangent, Secant, Cosecant, and Cotangent</h4>
+<p>
+    In Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+    we found that 
+    \[\deriv{}{x} \par{\sin x} = \cos x \and \deriv{}{x} \par{\cos x} = - \sin x \pd\]
+    The functions 
+    \(\tan x,\) \(\sec x,\) \(\csc x,\) and \(\cot x\)
+    can all be expressed in terms of sine and cosine, as follows:
+    \[
+    \baat{2}
+    \tan x &= \frac{\sin x}{\cos x} \lspace \cot x &&= \frac{\cos x}{\sin x} \nl 
+    \sec x &= \frac{1}{\cos x} \lspace \csc x &&= \frac{1}{\sin x} \pd
+    \eaat
+    \]
+    Thus, the Quotient Rule enables us to differentiate all four functions.
+</p>
+<p>
+    <span class="label-emph">Derivative of Tangent</span>
+    Since \(\tan x = \sin x/\cos x,\)
+    the Quotient Rule shows 
+    \[
+    \ba 
+    \deriv{}{x} \par{\tan x} &= \frac{(\cos x) \cos x - \sin x (-\sin x)}{\cos^2 x} \nl 
+    &= \frac{\cos^2 x + \sin^2 x}{\cos^2 x} \pd
+    \ea 
+    \]
+    The Pythagorean identity states that \(\cos^2 x + \sin^2 x = 1,\) 
+    so 
+    \[\deriv{}{x} \par{\tan x} = \frac{1}{\cos^2 x} = \boxed{\sec^2 x}\]
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{\sec x}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    We rewrite \(\sec x\) as \(1/\cos x,\)
+    a quotient. 
+    Accordingly, the Quotient Rule gives the derivative to be 
+    \[\frac{(0) \cos x - 1 (-\sin x)}{\cos^2 x} = \frac{\sin x}{\cos^2 x} \pd\]
+    Now let us perform some further simplification: 
+    \[\frac{\sin x}{\cos^2 x} = \frac{1}{\cos x} \cdot \frac{\sin x}{\cos x} = \boxed{\sec x \tan x}\]
+    This result shows that 
+    the derivative function of \(\sec x\) 
+    is itself multiplied by \(\tan x.\)
+</div>
+
+<p>
+    As we've seen through the derivatives of \(\tan x\)
+    and \(\sec x,\)
+    understanding the Quotient Rule allows us to differentiate all six standard trigonometric functions.
+    Differentiating \(\csc x\) and \(\cot x\) are left 
+    as exercises for you in the Exercises section.  
+    We attain the following table of trigonometric derivatives,
+    which are so important that memorizing them is essential.
+</p>
+
+<div class="box-title">DERIVATIVES OF TRIGONOMETRIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\sin x} = \cos x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\cos x} = -\sin x\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\sec x} = \sec x \tan x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\csc x} = -\csc x \cot x\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\tan x} = \sec^2 x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\cot x} = -\csc^2 x\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    Up to this point, you may have questioned why we use the reciprocal trigonometric functions 
+    (tangent, secant, cosecant, and cotangent). 
+    But we now appreciate how reciprocal functions enable us to
+    easily communicate derivatives of otherwise complicated compositions with sine and cosine. 
+    The following tips may help you remember these derivatives:
+    <ol class="list-num">
+        <li>
+            Any trigonometric function containing the prefix <i>co-</i>
+            (cosine, cosecant, and cotangent)
+            has a negative sign in its derivative.
+        </li>
+        <li>
+            Secant and cosecant are the only trigonometric functions 
+            whose derivatives include themselves as factors.
+        </li>
+        <li>
+            Tangent and cotangent are the only trigonometric functions whose derivatives are squared.
+        </li>
+    </ol>
+</p>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{t} \par{\sqrt[3]{t} \, \cot t}\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    We write \(\sqrt[3] t\) as \(t^{1/3}.\)
+    Its derivative is, by the Power Rule, \(\tfrac{1}{3} t^{-2/3}.\)
+    The derivative of \(\cot t\) is \(-\csc^2 t,\) so by the Product Rule 
+    \[
+    \ba 
+    \deriv{}{t} \par{\sqrt[3]{t} \, \cot t}
+    &= \par{\tfrac{1}{3} t^{-2/3}} \cot t + t^{1/3} \par{-\csc^2 t} \nl 
+    &= \boxed{\frac{\cot t}{3\sqrt[3]{t^2}} - \sqrt[3]{t} \, \csc^2 t}
+    \ea 
+    \]
+</div>
+
+<aside class="box-tip">
+    The algebra involved in using the Product Rule and Quotient Rule 
+    can be tedious.
+    To improve your speed and commit fewer errors, you should continue practicing differentiation.
+</aside>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{t} \par{\frac{2 + \sec t}{t^4}}\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    The derivative of \(\sec t\) is \(\sec t \tan t.\)
+    By the Quotient Rule, 
+    \[
+    \ba 
+    \deriv{}{t} \par{\frac{2 + \sec t}{t^4}}
+    &= \frac{\par{\sec t \tan t} t^4 - \par{4t^3}(2 + \sec t)}{\par{t^4}^2} \nl 
+    &= \boxed{\frac{t \sec t \tan t  - 8 - 4 \sec t}{t^5}}
+    \ea 
+    \]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#product-rule" class="summary-anchor">Product Rule</a>
+        The <span class="emph">Product Rule</span> enables us to differentiate products of functions 
+        of the form \(f(x) g(x).\)
+        If \(f\) and \(g\) are differentiable functions, then 
+        \begin{equation} 
+        \par{fg}' = f'g + fg' \pd \eqlabel{eq:product-rule}
+        \end{equation}
+        Observe the alternating pattern of the primes.
+        Remember that <span class="warning">the derivative of a product is not a product of derivatives</span>; namely, 
+        \(\par{fg}' \ne f' g'.\)
+    </p>
+    <p>
+        <a href="#quotient-rule" class="summary-anchor">Quotient Rule</a>
+        The <span class="emph">Quotient Rule</span> enables us to differentiate quotients of functions 
+        in the form \(f(x)/g(x)\) where \(g(x) \ne 0.\)
+        If \(f\) and \(g\) are differentiable functions, then 
+        \begin{equation} 
+        \par{\frac{f}{g}}' = \frac{f'g - fg'}{g^2} \cma g \ne 0 \pd \eqlabel{eq:quotient-rule} 
+        \end{equation}
+        Do not forget the negative sign. 
+        <span class="warning">The derivative of a quotient is not a quotient of derivatives</span>; that is, 
+        \((f/g)' \ne\) \(f'/g'.\)
+        The algebra involved in differentiation can be wearying; 
+        the only remedy is to continue practicing problems. 
+        Doing so will help you improve your speed and make fewer mistakes.
+    </p>
+    <p>
+        <a href="#derivatives-trig" class="summary-anchor">Derivatives of Tangent, Secant, Cosecant, and Cotangent</a>
+        The Quotient Rule enables us to differentiate the functions \(\tan x,\) \(\sec x,\)
+        \(\csc x,\) and \(\cot x.\)
+        The derivatives are given as follows:
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\sin x} = \cos x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\cos x} = -\sin x\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\sec x} = \sec x \tan x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\csc x} = -\csc x \cot x\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\tan x} = \sec^2 x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\cot x} = -\csc^2 x\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="no-indent">
+            The following tips may help you remember these derivatives:
+            <ol class="list-num">
+                <li>
+                    Any trigonometric function containing the prefix <i>co-</i>
+                    (cosine, cosecant, and cotangent)
+                    has a negative sign in its derivative.
+                </li>
+                <li>
+                    Secant and cosecant are the only trigonometric functions 
+                    whose derivatives include themselves as factors.
+                </li>
+                <li>
+                    Tangent and cotangent are the only trigonometric functions whose derivatives are squared.
+                </li>
+            </ol>
+        </p>
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

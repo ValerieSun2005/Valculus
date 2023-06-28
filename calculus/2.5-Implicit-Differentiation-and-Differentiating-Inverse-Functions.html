@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.5: Implicit Differentiation and Differentiating Inverse Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>2.5 — Implicit Differentiation and Differentiating Inverse Functions</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.5-Implicit-Differentiation-and-Differentiating-Inverse-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.5-Implicit-Differentiation-and-Differentiating-Inverse-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Implicit-Differentiation-and-Differentiating-Inverse-Functions]]]--> 
+<p>
+    We have differentiated functions in the form \(y = f(x)\).
+    In this section, however, we discuss how to differentiate <i>implicit</i> equations. 
+</p>
+<p>
+    An equation of the form \(y = f(x)\) is said to be 
+    <span class="emph">explicit</span>; examples of <i>explicit</i> equations are
+    \(y = x - 4\) and \(y = x^2 - 4x.\)
+    Conversely, an <span class="emph">implicit equation</span>
+    relates \(x\) and \(y\) through an equation in which \(y\) does not stand alone.
+    For example, 
+    \[x^2 + xy = 6 \and 9x - 4y = 0\]
+    are examples of <i>implicit</i> equations.
+</p>
+<p>
+    Many curves are best expressed as explicit equations.
+    For example, the equation of an <i>entire</i> unit circle is   
+    \begin{equation} 
+    x^2 + y^2 = 1 \pd \label{eq:unit-circle}
+    \end{equation}
+    To determine the slope of this circle at any point \((x, y),\)
+    we need \(\textDeriv{y}{x}.\)
+    We apply <b>implicit differentiation</b>:
+    We treat \(y\) as \(y(x),\) a function of \(x,\)
+    so \(\eqRefer{eq:unit-circle}\) should be thought of as   
+    \[x^2 + [y(x)]^2 = 1 \period\]
+    Now we differentiate both sides with respect to \(x.\)
+    Applying the Chain Rule to differentiate \(y(x),\) we get 
+    \[2x + 2y \, \deriv{y}{x} = 0 \period\]
+    Now we solve for \(\textDeriv{y}{x} \col\)
+    \[\deriv{y}{x} = -\frac{x}{y} \period\] 
+    <figure class="implicit-diff-circle" id="implicit-diff-circle">
+        <img src="../images/sectionImages/implicit-diff-circle.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .implicit-diff-circle::before{
+            content:'FIGURE 1';
+        }
+    </style>
+</p>
+<p>
+    <a href="#implicit-diff-circle">Figure 1</a> shows a diagram of a unit circle with a tangent line.
+    At \((0, -1)\) and \((0, 1),\) the circle has horizontal tangents because \(\textderiv{y}{x} = 0.\)
+    And at \((-1, 0)\) and \((1, 0),\) the circle has vertical tangents
+    and so \(\textderiv{y}{x} = 0\) is undefined.
+    Hence, \(\textDeriv{y}{x} = -x/y\) appears mathematically accurate. 
+    <!-- Alternatively, we can solve for \(y\) in \(\eqRefer{eq:unit-circle},\)
+    although solving explicitly isn't always possible.
+    We obtain two functions: 
+    \[
+    \baat{2}
+    y &= f(x) &&= \sqrt{1 - x^2} \nl 
+    y &= g(x) &&= - \sqrt{1 - x^2} \period 
+    \eaat
+    \]
+    The graph of \(y = f(x)\) is the top half of the unit circle, while the graph of \(y = g(x)\) represents the bottom.
+    You may check that 
+    \[
+    \baat{2}
+    f'(x) &= \frac{-x}{\sqrt{1 - x^2}} \lspace g'(x) &&= \frac{x}{\sqrt{1 - x^2}} \nl 
+    &= \frac{-x}{y} &&= \frac{x}{y} \period
+    \eaat 
+    \]  -->
+<p>
+<p>
+    In some cases, we can solve for \(y\) directly in an implicit equation. 
+    For example, in \(xy = 1\) it is easy to see \(y = 1/x,\)
+    so \(\textderiv{y}{x}\) can be found without using implicit differentiation.
+    But in most cases, <i>solving for \(y\) explicitly isn't possible</i> 
+    and so implicit differentiation is needed to acquire \(\textderiv{y}{x}.\)
+    Let's establish a set of steps to perform implicit differentiation. 
+</p>
+
+<div class="steps-title">STEPS OF IMPLICIT DIFFERENTIATION</div>
+<div class="steps">
+    <ol class="list-num">
+        <li>
+            Differentiate both sides of the implicit equation with respect to \(x.\)
+        </li>
+        <li>
+            On the left side, collect all terms containing the factor \(\textderiv{y}{x}.\)
+            Move all other terms to the right side of the equation.
+        </li>
+        <li>
+            Factor \(\textderiv{y}{x}\) out of the left side of the equation.
+        </li>
+        <li>
+            Solve for \(\textderiv{y}{x}.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Consider the implicit equation \(2x^3y -xy^2 = 16.\) 
+        Find \(\textDeriv{y}{x}.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    This equation is implicit, and solving for \(y\) isn't feasible. 
+    Thus, we use the method of <b>implicit differentiation</b>. 
+    <ol class="list-num">
+        <li>
+            We first differentiate both sides of the equation with respect to \(x.\)
+            We use the Chain Rule to differentiate \(y,\) which we treat 
+            <i>as a function of </i> \(x.\)
+            \[
+            \ba 
+            \deriv{}{x} (2x^3y - xy^2) &= \deriv{}{x}(16) \nl 
+            \deriv{}{x} \par{2x^3 y} - \deriv{}{x} \par{xy^2} &= 0 \nl 
+            2 \left(3x^2 y + x^3 \deriv{y}{x} \right) - \left(y^2 + 2xy \deriv{y}{x} \right)&= 0 \pd
+            \ea     
+            \]  
+        </li>
+        <li>
+            The second step is to bring all terms containing \(\textderiv{y}{x}\)
+            to the left side. 
+            All other terms should be moved to the right side. 
+            Doing so, we get
+            \[2x^3 \deriv{y}{x} - 2xy \deriv{y}{x} = y^2 - 6x^2 y \pd\]
+        </li>
+        <li>
+            Factoring out \(\textderiv{y}{x},\) we attain 
+            \[\deriv{y}{x} \par{2x^3 - 2xy} = y^2 - 6x^2y \pd\]
+        </li>
+        <li>
+            To solve for \(\textderiv{y}{x},\) we divide both sides by \(2x^3 - 2xy.\)
+            Doing so gives 
+            \[\deriv{y}{x} = \boxed{\frac{y^2 - 6x^2 y}{2x^3 - 2xy}}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        For the curve given by \(x^2 y = 2 - xy^2,\)
+        find the points at which the curve has horizontal tangents 
+        and the points at which the curve has vertical tangents.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <p>
+        Let's first find \(\textderiv{y}{x}.\)
+        <ol class="list-num">
+            <li>
+                Differentiating both sides of the implicit equation with respect to \(x,\) 
+                we get 
+                \[
+                2x y + x^2 \deriv{y}{x} = (0) - y^2 - 2xy \deriv{y}{x} \pd
+                \]
+            </li>
+            <li>
+                We move every term involving \(\textderiv{y}{x}\)
+                to the left side of the equation; 
+                we place all the other terms on the right side.
+                Doing so gives 
+                \[x^2 \deriv{y}{x} + 2xy \deriv{y}{x} = -y^2 - 2xy \pd\]
+            </li>
+            <li>
+                On the left side, we factor out the factor \(\textderiv{y}{x} \col\)
+                \[\deriv{y}{x} \par{x^2 + 2xy} = -y^2 - 2xy \pd\]
+            </li>
+            <li>
+                Solving for \(\textderiv{y}{x},\) we see  
+                \begin{equation} 
+                \deriv{y}{x} = \frac{-y^2 - 2xy}{x^2 + 2xy} \pd \label{eq:dy/dx-tangents}
+                \end{equation}
+            </li>
+        </ol>
+    </p>
+    <aside class="box-caution">
+        The equation \(-y^2 - 2xy\) \(= 0\) also has the solution \(y = 0.\)
+        But \(y = 0\) doesn't satisfy \(x^2 y = 2 - xy^2,\)
+        so we disregard this value and only use \(x = -\tfrac{1}{2} y.\)
+    </aside>
+    <p>
+        <span class="label-emph">Horizontal Tangents</span>
+        The curve has a <b>horizontal tangent</b> when \(\textderiv{y}{x} = 0.\)
+        For an <i>implicit</i> curve, we must describe locations as points—that is, 
+        we need both \(x\) and \(y.\)
+        In \(\eqref{eq:dy/dx-tangents}\) we observe that \(\textderiv{y}{x} = 0\)
+        when the numerator is \(0\) and the denominator is nonzero. 
+        So solving shows
+        \[-y^2 - 2xy = 0 \implies x = -\tfrac{1}{2} y \pd\]
+        Plugging this expression into \(x^2 y = 2 - xy^2,\) we see   
+        \[
+        \ba 
+        \par{-\tfrac{1}{2} y}^2 y &= 2 - \par{-\tfrac{1}{2} y} y^2 \nl 
+        \tfrac{1}{4} y^3 &= 2 + \tfrac{1}{2} y^3 \nl 
+        y^3 &= -8 \nl 
+        \implies y &= -2 \pd
+        \ea 
+        \]
+        The \(x\)-coordinate corresponding to \(y = -2\) is \(x = -\tfrac{1}{2}(-2)\)
+        \(= 1.\)
+        Thus, the curve has a horizontal tangent at the point \(\boxed{(1, -2)}.\)
+    </p>
+    <figure class="implicit-diff-ex-tangents" id="implicit-diff-ex-tangents">
+        <img src="../images/sectionImages/implicit-diff-ex-tangents.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .implicit-diff-ex-tangents::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Vertical Tangents</span>
+        The curve has a <b>vertical tangent</b> when the denominator of \(\textderiv{y}{x}\) 
+        is \(0\) and the numerator is nonzero. In \(\eqref{eq:dy/dx-tangents}\) 
+        equating \(x^2 + 2xy\) to \(0\) shows 
+        \[x(x + 2y) = 0 \implies x = -2y \pd\]
+        (We ignore the solution \(x = 0\) because it does not satisfy the implicit equation 
+        \(x^2 y = 2 - xy^2.\))
+        Substituting \(x = -2y\) into the implicit equation 
+        shows 
+        \[
+        \ba 
+        \par{-2y}^2 y &= 2 - (-2y) y^2 \nl 
+        2y^3 &= 2 \nl 
+        \implies y &= 1 \pd 
+        \ea 
+        \]
+        Thus, \(x = -2(1) = -2.\)
+        So the curve has a vertical tangent at the point 
+        \(\boxed{(-2, 1)}.\)
+        (See <a href="#implicit-diff-ex-tangents">Figure 2</a>.)
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\textderivOrder{y}{x}{2}\) for 
+        \[2x^3 + 9y^2 - 12y = 5 \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <p>
+        <span class="label-emph">Finding \(\textderiv{y}{x}\)</span>
+        We begin by finding \(\textderiv{y}{x},\) as follows:
+        \begin{align} 
+        \deriv{}{x} \par{2x^3 + 9y^2 - 12y} &= \deriv{}{x}(5) \nonum \nl 
+        6x^2 + 18 y \deriv{y}{x} - 12 \deriv{y}{x} &= 0 \nonum \nl 
+        \deriv{y}{x} \par{18y - 12} &= 6x^2 \nonum \nl 
+        \deriv{y}{x} \par{6y - 2} &= x^2 \nonum \nl 
+        \implies \deriv{y}{x} &= \frac{x^2}{3y - 2} \pd \label{eq:second-deriv-ex}
+        \end{align}
+    </p>
+    <p>
+        <span class="label-emph">Finding \(\textderivOrder{y}{x}{2}\)</span>
+        To attain the second derivative, we differentiate \(\textderiv{y}{x}\)
+        with respect to \(x.\)
+        In doing so, we use the Quotient Rule while applying the Chain Rule to differentiate \(y\) with respect to \(x.\)
+
+    </p>
+</div>
+
+<!-- <div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Consider the implicit equation \(x^2 + xy - x = 2.\) 
+        Find \(\textDeriv{y}{x}.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    We treat \(y\) as \(y(x),\) a function of \(x.\)
+    You may substitute in this expression for clarity if you desire. 
+    <ol class="list-num">
+        <li>
+
+        </li>
+    </ol>
+    We differentiate with respect to \(x\) both sides of the equation using the Chain Rule.
+    This gives 
+    \[
+    \ba 
+    \deriv{}{x}(x^2 + xy - x) &= \deriv{}{x}(2) \nl 
+    2x + \par{x \deriv{y}{x} + y} - 1 &= 0 \nl 
+    \deriv{y}{x} &= \boxed{\frac{1 - 2x - y}{x}} 
+    \ea 
+    \]
+</div> -->
+
+
+<!-- <div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find all the horizontal tangents to the curve \(x^3 - x^2y = 2\).
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <p>
+        We first find \(\textDeriv{y}{x} \col\)
+        \[
+        \ba 
+        \deriv{}{x} \left(x^3 - x^2y \right) &= \deriv{}{x} (2) \nl 
+        3x^2 - \left(2xy + x^2 \deriv{y}{x} \right) &= 0 \nl 
+        -x^2 \deriv{y}{x}  &= 2xy - 3x^2 \nl 
+        \deriv{y}{x}  &= \frac{3x - 2y}{x} \period 
+        \ea 
+        \]
+    </p>
+    <p>
+        A horizontal tangent occurs when the slope of the tangent line is \(0.\)
+        Thus, we let \(\textDeriv{y}{x} = 0 \col\)
+        \[\frac{3x - 2y}{x} = 0 \implies 3x - 2y = 0\] 
+        We now have the following system of equations:
+        \[
+        \ba 
+        3x - 2y &= 0 \nl
+        x^3 - x^2 y &= 2 \period 
+        \ea 
+        \]
+        The first equation shows that \(y = 3x/2.\)
+        Then 
+        \[
+        \ba 
+        x^3 - x^2 \left(\frac{3x}{2}\right) = 2 \implies x &= \sqrt[3]{-4} \nl 
+        y &= \frac{3\sqrt[3]{-4}}{2} \period 
+        \ea 
+        \] 
+        Thus, the curve has a horizontal tangent at
+        \[\boxed{\left(\sqrt[3]{-4}, \frac{3\sqrt[3]{-4}}{2} \right)}\]
+    </p>
+</div> -->
+
+<!-- <div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find all the vertical tangents to the curve \(xy - y^2 = 4.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <p> 
+        We differentiate both sides of the equation with respect to \(x\) to solve for \(\textDeriv{y}{x}.\)
+        \[
+        \ba 
+        \deriv{}{x} \left(xy - y^2 \right) &= \deriv{}{x}(4) \nl
+        \left(y + x \deriv{y}{x} \right) - 2y \deriv{y}{x} &= 0 \nl
+        \deriv{y}{x} \left(x - 2y\right) &= -y \nl
+        \deriv{y}{x} &= \frac{y}{2y - x} \period 
+        \ea
+        \]
+        To find the vertical tangents to the curve, 
+        we set the denominator of \(\textDeriv{y}{x}\) 
+        equal to \(0.\) We get the equation
+        \[2y - x = 0 \period\]
+        We now have a system of equations in which we solve for \(x\) and \(y \col\)
+        \begin{align}
+        2y - x &= 0 \label{eq:ex-vert-1} \nl 
+        xy - y^2 &= 4 \label{eq:ex-vert-2} \period 
+        \end{align}
+        From \(\eqRefer{eq:ex-vert-1},\) we find \(x = 2y.\)
+        Then we substitute this expression into \(\eqRefer{eq:ex-vert-2}\) to find
+        \[2y^2 - y^2 = 4 \implies y = \pm 2 \period \]
+    </p>
+    <p>
+        Now we find the \(x\)-values that correspond to \(y = \pm 2.\)
+        From \(\eqRefer{eq:ex-vert-1},\) letting \(y = -2\) gives
+        \[2(-2) - x = 0 \implies x = -4 \period \] 
+        Likewise, substituting \(y = 2\) gives
+        \[2(2) - x = 0 \implies x = 4 \period \] 
+        Therefore, the points
+        \[\boxed{(-4, -2) \and (4, 2)}\]
+        are the points at which the curve has vertical tangents.
+    </p>
+</div> -->
+
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.2: Differentiating Power, Exponential, and Sinusoidal Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>2.2 — Differentiating Power, Exponential, and Sinusoidal Functions</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Differentiating-Power,-Exponential,-and-Sinusoidal-Functions]]]-->
+<p>
+    In Section 
+    <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>
+    we formed a relationship between <i>derivative functions</i> and slopes to a graph.
+    We now find derivative functions of several important 
+    functions—power functions, exponential functions, and sinusoidal functions.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#power-rule" class="page-anchor">The Power Rule</a>
+        </li>
+        <li>
+            <a href="#tan-normal-lines" class="page-anchor">Equations of Tangent Lines and Normal Lines</a>
+        </li>
+        <li>
+            <a href="#diff-exp-functions" class="page-anchor">Differentiating \(y = e^x\)</a>
+        </li>
+        <li>
+            <a href="#deriv-sin-cos" class="page-anchor">Derivatives of Sine and Cosine</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="power-rule">The Power Rule</h4>
+<p>
+    Let us investigate the family of functions \(f(x) = x^n\)
+    where \(n\) is any real number.
+    This family is called a <span class="emph">power function</span>. 
+    In Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>
+    we discovered that 
+    \[\deriv{}{x} \par{x^2} = 2x \and \deriv{}{x} \par{x^3} = 3x^2 \pd\]
+    Using the limit definition of a derivative also shows that the derivative of \(x^4\)
+    is \(4x^3.\)
+    We see a pattern emerge—the derivative function is found by multiplying the function by the power 
+    and then subtracting \(1\) from the exponent. 
+    Thus, the following rule seems apparent:
+    Differentiating \(f(x) = x^n\) is very easy if we use the <span class="emph">Power Rule</span>, which states 
+    \begin{equation} 
+    \deriv{}{x} \par{x^n} = nx^{n - 1} \pd \label{eq:power-rule}
+    \end{equation}
+    The Power Rule turns out to be true for all values \(n;\)
+    in this section we only prove the case where \(n\) is a positive integer.
+    In further sections, we will prove the rule for other cases of \(n.\)
+</p>
+
+<div class="box-title">POWER RULE</div>
+<div class="box">
+    If \(n\) is any real number, then the <span class="emph">Power Rule</span> gives 
+    \begin{equation} 
+    \deriv{}{x} \par{x^n} = nx^{n - 1} \pd \eqlabel{eq:power-rule}
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF (FOR POSITIVE INTEGER POWERS)</span>
+    Let \(f(x) = x^n\) where \(n\) is a positive integer.
+    You may verify that the formula 
+    \[x^n - a^n = (x - a) \par{x^{n - 1} + x^{n - 2} a + \cdots + xa^{n - 2} + a^{n - 1}}\]
+    holds by multiplying out the terms on the right-hand side.
+    By the definition of a derivative at a point, 
+    \[
+    \ba 
+    f'(a) &= \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{x \to a} \frac{x^n - a^n}{x - a} \nl 
+    &= \lim_{x \to a} \frac{(x - a) \par{x^{n - 1} + x^{n - 2} a + \cdots + xa^{n - 2} + a^{n - 1}}}{x - a} \nl 
+    &= \lim_{x \to a} \par{x^{n - 1} + x^{n - 2} a + \cdots + xa^{n - 2} + a^{n - 1}} \nl 
+    &= \underbrace{a^{n - 1} + a^{n - 2} a + \cdots + aa^{n - 2} + a^{n - 1}}_{n \; \text{terms}} \nl
+    &= na^{n - 1} \pd 
+    \ea 
+    \]
+    \[\qedproof\]
+    Since \(a\) can be any value, this form is equally as useful as \(\eqref{eq:power-rule}.\)
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate each derivative.
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds \deriv{}{x} \par{x^6}\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \par{\frac{1}{x^4}}\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \par{\sqrt[4]{x^3} \,}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    Each of these functions is a power function. Thus, we use the <b>Power Rule</b>
+    to differentiate each.
+    <ol class="list-roman">
+        <li>
+            We use the Power Rule, as in \(\eqref{eq:power-rule},\)
+            with \(n = 6.\) 
+            We drop the power and then subtract \(1\) from the exponent, 
+            so the derivative becomes  
+            \[6x^{6 - 1} = \boxed{6x^5}\]
+        </li>
+        <hr>
+        <li>
+            We rewrite the function as \(x^{-4},\) so we use \(\eqref{eq:power-rule}\)
+            with \(n = -4\) to obtain 
+            \[-4x^{-4 - 1} = -4x^{-5} = \boxed{-\frac{4}{x^5}}\]
+        </li>
+        <hr>
+        <aside class="box-recall">
+            \(\sqrt[b]{x^a} = x^{a/b}.\)
+        </aside>
+        <li>
+            Upon rewriting the function as \(x^{3/4},\) we identify \(n = 3/4\) and so \(\eqref{eq:power-rule}\) gives 
+            the derivative to be 
+            \[\tfrac{3}{4} x^{-1/4} = \boxed{\frac{3}{4 \sqrt[4]{x}}}\]
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="label-emph">Sums and Differences of Power Functions</span>
+    We use the Sum Rule and Difference Rule for Derivatives 
+    (from Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>)
+    to differentiate sums and differences of power functions. 
+    For example, a <b>polynomial</b> is the sum (or difference) of power functions whose exponents are nonnegative integers.
+    Thus, to differentiate a polynomial we use the Sum and Difference Rules in conjunction with the Power Rule. 
+    Doing so provides a faster method of differentiation than using the limit definition of a derivative.
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate each derivative.
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds \deriv{}{x} \par{x^2 - x}\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \par{\frac{3}{x} + 2}\)</span>
+            </li>
+            <li>
+                <span>\(\ds \deriv{}{x} \par{4x \sqrt x \,}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    See Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>
+    to review the rules for derivatives involving constants,
+    sums, and differences.
+    <ol class="list-roman">
+        <li>
+            <aside class="box-remark">
+                The term \(x\) is a power function with \(n = 1.\)
+                Its derivative, by \(\eqref{eq:power-rule},\) is therefore 
+                \[\deriv{}{x} \par{x^1} = 1x^{1 - 1} = 1x^0 = 1 \pd\] 
+            </aside>
+            By the Difference Rule for Derivatives,  
+            \[\deriv{}{x} \par{x^2 - x} = \deriv{}{x} \par{x^2} - \deriv{}{x} \par{x} \pd\]
+            Using the Power Rule for each term on the right-hand side, we see 
+            \[
+            \deriv{}{x} \par{x^2} = 2x \and \deriv{}{x} \par{x} = 1 \pd
+            \]
+            Hence, 
+            \[\deriv{}{x} \par{x^2 - x} = \boxed{2x - 1}\]
+        </li>
+        <hr>
+        <li>
+            This derivative requires several differentiation rules: 
+            \[
+            \ba 
+            \deriv{}{x} \par{\frac{3}{x} + 2} &= \deriv{}{x} \par{\frac{3}{x}} + \deriv{}{x} \par{2} &&(\textrm{Sum Rule}) \nl 
+            &= \deriv{}{x} \par{\frac{3}{x}} + 0 &&(\textrm{Constant Rule}) \nl 
+            &= \deriv{}{x} \par{3x^{-1}} \nl 
+            &= 3 \deriv{}{x} \par{x^{-1}} &&(\textrm{Constant Multiple Rule}) \nl 
+            &= 3 \par{-1 x^{-2}} &&(\textrm{Power Rule}) \nl 
+            &= \boxed{-\frac{3}{x^2}}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We rewrite \(\sqrt x\) as \(x^{1/2},\)
+            so \(x \sqrt x\) becomes  
+            \[x \cdot x^{1/2} = x^{3/2} \cma\]
+            which is a power function. 
+            Thus, we have 
+            \[
+            \ba 
+            \deriv{}{x} \par{4x \sqrt x \,} &= \deriv{}{x} \par{4x^{3/2}} \nl 
+            &= 4 \deriv{}{x} \par{x^{3/2}} && (\textrm{Constant Multiple Rule}) \nl 
+            &= 4 \par{\tfrac{3}{2} x^{1/2}} && (\textrm{Power Rule}) \nl 
+            &= 6x^{1/2} = \boxed{6 \sqrt x}
+            \ea     
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let 
+        \[f(x) = \tfrac{1}{3}x^3 + x^2 - 3x - 4 \pd\]
+        Find all the \(x\)-values at which the graph of \(y = f(x)\) 
+        has horizontal tangents.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="deriv-13-horizontal-tangents" id="deriv-13-horizontal-tangents">
+        <img src="../images/sectionImages/deriv-13-horizontal-tangents.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .deriv-13-horizontal-tangents::before{
+            content:'FIGURE 1';
+        }
+    </style>
+    A curve has a <b>horizontal tangent</b> when its tangent has slope \(0.\)
+    Thus, we seek the solutions to \(f'(x) = 0.\)
+    We combine the Power Rule with the Sum, Difference, and Constant Multiple Rules 
+    for Derivatives (from Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>) to find 
+    \[
+    \ba 
+    f'(x) &= \deriv{}{x} \par{\tfrac{1}{3}x^3} + \deriv{}{x} \par{x^2} - \deriv{}{x} \par{3x} - \deriv{}{x} \par{4} 
+    &&\text{(Sum and Difference Rules)} \nl 
+    &=  \deriv{}{x} \par{\tfrac{1}{3}x^3} + \deriv{}{x} \par{x^2} - \deriv{}{x} \par{3x} - 0 
+    &&\text{(Constant Rule)} \nl 
+    &=  \tfrac{1}{3} \deriv{}{x} \par{x^3} + \deriv{}{x} \par{x^2} - 3\deriv{}{x} \par{x} - 0 
+    &&\text{(Constant Multiple Rule)} \nl 
+    &= \tfrac{1}{3} (3x^2) + 2x - 3(1) &&\text{(Power Rule)} \nl 
+    &= x^2 + 2x - 3 \pd 
+    \ea 
+    \]
+    We see 
+    \[
+    \ba 
+    x^2 + 2x - 3 &= 0 \nl 
+    (x - 1)(x + 3) &= 0 \nl 
+    \implies x &= -3 \cma x = 1 \pd
+    \ea 
+    \]
+    Thus, the graph of \(f\) has horizontal tangents when 
+    \(\boxed{x = -3}\) and \(\boxed{x = 1}\)
+    (<a href="#deriv-13-horizontal-tangents">Figure 1</a>).
+</div>
+
+<h4 id="tan-normal-lines">Equations of Tangent Lines and Normal Lines</h4>
+<p>
+    <span class="label-emph">Tangent Lines</span>
+    Suppose that the function \(f\) is differentiable at the point \(P(a, f(a)).\)
+    We know that \(f'(a)\) measures the slope of the line tangent to \(f\) at \(P.\)
+    To provide an equation of this tangent line, we 
+    use the <b>point-slope form</b> for the equation for a line: 
+    If a line passes through a point \(\par{x_0, y_0}\) with slope \(m,\)
+    then its equation is given by 
+    \[y - y_0 = m \par{x - x_0} \pd\]
+    Since the tangent line to \(f\) passes through \(\par{x_0, y_0}\) \(=(a, f(a))\)
+    with slope \(m = f'(a),\)
+    an equation of the tangent line to \(f\) at \(x = a\) is given by 
+    \begin{equation} 
+    y - f(a) = f'(a) \par{x - a} \pd \label{eq:tan-line}
+    \end{equation}
+</p>
+<figure class="tangent-normal-lines" id="tangent-normal-lines">
+    <img src="../images/sectionImages/tangent-normal-lines.jpg" alt="Figure 2">
+</figure>
+<style>
+    .tangent-normal-lines::before{
+        content:'FIGURE 2';
+    }
+</style>
+<p>
+    <span class="label-emph">Normal Lines</span>
+    A line is called <span class="emph">normal</span> to a curve \(y = f(x)\) at point \(P(a, f(a))\) 
+    if the line intersects \(P\) at an angle of \(90\degree\) to the curve.
+    Therefore, <i>a normal line is perpendicular to a tangent line</i>.
+    If two lines are perpendicular to each other, then one of their slopes is the negative reciprocal
+    of the other. 
+    Thus, the normal line to \(f\) at \(x = a\) has slope \(-1/f'(a).\)
+    We preserve the same point \((a, f(a)),\) so in \(\eqref{eq:tan-line}\)
+    we replace \(f'(a)\) with \(-1/f'(a).\) 
+    Doing so gives an equation for the line normal to \(f\) at \(P\) to be 
+    \begin{equation} 
+    y - f(a) = -\frac{1}{f'(a)}(x - a) \pd \label{eq:normal-line}
+    \end{equation}
+    (See <a href="#tangent-normal-lines">Figure 2</a>.)
+</p>
+
+<div class="box-title">EQUATIONS OF TANGENT LINES AND NORMAL LINES</div>
+<div class="box">
+    If \(f\) is differentiable at \(a,\) then 
+    the line <i>tangent</i> to the curve \(y = f(x)\) at \(x = a\) is given by the equation
+    \begin{equation} 
+    y - f(a) = f'(a) \par{x - a} \pd \eqlabel{eq:tan-line}
+    \end{equation}
+    The line <i>normal</i> to the curve \(y = f(x)\) at \(x = a\) is given by the equation
+    \begin{equation} 
+    y - f(a) = -\frac{1}{f'(a)}(x - a) \pd \eqlabel{eq:normal-line}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Write equations for the tangent line and normal line to the curve \(y = x^2 - 4x + 4\) 
+        at \(x = 1.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <p>
+        We need the slope of the tangent line to the curve when \(x = 1.\)
+        Thus, we differentiate the given function by using a combination of differentiation rules, as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 - 4x + 4} &= \deriv{}{x} \par{x^2} - \deriv{}{x} \par{4x} + \deriv{}{x} \par{4} &&(\textrm{Sum and Difference Rules}) \nl 
+        &= \deriv{}{x} \par{x^2} - \deriv{}{x} \par{4x} + 0 &&(\textrm{Constant Rule}) \nl 
+        &= \deriv{}{x} \par{x^2} - 4 \deriv{}{x} \par{x} &&(\textrm{Constant Multiple Rule}) \nl 
+        &= 2x - 4 \pd &&(\textrm{Power Rule})
+        \ea 
+        \]
+        When \(x = 1,\) the slope of the line tangent to the curve is  
+        \[2(1) - 4 = -2 \pd\]
+        Also note that when \(x = 1,\)
+        \[y = (1)^2 - 4(1) + 4 = 1 \pd\]
+        Hence, the <i>point of tangency</i> is \((1, 1).\)
+    </p>
+    <figure class="tangent-normal-lines-x2-4x4" id="tangent-normal-lines-x2-4x4">
+        <img src="../images/sectionImages/tangent-normal-lines-x2-4x+4.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .tangent-normal-lines-x2-4x4::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Equation of Tangent Line</span>
+        The <b>tangent line</b> just touches the curve at the point of tangency \((1, 1)\) with slope \(-2.\)
+        Thus, we use the point-slope form for the equation of a line: 
+        \(\eqrefer{eq:tan-line}\) gives the equation of the tangent line to be 
+        \[
+        y - 1 = -2(x - 1) \or \boxed{y = -2x + 3}
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Equation of Normal Line</span>
+        The <b>normal line</b> strikes the point \((1, 1)\) at an angle of \(90 \degree\) 
+        with the curve. Thus, the normal line is perpendicular to the tangent line. 
+        Since the tangent line has slope \(-2,\) the normal line has slope \(1/2\)
+        (the negative reciprocal). 
+        The point-slope form for the equation of a line, as in \(\eqref{eq:normal-line},\) 
+        represents this normal line as 
+        \[
+        y - 1 = \tfrac{1}{2} (x - 1) \or \boxed{y = \tfrac{1}{2} x + \tfrac{1}{2}}
+        \]
+        (See <a href="#tangent-normal-lines-x2-4x4">Figure 3</a>.)
+    </p>
+</div>
+
+<h4 id="diff-exp-functions">Differentiating \(y = e^x\)</h4>
+
+<figure class="deriv-ex" id="deriv-ex">
+    <img src="../images/sectionImages/deriv-e^x.jpg" alt="Figure 4">
+</figure>
+<style>
+    .deriv-ex::before{
+        content:'FIGURE 4';
+    }
+</style>
+
+<p>
+    Whereas in power functions the <i>base</i> is a variable,
+    in <b>exponential functions</b> the <i>power</i> is a variable.
+    Recall that the domain of an exponential function is all real numbers; 
+    an example of an exponential function is \(b^x\) for any \(b \gt 0.\)
+    The Power Rule cannot be used to differentiate an exponential function, 
+    since the rule is only applicable when the power is constant.
+    We now discuss the derivative of an exponential function 
+    whose base is <span class="emph">Euler's number</span>,
+    \[e \approx 2.718281828459045235936 \cma\]
+    which satisfies a myriad of beautiful properties in mathematics. 
+    This number manages to present itself in many surprising applications 
+    in ecology, physics, and finance.  
+    One of these majestic properties is that  
+    the function \(e^x\) <i>has its own derivative</i>. 
+    In other words, the slope to the curve \(e^x\) equals itself—that is, 
+    \begin{equation} 
+    \deriv{}{x} \par{e^x} = e^x \pd \label{eq:deriv-e^x}
+    \end{equation}
+    In <a href="#deriv-ex">Figure 4</a>, point \(P\) represents the point \((a, e^a)\)
+    for any \(a.\)
+    At \(P\) the slope of the tangent line is \(e^a,\)
+    meaning that the curve's height is equal to its slope.
+    In later sections, we will apply the premise of \(\eqref{eq:deriv-e^x}\) to differentiate functions whose bases aren't \(e,\)
+    as we will see in Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>.
+</p>
+<div class="box-title">DIFFERENTIATING \(y = e^x\)</div>
+<div class="box">
+    An <b>exponential function</b> has a variable power. 
+    For <span class="emph">Euler's number</span> \((e \approx 2.718),\)
+    \begin{equation} 
+    \deriv{}{x} \par{e^x} = e^x \pd \eqlabel{eq:deriv-e^x}
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Using the limit definition of a derivative, 
+    \[
+    \ba 
+    \deriv{}{x} \par{e^x} &= \lim_{h \to 0} \frac{e^{x + h} - e^x}{h} \nl 
+    &= \lim_{h \to 0} \frac{e^x \, e^h - e^x}{h} \nl 
+    &= \lim_{h \to 0} e^x \frac{e^h - 1}{h} \pd 
+    \ea 
+    \]
+    Because \(e^x\) doesn't depend on \(h,\) the Constant Multiple Law for Limits 
+    (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>) enables us to pull out the term \(e^x;\) we attain 
+    \begin{equation} 
+    \deriv{}{x} \par{e^x} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} \pd \label{eq:deriv-lim}
+    \end{equation}
+    But what is the value of the limit on the right-hand side?
+    To calculate it, we use a series of algebraic manipulations and a substitution.
+    Euler's number is given by 
+    \[
+    e = \lim_{n \to \infty} \par{1 + \frac{1}{n}}^n \pd
+    \]
+    Taking the natural logarithm of both sides gives 
+    \[1 = \ln \parbr{\lim_{n \to \infty} \par{1 + \frac{1}{n}}^n} \pd\]
+    Because the natural logarithm is continuous for all positive inputs, the last step is equivalent to 
+    \[1 = \lim_{n \to \infty} \parbr{\ln \par{1 + \frac{1}{n}}^n}\]
+    by the arguments of Section <a href="/Valculus/calculus/1.3-Determining-Continuity.html">1.3</a>.
+    Using the logarithmic property \(\ln x^n = n \ln x,\) we attain 
+    \[1 = \lim_{n \to \infty} \parbr{n \ln \par{1 + \frac{1}{n}}} \pd\]
+    We now perform a clever substitution: Let \(1/n = e^h - 1.\)
+    As \(n \to \infty,\) \(1/n \to 0.\)
+    The expression \(e^h - 1\) must also approach \(0,\) which is satisfied by \(h \to 0.\)
+    The limit equation therefore becomes 
+    \[
+    \ba 
+    1 &= \lim_{h \to 0} \frac{\ln \parbr{1 + \par{e^h - 1}}}{e^h - 1} \nl 
+    &= \lim_{h \to 0} \frac{\ln \par{e^h}}{e^h - 1} \nl 
+    &= \lim_{h \to 0} \frac{h}{e^h - 1} \pd
+    \ea 
+    \]
+    The Quotient Law of Limits enables us to reciprocate the limit, from which we attain  
+    \begin{equation} 
+    \lim_{h \to 0} \frac{e^h - 1}{h} = 1 \pd \label{eq:e-lim}
+    \end{equation}
+    In calculus, we choose to work with \(e\) for convenience because \(e\)
+    <i>is the number for which \(\eqref{eq:e-lim}\) holds true</i>. 
+    This limit is useful because then \(\eqref{eq:deriv-lim}\) becomes 
+    \[\deriv{}{x} \par{e^x} = e^x \cdot 1 = e^x \pd\]
+    Any other number wouldn't produce such a clean derivative function,
+    as we will see in Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Write equations for the tangent line and normal line to the curve \(y = e^x\) 
+        at \(x = 2.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <p>
+        The equations of the tangent line and normal line all require the slope of \(e^x\) 
+        when \(x = 2.\)
+        We find this slope to be 
+        \[\deriv{}{x} \par{e^x} \intEval_{x = 2} = e^2 \pd\] 
+    </p>
+    <figure class="tangent-normal-lines-e" id="tangent-normal-lines-e">
+        <img src="../images/sectionImages/tangent-normal-lines-e.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .tangent-normal-lines-e::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Equation of Tangent Line</span>
+        The <b>tangent line</b> intersects the curve at the point \(\par{2, e^2}.\)
+        Accordingly, \(\eqref{eq:tan-line}\) gives an equation for the tangent line to be 
+        \[y - e^2 = e^2(x - 2) \or \boxed{y = xe^2 - e^2}\]
+    </p>
+    <p>
+        <span class="label-emph">Equation of Normal Line</span>
+        The <b>normal line</b> strikes through the curve at \(\par{2, e^2}\)
+        and is perpendicular to the tangent line. 
+        Hence, the slope of the normal line is the negative reciprocal of the slope of the tangent line—namely, 
+        \(-1/e^2.\)
+        So using \(\eqref{eq:normal-line},\) we find an equation of the normal line to be
+        \[y - e^2 = -\frac{1}{e^2} (x - 2) \or \boxed{y = -\frac{1}{e^2} x + \frac{2}{e^2} + e^2}\]
+        (See <a href="#tangent-normal-lines-e">Figure 5</a>.)
+    </p>
+</div>
+
+<h4 id="deriv-sin-cos">Derivatives of Sine and Cosine</h4>
+<p>
+    The functions \(y = \sin x\) and \(y = \cos x\) are called 
+    <span class="emph">sinusoidal functions</span>, 
+    which are continuous for all real numbers \(x.\)
+    (Let us be clear that \(x\) is expressed in radians.)
+    Each function's graph resembles repeating waves; 
+    thus, if we plot the values of the slopes to a curve at each \(x,\)
+    then we expect the resulting curve to also resemble waves.
+    Hence, we assume that the derivative of a sinusoidal function is another sinusoidal function.
+    This expectation happens to be true: The derivative of sine is cosine,
+    and the derivative of cosine is negative sine—that is, 
+    \begin{flalign} 
+    &&\deriv{}{x} \par{\sin x} &= \cos x \label{eq:deriv-sin} &\nl 
+    \laWord{and} &&\deriv{}{x} \par{\cos x} &= - \sin x \label{eq:deriv-cos} \pd 
+    \end{flalign}
+    These formulas further strengthen the bond between sine and cosine.
+</p>
+
+<figure class="figure-wide deriv-sin-cos-graph" id="deriv-sin-cos-graph">
+    <img src="../images/sectionImages/deriv-sin-cos-graph.jpg" alt="Figure 6">
+</figure>
+<style>
+    .deriv-sin-cos-graph::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<p>
+    \(\eqrefer{eq:deriv-sin}\) asserts that the slope of \(y = \sin x\) at any \(x = a\)
+    is \(\cos a.\)
+    We now interpret this relationship geometrically:
+    In the interval \([-2 \pi, 2\pi],\)
+    the graph of \(\sin x\) has horizontal tangents when 
+    \(x = -3 \pi/2,\) \(-\pi/2,\) \(\pi/2,\) and \(3 \pi/2.\)
+    Thus, at these values the derivative of \(\sin x\) must be \(0;\)
+    indeed, \(\cos x = 0\) at these values. 
+    Since \(\cos 0 = 1,\) the graph of \(\sin x\) has slope \(1\) when \(x = 0.\)
+    The sine graph has positive slope over the interval \(\par{-\pi/2, \pi/2};\)
+    indeed, \(\cos x \gt 0\) in this interval. 
+    (See <a href="#deriv-sin-cos-graph">Figure 6</a>.)
+    These observations enable us to guess that \(\eqref{eq:deriv-sin}\) is true.
+</p>
+
+<div class="box-title">DERIVATIVES OF SINE AND COSINE</div>
+<div class="box">
+    \begin{align} 
+    \deriv{}{x} \par{\sin x} &= \cos x \eqlabel{eq:deriv-sin} \nl 
+    \deriv{}{x} \par{\cos x} &= - \sin x \eqlabel{eq:deriv-cos} 
+    \end{align}
+</div>
+
+<aside class="box-recall">
+    The <b>addition identity for sine</b> enables us to expand 
+    \(\sin(\alpha + \beta)\) as 
+    \[\sin \alpha \cos \beta + \cos \alpha \sin \beta \pd\]
+</aside>
+
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:deriv-sin}\)</span>
+    The derivative of \(\sin x,\) according to the limit definition of a derivative, is given by    
+    \[\deriv{}{x} \par{\sin x} = \lim_{h \to 0} \frac{\sin(x + h) - \sin x}{h} \pd\]
+    To evaluate this limit, we expand the term \(\sin(x + h)\) using the <b>addition identity for sine</b>:
+    \[
+    \ba 
+    \deriv{}{x} \par{\sin x} &= \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h} \nl 
+    &= \lim_{h \to 0} \frac{(\sin x) (\cos h - 1) + \cos x \sin h}{h} \pd 
+    \ea 
+    \]
+    The Sum Law for Limits (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>) enables us to write  
+    \[
+    \deriv{}{x} \par{\sin x} = \lim_{h \to 0} \frac{\sin x(\cos h - 1)}{h} + \lim_{h \to 0} \frac{\cos x \sin h}{h} \pd
+    \]
+    Notice that \(\sin x\) and \(\cos x\) don't depend on \(h,\) so the Constant Multiple Law for Limits 
+    permit us to factor them outside of the limit expressions.
+    We therefore attain 
+    \begin{equation} 
+    \deriv{}{x} \par{\sin x} = (\sin x) \lim_{h \to 0} \frac{\cos h - 1}{h} + (\cos x) \lim_{h \to 0} \frac{\sin h}{h} \pd \label{eq:sin-deriv-lim}
+    \end{equation}
+    In Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Algebraically.html">1.2</a> we proved that 
+    \begin{equation} 
+    \lim_{h \to 0} \frac{\sin h}{h} = 1 \and \lim_{h \to 0} \frac{1 - \cos h}{h} = 0 \pd \label{eq:important-limits}
+    \end{equation}
+    It now becomes apparent why we studied these 
+    limits—\(\eqref{eq:sin-deriv-lim}\) becomes 
+    \[
+    \ba 
+    \deriv{}{x} \par{\sin x} &= (\sin x) \cdot 0 + (\cos x) \cdot 1 \nl 
+    &= \cos x \pd 
+    \ea 
+    \]
+    \[\qedproof\]
+</p>
+
+<aside class="box-recall">
+    The <b>addition identity for cosine</b> enables us to expand 
+    \(\cos(\alpha + \beta)\) as 
+    \[\cos \alpha \cos \beta - \sin \alpha \sin \beta \pd\]
+</aside>
+
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:deriv-cos}\)</span>
+    By the limit definition of a derivative, the derivative of cosine is represented by  
+    \[\deriv{}{x} \par{\cos x} = \lim_{h \to 0} \frac{\cos(x + h) - \cos x}{h} \pd\]
+    To evaluate this limit, we expand the term \(\cos(x + h)\) using the <b>addition identity for cosine</b>:
+    \[
+    \ba 
+    \deriv{}{x} \par{\cos x} &= \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} \nl 
+    &= \lim_{h \to 0} \frac{(\cos x) (\cos h - 1) - \sin x \sin h}{h} \pd 
+    \ea 
+    \]
+    By the Difference Law for Limits (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), we observe  
+    \[\deriv{}{x} \par{\cos x} = \lim_{h \to 0} \frac{(\cos x) (\cos h - 1)}{h} - \lim_{h \to 0} \frac{\sin x \sin h}{h} \pd\]
+    The factors \(\cos x\) and \(\sin x\) can be factored out of each limit by the Constant Multiple Law for Limits;
+    doing so shows 
+    \[\deriv{}{x} \par{\cos x} = (\cos x) \lim_{h \to 0} \frac{\cos h - 1}{h} - (\sin x) \lim_{h \to 0} \frac{\sin h}{h} \pd\]
+    Applying the formulas of \(\eqref{eq:important-limits}\) yields 
+    \[
+    \ba 
+    \deriv{}{x} \par{\cos x} &= (\cos x) \cdot 0 - (\sin x) \cdot 1 \nl
+    &= - \sin x \pd
+    \ea 
+    \]
+    \[\qedproof\]
+</p>
+
+<p>
+    These proofs are elegant because they connect several key concepts: 
+    In Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Algebraically.html">1.2</a> 
+    we introduced the Squeeze Theorem and used it to prove the limits in \(\eqref{eq:important-limits}.\)
+    They immediately proved useful as we calculated indeterminate limits involving trigonometric functions. 
+    But in this section, we discovered more hidden applications of these limits. 
+    Through formulas \(\eqref{eq:deriv-sin}\) and \(\eqref{eq:deriv-cos},\) 
+    we appreciate how differential calculus further links the twin functions \(\sin x\)
+    and \(\cos x.\)
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \parbrBig{4 \sin x - 2 \cos x + e^x - \tfrac{1}{5} x^{15} + \sqrt[5]{x^2} - \pi^2}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <aside class="box-caution">
+        Don't use the Power Rule to differentiate \(\pi^2.\)
+        This expression is constant,
+        so the Constant Rule for Derivatives gives 
+        \[\deriv{}{x} \par{\pi^2} = 0 \pd\]
+    </aside>
+    Using the Sum, Difference, and Constant Multiple Rules for Derivatives, 
+    we rewrite the derivative as 
+    \[
+    4 \deriv{}{x} \par{\sin x} - 2 \deriv{}{x} \par{\cos x} + \deriv{}{x} \par{e^x} - \tfrac{1}{5} \deriv{}{x} \par{x^{15}} 
+    + \deriv{}{x} \par{\sqrt[5]{x^2} \,} - \deriv{}{x} \par{\pi^2} \pd
+    \] 
+    Note that \(\sqrt[5]{x^2} = x^{2/5}.\)
+    Also, \(\pi^2\) is a constant and so its derivative is \(0.\)
+    The derivative of \(\sin x\) is \(\cos x;\)
+    the derivative of \(\cos x\) is \(-\sin x;\)
+    and the derivative of \(e^x\) is \(e^x.\)
+    Thus, the derivative becomes 
+    \[4 \cos x - 2(-\sin x) + e^x - \tfrac{1}{5} \deriv{}{x} \par{x^{15}} + \deriv{}{x} \par{x^{2/5}} - 0 \pd\]
+    Applying the Power Rule to differentiate both power functions, we attain 
+    \[4 \cos x -2(-\sin x) + e^x - \tfrac{1}{5} \par{15 x^{14}} + \tfrac{2}{5} x^{-3/5}
+    = \boxed{4 \cos x + 2 \sin x + e^x - 3x^{14} + \frac{2}{5\sqrt[5]{x^3}}}
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="deriv-vertical-spring-cos" id="deriv-vertical-spring-cos">
+            <img src="../images/sectionImages/deriv-vertical-spring-cos.jpg" alt="Figure 7">
+        </figure>
+        <style>
+            .deriv-vertical-spring-cos::before{
+                content:'FIGURE 7';
+            }
+        </style>
+        A block is attached to a spring hung from a ceiling. 
+        Its resting position is called the <span class="emph">equilibrium position</span>. 
+        The block is stretched downward a distance of \(6\) inches from its equilibrium position,
+        after which it vibrates around the equilibrium position.
+        The block's displacement from equilibrium at time \(t \geq 0\) is given by 
+        \[s(t) = 6 \cos t \pd\]
+        Note that the downward direction is positive. 
+        (See <a href="#deriv-vertical-spring-cos">Figure 7</a>.)
+        Determine the block's velocity and acceleration as functions of \(t.\)
+        Analyze the object's motion.
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <aside class="box-recall">
+        From Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>, 
+        velocity is the derivative of position with time 
+        and acceleration is the second derivative of position with time.
+    </aside>
+    <p>
+        <span class="label-emph">Velocity and Acceleration</span>
+        <b>Velocity</b> \(v(t)\) is the derivative of \(s(t) \col\)
+        \[v(t) = \deriv{}{t} \par{6 \cos t} = \boxed{-6 \sin t}\]
+        <b>Acceleration</b> \(a(t)\) is the derivative of \(v(t) \col\)
+        \[a(t) = \deriv{}{t} \par{-6 \sin t} = \boxed{-6 \cos t}\]
+        Note that \(a(t) = -s(t).\)
+    </p>
+    <p>
+        <span class="label-emph">Analysis</span>
+        Because \(a(t) = -s(t),\)
+        we notice that at the equilibrium position, \(s(t) = 0\) and so \(a(t) = 0.\) 
+        This equation also asserts that the magnitude of the block's acceleration is greatest at the 
+        highest and lowest points of its motion (since \(s\) is greatest at these points).
+        Conversely, the object's speed function is given by 
+        \(\abs{v(t)}\) \(= 6 \abs{\sin t},\)
+        which is \(0\) when \(t = 0.\)
+        The speed is maximized when \(\abs{\sin t} = 1,\)
+        which occurs when \(\cos t = 0.\)
+        Hence, the block's speed is greatest as it passes through equilibrium 
+        but is \(0\) at the highest and lowest points.
+    </p>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#power-rule" class="summary-anchor">The Power Rule</a>
+        The <span class="emph">Power Rule</span> enables us to differentiate 
+        power functions. 
+        If \(n\) is any real number, then the Power Rule gives
+        \begin{equation} 
+        \deriv{}{x} \par{x^n} = nx^{n - 1} \pd \eqlabel{eq:power-rule}
+        \end{equation}
+        In words, to differentiate a power function 
+        we multiply by the power and then subtract \(1\) from the exponent.
+        This formula is applicable only when the base is a variable 
+        and the power is a constant.
+    </p>
+    <p>
+        <a href="#tan-normal-lines" class="summary-anchor">Equations of Tangent Lines and Normal Lines</a>
+        If \(f\) is differentiable at \(a,\) then 
+        the line <i>tangent</i> to the curve \(y = f(x)\) at \(x = a\) is given by the equation 
+        \begin{equation} 
+        y - f(a) = f'(a) \par{x - a} \pd \eqlabel{eq:tan-line}
+        \end{equation}
+        A <span class="emph">normal line</span> intersects a curve at an angle of \(90 \degree\)
+        and is perpendicular to a tangent line.
+        The line <i>normal</i> to the curve \(y = f(x)\) at \(x = a\) is given by the equation 
+        \begin{equation} 
+        y - f(a) = -\frac{1}{f'(a)}(x - a) \pd \eqlabel{eq:normal-line}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#diff-exp-functions" class="summary-anchor">Differentiating \(y = e^x\)</a>
+        An <b>exponential function</b> has a variable power. 
+        <span class="emph">Euler's number</span> \((e \approx 2.718)\)
+        is the number for which 
+        \begin{equation} 
+        \lim_{h \to 0} \frac{e^h - 1}{h} = 1 \pd \eqlabel{eq:e-lim}
+        \end{equation}
+        Consequently, this limit yields 
+        \begin{equation} 
+        \deriv{}{x} \par{e^x} = e^x \pd \eqlabel{eq:deriv-e^x}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#deriv-sin-cos" class="summary-anchor">Derivatives of Sine and Cosine</a>
+        The derivative of sine is cosine, and the derivative of cosine is negative sine:
+        \begin{align} 
+        \deriv{}{x} \par{\sin x} &= \cos x \eqlabel{eq:deriv-sin} \nl 
+        \deriv{}{x} \par{\cos x} &= - \sin x \eqlabel{eq:deriv-cos} \pd 
+        \end{align}
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

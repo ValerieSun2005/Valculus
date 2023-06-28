@@ -35,6 +35,9 @@ window.MathJax = {
             ea: "\\end{aligned}",
             baat: "\\begin{alignedat}",
             eaat: "\\end{alignedat}",
+            baf: "\\begin{flalign*}",  // this environment allows a word to be left-aligned in an equation
+            eaf: "\\end{flalign*}",
+            laWord: ["\\hspace{0em}\\text{#1}", 1], // left aligned word — e.g., "or"
             bc: "\\begin{cases}",
             ec: "\\end{cases}",
             be: "\\begin{equation}",
@@ -47,6 +50,8 @@ window.MathJax = {
             degree: "^{\\circ}",
             farenheit: "\\degree \\text{F}",
             celcius: "\\degree \\text{C}",
+            length: ["\\abs{#1}", 1], // measure of line segment — e.g., the number |AB|
+            segment: ["\\overline{#1}", 1], // line segment itself (NOT measure) — e.g., the line segment AB 
             andThree: ["#1  \\comma  #2 \\; \\comma \\text{and} \\; #3", 3],
             and: "\\qquad \\text{and} \\qquad",
             as: "\\qquad \\text{as} \\qquad",
@@ -62,10 +67,12 @@ window.MathJax = {
             col: "\\! :",
             scol: "\\, ; \\,",
             nonum: "\\nonumber",
+            eqRef: ["\\eqref{#1}", 1],
             eqRefer: ["\\text{Equation } \\eqref{#1}", 1],
             eqReferTwo: ["\\text{Equations } \\eqref{#1} \\text{ and } \\eqref{#2}", 2],
             eqrefer: ["\\text{Equation } \\eqref{#1}", 1],
             eqlabel: ["\\tag*{\\eqref{#1}}", 1],
+            diffDelta: ["\\, \\frac{\\Delta #1}{\\Delta #2} \\, ", 2],
             deriv: ["\\, \\frac{\\dd #1}{\\dd #2} \\, ", 2],
             derivOrder: ["\\, \\frac{\\dd^{#3} #1}{\\dd #2^{#3}} \\, ", 3],
             textDeriv: ["\\dd #1 / \\dd #2", 2],
@@ -74,8 +81,11 @@ window.MathJax = {
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
             parbr: ["\\left [ #1 \\right ]", 1],
+            parBig: ["\\Big(#1 \\Big)", 1],
+            parbrBig: ["\\Big[#1 \\Big]", 1],
             di: "\\, \\dd",
             nl: "\\\\[1ex]",
+            nonum: "\\nonumber",
             indZero: "\\frac{0}{0}",
             indInfty: "\\infty/\\infty",
             qed: "\\tag*{$\\blacksquare$}",
@@ -87,7 +97,7 @@ window.MathJax = {
             cancelColor: ["{\\color{#1} \\cancel{\\color{white} #2}}", 2],
             equalsCheck: "\\textAbove{\\checkmark}{=}",
             orange: ["{\\color{orange}#1}", 1],
-            teal: ["{\\color{teal}#1}", 1],
+            teal: ["{\\color{SkyBlue}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
             arrowTwoWay: "\\; \\Longleftrightarrow \\;",
             intEval: "{\\Bigg|}",
@@ -96,7 +106,11 @@ window.MathJax = {
             triplingTime: "\\mathcal{t_3}",
             chem: ["\\text{}", 1],
             avg: ["#1_{\\text{avg}}", 1],
-            sinLim: "\\lim_{x \\to 0} (\\sin x)/x"
+            secText: ["#1_{\\text{sec}}", 1],
+            maxSub: ["#1_{\\text{max}}", 1],
+            arc: ["\\text{arc} \\, #1", 1],
+            sinLim: "\\lim_{x \\to 0} (\\sin x)/x", 
+            clockTime: ["{#1}\\hspace{-0.2em}:\\hspace{-0.2em}{#2}", 2]
         }
     },
 };

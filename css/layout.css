@@ -1,3 +1,10 @@
+/* fonts */
+
+@font-face { font-family: Oswald; src: url('fonts/Oswald-VariableFont_wght.ttf'); } 
+
+
+/* site layout */
+
 *{
     margin: 0;
     padding: 0
@@ -81,6 +88,20 @@ aside p{
     text-indent: 15%;
 }
 
+.figure-wide{
+    width: 80%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    float: none;
+}
+
+.figure-wide img{
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .figure-center{
     display: flex;
     flex-direction: row;
@@ -146,6 +167,11 @@ aside::before, figure::before{
 .box-remark::before{
     content: 'REMARK  ';
     color: rgb(42, 129, 222);
+}
+
+.box-recall::before{
+    content: 'RECALL  ';
+    color: rgb(124, 87, 150);
 }
 
 main{ /* background body */
@@ -307,6 +333,40 @@ mjx-container[jax="SVG"] > svg a[href] {
     text-align: right;
 }
 
+.external-link{
+    /* word-break: break-all; */
+}
+
+.table-list{  /* table for listing facts — similar to columns side by side. no borders.*/
+    table-layout: fixed;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-list td{ 
+    border: none;
+    text-align: left;
+    padding-left: 0px;
+}
+
+@media screen and (max-width: 1207px) {
+    .table-list{
+        width: unset;
+        margin-left: unset;
+    }
+
+    .table-list td{
+        display: block;
+        text-align: left;
+    }
+
+    .table-list tbody td:before {
+        content: attr(data-th);
+        display: inline-block;
+        width: 100%;
+    }
+}
 
 table.center {
     margin-left: auto; 
@@ -334,10 +394,10 @@ th{
     margin-bottom: 20px;
     position: relative;
     border-bottom: 2px solid gray;
+    width: 60%;
 }
 
 .table-vertical .label-cell{
-    width: 50%;
     border-bottom: 5px solid rgb(195, 195, 195);
 }
 
@@ -534,9 +594,8 @@ ol li{
     visibility: hidden;
 }
 
-.label-emph{  /*used for text like "*Interpretation*. f is decreasing . . ."*/
+.label-emph{  /*used for text like "*Case 1*. f is decreasing . . ."*/
     font-style: italic;
-    /* font-family: Geneva, Tahoma, sans-serif; */
     text-indent: 0%;
     margin-right: 0.8%;
     color: rgb(123, 156, 173);
@@ -615,6 +674,16 @@ ol li{
         margin-left: auto;
     } */
     
+    .figure-wide{
+        width: 90%;
+        position: relative;
+        padding-left: 25%;
+    }
+
+    .figure-wide img{
+        width: 100%;
+        float: none;
+    }
 
 }
 
@@ -631,7 +700,7 @@ ol li{
         font-size: 17px;
     }
     
-    .table-full-width{
+    .table-full-width, .figure-wide{
         width: 100%;
     }
 }
@@ -645,14 +714,19 @@ ol li{
 
 @media screen and (max-width:1200px){
     aside{
-    width: 100%;
-    margin-left: 0;
-    left: 0; 
-    display: block;
-    padding-top: 4%; 
-    border: 0.4rem solid rgb(92, 88, 88);
+        width: 100%;
+        margin-left: 0;
+        left: 0; 
+        display: block;
+        z-index: 2;
+        background-color: rgb(53, 46, 46);
+        padding-top: 3%; 
+        margin-top: 5%;
+        border: 0.4rem solid rgb(92, 88, 88);
     }
 }
+
+/* mobile layout */
 
 @media screen and (max-width: 800px) {
     h1, main, .footer-body, .tab div, .footer-disclaimer{
@@ -661,7 +735,7 @@ ol li{
     }
     
     main figure, aside, .figure-center figure{
-        width: 50%;
+        width: 55%;
         margin-left: 25%;
         margin-right: 25%;
         left: 0; 
@@ -671,7 +745,14 @@ ol li{
         margin-bottom: 4%;
     }
 
-    main img, main figure video, aside{
+    .figure-wide{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0%;
+    }
+
+    main img, main figure video, aside, .figure-wide img{
         width: 100%;
         display: block;
     }
