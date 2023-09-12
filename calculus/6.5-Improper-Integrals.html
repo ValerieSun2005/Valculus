@@ -427,6 +427,7 @@
     \[0 \leq \int_1^\infty \frac{\abs{\sin x}}{x^{3/2}} \di x \leq \int_1^\infty \frac{1}{x^{3/2}} \di x \period\]
     The integral \(\int_1^\infty (1/x^{3/2}) \di x\) converges because it is a \(p\)-integral of \(p = 3/2 \gt 1.\)
     Accordingly, \(\int_1^\infty (\abs{\sin x}/x^{3/2}) \di x\) is bounded by two finite numbers and therefore also converges.
+    Informally, if the <q>larger</q> integral converges, then the <q>smaller</q> integral also converges.
 </p>
 <figure class="improp-integral-comparison-test" id="improp-integral-comparison-test">
     <img src="../images/sectionImages/improp-integral-comparison-test.jpg" alt="improp-integral-comparison-test">
@@ -439,15 +440,16 @@
 <p>
     To generalize this idea, let \(f(x)\) and \(g(x)\) be continuous functions for all \(x \geq a.\) 
     If 
-    \[0 \leq f(x) \leq g(x)\]
+    \[0 \lt f(x) \leq g(x)\]
     and \(\int_a^\infty g(x) \di x\) converges, 
     then \(\int_a^\infty f(x) \di x\) also converges because \(\int_a^\infty f(x) \di x\) is bounded between two finite numbers.
     A visual representation is shown by 
     <a href="#improp-integral-comparison-test">Figure 6</a>.
     By contrast, if 
-    \[0 \leq g(x) \leq f(x)\]
+    \[0 \lt g(x) \leq f(x)\]
     and \(\int_a^\infty g(x) \di x\) diverges, then \(\int_a^\infty f(x) \di x\) also diverges 
-    due to being "greater than infinity."
+    due to being greater than the divergent integral \(\int_a^\infty g(x) \di x.\)
+    Informally, if the <q>smaller</q> integral diverges, then the <q>larger</q> integral also diverges.
 </p>
 
 <!--comparison test improper integrals-->
@@ -455,12 +457,12 @@
 <div class="box">
     <ol class="list-alpha">
         <li>
-            If \(0 \leq f(x) \leq g(x)\) and \(\int_a^\infty g(x) \di x\) converges, 
-            then \(\int_a^\infty f(x) \di x\) converges.
+            If \(0 \lt f(x) \leq g(x)\) and \(\int_a^\infty g(x) \di x\) converges, 
+            then \(\int_a^\infty f(x) \di x\) also converges.
         </li>
         <li>
-            If \(0 \leq g(x) \leq f(x)\) and \(\int_a^\infty g(x) \di x\) diverges, 
-            then \(\int_a^\infty f(x) \di x\) diverges.
+            If \(0 \lt g(x) \leq f(x)\) and \(\int_a^\infty g(x) \di x\) diverges, 
+            then \(\int_a^\infty f(x) \di x\) also diverges.
         </li>
     </ol>
 </div>
@@ -559,11 +561,11 @@
             by comparing it with another improper integral.
             <ol class="list-alpha">
                 <li>
-                    If \(0 \leq f(x) \leq g(x)\) and \(\int_a^\infty g(x) \di x\) converges, 
+                    If \(0 \lt f(x) \leq g(x)\) and \(\int_a^\infty g(x) \di x\) converges, 
                     then \(\int_a^\infty f(x) \di x\) converges.
                 </li>
                 <li>
-                    If \(0 \leq g(x) \leq f(x)\) and \(\int_a^\infty g(x) \di x\) diverges, 
+                    If \(0 \lt g(x) \leq f(x)\) and \(\int_a^\infty g(x) \di x\) diverges, 
                     then \(\int_a^\infty f(x) \di x\) diverges.
                 </li>
             </ol>

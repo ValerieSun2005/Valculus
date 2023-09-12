@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>5.1: Areas Between Curves</title>
+    <title>5.1: Areas between Curves</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
@@ -20,7 +20,7 @@
     <img src="/Valculus/images/logo.png" class="logo-image" alt="">
 </a>
     <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>5.1 — Areas Between Curves</h1>
+    <h1>5.1 — Areas between Curves</h1>
     <main>
       <div class="pdf-panel">
         <div class="pdf-panel-left">
@@ -32,12 +32,12 @@
             </li>
             <li>
               <button>
-                <a href="5.1-Areas-Between-Curves-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+                <a href="5.1-Areas-between-Curves-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
               </button>
             </li>
             <li>
               <button>
-                <a href="5.1-Areas-Between-Curves-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+                <a href="5.1-Areas-between-Curves-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
               </button>
             </li>
           </ul>
@@ -45,7 +45,7 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      <!--[[[crefId.Areas-Between-Curves]]]--> 
+      <!--[[[crefId.Areas-between-Curves]]]--> 
 <p>
     In Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>, 
     we calculated areas of regions bounded between a function and the \(x\)-axis.
@@ -120,7 +120,7 @@
     \[A = \lim_{n \to \infty} \sum_{i = 1}^n [f(x_i^*) - g(x_i^*)] \, \Delta x \pd\]
     This limit is the definite integral of \(f(x) - g(x),\) so we have 
     \begin{equation} 
-    A = \int_a^b f(x) - g(x) \di x \pd \label{eq:area-x}
+    A = \int_a^b [f(x) - g(x)] \di x \pd \label{eq:area-x}
     \end{equation}
 </p>
 
@@ -142,7 +142,7 @@
     \ba 
     A &= [\textrm{area under} \; y = f(x)] - [\textrm{area under} \; y = g(x)] \nl 
     &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \nl 
-    &= \int_a^b f(x) - g(x) \di x \pd 
+    &= \int_a^b [f(x) - g(x)] \di x \pd 
     \ea 
     \]
     (See <a href="#areas-between-curves-special-case">Figure 3</a>;
@@ -159,13 +159,15 @@
     If \(f\) and \(g\) are continuous functions with \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) 
     then the area bounded by \(y = f(x),\) \(y = g(x),\) the line \(x = a,\)
     and the line \(x = b\) is 
-    \[A = \int_a^b f(x) - g(x) \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
+    \[A = \int_a^b [f(x) - g(x)] \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
 </div>
 
 <p>
     When we solve problems, we need to visualize the situation.
     Thus, <span class="good">always</span> draw a sketch of the bounded area in question.
     Before you integrate, ensure that in the bounded area one function is greater than the other.
+    Note that \(\eqref{eq:area-x}\) should <span class="warning">never</span> return a negative result;
+    the area of an enclosed region is independent of the quadrant in which it lies.
 </p>
 
 <div class="example-title" id="ex-e^x-1"> EXAMPLE 1 </div>
@@ -194,7 +196,7 @@
     integrating the difference \(e^x - 1,\) to get 
     \[
     \ba 
-    A &= \int_0^2 e^x - 1 \di x \nl 
+    A &= \int_0^2 \par{e^x - 1} \di x \nl 
     &= (e^x - x) \intEval_0^2 \nl 
     &= (e^2 - 2) - (e^0 - 0) \nl 
     &= \boxed{e^2 - 3} \approx 4.389 \pd
@@ -228,7 +230,7 @@
     So we use \(\eqref{eq:area-x},\) subtracting the lower function from the upper function: 
     \[
     \ba 
-    A &= \int_0^1 \sqrt x - x \di x \nl 
+    A &= \int_0^1 \par{\sqrt x - x} \di x \nl 
     &= \par{\tfrac{2}{3} x^{3/2} - \tfrac{1}{2} x^2} \intEval_0^1 \nl 
     &= \par{\tfrac{2}{3} - \tfrac{1}{2}} - 0 \nl 
     &= \boxed{\tfrac{1}{6}} 
@@ -279,7 +281,7 @@
     The left region's area is 
     \[
     \ba 
-    A_1 &= \int_0^{\pi/4} \cos x - \sin x \di x \nl 
+    A_1 &= \int_0^{\pi/4} \par{\cos x - \sin x} \di x \nl 
     &= (\sin x + \cos x) \intEval_0^{\pi/4} \nl 
     &= \par{\sin \tfrac{\pi}{4} + \cos \tfrac{\pi}{4}} - (\sin 0 + \cos 0) \nl 
     &= \sqrt{2} - 1 \pd 
@@ -288,7 +290,7 @@
     The area of the right region is 
     \[
     \ba 
-    A_2 &= \int_{\pi/4}^{\pi/2} \sin x - \cos x \di x \nl 
+    A_2 &= \int_{\pi/4}^{\pi/2} \par{\sin x - \cos x} \di x \nl 
     &= (-\cos x - \sin x) \intEval_{\pi/4}^{\pi/2} \nl 
     &= \par{-\cos \tfrac{\pi}{2} - \sin \tfrac{\pi}{4}} - \par{-\cos \tfrac{\pi}{2} - \sin \tfrac{\pi}{4}} \nl 
     &= \sqrt{2} - 1 \pd 
@@ -349,7 +351,7 @@
     (See <a href="#areas-between-curves-y-rectangles">Figure 8B</a>.)
     This limit is the definite integral 
     \begin{equation} 
-    A = \int_c^d f(y) - g(y) \di y \pd \label{eq:area-y}
+    A = \int_c^d [f(y) - g(y)] \di y \pd \label{eq:area-y}
     \end{equation}
     When we integrate a region with respect to \(y,\) we use "right minus left"
     instead of "top minus bottom," as we do with <a href="#areas-x" class="page-anchor">Areas with \(x\)</a>.
@@ -365,7 +367,7 @@
     If \(f\) and \(g\) are continuous functions with \(f(y) \geq g(y)\) for \(c \leq y \leq d,\) 
     then the area bounded by \(x = f(y),\) \(x = g(y),\) the line \(y = c,\)
     and the line \(y = d\) is 
-    \[A = \int_c^d f(y) - g(y) \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
+    \[A = \int_c^d [f(y) - g(y)] \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
 </div>
 
 <div class="example-title" id="ex-y-1-y^2"> EXAMPLE 4 </div>
@@ -397,7 +399,7 @@
     We are given the intersection points, so we apply \(\eqref{eq:area-y}\) to obtain 
     \[
     \ba 
-    A &= \int_{-1/2}^1 (1 - y^2) - \tfrac{1}{2} (1 - y) \di y \nl 
+    A &= \int_{-1/2}^1 \parbr{(1 - y^2) - \tfrac{1}{2} (1 - y)} \di y \nl 
     &= \par{\tfrac{1}{2} y + \tfrac{1}{4} y^2 - \tfrac{1}{3} y^3} \intEval_{-1/2}^1 \nl 
     &= \parbr{\tfrac{1}{2} + \tfrac{1}{4} - \tfrac{1}{3}} 
     - \parbr{\tfrac{1}{2} \par{-\tfrac{1}{2}} + \tfrac{1}{4} \par{-\tfrac{1}{2}}^2 - \tfrac{1}{3} \par{-\tfrac{1}{2}}^3} \nl 
@@ -483,8 +485,8 @@
         The region goes from \(y = 1\) to \(y = 2;\) thus, \(\eqrefer{eq:area-y}\) gives 
         \[
         \ba 
-        A &= \int_1^2 (5 - y^2) - (y - 1) \di y \nl 
-        &= \int_1^2 6 - y - y^2 \di y \nl 
+        A &= \int_1^2 \parbr{(5 - y^2) - (y - 1)} \di y \nl 
+        &= \int_1^2 \par{6 - y - y^2} \di y \nl 
         &= \par{6y - \tfrac{1}{2} y^2 - \tfrac{1}{3} y^3} \intEval_1^2 \nl 
         &= \parbr{6(2) - \tfrac{1}{2}(2)^2 - \tfrac{1}{3}(2)^3} 
         - \parbr{6(1) - \tfrac{1}{2}(1)^2 - \tfrac{1}{3}(1)^3} \nl 
@@ -501,13 +503,13 @@
         Since these boundary functions are different, we must split the region at \(x = 1\)
         and add the areas of each region.
         Using \(\eqref{eq:area-x},\) the area of the left region is given by 
-        \[\int_0^1 (1 + x) - 1 \di x \pd\]
+        \[\int_0^1 \parbr{(1 + x) - 1} \di x \pd\]
         To find the area to the right of \(x = 1,\) 
         we rewrite \(x = 5 - y^2\) as \(y = \sqrt{5 - x}.\)
         We then have 
-        \[\int_1^4 \sqrt{5 - x} - 1 \di x \pd\]
+        \[\int_1^4 \par{\sqrt{5 - x} - 1} \di x \pd\]
         So the total area is 
-        \[A = \int_0^1 (1 + x) - 1 \di x + \int_1^4 \sqrt{5 - x} - 1 \di x \pd\]
+        \[A = \int_0^1 \parbr{(1 + x) - 1} \di x + \int_1^4 \par{\sqrt{5 - x} - 1} \di x \pd\]
         This integral setup also delivers the answer \(A = \boxed{13/6}.\)
     </p>
 </div>
@@ -550,7 +552,7 @@
         Our next goal is to express all equations in terms of \(x.\)
         Solving for \(y\) in \(x = 2 - y\) gives \(y = 2 - x.\)
         Our area is therefore the sum
-        \[A = \int_0^1 4 - (2 - x) \di x + \int_1^2 4 - x^2 \di x \pd\]
+        \[A = \int_0^1 \parbr{4 - (2 - x)} \di x + \int_1^2 \par{4 - x^2} \di x \pd\]
     </p>
     <p>
         <span class="label-emph">Integrating with \(y\)</span>
@@ -560,7 +562,7 @@
         Thus, we split the region at \(y = 2\) and take the area of each subregion. 
         Solving for \(x\) in \(y = x^2\) yields \(x = \sqrt y.\) 
         Then using \(\eqref{eq:area-y}\) for each, we get 
-        \[A = \int_1^2 \sqrt y - (2 - y) \di y + \int_2^4 \sqrt y - 0 \di y \pd \]
+        \[A = \int_1^2 \parbr{\sqrt y - (2 - y)} \di y + \int_2^4 \par{\sqrt y - 0} \di y \pd \]
     </p>
     <p>
         Either integral setup supplies the answer of \(A = \boxed{25/6}.\)
@@ -576,7 +578,7 @@
         If \(f\) and \(g\) are continuous functions with \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) 
         then the area bounded by \(y = f(x),\) \(y = g(x),\) the line \(x = a,\)
         and the line \(x = b\) is 
-        \[A = \int_a^b f(x) - g(x) \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
+        \[A = \int_a^b [f(x) - g(x)] \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
         The geometric interpretation of this form is "top function minus bottom function."
     </p>
     <p>
@@ -584,11 +586,14 @@
         If \(f\) and \(g\) are continuous functions with \(f(y) \geq g(y)\) for \(c \leq y \leq d,\) 
         then the area bounded by \(x = f(y),\) \(x = g(y),\) the line \(y = c,\)
         and the line \(y = d\) is 
-        \[A = \int_c^d f(y) - g(y) \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
+        \[A = \int_c^d [f(y) - g(y)] \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
         In this form, we integrate "right function minus left function."
     </p>
     <p>
         <a href="#tips" class="summary-anchor">Problem-Solving Tips</a>
+        In calculating areas between curves, the key lesson is to be creative and execute integrations using the method 
+        with which you feel most comfortable.
+        Consider the following tips:
         <ol class="list-num">
             <li>
                 Sketch the graphs and the region they enclose.
@@ -608,10 +613,6 @@
                 and \(\eqref{eq:area-y}\) for integration with \(y.\)
             </li>
         </ol>
-    </p>
-    <p class="p-no-indent">
-        The key lesson is to be creative and execute integrations using the method 
-        with which you feel most comfortable. 
     </p>
 </div>
     </main>

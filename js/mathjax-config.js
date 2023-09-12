@@ -49,23 +49,31 @@ window.MathJax = {
             deg: "\\textrm{deg}",
             degree: "^{\\circ}",
             farenheit: "\\degree \\text{F}",
+            fahrenheit: "\\degree \\text{F}",
             celcius: "\\degree \\text{C}",
             length: ["\\abs{#1}", 1], // measure of line segment — e.g., the number |AB|
             segment: ["\\overline{#1}", 1], // line segment itself (NOT measure) — e.g., the line segment AB 
-            andThree: ["#1  \\comma  #2 \\; \\comma \\text{and} \\; #3", 3],
+            andThree: ["#1  \\cmaa  #2 \\; \\cmaa \\text{and} \\; \\; #3", 3],
+            andFour: ["#1  \\comma  #2 \\; \\comma #3 \\; \\comma \\text{and} \\; #4", 4],
             and: "\\qquad \\text{and} \\qquad",
+            so: "\\qquad \\text{so} \\qquad",
             as: "\\qquad \\text{as} \\qquad",
             or: "\\qquad \\text{or} \\qquad",
             for: "\\qquad \\text{for} \\qquad",
             if: "\\qquad \\text{if} \\qquad",
+            vdotss: "\\; \\; \\vdots", // \vdots aligned with equals sign
             lspace: "\\hspace{6.5em}",
             comma: "\\, , \\,",
             period: "\\, .",
             pd: "\\period",
             cma:"\\comma",
+            cmaa: "\\comma \\; \\; \\;",
             ques: "\\, ?",
             col: "\\! :",
             scol: "\\, ; \\,",
+            scoll: "\\, ; \\; \\; \\;",
+            abt: ["\\textrm{about } #1", 1],  // e.g., "about y = 4"
+            abtAxis: ["\\textrm{about } #1\\textrm{-axis}", 1],  // e.g., "about y = 4"
             nonum: "\\nonumber",
             eqRef: ["\\eqref{#1}", 1],
             eqRefer: ["\\text{Equation } \\eqref{#1}", 1],
@@ -86,8 +94,17 @@ window.MathJax = {
             di: "\\, \\dd",
             nl: "\\\\[1ex]",
             nonum: "\\nonumber",
+            inv: ["#1^{-1}", 1], // inverse prefix "^{-1}"
+            asin: "\\sin^{-1}",
+            acos: "\\cos^{-1}",
+            atan: "\\tan^{-1}",
+            asec: "\\sec^{-1}",
+            acsc: "\\csc^{-1}",
+            acot: "\\cot^{-1}",
             indZero: "\\frac{0}{0}",
             indInfty: "\\infty/\\infty",
+            out: ["#1_{\\text{out}}", 1], // r_out
+            in: ["#1_{\\text{in}}", 1], // r_in
             qed: "\\tag*{$\\blacksquare$}",
             un: ["\\, \\textrm{#1} ", 1],
             undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2],
@@ -100,6 +117,7 @@ window.MathJax = {
             teal: ["{\\color{SkyBlue}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",
             arrowTwoWay: "\\; \\Longleftrightarrow \\;",
+            iffArrow: "\\; \\Longleftrightarrow \\;",
             intEval: "{\\Bigg|}",
             doublingTime: "\\mathcal{t_2}",
             halfLife: "\\mathcal{t_{\\slashFrac{1}{2}}}",
@@ -110,7 +128,14 @@ window.MathJax = {
             maxSub: ["#1_{\\text{max}}", 1],
             arc: ["\\text{arc} \\, #1", 1],
             sinLim: "\\lim_{x \\to 0} (\\sin x)/x", 
-            clockTime: ["{#1}\\hspace{-0.2em}:\\hspace{-0.2em}{#2}", 2]
+            clockTime: ["{#1}\\hspace{-0.2em}:\\hspace{-0.2em}{#2}", 2],
+            normalPdf: ["\\frac{1}{(#2) \\sqrt{2 \\pi}} \\, e^{-(#3 - #1)^2/\\parbr{2(#2)^2}}", 3],
+            div: "\\; \\; \\text{diverges}",
+            conv: "\\; \\; \\text{converges}",
+            divBoxed: "\\; \\; \\boxed{\\text{diverges}}",
+            convBoxed: "\\; \\; \\boxed{\\text{converges}}",
+            min: ["\\text{min} \\left\\{#1, #2\\right\\}", 2],
+            max: ["\\text{max} \\left\\{#1, #2\\right\\}", 2],
         }
     },
 };

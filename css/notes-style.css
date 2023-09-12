@@ -17,7 +17,6 @@ main p{
     hyphens: auto;
 }
 
-
 tr, th{
     border: none;
 }
@@ -63,17 +62,12 @@ h4, .page-anchor, .summary-anchor{
 }
 
 .proof::after{
-    content: ".";
+    content: "  ";
 }
 
-.warning{
-    color: rgb(212, 75, 75);
-    font-style: italic;
-}
-
-.good{
-    color: rgb(62, 156, 62);
-    font-style: italic;
+.proof mjx-container[jax="SVG"] > svg a[href] {
+    fill: rgb(0, 169, 157);
+    stroke: rgb(0, 169, 157);
 }
 
 .box-title, .steps-title, .example-title, .section-summary::before{
@@ -103,8 +97,13 @@ h4, .page-anchor, .summary-anchor{
     background-color: rgb(147, 98, 151);
 }
 
-.box .table-full-width{
-    width: 100%;
+.box .table-full-width, .steps .table-full-width{
+    width: 107%;
+    margin-left: -3.5%;
+}
+
+.section-summary .table-full-width{
+    width: 98%;
 }
 
 .steps{ /* box for steps */
@@ -136,6 +135,12 @@ h4, .page-anchor, .summary-anchor{
 .solution hr{
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.solution p:first-child{
+    text-indent: 0vmin;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .example{ /* for example problems */

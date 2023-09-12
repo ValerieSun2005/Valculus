@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.5 Exercise Solutions: Formal Definition of a Limit</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.5 Exercise Solutions — Formal Definition of a Limit</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="1.5-Formal-Definition-of-a-Limit.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.5-Formal-Definition-of-a-Limit-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[CALC]]]-->
+        Because \(\lim_{x \to 1} \par{x^3 - 2x + 7}\) \(= 6,\)
+        a number \(\delta \gt 0\) exists such that for any \(\varepsilon,\)
+        \[\abs{\par{x^3 - 2x + 7} - 6} \lt \varepsilon \if \abs{x - 1} \lt \delta \pd\]
+        Using a graphing calculator, find \(\delta\) if \(\varepsilon = 0.05.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because \(\varepsilon = 0.05,\)
+        the curve must lie between the lines 
+        \[y = 6 - 0.05 = 5.95 \and y = 6 + 0.05 = 6.05\]
+        when \(\abs{x - 1} \lt \delta.\)
+        The curve intersects the line \(y = 5.95\) when \(x = 0.939\)
+        and intersects the line \(y = 6.05\) when \(x = 1.044.\)
+        So for \(0.939 \lt x \lt 1.044,\) the curve is between the two lines. 
+        We need \(\delta\) to be the <i>smaller</i> difference in \(x\) from \(1\)—namely, 
+        \(\delta = \abs{1 - 1.044} = \boxed{0.044}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[CALC]]]-->
+        The limit \(\lim_{x \to 0} \par{1/x^4} = \infty\) means, for some \(M \gt 0,\)
+        a number \(\delta \gt 0\) exists such that
+        \[\frac{1}{x^4} \gt M \if \abs x \lt \delta \pd\]
+        Using a graphing calculator, find the largest \(\delta\) for which 
+        <ol class="list-alpha">
+<li>
+                \(M = 100\)
+            </li>
+<li>
+                \(M = 500\)
+            </li>
+<li>
+                \(M = 1000\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Because \(1/x^4 \gt 100\) for \(-0.316 \lt x \lt 0.316,\)
+                we have \(\boxed{\delta = 0.316}.\)
+            </li>
+<hr/>
+<li>
+                We see \(1/x^4 \gt 500\) for \(-0.211 \lt x \lt 0.211,\)
+                so \(\boxed{\delta = 0.211}.\)
+            </li>
+<hr/>
+<li>
+                Since \(1/x^4 \gt 1000\) for \(-0.178 \lt x \lt 0.178,\)
+                we have \(\boxed{\delta = 0.178}.\)
+                Observe that \(\delta\) shrinks as we increase \(M.\)
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[CALC]]]-->
+        The limit \(\lim_{x \to 0} \csc^2 x = \infty\) means, for some \(M \gt 0,\)
+        a number \(\delta \gt 0\) exists such that
+        \[\csc^2 x \gt M \if \abs x \lt \delta \pd\]
+        Using a graphing calculator, find the largest \(\delta\) for which 
+        <ol class="list-alpha">
+<li>
+                \(M = 50\)
+            </li>
+<li>
+                \(M = 100\)
+            </li>
+<li>
+                \(M = 250\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Since \(\csc^2 x \gt 50\) for \(-0.142 \lt x \lt 0.142,\)
+                we have \(\boxed{\delta = 0.142}.\)
+            </li>
+<hr/>
+<li>
+                We see \(\csc^2 x \gt 100\) for \(-0.1 \lt x \lt 0.1,\)
+                so \(\boxed{\delta = 0.1}.\)
+            </li>
+<hr/>
+<li>
+                Because \(\csc^2 x \gt 250\) for \(-0.063 \lt x \lt 0.063,\)
+                we have \(\boxed{\delta = 0.063}.\)
+                Note that \(\delta\) shrinks as we demand larger \(M.\)
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2} \par{6x - 4} = 8\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{(6x - 4) - 8} \lt \varepsilon \if \abs{x - 2} \lt \delta \pd
+            \]
+            The first inequality becomes 
+            \[\abs{6x - 12} = 6 \abs{x - 2} \lt \varepsilon \iffArrow 
+            \abs{x - 2} \lt \frac{\varepsilon}{6} \pd\]
+            Comparing this inequality to \(\abs{x - 2} \lt \delta,\)
+            we can equate \(\delta\) to the bound \(\varepsilon/6.\)
+            So we choose \(\delta = \varepsilon/6.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon/6\) we see, for \(\abs{x - 2} \lt \delta,\)
+            \[\abs{(6x - 4) - 8} = \abs{6x - 12} = 6 \abs{x - 2} \lt 6 \delta 
+            = 6 \par{\frac{\varepsilon}{6}} = \varepsilon \pd\]
+            Accordingly, 
+            \[\abs{(6x - 4) - 8} \lt \varepsilon \if \abs{x - 2} \lt \frac{\varepsilon}{6} \pd\]
+            Thus, \(\lim_{x \to 2} (6x - 4) = 8.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -5} \par{3x + 1} = -14\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{(3x + 1) - (-14)} \lt \varepsilon \if \abs{x - (-5)} \lt \delta \pd
+            \]
+            The first inequality becomes 
+            \[\abs{3x + 15} = 3 \abs{x + 5} \lt \varepsilon \iffArrow 
+            \abs{x + 5} \lt \frac{\varepsilon}{3} \pd\]
+            Comparing this inequality to \(\abs{x + 5} \lt \delta,\)
+            we can equate \(\delta\) to the bound \(\varepsilon/3.\)
+            So we choose \(\delta = \varepsilon/3.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon/3\) we see, for \(\abs{x + 5} \lt \delta,\)
+            \[\abs{(3x + 1) - (-14)} = \abs{3x + 15} = 3 \abs{x + 5} \lt 3 \delta 
+            = 3 \par{\frac{\varepsilon}{3}} = \varepsilon \pd\]
+            Accordingly, 
+            \[\abs{(3x + 1) - (-14)} \lt \varepsilon \if \abs{x + 5} \lt \frac{\varepsilon}{3} \pd\]
+            Thus, \(\lim_{x \to -5} (3x + 1) = -14.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2} (x - 2)^2 = 0\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{(x - 2)^2 - 0} \lt \varepsilon \if \abs{x - 2} \lt \delta \cma
+            \]
+            that is, 
+            \[(x - 2)^2 \lt \varepsilon \if \abs{x - 2} \lt \delta \pd\]
+            In the first inequality, taking the square root of both sides gives 
+            \(\abs{x - 2} \lt \sqrt \varepsilon.\)
+            Comparing this inequality to \(\abs{x - 2} \lt \delta,\)
+            we select \(\delta = \sqrt \varepsilon.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \sqrt \varepsilon\) we see, for \(\abs{x - 2} \lt \delta,\)
+            \[\abs{(x - 2)^2 - 0} = (x - 2)^2 \lt \delta^2 = \par{\sqrt \varepsilon}^2 = \varepsilon \pd\]
+            Accordingly, 
+            \[
+            \abs{(x - 2)^2 - 0} \lt \varepsilon \if \abs{x - 2} \lt \sqrt \varepsilon \cma
+            \]
+            which proves that \(\lim_{x \to 2} (x - 2)^2 = 0.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0} x^3 = 0\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{\par{x^3} - 0} \lt \varepsilon \if \abs{x - 0} \lt \delta \cma
+            \]
+            that is, 
+            \[\abs{x^3} \lt \varepsilon \if x \lt \delta \pd\]
+            The first inequality becomes 
+            \(\abs x \lt \sqrt[3] \varepsilon.\)
+            Comparing this inequality to \(x \lt \delta,\)
+            we select \(\delta = \sqrt[3] \varepsilon.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \sqrt[3] \varepsilon\) we see, for \(\abs x \lt \delta,\)
+            \[\abs{\par{x^3} - 0} = \abs{x^3} = \abs{\sqrt[3] x}^3 \lt \delta^3 
+            = \par{\sqrt[3] \varepsilon}^3 = \varepsilon \pd\]
+            Accordingly, 
+            \[
+            \abs{\par{x^3} - 0} \lt \varepsilon \if \abs{x - 0} \lt \sqrt[3] \varepsilon \pd
+            \]
+            This proves that \(\lim_{x \to 0} x^3 = 0.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 9^-} \sqrt{18 - 2x} = 0\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{\sqrt{18 - 2x} - 0} \lt \varepsilon \if 9 - \delta \lt x \lt 9 \pd
+            \]
+            The first inequality becomes simply 
+            \(\sqrt{18 - 2x} \lt \varepsilon.\)
+            Squaring both sides, we see 
+            \[18 - 2x \lt \varepsilon^2 \iffArrow 9 - x \lt \frac{\varepsilon^2}{2} \pd\]
+            Since \(9 - \delta \lt x \lt 9,\) we have \(9 - x \lt \delta.\)
+            By comparison of inequalities, we select \(\delta = \varepsilon^2/2.\)
+            (After you define \(\delta\) and \(\varepsilon,\)
+            it is a game of algebra to attain a bound for \(9 - x\) from 
+            the inequality \(\abs{\sqrt{18 - 2x} - 0} \lt \varepsilon.\)
+            This process is the most difficult in constructing a proof.)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon^2/2\) we see, for \(9 - \delta \lt x \lt 9\)
+            (that is, for <nobr>\(9 - x \lt \delta\))</nobr>, 
+            \[\abs{\sqrt{18 - 2x} - 0} = \sqrt{18 - 2x} = \sqrt{2(9 - x)} \lt 
+            \sqrt{2 \delta} = \sqrt{2 \par{\frac{\varepsilon^2}{2}}} = \varepsilon\]
+            (since <nobr>\(\varepsilon \gt 0\)).</nobr>
+            Accordingly, 
+            \[
+            \abs{\sqrt{18 - 2x} - 0} \lt \varepsilon \if 9 - \frac{\varepsilon^2}{2} \lt x \lt 9 \pd
+            \]
+            This proves that \(\lim_{x \to 9^-} \sqrt{18 - 2x} = 0.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 4^+} \sqrt[4]{3x - 12} = 0\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{\sqrt[4]{3x - 12} - 0} \lt \varepsilon \if 4 \lt x \lt 4 + \delta \pd
+            \]
+            The first inequality becomes simply 
+            \(\sqrt[4]{3x - 12} \lt \varepsilon.\)
+            Raising both sides to the power of \(4\) shows
+            \[3x - 12 \lt \varepsilon^4 \iffArrow 3(x - 4) \lt \varepsilon^4 
+            \iffArrow x - 4 \lt \frac{\varepsilon^4}{3} \pd\]
+            From \(4 \lt x \lt 4 + \delta\) we have \(x - 4 \lt \delta.\)
+            By comparison of inequalities, we select \(\delta = \varepsilon^4/3.\)
+            This concludes the game of algebra in bounding the factor \(x - 4.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon^4/3\) we see, for \(4 \lt x \lt 4 + \delta\)
+            (that is, for <nobr>\(x - 4 \lt \delta\))</nobr>, 
+            \[\abs{\sqrt[4]{3x - 12} - 0}
+            = \sqrt[4]{3x - 12} = \sqrt[4]{3(x - 4)} \lt \sqrt[4]{3 \delta} 
+            = \sqrt[4]{3 \par{\frac{\varepsilon^4}{3}}} = \varepsilon\]
+            (since <nobr>\(\varepsilon \gt 0\)).</nobr>
+            So
+            \[
+            \abs{\sqrt[4]{3x - 12} - 0} \lt \varepsilon \if 4 \lt x \lt 4 + \frac{\varepsilon^4}{3} \cma
+            \]
+            which proves that \(\lim_{x \to 4^+} \sqrt[4]{3x - 12} = 0.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0^+} \frac{1}{2x} = \infty\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(M \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \frac{1}{2x} \gt M \if 0 \lt x \lt 0 + \delta \cma
+            \]
+            that is, 
+            \[
+            \frac{1}{2x} \gt M \if 0 \lt x \lt \delta \pd
+            \]
+            Let's reciprocate both sides of the first inequality
+            (remembering to also flip the inequality sign); doing so yields 
+            \[2x \lt \frac{1}{M} \implies x \lt \frac{1}{2M} \pd\]
+            Comparing this inequality to \(x \lt \delta,\) 
+            we should choose \(\delta = 1/2M.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = 1/2M\) we see, for \(0 \lt x \lt \delta,\)
+            \[\frac{1}{2x} \gt \frac{1}{2 \delta} = \frac{1}{2 \par{\dfrac{1}{2M}}} = M \pd\]
+            It follows that 
+            \[
+            \frac{1}{2x} \gt M \if 0 \lt x \lt 0 + \frac{1}{2M} \cma
+            \]
+            therefore proving that \(\lim_{x \to 0^+} \par{1/2x} = 0.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 6^+} \frac{1}{\sqrt{x - 6}} = \infty\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(M \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \frac{1}{\sqrt{x - 6}} \gt M \if 6 \lt x \lt 6 + \delta \cma
+            \]
+            from which we get \(x - 6 \lt \delta.\)
+            By reciprocating and then squaring both sides, 
+            we convert the first inequality into 
+            \[\sqrt{x - 6} \lt \frac{1}{M} \or x - 6 \lt \frac{1}{M^2} \pd\]
+            This concludes our mission of bounding \(x - 6\) in terms of \(M.\)
+            Comparing this inequality to \(x - 6 \lt \delta,\) 
+            we should choose \(\delta = 1/M^2.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = 1/M^2\) we see, for \(6 \lt x \lt 6 + \delta,\)
+            \[\frac{1}{\sqrt{x - 6}} \gt \frac{1}{\sqrt \delta} = \frac{1}{\sqrt{1/M^2}} = M \pd\]
+            So
+            \[
+            \frac{1}{\sqrt{x - 6}} \gt M \if 6 \lt x \lt 6 + \frac{1}{M^2} \cma
+            \]
+            therefore proving that \(\lim_{x \to 6^+} \par{1/\sqrt{x - 6}} = \infty.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 7^+} \frac{8}{7 - x} = -\infty\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(M\) be some negative number that bounds \(8/(7 - x)\)
+            from above. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \frac{8}{7 - x} \lt M \if 7 \lt x \lt 7 + \delta \pd
+            \]
+            Because \(7 \lt x \lt 7 + \delta,\)
+            we have \(x - 7 \lt \delta;\)
+            in the first inequality, let's try to bound \(x - 7.\)
+            We reciprocate both sides of the first inequality
+            (remembering to also flip the inequality sign) to get  
+            \[\frac{7 - x}{8} \gt \frac{1}{M} \iffArrow 
+            7 - x \gt \frac{8}{M} \iffArrow x - 7 \lt -\frac{8}{M}\pd\]
+            We therefore select \(\delta = -8/M.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = -8/M\) we see, for \(7 \lt x \lt 7 + \delta\)
+            (or <nobr>\(x - 7 \lt \delta\)),</nobr>
+            \[\frac{8}{7 - x} = -\frac{8}{x - 7} \lt -\frac{8}{\delta} 
+            = -\frac{8}{-8/M} = M \pd\]
+            So
+            \[
+            \frac{8}{7 - x} \lt M \if 7 \lt x \lt 7 - \frac{8}{M} \pd
+            \]
+            Therefore, we have proved that \(\lim_{x \to 7^+} [8/(7 - x)] = -\infty.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0^+} \ln x = -\infty\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(M \lt 0\) be a given number that bounds \(\ln x\)
+            from above. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \ln x \lt M \if 0 \lt x \lt \delta \pd
+            \]
+            In the first inequality, we perform algebraic manipulation as follows: 
+            \[\ln x \lt M \iffArrow x \lt e^M \pd\]
+            Comparing this form to \(x \lt \delta,\)
+            we use \(\delta = e^M.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = e^M\) we see, for \(0 \lt x \lt \delta,\)
+            \[\ln x \lt \ln \delta = \ln \par{e^M} = M \pd\]
+            Thus, 
+            \[
+            \ln x \lt M \if 0 \lt x \lt e^M \cma
+            \]
+            therefore proving that \(\lim_{x \to 0^+} \ln x = -\infty.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 4^-} \log_7(4 - x) = -\infty\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(M \lt 0\) be a given number that bounds \(\ln x\)
+            from above. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \log_7(4 - x) \lt M \if 4 - \delta \lt x \lt 4 \pd
+            \]
+            In the first inequality, we perform algebraic manipulation as follows: 
+            \[\log_7(4 - x) \lt M \iffArrow 4 - x \lt 7^M \pd\]
+            From \(4 - \delta \lt x \lt 4\)
+            we see \(4 - x \lt \delta,\)
+            so by comparing the inequalities we should use 
+            \(\delta = 7^M.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = 7^M\) we see, for \(4 - \delta \lt x \lt 4\)
+            (that is, for <nobr>\(4 - x \lt \delta\)),</nobr>
+            \[\log_7(4 - x) \lt \log_7 \delta = \log_7 \par{7^M} = M \pd\]
+            Thus, 
+            \[
+            \log_7(4 - x) \lt M \if 4 - 7^M \lt x \lt 4 \cma
+            \]
+            proving that \(\lim_{x \to 4^-} \log_7(4 - x) = -\infty.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 3} \sqrt{5x + 1} = 4\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            The limit statement is true
+            if and only if, for positive \(\varepsilon\) and \(\delta,\)
+            \[
+            \abs{\sqrt{5x + 1} - 4} \lt \varepsilon \if \abs{x - 3} \lt \delta \pd 
+            \]
+            In the first inequality, multiplying by the conjugate \(\sqrt{5x + 1} - 4\)
+            shows
+            \[
+            \ba 
+            \abs{\sqrt{5x + 1} - 4} &amp;= \abs{\par{\sqrt{5x + 1} - 4} \cdot \frac{\sqrt{5x + 1} + 4}{\sqrt{5x + 1} + 4}} \nl
+            &amp;= \abs{\frac{5x - 15}{\sqrt{5x + 1} + 4}} = 5 \abs{\frac{x - 3}{\sqrt{5x + 1} + 4}} \lt \varepsilon \pd
+            \ea 
+            \]
+            We want to express \(\abs{x - 3}\) as an inequality 
+            with \(\varepsilon.\) 
+            But this task isn't easy, so let's compromise by bounding the factor 
+            using a larger number.
+            Observe that \(1/\par{\sqrt{5x + 1} + 4}\) \(\lt 1/4;\)
+            hence,
+            \[5 \abs{\frac{x - 3}{\sqrt{5x + 1} + 4}} 
+            \lt 5 \abs{\frac{x - 3}{4}}  \implies 5 \abs{\frac{x - 3}{4}} \lt \varepsilon \pd\]
+            Accordingly, 
+            \(\abs{x - 3} \lt 4 \varepsilon/5,\)
+            so we choose \(\delta = 4 \varepsilon/5.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            For \(0 \lt \abs{x - 3} \lt \delta,\) we see
+            \[\abs{\sqrt{5x + 1} - 4} = 5 \abs{\frac{x - 3}{\sqrt{5x + 1} + 4}}
+            \lt 5 \abs{\frac{x - 3}{4}} \lt \frac{5}{4} \delta = \frac{5}{4} \par{\frac{4}{5} \varepsilon} = \varepsilon \pd\]
+            So we have
+            \[
+            \abs{\sqrt{5x + 1} - 4} \lt \varepsilon \if \abs{x - 3} \lt \frac{4}{5} \varepsilon \pd
+            \]
+            This statement proves that \(\lim_{x \to 3} \sqrt{5x + 1} = 4.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 5} \sqrt{8x + 9} = 7\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            The limit statement is true
+            if and only if, for positive \(\varepsilon\) and \(\delta,\)
+            \[
+            \abs{\sqrt{8x + 9} - 7} \lt \varepsilon \if \abs{x - 5} \lt \delta \pd 
+            \]
+            In the first inequality, multiplying by the conjugate \(\sqrt{8x + 9} + 7\)
+            yields 
+            \[
+            \ba 
+            \abs{\sqrt{8x + 9} - 7} &amp;= \abs{\par{\sqrt{8x + 9} - 7} \cdot \frac{\sqrt{8x + 9} + 7}{\sqrt{8x + 9} + 7}} \nl
+            &amp;= \abs{\frac{8x - 40}{\sqrt{8x + 9} + 7}} = 5 \abs{\frac{x - 8}{\sqrt{8x + 9} + 7}} \lt \varepsilon \pd
+            \ea 
+            \]
+            To express \(\abs{x - 8}\) as an inequality 
+            with \(\varepsilon,\) we compromise by using a larger number 
+            as a bound.
+            Doing so gives us an easier problem:
+            We note that \(1/\par{\sqrt{8x + 9} + 7}\) \(\lt 1/7.\)
+            Hence,
+            \[5 \abs{\frac{x - 8}{\sqrt{8x + 9} + 7}} 
+            \lt 5 \abs{\frac{x - 8}{7}} \implies 5 \abs{\frac{x - 8}{7}} \lt \varepsilon \pd\]
+            Accordingly, 
+            \(\abs{x - 8} \lt 7 \varepsilon/5,\)
+            so we choose \(\delta = 7 \varepsilon/5.\)
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            For \(0 \lt \abs{x - 8} \lt \delta,\) we see
+            \[\abs{\sqrt{8x + 9} - 7} = 5 \abs{\frac{x - 8}{\sqrt{8x + 9} + 7}}
+            \lt 5 \abs{\frac{x - 8}{7}} \lt \frac{5}{7} \delta = \frac{5}{7} \par{\frac{7}{5} \varepsilon} = \varepsilon \pd\]
+            Thus,
+            \[
+            \abs{\sqrt{8x + 9} - 7} \lt \varepsilon \if \abs{x - 5} \lt \frac{7}{5} \varepsilon \pd 
+            \]
+            So \(\lim_{x \to 5} \sqrt{8x + 9} = 7.\)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 6} x^2 = 36\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{\par{x^2} - 36} \lt \varepsilon \if \abs{x - 6} \lt \delta \pd
+            \]
+            We have a difference of squares in the first inequality; 
+            thus, by factoring we attain 
+            \[
+            \abs{x + 6} \abs{x - 6} \lt \varepsilon \if \abs{x - 6} \lt \delta \pd
+            \]
+            It is difficult to bound \(\abs{x - 6}\) in terms of \(\varepsilon.\)
+            One compromise is to let \(C\) be a positive number such that 
+            \(\abs{x + 6} \lt C.\)
+            Since \(\abs{x - 6}\) is small, it's safe to assume \(\abs{x - 6} \lt 1,\)
+            or \(5 \lt x \lt 7.\)
+            Accordingly, \(11 \lt x + 6 \lt 13\)
+            and so we can let \(C = 13\) to see 
+            \[\abs{x^2 - 36} = \abs{x + 6} \abs{x - 6} 
+            \lt 13 \abs{x - 6} \implies 13 \abs{x - 6} \lt \varepsilon 
+            \implies \abs{x - 6} \lt \frac{\varepsilon}{13} \pd\]
+            Comparing this result to the inequality \(\abs{x - 6} \lt \delta,\)
+            we should select \(\delta = \varepsilon/13.\)
+            But we have two conditions:
+            \[\abs{x - 6} \lt 1 \and \abs{x - 6} \lt \frac{\varepsilon}{13} \pd\]
+            Both inequalities are satisfied only if \(\delta\) is the smaller 
+            of the two bounds—namely, 
+            \[\delta = \min{1}{\frac{\varepsilon}{13}} \pd\]
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon/13\) we see, for \(\abs {x - 6} \lt \delta,\)
+            \[\abs{\par{x^2} - 36} = \abs{x + 6} \abs{x - 6}
+            \lt 13 \abs{x - 6} \lt 13 \delta = 13 \par{\frac{\varepsilon}{13}} = \varepsilon \pd\]
+            Accordingly, if \(5 \lt x \lt 7\) then
+            \[
+            \abs{\par{x^2} - 36} \lt \varepsilon \if \abs{x - 6} \lt \frac{\varepsilon}{13} \pd
+            \]
+            This proves that \(\lim_{x \to 6} x^2 = 36.\)
+            (For larger intervals of \(x,\) we can increase \(C\) as needed.)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2} x^3 = 8\]
+     prove the limit statement. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(\varepsilon \gt 0\) be any number. 
+            We want to find a number \(\delta \gt 0\) such that
+            \[
+            \abs{\par{x^3} - 8} \lt \varepsilon \if \abs{x - 2} \lt \delta \pd
+            \]
+            In the first inequality, we have a difference of cubes. 
+            We therefore factor it as follows:
+            \[\abs{x^3 - 8} = \abs{x - 2} \abs{x^2 + 2x + 4} \lt \varepsilon \pd\]
+            To isolate the factor \(\abs{x - 2},\) let's compromise by 
+            bounding it by a larger number.
+            Let \(C\) be a positive number such that 
+            \(\abs{x^2 + 2x + 4}\) \(\lt C.\)
+            Because \(\abs{x - 2}\) is small, it's safe to assume \(\abs{x - 2} \lt 1,\)
+            from which \(1 \lt x \lt 3.\)
+            Accordingly, \(7 \lt x^2 + 2x + 4\) \(\lt 19\)
+            and so we let \(C = 19.\)
+            Thus, we have 
+            \[\abs{x^3 - 8} = \abs{x - 2} \abs{x^2 + 2x + 4} 
+            \lt 19 \abs{x - 2} \implies 19 \abs{x - 2} \lt \varepsilon 
+            \implies \abs{x - 2} \lt \frac{\varepsilon}{19} \pd\]
+            Comparing this result to the inequality \(\abs{x - 2} \lt \delta,\)
+            we should select \(\delta = \varepsilon/19.\)
+            But we have two conditions:
+            \[\abs{x - 2} \lt 1 \and \abs{x - 2} \lt \frac{\varepsilon}{19} \pd\]
+            The only way to satisfy both inequalities is to make \(\delta\) be the smaller 
+            of the two bounds—namely, 
+            \[\delta = \min{1}{\frac{\varepsilon}{19}} \pd\]
+        </p>
+<p>
+<span class="label-emph">Constructing the Proof</span>
+            With \(\delta = \varepsilon/19\) we see, for \(\abs {x - 2} \lt \delta,\)
+            \[\abs{\par{x^3} - 8} = \abs{x - 2} \abs{x^2 + 2x + 4}
+            \lt 19 \abs{x - 2} \lt 19 \delta = 19 \par{\frac{\varepsilon}{19}} = \varepsilon \pd\]
+            Accordingly, if \(1 \lt x \lt 3\) then
+            \[
+            \abs{\par{x^3} - 8} \lt \varepsilon \if \abs{x - 2} \lt \frac{\varepsilon}{19} \pd
+            \]
+            This proves that \(\lim_{x \to 2} x^3 = 8.\)
+            (For larger intervals of \(x,\) we can increase \(C\) as needed.)
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Prove that 
+        \(\lim_{x \to c} (ax + b) = ac + b.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Given \(\varepsilon \gt 0,\) we want to find a number \(\delta \gt 0\)
+        such that 
+        \[\abs{(ax + b) - (ac + b)} \lt \varepsilon \if \abs{x - c} \lt \delta \pd\]
+        Rearranging the first inequality gives 
+        \[\abs{ax - ac} \lt \varepsilon \iffArrow a \abs{x - c} \lt \varepsilon \iffArrow 
+        \abs{x - c} \lt \frac{\varepsilon}{a} \pd\]
+        Hence, choosing \(\delta = \varepsilon/a\) shows
+        \[\abs{(ax + b) - (ac + b)} = \abs{ax - ac} = a \abs{x - c} \lt a \delta 
+        = a \par{\frac{\varepsilon}{a}} = \varepsilon \pd\]
+        Thus, \(\lim_{x \to c} (ax + b) = ac + b\) is true because
+        \[\abs{(ax + b) - (ac + b)} \lt \varepsilon \if \abs{x - c} \lt \frac{\varepsilon}{a} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        If \(n\) is a positive integer, then prove that
+        \(\lim_{x \to 0} x^n = 0.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Given \(\varepsilon \gt 0,\) we want to find a number \(\delta \gt 0\)
+        such that 
+        \[\abs{x^n - 0} \lt \varepsilon \if \abs{x - 0} \lt \delta \pd\]
+        The first inequality becomes 
+        \[\abs{x^n} \lt \varepsilon \implies x \lt \abs{\sqrt[n] \varepsilon} = \sqrt[n] \varepsilon\]
+        (since <nobr>\(\varepsilon \gt 0\)).</nobr>
+        Choosing \(\delta = \sqrt[n] \varepsilon\) shows, for \(\abs x \lt \delta,\)
+        \[\abs{x^n - 0} = \abs{x^n} \lt \abs{\sqrt[n] \varepsilon}^n = \varepsilon \pd\]
+        So \(\lim_{x \to 0} x^n = 0\) is true because 
+        \[\abs{x^n - 0} \lt \varepsilon \if \abs{x - 0} \lt \sqrt[n] \varepsilon \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        For any \(k,\) prove that 
+        \(\lim_{x \to k^-} \sqrt{k - x} = 0.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Given \(\varepsilon \gt 0,\) we want to find a number \(\delta \gt 0\)
+        for which
+        \[\abs{\sqrt{k - x} - 0} \lt \varepsilon \if k - \delta \lt x \lt k \pd\]
+        The first inequality becomes 
+        \[\sqrt{k - x} \lt \varepsilon \iffArrow k - x \lt \varepsilon^2 
+        \iffArrow  k - \varepsilon^2 \lt x \pd\]
+        Comparing this inequality to \(k - \delta \lt x \lt k,\)
+        we select \(\delta = \varepsilon^2.\) 
+        From \(k - \delta \lt x \lt k,\) we observe that \(k - x \lt \delta.\)
+        Then for \(k - \delta \lt x \lt k\) we see 
+        \[\abs{\sqrt{k - x} - 0} = \sqrt{k - x} \lt \sqrt{\delta} = \sqrt{\varepsilon^2} = \varepsilon \pd\]
+        So \(\lim_{x \to k^-} \sqrt{k - x} = 0\) is true because 
+        \[\abs{\sqrt{k - x} - 0} \lt \varepsilon \if k - \varepsilon^2 \lt x \lt k \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        For \(n \gt 0,\) prove that 
+        \[\lim_{x \to (-b/a)^+} \sqrt[n]{ax + b} = 0 \pd\]
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Given \(\varepsilon \gt 0,\) we want to find a number \(\delta \gt 0\)
+        such that 
+        \[\abs{\sqrt[n]{ax + b} - 0} \lt \varepsilon \if -\frac{b}{a} \lt x \lt -\frac{b}{a} + \delta \pd\]
+        The first inequality becomes 
+        \[\sqrt[n]{ax + b} \lt \varepsilon \iffArrow ax + b \lt \varepsilon^n 
+        \iffArrow x + \frac{b}{a} \lt \frac{\varepsilon^n}{a} \pd\]
+        From \(-b/a \lt x \lt -b/a + \delta\) we identify 
+        \(x + b/a \lt \delta.\)
+        Thus, by comparison of inequalities we select \(\delta = \varepsilon^n/a.\)
+        We therefore see, for \(-b/a \lt x \lt -b/a + \delta,\)
+        \[\sqrt[n]{ax + b} = \sqrt[n]{a \par{x + \frac{b}{a}}} 
+        \lt \sqrt[n]{a \delta} = \sqrt[n]{a \par{\frac{\varepsilon^n}{a}}} = \varepsilon \pd\]
+        Accordingly, \(\lim_{x \to (-b/a)^+} \sqrt[n]{ax + b} = 0\)
+        because 
+        \[\abs{\sqrt[n]{ax + b} - 0} \lt \varepsilon 
+        \if -\frac{b}{a} \lt x \lt -\frac{b}{a} + \frac{\varepsilon^n}{a} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

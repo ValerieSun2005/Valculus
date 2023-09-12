@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5.2: Volumes with Cross Sections</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>5.2 — Volumes with Cross Sections</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="5.2-Volumes-with-Cross-Sections-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="5.2-Volumes-with-Cross-Sections-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Volumes-with-Cross-Sections]]]--> 
+
+<p>
+    The concept of <i>volume</i> is already familiar to us. 
+    We now elaborate on its definition: 
+    Suppose you make a straight cut through a solid three-dimensional object. 
+    The area through which you slice is a two-dimensional plane, which we call 
+    a <span class="emph">cross section</span>. 
+    Making a straight cut through a sphere's center, for example, 
+    yields a <i>circular</i> cross section.
+    The volume of any solid with uniform cross-sectional area \(A\)
+    and height \(h\) is given by the formula 
+    \[V = A h \pd\] 
+    For example, a cylinder of radius \(r\) and height \(h\) has uniform cross-sectional area
+    \(A = \pi r^2,\) so its volume is \(V = \pi r^2 h.\)
+    Likewise, a rectangular prism of length \(\ell,\) width \(w,\)
+    and height \(h\) contains a uniform cross-sectional area of \(A = \ell w,\)
+    meaning its volume is \(V = \ell w h.\)
+    (See <a href="#volumes-trivial">Figure 1</a>.)
+</p>
+
+<figure class="figure-wide volumes-trivial" id="volumes-trivial">
+    <img src="../images/sectionImages/volumes-trivial.jpg" alt="Fig. 1.">
+</figure>
+<style>
+    .volumes-trivial::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Nonuniform Cross Sections</span>
+    Let's calculate the volume of a solid \(S\) whose cross sections are <i>not</i> uniform.
+    We place \(S\) in the \(xy\)-plane from \(x = a\) to \(x = b.\)
+    Let the continuous function \(A(x)\) be the area of the cross section to \(S\)
+    in a plane \(P_x\) that is
+    perpendicular to the \(x\)-axis at any point \(x.\)
+    Note that the solid's cross-sectional area \(A(x)\) changes continuously with \(x.\)
+    For example, at the endpoint \(a\) the cross section to \(S\) perpendicular to the \(x\)-axis 
+    has area \(A(a).\)
+    Likewise, at \(b\) the cross section to \(S\) perpendicular to the \(x\)-axis has area \(A(b).\)
+    (See <a href="#volumes-slice">Figure 2</a>.)
+    Imagine cutting \(S\) into \(n\) slabs of equal width \(\Delta x,\) similar to slicing a loaf of bread.
+    Over the interval \([a, b],\) these slabs form endpoints \(x_1, x_2, \dots, x_{n - 1}, x_n.\)
+    Choosing any sample point \(x_i^*\) in the general subinterval \([x_{i - 1}, x_i],\)
+    the \(i\)th slab of \(S\)—which has cross-sectional area \(A(x_i^*)\)
+    and "height" \(\Delta x\)—has a volume of
+    \[\Delta V = A(x_i^*) \Delta x \pd\]
+    Summing the volumes of all \(n\) slabs, we approximate the volume of \(S\) to be 
+    \[
+    \ba 
+    V \approx \sum_{i = 1}^n A(x_i^*) \Delta x \pd 
+    \ea 
+    \]
+    As \(n\) increases, the many thinner slabs better approximate the volume \(V.\)
+    So \(V\) is the limiting value of the sum as \(n \to \infty\)—that is, 
+    \[V = \lim_{n \to \infty} \sum_{i = 1}^n A(x_i^*) \Delta x \pd\]
+    The right side is a Riemann sum for the function \(A(x),\) so we find 
+    \begin{equation} 
+    V = \int_a^b A(x) \di x \pd \label{eq:volume-A(x)}
+    \end{equation}
+    In words, if we are given a solid's cross-sectional area \(A\) at every \(x\)
+    in \([a, b],\) then we calculate the solid's volume by integrating \(A(x)\) from \(x = a\) to \(x = b.\)
+</p>
+
+<figure class="figure-wide volumes-slice" id="volumes-slice">
+    <img src="../images/sectionImages/volumes-slice.jpg" alt="Figure 2">
+</figure>
+<style>
+    .volumes-slice::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<div class="box-title">VOLUMES WITH CROSS SECTIONS</div>
+<div class="box">
+    Suppose that a solid lies between \(x = a\) and \(x = b\) such that 
+    the area of its cross section perpendicular to the \(x\)-axis at any \(x\) 
+    is given by the continuous function \(A(x).\) 
+    Then its <b>volume</b> is given by 
+    \begin{equation} 
+    V = \int_a^b A(x) \di x \pd \eqlabel{eq:volume-A(x)}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by the parabola \(y = 4 - x^2\)
+        in the first quadrant
+        is the base of a solid whose cross sections 
+        perpendicular to the \(x\)-axis are squares. 
+        Calculate the volume of this solid.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="volume-parabola-4" id="volume-parabola-4">
+        <img src="../images/sectionImages/volume-parabola-4.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .volume-parabola-4::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    Let's think of the \(xy\)-plane as the "ground," 
+    the base of the solid \(S\) shown in <a href="#volume-parabola-4">Figure 3</a>.
+    Because cross sections <i>perpendicular</i> to the \(x\)-axis 
+    are squares, the cross-sectional area to the solid at any \(x\) is \(A(x) = \par{4 - x^2}^2.\)
+    <a href="#volume-parabola-4-cross-section">Figure 4</a> shows an approximating slice of \(S,\)
+    whose volume is  
+    \[\Delta V = A(x) \Delta x = \par{4 - x^2}^2 \Delta x \pd\]
+    By \(\eqref{eq:volume-A(x)},\) the solid's volume \(V\) is given by 
+    integrating \(A(x)\) from \(x = 0\) to \(x = 2,\) as follows:
+    \[
+    \ba 
+    V &= \int_0^2 A(x) \di x = \int_0^2 \par{4 - x^2}^2 \di x \nl 
+    &= \int_0^2 \par{16 - 8x^2 + x^4} \di x \nl 
+    &= \par{16x - \tfrac{8}{3} x^3 + \tfrac{1}{5} x^5} \intEval_0^2 \nl 
+    &= \boxed{\tfrac{256}{15}} \approx 17.067 \pd
+    \ea 
+    \]
+    <figure class="figure-wide volume-parabola-4-cross-section" id="volume-parabola-4-cross-section">
+        <img src="../images/sectionImages/volume-parabola-4-cross-section.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .volume-parabola-4-cross-section::before{
+            content:'FIGURE 4';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by the curve \(y = \sqrt x,\)
+        the \(x\)-axis, and the line \(x = 4\)
+        is the base of a solid. 
+        At each \(x,\) the cross section perpendicular to the \(x\)-axis 
+        is a rectangle whose base lies in the region and whose height is \(2y.\) 
+        Calculate the volume of this solid.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="volume-sqrt-rectangle" id="volume-sqrt-rectangle">
+        <img src="../images/sectionImages/volume-sqrt-rectangle.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .volume-sqrt-rectangle::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    At each \(x,\) the cross section to the solid \(S\) (shown in <a href="#volume-sqrt-rectangle">Figure 5</a>)
+    is a rectangle of dimensions \(y = \sqrt x\) and \(2y = 2 \sqrt x.\)
+    Thus, at each \(x\) the cross-sectional area to the solid is 
+    \[A(x) = \par{\sqrt x \,} \par{2 \sqrt x \,} = 2 x \pd\]
+    An approximating rectangular prism 
+    shown by <a href="#volume-sqrt-cross-section">Figure 6</a> has volume 
+    \[\Delta V = A(x) \Delta x = 2x \Delta x \pd\]
+    By \(\eqref{eq:volume-A(x)},\) 
+    the volume of \(S\) is given by integrating \(A(x)\) from \(x = 0\) to \(x = 4 \col\)
+    \[
+    \ba 
+    V &= \int_0^4 A(x) \di x = \int_0^4 2x \di x \nl 
+    &= x^2 \intEval_0^4 = \boxed{16}
+    \ea 
+    \]
+    <figure class="figure-wide volume-sqrt-cross-section" id="volume-sqrt-cross-section">
+        <img src="../images/sectionImages/volume-sqrt-cross-section.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .volume-sqrt-cross-section::before{
+            content:'FIGURE 6';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region enclosed by the semicircle \(y = \sqrt{9 - x^2}\)
+        is the base of a solid.
+        Every cross section to the solid perpendicular to the \(x\)-axis is a
+        right isosceles triangles
+        whose hypotenuse lies in the bounded region.
+        Calculate the volume of this solid. 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="volume-circle-triangles" id="volume-circle-triangles">
+        <img src="../images/sectionImages/volume-circle-triangles.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .volume-circle-triangles::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    At each \(x,\) the cross section to the solid \(S\) (shown in <a href="#volume-circle-triangles">Figure 7</a>)
+    is a right isosceles triangle whose hypotenuse has length \(y = \sqrt{9 - x^2}.\)
+    Accordingly, the triangle's legs each have length \(y/\sqrt 2.\)
+    So at each \(x,\) the cross-sectional area of the solid is 
+    \[A(x) = \tfrac{1}{2} \par{\frac{y}{\sqrt 2}}^2 = \frac{y^2}{4} = \frac{9 - x^2}{4} \pd\]
+    (See <a href="#volume-circle-triangles-cross-sections">Figure 8</a>.) 
+    By \(\eqref{eq:volume-A(x)},\) 
+    the volume of \(S\) is given by integrating \(A(x)\) from \(x = -3\) to \(x = 3 \col\)
+    \[
+    V = \int_{-3}^3 A(x) \di x = \int_{-3}^3 \frac{9 - x^2}{4} \di x \pd
+    \]
+    But using symmetry (since the integrand is even), we simplify the calculation as follows:
+    \[
+    \ba 
+    V &= 2 \cdot \int_0^3 \frac{9 - x^2}{4} \di x = \tfrac{1}{2} \int_0^3 (9 - x^2) \di x \nl 
+    &= \tfrac{1}{2} \par{9x - \tfrac{1}{3} x^3} \intEval_0^3 = \boxed 9
+    \ea 
+    \]
+    <figure class="figure-wide volume-circle-triangles-cross-sections" id="volume-circle-triangles-cross-sections">
+        <img src="../images/sectionImages/volume-circle-triangles-cross-sections.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .volume-circle-triangles-cross-sections::before{
+            content:'FIGURE 8';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        The ellipse \(4x^2 + y^2 = 9\) is the base of a solid
+        whose cross sections perpendicular to the \(y\)-axis are semicircles.
+        (This solid is called a <b>semi-ellipsoid</b>.)
+        Calculate the solid's volume.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="volume-ellipsoid" id="volume-ellipsoid">
+        <img src="../images/sectionImages/volume-ellipsoid.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .volume-ellipsoid::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    The ellipse \(4x^2 + y^2 = 9\) has vertices at \((0, -3)\) 
+    and \((0, 3).\) 
+    At each \(y,\) 
+    the cross section to the semi-ellipsoid \(S\) (shown in <a href="#volume-ellipsoid">Figure 9</a>) 
+    perpendicular to the \(y\)-axis is a semicircle.
+    Hence, each semicircle's <i>diameter</i> is \(2x\)—where \(x\) <i>is a function of \(y\)</i>—so its radius is \(x\) 
+    and its area is \(A(y) = \tfrac{1}{2} \pi x^2.\) 
+    (See <a href="#volume-ellipsoid-cross">Figure 10</a>.)
+    Solving for \(x\) in the equation of the ellipse gives 
+    \[x = \pm \tfrac{1}{2} \sqrt{9 - y^2} \pd\]
+    So we have 
+    \[A(y) = \tfrac{1}{2} \pi \par{\pm \tfrac{1}{2} \sqrt{9 - y^2}}^2 = \frac{\pi}{8} (9 - y^2) \pd\]
+    By \(\eqref{eq:volume-A(x)},\) the semi-ellipsoid's volume is given by 
+    integrating \(A(y)\) from \(y = -3\) to \(y = 3\)—that is, 
+    \[
+    V = \int_{-3}^3 A(y) \di y = \int_{-3}^3 \frac{\pi}{8} \par{9 - y^2} \di y \pd
+    \]
+    But through symmetry, it is easier to compute the volume as follows:
+    \[
+    \ba 
+    V &= 2 \cdot \int_0^3 \frac{\pi}{8} \par{9 - y^2} \di y \nl 
+    &= \frac{\pi}{4} \int_0^3 \par{9 - y^2} \di y \nl 
+    &= \frac{\pi}{4} \par{9y - \tfrac{1}{3} y^3} \intEval_0^3 \nl 
+    &= \boxed{\frac{9 \pi}{2}} \approx 14.137 \pd
+    \ea 
+    \]
+    <figure class="figure-wide volume-ellipsoid-cross" id="volume-ellipsoid-cross">
+        <img src="../images/sectionImages/volume-ellipsoid-cross.jpg" alt="Figure 10">
+    </figure>
+    <style>
+        .volume-ellipsoid-cross::before{
+            content:'FIGURE 10';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let region \(R\) be bounded by the parabola \(x = y^2\)
+        and the line \(y = 2 - x.\)
+        Region \(R\) is the base of a solid whose cross sections perpendicular to 
+        the \(y\)-axis are semicircles. 
+        Calculate the solid's volume.
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="volume-y-solid-semicircle" id="volume-y-solid-semicircle">
+        <img src="../images/sectionImages/volume-y-solid-semicircle.jpg" alt="Figure 11">
+    </figure>
+    <style>
+        .volume-y-solid-semicircle::before{
+            content:'FIGURE 11';
+        }   
+    </style>
+    Let's rewrite \(y = 2 - x\) as \(x = 2 - y.\)
+    The enclosed region \(R\) is bounded in the first and fourth quadrants, 
+    and the two graphs intersect at \((1, 1)\) and \((4, -2).\)
+    Accordingly, a plane that intersects the solid \(S\) 
+    (shown in <a href="#volume-y-solid-semicircle">Figure 11</a>) perpendicular to the \(y\)-axis 
+    at any \(y\) yields a semicircle whose diameter has length  
+    \[(2 - y) - y^2 = 2 - y - y^2 \pd\]
+    Thus, the semicircle's <i>radius</i> \(r\) is <i>half</i> this value—meaning 
+    the solid's cross-sectional area at any \(y\) is 
+    \[A(y) = \tfrac{1}{2} \pi r^2 = \tfrac{1}{2} \pi \par{\frac{2 - y - y^2}{2}}^2 = \tfrac{1}{8} \pi \par{2 - y - y^2}^2 \pd\]
+    (See <a href="#volume-y-semicircle">Figure 12</a>.)
+    So following \(\eqref{eq:volume-A(x)},\)
+    we find the solid's volume to be 
+    \[
+    \ba 
+    V &= \int_{-2}^1 A(y) \di y = \int_{-2}^1 \tfrac{1}{8} \pi \par{2 - y - y^2}^2 \di y \nl 
+    &= \frac{\pi}{8} \int_{-2}^1 \par{y^4 + 2y^3 - 3y^2 - 4y + 4} \di y \nl
+    &= \frac{\pi}{8} \par{\tfrac{1}{5} y^5 + \tfrac{1}{2} y^4 - y^3 - 2y^2 + 4y} \intEval_{-2}^1 \nl
+    &= \boxed{\frac{81\pi}{80}} \approx 3.181 \pd
+    \ea 
+    \]
+    <figure class="figure-wide volume-y-semicircle" id="volume-y-semicircle">
+        <img src="../images/sectionImages/volume-y-semicircle.jpg" alt="Figure 12">
+    </figure>
+    <style>
+        .volume-y-semicircle::before{
+            content:'FIGURE 12';
+        }
+    </style>
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        Suppose that a solid lies between \(x = a\) and \(x = b\) such that 
+        the area of its cross section perpendicular to the \(x\)-axis at any \(x\) 
+        is given by the continuous function \(A(x).\) 
+        Then its <b>volume</b> is given by 
+        \begin{equation} 
+        V = \int_a^b A(x) \di x \pd \eqlabel{eq:volume-A(x)}
+        \end{equation} 
+        Thus, if we are given a solid's cross-sectional area \(A\) at every \(x\)
+        in \([a, b],\) then we calculate its volume by integrating \(A(x)\) from \(x = a\) to \(x = b.\)
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

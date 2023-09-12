@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9.1: Parametric Equations</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>9.1 — Parametric Equations</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.1-Parametric-Equations-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.1-Parametric-Equations-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Parametric-Curves]]]-->
+<p>
+    So far, we have primarily modeled graphs using the form \(y = f(x).\)
+    But these models cannot express curves that fail the <b>Vertical Line Test</b>—that is, 
+    curves that cannot be represented by functions.
+    For example, it's impossible to describe the full circle \(x^2 + y^2 = r^2\)
+    using the form \(y = f(x);\)
+    solving for \(y\) gives either 
+    \[y = \sqrt{r^2 - x^2} \or y = - \sqrt{r^2 - x^2} \cma\]
+    each of which represents a <i>semicircle</i>. 
+    In this section we learn to represent curves using <i>parametric equations</i>, 
+    in which we describe \(x\) and \(y\) independently by using a third variable \(t.\)
+    We will learn convenient tools to model the <i>entire</i> circle \(x^2 + y^2 = r^2\)
+    and present applications of parametric functions.
+    We discuss the following topics: 
+    <ul>
+        <li>
+            <a href="#def-parametric-curve" class="page-anchor">Defining a Parametric Curve</a>
+        </li>
+        <li>
+            <a href="#eliminating-parameter" class="page-anchor">Eliminating the Parameter</a>
+        </li>
+        <li>
+            <a href="#para-circles" class="page-anchor">Parameterizing Circles</a>
+        </li>
+        <li>
+            <a href="#para-ellipses" class="page-anchor">Parameterizing Ellipses</a>
+        </li>
+        <li>
+            <a href="#cycloids" class="page-anchor">The Cycloid</a>
+        </li>
+        <li>
+            <a href="#projectile-motion" class="page-anchor">Projectile Motion</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="def-parametric-curve">Defining a Parametric Curve</h4>
+
+<figure class="parametric-curve-travel" id="parametric-curve-travel">
+    <img src="../images/sectionImages/parametric-curve-travel.jpg" alt="Figure 1">
+</figure>
+<style>
+    .parametric-curve-travel::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    A curve can be described by a set of <span class="emph">parametric equations</span> 
+    \[x = f(t) \lspace y = g(t) \cma\] 
+    which give the graph's \(x\)- and \(y\)-coordinates at any value \(t,\)
+    called a <span class="emph">parameter</span>. 
+    As \(t\) changes, the point \((f(t), g(t))\)
+    varies and traces out a curve in the \(xy\)-plane.
+    In <a href="#parametric-curve-travel">Figure 1</a>, 
+    the curve \(C\) 
+    is <i>parameterized</i> by the equations \(x = f(t)\) and \(y = g(t)\)
+    because for some number \(t,\) the functions \(f\) and \(g\) give a point on the graph.
+    Arrowheads represent the direction in which the curve is traced as \(t\) increases. 
+    We may limit the interval of \(t\)
+    to confine a graph to be a certain shape.
+    Point \(A\) is the <span class="emph">initial point</span>, 
+    and point \(B\) is the <span class="emph">terminal point</span>. 
+</p>
+<p>
+    Introducing the parameter \(t\) enables \(x\) and \(y\) to vary <i>independently of each other</i>. 
+    Think of the parameter as a third variable that helps us express 
+    \(x\) and \(y\) without needing to relate them.
+    (In some cases, it's difficult—even impossible—to write an equation to link \(x\) and \(y.\))
+    In many applications, we view \(t\) as time:
+    If a particle moves along a curve, then its \(x\)- and \(y\)-coordinates are 
+    changing with time \(t.\)
+    Later in this section, we will use parametric equations to describe 
+    <a href="#projectile-motion" class="page-anchor">Projectile Motion</a>.
+    But \(t\) doesn't need to be time; we can have negative values of \(t,\)
+    and we could choose another letter in place of \(t.\)
+</p>
+
+<div class="box-title">PARAMETRIC CURVES</div>
+<div class="box">
+    A <span class="emph">parametric curve</span> is traced out by the 
+    <span class="emph">parametric equations</span>
+    \[x = f(t) \lspace y = g(t) \cma\]
+    in which the <span class="emph">parameter</span>
+    \(t\) varies to give the \(x\)- and \(y\)-coordinates of a curve. 
+</div>
+
+<div class="example-title" id="ex-parabola"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Plot the parametric curve given by the equations
+        \[x = t - 2 \lspace y = t^2 - 4 \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="parametric-curve-parabola" id="parametric-curve-parabola">
+        <img src="../images/sectionImages/parametric-curve-parabola.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .parametric-curve-parabola::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    Let us plot some points on the graph. 
+    A table of selected values of \(t,\) 
+    along with their corresponding values of \(x\) and \(y,\)
+    is shown below. 
+    <table class="table-vertical">
+        <tr>
+            <td class="label-cell">
+                \(t\)
+            </td>
+            <td class="label-cell">
+                \(x\)
+            </td>
+            <td class="label-cell">
+                \(y\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(-3\)
+            </td>
+            <td>
+                \(-5\)
+            </td>
+            <td>
+                \(5\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(-2\)
+            </td>
+            <td>
+                \(-4\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(-1\)
+            </td>
+            <td>
+                \(-3\)
+            </td>
+            <td>
+                \(-3\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(0\)
+            </td>
+            <td>
+                \(-2\)
+            </td>
+            <td>
+                \(-4\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(-3\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(2\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                \(3\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(5\)
+            </td>
+        </tr>
+    </table> 
+    Plotting these points gives the parabola in 
+    <a href="#parametric-curve-parabola">Figure 2</a>. 
+    Imagine a particle moving along the curve; 
+    as \(t\) is increased, the particle's path traces out the parabola. 
+    Labeled points appear in equal <i>time intervals</i>
+    but not necessarily equal <i>distances</i>. 
+    For example, when \(t = 0\) the particle moves the slowest, 
+    but as \(t\) is increased the particle begins to speed up (and thus cover more distance).
+    Since we have no limitation to the values of \(t,\)
+    the parametric equations 
+    \(x = t - 2\) and \(y = t^2 - 4\) 
+    model an entire parabola.
+</div>
+
+<h4 id="eliminating-parameter">Eliminating the Parameter</h4>
+<p>
+    In <a href="#ex-parabola">Example 1</a>, 
+    the parametric equations 
+    trace out a parabola. 
+    Yet <i>we cannot rely on tables to show the shapes of parametric curves</i>: 
+    Just as with graphs given by 
+    <b>Cartesian equations</b> (which directly relate \(x\) and \(y\)),
+    tables often miss key features of graphs. 
+    For example, it's easy to miss the asymptotes of rational functions 
+    if we simply plot points.
+    One could easily miss the vertical asymptote \(x = 0\)
+    on the graph of \(y = 1/x.\)
+    And rough sketches fail to provide precise values of interest, 
+    such as intercepts and extrema.
+    Hence, we need a more formal route to verify the shape of a parametric curve, 
+    for which we <i>eliminate the parameter</i>.
+</p>
+<p>
+    <span class="emph">Eliminating the parameter</span>
+    is the process by which we directly relate \(x\) and \(y\)
+    using <i>one equation</i>
+    without the parameter \(t.\)
+    In other words, when we eliminate the parameter
+    we write a Cartesian equation to represent a parametric curve.  
+    Imagine a curve defined by two parametric equations.
+    Generally, from one parametric equation we want to solve for \(t\)
+    in terms of \(x\) or \(y,\)
+    and substitute this expression into the other parametric equation.  
+    In <a href="#ex-parabola">Example 1</a>, 
+    which has the parametric equations \(x = t - 2\) and \(y = t^2 - 4,\) 
+    solving for \(t\) in the first parametric equation \((x = t - 2)\) yields \(t = x + 2.\)
+    Then substituting this expression into the second parametric equation \((y = t^2 - 4)\)
+    gives 
+    \[y = (x + 2)^2 - 4 \cma\]
+    the Cartesian equation of a parabola with vertex \((-2, -4).\)
+    In this form, \(x\) and \(y\) are related to each other by a single equation 
+    that doesn't contain \(t.\)
+    Hence, the curve parameterized by \(x = t - 2\) and \(y = t^2 - 4\)
+    can also be represented by \(y = (x + 2)^2 - 4.\)
+</p>
+<p>
+    When we eliminate the parameter in a set of parametric equations, we lose information about 
+    the direction of motion. 
+    In <a href="#ex-parabola">Example 1</a>,
+    as \(t\) is increased the point \((x, y)\) moves counterclockwise to trace out a parabola. 
+    But our Cartesian equation doesn't indicate this direction; 
+    it only models the parabola itself.
+    If parametric equations represent a particle's motion, 
+    then upon eliminating the parameter 
+    we forfeit information about the particle's initial position and direction of motion.
+    Hence, eliminating the parameter only provides us with <i>the shape of the path</i>. 
+</p>
+
+<div class="example-title" id="ex-confined-sine"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        A curve is parameterized by 
+        \(x = 3 + 3 \sin t\) and \(y = 2t\)
+        for \(-\pi \leq t \leq \pi.\)
+        Eliminate the parameter \(t\)
+        and describe the graph. 
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="parametric-curve-confined-sine" id="parametric-curve-confined-sine">
+        <img src="../images/sectionImages/parametric-curve-confined-sine.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .parametric-curve-confined-sine::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    When we <b>eliminate the parameter</b>, 
+    we relate \(x\) and \(y\) to each other using a single equation. 
+    The easiest procedure is as follows: 
+    Solving for \(t\) in the second parametric equation \((y = 2t)\) gives \(t = y/2,\)
+    which we substitute into the first parametric equation \((x = 3 + 3 \sin t)\) to attain 
+    \[x = 3 + 3 \sin \frac{y}{2} \pd\]
+    We now consider the endpoints of the interval \(-\pi \leq t \leq \pi \col\)
+    When \(t = -\pi,\) \(x = 3\) and \(y = -2 \pi.\) 
+    When \(t = \pi,\) \(x = 3\) and \(y = 2 \pi.\) 
+    Thus, the curve is a sine graph confined to \(0 \leq x \leq 6\) and \(-2 \pi \leq y \leq 2 \pi.\)
+    The <b>initial point</b> is \((3, -2\pi),\) 
+    and the <b>terminal point</b> is \((3, 2\pi).\) 
+    (See <a href="#parametric-curve-confined-sine">Figure 3</a>.)
+    In this example, writing parametric equations is useful 
+    since \(y\) cannot be defined as a function of \(x.\)
+</div>
+
+<p>
+    Sometimes we can eliminate the parameter without 
+    solving for \(t.\)
+    Throughout this section, 
+    we will see that we can exploit trigonometric identities 
+    to directly relate \(x\) and \(y\) to each other. 
+</p>
+
+<h4 id="para-circles">Parameterizing Circles</h4>
+
+<p>
+    We now return to the question of the beginning of this section:
+    how do we represent a full circle using parametric functions? 
+    A circle doesn't extend indefinitely in the coordinate plane (unlike in <a href="#ex-parabola">Example 1</a>, 
+    where the parabola is traced out forever). 
+    As the parameter \(t\) is made arbitrarily large, 
+    the points \((x, y)\) must repeat themselves. 
+    Therefore, to model a circle we need to use <i>periodic functions</i>. 
+</p>
+
+<div class="example-title" id="ex-unit-circle"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Plot the curve parameterized by \(x = \cos t\)
+        and \(y = \sin t.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="parametric-curve-unit-circle" id="parametric-curve-unit-circle">
+        <img src="../images/sectionImages/parametric-curve-unit-circle.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .parametric-curve-unit-circle::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    Plotting some points, the curve resembles a circle.
+    (Remember, however, that plotting points cannot tell the full story.)
+    To verify this shape, we <b>eliminate the parameter</b>
+    by using the Pythagorean identity: 
+    \[x^2 + y^2 = \cos^2 t + \sin^2 t = 1 \pd\]
+    Thus, the parametric equations produce the unit circle, whose Cartesian equation is \(x^2 + y^2 = 1.\) 
+    As \(t\) is increased from \(0,\) the point \((x, y)\) \(= (\cos t, \sin t)\) starts at \((1, 0)\)
+    and rotates counterclockwise. 
+    The entire circle is traced once over the interval \(0 \leq t \leq 2 \pi;\)
+    outside this interval, points stack on top of each other and so retrace the circle. 
+    In this special case, we can interpret \(t\) as the <i>central angle</i>
+    of the unit circle. 
+    (See <a href="#parametric-curve-unit-circle">Figure 4</a>.)
+</div>
+
+<figure class="parametric-curve-circle-r" id="parametric-curve-circle-r">
+    <img src="../images/sectionImages/parametric-curve-circle-r.jpg" alt="Figure 5">
+</figure>
+<style>
+    .parametric-curve-circle-r::before{
+        content:'FIGURE 5';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Circle Centered at the Origin</span>
+    <a href="#ex-unit-circle">Example 3</a> 
+    shows a parameterization of a unit circle
+    centered at the origin.
+    We now generalize the example to a circle of radius \(r\)
+    centered at the origin,
+    whose Cartesian equation is \(x^2 + y^2 = r^2.\)
+    Consider the equations \(x = r \cos t\) and \(y = r \sin t.\)
+    To eliminate the parameter, we exploit the Pythagorean identity to verify that 
+    \[
+    \ba 
+    x^2 + y^2 &= (r \cos t)^2 + (r \sin t)^2 \nl 
+    &= r^2 \, (\cos^2 t + \sin^2 t) \nl 
+    &= r^2 \pd
+    \ea 
+    \]
+    Hence, the parametric equations \(x = r \cos t\) and \(y = r \sin t\) 
+    satisfy \(x^2 + y^2 = r^2\) and so 
+    parametrize a circle of radius \(r.\)
+    When \(t = 0,\) the point \((x, y)\) \(= (r \cos t, r \sin t)\)
+    is at \((r, 0).\)
+    Ironically, the parametric equations \(x = r \sin t\) and \(y = r \cos t\)
+    also trace out the same circle, 
+    although when \(t = 0\) the point \((x, y) = \) \((r \sin t, r \cos t)\)
+    begins at \((0, r).\) 
+    Therefore, <i>there are multiple ways to parameterize a curve</i>—in fact, infinitely many ways.
+    For example, the family of parametric equations 
+    \begin{equation}
+    x = \pm r \cos \omega t \lspace y = \pm r \sin \omega t \label{eq:para-circle}
+    \end{equation}
+    represents a circle of radius \(r\) for any number \(\omega\) (<i>omega</i>), 
+    since the parametric equations satisfy \(x^2 + y^2 = r^2\) for any \(\omega.\)
+    When \(t = 0,\) the curve traced out by \(\eqref{eq:para-circle}\) is at the point \((\pm r, 0).\)
+    <a href="#parametric-curve-circle-r">Figure 5</a> depicts the graph of 
+    \(x = r \cos \omega t\) and \(y = r \sin \omega t\)
+    for a positive number \(\omega;\)
+    when \(t = 0,\) the point \((x, y)\) is at \((r, 0).\)
+    Conversely, the parametric equations 
+    \begin{equation} 
+    x = \pm r \sin \omega t \lspace y = \pm r \cos \omega t \label{eq:para-circle-2}
+    \end{equation}
+    parameterize the same circle of radius \(r,\) yet when \(t = 0\) the curve begins at \((0, r).\)
+    Changing \(\omega\) varies the speed at which the circle is traced out:
+    In \(\eqref{eq:para-circle}\) and \(\eqref{eq:para-circle-2},\) if \(\omega = 1\)
+    then \(1\) radian is traced out if we increase \(t\) by \(1.\)
+    The entire circle is therefore traced out in \(2 \pi\) radians.
+    Likewise, if \(\omega = 2\) then \(2\) radians are traced out 
+    per increment of \(t\) by \(1,\)
+    so the entire circle is traced out in \(\pi\) radians.
+    For circles (and circles only),
+    we interpret \(\abs{\omega}\)—called the <span class="emph">angular frequency</span>—as 
+    <i>the number of radians traced out per time unit</i>. 
+</p>
+
+<figure class="parametric-curve-circle-hk" id="parametric-curve-circle-hk">
+    <img src="../images/sectionImages/parametric-curve-circle-hk.jpg" alt="Figure 6">
+</figure>
+<style>
+    .parametric-curve-circle-hk::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Circle Centered at Any Point</span>
+    A circle of radius \(r\) centered at some point \((h, k)\)
+    is represented by the Cartesian equation  
+    \begin{equation} 
+    (x - h)^2 + (y - k)^2 = r^2 \pd \label{eq:cart-circle-h-k}
+    \end{equation}
+    To find parametric equations, we again exploit the Pythagorean identity:
+    We want \(\eqrefer{eq:cart-circle-h-k}\) to match the form 
+    \((\pm r \cos \omega t)^2 + (\pm r \sin \omega t)^2 = r^2,\)
+    so we let 
+    \begin{alignat}{2}
+    x - h &= \pm r \cos \omega t \lspace y - \, &&k = \pm r \sin \omega t \nonumber \nl
+    x &= h \pm r \cos \omega t \lspace &&y = k \pm r \sin \omega t \label{eq:para-circle-hk} \pd  
+    \end{alignat}
+    Alternatively, we could analogize \(\eqrefer{eq:cart-circle-h-k}\) to 
+    \((\pm r \sin \omega t)^2 + (\pm r \cos \omega t)^2 = r^2,\)
+    from which we attain 
+    \begin{alignat}{2}
+    x - h &= \pm r \sin \omega t \lspace y - \, &&k = \pm r \cos \omega t \nonumber \nl
+    x &= h \pm r \sin \omega t \lspace &&y = k \pm r \cos \omega t \label{eq:para-circle-hk-alt} \pd  
+    \end{alignat}
+    The parametric equations of \(\eqref{eq:para-circle-hk}\)
+    indicate that when \(t = 0,\) the point \((x, y)\) 
+    is at the <i>farthest left</i> or <i>farthest right</i> of the circle.
+    For example, in <a href="#parametric-curve-circle-hk">Figure 6</a>
+    the point \((x, y)\) is at \((h + r, k)\) when \(t = 0.\)
+    By contrast, we use \(\eqref{eq:para-circle-hk-alt}\) to model a circle such that when \(t = 0\)
+    the point \((x, y)\) is at the <i>top</i> or <i>bottom</i> of the circle.
+</p>
+
+<div class="box-title">PARAMETERIZING A CIRCLE</div>
+<div class="box">
+    Let \(\omega\) be any number (whose magnitude is called the <span class="emph">angular frequency</span>).
+    A circle of radius \(r\) centered at the origin is parameterized by either family of equations 
+    \begin{flalign}
+    && x &= \pm r \cos \omega t &&y = \pm r \sin \omega t \eqlabel{eq:para-circle} &\nl
+    \laWord{or} && x &= \pm r \sin \omega t &&y = \pm r \cos \omega t \pd \eqlabel{eq:para-circle-2}  
+    \end{flalign}
+    A circle of radius \(r\) centered at the point \((h, k)\) is parameterized by either family of equations 
+    \begin{flalign}
+    && x &= h \pm r \cos \omega t &&y = k \pm r \sin \omega t \eqlabel{eq:para-circle-hk} &\nl
+    \laWord{or} && x &= h \pm r \sin \omega t &&y = k \pm r \cos \omega t \eqlabel{eq:para-circle-hk-alt} \pd  
+    \end{flalign}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        A circle of radius \(4\) is centered at \((-2, 5)\) 
+        and is traced out counterclockwise once over the interval \(0 \leq t \leq \pi/2.\) 
+        When \(t = 0,\) a point on the circle is \((2, 5).\) 
+        Find parametric equations for the circle. 
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="parametric-curve-circle-4" id="parametric-curve-circle-4">
+        <img src="../images/sectionImages/parametric-curve-circle-4.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .parametric-curve-circle-4::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    When \(t = 0,\) the point \((x, y)\) is at the farthest right of the circle.  
+    From \(\eqref{eq:para-circle-hk},\)
+    we parameterize the circle using the form 
+    \[x = -2 \pm 4 \cos \omega t \lspace y = 5 \pm 4 \sin \omega t\]
+    for some number \(\omega.\)
+    Because the circle is fully traced in \(\pi/2\) radians, 
+    as \(t\) increases by \(1\) the circle is traced out by 
+    \[\frac{2 \pi}{\pi/2} = 4 \un{rad} \pd\]
+    Hence, \(\omega = 4\) and so our <i>preliminary</i> equations
+    are 
+    \[x = -2 \pm 4 \cos 4t \lspace y = 5 \pm 4 \sin 4t \pd\]
+    We now select whether to make the coefficients of the sinusoidal functions 
+    positive or negative.
+    Since the circle is traced counterclockwise, 
+    \(x\) is decreasing and \(y\) is increasing
+    as \(t\) increases from \(0.\) 
+    For positive \(t\) near \(0,\) the function \(x = -2 + 4 \cos 4 t\) 
+    is decreasing and the function \(y = 5 + 4 \sin 4t\) is increasing.
+    Our final equations are therefore 
+    \[\boxed{x = -2 + 4 \cos 4t} \and \boxed{y = 5 + 4 \sin 4t}\]
+    (See <a href="#parametric-curve-circle-4">Figure 7</a>.)
+</div>
+
+<h4 id="para-ellipses">Parameterizing Ellipses</h4>
+
+<figure class="parametric-curve-ellipse" id="parametric-curve-ellipse">
+    <img src="../images/sectionImages/parametric-curve-ellipse.jpg" alt="Figure 8">
+</figure>
+<style>
+    .parametric-curve-ellipse::before{
+        content:'FIGURE 8';
+    }
+</style>
+
+<p>
+    In Cartesian coordinates, the equation of an ellipse centered at the origin 
+    is 
+    \begin{equation} 
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \label{eq:cart-ellipse}
+    \end{equation}
+    for any real numbers \(a\) and \(b.\)
+    To represent this curve using parametric equations, 
+    we want \(\eqrefer{eq:cart-ellipse}\) 
+    to match the form \(\cos^2 \omega t + \sin^2 \omega t = 1.\)
+    We therefore let 
+    \[
+    \baat{2}
+    \frac{x^2}{a^2} &= \cos^2 \omega t \implies x &&= \pm a \cos \omega t \nl 
+    \frac{y^2}{b^2} &= \sin^2 \omega t \implies y &&= \pm b \sin \omega t \pd 
+    \eaat     
+    \]
+    Alternatively, we could compare \(\eqrefer{eq:cart-ellipse}\) to the form  
+    \(\sin^2 \omega t + \cos^2 \omega t = 1,\)
+    from which we obtain
+    \[
+    \baat{2}
+    \frac{x^2}{a^2} &= \sin^2 \omega t \implies x &&= \pm a \sin \omega t \nl 
+    \frac{y^2}{b^2} &= \cos^2 \omega t \implies y &&= \pm b \cos \omega t \pd 
+    \eaat     
+    \]
+    Thus, the ellipse of \(\eqref{eq:cart-ellipse}\) is parameterized by either 
+    \begin{flalign} 
+    && x &= \pm a \cos \omega t &&y = \pm b \sin \omega t \label{eq:para-ellipse-cos-sin} &\nl
+    \laWord{or} && x &= \pm a \sin \omega t &&y = \pm b \cos \omega t \pd \label{eq:para-ellipse-sin-cos} 
+    \end{flalign}
+    We parameterize an ellipse using \(\eqref{eq:para-ellipse-cos-sin}\) if the point \((x,y)\)
+    is at the farthest left or farthest right of the ellipse when \(t = 0.\)
+    By contrast, when \(t = 0\) \(\eqref{eq:para-ellipse-sin-cos}\) 
+    gives \((x,y)\) to be at the top or bottom of the ellipse.
+</p>
+<p>
+    Planets' orbits are a major application of particle motion along ellipses.
+    According to <b>Kepler's First Law</b>, planets' orbits around the Sun 
+    take the shape of an ellipse, with the Sun at one focus. 
+    Therefore, understanding parametric equations enables scientists to 
+    calculate the time in which a planet completes an orbit.
+    Scientists can also estimate the date of an <i>eclipse</i>—a moment  
+    when one celestial body (for example, the Sun, Moon, or Earth) 
+    appears darkened as it 
+    passes through the shadow of another celestial body. 
+</p>
+
+<div class="box-title">PARAMETERIZING AN ELLIPSE</div>
+<div class="box">
+    An ellipse centered at the origin is parameterized by either 
+    \begin{flalign} 
+    && x &= \pm a \cos \omega t &&y = \pm b \sin \omega t \eqlabel{eq:para-ellipse-cos-sin} &\nl
+    \laWord{or} && x &= \pm a \sin \omega t &&y = \pm b \cos \omega t \pd \eqlabel{eq:para-ellipse-sin-cos} 
+    \end{flalign}
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        A particle travels along the ellipse 
+        \(x^2/16 + y^2/25 = 1\)
+        beginning at the point \((-4, 0).\)
+        The particle moves counterclockwise and traces out the entire ellipse 
+        in \(\pi\) minutes. 
+        Find parametric equations to describe the particle's motion.
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="parametric-curve-ellipse-4-5" id="parametric-curve-ellipse-4-5">
+        <img src="../images/sectionImages/parametric-curve-ellipse-4-5.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .parametric-curve-ellipse-4-5::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    Let \(t\) be time in minutes; we therefore consider only \(t \geq 0.\)
+    The ellipse's semi-minor axis has length \(4,\) 
+    and its semi-major axis has length \(5.\)
+    From \(\eqref{eq:para-ellipse-cos-sin},\) parametric equations that model 
+    the starting point \((-4, 0)\) are  
+    \[x = -4 \cos \omega t \lspace y = \pm 5 \sin \omega t \pd\]
+    One revolution occurs in \(\pi\) minutes, so 
+    \[\omega = \frac{2 \pi}{\pi} = 2 \pd\]
+    Thus, our preliminary equations (without yet considering direction of motion) are 
+    \[x = -4 \cos 2t \lspace y = \pm 5 \sin 2t \pd\]
+    The particle moves counterclockwise, so as \(t\) increases from \(0,\)
+    \(x\) is increasing and \(y\) is decreasing. 
+    When \(t = 0,\) \(y = -5 \sin 2t\) is decreasing, as we need.
+    Thus, we choose the parametric equations 
+    \[\boxed{x = -4 \cos 2t} \and \boxed{y = -5 \sin 2t}\] 
+    (See <a href="#parametric-curve-ellipse-4-5">Figure 9</a>.)
+</div>
+
+<h4 id="cycloids">The Cycloid</h4>
+
+<figure class="parametric-circle-cycloid" id="parametric-circle-cycloid">
+    <img src="../images/sectionImages/parametric-circle-cycloid.jpg" alt="Figure 10">
+</figure>
+<style>
+    .parametric-circle-cycloid::before{
+        content:'FIGURE 10';
+    }
+</style>
+
+<p>
+    Imagine a circle rolling on the floor. 
+    As the circle rolls, a point on the circle's circumference
+    traces out a shape called a <span class="emph">cycloid</span>. 
+    <a href="#parametric-cycloid">Animation 1</a> 
+    depicts a circle of radius \(1\) rolling along the ground, 
+    covering a total horizontal distance of \(4 \pi.\)
+</p>
+
+<figure class="figure-wide parametric-cycloid" id="parametric-cycloid">
+    <img src="../images/sectionAnimations/parametric-cycloid.gif" alt="Animation 1">
+</figure>
+<style>
+    .parametric-cycloid::before{
+        content:'ANIMATION 1';
+    }
+</style>
+
+<p>
+    See <a href="#parametric-circle-cycloid">Figure 10</a>:
+    To write parametric equations for the cycloid, we 
+    find the \(x\)- and \(y\)-coordinates of a 
+    point \(P\) on the circumference 
+    as functions of the parameter \(\theta,\)
+    which is subtended by the line segments \(\segment{PC}\) and \(\segment{TC}.\)
+    Before the circle begins rolling, \(\theta = 0\)
+    and so point \(P\) is at the origin \(O.\)
+    As the circle rolls, \(P\) rotates clockwise and 
+    traces out the arc length \(r \theta.\) 
+    So the horizontal distance the circle has rolled is 
+    \[\length{OT} = \arc{PT} = r \theta \pd\]
+    We therefore see 
+    \[
+    \baat{3}
+    x &= \length{OT} - \length{PQ} &&= r \theta - r \sin \theta &&= r(\theta - \sin \theta) \nl 
+    y &= \length{CT} - \length{CQ} &&= r - r \cos \theta &&= r(1 - \cos \theta) \pd
+    \eaat 
+    \]
+    If \(\theta\) is decreasing, then the circle is rolling to the left 
+    and so point \(P\) is rotating counterclockwise. 
+    The same parameterization applies for negative \(\theta\)
+    and negative \(r.\)
+    (If \(r \lt 0,\) then the cycloid produces loops under the \(x\)-axis.)
+    Thus, parametric equations for a cycloid formed by a circle of radius \(r\) are 
+    \begin{equation} 
+    x = r(\theta - \sin \theta) \lspace y = r(1 - \cos \theta) \pd \label{eq:cycloid}
+    \end{equation}
+</p>
+
+<div class="box-title">CYCLOIDS</div>
+<div class="box">
+    When a circle of radius \(r\) rolls along a flat surface, 
+    a point on its circumference traces out a
+    <span class="emph">cycloid</span>. 
+    Parametric equations for the cycloid are given by 
+    \begin{equation} 
+    x = r(\theta - \sin \theta) \lspace y = r(1 - \cos \theta) \pd \eqlabel{eq:cycloid}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        A cycloid has a peak at \((2\pi, 4).\)
+        Find parametric equations for the cycloid.
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <figure class="parametric-cycloid-r2" id="parametric-cycloid-r2">
+        <img src="../images/sectionImages/parametric-cycloid-r2.jpg" alt="Figure 11">
+    </figure>
+    <style>
+        .parametric-cycloid-r2::before{
+            content:'FIGURE 11';
+        }
+    </style>
+    Observe that the entire circle is inscribed by the cycloid at the peak \((2\pi, 4)\)
+    (<a href="#parametric-cycloid-r2">Figure 11</a>). 
+    The circle's radius is therefore \(2,\) 
+    so by \(\eqref{eq:cycloid}\) a set of parametric equations is 
+    \[\boxed{x = 2(\theta - \sin \theta)} \and \boxed{y = 2(1 - \cos \theta)}\] 
+</div>
+
+<h4 id="projectile-motion">Projectile Motion</h4>
+<p>
+    When an object is hit upward, 
+    it follows a parabolic trajectory due to the influence of gravity. 
+    (We will verify that the trajectory is indeed parabolic.)
+    The motion of a <i>projectile</i> can be modeled 
+    using an \(xy\)-plane
+    where \(y\) is the projectile's height above the ground and \(x\) is 
+    its ground position. 
+    We will call \(y\) the <i>vertical direction</i> and \(x\) the <i>horizontal direction</i>. 
+    The line \(y = 0\) is conveniently chosen to be the ground. 
+    During <span class="emph">projectile motion</span>, 
+    \(x\) and \(y\) both vary with time, <i>independent of each other</i>. 
+    In other words, at any time \(t\) the projectile's height and ground position
+    are changing separately. 
+    Using parametric equations is therefore useful because 
+    they enable us to consider the motion along each direction.  
+</p>
+
+<figure class="parametric-projectile-motion" id="parametric-projectile-motion">
+    <img src="../images/sectionImages/parametric-projectile-motion.jpg" alt="Figure 12">
+</figure>
+<style>
+    .parametric-projectile-motion::before{
+        content:'FIGURE 12';
+    }
+</style>
+
+<p>
+    Suppose an object at point \(P,\) a height \(y_0\) above the ground, is thrown upward with <i>initial velocity</i>
+    \(v_0\) at an angle \(\alpha\) above the ground
+    (<a href="#parametric-projectile-motion">Figure 12</a>).
+    Observe that the initial velocity has two components: 
+    \(v_0 \cos \alpha\)
+    (the initial velocity in the horizontal direction)
+    and \(v_0 \sin \alpha\)
+    (the initial velocity in the vertical direction).
+    The <b>acceleration due to gravity</b> points straight down and has magnitude \(g,\)
+    whose value is \(32 \undiv{ft}{sec}^2\) or \(9.8 \undiv{m}{sec}^2.\)
+    In words, after every <i>second</i> the object's vertical velocity is <i>decreasing</i> by \(32 \undiv{ft}{sec}.\)
+    We neglect air resistance and drag.
+</p>
+
+<p>
+    <span class="label-emph">Horizontal \((x)\) Direction</span>
+    There is no acceleration in the \(x\)-direction because 
+    no forces act on the falling object in the horizontal direction.
+    Consequently, the object's speed in the horizontal direction is constantly
+    \(v_0 \cos \alpha\) until 
+    the object strikes the ground. 
+    If velocity is constant, then <i>displacement</i>
+    is the product of velocity and time.
+    Accordingly, at any time \(t\) the object's horizontal position is 
+    \[
+    x = v_0 (\cos \alpha) t \pd 
+    \]
+</p>
+
+<p>
+    <span class="label-emph">Vertical \((y)\) Direction</span>
+    Let \(y\) be the object's height above the ground, 
+    and suppose \(y_0\) is the object's initial height.
+    We pick the upward direction to be positive. 
+    In the vertical direction, the acceleration is uniformly \(-g\)
+    (negative because it points downward)
+    and the initial velocity is \(v_0 \sin \alpha\)
+    (positive because it points upward).
+    Using the methods of antidifferentiation and substituting initial conditions (from Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>,
+    in which we modeled solely the height of an object in free fall),
+    we attain 
+    \[
+    y = y_0 + v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \pd 
+    \]
+</p>
+
+<div class="box-title">PARAMETRIC EQUATIONS FOR PROJECTILE MOTION</div>
+<div class="box">
+    Suppose that an object located a height \(y_0\) 
+    above the ground is launched upward with 
+    initial velocity \(v_0\) at an angle \(\alpha\) above the ground.
+    The object follows a parabolic trajectory given by the parametric equations 
+    \begin{equation} 
+    x = v_0 (\cos \alpha) t \lspace y = y_0 + v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \cma \label{eq:projectile-motion}
+    \end{equation}
+    where \(g\) is the <b>acceleration due to gravity</b>, 
+    \(32 \undiv{ft}{sec}^2\) or \(9.8 \undiv{m}{sec}^2.\)
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        On a flat field, a player kicks a soccer ball upward at an angle of \(30 \degree\) to the ground 
+        with a speed of \(64\) feet per second. 
+        The player stands \(200\) feet away from a goal net 
+        and shoots directly toward the net.
+        <ol class="list-alpha">
+            <li>
+                Write parametric equations to model the trajectory of the soccer ball 
+                as it is in the air.
+            </li>
+            <li>
+                After how many seconds does the ball reach the ground? 
+            </li>
+            <li>
+                What is the maximum height reached by the ball?
+            </li>
+            <li>
+                Does the player score?
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    <figure class="parametric-soccer" id="parametric-soccer">
+        <img src="../images/sectionImages/parametric-soccer.jpg" alt="Figure 13">
+    </figure>
+    <style>
+        .parametric-soccer::before{
+            content:'FIGURE 13';
+        }
+    </style>
+    Let \(t\) be time in seconds; we consider the ball's trajectory to be a parabola 
+    in the \(xy\)-plane (<a href="#parametric-soccer">Figure 13</a>).
+    <ol class="list-alpha">
+        <li id="proj-(a)">
+            The initial velocity is \(v_0 = 64 \undiv{ft}{sec},\)
+            and the angle is \(\alpha = 30 \degree.\)
+            Since the ball is kicked from the ground, its initial height is \(0.\)
+            By \(\eqref{eq:projectile-motion},\) parametric equations for the ball's trajectory 
+            are 
+            \[
+            \baat{2} 
+            x &= 64 (\cos 30 \degree) t &&= \boxed{(32 \sqrt 3) t} \nl
+            y &= 0 + 64(\sin 30 \degree) t - \tfrac{1}{2}(32)t^2 
+            &&= \boxed{32 t - 16 t^2}  
+            \eaat 
+            \]
+            for all \(t\) such that \(y \geq 0.\)
+        </li>
+        <hr>
+        <li>
+            The ball reaches the ground when \(y = 0 \col\)
+            \[32t - 16t^2 = 0 \implies t = 0 \cma t = 2 \pd\]
+            So the ball hits the ground after \(\boxed{2}\) seconds.
+            Thus, the parametric equations in part <a href="#proj-(a)">(a)</a>
+            are restricted by \(0 \leq t \leq 2.\)
+        </li>
+        <hr>
+        <li>
+            Because the trajectory is parabolic, the ball reaches its 
+            <b>maximum height</b> \(H\) 
+            <i>halfway</i> before reaching the ground—that is, when \(t = 1.\)
+            The maximum height is therefore  
+            \[y(1) = 32(1) - 16(1)^2 = \boxed{16 \un{ft}}\] 
+        </li>
+        <hr>
+        <li>
+            The total horizontal distance \(D\) traveled by the ball is given by 
+            \[x(2) = (32 \sqrt 3)(2) \approx 110.851 \un{ft}\pd\]
+            This value is less than \(200 \un{ft},\)
+            so the ball does not reach the goal. 
+            Accordingly, the player <b>does not score</b>.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        A projectile is initially located a height \(y_0\) 
+        above the ground 
+        before it is launched upward with initial velocity \(v_0\)
+        at an angle \(\alpha\) above the horizontal.
+        At any time, the projectile is a height \(y\) above the ground 
+        and has traveled a ground distance \(x.\)
+        Write an equation that models the projectile's trajectory in terms of 
+        \(v_0,\) \(\alpha,\) \(x,\) \(y,\) and \(g.\) 
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    <figure class="parametric-projectile-motion-t-eliminated" id="parametric-projectile-motion-t-eliminated">
+        <img src="../images/sectionImages/parametric-projectile-motion-t-eliminated.jpg" alt="Figure 14">
+    </figure>
+    <style>
+        .parametric-projectile-motion-t-eliminated::before{
+            content:'FIGURE 14';
+        }
+    </style>
+    We seek to model the trajectory's shape <i>without using time \(t,\)</i> so 
+    we eliminate the parameter in 
+    \begin{equation} 
+    x = v_0 (\cos \alpha) t \lspace y = y_0 + v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \pd \eqlabel{eq:projectile-motion}
+    \end{equation}
+    The simplest method is as follows:
+    Solving for \(t\) in the first parametric equation gives 
+    \[t = \frac{x}{v_0 \cos \alpha} \pd\]
+    Substituting this expression into the second parametric equation, we attain 
+    \[
+    y = y_0 + v_0 (\sin \alpha) \par{\frac{x}{v_0 \cos \alpha}} - \tfrac{1}{2} g \par{\frac{x}{v_0 \cos \alpha}}^2 \pd
+    \] 
+    Simplifying gives 
+    \[
+    \boxed{y = y_0 + x \tan \alpha - \frac{gx^2}{2 v_0^2 \cos^2 \alpha}}  
+    \]
+    Because \(y\) is a second-degree polynomial with \(x\) (note that all other quantities are constants), 
+    we have proved that the trajectory of an object undergoing free fall is a parabola
+    (<a href="#parametric-projectile-motion-t-eliminated">Figure 14</a>).
+</div>
+
+
+<div class="section-summary">
+    <p>
+        <a href="#def-parametric-curve" class="summary-anchor">Defining a Parametric Curve</a>
+        A <span class="emph">parametric curve</span> is traced out by the 
+        <span class="emph">parametric equations</span>
+        \[x = f(t) \lspace y = g(t) \cma\]
+        in which the <span class="emph">parameter</span>
+        \(t\) varies to give the \(x\)- and \(y\)-coordinates of a curve. 
+        We use parametric equations to model \(x\) and \(y\) independently of each other. 
+        In many applications, we view \(t\) as time and consider a particle moving along a curve. 
+        We may limit the range of \(t\) to restrict a parametric curve to be a certain shape.
+    </p>
+    <p>
+        <a href="#eliminating-parameter" class="summary-anchor">Eliminating the Parameter</a>
+        When we <b>eliminate the parameter</b>, we write a Cartesian equation for the shape of 
+        a curve traced out by parametric equations. 
+        In other words, we express \(x\) and \(y\) using a single equation that doesn't contain 
+        the parameter \(t.\)
+        From one parametric equation, we solve for \(t\) in terms of \(x\) or \(y,\)
+        and substitute this expression into the other parametric equation. 
+        Alternatively, exploiting trigonometric identities 
+        simplifies the process of substitution. 
+    </p>
+    <p>
+        <a href="#para-circles" class="summary-anchor">Parameterizing Circles</a>
+        Let \(\omega\) be any number (whose magnitude, for circular motion, is called the <span class="emph">angular frequency</span>).
+        A circle of radius \(r\) centered at the origin is parameterized by either family of equations 
+        \begin{flalign}
+        && x &= \pm r \cos \omega t &&y = \pm r \sin \omega t \eqlabel{eq:para-circle} &\nl
+        \laWord{or} && x &= \pm r \sin \omega t &&y = \pm r \cos \omega t \pd \eqlabel{eq:para-circle-2}  
+        \end{flalign}
+        A circle of radius \(r\) centered at the point \((h, k)\) is parameterized by either family of equations 
+        \begin{flalign}
+        && x &= h \pm r \cos \omega t &&y = k \pm r \sin \omega t \eqlabel{eq:para-circle-hk} &\nl
+        \laWord{or} && x &= h \pm r \sin \omega t &&y = k \pm r \cos \omega t \eqlabel{eq:para-circle-hk-alt} \pd  
+        \end{flalign}
+    </p>
+    <p>
+        <a href="#para-ellipses" class="summary-anchor">Parameterizing Ellipses</a>
+        An ellipse centered at the origin is parameterized by either 
+        \begin{flalign} 
+        && x &= \pm a \cos \omega t &&y = \pm b \sin \omega t \eqlabel{eq:para-ellipse-cos-sin} &\nl
+        \laWord{or} && x &= \pm a \sin \omega t &&y = \pm b \cos \omega t \pd \eqlabel{eq:para-ellipse-sin-cos} 
+        \end{flalign}
+    </p>
+    <p>
+        <a href="#cycloids" class="summary-anchor">The Cycloid</a>
+        When a circle of radius \(r\) rolls along a flat surface, 
+        a point on its circumference traces out a shape called a
+        <span class="emph">cycloid</span>. 
+        If \(\theta\) is the angle through which the circle has rotated,
+        then parametric equations for the cycloid are given by 
+        \begin{equation} 
+        x = r(\theta - \sin \theta) \lspace y = r(1 - \cos \theta) \pd \eqlabel{eq:cycloid}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#projectile-motion" class="summary-anchor">Projectile Motion</a>
+        Suppose that an object located a height \(y_0\) 
+        above the ground is launched upward with 
+        initial velocity \(v_0\) at an angle \(\alpha\) to the ground.
+        If we neglect air resistance and assume that only the force of gravity acts upon the object, 
+        then its trajectory is parabolic and given by the parametric equations 
+        \begin{equation} 
+        x = v_0 (\cos \alpha) t \lspace y = y_0 + v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \cma \eqlabel{eq:projectile-motion}
+        \end{equation}
+        where \(g\) is the <b>acceleration due to gravity</b>, 
+        \(32 \undiv{ft}{sec}^2\) or \(9.8 \undiv{m}{sec}^2.\)
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

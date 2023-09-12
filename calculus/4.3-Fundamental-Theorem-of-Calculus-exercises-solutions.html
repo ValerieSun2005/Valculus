@@ -49,14 +49,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         State both parts of the <b>Fundamental Theorem of Calculus</b>. 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         If \(f\) is continuous over \([a, b],\) then 
         <b>Part I of the Fundamental Theorem of Calculus</b>
         (<b>FTC I</b>) states that 
@@ -69,7 +69,7 @@
         \begin{equation} 
         \int_a^b f(x) \di x = F(b) - F(a) \pd \label{eq:ftc-ii}
         \end{equation}
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -78,20 +78,20 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         What is the <b>Net Change Theorem</b>?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The <b>Net Change Theorem</b> states that 
         the final quantity equals the initial quantity plus the accumulation of its rate. 
         Let \(f\) be a differentiable function; 
         then the theorem states that 
         \[f(b) = f(a) + \int_a^b f'(x) \di x \pd\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -107,11 +107,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By FTC I, we obtain the derivative by replacing \(t\) in the integrand with \(x.\)
         So the derivative is simply 
         \[\boxed{\sqrt x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -127,13 +127,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         FTC I enables us to differentiate definite integrals 
         with respect to one of its bounds.
         We obtain the derivative by replacing \(u\) in the integrand with \(x;\)
         hence, our derivative is 
         \[\boxed{\sin x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -149,13 +149,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         FTC I enables us to differentiate definite integrals 
         with respect to one of its bounds.
         We obtain the derivative by replacing \(u\) in the integrand with \(t;\)
         doing so gives 
         \[\boxed{t - 3}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -171,11 +171,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We obtain the derivative by replacing \(t\) in the integrand with \(x;\)
         hence, our derivative is 
         \[\boxed{x^2 - 3x + 2 - \cos 2x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -191,11 +191,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We obtain the derivative by replacing \(t\) in the integrand with \(x;\)
         hence, our derivative is 
         \[\boxed{\frac{e^x}{4 + x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -211,12 +211,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using the Reverse Power Rule, an antiderivative of \(x^3\) is 
         \[\frac{x^{3 + 1}}{3 + 1} = \frac{x^4}{4} \pd\]
         FTC II transforms the definite integral into
         \[\frac{x^4}{4} \intEval_0^4 = \frac{4^4}{4} - 0 = \boxed{64}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -232,7 +232,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The bounds seem to be flipped,
         but we treat this oddity no differently.
         We antidifferentiate the polynomial \(x^5\) using the Reverse Power Rule, 
@@ -240,7 +240,7 @@
         \[\frac{x^{5 + 1}}{5 + 1} = \frac{x^6}{6} \pd\]
         Then, by FTC II, the definite integral turns into
         \[\frac{x^6}{6} \intEval_2^1 = \frac{1^6}{6} - \frac{2^6}{6} = \boxed{-\frac{63}{6}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -256,13 +256,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Let's first rewrite \(\sqrt x\) as \(x^{1/2}.\)
         Using the Reverse Power Rule, an antiderivative of \(\sqrt x\) is 
         \[\frac{x^{1 + 1/2}}{1 + 1/2} = \tfrac{2}{3} x^{3/2} \pd\]
         Then, by FTC II, the definite integral is 
         \[\tfrac{2}{3} x^{3/2} \intEval_0^4 = \tfrac{2}{3} (4)^{3/2} - 0 = \boxed{\tfrac{16}{3}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -278,11 +278,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         An antiderivative of \(\cos \theta\) is \(\sin \theta.\)
         Thus, FTC II gives the definite integral to be 
         \[\sin \theta \intEval_0^{\pi/4} = \sin \tfrac{\pi}{4} - \sin 0 = \boxed{\tfrac{\sqrt 2}{2}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -298,7 +298,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because an antiderivative of \(\sec^2 x\) is \(\tan x,\)
         FTC II gives the definite integral to be
         \[
@@ -308,7 +308,7 @@
         &amp;= \boxed 2
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -324,7 +324,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the integrand as \(x^{-2}.\)
         The Reverse Power Rule gives an antiderivative to be \(-x^{-1} = -1/x.\)
         Then FTC II gives 
@@ -332,7 +332,7 @@
         As a convenient trick, we swap the bounds to eliminate the negative sign!
         Doing so gives 
         \[\frac{1}{x} \intEval_5^1 = \frac{1}{1} - \frac{1}{5} = \boxed{\frac{4}{5}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -348,7 +348,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         An antiderivative of the difference \(e^y - 2\) is the difference of antiderivatives.
         An antiderivative of \(e^y\) is \(e^y,\)
         and antidifferentiating \(2\) gives \(2y.\)
@@ -361,7 +361,7 @@
         &amp;= \boxed{e^3 - e - 4}
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -377,7 +377,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The antiderivative of the sum \(x + 1\)
         is the sum of antiderivatives.
         An antiderivative of \(x\) is \(x^2/2,\)
@@ -391,7 +391,7 @@
         &amp;= \boxed 6
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -407,7 +407,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         An antiderivative of \(x^2\) is \(x^3/3,\)
         and an antiderivative of \(3x\) is \(3x^2/2.\)
         Thus, an antiderivative of \(x^2 + 3x\) is \(x^3/3 + 3x^2/2.\)
@@ -419,7 +419,7 @@
         &amp;= \boxed{\frac{110}{3}}
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -435,7 +435,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         An antiderivative of the difference \(3/t - 4t\) is the difference of antiderivatives.
         An antiderivative of \(3/t\) is \(3 \ln \abs t,\)
         and an antiderivative of \(4t\) is \(2t^2.\)
@@ -448,7 +448,7 @@
         &amp;= \boxed{3(\ln 3) - 16}
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -464,7 +464,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We expand the integrand, getting \(t^2 + 4t + 4.\)
         We then integrate this function from \(0\) to \(3\) using FTC II, as follows:
         \[
@@ -474,7 +474,7 @@
         &amp;= \boxed{39}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -490,7 +490,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Recall that the derivative of \(\tan^{-1} x\) is \(1/(1 + x^2).\)
         Thus, an antiderivative of \(2/(1 + x^2)\) is 
         \(2 \tan^{-1} x.\)
@@ -502,7 +502,7 @@
         &amp;= \boxed{\tfrac{\pi}{6}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -518,7 +518,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Recall that the derivative of \(\sin^{-1} x\) is \(1/\sqrt{1 - x^2}.\)
         Thus, an antiderivative of \(8/\sqrt{1 - x^2}\) is 
         \(8 \sin^{-1} x.\)
@@ -530,7 +530,7 @@
         &amp;= \boxed{\tfrac{2 \pi}{3}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -546,7 +546,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The integrand simplifies to \(x \cdot x^{1/2}\) \(= x^{3/2}.\)
         We then integrate this function from \(0\) to \(1\) using FTC II. 
         An antiderivative of this function is \(\tfrac{2}{5} x^{5/2};\) 
@@ -555,7 +555,7 @@
         \tfrac{2}{5} x^{5/2} \intEval_0^1
         = \tfrac{2}{5} (1)^{5/2} - 0 = \boxed{\tfrac{2}{5}} 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -571,7 +571,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The main challenge of the problem is to determine an antiderivative. 
         We divide each term of the numerator by \(y^2;\) doing so gives  
         \[4y + 3 - \frac{6}{y} \pd\]
@@ -586,7 +586,7 @@
         &amp;= \boxed{22 - 6 \ln 3}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -602,7 +602,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The hardest part of problems is to determine an antiderivative.
         In general, to integrate a rational expression, we want to divide the expression. 
         Performing polynomial division enables us to rewrite the integrand as 
@@ -616,7 +616,7 @@
         \par{\sqrt 3 - \tan^{-1} \sqrt 3} - \par{1 - \tan^{-1} 1} 
         = \boxed{\sqrt 3 - 1 - \tfrac{\pi}{12}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -632,7 +632,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Since the upper bound is a function of \(x,\)
         we need to use the Chain Rule in FTC I:
         In the integrand \(\sqrt t,\) we replace \(t\)
@@ -641,7 +641,7 @@
         which is \(2.\)
         So our answer is 
         \[(\sqrt{2x})(2) = \boxed{2 \sqrt{2x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -657,7 +657,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We use FTC I with the Chain Rule:
         In the integrand \(t^2,\) we replace \(t\)
         with the upper bound \(3x + 1.\)
@@ -665,7 +665,7 @@
         which is \(3.\)
         So our answer is 
         \[(3x + 1)^2 \cdot 3 = \boxed{3 (3x + 1)^2}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -681,7 +681,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The upper bound is a function of \(x.\)
         Hence, differentiation requires the Chain Rule to be used in conjunction with FTC I.
         In the integrand \(1/u,\) we replace \(u\)
@@ -690,7 +690,7 @@
         which is \(3x^2.\)
         So our answer is 
         \[\frac{1}{x^3} \cdot 3x^2 = \boxed{\frac{3}{x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -706,14 +706,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the integral as \(-\int_1^{4x} \cos(t + 3) \di t.\)
         To differentiate, we replace \(t\) in the integrand with the upper bound \(4x.\)
         Then we multiply by \(\textDeriv{}{x} \, [4x] = 4.\)
         Remember the negative sign.
         We obtain 
         \[-\cos(4x + 3) \cdot 4 = \boxed{-4 \cos(4x + 3)}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -729,14 +729,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the integral as \(-\int_5^{\ln x} 1/(1 + t) \di t.\)
         To differentiate, we replace \(t\) in the integrand with the upper bound \(\ln x.\)
         Then we multiply by \(\textDeriv{}{x} \, [\ln x] = 1/x.\)
         Do not forget the negative sign.
         We obtain 
         \[-\frac{1}{1 + \ln x} \cdot \frac{1}{x} = \boxed{-\frac{1}{x + x \ln x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -752,7 +752,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         To differentiate, we follow this procedure:
         We first replace \(t\) in the integrand with the upper bound \(x^2.\)
         Then we multiply by \(\textDeriv{}{x} \, [x^2] = 2x.\)
@@ -762,7 +762,7 @@
         This step gives \(3 \sqrt{3x + 3}.\)
         Our answer is the first result minus the second result:
         \[\boxed{2x \sqrt{x^2 + 3} - 3 \sqrt{3x + 3}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -778,7 +778,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We follow this differentiation procedure:
         First, we replace \(t\) in the integrand with the upper bound \(5x - 2.\)
         Then we multiply by \(\textDeriv{}{x} \, [5x - 2] = 5.\)
@@ -789,7 +789,7 @@
         Our answer is the former result minus the latter result:
         \[5 e^{2(5x - 2)} - (\cos x) e^{2 \sin x} 
         = \boxed{5e^{10x - 4} - e^{2 \sin x}\cos x} \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -798,20 +798,20 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Suppose \(f\) is twice-differentiable
         and satisfies \(f(1) = 3\) and \(f(4) = 7.\)
         Calculate \(\int_1^4 f'(x) \di x.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Since \(f\) is twice-differentiable, \(f'\) is differentiable and therefore continuous. 
         Hence, we apply FTC II to obtain 
         \[\int_1^4 f'(x) \di x = f(x) \intEval_1^4 = f(4) - f(1) = 7 - 3 = \boxed 4\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -820,19 +820,19 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The function \(h\) is twice-differentiable.
         Calculate \(\int_{-2}^4 h'(x) \di x\) if \(h(-2) = 1\) and \(h(4) = -6.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because \(h\) is twice-differentiable, \(h'\) is differentiable and therefore continuous. 
         So we use FTC II to find 
         \[\int_{-2}^4 h'(x) \di x = h(4) - h(-2) = -6 - 1 = \boxed{-7}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -841,14 +841,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         If \(f(1) = 4\) and \(\int_1^5 f'(x) \di x = 6,\) then calculate \(f(5).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We use the <b>Net Change Theorem</b>:
         \[
         \ba 
@@ -857,7 +857,7 @@
         &amp;= \boxed{10} 
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -866,7 +866,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <figure class="ftc-g-prime" id="ftc-g-prime">
 <img alt="Figure 1" src="../images/sectionImages/ftc-g-prime.jpg"/>
 </figure>
@@ -895,12 +895,12 @@
                 If \(g''\) is continuous, then find \(\int_{-6}^4 g''(x) \di x.\) 
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         In each part, be sure not to confuse \(f\) with \(f'\)
         and \(g\) with \(g'.\)
         <ol class="list-alpha">
@@ -958,7 +958,7 @@
                 \]
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -967,7 +967,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <figure class="ftc-f-prime" id="ftc-f-prime">
 <img alt="Figure 2" src="../images/sectionImages/ftc-f-prime.jpg"/>
 </figure>
@@ -995,12 +995,12 @@
                 At what \(x\)-coordinates does the graph of \(f\) have an inflection point?
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         In each part, be sure not to confuse \(f\) with \(f'\)
         and \(g\) with \(g'.\)
         <ol class="list-alpha">
@@ -1046,7 +1046,7 @@
                 So the graph of \(f\) has inflection points at those locations.
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1055,20 +1055,20 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Prove that the area under the parabola \(y = x^2\) from \(x = a\) to \(x = b\) is \(\tfrac{1}{3} \par{b^3 - a^3}.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We use FTC II as follows:
         An antiderivative of \(x^2\) is \(x^3/3\) by the Reverse Power Rule. 
         Then we evaluate this antiderivative at \(b\) and then subtract the antiderivative evaluated at \(a \col\)
         \[\frac{x^3}{3} \intEval_a^b = \frac{b^3}{3} - \frac{a^3}{3} = \tfrac{1}{3} \par{b^3 - a^3} \cma\]
         as requested.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1077,15 +1077,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Explain why the following statement is false:
         \[\int_{-1}^1 \frac{1}{x^2} \di x = -\frac{1}{x} \intEval_{-1}^1 = -2 \pd\]
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(1/x^2\) isn't continuous over \([-1, 1],\)
         so we cannot use FTC II. 
         In fact, the graph of \(y = 1/x^2\) has a vertical asymptote at \(x = 0,\)
@@ -1093,7 +1093,7 @@
         We discuss more about these integrals in Section 
         <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>;
         this integral happens to diverge.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1102,14 +1102,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Find the critical points of \(g(x) = \int_1^x (1 - 1/t) \di t.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(g\) has a critical point when \(g'(x) = 0\)
         or when \(g'(x)\) is undefined but \(g(x)\) is defined.
         (See Section <a href="/Valculus/calculus/3.2-Minimum-and-Maximum-Values.html">3.2</a>
@@ -1122,7 +1122,7 @@
         we need \(g(1) \col\)
         \[g(1) = \int_1^1 1 - \frac{1}{t} \di t = 0 \pd\]
         So our answer is \(\boxed{(1, 0)}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1131,21 +1131,21 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Find the \(x\)-coordinates of all the critical points of \(y = \int_{-1}^x (t^2 + 5t + 6) \di t.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By FTC I, 
         \[y' = x^2 + 5x + 6 \pd\]
         This expression is continuous, so the only critical points of \(y\) 
         satisfy \(y' = 0.\)
         We solve to obtain
         \[y' = (x + 2)(x + 3) = 0 \implies \boxed{x = -3 \cma x = -2}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1154,15 +1154,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         For \(0 \leq x \leq \pi,\) let \(f(x) = \int_0^x (1 - \sin t) \di t.\) 
         Find the critical points of \(f.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-40"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(f\) has a critical point when \(f'(x) = 0\)
         or when \(f'(x)\) is undefined but \(f(x)\) is defined.
         (See Section <a href="/Valculus/calculus/3.2-Minimum-and-Maximum-Values.html">3.2</a>
@@ -1182,7 +1182,7 @@
         \]
         So the critical <i>point</i> of \(f\) is 
         \[\boxed{\par{\tfrac{\pi}{2}, \tfrac{\pi}{2} - 1}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1191,7 +1191,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(f(x) = \int_1^x (t^2 - 2t - 3) \di t.\)
         Find the values of \(x\) for which
         <ol class="list-alpha">
@@ -1205,12 +1205,12 @@
                 the graph of \(f\) is concave up
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         See Section <a href="/Valculus/calculus/3.4-Using-the-First-and-Second-Derivatives.html">3.4</a>
         if you need a review of the relationship between \(f,\) \(f',\) and \(f''.\)
         <ol class="list-alpha">
@@ -1234,7 +1234,7 @@
                 meaning when \(x \gt 1.\)
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1243,14 +1243,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Determine the relative maximum of \(f(x) = \int_0^x (4 - t^2) \di t.\) 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By FTC I, 
         \[f'(x) = 4 - x^2 \pd\]
         So \(f'(x) = 0\) for \(x = -2\) and \(x = 2.\)
@@ -1266,7 +1266,7 @@
         &amp;= \boxed{\frac{16}{3}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1275,14 +1275,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Find the relative minimum of the curve \(y = \int_0^x (e^t - 2) \di t.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By FTC I, 
         \[y' = e^x - 2 \pd\]
         The solution to \(y' = 0\) is \(x = \ln 2,\)
@@ -1296,7 +1296,7 @@
         &amp;= \boxed{1 - 2\ln 2}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1305,23 +1305,23 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(R\) be the region bounded above by the graph of \(y = e^x,\)
         below by the \(x\)-axis, left by the \(y\)-axis,
         and right by the line \(x = m.\)
         How fast is the area of \(R\) changing with \(m\) when \(m = 3 \ques\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The expression for the area of \(R\) is 
         \[\int_0^m e^x \di x \pd\]
         The rate at which the area changes with \(m\) is, by FTC I, 
         \[\deriv{}{m} \int_0^m e^x \di x = e^m \pd\]
         Thus, when \(m = 3\) the area of \(R\) is increasing at a rate of \(\boxed{e^3}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1330,15 +1330,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Locate the interval on which the curve \(y = \int_1^x (4t - e^t) \di t\)
         is concave down.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The graph is concave down if \(y'' \lt 0.\)
         By FTC I the first derivative is 
         \[y' = 4x - e^x \pd\]
@@ -1347,7 +1347,7 @@
         Then we find 
         \[4 - e^x \lt 0 \implies x \gt \ln 4 \pd\]
         So the graph is concave down for \(\boxed{x \gt \ln 4}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1356,17 +1356,17 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         An object on the \(x\)-axis initially located at \(x = -2\)
         begins moving with velocity \(v(t) = 8t + 1,\)
         where \(t\) is time. 
         What is the object's position when \(t = 3 \ques\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By the Net Change Theorem, 
         the final position \(x(3)\) equals the initial position plus the accumulation of the derivative of position 
         (which is velocity)—that is, 
@@ -1375,7 +1375,7 @@
         \[(4t^2 + t) \intEval_0^3 = \parbr{4(3)^2 + 3} - 0 = 39 \pd\]
         So 
         \[x(3) = -2 + 39 = \boxed{37}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1384,16 +1384,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         A car drives along the \(x\)-axis with an initial velocity of \(10 \undiv{m}{s}.\)
         It then accelerates as modeled by \(a(t) = 8 - 2t,\) where \(t\) is time measured in seconds.
         Determine the car's velocity after \(3\) seconds.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We use the Net Change Theorem: 
         The final velocity \(v(3)\) is the initial velocity \(v(0)\) plus the accumulation of the rate of velocity 
         (which is acceleration) over \(0 \leq t \leq 3.\)
@@ -1403,7 +1403,7 @@
         \[\par{8t - t^2} \intEval_0^3 = \parbr{8(3) - (3)^2} - 0 = 15 \pd\]
         Thus, 
         \[v(3) = 10 + 15 = \boxed{25}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1412,18 +1412,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         A tank initially contains \(80\) liters of water.
         A hole is poked at the bottom of the tank, and water flows out at a rate of 
         \(r(t) = (2 - t)^2\)
         liters per second. 
         Find the volume in the tank after \(6\) seconds of leaking. 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Net Change Theorem states that the final volume \(V(6)\) is the sum of 
         the initial volume and net change in volume. 
         Since water flows <i>out</i> of the tank, 
@@ -1442,7 +1442,7 @@
         \]
         Hence, \(\eqref{eq:tank-V}\) becomes 
         \[V(6) = 80 - 24 = \boxed{56 \un{liters}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1451,18 +1451,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         In filtering a pool,
         water is pumped into the pool at a constant rate of \(4\) gallons per minute
         and pumped out at a rate of \(6t - 3t^2\) gallons per minute. 
         Initially, the pool contains \(900\) gallons of water.
         Find the pool's volume after \(2\) minutes of filtering.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The net rate is the difference between rate in and rate out:
         \[r(t) = 4 - (6t - 3t^2) = 3t^2 - 6t + 4 \pd\]
         The net change of the water's volume \(V(t)\) over \(0 \leq t \leq 2\) is \(\int_0^2 r(t) \di t.\)
@@ -1483,7 +1483,7 @@
         \]
         Hence, 
         \[V(5) = 900 + 4 = \boxed{904 \un{gallons}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1492,16 +1492,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(g\) be a twice-differentiable function whose second derivative is continuous over \([1, 5].\) 
         The slope of the tangent to \(g\) is positive at \(x = 1\) and negative at \(x = 5.\)
         Show that \(\int_1^5 g''(x) \di x \lt 0.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         An antiderivative of \(g''(x)\) is \(g'(x).\)
         So by FTC II,
         \[\int_1^5 g''(x) \di x = g'(5) - g'(1) \pd\]
@@ -1511,7 +1511,7 @@
         to review the connection between \(f\) and \(f'.\))
         Consequently, the difference \(g'(5) - g'(1)\) is negative and so  
         the integral \(\int_1^5 g''(x) \di x\) is negative.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1520,16 +1520,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Suppose \(g\) is a twice-differentiable function such that \(g''(x)\) is continuous over \(1 \leq x \leq 4.\)
         The line \(y - 3 = -5(x - 1)\) is tangent to the graph of \(y = g(x)\) at \(x = 1.\)
         Calculate \(g'(4)\) if \(\int_1^4 g''(x) \di x = 2.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-51"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We need a way to relate \(g'(4)\) to the information provided. 
         One pathway is by applying FTC II to the integral;
         note that \(g'\) is an antiderivative of \(g''\) 
@@ -1539,7 +1539,7 @@
         The tangent line to \(g\) at \(x = 1\) has slope \(-5,\) so \(g'(1) = -5.\)
         Hence, 
         \[g'(4) = 2 + (-5) = \boxed{-3}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1548,19 +1548,19 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(f\) be a positive, continuous function
         whose antiderivative is \(F.\) 
         Consider the area of the region bounded above by the graph of \(y = f(x),\)
         below by the \(x\)-axis, left by the line \(x = a,\) and right by the line \(x = m.\)
         If \(m\) is doubled, then the area is doubled.
         Show that \(F(a) = 2F(m) - F(2m).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-52"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because the area of a region bounded right by \(x = 2m\) is twice the area of a separate region bounded right by \(x = m,\)
         we have 
         \[2 \int_a^m f(x) \di x = \int_a^{2m} f(x) \di x \pd\]
@@ -1569,7 +1569,7 @@
         Then we rearrange to get 
         \[F(a) = 2F(m) - F(2m) \cma\]
         as requested.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1578,25 +1578,25 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The function \(v\) is continuous and 
         has an antiderivative \(V.\)
         If \(\int_a^{2b} v(x) \di x = 0,\)
         then derive an expression for \(\int_a^b v(x) \di x\)
         in terms of \(V\) and \(b.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-53"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Applying FTC II to the given definite integral \(\int_a^{2b} v(x) \di x\) gives 
         \[V(2b) - V(a) = 0 \or V(a) = V(2b) \pd\]
         Then using FTC II on \(\int_a^b v(x) \di x\) gives 
         \[V(b) - V(a) \pd\]
         But since \(V(a) = V(2b),\) the integral becomes 
         \[\boxed{V(b) - V(2b)}\] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1605,16 +1605,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Consider the region in the first quadrant bounded above by the hyperbola \(y = 1/x,\)
         below by the \(x\)-axis, left by the line \(x = m,\) and right by the line \(x = 2m.\)
         Prove that the area of the region is independent of \(m.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-54"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The integral expression for the area is 
         \[\int_m^{2m} \frac{1}{x} \di x \pd\]
         By FTC II, we find an antiderivative of \(1/x\)—one antiderivative is \(\ln \abs x\)—and 
@@ -1623,7 +1623,7 @@
         \[\ln \abs x \intEval_m^{2m} = \ln(2m) - \ln m = \ln \tfrac{2m}{m} = \ln 2\]
         Thus, the area is fixed at \(\ln 2\)
         and does not depend on \(m.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1632,18 +1632,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!-- [[[HARD]]] -->
         Let \(S\) be the region in the first quadrant bounded by the graph of \(y = \sqrt x\)
         and the line \(x = m.\)
         The value of \(m\) is increasing at a constant rate of \(3\) units per minute.
         How quickly is the area of \(S\) increasing with time when \(m = 16 \ques\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-55"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The expression for the area of \(S\) is 
         \[A = \int_0^m \sqrt x \di x \pd\]
         Let \(t\) be time; then we require \(\textDeriv{A}{t}\)
@@ -1659,7 +1659,7 @@
         So when \(m = 16,\) we have 
         \[\deriv{A}{t} \intEval_{m = 16} = 3 \sqrt{16} = \boxed{12}\]
         The area is increasing at a rate of \(12\) square units per minute.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1668,19 +1668,19 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!-- [[[HARD]]] -->
         Let \(Q\) be a quantity that changes with time \(t\)
         and whose value at \(t = 0\) is \(Q_0.\)
         Suppose that \(Q(t)\) increases at a rate of \(f(t)\) and decreases at a rate of \(g(t),\)
         where \(f\) and \(g\) are differentiable functions.
         Prove that \(Q\) has a relative maximum at the critical number \(t = c\) when \(f'(c) \lt g'(c).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-56"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By the Second-Derivative Test (see Section <a href="/Valculus/calculus/3.4-Using-the-First-and-Second-Derivatives.html">3.4</a>),
         \(Q\) has a relative maximum at a critical number \(c\) if \(Q''(c) \lt 0.\)
         We therefore aim to show this.
@@ -1693,7 +1693,7 @@
         Since \(f\) and \(g\) are differentiable, we have 
         \[Q''(t) = f'(t) - g'(t) \pd\]
         Thus, \(Q''(c) \lt 0\) is satisfied if \(f'(c) \lt g'(c).\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1709,7 +1709,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-57"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         View this expression as a fraction whose numerator is \(\int_0^{x^2} e^t \di t\)
         and whose denominator is \(x^2.\)
         As \(x \to 0,\) each function approaches \(0;\)
@@ -1724,7 +1724,7 @@
         Differentiating the denominator gives \(2x.\)
         So our limit is 
         \[\lim_{x \to 0} \frac{2xe^{x^2}}{2x} = \lim_{x \to 0} e^{x^2} = \boxed 1\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1740,7 +1740,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-58"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We treat this expression as a fraction whose numerator is \(2 \int_0^x \sin u \di u\)
         and whose denominator is \(x^2.\)
         Each function approaches \(0\) as \(x \to 0,\)
@@ -1753,7 +1753,7 @@
         \[\lim_{x \to 0} \frac{2 \sin x}{2x} = \lim_{x \to 0} \frac{\sin x}{x} = \boxed 1\]
         You may remember \(\lim_{x \to 0} (\sin x)/x = 1;\)
         if not, then you can apply L'Hopital's Rule again to attain this result.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1769,7 +1769,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-59"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We manipulate this expression to match the limit definition of a derivative 
         (see Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>). 
         Our goal is to write the integral as a difference.
@@ -1781,7 +1781,7 @@
         at \(x = \pi.\)
         By FTC I, this derivative is \(\sin \pi = \boxed{0}.\)
         Alternatively, you could use L'Hopital's Rule to evaluate this limit.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 

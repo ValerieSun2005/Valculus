@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.7 Exercise Solutions: Power Series</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.7 Exercise Solutions — Power Series</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="10.7-Power-Series.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.7-Power-Series-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        What is a power series?
+        What is the general form of a power series?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        A power series is a polynomial with infinitely many terms. 
+        The general form of a power series is 
+        \[\sum_{n = 0}^\infty c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \cdots \cma\]
+        where the series is <b>centered</b> at \(x = a.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Define the <b>interval of convergence</b> and <b>radius of convergence</b>.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The <b>interval of convergence</b> consists of the values of \(x\) such that a power series 
+        \(\sum_{n = 0}^\infty c_n (x - a)^n\) converges. 
+        The <b>radius of convergence</b> 
+        is how far the endpoints in the interval of convergence extend from the center of the series, \(x = a.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Suppose that function \(f(x)\) has a power series 
+        whose radius of convergence is \(R.\)
+        What are the radii of convergence for the power series of \(f'(x)\) 
+        and \(\int f(x) \di x \ques\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        When we differentiate or integrate a power series, 
+        its radius of convergence is preserved (but not always its interval of convergence).
+        Hence, the power series representations of \(f'(x)\) and \(\int f(x) \di x\)
+        each have a radius of convergence of \(R.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        The power series \(\sum_{n = 0}^\infty c_n (x - 2)^n\)
+        has a radius of convergence of \(3.\)
+        The series converges at \(x = -1\) and diverges at \(x = 5.\)
+        <ol class="list-alpha">
+<li>
+                Identify the center of the series.
+            </li>
+<li>
+                Determine the series' interval of convergence.
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                The series has the factor \((x - 2),\)
+                so it is centered at \(x = 2.\)
+            </li>
+<hr/>
+<li>
+                The series' interval of convergence extends \(3\) in either direction of
+                the center, \(2.\)
+                So our preliminary interval is \((-1, 5).\)
+                Since we are given that the series converges at \(x = -1\) and diverges at \(x = 5,\)
+                we include \(-1\) and exclude \(5.\) The interval is 
+                \[\boxed{-1 \leq x \lt 5}\]
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(x + 1)^n}{n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (x + 1)^n/n.\)
+        The series \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\) 
+        by the Ratio Test. 
+        Hence, we write a limit that satisfies this inequality, and solve for \(x\) that meets this condition. 
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{(x + 1)^{n + 1}}{n + 1} \cdot \frac{n}{(x + 1)^n}} 
+        &amp;= \lim_{n \to \infty} \abs{\frac{(x + 1) n}{n + 1}} \nl 
+        &amp;= \abs{x + 1} \lim_{n \to \infty} \frac{n}{n + 1} \nl 
+        &amp;= \abs{x + 1} \pd  
+        \ea 
+        \]
+        The series converges if \(\abs{x + 1} \lt 1,\)
+        so the <b>radius of convergence</b> is \(R = 1.\)
+        We then get, as the preliminary interval of convergence,
+        \[-1 \lt x + 1 \lt 1 \arrowTwoWay -2 \lt x \lt 0 \pd\]
+        We now check the endpoints: At \(x = -2\) the series \(\sum_{n = 1}^\infty a_n\) becomes 
+        \[\sum_{n = 1}^\infty \frac{(-2 + 1)^n}{n} = \sum_{n = 1}^\infty \frac{(-1)^n}{n} \cma\]
+        which converges by the Alternating Series Test because 
+        \(\lim_{n \to \infty} 1/n = 0\) and \(1/n\) is decreasing for \(n \geq 1.\)  
+        But at \(x = 0\) the series is 
+        \[\sum_{n = 1}^\infty \frac{(0 + 1)^n}{n} = \sum_{n = 1}^\infty \frac{1}{n} \cma\]
+        the divergent Harmonic Series.
+        Hence, the interval of convergence must include \(x = -2\) and exclude \(x = 0\)—that is, 
+        \[\boxed{-2 \leq x \lt 0}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{x^n}{n!}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We let \(a_n = x^n/n! \, .\)
+        Then \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1\)
+        by the Ratio Test.
+        Recall that \((n + 1)! = (n + 1) n! \, ;\)
+        hence, we have 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{x^{n + 1}}{(n + 1)!} \cdot \frac{n!}{x^n}} 
+        &amp;= \lim_{n \to \infty} \abs{\frac{x^n \cdot x}{(n + 1) n!} \cdot \frac{n!}{x^n}} \nl 
+        &amp;= \abs{x} \lim_{n \to \infty} \abs{\frac{1}{n + 1}} \nl 
+        &amp;=  0 \lt 1 \pd
+        \ea 
+        \]
+        <i>Any</i> value of \(x\) satisfies the inequality \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        Thus, the interval of convergence is 
+        \[\boxed{-\infty \lt x \lt \infty}\]
+        and the <b>radius of convergence</b> is \(R = \infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(3x)^n}{n + 1}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (3x)^n/(n + 1).\)
+        The series \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\) 
+        by the Ratio Test.
+        Thus, we write a limit that satisfies this inequality, and solve for \(x\) that meets this condition. 
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{(3x)^{n + 1}}{n + 2} \cdot \frac{n + 1}{(3x)^n}} 
+        &amp;= \lim_{n \to \infty} \abs{\frac{(3x) (n + 1)}{n + 2}} \nl 
+        &amp;= \abs{3x} \lim_{n \to \infty} \abs{\frac{n + 1}{n + 2}} \nl 
+        &amp;= \abs{3x} \pd  
+        \ea 
+        \]
+        So the series converges if \(\abs{3x} \lt 1.\)
+        The inequality gives, as the preliminary interval of convergence,
+        \[-1 \lt 3x \lt 1 \arrowTwoWay -\tfrac{1}{3} \lt x \lt \tfrac{1}{3} \pd\]
+        The <b>radius of convergence</b> is \(1/3.\)
+        We now check the endpoints: At \(x = -1/3\) the series \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{\par{3 \cdot -\frac{1}{3}}^n}{n + 1} = \sum_{n = 0}^\infty \frac{(-1)^n}{n + 1} \cma\]
+        which converges by the Alternating Series Test since 
+        \(\lim_{n \to \infty} 1/(n + 1) = 0\) and \(1/(n + 1)\) is decreasing for \(n \geq 0.\) 
+        Conversely, at \(x = 1/3\) the series is 
+        \[\sum_{n = 0}^\infty \frac{\par{3 \cdot \frac{1}{3}}^n}{n + 1} = \sum_{n = 0}^\infty \frac{1}{n + 1} \cma\]
+        which diverges by the Integral Test. \(\big[\int_0^\infty \dd x/(x + 1)\) is divergent.\(\big]\)
+        Thus, the interval of convergence must include \(x = -1/3\) and exclude \(x = 1/3 \col\)
+        \[\boxed{-\tfrac{1}{3} \leq x \lt \tfrac{1}{3}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(5x)^n}{n + 1}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (5x)^n/(n + 1).\)
+        The series \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\) 
+        by the Ratio Test.
+        Thus, we write a limit that satisfies this inequality, and solve for \(x\) that meets this condition. 
+        We have  
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{(5x)^{n + 1}}{n + 2} \cdot \frac{n + 1}{(5x)^n}} 
+        &amp;= \lim_{n \to \infty} \abs{\frac{(5x) (n + 1)}{n + 2}} \nl 
+        &amp;= \abs{5x} \lim_{n \to \infty} \abs{\frac{n + 1}{n + 2}} \nl 
+        &amp;= \abs{5x} \pd  
+        \ea 
+        \]
+        So the series converges if \(\abs{5x} \lt 1.\)
+        The inequality gives, as the preliminary interval of convergence,
+        \[-1 \lt 5x \lt 1 \arrowTwoWay -\tfrac{1}{5} \lt x \lt \tfrac{1}{5} \pd\]
+        The <b>radius of convergence</b> is \(1/5.\)
+        We now check the endpoints: At \(x = -1/5\) the series \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{\par{5 \cdot -\frac{1}{5}}^n}{n + 1} = \sum_{n = 0}^\infty \frac{(-1)^n}{n + 1} \cma\]
+        which converges by the Alternating Series Test since \(\lim_{n \to \infty} 1/(n + 1) = 0\)
+        and \(1/(n + 1)\) is decreasing for \(n \geq 0.\)  
+        But at \(x = 1/5\) the series is 
+        \[\sum_{n = 0}^\infty \frac{\par{5 \cdot \frac{1}{5}}^n}{n + 1} = \sum_{n = 0}^\infty \frac{1}{n + 1} \cma\]
+        which diverges by the Integral Test. \(\big[\int_0^\infty \dd x/(x + 1)\) is divergent.\(\big]\)
+        Hence, the interval of convergence must include \(x = -1/5\) and exclude \(x = 1/5\)—so, 
+        \[\boxed{-\tfrac{1}{5} \leq x \lt \tfrac{1}{5}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(-1)^n x^n}{2^n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (-1)^n x^n/2^n.\)
+        By the Ratio Test \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        We can ignore the alternator \((-1)^n\) in \(\abs{a_{n + 1}/a_n}\) because the absolute value bars 
+        force the quantity to be positive. 
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{x \cdot x^n}{2 \cdot 2^n} \cdot \frac{2^n}{x^n}} 
+        &amp;= \abs{\frac{x}{2}} \lim_{n \to \infty} \abs{1} \nl 
+        &amp;= \abs{\frac{x}{2}} \lt 1 \pd  
+        \ea 
+        \]
+        (Note that we obtain the same interval by using the Root Test.) Thus,
+        \[\abs{\frac{x}{2}} \lt 1 \arrowTwoWay -1 \lt \frac{x}{2} \lt 1 \arrowTwoWay -2 \lt x \lt 2 \pd\]
+        The <b>radius of convergence</b> is \(2.\) 
+        This is our preliminary interval of convergence. We now test the endpoints:
+        When \(x = -2,\) \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n (-2)^n}{2^n} = \sum_{n = 0}^\infty (-1)^{2n} = \sum_{n = 0}^\infty 1 \cma\]
+        which diverges since a constant is added infinitely many times. 
+        Likewise, at \(x = 2,\) \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n (2)^n}{2^n} = \sum_{n = 0}^\infty (-1)^{n} \pd\]
+        The Alternating Series Test does not assert that this sum converges. 
+        Instead, we note that \(\lim_{n \to \infty} (-1)^n\) doesn't exist, 
+        so \(\sum_{n = 0}^\infty (-1)^n\) diverges by the Divergence Test. 
+        Thus, we exclude both endpoints; the interval of convergence is 
+        \[\boxed{-2 \lt x \lt 2}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(-1)^n (x - 3)^n}{e^n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Calling \(a_n = (-1)^n (x - 3)^n/e^n,\)
+        we understand that Ratio Test states that \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        We ignore the alternator \((-1)^n\) in \(\abs{a_{n + 1}/a_n}\) because the absolute value bars 
+        force the quantity to be positive. 
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{(x - 3)^n \cdot (x - 3)}{e^n \cdot e} \cdot \frac{e^n}{(x - 3)^n}} 
+        &amp;= \abs{\frac{x - 3}{e}} \lim_{n \to \infty} \abs{1} \nl 
+        &amp;= \abs{\frac{x - 3}{e}} \pd  
+        \ea 
+        \]
+        The series converges if \(\abs{(x - 3)/e} \lt 1,\)
+        or 
+        \[-1 \lt \frac{x - 3}{e} \lt 1 \arrowTwoWay -e + 3 \lt x \lt e + 3 \pd\]
+        This is our preliminary interval of convergence. 
+        The <b>radius of convergence</b> is \(e,\)
+        since the interval extends a distance \(e\) from either side of the series' center, \(x = 3.\) 
+        We now test the endpoints:
+        When \(x = -e + 3,\) \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n (-e + 3 - 3)^n}{e^n} = \sum_{n = 0}^\infty \frac{(-1)^n (-e)^n}{e^n} = 
+        \sum_{n = 0}^\infty (-1)^{2n} = \sum_{n = 0}^\infty 1 \cma\]
+        which diverges because a constant is added infinitely many times. 
+        Similarly, at \(x = e + 3\) the series becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n (e + 3 - 3)^n}{e^n} = \sum_{n = 0}^\infty (-1)^n \cma\]
+        which diverges by the Divergence Test because \(\lim_{n \to \infty} (-1)^n\) does not exist.
+        Thus, we exclude both endpoints; the interval of convergence is 
+        \[\boxed{-e + 3 \lt x \lt e + 3}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{x^{2n}}{n \cdot 9^n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = x^{2n}/(n \cdot 9^n).\)
+        The series \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\)
+        by the Ratio Test.
+        Note that 
+        \[a_{n + 1} = \frac{x^{2(n + 1)}}{(n + 1)(9)^{n + 1}} = \frac{x^{2n} \cdot x^2}{(n + 1) (9)^n \cdot 9} \pd\]
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{x^{2n} \cdot x^2}{(n + 1) \cdot 9^n \cdot 9} \cdot \frac{n \cdot 9^n}{x^{2n}}} 
+        &amp;= \abs{\frac{x^2}{9}} \lim_{n \to \infty} \abs{\frac{n}{n + 1}} \nl 
+        &amp;= \abs{\frac{x^2}{9}} \lt 1 \pd  
+        \ea 
+        \]
+        Then 
+        \[\abs{\frac{x^2}{9}} \lt 1 \arrowTwoWay \abs{\frac{x}{3}} \lt 1 \arrowTwoWay -3 \lt x \lt 3 \pd\]
+        The <b>radius of convergence</b> of the series is \(3.\) 
+        This is our preliminary interval of convergence. We now test the endpoints:
+        When \(x = -3,\) \(\sum_{n = 1}^\infty a_n\) becomes 
+        \[\sum_{n = 1}^\infty \frac{(-3)^{2n}}{n(9)^n} = \sum_{n = 1}^\infty \frac{(9)^{n}}{n(9)^n} 
+        = \sum_{n = 1}^\infty \frac{1}{n}\cma\]
+        which diverges since it is the Harmonic Series.
+        And at \(x = 3\) the series becomes 
+        \[\sum_{n = 1}^\infty \frac{(3)^{2n}}{n(9)^n} = \sum_{n = 1}^\infty \frac{(9)^{n}}{n(9)^n} 
+        = \sum_{n = 1}^\infty \frac{1}{n}\cma\]
+        the same result from substituting \(x = -3.\)
+        Hence, we exclude both endpoints; our interval of convergence is 
+        \[\boxed{-3 \lt x \lt 3}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{x^{3n}}{8^n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = x^{3n}/8^n.\)
+        The series \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\)
+        by the Ratio Test.
+        Note that 
+        \[a_{n + 1} = \frac{x^{3(n + 1)}}{(8)^{n + 1}} = \frac{x^{3n} \cdot x^3}{8^n \cdot 8} \pd\]
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{x^{3n} \cdot x^3}{8^n \cdot 8} \cdot \frac{8^n}{x^{3n}}} 
+        &amp;= \abs{\frac{x^3}{8}} \lim_{n \to \infty} \abs{1} \nl 
+        &amp;= \abs{\frac{x^3}{8}} \lt 1 \pd  
+        \ea 
+        \]
+        Then 
+        \[\abs{\frac{x^3}{8}} \lt 1 \arrowTwoWay -8 \lt x^3 \lt 8 \arrowTwoWay -2 \lt x \lt 2 \pd\]
+        The <b>radius of convergence</b> of the series is \(2.\) 
+        This is our preliminary interval of convergence. We now test the endpoints:
+        When \(x = -2,\) \(\sum_{n = 1}^\infty a_n\) becomes 
+        \[\sum_{n = 1}^\infty \frac{(-2)^{3n}}{8^n} = \sum_{n = 1}^\infty \frac{(-8)^n}{8^n} 
+        = \sum_{n = 1}^\infty (-1)^n \cma\]
+        which diverges by the Divergence Test since \(\lim_{n \to \infty} (-1)^n\) does not exist.
+        And at \(x = 2\) the series becomes 
+        \[\sum_{n = 1}^\infty \frac{(2)^{3n}}{8^n} = \sum_{n = 1}^\infty \frac{(8)^n}{8^n} 
+        = \sum_{n = 1}^\infty 1 \cma\]
+        which also diverges by the Divergence Test because \(\lim_{n \to \infty} 1 \ne 0.\)
+        Hence, we exclude both endpoints; our interval of convergence is 
+        \[\boxed{-2 \lt x \lt 2}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{n + 3}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Letting \(a_n = (-1)^n \, x^{2n + 1}/(n + 3),\)
+        we note that 
+        by the Ratio Test the series \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        Also, 
+        \[a_{n + 1} = \frac{(-1)^{n + 1} \, x^{2(n + 1) + 1}}{(n + 1) + 3} = \frac{(-1)^{n + 1} x^{2n} \cdot x^3}{n + 4} \pd\]
+        In the expression \(\abs{a_{n + 1}/a_n},\) we omit the alternators \((-1)^{n + 1}\)
+        and \((-1)^n\) because they don't affect the absolute value.
+        Therefore, we have 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{ \frac{x^{2n} \cdot x^3}{n + 4} \cdot \frac{n + 3}{x^{2n} \cdot x} } 
+        &amp;= \abs{x^2} \lim_{n \to \infty} \abs{ \frac{n + 3}{n + 4} } \nl 
+        &amp;= \abs{x^2} \lt 1 \pd  
+        \ea 
+        \]
+        Then 
+        \[\abs{x^2} \lt 1 \arrowTwoWay \abs{x} \lt 1 \arrowTwoWay -1 \lt x \lt 1 \pd\]
+        This is our preliminary interval of convergence.
+        The <b>radius of convergence</b> of the series is \(1.\) 
+        We now test the endpoints:
+        When \(x = -1,\) \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n \, (-1)^{2n + 1}}{n + 3} 
+        = \sum_{n = 0}^\infty \frac{(-1)^n \cdot (-1)^{2n} \cdot (-1)}{n + 3} = \sum_{n = 0}^\infty \frac{(-1)^{n + 1}}{n + 3} \cma\]
+        which converges by the Alternating Series Test because \(\lim_{n \to \infty} 1/(n + 3) = 0\)
+        and \(1/(n + 3)\) is decreasing for \(n \geq 0.\)
+        And at \(x = 1\) the series becomes 
+        \[\sum_{n = 0}^\infty \frac{(-1)^n \, (1)^{2n + 1}}{n + 3} = \sum_{n = 0}^\infty \frac{(-1)^n}{n + 3} \cma\]
+        which converges by the Alternating Series Test by similar logic.
+        Hence, we include both endpoints; our interval of convergence is 
+        \[\boxed{-1 \leq x \leq 1}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{x^n}{(n + 1) (-2)^n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let 
+        \[a_n = \frac{x^n}{(n + 1) (-2)^n} = \frac{x^n}{(n + 1) (2^n) (-1)^n} \pd\]
+        The series \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\)
+        by the Ratio Test.
+        We can ignore the alternator \((-1)^n\) in \(\abs{a_{n + 1}/a_n}\) because the absolute value bars 
+        force the quantity to be positive. 
+        We obtain 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{x^n \cdot x}{(n + 2) (2^n)(2)} \cdot \frac{(n + 1) (2^n)}{x^n}} 
+        &amp;= \abs{\frac{x}{2}} \lim_{n \to \infty} \abs{\frac{n + 1}{n + 2}} \nl 
+        &amp;= \abs{\frac{x}{2}} \lt 1 \pd  
+        \ea 
+        \]
+        Then 
+        \[\abs{\frac{x}{2}} \lt 1 \arrowTwoWay -1 \lt \frac{x}{2} \lt 1 \arrowTwoWay -2 \lt x \lt 2 \pd\]
+        The <b>radius of convergence</b> is \(2.\) 
+        This is our preliminary interval of convergence. We now test the endpoints:
+        When \(x = -2,\) \(\sum_{n = 0}^\infty a_n\) becomes 
+        \[\sum_{n = 0}^\infty \frac{(-2)^n}{(n + 1) (-2)^n} = \sum_{n = 0}^\infty \frac{1}{n + 1}\cma\]
+        which diverges by the Integral Test. \(\big[\int_0^\infty \dd x/(x + 1)\) is divergent.\(\big]\)
+        But at \(x = 2\) the series becomes 
+        \[\sum_{n = 0}^\infty \frac{(2)^n}{(n + 1) (-2)^n} = \sum_{n = 0}^\infty \frac{1}{(n + 1) (-1)^n} \cma\]
+        which converges by the Alternating Series Test because \(\lim_{n \to \infty} 1/(n + 1) = 0\)
+        and \(1/(n + 1)\) is decreasing for \(n \geq 0.\)
+        Thus, our interval of convergence is 
+        \[\boxed{-2 \lt x \leq 2}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{5(x + 5)^{2n}}{4^n \cdot n}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Letting \(a_n = 5(x + 5)^{2n}/(4^n \cdot n),\)
+        we note that
+        by the Ratio Test the series \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        Here,
+        \[a_{n + 1} = \frac{5(x + 5)^{2(n + 1)}}{4^{n + 1} (n + 1)} = \frac{5(x + 5)^{2n} (x + 5)^2}{4(n + 1) \cdot 4^n} \pd\]
+        Therefore, we have 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{ \frac{5(x + 5)^{2n} (x + 5)^2}{4(n + 1) \cdot 4^n} \cdot \frac{n \cdot 4^n}{5(x + 5)^{2n}} } 
+        &amp;= \abs{\frac{(x + 5)^2}{4}} \lim_{n \to \infty} \abs{ \frac{n}{n + 1} } \nl 
+        &amp;= \abs{\frac{(x + 5)^2}{4}} \pd  
+        \ea 
+        \]
+        Then 
+        \[\abs{\frac{(x + 5)^2}{4}} \lt 1 \arrowTwoWay \abs{\frac{x + 5}{2}} \lt 1 \arrowTwoWay -7 \lt x \lt -3 \pd\]
+        This is our preliminary interval of convergence.
+        The <b>radius of convergence</b> of the series is \(R = 2,\) 
+        since the interval extends a distance of \(R\) from either side of the center of the series, \(x = -5.\)
+        We now test the endpoints:
+        When \(x = -7,\) \(\sum_{n = 1}^\infty a_n\) becomes 
+        \[\sum_{n = 1}^\infty \frac{5 \cdot (-7 + 5)^{2n}}{n \cdot 4^n} = \sum_{n = 1}^\infty \frac{5 \cdot 4^{n}}{n \cdot 4^n} 
+        = \sum_{n = 1}^\infty \frac{5}{n} \cma\]
+        which diverges because it is the Harmonic Series.
+        Similarly, at \(x = -3\) the series becomes 
+        \[\sum_{n = 1}^\infty \frac{5 \cdot (-3 + 5)^{2n}}{n \cdot 4^n} = \sum_{n = 1}^\infty \frac{5 \cdot 4^n}{n \cdot 4^n} 
+        = \sum_{n = 1}^\infty \frac{5}{n} \cma\]
+        the same divergent series produced when \(x = -7.\)
+        We therefore exclude both endpoints, obtaining the interval of convergence of  
+        \[\boxed{-7 \lt x \lt -3}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{x^{5n}}{(2n)!}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We let \(a_n = x^{5n}/(2n)! \, .\)
+        Then \(\sum_{n = 0}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1\)
+        by the Ratio Test.
+        The expansion of \((2n + 2)!\) is \((2n + 2)(2n + 1)(2n)! \, ;\)
+        consequently, 
+        \[a_{n + 1} = \frac{x^{5n} \cdot x^5}{(2n + 2)(2n + 1)(2n)!} \pd\] 
+        Thus, our limit is 
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{ \frac{x^{5n} \cdot x^5}{(2n + 2)(2n + 1)(2n)!} \cdot \frac{(2n)!}{x^{5n}}} 
+        &amp;= \abs{x^5} \lim_{n \to \infty} \abs{ \frac{1}{(2n + 2)(2n + 1)} } \nl 
+        &amp;= \abs{x^5} \cdot 0 \lt 1 \pd 
+        \ea 
+        \]
+        <i>Any</i> value of \(x\) satisfies this inequality.
+        Thus, the interval of convergence is 
+        \[\boxed{-\infty \lt x \lt \infty}\]
+        and the <b>radius of convergence</b> is \(R = \infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(5x)^n \sqrt{n + 1}}{n^2}\]
+     find the series' radius of convergence and interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (5x)^n \sqrt{n + 1}/n^2.\)
+        The series \(\sum_{n = 1}^\infty a_n\) converges if \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        We then solve for \(x\) that satisfies this condition.
+        We obtain
+        \[
+        \ba 
+        \lim_{n \to \infty} \abs{\frac{(5x)^{n + 1} \sqrt{(n + 1) + 1}}{(n + 1)^2} \cdot \frac{n^2}{(5x)^n \sqrt{n + 1}}} 
+        &amp;= \lim_{n \to \infty} \abs{\frac{(5x)^n (5x) \sqrt{n + 2}}{n^2 + 2n + 1} \cdot \frac{n^2}{(5x)^n \sqrt{n + 1}}} \nl 
+        &amp;= \abs{5x} \lim_{n \to \infty} \abs{ \frac{\sqrt{n + 2}}{n^2 + 2n + 1} \cdot \frac{n^2}{\sqrt{n + 1}}} \nl 
+        &amp;= \abs{5x} \lt 1 \pd 
+        \ea 
+        \]
+        Hence, our <i>preliminary</i> interval of convergence is 
+        \[-1 \lt 5x \lt 1 \arrowTwoWay -\tfrac{1}{5} \lt x \lt \tfrac{1}{5} \pd\]
+        We therefore find the <b>radius of convergence</b> to be \(R = 1/5.\)
+        Lastly, we evaluate the series at the endpoints of this interval:
+        At \(x = -1/5\) the series becomes
+        \[\sum_{n = 1}^\infty \frac{\left(5 \cdot -\frac{1}{5}\right)^n \sqrt{n + 1}}{n^2} 
+        = \sum_{n = 1}^\infty \frac{(-1)^n \sqrt{n + 1}}{n^2} \cma\]
+        which converges by the Alternating Series Test because \(\lim_{n \to \infty} \sqrt{n + 1}/n^2 = 0\)
+        and \(\sqrt{n + 1}/n^2\) is decreasing for \(n \geq 1.\)
+        At \(x = 1/5\) the series becomes 
+        \[\sum_{n = 1}^\infty \frac{\left(5 \cdot \frac{1}{5}\right)^n \sqrt{n + 1}}{n^2} 
+        = \sum_{n = 1}^\infty \frac{(1)^n \sqrt{n + 1}}{n^2} = \sum_{n = 1}^\infty \frac{\sqrt{n + 1}}{n^2} \cma\]
+        which converges by Limit Comparison with \(\sum_{n = 1}^\infty \sqrt{n}/n^2,\) a \(p\)-series with \(p = 3/2 \gt 1.\)
+        Thus, we include both endpoints. The interval of convergence is therefore 
+        \[\boxed{-\tfrac{1}{5} \leq x \leq \tfrac{1}{5}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{1}{1 - 4x}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The rational expression is a geometric series of common ratio \(r = 4x.\)
+        Hence, 
+        \[\frac{1}{1 - 4x} = \boxed{\sum_{n = 0}^\infty (4x)^n}\]
+        The series converges if \(\abs{4x} \lt 1\)—that is, 
+        \[\boxed{-4 \lt x \lt 4}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (But we must check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{1}{1 - x^6}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The rational expression is a geometric series of common ratio \(r = x^6.\)
+        Hence, 
+        \[\frac{1}{1 - x^6} = \sum_{n = 0}^\infty \par{x^6}^n = \boxed{\sum_{n = 0}^\infty x^{6n}}\]
+        The series converges if \(\abs{x^6} \lt 1\)—that is, 
+        \[\abs{x} \lt 1 \arrowTwoWay \boxed{-1 \lt x \lt 1}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (But we must check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{1}{2 - x}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the series as 
+        \[\frac{1/2}{1 - \frac{x}{2}} \cma\]
+        a geometric series of common ratio \(r = x/2\)
+        multiplied by \(1/2.\)
+        Hence, 
+        \[\frac{1}{2 - x} = \boxed{\frac{1}{2} \sum_{n = 0}^\infty \par{\frac{x}{2}}^n}\]
+        The series converges if \(\abs{x/2} \lt 1\)—that is, 
+        \[\abs{x} \lt 2 \arrowTwoWay \boxed{-2 \lt x \lt 2}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (But we must check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{4}{1 + x^3}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Writing the denominator as \(1 - (-x^3),\)
+        we see that the rational expression is a geometric series of common ratio \(r = -x^3.\)
+        Hence, 
+        \[\frac{4}{1 + x^3} = 4 \sum_{n = 0}^\infty \par{-x^3}^n = \boxed{4\sum_{n = 0}^\infty (-1)^n x^{3n}}\]
+        The series converges if \(\abs{-x^3} \lt 1\)—that is, 
+        \[\abs{x} \lt 1 \arrowTwoWay \boxed{-1 \lt x \lt 1}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (We do check the endpoints, however, if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{x^2}{1 - x^5}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The rational expression is a geometric series of common ratio \(r = x^5,\)
+        multiplied by the term \(x^2.\)
+        Hence, 
+        \[\frac{x^2}{1 - x^5} = x^2 \sum_{n = 0}^\infty \par{x^5}^n = \boxed{\sum_{n = 0}^\infty x^{5n + 2}}\]
+        The series converges if \(\abs{x^5} \lt 1\)—namely, 
+        \[\abs{x} \lt 1 \arrowTwoWay \boxed{-1 \lt x \lt 1}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (We do check the endpoints, however, if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{1}{x + 4}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the series as 
+        \[\frac{1/4}{1 - \par{-\frac{x}{4}}} \cma\]
+        a geometric series of common ratio \(r = -x/4\)
+        multiplied by \(1/4.\)
+        So 
+        \[\frac{1}{x + 4} = \frac{1}{4} \sum_{n = 0}^\infty \par{-\frac{x}{4}}^n 
+        = \boxed{\frac{1}{4} \sum_{n = 0}^\infty (-1)^n \par{\frac{x}{4}}^n}\]
+        The series converges if \(\abs{-x/4} \lt 1\)—that is, 
+        \[\abs{x} \lt 4 \arrowTwoWay \boxed{-4 \lt x \lt 4}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (We only check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{4x}{2 - 4x}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the series as 
+        \[\frac{2x}{1 - 2x} \cma\]
+        a geometric series of common ratio \(r = 2x\)
+        multiplied by \(2x.\)
+        Then 
+        \[\frac{4x}{2 - 4x} = 2x \sum_{n = 0}^\infty \par{2x}^n = \boxed{\sum_{n = 0}^\infty \par{2x}^{n + 1}}\]
+        The series converges if \(\abs{2x} \lt 1\)—that is, 
+        \[\abs{x} \lt \tfrac{1}{2} \arrowTwoWay \boxed{-\tfrac{1}{2} \lt x \lt \tfrac{1}{2}}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (But we must check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{x^3}{8 + 2x^2}\]
+     express the function as a power series and find the interval of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the series as 
+        \[\frac{x^3/8}{1 - \par{-\frac{x^2}{4}}} \cma\]
+        a geometric series of common ratio \(r = -x^2/4\)
+        multiplied by \(x^3/8.\)
+        Thus, 
+        \[\frac{x^3}{8 + 2x^2} = \frac{x^3}{8} \sum_{n = 0}^\infty \par{-\frac{x^2}{4}}^n 
+        = \boxed{\frac{x^3}{8} \sum_{n = 0}^\infty (-1)^n \par{\frac{x^2}{4}}^n}\]
+        The series converges if \(\abs{x^2/4} \lt 1\)—that is, 
+        \[\abs{x^2} \lt 4 \arrowTwoWay \abs{x} \lt 2 \arrowTwoWay \boxed{-2 \lt x \lt 2}\]
+        We exclude both endpoints when we manipulate geometric series.
+        (But we must check the endpoints if we differentiate or integrate the geometric series.)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find a power series for \(1/x\) centered at \(x = 1.\)
+        For what values of \(x\) does this power series converge to \(1/x \ques\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We express \(1/x\) in the form \(1/(1 - r)\)
+        where \(r\) has the factor \((x - 1).\)
+        In the denominator we subtract \(1\) and then add \(1,\) as follows:
+        \[\frac{1}{x} = \frac{1}{1 + (x - 1)} = \frac{1}{1 - [-(x - 1)]} \pd\]
+        This form is a geometric series of common ratio \(r = -(x - 1),\)
+        so our power series is 
+        \[\sum_{n = 0}^\infty [-(x - 1)]^n = \boxed{\sum_{n = 0}^\infty (-1)^n (x - 1)^n}\]
+        This series converges to \(1/x\) for \(x\) in the series' interval of convergence, 
+        which satisfies \(\abs{r} \lt 1\)—that is,
+        \[\abs{x - 1} \lt 1 \arrowTwoWay -1 \lt x - 1 \lt 1 \arrowTwoWay \boxed{0 \lt x \lt 2}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Represent the function \(1/(2 - x)\) using a power series centered at \(x = 4.\)
+        Determine the interval of \(x\) such that this power series converges to \(1/(2 - x).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We need to express the denominator of \(1/(2 - x)\) in the form \(1 - r\)
+        where \(r\) has the factor \((x - 4).\)
+        To \(x\) we subtract \(4\) and then add \(4,\) as follows:
+        \[\frac{1}{2 - x} = \frac{1}{2 - (x - 4 + 4)} = \frac{1}{-2 - (x - 4)} = \frac{-1/2}{1 - \parbr{-\frac{1}{2} (x - 4)}} \pd\]
+        This form is a geometric series of common ratio \(r = -\frac{1}{2}(x - 4),\)
+        so our power series is 
+        \[-\frac{1}{2} \sum_{n = 0}^\infty \parbr{-\frac{1}{2}(x - 4)}^n 
+        = \boxed{\sum_{n = 0}^\infty (-1)^{n + 1} \par{\frac{1}{2}}^{n + 1} (x - 4)^n}\]
+        This series converges to \(1/(2 - x)\) if \(\abs{r} \lt 1 \col\)
+        \[\abs{-\frac{1}{2}(x - 4)} \lt 1 \arrowTwoWay \abs{x - 4} \lt 2 \arrowTwoWay \boxed{2 \lt x \lt 6}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Determine a power series representation for \(x/(4 + x)\) 
+        centered at \(x = -5.\)
+        What is the series' interval of convergence?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We manipulate the denominator of the rational expression to be \(1 - r\)
+        where \(r\) has the factor \((x + 5).\)
+        To \(x\) we add \(5\) and then subtract \(5,\) as follows:
+        \[\frac{x}{4 + x} = \frac{x}{4 + (x + 5 - 5)} = \frac{x}{-1 + (x + 5)} = \frac{-x}{1 - (x + 5)} \pd\]
+        We now have a geometric series of common ratio \(r = (x + 5).\)
+        Hence, our series is  
+        \[\boxed{-x \sum_{n = 0}^\infty (x + 5)^n}\]
+        The series' interval of convergence satisfies \(\abs{r} \lt 1 \col\)
+        \[\abs{x + 5} \lt 1 \arrowTwoWay -1 \lt x + 5 \lt 1 \arrowTwoWay \boxed{-6 \lt x \lt -4}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f(x) = 1/(6 + x).\) 
+        Find a power series for \(f(x)\) centered at \(x = -2.\) 
+        For what values of \(x\) does the power series converge to \(f(x) \ques\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We need to express the denominator of \(1/(6 + x)\) in the form \(1 - r\)
+        where \(r\) has the factor \((x + 2).\)
+        To \(x\) we add \(2\) and then subtract \(2,\) as follows:
+        \[\frac{1}{6 + x} 
+        = \frac{1}{6 + (x + 2 - 2)} = \frac{1}{4 + (x + 2)} = \frac{1/4}{1 - \parbr{-\frac{1}{4} (x + 2)}} \pd\]
+        This form is a geometric series of common ratio \(r = -\frac{1}{4}(x + 2).\)
+        Hence, our series is  
+        \[\frac{1}{4} \sum_{n = 0}^\infty \parbr{-\frac{1}{4}(x + 2)}^n 
+        = \boxed{\sum_{n = 0}^\infty (-1)^n \par{\frac{1}{4}}^{n + 1} (x + 2)^n}\]
+        The series' interval of convergence satisfies \(\abs{r} \lt 1 \col\)
+        \[\abs{-\frac{1}{4}(x + 2)} \lt 1 \arrowTwoWay \abs{x + 2} \lt 4 \arrowTwoWay \boxed{-6 \lt x \lt 2}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \sum_{n = 1}^\infty \frac{x^n}{2n}\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The terms of \(\sum_{n = 1}^\infty x^n/2n\) are 
+        \[\frac{x}{2} + \frac{x^2}{4} + \frac{x^3}{6} + \frac{x^4}{8} + \cdots \pd\]
+        We can differentiate each term and write a pattern, 
+        or we can differentiate the summation formula, as follows:
+        \[\deriv{}{x} \sum_{n = 1}^\infty \frac{x^n}{2n} = \sum_{n = 1}^\infty \deriv{}{x} \parbr{\frac{x^n}{2n}} 
+        = \boxed{\sum_{n = 1}^\infty \frac{x^{n - 1}}{2}}\]
+        which is 
+        \[\frac{1}{2} + \frac{x}{2} + \frac{x^2}{2} + \frac{x^3}{2} + \cdots \pd\] 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \sum_{n = 1}^\infty \frac{x^{3n}}{n + 1}\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If we write some terms of \(\sum_{n = 1}^\infty x^{3n}/(n + 1),\) then we get  
+        \[\frac{x^3}{2} + \frac{x^6}{3} + \frac{x^9}{4} + \frac{x^{12}}{5} + \cdots \pd\]
+        We can differentiate each term and write a pattern, 
+        or we can differentiate the summation formula, as follows:
+        \[\deriv{}{x} \sum_{n = 1}^\infty \frac{x^{3n}}{n + 1} = \sum_{n = 1}^\infty \deriv{}{x} \parbr{\frac{x^{3n}}{n + 1}} 
+        = \boxed{\sum_{n = 1}^\infty 3n \, \frac{x^{3n - 1}}{n + 1}}\]
+        which is 
+        \[\frac{3x^2}{2} + 2x^5 + \frac{9x^8}{4} + \frac{12x^{11}}{5} + \cdots \pd\] 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \sum_{n = 0}^\infty \frac{x^{2n}}{3n + 1}\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The terms of \(\sum_{n = 0}^\infty x^{2n}/(3n + 1)\) are 
+        \[1 + \frac{x^2}{4} + \frac{x^4}{7} + \frac{x^6}{10} + \cdots \pd\]
+        We may differentiate each term and write a pattern, 
+        or we can differentiate the summation formula, as follows:
+        \[\deriv{}{x} \sum_{n = 0}^\infty \frac{x^{2n}}{3n + 1} = \sum_{n = 0}^\infty \deriv{}{x} \parbr{\frac{x^{2n}}{3n + 1}}
+        = \boxed{\sum_{n = 1}^\infty 2n \, \frac{x^{2n - 1}}{3n + 1}}\]
+        Note that we shift the index from \(n = 0\) to \(n = 1\) because the first term of  
+        \(\sum_{n = 0}^\infty x^{2n}/(3n + 1)\) is a constant,
+        so its derivative is \(0.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \sum_{n = 0}^\infty \frac{(-1)^n \, t^n}{n + 1}\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We differentiate the summation formula, as follows:
+        \[\deriv{}{t} \sum_{n = 0}^\infty \frac{(-1)^n \, t^n}{n + 1} =  \sum_{n = 0}^\infty \deriv{}{t} \parbr{\frac{(-1)^n \, t^n}{n + 1}}
+        = \boxed{\sum_{n = 1}^\infty \frac{(-1)^n \, n}{n + 1} t^{n - 1}}\]
+        We shift the index from \(n = 0\) to \(n = 1\) because the first term of  
+        \(\sum_{n = 0}^\infty (-1)^n \, t^n/(n + 1)\) is a constant,
+        so its derivative is \(0.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \sum_{n = 1}^\infty \frac{(-1)^n x^{3n}}{(3n)!}\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We differentiate the summation formula, as follows:
+        \[\deriv{}{x} \sum_{n = 1}^\infty \frac{(-1)^n x^{3n}}{(3n)!} =  \sum_{n = 1}^\infty \deriv{}{x} \parbr{\frac{(-1)^n x^{3n}}{(3n)!}}
+        = \boxed{\sum_{n = 1}^\infty \frac{3n \, (-1)^n x^{3n - 1}}{(3n - 1)!}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \int_0^x \sum_{n = 0}^\infty \frac{t^{2n + 1}}{n!} \di t\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Integrating the summation formula gives 
+        \[
+        \ba 
+        \sum_{n = 0}^\infty \frac{t^{2n + 2}}{(2n + 2) n!} \intEval_0^x 
+        &amp;= \sum_{n = 0}^\infty \frac{x^{2n + 2}}{(2n + 2) n!} - \sum_{n = 0}^\infty \frac{(0)^{2n + 2}}{(2n + 2) n!} \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{x^{2n + 2}}{(2n + 2) n!}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \int_2^x \sum_{n = 0}^\infty \frac{(t - 2)^{n + 3}}{n + 1} \di t\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We integrate the summation formula to obtain 
+        \[
+        \ba 
+        \sum_{n = 0}^\infty \frac{(t - 2)^{n + 4}}{(n + 4)(n + 1)} \intEval_2^x 
+        &amp;= \sum_{n = 0}^\infty \frac{(x - 2)^{n + 4}}{(n + 4)(n + 1)} - \sum_{n = 0}^\infty \frac{(2 - 2)^{n + 4}}{(n + 4)(n + 1)} \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(x - 2)^{n + 4}}{(n + 4)(n + 1)}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \int_4^x \sum_{n = 1}^\infty (-1)^n \frac{(t - 4)^n}{n + 1} \di t\]
+     write a power series for the given expression. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Integrating the summation formula gives 
+        \[
+        \ba 
+        \sum_{n = 1}^\infty (-1)^n \frac{(t - 4)^{n + 1}}{(n + 1)^2} \intEval_4^x 
+        &amp;= \sum_{n = 1}^\infty (-1)^n \frac{(x - 4)^{n + 1}}{(n + 1)^2} - \sum_{n = 1}^\infty (-1)^n \frac{(4 - 4)^{n + 1}}{(n + 1)^2} \nl 
+        &amp;= \boxed{\sum_{n = 1}^\infty (-1)^n \frac{(x - 4)^{n + 1}}{(n + 1)^2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Function \(f\) has the power series representation
+        \(\sum_{n = 1}^\infty x^{2n}/n.\)
+        Let \(g(x) = \int f(x) \di x\) and \(g(0) = 1.\)
+        Determine a power series representation for \(g.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We find a power series representation of \(g\) by integrating the power series representation of \(f \col\)
+        \[g(x) = \int \sum_{n = 1}^\infty \frac{x^{2n}}{n} \di x 
+        = C + \sum_{n = 1}^\infty \frac{x^{2n + 1}}{n(2n + 1)} \pd\]
+        It is important to remember the constant of integration.
+        To solve for \(C\) we substitute the initial condition \(g(0) = 1 \col\)
+        \[g(0) = C + \sum_{n = 1}^\infty \frac{(0)^{2n + 1}}{n(2n + 1)} = 1 \implies C = 1 \pd\]
+        Hence, 
+        \[g(x) = \boxed{1 + \sum_{n = 1}^\infty \frac{x^{2n + 1}}{n(2n + 1)}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f\) be a function that has the power series representation
+        \[f(x) = \sum_{n = 0}^\infty (-1)^n \frac{x^{2n + 1}}{n + 2} \pd\]
+        Function \(g\) is defined by \(g(x) = \int f(x) \di x\) and satisfies \(g(0) = 2.\)
+        Find a power series representation for \(g.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We find a power series representation of \(g\) by integrating the power series representation of \(f \col\)
+        \[g(x) = \int \sum_{n = 0}^\infty (-1)^n \frac{x^{2n + 1}}{n + 2} \di x 
+        = C + \sum_{n = 0}^\infty \frac{(-1)^n x^{2n + 2}}{(n + 2)(2n + 2)} \pd\]
+        It is important not to forget the constant of integration.
+        To solve for \(C\) we substitute the initial condition \(g(0) = 2 \col\)
+        \[g(0) = C + \sum_{n = 0}^\infty \frac{(-1)^n (0)^{2n + 2}}{(n + 2)(2n + 2)} = 2 \implies C = 2 \pd\]
+        Hence, 
+        \[g(x) = \boxed{2 + \sum_{n = 0}^\infty \frac{(-1)^n x^{2n + 2}}{(n + 2)(2n + 2)}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Function \(f\) has the power series representation
+        \[f(x) = \sum_{n = 0}^\infty (-1)^n \frac{(x - 3)^{n + 4}}{(n + 1)!} \pd\]
+        Suppose \(F\) is an antiderivative of \(f\) that satisfies \(F(3) = 4.\)
+        Find a power series representation of \(F.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Integrating the power series for \(f\) gives 
+        \[F(x) = \int \sum_{n = 0}^\infty (-1)^n \frac{(x - 3)^{n + 4}}{(n + 1)!} \di x 
+        = C + \sum_{n = 0}^\infty (-1)^n \frac{(x - 3)^{n + 5}}{(n + 5)(n + 1)!} \pd\]
+        It is important not to forget the constant of integration.
+        To solve for \(C\) we substitute the initial condition \(F(3) = 4 \col\)
+        \[F(3) = C + \sum_{n = 0}^\infty (-1)^n \frac{(3 - 3)^{n + 5}}{(n + 5)(n + 1)!} = 4 \implies C = 4 \pd\]
+        Thus, 
+        \[g(x) = \boxed{4 + \sum_{n = 0}^\infty (-1)^n \frac{(x - 3)^{n + 5}}{(n + 5)(n + 1)!}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Using the relationship 
+        \[\deriv{}{x} \parbr{\tan^{-1} x} = \frac{1}{1 + x^2} \cma\]
+        find a power series for \(\tan^{-1} x.\)
+        Then give the interval of convergence.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We want to find a power series for \(1/(1 + x^2)\)
+        and then integrate to obtain a power series for \(\tan^{-1} x.\)
+        We rewrite the rational expression as 
+        \[\frac{1}{1 - \par{-x^2}} \cma\]
+        a geometric series with common ratio \(r = -x^2.\)
+        So the power series for \(1/(1 + x^2)\) is 
+        \[\sum_{n = 0}^\infty \par{-x^2}^n = \sum_{n = 0}^\infty (-1)^n \, x^{2n}\]
+        for \(-1 \lt x \lt 1.\)
+        Then integrating this series gives 
+        \[\tan^{-1} x = C + \sum_{n = 0}^\infty (-1)^n \, \frac{x^{2n + 1}}{2n + 1} \pd\]
+        We must now check the endpoints, because integrating a power series preserves the <i>radius</i>
+        of convergence but not necessarily the <i>interval</i> of convergence. 
+        At \(x = -1\) the series becomes 
+        \[\sum_{n = 0}^\infty (-1)^n \, \frac{(-1)^{2n + 1}}{2n + 1} = \sum_{n = 0}^\infty (-1)^{n + 1} \, \frac{1}{2n + 1} \cma\]
+        which converges by the Alternating Series Test because \(\lim_{n \to \infty} 1/(2n + 1) = 0\) and \(1/(2n + 1)\) 
+        is decreasing for \(n \geq 0.\)
+        Likewise, at \(x = 1\) the series is 
+        \[\sum_{n = 0}^\infty (-1)^n \, \frac{(1)^{2n + 1}}{2n + 1} = \sum_{n = 0}^\infty (-1)^n \, \frac{1}{2n + 1} \cma\]
+        which converges by the same reason. 
+        Hence, the <b>interval of convergence</b> is \(-1 \leq x \leq 1.\)
+        The final step is to solve for \(C\) by substituting a value of \(x\) within the series' interval of convergence. 
+        The interval includes \(x = 0,\) and \(\tan^{-1} 0 = 0,\) so we find 
+        \[\tan^{-1} 0 = C + \sum_{n = 0}^\infty (-1)^n \, \frac{(0)^{2n + 1}}{2n + 1} = 0 \implies C = 0 \pd\]
+        The power series for \(\tan^{-1} x\) is therefore 
+        \[\boxed{\sum_{n = 0}^\infty (-1)^n \, \frac{x^{2n + 1}}{2n + 1} \cma \abs{x} \leq 1}\] 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Suppose that the power series \(\sum_{n = 0}^\infty c_n x^n\) has a radius of convergence of \(R.\)
+        What is the radius of convergence of \(\sum_{n = 0}^\infty c_n (2x)^n \ques\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = c_n x^n.\)
+        We take the limit of \(\abs{a_{n + 1}/a_n}\) as \(n \to \infty,\) as follows:
+        \[\lim_{n \to \infty} \abs{\frac{c_{n + 1} x \cdot x^n}{c_n x^n}} = \abs{x} \lim_{n \to \infty} \abs{\frac{c_{n + 1}}{c_n}} \pd \]
+        This limit must be less than \(1\) in order for \(\sum_{n = 0}^\infty c_n x^n\) to converge.
+        Since the series has a radius of convergence of \(R,\) the inequality must become \(\abs x \lt R.\)
+        We then have 
+        \begin{equation} 
+        \abs{x} \lt \frac{1}{\lim_{n \to \infty} \abs{c_{n + 1}/c_n}} = R \pd \label{eq:|x|-R}
+        \end{equation}
+        Now if \(b_n = c_n (2x)^n,\) and \(\sum_{n = 0}^\infty b_n\) converges, then \(\lim_{n \to \infty} \abs{b_{n + 1}/b_n}\) is 
+        \[\lim_{n \to \infty} \abs{\frac{c_{n + 1} (2x) (2x)^n}{c_n (2x)^n}} = \abs{2x} \lim_{n \to \infty} \abs{\frac{c_{n + 1}}{c_n}} \lt 1 \pd\]
+        Therefore, we find the radius of convergence of \(\sum_{n = 0}^\infty b_n\) by replacing \(x\)
+        with \(2x\) in \(\eqref{eq:|x|-R} \col\)
+        \[\abs{2x} \lt \frac{1}{\lim_{n \to \infty} \abs{c_{n + 1}/c_n}} = R \pd\]
+        Then 
+        \[\abs{x} \lt \frac{1}{2 \lim_{n \to \infty} \abs{c_{n + 1}/c_n}} = \frac{R}{2} \pd\]
+        Hence, \(\sum_{n = 0}^\infty b_n\) has a radius of convergence of \(R/2.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        We obtain power series for many functions by differentiating other, known power series. 
+        <ol class="list-alpha">
+<li>
+                Show that 
+                \[\frac{1}{1 + x} = \sum_{n = 0}^\infty (-1)^n \, x^n \cma \abs x \lt 1 \pd\]
+            </li>
+<li>
+                Find a power series for \(1/(1 + x)^2.\) 
+            </li>
+<li>
+                Using the result from part (b), determine a power series for \(1/(1 + x)^3.\) 
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                The rational expression is a geometric series of common ratio \(r = -x.\)
+                Hence, 
+                \begin{align} 
+                \frac{1}{1 + x} &amp;= \sum_{n = 0}^\infty \par{-x}^n \nonumber \nl 
+                &amp;= \sum_{n = 0}^\infty (-1)^n \, x^n \cma \label{eq:1/(1+x)}
+                \end{align}
+                as requested.
+                The interval of convergence is \(\abs{r} \lt 1,\) or \(-1 \lt x \lt 1.\)
+            </li>
+<hr/>
+<li>
+                Differentiating \(\eqref{eq:1/(1+x)}\) gives 
+                \[-\frac{1}{(1 + x)^2} = \sum_{n = 1}^\infty (-1)^n \, n x^{n - 1} \pd\]
+                Multiplying both sides by \(-1\) then gives 
+                \begin{align} 
+                \frac{1}{(1 + x)^2} &amp;= -\sum_{n = 1}^\infty (-1)^n \, n x^{n - 1} \nonumber \nl 
+                &amp;= \boxed{\sum_{n = 1}^\infty (-1)^{n + 1} \, n x^{n - 1}} \label{eq:1/(1+x)^2}
+                \end{align} 
+                We could also write 
+                \[\sum_{n = 0}^\infty (-1)^n (n + 1) x^n \pd\]
+            </li>
+<hr/>
+<li>
+                We differentiate \(\eqref{eq:1/(1+x)^2}\) to obtain 
+                \[\frac{-2}{(1 + x)^3} = \sum_{n = 2}^\infty (-1)^{n + 1} \, n (n - 1) x^{n - 2} \pd\]
+                Dividing both sides by \(-2\) gives 
+                \[
+                \ba 
+                \frac{1}{(1 + x)^3} &amp;= \frac{1}{2} \sum_{n = 2}^\infty (-1)^{n + 2} \, n(n - 1) x^{n - 2} \nl 
+                &amp;= \boxed{\frac{1}{2} \sum_{n = 2}^\infty (-1)^n \, n(n - 1) x^{n - 2}}
+                \ea 
+                \]
+                We could also write 
+                \[\frac{1}{2} \sum_{n = 0}^\infty (-1)^n (n + 2)(n + 1) \, x^n \pd\]
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!-- [[[HARD]]] -->
+        For all \(x,\) 
+        \[f(x) = \sum_{n = 0}^\infty \frac{x^n}{n!} \pd\]
+        <ol class="list-alpha">
+<li>
+                Show that \(f\) satisfies the differential equation 
+                \(f'(x) = f(x).\)
+            </li>
+<li>
+                Show that \(f(x) = e^x.\)
+            </li>
+<li>
+                Determine a power series for \(e^{2x}.\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Differentiating the power series gives 
+                \[f'(x) = \sum_{n = 1}^\infty \frac{n x^{n - 1}}{n!} = \sum_{n = 1}^\infty \frac{x^{n - 1}}{(n - 1)!} \pd\]
+                Reindexing the series to begin at \(n = 0\)—in doing so, 
+                we replace the \((n - 1)\) terms with \(n\)—gives 
+                \[f'(x) = \sum_{n = 0}^\infty \frac{x^n}{n!} \pd\]
+                But this power series is \(f(x).\)
+                Hence, \(f'(x) = f(x).\) 
+            </li>
+<hr/>
+<li>
+                Let \(y = f(x).\) Then the differential equation of part (a) becomes 
+                \[\deriv{y}{x} = y \cma\]
+                which we solve by Separation of Variables.
+                We obtain 
+                \[
+                \ba 
+                \int \frac{\dd y}{y} &amp;= \int \dd x \nl 
+                \ln \abs y &amp;= x + C_1 \nl 
+                y &amp;= Ce^x \nl 
+                f(x) &amp;= Ce^x \cma
+                \ea 
+                \]
+                where \(C = e^{C_1}.\)
+                To solve for \(C,\) we note that \(f(0) = \sum_{n = 0}^\infty 0^n/n! = 1\)
+                (assuming \(0^0 = 1\)).
+                Hence, substituting the point \((0, 1)\) gives 
+                \[f(0) = Ce^0 = 1 \implies C = 1 \pd\]
+                Thus, \(f(x) = e^x.\)
+            </li>
+<hr/>
+<li>
+                We replace \(x\) with \(2x\) to get 
+                \[f(2x) = \boxed{\sum_{n = 0}^\infty \frac{x^{2n}}{n!}}\]
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

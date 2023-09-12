@@ -1,7 +1,8 @@
 /* fonts */
 
 @font-face { font-family: Oswald; src: url('fonts/Oswald-VariableFont_wght.ttf'); } 
-
+@font-face { font-family: CMU; src: url('fonts/cmu.serif-roman.ttf'); } 
+@font-face { font-family: myFont; src: url('fonts/Myfont-Regular.ttf'); } 
 
 /* site layout */
 
@@ -33,7 +34,14 @@ h1, main, .footer-body, .tab div, .footer-disclaimer{
     margin-left: 19%;
     margin-right: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: 'CMU'; */
+    /* font-weight: 599; */
     color: white;
+}
+
+main{ /* background body */
+    font-size: 20px;
+    line-height: 2.3;
 }
 
 h1{ /* section title */
@@ -45,9 +53,8 @@ h1{ /* section title */
     line-height: 1.2;
 }
 
-
 main figure, aside{
-    margin-left: -350px;
+    margin-left: -480px;
     height: auto;
     float: right;
     left: 480px;
@@ -76,7 +83,7 @@ main img, aside{
 }
 
 main figure, main img, main figure video, aside{
-    width: 350px;
+    width: 400px;
 }
 
 aside{
@@ -89,7 +96,9 @@ aside p{
 }
 
 .figure-wide{
-    width: 80%;
+    width: 90%;
+    padding-left: 15%;
+    padding-top: 4%;
     /* margin-left: auto;
     margin-right: auto; */
     float: none;
@@ -102,12 +111,27 @@ aside p{
     margin-right: auto;
 }
 
+.figure-center-one{
+    width: 70%;
+    padding-left: 28%;
+    float: none;
+    position: relative;
+    right: 25%;
+}
+
+.figure-center-one img{
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .figure-center{
     display: flex;
     flex-direction: row;
     position: relative;
-    margin-left: 12%;
-    margin-right: 25%;
+    margin-left: 7%;
+    margin-right: 27%;
     margin-top: 5%;
 }
 
@@ -123,12 +147,27 @@ aside p{
 }
 
 @media screen and (max-width: 800px) {
-
     .figure-center{
         flex-direction: column;
         margin-left: 0%;
         margin-right: 0%;
     }
+
+    .table-vertical-adjacent{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .table-vertical{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
 
     /* .figure-center figure{
         width: 100%;
@@ -137,6 +176,16 @@ aside p{
     /* .figure-center figure image{
         width: 100%;
     } */
+}
+
+.warning{
+    color: rgb(212, 75, 75);
+    font-style: italic;
+}
+
+.good{
+    color: rgb(62, 156, 62);
+    font-style: italic;
 }
 
 .p-no-indent{
@@ -150,34 +199,46 @@ aside::before{
     margin-right: 0.3em;
 }
 
-aside::before, figure::before{
+aside::before, figure::before, .text-caution, .text-tip, .text-remark, .text-recall{
     font-family: Geneva, Tahoma, sans-serif;
+}
+
+.text-caution, .text-tip, .text-remark, .text-recall{
+    margin-right: 0.3em;
+}
+
+.box-caution::before, .text-caution{
+    color: rgb(212, 75, 75);
+}
+
+.box-tip::before, .text-tip{
+    color: rgb(222, 165, 42);
+}
+
+.box-remark::before, .text-remark{
+    color: rgb(42, 129, 222);
+}
+
+.box-recall::before, .text-recall{
+    color: rgb(124, 87, 150);
 }
 
 .box-caution::before{
     content: 'CAUTION  ';
-    color: rgb(212, 75, 75);
 }
 
 .box-tip::before{
     content: 'TIP  ';
-    color: rgb(222, 165, 42);
 }
 
 .box-remark::before{
     content: 'REMARK  ';
-    color: rgb(42, 129, 222);
 }
 
 .box-recall::before{
     content: 'RECALL  ';
-    color: rgb(124, 87, 150);
 }
 
-main{ /* background body */
-    font-size: 20px;
-    line-height: 2.3;
-}
 
 main ul{
     padding-left: 3%;
@@ -347,8 +408,9 @@ mjx-container[jax="SVG"] > svg a[href] {
 .table-list td{ 
     border: none;
     text-align: left;
-    padding-left: 0px;
+    padding: 1% 0% 1% 0%;
 }
+
 
 @media screen and (max-width: 1207px) {
     .table-list{
@@ -397,12 +459,39 @@ th{
     width: 60%;
 }
 
+.table-vertical td{
+    text-align: left;
+    padding-left: 2%;
+}
+
 .table-vertical .label-cell{
     border-bottom: 5px solid rgb(195, 195, 195);
+    z-index: 2;
+}
+
+.table-vertical-adjacent{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.table-vertical-adjacent .table-vertical{
+    width: 54%;
+    /* border-right: 10px solid white; */
+}
+
+.table-vertical-adjacent .table-vertical:first-child{
+    border-right: 2.8px solid rgb(195, 195, 195);
+    z-index: -2;
+}
+
+.table-vertical-adjacent .table-vertical:last-child{
+    border-left: 2.8px solid rgb(195, 195, 195);
+    z-index: -2;
 }
 
 .table-full-width{
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
@@ -410,6 +499,11 @@ th{
     margin-top: 20px;
     margin-bottom: 20px;
     table-layout: fixed;
+}
+
+.table-full-width td{
+    text-align: left;
+    padding: 2px 2% 2px 2%
 }
 
 .table-full-width thead{
@@ -428,7 +522,7 @@ main tr{
 
 .table-full-width td{
     text-align: left;
-    padding: 2%;
+    /* padding: 2%; */
 }
 
 .table-full-width th, td{
@@ -443,14 +537,24 @@ main tr{
     background-color: rgb(63, 62, 62);
 }
 
-td {
+.label-cell-tall{ /* TALL label cell for vertical tables — for example, display fractions */
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+.tall-row td{ /* make ENTIRE TABLE ROW tall */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td{
     border-top: 1px solid white;
     border-bottom: 1px solid white;;
     border-left: 1px solid white;
     border-right: 1px solid white;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding: 20px; */
+    /* padding-left: 40px;
+    padding-right: 40px; */
     text-align: center;
 }
 
@@ -567,6 +671,10 @@ ol li{
     margin-left: 20px;
 }
 
+.list-num > li > .label-emph, .list-alpha > li > .label-emph, .list-roman > li > .label-emph{
+    margin-left: 0px;
+}
+
 .list-num > li > .emph, .list-alpha > li > .emph, .list-roman > li > .emph{
     margin-left: 0px;
 }
@@ -590,7 +698,19 @@ ol li{
 
 .white-space::before{
     content: '&nbsp;';
-    font-size: 12.3vh;
+    font-size: 13.5vh;
+    visibility: hidden;
+}
+
+.white-space-small::before{
+    content: '&nbsp;';
+    font-size: 7.5vh;
+    visibility: hidden;
+}
+
+.white-space-medium::before{
+    content: '&nbsp;';
+    font-size: 12vh;
     visibility: hidden;
 }
 
@@ -782,4 +902,6 @@ ol li{
     .footer-nav-column{
         font-size: 15px;
     }
+
+
 }

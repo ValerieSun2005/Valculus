@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8.4 Exercise Solutions: Logistic Models</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>8.4 Exercise Solutions — Logistic Models</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="8.4-Logistic-Models.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.4-Logistic-Models-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        What is a <b>logistic growth function</b>? 
+        Define it using a differential equation and provide the solution.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        A <b>logistic growth function</b> exhibits <i>exponential growth</i> 
+        while \(y\) is small but 
+        slows in growth as \(y\) approaches some number—called the <b>carrying capacity</b>. 
+        If \(L\) is the carrying capacity and \(k\) is a positive constant, 
+        then \(y\) undergoes logistic growth with \(x\) if
+        \[\deriv{y}{x} = ky \par{1 - \frac{y}{L}} \pd\]
+        The solution to this differential equation is 
+        \[y = \frac{L}{1 + Ce^{-kx}} \cma\]
+        where \(C\) is some constant.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        What is a <b>logistic decay function</b>? 
+        Define it using a differential equation and provide the solution.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        A <b>logistic decay function</b> exhibits <i>exponential decay</i>
+        while \(y\) is large (close to the carrying capacity) 
+        but slows in growth as \(y\) becomes small.
+        If \(L\) is the carrying capacity and \(k\) is a positive constant, 
+        then \(y\) undergoes logistic <i>decay</i> with \(x\) if
+        \[\deriv{y}{x} = -ky \par{1 - \frac{y}{L}} \pd\]
+        The solution to this differential equation is 
+        \[y = \frac{L}{1 + Ce^{kx}} \cma\]
+        where \(C\) is some constant.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        When does the graph of a logistic function have an inflection point? 
+        Where is it concave up? Where is it concave down?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        A logistic function (either growth or decay) has an <b>inflection point</b>
+        when \(y\) is halfway between its horizontal asymptotes.
+        If a logistic graph has no vertical shift, then it has an inflection point when \(y\) reaches
+        half of the carrying capacity, \(y = L/2.\)
+        For \(y\) under this inflection point (that is, for \(y \lt L/2\)),
+        the graph is concave up. 
+        But for \(y\) above this inflection point (that is, for \(y \gt L/2\)),
+        the graph is concave down.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{x} = 0.4 y \par{1 - \frac{y}{20}}\]
+     calculate the carrying capacity of the logistic function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Since a logistic curve flattens as the carrying capacity is reached, we let 
+        \(\textderiv{y}{x} = 0\)
+        and solve for \(y.\)
+        We see 
+        \[
+        \ba 
+        0.4 y \par{1 - \frac{y}{20}} &amp;= 0 \nl 
+        \implies y &amp;= 0 \cma y = 20 \pd
+        \ea 
+        \]
+        We use the larger solution, so the carrying capacity of the logistic function is \(\boxed{20}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{t} = 0.8 y \par{\frac{y - 40}{100}}\]
+     calculate the carrying capacity of the logistic function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because a logistic curve flattens as the carrying capacity is reached, we let 
+        \(\textderiv{y}{t} = 0\)
+        and solve for \(y.\)
+        We see 
+        \[
+        \ba 
+        0.8 y \par{\frac{y - 40}{100}} &amp;= 0 \nl 
+        \implies y &amp;= 0 \cma y = 40 \pd
+        \ea 
+        \]
+        We choose the larger zero, so the carrying capacity of the logistic function is \(\boxed{40}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{r}{x} = r (2 - r)\]
+     calculate the carrying capacity of the logistic function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because a logistic curve flattens as the carrying capacity is reached, we let 
+        \(\textderiv{r}{x} = 0\)
+        and solve for \(r.\)
+        Doing so shows 
+        \[
+        \ba 
+        r (2 - r) &amp;= 0 \nl 
+        \implies r &amp;= 0 \cma r = 2 \pd
+        \ea 
+        \]
+        The carrying capacity is given by the larger solution, \(\boxed{2}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{N}{t} = 0.5 N (200 - N)\]
+     calculate the carrying capacity of the logistic function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because a logistic curve flattens as the carrying capacity is reached, we let 
+        \(\textderiv{N}{t} = 0\)
+        and solve for \(N.\)
+        We see 
+        \[
+        \ba 
+        0.5 N (200 - N) &amp;= 0 \nl 
+        \implies N &amp;= 0 \cma N = 200 \pd
+        \ea 
+        \]
+        The carrying capacity is given by the larger solution, \(\boxed{200}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Sketch a slope field for the differential equation 
+        \[\deriv{y}{x} = \frac{1}{3} y \par{1 - \frac{y}{80}} \pd\]
+        Draw the solution curve that satisfies \(y(0) = 50.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<figure class="logistic-slope-field-80-sol" id="logistic-slope-field-80-sol">
+<img alt="logistic-slope-field-80-sol.jpg" src="../images/sectionImages/logistic-slope-field-80-sol.jpg"/>
+</figure>
+        Observe that the slopes approach \(0\) as \(y\) is made close to \(80.\)
+        Thus, the <b>carrying capacity</b> of the logistic growth model is \(80.\)
+        We draw a solution curve passing through the point \((0, 50)\)
+        that has horizontal asymptotes of \(y = 0\) and \(y = 80.\)
+        <span class="white-space"></span>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Sketch a slope field for the differential equation 
+        \[\deriv{y}{x} = -0.2 y \par{1 - \frac{y}{90}} \pd\]
+        Draw a solution curve and label the inflection point.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<figure class="logistic-decay-slope-90-sol" id="logistic-decay-slope-90-sol">
+<img alt="logistic-decay-slope-90-sol.jpg" src="../images/sectionImages/logistic-decay-slope-90-sol.jpg"/>
+</figure>
+        Observe that the slopes approach \(0\) as \(y\) is made close to \(0.\)
+        We draw <i>any</i> solution curve (answers may vary) bounded below the line \(y = 90\)
+        and above the \(x\)-axis. 
+        The inflection point occurs when \(y\) is half of \(90\)—that is, at \(y = 45.\)
+        <span class="white-space"></span>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="logistic-slope-field-120-ex" id="logistic-slope-field-120-ex">
+<img alt="Figure 1" src="../images/sectionImages/logistic-slope-field-120-ex.jpg"/>
+</figure>
+<style>
+            .logistic-slope-field-120-ex::before{
+                content:'FIGURE 1';
+            }
+        </style>
+<a href="#logistic-slope-field-120-ex">Figure 1</a> shows a slope field
+        produced by the differential equation 
+        \[\deriv{y}{x} = \frac{1}{20} y \par{1 - \frac{y}{120}} \pd\]
+        Consider the solution curve passing through the point \((0, 20)\) 
+        with a horizontal asymptote of \(y = 120.\)
+        <ol class="list-alpha">
+<li>
+                Determine the <b>carrying capacity</b> of the solution curve.
+            </li>
+<li>
+                Identify the <b>growth constant</b> of the logistic function.
+            </li>
+<li>
+                At what value of \(y\) does the curve have an inflection point?
+            </li>
+<li>
+                Find the identity of the solution curve.
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Since the solution curve approaches \(120\) as \(x \to \infty,\)
+                the <b>carrying capacity</b> is \(L = \boxed{120}.\)
+            </li>
+<hr/>
+<li>
+                The <b>growth constant</b> is the coefficient \(k = \boxed{1/20}\) 
+                in the differential equation.
+            </li>
+<hr/>
+<li>
+                The curve has an inflection point when \(y\) is <i>half of the carrying capacity</i>—that is, 
+                when \(\boxed{y = 60}.\)
+            </li>
+<hr/>
+<li>
+                The general solution to the differential equation is 
+                \[
+                y = \frac{120}{1 + Ce^{-x/20}} \pd
+                \]
+                Substituting the initial condition \((0, 20),\) we see 
+                \[
+                \ba 
+                \frac{120}{1 + C} &amp;= 20 \nl 
+                \implies C &amp;= 5 \pd
+                \ea 
+                \]
+                So the identity of the solution curve is 
+                \[y = \boxed{\frac{120}{1 + 5e^{-x/20}}}\]
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{x} = 0.3 y \par{1 - \frac{y}{60}} \cma y(0) = 10\]
+     solve the initial-value problem. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This differential equation represents logistic growth,
+        in which the <b>growth constant</b> is \(k = 0.3\) and the <b>carrying capacity</b> is \(L = 60.\)
+        So the general solution to the differential equation is 
+        \[y = \frac{60}{1 + Ce^{-0.3x}} \pd\]
+        We substitute the initial condition \(y(0) = 10\) to see 
+        \[
+        \ba 
+        \frac{60}{1 + C} &amp;= 10 \nl 
+        \implies C &amp;= 5 \pd
+        \ea 
+        \]
+        Accordingly, the solution to the initial value problem is 
+        \[y = \boxed{\frac{60}{1 + 5e^{-0.3x}}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{x} = 0.8 y \par{1 - \frac{y}{120}} \cma y(0) = 40\]
+     solve the initial-value problem. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This differential equation represents logistic growth,
+        in which the <b>growth constant</b> is \(k = 0.8\) and the <b>carrying capacity</b> is \(L = 120.\)
+        So the general solution to the differential equation is 
+        \[y = \frac{120}{1 + Ce^{-0.8x}} \pd\]
+        We substitute the initial condition \(y(0) = 40\) to see 
+        \[
+        \ba 
+        \frac{120}{1 + C} &amp;= 40 \nl 
+        \implies C &amp;= 2 \pd
+        \ea 
+        \]
+        Accordingly, the solution to the initial value problem is 
+        \[y = \boxed{\frac{120}{1 + 2e^{-0.8x}}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{t} = -\frac{7}{10} y \par{1 - \frac{y}{32}} \cma y(0) = 16\]
+     solve the initial-value problem. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This differential equation represents logistic <i>decay</i>,
+        in which the <b>decay constant</b> is \(k = 7/10\) and the <b>carrying capacity</b> is \(L = 32.\)
+        Thus, the general solution to the differential equation is 
+        \[y = \frac{32}{1 + Ce^{7t/10}} \pd\]
+        We substitute the initial condition \(y(0) = 16\) to see 
+        \[
+        \ba 
+        \frac{32}{1 + C} &amp;= 16 \nl 
+        \implies C &amp;= 1 \pd
+        \ea 
+        \]
+        Accordingly, the solution to the initial value problem is 
+        \[y = \boxed{\frac{32}{1 + e^{7t/10}}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{y}{t} = 0.9 y \par{2 - \frac{y}{50}} \cma y(0) = 50\]
+     solve the initial-value problem. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the differential equation as 
+        \[\deriv{y}{t} = 1.8 y \par{1 - \frac{y}{100}} \cma\]
+        in which we see that the <b>growth constant</b> is \(k = 1.8\) and the <b>carrying capacity</b> is \(L = 100.\)
+        So the general solution to the differential equation is 
+        \[y = \frac{100}{1 + Ce^{-1.8t}} \pd\]
+        We substitute the initial condition \(y(0) = 50\) to see 
+        \[
+        \ba 
+        \frac{100}{1 + C} &amp;= 50 \nl 
+        \implies C &amp;= 1 \pd
+        \ea 
+        \]
+        Accordingly, the solution to the initial value problem is 
+        \[y = \boxed{\frac{100}{1 + e^{-1.8t}}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{P}{t} = -\frac{P}{20} \par{1 - \frac{P}{300}} \cma P(1) = 10\]
+     solve the initial-value problem. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We identify the <b>decay constant</b> to be \(k = 1/20\) and the <b>carrying capacity</b> to be \(L = 300.\)
+        The general solution to the differential equation is therefore 
+        \[y = \frac{300}{1 + Ce^{t/20}} \pd\]
+        We substitute the initial condition \(P(1) = 10\) to see 
+        \[
+        \ba 
+        \frac{300}{1 + Ce^{t/20}} &amp;= 10 \nl 
+        1 + Ce^{1/20} &amp;= 30 \nl 
+        \implies C &amp;= 29 e^{-1/20} \pd
+        \ea 
+        \]
+        Accordingly, the solution to the initial value problem is 
+        \[
+        \ba 
+        y &amp;= \frac{300}{1 + \par{29 e^{-1/20}} e^{t/20}} \nl 
+        &amp;= \boxed{\frac{300}{1 + 29e^{(t - 1)/20}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f\) be a function that undergoes logistic growth and satisfies 
+        \[\andFour 
+        {\lim_{x \to -\infty} f(x) = 0}
+        {f(0) = 40}
+        {f(1) = 100}
+        {\lim_{x \to \infty} f(x) = 2000}
+        \pd
+        \]
+        Determine the identity of \(f.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Because \(\lim_{x \to \infty} f(x) = 2000,\) 
+            the function's <b>carrying capacity</b> is \(2000\) and so 
+            we have
+            \[f(x) = \frac{2000}{1 + Ce^{-kx}} \cma\]
+            where \(C\) and \(k\) are constants. 
+            We determine their values by substituting the initial conditions \(f(0) = 40\)
+            and \(f(1) = 100.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting \(f(0) = 40\) shows 
+            \[
+            \ba 
+            \frac{2000}{1 + Ce^0} &amp;= 40 \nl 
+            1 + C &amp;= 50 \nl 
+            \implies C &amp;= 49 \pd
+            \ea 
+            \]
+            Substituting \(f(1) = 100,\) we see 
+            \[
+            \ba 
+            \frac{2000}{1 + 49e^{k}} &amp;= 100 \nl 
+            1 + 49e^{k} &amp;= 20 \nl 
+            \implies k &amp;= \ln \tfrac{19}{49} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            f(x) &amp;= \frac{2000}{1 + 49 e^{\par{\ln \tfrac{19}{49}}x}} \nl 
+            &amp;= \boxed{\frac{2000}{1 + 49 \par{\tfrac{19}{49}}^x}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        A function \(g(x)\) undergoes logistic decay 
+        such that 
+        \[\andFour
+        {\lim_{x \to -\infty} g(x) = 2500}
+        {g(0) = 500}
+        {g(2) = 1} 
+        {\lim_{x \to \infty} f(x) = 0}
+        \pd
+        \]
+        Determine the identity of \(g.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Because \(\lim_{x \to -\infty} g(x) = 2500,\) 
+            we attain the general model
+            \[g(x) = \frac{2500}{1 + Ce^{kx}} \cma\]
+            where \(C\) and \(k\) are constants. 
+            We determine their values by substituting the initial conditions \(g(0) = 500\)
+            and \(g(2) = 1.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting \(g(0) = 500\) shows 
+            \[
+            \ba 
+            \frac{2500}{1 + Ce^0} &amp;= 500 \nl 
+            1 + C &amp;= 5 \nl 
+            \implies C &amp;= 4 \pd
+            \ea 
+            \]
+            Substituting \(g(2) = 1,\) we see 
+            \[
+            \ba 
+            \frac{2500}{1 + 4e^{2k}} &amp;= 1 \nl 
+            1 + 4e^{2k} &amp;= 2500 \nl 
+            e^{2k} &amp;= \tfrac{2499}{4} \nl
+            \implies k &amp;= \tfrac{1}{2} \ln \tfrac{2499}{4} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            g(x) &amp;= \frac{2500}{1 + 4 e^{\par{\tfrac{1}{2} \ln \tfrac{2499}{4}}x}} \nl 
+            &amp;= \boxed{\frac{2500}{1 + 4 \par{\tfrac{2499}{4}}^{x/2}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Students enter the school cafeteria according to the differential equation
+        \[\deriv{y}{t} = 0.5 y \par{1 - \frac{y}{400}} \cma\]
+        where \(t\) is time measured in minutes since the start of the lunch block.
+        What is the maximum rate at which students enter the cafeteria?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Observe that the <b>carrying capacity</b> of the students in the cafeteria is \(400,\)
+        since \(\textderiv{y}{t} \to 0\) as \(y \to 400.\)
+        The number of students in the cafeteria <i>increases the fastest</i>
+        when \(y\) is equal to half of the <b>carrying capacity</b>—that is, when
+        \(y = 200.\)
+        We therefore see 
+        \[\deriv{y}{t} \intEval_{y = 200} = 0.5 (200) \par{1 - \frac{200}{400}} = 50 \pd\]
+        So the maximum rate of increase of students in the cafeteria is \(\boxed{50}\)
+        students per minute. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        The height of a plant in a drought exhibits logistic decay according to the differential equation 
+        \[\deriv{H}{t} = -0.3 H \par{1 - \frac{H}{60}} \cma\]
+        where \(H\) is measured in inches and \(t\) is measured in days since the drought's onset.
+        What is the maximum rate at which the plant's height is decreasing?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The plant's height <i>decreases the fastest</i> when it is equal to half of the <b>carrying capacity</b>,
+        \(L = 60\)
+        (since \(\textderiv{H}{t} \to 0\) as \(H \to 60\)).
+        This occurs when \(H = 30.\)
+        We therefore see 
+        \[\deriv{H}{t} \intEval_{H = 30} = -0.3 (30) \par{1 - \frac{30}{60}} = -\frac{9}{2} \pd\]
+        So the maximum <i>rate of decrease</i> of the plant's height is \(\boxed{9/2} \undiv{in}{day}.\) 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        A baby goat is born with a weight of \(10\) pounds.
+        Three months later, the goat weighs \(40\) pounds
+        and is expected to weigh \(160\) pounds as an adult.
+        Find a logistic growth function to model the 
+        goat's weight as a function of time. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(W(t)\) be the goat's weight as a function of time \(t\) in months.
+            We expect the goat to be \(160 \un{lb}\) as an adult, 
+            so the <b>carrying capacity</b> of \(W\) is \(160.\)
+            Thus, we use the model
+            \[W(t) = \frac{160}{1 + Ce^{-kt}}\]
+            for unknown \(C\) and \(k.\) 
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Note the initial conditions \(W(0) = 10\)
+            and \(W(3) = 40.\)
+            (Since there are two initial conditions, we can solve for each of the two unknown quantities.)
+            Substituting \(W(0) = 10\) shows 
+            \[
+            \ba 
+            \frac{160}{1 + C} &amp;= 10 \nl 
+            1 + C &amp;= 16 \nl 
+            \implies C &amp;= 15 \pd
+            \ea 
+            \]
+            Then we substitute \(W(3) = 40\) to see
+            \[
+            \ba 
+            \frac{160}{1 + 15e^{-3k}} &amp;= 40 \nl 
+            1 + 15e^{-3k} &amp;= 4 \nl
+            \implies k &amp;= -\tfrac{1}{3} \ln \tfrac{1}{5} \pd
+            \ea 
+            \]
+            So 
+            \[
+            \ba 
+            W(t) &amp;= \frac{160}{1 + 15 e^{-\par{-\tfrac{1}{3} \ln \tfrac{1}{5}} t}} \nl 
+            &amp;= \boxed{\frac{160}{1 + 15 \par{\tfrac{1}{5}}^{t/3}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        A newborn wolf weighs \(1\) pound.
+        Four months later, the wolf's weight has increased to \(30\) pounds.
+        As an adult, the wolf is expected to weigh \(90\) pounds. 
+        Determine a logistic growth function to model the 
+        wolf's weight as a function of time. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(W(t)\) be the wolf's weight as a function of time \(t\) in months.
+            We expect the wolf to be \(90 \un{lb}\) as an adult, 
+            so the <b>carrying capacity</b> of \(W\) is \(90.\)
+            Thus, we use the model
+            \[W(t) = \frac{90}{1 + Ce^{-kt}}\]
+            for unknown \(C\) and \(k.\) 
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Note the initial conditions \(W(0) = 1\)
+            and \(W(4) = 30.\)
+            (Since there are two initial conditions, we can solve for each of the two unknown quantities.)
+            Substituting \(W(0) = 1\) shows 
+            \[
+            \ba 
+            \frac{90}{1 + C} &amp;= 1 \nl 
+            1 + C &amp;= 90 \nl 
+            \implies C &amp;= 89 \pd
+            \ea 
+            \]
+            Then we substitute \(W(4) = 30\) to see
+            \[
+            \ba 
+            \frac{90}{1 + 89e^{-4k}} &amp;= 30 \nl 
+            1 + 89e^{-4k} &amp;= 3 \nl
+            \implies k &amp;= -\tfrac{1}{4} \ln \tfrac{2}{89} \pd
+            \ea 
+            \]
+            Thus, our model is
+            \[
+            \ba 
+            W(t) &amp;= \frac{90}{1 + 89 e^{-\par{-\tfrac{1}{4} \ln \tfrac{2}{89}} t}} \nl 
+            &amp;= \boxed{\frac{90}{1 + 89 \par{\tfrac{2}{89}}^{t/4}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        In a savanna, a pack of \(15\) cheetahs is discovered.
+        Two years later, the population has increased to \(45\) cheetahs. 
+        After a very long time, the population remains stable at \(90\) cheetahs. 
+        Use a logistic growth function to model the population of cheetahs 
+        with time. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Because the population of cheetahs remains <i>stable</i> at \(90,\)
+            the <b>carrying capacity</b> of the ecosystem is \(L = 90.\)
+            Thus, we attain the general model 
+            \[P(t) = \frac{90}{1 + Ce^{-kt}} \cma\]
+            where \(t\) is time in years since the discovery of the pack. 
+            The quantities \(C\) and \(k\) are constants. 
+            Our strategy is to determine these constants by substituting the initial conditions \(P(0) = 15\) and \(P(2) = 45.\)
+            Each initial condition allows us to solve for one constant; 
+            we therefore use two initial conditions to determine the two constants \(C\) and \(k.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting \(P(0) = 15\)
+            shows 
+            \[
+            \ba 
+            \frac{90}{1 + Ce^{0}} &amp;= 15 \nl 
+            1 + C &amp;= 6 \nl 
+            \implies C &amp;= 5 \pd 
+            \ea 
+            \]
+            Plugging in \(P(2) = 45,\) we see
+            \[
+            \ba 
+            \frac{90}{1 + 5e^{-2k}} &amp;= 45 \nl 
+            1 + 5e^{-2k} &amp;= 2 \nl 
+            \implies k &amp;= -\tfrac{1}{2} \ln \tfrac{1}{5} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            P(t) &amp;= \frac{90}{1 + 5e^{-\par{-\tfrac{1}{2} \ln \tfrac{1}{5}} t}} \nl 
+            &amp;= \boxed{\frac{90}{1 + 5 \par{\tfrac{1}{5}}^{t/2}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        An ecologist discovers a population of \(250\) monkeys in a jungle. 
+        Upon revisiting the biome \(4\) years later, the ecologist observes that the population has doubled. 
+        She predicts that the population will level off at \(2000\) monkeys. 
+        Find a logistic function to model the monkey population over time.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            The ecologist predicts that the population will remain <i>stable</i> at \(2000,\)
+            so we model the <b>carrying capacity</b> of the jungle to be \(L = 2000.\)
+            Thus, we use the model 
+            \[P(t) = \frac{2000}{1 + Ce^{-kt}} \cma\]
+            where \(t\) measures the years since the ecologist's initial discovery, and \(C\) and \(k\) are constants. 
+            Our strategy is to determine these constants by substituting the initial conditions \(P(0) = 250\) and \(P(4) = 500.\)
+            Each initial condition allows us to solve for one constant; 
+            we therefore use two initial conditions to determine the two constants \(C\) and \(k.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting \(P(0) = 250\)
+            shows 
+            \[
+            \ba 
+            \frac{2000}{1 + Ce^{0}} &amp;= 250 \nl 
+            1 + C &amp;= 8 \nl 
+            \implies C &amp;= 7 \pd 
+            \ea 
+            \]
+            Since the population doubles, we have \(P(4) = 500\) and so 
+            we see
+            \[
+            \ba 
+            \frac{2000}{1 + 7e^{-4k}} &amp;= 500 \nl 
+            1 + 7e^{-4k} &amp;= 4 \nl 
+            \implies k &amp;= -\tfrac{1}{4} \ln \tfrac{3}{7} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            P(t) &amp;= \frac{2000}{1 + 7e^{-\par{-\tfrac{1}{4} \ln \tfrac{3}{7}} t}} \nl 
+            &amp;= \boxed{\frac{2000}{1 + 7 \par{\tfrac{3}{7}}^{t/4}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        An introductory calculus class contains \(300\) students and is taught in a lecture hall. 
+        At the beginning of lecture, \(250\) students are present. 
+        After \(2\) minutes, \(30\) additional students have joined the lecture hall.
+        Using a logistic growth model, determine how many students are in the lecture hall after \(5\) minutes. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            The <b>carrying capacity</b> of the students in the lecture hall is \(L = 300.\)
+            Thus, we attain the general model 
+            \[y = \frac{300}{1 + Ce^{-kt}} \cma\]
+            where \(t\) is minutes since the beginning of the lecture, 
+            and \(C\) and \(k\) are constants. 
+            Our strategy is to determine these constants by substituting the initial conditions \(y(0) = 250\) and \(y(2) = 280.\)
+            Each initial condition allows us to solve for one constant; 
+            we therefore use two initial conditions to determine the two constants \(C\) and \(k.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting \(y(0) = 250\)
+            shows 
+            \[
+            \ba 
+            \frac{300}{1 + Ce^{0}} &amp;= 250 \nl 
+            1 + C &amp;= \tfrac{6}{5} \nl 
+            \implies C &amp;= \tfrac{1}{5} \pd 
+            \ea 
+            \]
+            Substituting \(y(2) = 280,\) we attain 
+            \[
+            \ba 
+            \frac{300}{1 + \tfrac{1}{5}e^{-2k}} &amp;= 280 \nl 
+            \tfrac{1}{5}e^{-2k} &amp;= \tfrac{1}{14} \nl 
+            \implies k &amp;= -\tfrac{1}{2} \ln \tfrac{5}{14} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            P(t) &amp;= \frac{300}{1 + \tfrac{1}{5} e^{-\par{-\tfrac{1}{2} \ln \tfrac{5}{14}} t}} \nl 
+            &amp;= \boxed{\frac{300}{1 + \tfrac{1}{5} \par{\tfrac{5}{14}}^{t/2}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        As a society industrializes, women tend to work technical jobs and have fewer children.
+        This societal transition often results in a stagnant population growth,
+        which can be modeled by a <b>logistic growth model</b>.
+        Suppose that in the year \(1970,\) City X has a population of \(45000.\)
+        Amid industrialization, the population grows to \(54000\) in \(1990\)
+        before remaining stable at \(55000.\)
+        Determine a logistic growth function for the population.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(P(t)\) denote City X's population, 
+            where \(t\) is time measured in years since \(1970.\)
+            We therefore have the initial conditions \(P(0) = 45000\) and
+            \(P(20) = 54000,\)
+            with a <b>carrying capacity</b> of \(55000.\)
+            Our function takes the form 
+            \[P(t) = \frac{55000}{1 + Ce^{-kt}} \cma\]
+            where we substitute the two initial conditions to solve for \(C\) and \(k.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting the condition \(P(0) = 45000\) reveals 
+            \[
+            \ba 
+            \frac{55000}{1 + Ce^{0}} &amp;= 45000 \nl 
+            1 + C &amp;= \tfrac{11}{9} \nl 
+            \implies C &amp;= \tfrac{2}{9} \pd 
+            \ea 
+            \]
+            We then substitute the condition \(P(20) = 54000,\)
+            from which we get
+            \[
+            \ba 
+            \frac{55000}{1 + \tfrac{2}{9}e^{-20k}} &amp;= 54000 \nl 
+            1 + \tfrac{2}{9} e^{-20k} &amp;= \tfrac{55}{54} \nl 
+            \implies k &amp;= -\tfrac{1}{20} \ln \tfrac{1}{12} \pd
+            \ea 
+            \]
+            Therefore, we have 
+            \[
+            \ba 
+            P(t) &amp;= \frac{55000}{1 + \tfrac{2}{9} e^{-\par{-\tfrac{1}{20} \ln \tfrac{1}{12}} t}} \nl 
+            &amp;= \boxed{\frac{55000}{1 + \tfrac{2}{9} \par{\tfrac{1}{12}}^{t/20}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        In an \(1800\)-student school,
+        a virus initially infects \(50\) students.
+        The following day, \(10\) more students are infected. 
+        Administration plans to close the school when the infection
+        rate reaches its highest. 
+        Assuming a carrying capacity of \(1000\) students, after how many days from the onset of the disease should 
+        the school be closed?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            The disease's growth rate is <i>highest</i> when the number of total cases 
+            equals <i>half of the carrying capacity</i>, \(L = 1000.\)
+            A logistic growth function for the number of cases 
+            is therefore given by
+            \[y = \frac{1000}{1 + Ce^{-kt}} \cma\]
+            where \(t\) is time in days.
+            We want to find the time \(t\) at which \(y = L/2\) \(= 500.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Note the initial conditions \(y(0) = 50\) and \(y(1) = 60.\)
+            We substitute the first initial condition to see 
+            \[
+            \ba 
+            \frac{1000}{1 + Ce^{0}} &amp;= 50 \nl 
+            1 + C &amp;= 20 \nl 
+            \implies C &amp;= 19 \pd
+            \ea 
+            \]
+            Then substituting \(y(1) = 60\) reveals 
+            \[
+            \ba 
+            \frac{1000}{1 + 19e^{-k}} &amp;= 60 \nl 
+            1 + 19 e^{-k} &amp;= \tfrac{50}{3} \nl 
+            \implies k &amp;= -\ln \tfrac{47}{57} \pd
+            \ea 
+            \]
+            Accordingly, the logistic function modeling the cases of the virus is 
+            \[
+            \ba 
+            y &amp;= \frac{1000}{1 + 19e^{-\par{-\ln \tfrac{47}{57}}t}} \nl 
+            &amp;= \frac{1000}{1 + 19 \par{\tfrac{47}{57}}^t} \pd
+            \ea 
+            \] 
+            We therefore have
+            \[
+            \ba 
+            \frac{1000}{1 + 19 \par{\tfrac{47}{57}}^t} &amp;= 500 \nl 
+            1 + 19 \par{\tfrac{47}{57}}^t &amp;= 2 \nl 
+            \implies t &amp;= \log_{47/57} \par{\tfrac{1}{19}} \approx \boxed{15 \un{days}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        On social media, a <b>Story</b> 
+        is a post visible to followers for \(24\) hours.
+        A Story is posted to a personal account with \(600\) followers, 
+        half of whom are active.
+        The story receives \(40\) views within an hour and \(200\) views within \(12\) hours.
+        Using a logistic growth model, estimate how many views the story will receive after \(16\) hours.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Since half of the \(600\) followers are active,
+            the <b>carrying capacity</b> of the Story's views is \(L = 300.\)
+            A logistic growth model for the views on the Story as a function of time \(t\) (in hours)
+            is given by 
+            \[y = \frac{300}{1 + Ce^{-kt}}\]
+            for unknown \(C\) and \(k.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Note the initial conditions \(y(1) = 40\) and \(y(12) = 200.\)
+            Substituting the former condition, we see 
+            \begin{flalign}
+            &amp;&amp;\frac{300}{1 + Ce^{-k}} &amp;= 40 \nonum &amp;\nl
+            \laWord{so} &amp;&amp; Ce^{-k} &amp;= \tfrac{13}{2} \pd \label{eq:story-eq-1}
+            \end{flalign}
+            Likewise, substituting \(y(12) = 200\) shows 
+            \begin{flalign}
+            &amp;&amp;\frac{300}{1 + Ce^{-12k}} &amp;= 200 \nonum &amp;\nl
+            \laWord{so} &amp;&amp; Ce^{-12k} &amp;= \tfrac{1}{2} \pd \label{eq:story-eq-2}
+            \end{flalign}
+            We divide \(\eqref{eq:story-eq-1}\) by \(\eqref{eq:story-eq-2}\) to obtain
+            \[
+            \ba 
+            e^{11k} &amp;= 13 \nl 
+            \implies k &amp;= \tfrac{1}{11} \ln 13 \approx 0.233 \pd
+            \ea 
+            \]
+            Hence, in \(\eqref{eq:story-eq-1}\) we see 
+            \[
+            \ba 
+            Ce^{-\par{\tfrac{1}{11} \ln 13}} &amp;= \tfrac{13}{2} \nl 
+            C \par{\tfrac{1}{13}}^{1/11} &amp;= \tfrac{13}{2} \nl 
+            \implies C &amp;= \frac{13/2}{\par{\tfrac{1}{13}}^{1/11}} \approx 8.207 \pd
+            \ea 
+            \]
+            Accordingly, our logistic growth function is 
+            \[y = \frac{300}{1 + 8.207 e^{-0.233t}} \pd\]
+            After \(16\) hours, we predict that the Story will have 
+            \[
+            \ba 
+            y &amp;= \frac{300}{1 + 8.207 e^{-0.233(16)}} \nl 
+            &amp;\approx \boxed{251 \un{views}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        An \(800\)-student school conducts an evacuation drill, 
+        in which all students must exit the building to a designated area. 
+        Within \(2\) minutes of the drill, \(700\) students have exited the building. 
+        After \(5\) minutes, administrators discover that \(5\) students 
+        still remain the building. 
+        Determine a logistic decay model for the number of students inside the building 
+        as a function of time after \(2\) minutes.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<p>
+            Let \(y\) be the number of students still inside the building. 
+            Since the school has \(800\) students, we assume \(L = 800\) and so 
+            \[y = \frac{800}{1 + Ce^{kt}} \cma\]
+            where \(t\) is the number of minutes since the drill commenced.
+            Within \(2\) minutes, \(700\) students have exited, meaning \(100\) students 
+            still remain inside.
+            Within \(5\) minutes, \(5\) students still remain inside. 
+            Therefore, we use the initial conditions \(y(2) = 100\)
+            and \(y(5) = 5.\)
+        </p>
+<p>
+<span class="label-emph">Solving for \(C\) and \(k\)</span>
+            Substituting the condition \(y(2) = 100,\) we see 
+            \begin{flalign}
+            &amp;&amp;\frac{800}{1 + Ce^{2k}} &amp;= 100 \nonum &amp;\nl
+            \laWord{so} &amp;&amp; Ce^{2k} &amp;= 7 \pd \label{eq:drill-eq-1}
+            \end{flalign}
+            Similarly, substituting \(y(5) = 5\) shows 
+            \begin{flalign}
+            &amp;&amp;\frac{800}{1 + Ce^{5k}} &amp;= 5 \nonum &amp;\nl
+            \laWord{so} &amp;&amp; Ce^{5k} &amp;= 159 \pd \label{eq:drill-eq-2}
+            \end{flalign}
+            We divide \(\eqref{eq:drill-eq-2}\) by \(\eqref{eq:drill-eq-1}\) to obtain
+            \[
+            \ba 
+            e^{3k} &amp;= \tfrac{159}{7} \nl 
+            \implies k &amp;= \tfrac{1}{3} \ln \tfrac{159}{7} \pd
+            \ea 
+            \]
+            Hence, \(\eqref{eq:drill-eq-1}\) becomes 
+            \[
+            \ba 
+            Ce^{2\par{\tfrac{1}{3} \ln \tfrac{159}{7}}} &amp;= 7 \nl 
+            C \par{\tfrac{159}{7}}^{2/3} &amp;= 7 \nl 
+            \implies C &amp;= \frac{7}{\par{\tfrac{159}{7}}^{2/3}} \pd
+            \ea 
+            \]
+            Accordingly, our logistic decay model is 
+            \[
+            \ba 
+            y &amp;= \frac{800}{1 + \frac{7}{\par{\tfrac{159}{7}}^{2/3}} e^{\par{\tfrac{1}{3} \ln \tfrac{159}{7}}t} } \nl 
+            &amp;= \frac{800}{1 + \frac{7}{\par{\tfrac{159}{7}}^{2/3}} \par{\tfrac{159}{7}}^{t/3}} \nl 
+            &amp;= \boxed{\frac{800}{1 + 7 \par{\tfrac{159}{7}}^{(t - 2)/3}}}
+            \ea 
+            \]
+        </p>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

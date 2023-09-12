@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.1: Arc Length</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.1 — Arc Length</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.1-Arc-Length-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.1-Arc-Length-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Arc-Length]]]--> 
+
+<p>
+    So far, we have used integrals to calculate areas and volumes. 
+    The art of accumulation has enabled us to come far 
+    in our calculus journey. 
+    In this section, we extend our toolkit to calculate <i>how long a curve is</i>—that is,
+    <i>arc length</i>. 
+    For simple shapes, we simply align a straight ruler to take measurements. 
+    But for complicated curves, this process is nearly impossible. 
+    A construction worker may want to calculate the length of a winding road.
+    A meteorologist may wish to determine the length of a kite's trajectory.  
+    And an engineer may need to find the length of a hanging rope.
+    These uses motivate the following topics:
+    <ul>
+        <li>
+            <a href="#arc-length" class="page-anchor">Arc Length</a>
+        </li>
+        <li>
+            <a href="#arc-length-function" class="page-anchor">Arc Length Functions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="arc-length">Arc Length</h4>
+
+<figure class="arc-length-simple-geometry figure-wide" id="arc-length-simple-geometry">
+    <img src="../images/sectionImages/arc-length-simple-geometry.jpg" class="arc-length-simple-geometry" alt="Figure 1">
+</figure>
+
+<style>
+    .arc-length-simple-geometry::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    If you surround a shape with string,
+    then the <i>length</i> of string you use equals the shape's perimeter. 
+    It's easy to compute the perimeter of polygons 
+    such as squares and rectangles; we sum the lengths of their sides. 
+    For example, if we wrap string around a square whose side lengths are \(s,\)
+    then the length of string used is \(L = 4s,\) the square's perimeter.
+    Likewise, a string of length \(L = 6s\) 
+    covers a hexagon whose sides have length \(s.\)
+    And the circumference of a circle of radius \(r\) is \(2 \pi r,\)
+    meaning a string of length \(L = 2 \pi r\) fully surrounds the circle. 
+    (See <a href="#arc-length-simple-geometry">Figure 1</a>.)
+    For a curve, we call \(L\) the <span class="emph">arc length</span>.
+    But how do we calculate the arc length of complicated curves? 
+</p>
+
+<figure class="arclength-n figure-wide" id="arclength-n">
+    <img src="../images/sectionImages/arclength-n.jpg" class="arclength-n" alt="Figure 2">
+</figure>
+
+<style>
+    .arclength-n::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<figure class="arc-length-animation" id="arc-length-animation">
+    <img src="../images/sectionAnimations/arc-length.gif" alt="ANIMATION 1">
+</figure>
+<style>
+    .arc-length-animation::before{
+        content:'ANIMATION 1';
+    }
+</style>
+
+<p>
+    Let \(f'\) be a continuous function on \([a, b].\)
+    We call the corresponding graph of \(f\) <span class="emph">smooth</span>
+    on \([a, b]\)
+    because it is <i>continuously differentiable</i> on this interval.
+    To find the arc length \(L\) of \(y = f(x)\) over \(a \leq x \leq b,\) 
+    we use a <i>polygonal approximation</i>. 
+    Let's divide the interval \([a, b]\) into \(n\) subintervals 
+    of endpoints \(a = x_0,\) \(x_1, x_2, \dots,\) \(x_{n - 1},\) \(x_n = b\)
+    and equal width \(\Delta x.\)
+    In the general subinterval \([x_{i - 1}, x_i],\)
+    the point \(P_i(x_i, y_i)\) lies on the curve \(f.\)
+    We pivot a piece of string at the points 
+    \(P_0, P_1, \dots, P_n\) on the graph of \(f.\)
+    (See <a href="#arclength-n">Figure 2</a>.)
+    Doing so enables us to approximate \(L\) by adding the lengths of the 
+    corresponding linear line segments—namely, 
+    \begin{equation} 
+    L \approx \sum_{i = 1}^n \length{P_{i - 1} P_i} \pd \label{eq:L-approx}
+    \end{equation}
+    (The notation \(P_{i - 1} P_i\) is <span class="warning">not multiplication</span>; 
+    it denotes the line segment between points \(P_{i - 1}\) and \(P_i.\)
+    The quantity \(\length{P_{i - 1} P_i}\)
+    is the <i>length</i> of this segment.)
+    If we increase \(n,\) then we pivot the string at more points on the curve,
+    therefore obtaining a better approximation for \(L.\)
+    Hence, if we let \(n \to \infty,\) then the result in \(\eqref{eq:L-approx}\)
+    yields the exact length \(L.\)
+    <a href="#arc-length-animation">Animation 1</a> shows the result of increasing 
+    the number of subintervals \(n\)—the line segments better 
+    match the shape of the curve \(f.\)
+    So we say that, if \(P_0, P_1, \dots, P_n\) are points on the graph of \(y = f(x),\)
+    then the <i>arc length</i> of \(f\) over \([a, b]\) is given by 
+    \begin{equation} 
+    L = \lim_{n \to \infty} \sum_{i = 1}^n \length{P_{i - 1} P_i} \pd \label{eq:L-P}
+    \end{equation}
+</p>
+
+<figure class="arc-length-distance" id="arc-length-distance">
+    <img src="../images/sectionImages/arc-length-distance.jpg" class="arc-length-distance" alt="Figure 3">
+</figure>
+
+<style>
+    .arc-length-distance::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    But how is \(\eqref{eq:L-P}\) useful? 
+    If we can express \(\length{P_{i - 1} P_i}\) in terms of \(x\) and \(y,\)
+    then we attain a more applicable formula.
+    In <a href="#arc-length-distance">Figure 3</a>, 
+    we have magnified the line segment \(P_{i - 1}P_i.\)
+    Observe that 
+    \[\Delta x = x_i - x_{i - 1} \and \Delta y = y_i - y_{i - 1} = f(x_i) - f(x_{i - 1}) \pd\]
+    By the Mean Value Theorem 
+    (from Section <a href="/Valculus/calculus/3.3-Mean-Value-Theorem-and-Rolle's-Theorem.html">3.3</a>), 
+    a number \(x_i^*\) exists in \([x_{i - 1}, x_i]\) such that 
+    \[f(x_i) - f(x_{i - 1}) = f'(x_i^*) \par{x_i - x_{i - 1}} \or \Delta y = f'(x_i^*) \Delta x \pd\]
+    Therefore, by the Pythagorean Theorem, we have 
+    \[
+    \ba 
+    \length{P_{i - 1} P_i} &= \sqrt{(\Delta x)^2 + (\Delta y)^2} \nl 
+    &= \sqrt{(\Delta x)^2 + \parbr{f'(x_i^*) \Delta x}^2} \nl 
+    &= \sqrt{1 + \parbr{f'(x_i^*)}^2} \sqrt{\par{\Delta x}^2} \nl 
+    &= \sqrt{1 + \parbr{f'(x_i^*)}^2} \, \Delta x \pd
+    \ea 
+    \]
+    Note that \(\sqrt{\par{\Delta x}^2} = \Delta x\) because \(\Delta x\) is assumed to be positive.
+    So \(\eqref{eq:L-P}\) becomes 
+    \[
+    L = \lim_{n \to \infty} \sum_{i = 1}^n \sqrt{1 + \parbr{f'(x_i^*)}^2} \, \Delta x \pd 
+    \]
+    This summation is a Riemann sum for the continuous function \(\sqrt{1 + \parbr{f'(x)}^2}\)
+    over \(a \leq x \leq b,\) so it becomes
+    \begin{equation} 
+    L = \int_a^b \sqrt{1 + \parbr{f'(x)}^2} \di x \pd \label{eq:L}
+    \end{equation}
+    If we use Leibniz notation, then we can reexpress \(\eqref{eq:L}\) as 
+    \[
+    L = \int_a^b \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd 
+    \]
+    \(\eqrefer{eq:L}\) is far more useful than \(\eqref{eq:L-P}.\)
+    Similarly, if we integrate with \(y,\) 
+    then we attain a nearly identical formula:
+    if \(g'\) is continuous on \([c, d],\) then the length of the smooth curve \(x = g(y)\)
+    over \(c \leq y \leq d\) is 
+    \begin{align} 
+    L &= \int_c^d \sqrt{1 + \parbr{g'(y)}^2} \di y \label{eq:Ly} \nl 
+    &= \int_c^d \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd \nonum
+    \end{align}
+</p>
+
+<div class="box-title">ARC LENGTH</div>
+<div class="box">
+    If \(f'\) is continuous on \([a, b],\) then the 
+    <span class="emph">arc length</span> of the curve \(y = f(x)\) 
+    over \(a \leq x \leq b\) is given by 
+    \begin{equation} 
+    L = \int_a^b \sqrt{1 + \parbr{f'(x)}^2} \di x \eqlabel{eq:L}
+    \end{equation}
+    Similarly, if \(g'\) is continuous on \([c, d],\) then the arc length of the curve \(x = g(y)\) 
+    over \(c \leq y \leq d\) is 
+    \begin{equation} 
+    L = \int_c^d \sqrt{1 + \parbr{g'(y)}^2} \di y \eqlabel{eq:Ly} \pd 
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="arclength-23" id="arclength-23">
+            <img src="../images/sectionImages/arclength-23.jpg" class="arclength-23" alt="Figure 4">
+        </figure>
+        
+        <style>
+            .arclength-23::before{
+                content:'FIGURE 4';
+            }
+        </style>
+        The curve defined by the implicit equation \(y^2 = x^3\)
+        is a <b>semicubical parabola</b>.  
+        Using \(\eqref{eq:L},\) calculate the length of the curve 
+        from \((0, 0)\) to \((4, 8).\)
+        (See <a href="#arclength-23">Figure 4</a>.)
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    We rewrite the equation \(y^2 = x^3\) explicitly as \(y = x^{3/2},\)
+    whose derivative is 
+    \[\deriv{y}{x} = \tfrac{3}{2} x^{1/2} \pd\]
+    Then by \(\eqref{eq:L},\) the <b>arc length</b> of the curve from 
+    \((0, 0)\) to \((4, 8)\) is 
+    \[
+    \ba 
+    L &= \int_0^4 \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \nl 
+    &= \int_0^4 \sqrt{1 + \par{\tfrac{3}{2} x^{1/2}}^2} \di x \nl 
+    &= \int_0^4 \sqrt{1 + \tfrac{9}{4} x} \di x \pd 
+    \ea 
+    \]
+    To evaluate this integral, we perform the substitution \(u = 1 + \tfrac{9}{4} x;\)
+    then \(\dd u = \tfrac{9}{4} \di x.\)
+    When \(x = 0,\) \(u = 1;\) when \(x = 4,\) \(u = 10.\)
+    So the integral becomes 
+    \[
+    \ba 
+    L &= \tfrac{4}{9} \int_1^{10} \sqrt u \di u = \tfrac{8}{27} u^{3/2} \intEval_1^{10} \nl 
+    &= \tfrac{8}{27} \par{10^{3/2} - 1} \nl 
+    &= \boxed{\frac{80 \sqrt{10} - 8}{27}} \approx 9.073 \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="arclength-ln-cos" id="arclength-ln-cos">
+            <img src="../images/sectionImages/arclength-ln-cos.jpg" class="arclength-ln-cos" alt="Figure 5">
+        </figure>
+        
+        <style>
+            .arclength-ln-cos::before{
+                content:'FIGURE 5';
+            }
+        </style>
+        In <a href="#arclength-ln-cos">Figure 5</a>, 
+        calculate the arc length of the curve \(y = \ln(\cos x)\)
+        from \(x = 0\) to \(x = \pi/4.\)
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Differentiating the function \(\ln(\cos x),\) we get 
+    \[\deriv{y}{x} = \frac{-\sin x}{\cos x} = - \tan x \pd\]
+    So by \(\eqref{eq:L},\) the arc length over the interval \([0, \pi/4]\) is 
+    \[
+    L = \int_0^{\pi/4} \sqrt{1 + \par{\deriv{y}{x}}^2} \di x 
+    = \int_0^{\pi/4} \sqrt{1 + \tan^2 x} \di x \pd 
+    \] 
+    Using the Pythagorean identity, we rewrite \(1 + \tan^2 x\) as \(\sec^2 x\)
+    to remove the root sign. 
+    Recall that an antiderivative of \(\sec x\) 
+    is \(\ln \abs{\sec x + \tan x}.\) 
+    We see 
+    \[
+    \ba 
+    L &= \int_0^{\pi/4} \sqrt{\sec^2 x} \di x  
+    = \int_0^{\pi/4} \sec x \di x \nl 
+    &= \ln \abs{\sec x + \tan x} \intEval_0^{\pi/4}  
+    = \ln(\sqrt 2 + 1) - \ln 1 \nl 
+    &= \boxed{\ln \par{\sqrt 2 + 1}} \approx 0.881 \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the arc length of the parabola \(x = y^2\)
+        from the point \(\par{\tfrac{1}{4}, -\tfrac{1}{2}}\) to \(\par{\tfrac{1}{4}, \tfrac{1}{2}}.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="arclength-parabola" id="arclength-parabola">
+        <img src="../images/sectionImages/arclength-parabola.jpg" class="arclength-parabola" alt="Figure 6">
+    </figure>
+    
+    <style>
+        .arclength-parabola::before{
+            content:'FIGURE 6';
+        }
+    </style>
+
+    <a href="#arclength-parabola">Figure 6</a> shows the portion of the parabola 
+    \(x = y^2\) from \(\par{\tfrac{1}{4}, -\tfrac{1}{2}}\) to \(\par{\tfrac{1}{4}, \tfrac{1}{2}}.\)
+    We see \(\textderiv{x}{y} = 2y.\)
+    Using \(\eqref{eq:Ly},\) the arc length is therefore given by 
+    \[L = \int_{-1/2}^{1/2} \sqrt{1 + (2y)^2} \di y = \int_{-1/2}^{1/2} \sqrt{1 + 4y^2} \di y \pd\]
+    Exploiting the symmetry about the \(x\)-axis, we simplify the calculation by writing 
+    \[L = 2 \int_0^{1/2} \sqrt{1 + 4y^2} \di y \pd\]
+    Now we perform a trigonometric substitution with \(y = \tfrac{1}{2} \tan \theta.\)
+    (See Section <a href="/Valculus/calculus/6.3-Trigonometric-Substitution.html">6.3</a> to review selecting substitutions.)
+    Then \(\dd y = \tfrac{1}{2} \sec^2 \theta \di \theta.\)
+    When \(y = 0,\) \(\theta = 0;\) when \(y = 1/2,\) \(\theta = \pi/4.\)
+    So our integral becomes 
+    \[
+    \ba 
+    L &= 2 \int_0^{\pi/4} \sqrt{1 + \tan^2 \theta} \par{\tfrac{1}{2} \sec^2 \theta} \di \theta \nl 
+    &= \int_0^{\pi/4} \sqrt{\sec^2 \theta} \par{\sec^2 \theta} \di \theta \nl 
+    &= \int_0^{\pi/4} \sec^3 \theta \di \theta \pd
+    \ea 
+    \]
+    In Section <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>, we used Integration by Parts 
+    to attain an antiderivative for \(\sec^3 \theta.\) 
+    Using this result, we see
+    \[
+    \ba 
+    L &= \par{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} } \intEval_0^{\pi/4} \nl 
+    &= \parbr{\tfrac{1}{2} \par{\sqrt 2} (1) + \tfrac{1}{2} \ln \par{\sqrt 2 + 1}} - 0 \nl 
+    &= \boxed{\frac{\sqrt 2 + \ln \par{\sqrt 2 + 1}}{2}} \approx 1.148 \pd
+    \ea 
+    \]
+</div>
+
+<h4 id="arc-length-function">Arc Length Functions</h4>
+
+<figure class="arclength-function" id="arclength-function">
+    <img src="../images/sectionImages/arclength-function.jpg" class="arclength-function" alt="Figure 7">
+</figure>
+
+<style>
+    .arclength-function::before{
+        content:'FIGURE 7';
+    }
+</style>
+
+<p>
+    We may wish to construct an <span class="emph">arc length function</span> 
+    for a smooth curve. 
+    Suppose that \(f\) is smooth over \([a, b].\)
+    Let function \(s(x)\) represent the arc length of the graph of \(y = f(t)\) from  
+    \(P(a, f(a))\) to \(Q(x, f(x)),\) where \(a \leq x \leq b.\)
+    Using \(\eqref{eq:L},\) we therefore define \(s\) as 
+    \begin{align} 
+    s(x) &= \int_a^x \sqrt{1 + \parbr{f'(t)}^2} \di t \label{eq:s(x)} \nl 
+    &= \int_a^x \sqrt{1 + \par{\deriv{y}{t}}^2} \di t \pd \nonum
+    \end{align}
+    Changing the value of \(x\) shifts point \(Q,\) 
+    thus changing the arc length \(s(x)\) of \(y = f(t)\) from \(P\) to \(Q\)
+    (<a href="#arclength-function">Figure 7</a>). 
+    Using Part I of the Fundamental Theorem of Calculus, we differentiate \(\eqref{eq:s(x)}\)
+    to see 
+    \[s'(x) = \sqrt{1 + \parbr{f'(x)}^2} \cma\]
+    which asserts that the <i>arc length increases with the slope</i> 
+    of the curve \(f.\) 
+    (A particle moving on the graph of \(f\) needs to travel 
+    a greater distance if the curve is steeper.)
+    And if \(f'(x) = 0,\) then the rate at which the arc length changes with \(x\) is simply \(1.\)
+    (Think of a particle moving along a straight line.)
+    Thus, all arc length functions satisfy \(s'(x) \geq 1\) for \(a \leq x \leq b.\) 
+    We can also construct an arc length function with \(y\) if we interpret 
+    \(\eqref{eq:s(x)}\) in terms of quantities of \(y.\) 
+    Namely, if \(g\) is smooth on \([c, d],\) then an arc length function 
+    for the curve \(x = g(t)\) over \(c \leq y \leq d\) is given by 
+    \begin{align} 
+    s(y) &= \int_c^y \sqrt{1 + \parbr{g'(t)}^2} \di t \label{eq:s(y)} \nl
+    &= \int_c^y \sqrt{1 + \par{\deriv{x}{t}}^2} \di t \pd \nonum
+    \end{align}
+</p>
+
+<div class="box-title">ARC LENGTH FUNCTIONS</div>
+<div class="box">
+    If \(f\) is smooth on \([a, b],\) then an arc length function 
+    for the curve \(y = f(t)\) over \(a \leq x \leq b\) is given by 
+    \begin{equation} 
+    s(x) = \int_a^x \sqrt{1 + \parbr{f'(t)}^2} \di t \pd \eqlabel{eq:s(x)}
+    \end{equation}
+    Similarly, if \(g\) is smooth on \([c, d],\) then an arc length function 
+    for the curve \(x = g(t)\) over \(c \leq y \leq d\) is given by 
+    \begin{equation} 
+    s(y) = \int_c^y \sqrt{1 + \parbr{g'(t)}^2} \di t \pd \eqlabel{eq:s(y)}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find an arc length function for the smooth graph of \(y = 1 + 4t^{3/2}\)
+        starting at the point \((1, 5).\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="arclength-power" id="arclength-power">
+        <img src="../images/sectionImages/arclength-power.jpg" class="arclength-power" alt="Figure 8">
+    </figure>
+    
+    <style>
+        .arclength-power::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    We let \(s(x)\) be the arc length function for the curve starting at \((1, 5),\)
+    as shown by <a href="#arclength-power">Figure 8</a>. 
+    Note that 
+    \(\textderiv{y}{t} = 6 \sqrt t.\)
+    Using \(\eqref{eq:s(x)},\) we have 
+    \[s(x) = \int_1^x \sqrt{1 + \par{6 \sqrt t}^2} \di t = \int_1^x \sqrt{1 + 36 t} \di t \pd\]
+    We substitute \(u = 1 + 36t;\) then \(\dd u = 36 \di t.\)
+    When \(t = 1,\) \(u = 37;\) when \(t = x,\) \(u = 1 + 36x.\)
+    So the integral becomes 
+    \[
+    \ba 
+    s(x) &= \tfrac{1}{36} \int_{37}^{1 + 36x} \sqrt{u} \di u \nl 
+    &= \tfrac{1}{54} \par{u^{3/2}} \intEval_{37}^{1 + 36x} \nl 
+    &= \boxed{\frac{\sqrt{(1 + 36x)^3} - 37^{3/2}}{54}} 
+    \ea 
+    \]
+    Due to this function, we don't need to use an integral to define the arc length 
+    of \(y = 1 + 4t^{3/2}\) over \([1, x].\)
+    For example, the arc length of the curve from \(t = 1\) to \(t = 2\) equals 
+    \[s(2) = \frac{\sqrt{[1 + 36 (2)]^3} - 37^{3/2}}{54} \approx 7.382 \pd\]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#arc-length" class="summary-anchor">Arc Length</a>
+        If \(f'\) is continuous on \([a, b],\) then the 
+        <span class="emph">arc length</span> of the curve \(y = f(x)\) 
+        over \(a \leq x \leq b\) is given by 
+        \begin{align*} 
+        L &= \int_a^b \sqrt{1 + \parbr{f'(x)}^2} \di x \eqlabel{eq:L} \nl 
+        &= \int_a^b \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd
+        \end{align*}
+        (Over \([a, b],\)
+        we call \(f\) <span class="emph">smooth</span> because 
+        it is continuously differentiable.)
+        Likewise, if \(g'\) is continuous on \([c, d],\) then the arc length of the curve \(x = g(y)\) 
+        over \(c \leq y \leq d\) is 
+        \begin{align*} 
+        L &= \int_c^d \sqrt{1 + \parbr{g'(y)}^2} \di y \eqlabel{eq:Ly} \nl 
+        &= \int_c^d \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd
+        \end{align*}
+    </p>
+    <p>
+        <a href="#arc-length-function" class="summary-anchor">Arc Length Functions</a>
+        We can construct <span class="emph">arc length functions</span> as follows:
+        If \(f\) is smooth on \([a, b],\) then an arc length function 
+        for the curve \(y = f(t)\) over \(a \leq x \leq b\) is given by 
+        \begin{equation} 
+        s(x) = \int_a^x \sqrt{1 + \parbr{f'(t)}^2} \di t \pd \eqlabel{eq:s(x)}
+        \end{equation}
+        Likewise, if \(g\) is smooth on \([c, d],\) then an arc length function 
+        for the curve \(x = g(t)\) over \(c \leq y \leq d\) is given by 
+        \begin{equation} 
+        s(y) = \int_c^y \sqrt{1 + \parbr{g'(t)}^2} \di t \pd \eqlabel{eq:s(y)}
+        \end{equation}
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

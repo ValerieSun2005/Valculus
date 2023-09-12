@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.4: Comparison Tests</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.4 — Comparison Tests</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.4-Comparison-Tests-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.4-Comparison-Tests-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Comparison-Tests]]]--> 
+<p>
+    We have discussed how to test \(p\)-series and geometric series
+    for convergence or divergence.
+    In Section 
+    <a href="/Valculus/calculus/10.3-Integral-Test.html">10.3</a> we learned to test a series for convergence or divergence 
+    by computing an improper integral. 
+    But some series <i>are very similar</i> to 
+    other series known to converge or diverge.
+    For example, the series \(\sum_{n = 1}^\infty \par{1/3^n}\) 
+    is geometric, whereas \(\sum_{n = 1}^\infty \parbr{1/\par{3^n + 1}}\) 
+    is nearly identical but not geometric. 
+    Likewise, \(\sum_{n = 1}^\infty \par{1/n^4}\) is a \(p\)-series, 
+    while \(\sum_{n = 1}^\infty \parbr{1/\par{n^4 + 1}}\) is similar but isn't a \(p\)-series. 
+    These examples motivate <i>Comparison Tests</i>, 
+    in which we assert that a series converges or diverges by comparing it to another series 
+    known to be convergent or divergent. 
+    We discuss the following tests:   
+    <ul>
+        <li>
+            <a href="#direct-comparison" class="page-anchor">Direct Comparison Test</a>
+        </li>
+        <li>
+            <a href="#limit-comparison" class="page-anchor">Limit Comparison Test</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="direct-comparison">Direct Comparison Test</h4>
+<p>
+    Let \(\{a_n\}\) and \(\{b_n\}\) be sequences
+    whose terms are all positive.
+    Suppose that the terms of a sequence \(\{a_n\}\) 
+    are always less than or equal to the terms of the sequence \(\{b_n\}.\)
+    Then the partial sum \(\sum_{i = 1}^N a_i\) 
+    is less than or equal to the partial sum \(\sum_{i = 1}^N b_i.\) 
+    Mathematically, we write  
+    \[0 \lt \sum_{i = 1}^N a_i \leq \sum_{i = 1}^N b_i\]
+    since in the middle partial sum we add up smaller numbers. 
+    But what happens as \(N \to \infty \ques\)
+    If \(\lim_{N \to \infty} \sum_{i = 1}^N b_i\) exists and equals \(T,\) 
+    then the inequality becomes 
+    \[0 \lt \lim_{N \to \infty} \sum_{i = 1}^N a_i \leq T \or 0 \lt \sum_{n = 1}^\infty a_n \leq T \pd\]
+    Accordingly, \(\sum_{n = 1}^\infty a_n\) is bounded between two finite numbers
+    and so converges.
+    Therefore, if \(\sum_{n = 1}^\infty b_n\) converges and \(0 \lt a_n \leq b_n,\)
+    then \(\sum_{n = 1}^\infty a_n\) also converges. 
+    Informally, if the <q>larger</q> series converges, then the <q>smaller</q> series also converges.
+</p>
+<p>
+    Conversely, let's suppose that the terms of \(\{a_n\}\) are always greater than 
+    or equal to those of \(\{b_n\}.\) If \(a_n \gt 0\) and \(b_n \gt 0,\)
+    then the \(N\)th partial sums of \(a_i\) and \(b_i\) are related by
+    \[\sum_{i = 1}^N a_i \geq \sum_{i = 1}^N b_i \gt 0\]
+    because \(a_n \geq b_n \gt 0.\)
+    Let's now consider the relationship among infinite series, as follows: 
+    \[\sum_{n = 1}^\infty a_n \geq \sum_{n = 1}^\infty b_n \gt 0 \pd\]
+    If \(\sum_{n = 1}^\infty b_n\) diverges, then the partial sum \(\sum_{i = 1}^N b_i\)
+    approaches infinity as \(N \to \infty\) since \(b_n \gt 0.\)
+    (A series can diverge due to either oscillation or becoming unbounded. 
+    But since \(b_n \gt 0,\) the sum keeps increasing and therefore cannot be oscillatory.) 
+    Accordingly, \(\sum_{n = 1}^\infty a_n\)
+    must also diverge since it is greater than the divergent series \(\sum_{n = 1}^\infty b_n.\)
+    So if the <q>smaller</q> series diverges, then the <q>larger</q> series also diverges.
+    We summarize these ideas as the <span class="emph">Direct Comparison Test</span>.
+</p>
+
+<div class="box-title">DIRECT COMPARISON TEST</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li id="direct-a">
+            If \(0 \lt a_n \leq b_n\) and \(\sum b_n\) converges, 
+            then \(\sum a_n\) also converges.
+        </li>
+        <li id="direct-b">
+            If \(a_n \geq b_n \gt 0\) and \(\sum b_n\) diverges, 
+            then \(\sum a_n\) also diverges.
+        </li>
+    </ol>
+</div>
+<p>
+    <span class="proof">PROOF OF DIRECT COMPARISON TEST</span>
+    <ol class="list-alpha">
+        <li>
+            Consider the three sums 
+            \[\andThree
+            {S_N = \sum_{i = 1}^N a_i}
+            {T_N = \sum_{i = 1}^N b_i}
+            {T = \sum_{n = 1}^\infty b_n} \cma 
+            \]
+            where \(\{S_N\}\) and \(\{T_N\}\) have positive terms
+            and \(\sum_{n = 1}^\infty b_n\) is convergent. 
+            If \(0 \lt a_i \leq b_i,\) then \(S_N \leq T_N.\)
+            As \(n \to \infty,\) \(T_N \to T.\) 
+            Because \(b_i \gt 0,\) the sequence \(T_N\) is increasing
+            and bounded above,
+            so \(T_N \leq T\) for all \(N.\)
+            Therefore, \(S_N \leq T,\)
+            meaning \(\{S_N\}\) is bounded above and therefore converges. 
+            Since 
+            \[\lim_{N \to \infty} S_N = \lim_{N \to \infty} \sum_{i = 1}^N a_i = \sum_{n = 1}^\infty a_n \cma \]
+            the series \(\sum_{n = 1}^\infty a_n\) converges.  
+        </li>
+        <li>
+            Suppose that \(\sum_{n = 1}^\infty b_n\) diverges, and let 
+            \[S_N = \sum_{i = 1}^N a_i \and T_N = \sum_{i = 1}^N b_i \pd\]
+            If \(a_i \geq b_i \gt 0,\) then \(S_N \geq T_N \gt 0.\)
+            Since \(\sum_{n = 1}^\infty b_n\) diverges,
+            \(T_N \to \infty\) as \(N \to \infty.\) 
+            But because \(S_N\) is greater than or equal to \(T_N,\)
+            it follows that \(S_N \to \infty\) too.
+            Since 
+            \[\lim_{N \to \infty} S_N = \lim_{N \to \infty} \sum_{i = 1}^N a_i = \sum_{n = 1}^\infty a_n \cma\]
+            the series \(\sum_{n = 1}^\infty a_n\) also diverges. 
+        </li>
+    </ol>
+    \[\qedproof\]
+</p>
+
+<p>
+    The Direct Comparison Test is useful only if can readily identify a series \(\sum b_n\)
+    that is known to converge or diverge.
+    In testing \(\sum a_n\) for convergence or divergence, 
+    our goal is to either find a <i>smaller</i> divergent sum \(\sum b_n\)
+    or a <i>larger</i> convergent sum \(\sum b_n.\)   
+    In many cases, we perform comparisons using the following choices of \(\sum b_n \col\)
+    <ul>
+        <li>
+            <span class="text-tip">FAMILY 1</span>
+            A \(p\)-series \(\sum \par{1/n^p}\) diverges if \(p \leq 1\)
+            and converges if \(p \gt 1.\)
+            (See Section <a href="/Valculus/calculus/10.3-Integral-Test.html">10.3</a>.)
+        </li>
+        <li>
+            <span class="text-tip">FAMILY 2</span>
+            A geometric series \(\sum ar^n\) converges if \(\abs r \lt 1\)
+            and diverges if \(\abs r \geq 1.\)
+            (See Section 
+            <a href="/Valculus/calculus/10.2-Infinite-Series-and-Divergence-Test.html">10.2</a>.)
+        </li>
+    </ul>
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether the following series converges or diverges:
+        \[\sum_{n = 1}^\infty \frac{2}{n^2 + n + 4} \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    For \(n \geq 1\) we see \(n^2 + n + 4 \geq n^2,\)
+    and both expressions are positive.
+    Accordingly, 
+    \[0 \lt \frac{1}{n^2 + n + 4} \leq \frac{1}{n^2} \and 0 \lt \frac{2}{n^2 + n + 4} \leq \frac{2}{n^2} \pd\]
+    Thus, we compare \(\sum_{n = 1}^\infty \parbr{2/\par{n^2 + n + 4}}\) to 
+    \[\sum_{n = 1}^\infty b_n = \sum_{n = 1}^\infty \frac{2}{n^2} \pd\]
+    We identify \(\sum_{n = 1}^\infty \par{1/n^2}\) to be a \(p\)-series with \(p = 2 \gt 1,\)
+    so it converges. 
+    Multiplying a convergent series by a constant gives another convergent series; 
+    thus, \(\sum_{n = 1}^\infty \par{2/n^2}\) \(= \sum_{n = 1}^\infty b_n\) converges. 
+    Part <a href="#direct-a">(a)</a> of the Direct Comparison Test therefore asserts that 
+    \[\sum_{n = 1}^\infty \frac{2}{n^2 + n + 4} \convBoxed\]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether the following series converges or diverges:
+        \[\sum_{n = 2}^\infty \frac{1}{\sqrt n - 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    We want to find 
+    either a convergent series that's larger than \(\sum_{n = 2}^\infty \parbr{1/\par{\sqrt n - 1}}\)
+    or a divergent series that's smaller than \(\sum_{n = 2}^\infty \parbr{1/\par{\sqrt n - 1}}.\)
+    For \(n \geq 2\) we note that \(\sqrt n \geq \sqrt n - 1.\)
+    Thus, 
+    \[
+    \frac{1}{\sqrt{n} - 1} \geq \frac{1}{\sqrt n} \gt 0 \pd
+    \]
+    We therefore compare \(\sum_{n = 2}^\infty \parbr{1/\par{\sqrt n - 1}}\)
+    to 
+    \[\sum_{n = 2}^\infty b_n = \sum_{n = 2}^\infty \frac{1}{\sqrt n} \cma\]
+    which diverges because it is a \(p\)-series with \(p = 1/2 \leq 1.\)
+    Hence, part <a href="#direct-b">(b)</a> of the Direct Comparison Test asserts that 
+    \[\sum_{n = 2}^\infty \frac{1}{\sqrt n - 1} \divBoxed\]
+    <!-- \(\sum_{n = 2}^\infty 1/\par{\sqrt n - 1}\) also <b>diverges</b>. -->
+</div>
+
+<p>
+    <span class="text-remark">REMARK</span>
+    The inequalities required by the Direct Comparison Test only need to be true 
+    for \(n\) <i>after a certain point</i>. 
+    In other words, either inequality \(0 \lt a_n \leq b_n\) or \(a_n \geq b_n \gt 0\)
+    needs to be satisfied for \(n \geq N,\)
+    where \(N\) is a constant integer that <i>doesn't need to match the sum's starting index</i>.  
+    This is because adding a finite number of terms doesn't alter a series' convergence, 
+    as shown by the following example.
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether the following series converges or diverges:
+        \[\sum_{n = 1}^\infty \frac{\ln n}{\sqrt[3]{n}} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    Our goal is to identify either a convergent series that's larger than \(\sum_{n = 1}^\infty (\ln n)/\sqrt[3]{n}\)
+    or a divergent series that's smaller than \(\sum_{n = 1}^\infty (\ln n)/\sqrt[3]{n}.\)
+    Because \(\ln n \geq 1\) for \(n \geq 3,\) it holds that 
+    \[\frac{\ln n}{\sqrt[3]{n}} \geq \frac{1}{\sqrt[3]{n}} \gt 0 \cmaa n \geq 3 \pd\]
+    We therefore compare \(\sum_{n = 3}^\infty (\ln n)/\sqrt[3]{n}\) to 
+    \[\sum_{n = 3}^\infty b_n = \sum_{n = 3}^\infty \frac{1}{\sqrt[3]{n}} \cma\]
+    which diverges because it is a \(p\)-series with \(p = 1/3 \leq 1.\)
+    Thus, part <a href="#direct-b">(b)</a> of the <b>Direct Comparison Test</b> states that 
+    \[\sum_{n = 3}^\infty \frac{\ln n}{\sqrt[3]{n}}\ \div \pd\]
+    Because 
+    \[\sum_{n = 1}^\infty \frac{\ln n}{\sqrt[3]{n}} 
+    = \sum_{n = 1}^2 \frac{\ln n}{\sqrt[3]{n}} + \sum_{n = 3}^\infty \frac{\ln n}{\sqrt[3]{n}}\]
+    and \(\sum_{n = 1}^2 (\ln n)/\sqrt[3]{n}\) is finite, 
+    the infinite series 
+    \[\sum_{n = 1}^\infty \frac{\ln n}{\sqrt[3]{n}}\ \divBoxed\]
+    because adding a finite number to a divergent series yields another divergent series.
+</div>
+
+<p>
+    In testing the series \(\sum a_n\) for convergence 
+    (where \(a_n\) is positive),
+    the Direct Comparison Test <span class="warning">fails</span> if we cannot find a convergent series \(\sum b_n\)
+    that's larger than \(\sum a_n\)
+    or if we cannot find a divergent series \(\sum b_n\) that's smaller than \(\sum a_n.\)
+    For example, it would be convenient to compare the series
+    \[\sum_{n = 1}^\infty a_n = \sum_{n = 1}^\infty \frac{1}{3^n - 1}\]
+    to \(\sum_{n = 1}^\infty b_n\) \(= \sum_{n = 1}^\infty \par{1/3^n},\)
+    a convergent geometric series of common ratio \(r = 1/3 \lt 1.\) 
+    But for \(n \geq 1,\) we see 
+    \[\frac{1}{3^n - 1} \geq \frac{1}{3^n} \gt 0 \pd\]
+    This inequality implies that \(\sum_{n = 1}^\infty \parbr{1/\par{3^n - 1}}\) 
+    could either converge or diverge because it is greater than the convergent series
+    \(\sum_{n = 1}^\infty \par{1/3^n}.\)
+    And so the Direct Comparison Test is <span class="warning">useless</span>.
+    Yet astonishingly, the Direct Comparison Test holds that 
+    the nearly identical series \(\sum_{n = 1}^\infty \parbr{1/\par{3^n + 1}}\) converges because
+    for \(n \geq 1,\) 
+    \[0 \lt \frac{1}{3^n + 1} \leq \frac{1}{3^n} \cma\]
+    so \(\sum_{n = 1}^\infty \parbr{1/\par{3^n + 1}}\) is bounded between two finite numbers.
+    Regardless, our intuition wants to conclude that \(\sum_{n = 1}^\infty \parbr{1/\par{3^n - 1}}\) 
+    converges because it's nearly identical to \(\sum_{n = 1}^\infty \parbr{1/\par{3^n + 1}}.\) 
+    This guess turns out to be correct, which we prove using the 
+    <a href="#limit-comparison" class="page-anchor">Limit Comparison Test</a>.
+</p>
+
+<h4 id="limit-comparison">Limit Comparison Test</h4>
+<p>
+    When we cannot establish an inequality required to use the Direct Comparison Test, 
+    we resort to another test—the <span class="emph">Limit Comparison Test</span>. 
+    If \(a_n\) and \(b_n\) are both positive, then we consider the ratio \(a_n/b_n\)
+    as \(n \to \infty.\)
+    Let 
+    \[L = \lim_{n \to \infty} \frac{a_n}{b_n} \pd\]
+    Recall the idea of <b>relative growth rates</b> from Section 
+    <a href="/Valculus/calculus/3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.5</a>:
+    If \(L\) is a positive, finite number, then \(a_n\) and \(b_n\) grow at the same rate as \(n\) is increased.
+    This relationship between \(\sum a_n\) and \(\sum b_n\) suggests that 
+    they either both converge or both diverge.
+    The test is formally stated as follows.
+</p>
+
+<div class="box-title">LIMIT COMPARISON TEST</div>
+<div class="box">
+    Suppose that \(a_n\) and \(b_n\) are both positive,
+    and let 
+    \[L = \lim_{n \to \infty} \frac{a_n}{b_n} \pd\]
+    If \(L\) is positive and finite, then the <span class="emph">Limit Comparison Test</span>
+    states that \(\sum a_n\) and \(\sum b_n\) either both converge or both diverge.
+</div>
+
+<p>
+    <span class="text-tip">TIP</span>
+    If \(a_n/b_n\) approaches a positive, finite number as \(n \to \infty,\)
+    then the ratio \(b_n/a_n\) also approaches a positive, finite number as \(n \to \infty.\)
+    Accordingly, the way by which we divide the summation 
+    functions \(a_n\) and \(b_n\) <i>does not matter</i>. 
+</p>
+
+<p>
+    <span class="proof">PROOF OF THE LIMIT COMPARISON TEST</span>
+    Let \(m\) and \(M\) be positive numbers such that \(m \lt L \lt M,\)
+    where \(a_n/b_n\) is close to \(L\) for large \(n\)—say, for \(n \gt N.\)
+    We therefore have, for \(n \gt N,\)
+    \[m \lt \frac{a_n}{b_n} \lt M \or m b_n \lt a_n \lt M b_n \pd\]
+    If \(\sum b_n\) converges, then so do \(\sum mb_n\) and \(\sum Mb_n.\)
+    Part <a href="#direct-a">(a)</a> of the Direct Comparison Test 
+    therefore asserts that \(\sum a_n\) converges,
+    as it is bounded between two convergent sums.
+    Conversely, if \(\sum b_n\) diverges, then \(\sum mb_n\) and \(\sum Mb_n\)
+    both diverge too.
+    So by part <a href="#direct-b">(b)</a> of the Direct Comparison Test, 
+    \(\sum a_n\) must also diverge because it is bounded between two divergent series.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 1}^\infty \frac{1}{3^n - 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    Let \(a_n = 1/\par{3^n - 1}.\)
+    We compare \(\sum_{n = 1}^\infty a_n\) to 
+    \[\sum_{n = 1}^\infty b_n = \sum_{n = 1}^\infty \frac{1}{3^n} \cma\]
+    which converges because it is a geometric series of common ratio \(r = 1/3\) \(\lt 1.\)
+    Then we see 
+    \[
+    \ba 
+    L &= \lim_{n \to \infty} \frac{a_n}{b_n} = \lim_{n \to \infty} \frac{\dfrac{1}{3^n - 1}}{1/3^n} \nl 
+    &= \lim_{n \to \infty} \frac{3^n}{3^n - 1} = \lim_{n \to \infty} \frac{1}{1 - 1/3^n} \nl 
+    &= \frac{1}{1 - 0} = 1 \pd
+    \ea 
+    \] 
+    Since \(L\) is positive and finite, the <b>Limit Comparison Test</b>
+    asserts that 
+    \[\sum_{n = 1}^\infty \frac{1}{3^n - 1} \convBoxed\]
+    as we suspected due to its similarity to \(\sum_{n = 1}^\infty \par{1/3^n}.\)
+</div>
+
+<p>
+    <span class="label-emph">Sums of Algebraic Functions</span>
+    We often test for convergence or divergence a series \(\sum a_n\)
+    where \(a_n\) is a fraction containing powers or radicals.
+    To do so, we compare \(\sum a_n\) to an appropriate sum \(\sum b_n\)
+    by keeping the highest powers in the numerator and denominator, as shown by the following examples.
+    Compute limits at infinity is therefore crucial;
+    to review this concept, see Section <a href="/Valculus/calculus/1.6-Limits-with-Infinity.html">1.6</a>.
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 1}^\infty \frac{n^2 + 5n - 3}{n^3 + 2} \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    Considering only the highest powers in the numerator and denominator, 
+    we compare this series to 
+    \[\sum_{n = 1}^\infty \frac{n^2}{n^3} = \sum_{n = 1}^\infty \frac{1}{n} \cma\]
+    the divergent Harmonic Series. 
+    Dividing both summation functions, we see 
+    \[
+    \ba 
+    L &= \lim_{n \to \infty} \frac{\dfrac{n^2 + 5n - 3}{n^3 + 2}}{1/n} \nl 
+    &= \lim_{n \to \infty} \frac{n^3 + 5n^2 - 3n}{n^3 + 2} = 1 \pd 
+    \ea 
+    \]
+    Because \(L\) is finite and positive, 
+    the <b>Limit Comparison Test</b> says that
+    \[\sum_{n = 1}^\infty \frac{n^2 + 5n - 3}{n^3 + 2} \divBoxed\]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 2}^\infty \frac{\sqrt{n^2 + n + 4}}{3n^4 - 5n + 2} \pd\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    We compare this series to another series with only the highest powers in the numerator and denominator:
+    \[\sum_{n = 2}^\infty \frac{\sqrt{n^2}}{3n^4} = \sum_{n = 2}^\infty \frac{\abs n}{3n^4} 
+    = \sum_{n = 2}^\infty \frac{1}{3n^3} = \tfrac{1}{3} \sum_{n = 2}^\infty \frac{1}{n^3} \pd\]
+    This series converges because it is a \(p\)-series with \(p = 3 \gt 1.\)
+    We find 
+    \[
+    \ba 
+    L &= \lim_{n \to \infty} \frac{\dfrac{\sqrt{n^2 + n + 4}}{3n^4 - 5n + 2}}{1/n^3} \nl 
+    &= \lim_{n \to \infty} \frac{\abs n}{3n^4} \cdot n^3 \nl 
+    &= \lim_{n \to \infty} \frac{n^4}{3n^4} = \tfrac{1}{3} \pd
+    \ea 
+    \]
+    Because \(L\) is positive and finite, the <b>Limit Comparison Test</b> says that 
+    \[\sum_{n = 2}^\infty \frac{\sqrt{n^2 + n + 4}}{3n^4 - 5n + 2} \convBoxed\]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#direct-comparison" class="summary-anchor">Direct Comparison Test</a>
+        The <span class="emph">Direct Comparison Test</span> enables us to 
+        establish whether a positive sum \(\sum a_n\) converges or diverges 
+        by comparing \(\sum a_n\) to either a larger convergent sum \(\sum b_n\) 
+        or a smaller divergent sum \(\sum b_n.\)
+        <ol class="list-alpha">
+            <li>
+                If \(0 \lt a_n \leq b_n\) and \(\sum b_n\) converges, 
+                then \(\sum a_n\) also converges.
+            </li>
+            <li>
+                If \(a_n \geq b_n \gt 0\) and \(\sum b_n\) diverges, 
+                then \(\sum a_n\) also diverges.
+            </li>
+        </ol> 
+    </p>
+    <p>
+        <a href="#limit-comparison" class="summary-anchor">Limit Comparison Test</a>
+        Suppose that \(a_n\) and \(b_n\) are both positive,
+        and let 
+        \[L = \lim_{n \to \infty} \frac{a_n}{b_n} \pd\]
+        If \(L\) is positive and finite, then the <span class="emph">Limit Comparison Test</span>
+        states that \(\sum a_n\) and \(\sum b_n\) either both converge or both diverge.
+        If \(a_n\) is a fraction with powers and radicals, then we 
+        compare \(\sum a_n\) to an appropriate sum \(\sum b_n\)
+        by keeping the highest powers in the numerator and denominator of \(a_n.\)
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

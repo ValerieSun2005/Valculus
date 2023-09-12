@@ -18,10 +18,11 @@ table{
 
 .problems-grid{
     table-layout: fixed;
-    width: 130%;
+    width: 125%;
 }
 
 .grid-problem-cell{ 
+    padding: 20px;
     border: none;
     text-align: left;
     padding-left: 0px;
@@ -70,6 +71,7 @@ main figure::after{
     color: gray;
     font-style: oblique;
 }
+
 
 .problem-special-body{
     margin-left: 60px;
@@ -194,6 +196,13 @@ main figure::after{
     /* font-style: oblique; */
 }
 
+.box-solution p:first-child{
+    text-indent: 0vmin;
+    margin-top: 0;
+    margin-bottom: 0;
+    display:inline;
+}
+
 .box-solution__solution figure{
     position: static;
     margin-left: auto;
@@ -293,11 +302,11 @@ main figure::after{
 }
 
 @media screen and (max-width: 1207px) {
-    tbody td {
+    .problems-grid td {
         display: block;
         text-align: left;
     }
-    tbody td:before {
+    .problems-grid td:before {
         content: attr(data-th);
         display: inline-block;
         width: 100%;

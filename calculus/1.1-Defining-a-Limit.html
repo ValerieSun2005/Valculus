@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.1: Defining a Limit</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.1 — Defining a Limit</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.1-Defining-a-Limit-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.1-Defining-a-Limit-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Defining-a-Limit]]]--> 
+<p>
+    We base all topics in calculus on one important topic—the <i>limit</i>. 
+    Limits are a fundamental tool that enables us to describe how a function behaves as 
+    we change its input.
+    In this section we define limits and present numerical and graphical methods 
+    to investigate them.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#def-limit" class="page-anchor">Definition of a Limit (Intuitive)</a>
+        </li>
+        <li>
+            <a href="#one-sided-limits" class="page-anchor">One-Sided Limits</a>
+        </li>
+        <li>
+            <a href="#limits-with-infinity" class="page-anchor">Limits with Infinity</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="def-limit">Definition of a Limit (Intuitive)</h4>
+<p>
+    A <span class="emph">limit</span> is the number that a function \(f(x)\) approaches as
+    its input \(x\) approaches some number \(a.\)
+    If \(f(x)\) gets closer and closer to \(L\) as \(x\) gets closer and closer to \(a\)
+    (without necessarily being \(a\)), then we say 
+    \[\lim_{x \to a} f(x) = L \pd\]
+    This notation is read as the following: <q>The limit of \(f(x),\) as \(x\) approaches \(a,\) is \(L.\)</q> 
+    We could also use <span class="emph">arrow notation</span>
+    by writing \(f(x) \to L\) as \(x \to a,\) meaning \(f(x)\)
+    tends to \(L\) as \(x\) is made close to \(a\) (but \(x \ne a\)).
+    In other words, we can make the values of \(f(x)\) <i>arbitrarily close to \(L\)—as 
+    close to \(L\) as we please—by making \(x\) sufficiently close to \(a\) but not equal to \(a.\)</i>
+    We will present a more precise definition in
+    Section <a href="/Valculus/calculus/1.5-Formal-Definition-of-a-Limit.html">1.5</a>,
+    in which we study the interpretation of the phrase <q>as close to \(L\) as we please.</q>
+</p>
+
+<figure class="graph-lim-x2" id="graph-lim-x2">
+    <img src="../images/sectionImages/graph-lim-x2.jpg" alt="Figure 1">
+</figure>
+<style>
+    .graph-lim-x2::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    As an example, the following table shows values of \(f(x) = x^2\) for selected values of \(x.\)
+    <div class="table-vertical-adjacent">
+        <table class="table-vertical">
+            <tr>
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(f(x) = x^2\)
+                </td>
+            </tr>
+            <tr>
+                <td>\(1\)</td>
+                <td>\(1\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(1.5\)</td>
+                <td>\(2.25\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(1.7\)</td>
+                <td>\(2.89\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(1.9\)</td>
+                <td>\(3.61\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(1.99\)</td>
+                <td>\(3.9601\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(1.999\)</td>
+                <td>\(3.996\)</td>
+                </tr>
+        </table>
+
+        <table class="table-vertical">
+            <tr>
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(f(x) = x^2\)
+                </td>
+            </tr>
+            <tr>
+                <td>\(2.001\)</td>
+                <td>\(4.004\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(2.01\)</td>
+                <td>\(4.0401\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(2.1\)</td>
+                <td>\(4.41\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(2.3\)</td>
+                <td>\(5.29\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(2.5\)</td>
+                <td>\(6.25\)</td>
+                </tr>
+                
+                <tr>
+                <td>\(3\)</td>
+                <td>\(9\)</td>
+            </tr>
+        </table>  
+    </div>
+    We observe that the values of \(f(x)\) approach \(4\)
+    as \(x\) is made close to \(2\) <i>from both sides</i>.
+    Simply put, the closer \(x\) is to \(2,\) the closer \(f(x)\) is to \(4,\)
+    regardless of whether \(x \lt 2\) or \(x \gt 2.\) 
+    Accordingly, we say \(\lim_{x \to 2} x^2 = 4.\)
+    <a href="#graph-lim-x2">Figure 1</a> shows the graph of \(y = f(x) = x^2;\)
+    from either side, tracing the graph toward \(x = 2\) shows that \(f(x) \to 4.\) 
+</p>
+
+<div class="box-title">DEFINING A LIMIT (INTUITIVE)</div>
+<div class="box">
+    We write 
+    \[\lim_{x \to a} f(x) = L\]
+    if we can make the values of \(f(x)\) arbitrarily close to \(L\)
+    by making \(x\) sufficiently close to \(a\) on either side of \(a\)
+    but not equal to \(a.\)
+</div>
+
+<p>
+    Pay attention to the statement <q>but not equal to \(a.\)</q>
+    When we find limits, we have no interest in \(f(a);\)
+    simply put, <span class="warning">never consider \(x = a\)</span>.
+    In fact, \(f\) doesn't need to be defined at \(a.\)
+    Instead, we only concern ourselves with the behavior of \(f\) <i>near</i> \(a.\)
+    A limit only tells us <i>what number \(f\) approaches</i> as \(x \to a.\)
+    For example, in <a href="#lim-img-a-fill">Figure 2A</a> \(f(a)\) is defined
+    but in <a href="#lim-img-a-hole">Figure 2B</a> \(f(a)\) is undefined.
+    Yet <i>in both cases</i>, \(f(x)\) approaches \(L\) as \(x\) approaches \(a\)—meaning 
+    both graphs satisfy \(\lim_{x \to a} f(x)\) \(= L.\)
+</p>
+
+<div class="figure-center">
+    <figure class="lim-img-a-fill" id="lim-img-a-fill">
+        <img src="../images/sectionImages/lim-img-a-fill.jpg" class="lim-img-a-fill" alt="Figure 2A">
+    </figure>
+    <figure class="lim-img-a-hole" id="lim-img-a-hole">
+        <img src="../images/sectionImages/lim-img-a-hole.jpg" class="lim-img-a-hole" alt="Figure 2B">
+    </figure>
+</div>
+
+<style>
+    .lim-img-a-fill::before{
+        content:'FIGURE 2A';
+    }
+
+    .lim-img-a-hole::before{
+        content:'FIGURE 2B';
+    }
+</style>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using a calculator, estimate the value of 
+        \[\lim_{x \to 1} \frac{x^3 - 1}{x - 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    The following table shows values of \(f(x) = (x^3 - 1)/(x - 1)\)
+    for \(x\) close to \(1\) on both sides. 
+    <div class="table-vertical-adjacent">
+        <table class="table-vertical">
+            <tr>
+                <td class="label-cell label-cell-tall">
+                    \(x\)
+                </td>
+                <td class="label-cell label-cell-tall">
+                    \(\ds f(x) = \frac{x^3 - 1}{x - 1}\)
+                </td>
+            </tr>
+            <tr>
+                <td>\(0\)</td>
+                <td>\(1.0\)</td>
+                </tr>
+                <tr>
+                <td>\(0.2\)</td>
+                <td>\(1.24\)</td>
+                </tr>
+                <tr>
+                <td>\(0.6\)</td>
+                <td>\(1.96\)</td>
+                </tr>
+                <tr>
+                <td>\(0.9\)</td>
+                <td>\(2.71\)</td>
+                </tr>
+                <tr>
+                <td>\(0.99\)</td>
+                <td>\(2.9701\)</td>
+                </tr>
+                <tr>
+                <td>\(0.999\)</td>
+                <td>\(2.997\)</td>
+                <tr>
+                <td>\(0.9999\)</td>
+                <td>\(2.9997\)</td>
+                </tr>
+            </tr>
+        </table>
+        <table class="table-vertical">
+            <tr>
+                <td class="label-cell label-cell-tall">
+                    \(x\)
+                </td>
+                <td class="label-cell label-cell-tall">
+                    \(\ds f(x) = \frac{x^3 - 1}{x - 1}\)
+                </td>
+            </tr>
+            <tr>
+                <tr>
+                <td>\(1.0001\)</td>
+                <td>\(3.0003\)</td>
+                </tr>
+                <td>\(1.001\)</td>
+                <td>\(3.003\)</td>
+                </tr>
+                <tr>
+                <td>\(1.01\)</td>
+                <td>\(3.0301\)</td>
+                </tr>
+                <tr>
+                <td>\(1.1\)</td>
+                <td>\(3.31\)</td>
+                </tr>
+                <tr>
+                <td>\(1.4\)</td>
+                <td>\(4.36\)</td>
+                </tr>
+                <tr>
+                <td>\(1.8\)</td>
+                <td>\(6.04\)</td>
+                </tr>
+                <tr>
+                <td>\(2\)</td>
+                <td>\(7.0\)</td>
+                </tr>
+        </table>
+    </div>
+    We see that \(f(x)\) gets closer to \(3\) as \(x\) is made closer to \(1,\)
+    so we estimate 
+    \[\lim_{x \to 1} f(x) = \lim_{x \to 1} \frac{x^3 - 1}{x - 1} = \boxed 3\]
+    It turns out that \(f(1)\) is undefined, but 
+    <i>\(f\) doesn't need to be defined at \(1\)</i> for us to determine \(\lim_{x \to 1} f(x).\)
+    We only concern ourselves with the <i>behavior</i> of \(f(x)\)—the value it approaches—near \(x = 1.\) 
+</div>
+
+<div class="example-title" id="ex-sqrt"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using a calculator, estimate the value of 
+        \[\lim_{x \to 0} \frac{\sqrt{4 + x} - 2}{x} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    The following table gives values of \(f(x) = \par{\sqrt{4 + x} - 2}/x\)
+    for \(x\) near \(0.\)
+    <div class="table-vertical-adjacent">
+        <table class="table-vertical">
+            <tr class="tall-row">
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(\ds f(x) = \frac{\sqrt{4 + x} - 2}{x}\)
+                </td>
+            </tr>
+            <tr>
+                <td>\(-1\)</td>
+                <td>\(0.2679492\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.8\)</td>
+                <td>\(0.263932\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.4\)</td>
+                <td>\(0.2565835\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.1\)</td>
+                <td>\(0.2515823\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.01\)</td>
+                <td>\(0.2501564\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.001\)</td>
+                <td>\(0.2500156\)</td>
+                </tr>
+                <tr>
+                <td>\(-0.0001\)</td>
+                <td>\(0.2500016\)</td>
+                </tr>
+        </table>
+        <table class="table-vertical">
+            <tr class="tall-row">
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(\ds f(x) = \frac{\sqrt{4 + x} - 2}{x}\)
+                </td>
+            </tr>
+            <tr>
+            <td>\(0.0001\)</td>
+            <td>\(0.2499984\)</td>
+            </tr>
+            <tr>
+            <td>\(0.001\)</td>
+            <td>\(0.2499844\)</td>
+            </tr>
+            <tr>
+            <td>\(0.01\)</td>
+            <td>\(0.2498439\)</td>
+            </tr>
+            <tr>
+            <td>\(0.1\)</td>
+            <td>\(0.2484567\)</td>
+            </tr>
+            <tr>
+            <td>\(0.4\)</td>
+            <td>\(0.2440442\)</td>
+            </tr>
+            <tr>
+            <td>\(0.8\)</td>
+            <td>\(0.2386128\)</td>
+            </tr>
+            <tr>
+            <td>\(1\)</td>
+            <td>\(0.236068\)</td>
+            </tr>
+        </table>
+    </div>
+    We see that \(f(x)\) gets closer to \(0.25\) as \(x\) approaches \(0,\) so we estimate 
+    \[\lim_{x \to 0} \frac{\sqrt{4 + x} - 2}{x} = \boxed{\tfrac{1}{4}}\]
+    It is irrelevant that \(f(0)\) is undefined, since the limit \(\lim_{x \to 0} f(x)\) 
+    only tells us <i>what number \(f\) approaches</i> as \(x \to 0.\)
+</div>
+<p>
+    It's important to realize the limitations of using graphs and tables to estimate limits.
+    Often, it's difficult to know <i>how close</i> to make \(x\) to \(a,\)
+    and technology can mislead us. For example, in <a href="#ex-sqrt">Example 2</a>
+    if you make \(x\) small enough, then your calculator may return \(f(x) = 0.\)
+    This result arises because for very small values of \(x,\)
+    your calculator cannot hold enough digits to distinguish between \(\sqrt{4 + x}\)
+    and \(2.\) 
+    Thus, the calculator returns the difference \(\sqrt{4 + x} - 2\)
+    as \(0.\)
+    But the limit of \(\lim_{x \to 0} \par{\sqrt{4 + x} - 2}/x\)
+    turns out to be \(1/4.\)
+    In Section <a href="/Valculus/calculus/1.3-Evaluating-Limits-Algebraically.html">1.3</a> we will discuss methods that permit us 
+    to calculate confidently, rather than guess, the values of such limits.
+</p>
+
+<h4 id="one-sided-limits">One-Sided Limits</h4>
+<aside class="box-remark">
+    In <b>arrow notation</b>, a left-hand limit can be written as 
+    \[f(x) \to L \as x \to a^- \pd\]
+    Similarly, a right-hand limit can be written as 
+    \[f(x) \to L \as x \to a^+ \pd\]
+</aside>
+<p>
+    <i>One-sided limits</i> are tools that extend our ability to describe functions.
+    A <span class="emph">left-hand limit</span> gives the value to which \(f(x)\) tends 
+    as \(x\) is made close to \(a\) <i>from strictly the left side</i>; that is, we consider only \(x \lt a.\)
+    We denote a left-hand limit using the notation 
+    \[\lim_{x \to a^-} f(x) = L \cma\]
+    where the negative superscript on \(a^-\) suggests that \(x \lt a.\) 
+    (See <a href="#graph-left-sided-lim">Figure 3A</a>.)
+    Similarly, a <span class="emph">right-hand limit</span> is the value \(f(x)\) approaches 
+    \(x\) is made close to \(a\) <i>from solely the right side</i>, so we consider only \(x \gt a.\)
+    A right-hand limit is written as 
+    \[\lim_{x \to a^+} f(x) = L \cma\]
+    for which the positive superscript on \(a^+\) implies that \(x \gt a.\)
+    (See <a href="#graph-right-sided-lim">Figure 3B</a>.)
+    Note that we say \(x \lt a\) instead of \(x \leq a,\)
+    and \(x \gt a\) instead of \(x \geq a.\)
+</p>
+
+<div class="figure-center">
+    <figure class="graph-left-sided-lim" id="graph-left-sided-lim">
+        <img src="../images/sectionImages/graph-left-sided-lim.jpg" class="graph-left-sided-lim" alt="Figure 3A">
+    </figure>
+    <figure class="graph-right-sided-lim" id="graph-right-sided-lim">
+        <img src="../images/sectionImages/graph-right-sided-lim.jpg" class="graph-right-sided-lim" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .graph-left-sided-lim::before{
+        content:'FIGURE 3A';
+    }
+
+    .graph-right-sided-lim::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<div class="box-title">ONE-SIDED LIMITS</div>
+<div class="box">
+    Let \(f\) be defined near \(a\) (except possibly at \(a\) itself).
+    <ol class="list-alpha">
+        <li>
+            <span class="label-emph">Left-Hand Limits</span>
+            We write 
+            \[\lim_{x \to a^-} f(x) = L\]
+            if \(f(x)\) can be made arbitrarily close to \(L\)
+            as \(x\) is made sufficiently close to \(a\) (but not equal to \(a\))
+            for \(x\) <i>less than </i> \(a.\)
+        </li>
+        <li>
+            <span class="label-emph">Right-Hand Limits</span>
+            We write 
+            \[\lim_{x \to a^+} f(x) = L\]
+            if \(f(x)\) can be made arbitrarily close to \(L\)
+            as \(x\) is made sufficiently close to \(a\) (but not equal to \(a\))
+            for \(x\) <i>greater than </i> \(a.\)
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="label-emph">Existence of a Limit</span>
+    A limit exists if and only if its one-sided limits exist.
+    Mathematically, \(\lim_{x \to a} f(x)\) \(= L\) is true if and only if  
+    \[\lim_{x \to a^-} f(x) = L \and \lim_{x \to a^+} f(x) = L \pd\]
+    In other words, we must be able to trace a curve \(f\) near \(a\) and see the values of \(f(x)\) approach \(L\)
+    <i>from both sides</i> of \(x = a.\) 
+    If this agreement isn't present, then the limit doesn't exist.
+    For the graphs in <a href="#graph-left-sided-lim">Figure 3A</a> 
+    and <a href="#graph-right-sided-lim">Figure 3B</a>, 
+    the one-sided limits of \(f\) at \(a\) are different.
+    Thus, for each graph \(\lim_{x \to a} f(x)\) <b>does not exist</b>.
+</p>
+
+<div class="box-title">EXISTENCE OF A LIMIT</div>
+<div class="box">
+    The limit \(\lim_{x \to a} f(x)\) exists and equals \(L\) if and only if 
+    \[\lim_{x \to a^-} f(x) = L \and \lim_{x \to a^+} f(x) = L \pd\]
+    Otherwise, the limit <b>does not exist</b>.
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="graph-lim-one-sided" id="graph-lim-one-sided">
+            <img src="../images/sectionImages/graph-lim-one-sided.jpg" alt="Figure 4">
+        </figure>
+        <style>
+            .graph-lim-one-sided::before{
+                content:'FIGURE 4';
+            }
+        </style>
+        In <a href="#graph-lim-one-sided">Figure 4</a>, determine the values of the following
+        expressions if they exist.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \lim_{x \to 0} f(x)\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 2} f(x)\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 3} f(x)\)</span>
+            </li>
+        </ol>
+        <div class="white-space-small"></div>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <ol class="list-alpha">
+        <li>
+            Observe that \(f(x)\) approaches \(0\)
+            as \(x\) is made close to \(0\) 
+            from <i>both sides of</i> \(0.\)
+            So  
+            \[\lim_{x \to 0} f(x) = \boxed 0\]
+        </li>
+        <hr>
+        <li>
+            Tracing the graph from the <i>left</i> of \(x = 2,\)
+            we see that \(f(x)\) approaches \(2.\)
+            Conversely, as we trace the graph from the <i>right</i> of \(x = 2,\)
+            we observe that \(f(x)\) approaches \(4.\) 
+            [In either case, we <span class="warning">don't consider \(f(2)\)</span>.]
+            We therefore write 
+            \[\lim_{x \to 2^-} f(x) = 2 \and \lim_{x \to 2^+} f(x) = 4 \pd\]
+            Since these one-sided limits aren't equivalent, 
+            \(\lim_{x \to 2} f(x)\) <b>does not exist</b>.
+        </li>
+        <hr>
+        <li>
+            We see that \(f(x)\) approaches \(3\) as \(x\) approaches \(3\) from the <i>left</i>
+            (that is, with \(x \lt 3\)).  
+            Similarly, \(f(x)\) tends to \(3\) as \(x\) is made close to \(3\) from the <i>right</i>
+            (that is, for \(x \gt 3\)). 
+            Hence, 
+            \[\lim_{x \to 3^-} f(x) = \lim_{x \to 3^+} f(x) = 3 \pd\]
+            Because both one-sided limits equal the same number \(3,\) we assert that  
+            \[\lim_{x \to 3} f(x) = \boxed 3\]
+            Although \(f(3) = 1,\) the <i>value</i> of \(f\) at \(3\) has no relevance to the limit \(\lim_{x \to 3} f(x),\)
+            which is the number \(f\) approaches as \(x \to 3.\) 
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \frac{\abs x}{x}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="graph-abs-piecewise" id="graph-abs-piecewise">
+        <img src="../images/sectionImages/graph-abs-piecewise.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .graph-abs-piecewise::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    Observe that \(\abs x\) is equivalent to the piecewise function 
+    \[\abs x = 
+    \bc 
+    -x &x \lt 0 \nl 
+    x &x \geq 0 \pd
+    \ec
+    \]
+    So 
+    \[
+    \ba 
+    \frac{\abs x}{x} 
+    &= 
+    \bc 
+    -x/x &x \lt 0 \nl 
+    x/x &x \gt 0 
+    \ec \nl 
+    &= 
+    \bc 
+    -1 &x \lt 0 \nl 
+    1 &x \gt 0 \pd
+    \ec \nl 
+    \ea 
+    \]
+    Note that \(\abs{x}/x\) is undefined at \(x = 0.\)
+    (See <a href="#graph-abs-piecewise">Figure 5</a>.)
+    We find 
+    \[\lim_{x \to 0^-} \frac{\abs x}{x} = -1 \and \lim_{x \to 0^+} \frac{\abs x}{x} = 1 \pd\]
+    Since these one-sided limits aren't equal, the limit \(\lim_{x \to 0} \par{\abs{x}/x}\)
+    <b>does not exist</b>.
+</div>
+
+<div class="example-title" id="sin(1/x)"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \sin \frac{1}{x}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <figure class="sin-recip-x" id="sin-recip-x">
+        <img src="../images/sectionImages/sin-recip-x.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .sin-recip-x::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    We construct a table with some values of \(x,\) as follows.
+    <table class="table-full-width">
+        <tr class="tall-row">
+            <td class="table-function-label">
+                \(x\)
+            </td>
+            <td>
+                \(\ds \frac{2}{\pi}\)
+            </td>
+            <td>
+                \(\ds \frac{2}{3\pi}\)
+            </td>
+            <td>
+                \(\ds \frac{2}{5\pi}\)
+            </td>
+            <td>
+                \(\ds \frac{2}{7\pi}\)
+            </td>
+            <td>
+                \(\ds \frac{2}{9\pi}\)
+            </td>
+            <td>
+                \(\ds \frac{2}{11\pi}\)
+            </td>
+        </tr>
+        <tr class="tall-row">
+            <td class="table-function-label">
+                \(\ds \sin \frac{1}{x}\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+        </tr>
+    </table> 
+    Hence, \(\sin(1/x)\) continually oscillates as \(x\) is made closer to \(0.\)
+    <a href="#sin-recip-x">Figure 6</a> shows the graph of \(y = \sin(1/x)\) making endless waves as \(x \to 0.\)
+    The function therefore <i>does not settle to any final value</i> as \(x\)
+    is made close to \(0,\)
+    meaning the limit \(\lim_{x \to 0} \sin(1/x)\) <b>does not exist</b>. 
+</div>
+
+<p>
+    The preceding three examples show instances when a limit \(\lim_{x \to a} f(x)\) may fail to exist.
+    A limit fails to exist if the one-sided limits of \(f\) at \(a\) don't agree with each other.
+    Or a limit can fail to exist if \(f(x)\) doesn't settle to a final value—for example,
+    \(f\) oscillates (such as in <a href="#sin(1/x)">Example 5</a>)—as \(x\) is made close to \(a.\)
+</p>
+
+<h4 id="limits-with-infinity">Limits with Infinity</h4>
+<p>
+    A function \(f(x)\) may approach some value \(L\) as \(x\) is made closer to some number \(a.\)
+    But what if we let \(x\) increase or decrease without bound?
+    In such cases, we aim to determine whether \(f(x)\) tends to a fixed number as \(x \to \infty\)
+    or as \(x \to -\infty.\) 
+    We call these matters <i>limits at infinity</i>. 
+    Let's consider a few examples.
+</p>
+
+<div class="example-title" id="ex-1/x"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to \infty} \frac{1}{x}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <figure class="lim-recip-x" id="lim-recip-x">
+        <img src="../images/sectionImages/lim-recip-x.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .lim-recip-x::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    We interpret the limit statement as the following question: what happens to \(1/x\)
+    if we let \(x\) grow bigger and bigger—that is, as \(x\) <i>increases without bound</i>?
+    A table of values for \(1/x\) is shown below.
+    <table class="table-vertical">
+        <tr class="tall-row">
+            <td class="label-cell">
+                \(x\)
+            </td>
+            <td class="label-cell">
+                \(\ds \frac{1}{x}\)
+            </td>
+        </tr>
+        <tr>
+            <td>\(1\)</td>
+            <td>\(1\)</td>
+            </tr>
+            <tr>
+            <td>\(5\)</td>
+            <td>\(0.2\)</td>
+            </tr>
+            <tr>
+            <td>\(10\)</td>
+            <td>\(0.1\)</td>
+            </tr>
+            <tr>
+            <td>\(100\)</td>
+            <td>\(0.01\)</td>
+            </tr>
+            <tr>
+            <td>\(1000\)</td>
+            <td>\(0.001\)</td>
+            </tr>
+            <tr>
+            <td>\(10000\)</td>
+            <td>\(0.0001\)</td>
+            </tr>
+            <tr>
+            <td>\(100000\)</td>
+            <td>\(0.00001\)</td>
+            </tr>
+    </table>
+    As we increase \(x,\) the value \(1/x\)
+    shrinks to \(0\) because the number \(1\) is divided by a larger and larger value. 
+    If we trace the graph of \(y = 1/x\) (shown in <a href="#lim-recip-x">Figure 7</a>) 
+    in the direction of increasing \(x,\) then we observe that the curve plunges toward the \(x\)-axis.
+    So  
+    \[\lim_{x \to \infty} \frac{1}{x} = \boxed 0\]
+</div>
+
+<p>
+    More generally, the notation 
+    \[\lim_{x \to \infty} f(x) = L\]
+    means that \(f(x)\) approaches some number \(L\) as we make \(x\) arbitrarily large (as large as we wish)—in other words,
+    as \(x\) <i>increases without bound</i>.
+    Similarly, writing 
+    \[\lim_{x \to -\infty} f(x) = L\]
+    indicates that \(f(x)\) tends to \(L\) if we let \(x\) <i>decrease</i> without bound. 
+</p>
+
+<div class="box-title">LIMITS AT INFINITY</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If \(f(x)\) is defined for all \(x \geq a,\) then 
+            \[\lim_{x \to \infty} f(x) = L\]
+            means that \(f(x)\) approaches \(L\) as \(x\) increases without bound.
+        </li>
+        <li>
+            If \(f(x)\) is defined for all \(x \leq a,\) then 
+            \[\lim_{x \to -\infty} f(x) = L\]
+            means that \(f(x)\) approaches \(L\) as \(x\) decreases without bound.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="lim-sin"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to \infty} \sin x\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <figure class="lim-sine" id="lim-sine">
+        <img src="../images/sectionImages/lim-sine.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .lim-sine::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    The following table shows values of \(\sin x\)
+    for selected increasing values of \(x.\)
+    <table class="table-full-width">
+        <tr class="tall-row">
+            <td class="table-function-label">
+                \(x\)
+            </td>
+            <td>
+                \(\ds \frac{\pi}{2}\)
+            </td>
+            <td>
+                \(\ds \frac{3\pi}{2}\)
+            </td>
+            <td>
+                \(\ds \frac{5\pi}{2}\)
+            </td>
+            <td>
+                \(\ds \frac{7\pi}{2}\)
+            </td>
+            <td>
+                \(\ds \frac{9\pi}{2}\)
+            </td>
+            <td>
+                \(\ds \frac{11\pi}{2}\)
+            </td>
+        </tr>
+        <tr class="tall-row">
+            <td class="table-function-label">
+                \(\ds \sin x\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+        </tr>
+    </table> 
+    Observe that as \(x\) is made larger and larger, the sine function 
+    continues oscillating between \(-1\) and \(1,\)
+    never settling to any final value
+    (<a href="#lim-sine">Figure 8</a>). 
+    Accordingly, the limit \(\lim_{x \to \infty} \sin x\)
+    <b>does not exist</b>.
+</div>
+
+<p>
+    More generally, the limit as \(x \to \infty\) or \(x \to -\infty\) 
+    of any of the six trigonometric functions \((\sin x,\) 
+    \(\cos x,\) \(\tan x,\) \(\sec x,\) \(\csc x,\) and \(\cot x)\) does not exist. 
+    These graphs are <i>periodic</i>, meaning they constantly repeat themselves
+    in regular intervals. 
+    Thus, <span class="warning">none</span> of these functions settles to a final value as
+    \(x\) increases or decreases without bound.
+</p>
+
+<div class="example-title" id="1/x2"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \frac{1}{x^2}\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <figure class="lim-recip-x2" id="lim-recip-x2">
+        <img src="../images/sectionImages/lim-recip-x2.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .lim-recip-x2::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    As \(x\) is made closer to \(0,\) the function \(1/x^2\) grows because 
+    \(1\) is divided by a progressively smaller number, 
+    as shown by the following table.
+    <div class="table-vertical-adjacent">
+        <table class="table-vertical">
+            <tr class="tall-row">
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(\ds \frac{1}{x^2}\)
+                </td>
+            </tr>
+            <tr>
+            <td>\(-1\)</td>
+            <td>\(1\)</td>
+            </tr>
+            <tr>
+            <td>\(-0.1\)</td>
+            <td>\(100\)</td>
+            </tr>
+            <tr>
+            <td>\(-0.01\)</td>
+            <td>\(10000\)</td>
+            </tr>
+            <tr>
+            <td>\(-0.001\)</td>
+            <td>\(1000000\)</td>
+            </tr>
+            <tr>
+            <td>\(-0.0001\)</td>
+            <td>\(100000000\)</td>
+            </tr>
+        </table>
+        <table class="table-vertical">
+            <tr class="tall-row">
+                <td class="label-cell">
+                    \(x\)
+                </td>
+                <td class="label-cell">
+                    \(\ds \frac{1}{x^2}\)
+                </td>
+            </tr>
+            <tr>
+            <td>\(0.0001\)</td>
+            <td>\(100000000\)</td>
+            </tr>
+            <tr>
+            <td>\(0.001\)</td>
+            <td>\(1000000\)</td>
+            </tr>
+            <tr>
+            <td>\(0.01\)</td>
+            <td>\(10000\)</td>
+            </tr>
+            <tr>
+            <td>\(0.1\)</td>
+            <td>\(100\)</td>
+            </tr>
+            <tr>
+            <td>\(1\)</td>
+            <td>\(1\)</td>
+            </tr>
+        </table>
+    </div>
+    In fact, the values of \(1/x^2\) can be made <i>arbitrarily large</i> by making \(x\) sufficiently small, 
+    as shown by the graph in <a href="#lim-recip-x2">Figure 9</a>.
+    Since \(1/x^2\) does not approach a final value as \(x \to 0,\) we say 
+    the limit \(\lim_{x \to 0} \par{1/x^2}\) <b>does not exist</b>.
+</div>
+
+<p>
+    <a href="#1/x2">Example 8</a> shows an example of a function that becomes unbounded as 
+    \(x\) is made closer to a value. 
+    To better describe the behavior of \(y = 1/x^2\) as \(x \to 0,\) we could also write 
+    \[\lim_{x \to 0} \frac{1}{x^2} = \infty \pd\]
+    But understand that <span class="warning">\(\infty\) is not a number, nor does this limit exist</span>. 
+    This notation simply describes <i>how</i> the limit fails to exist, 
+    therefore providing us with more information about the function's behavior.
+    We will elaborate on the uses of infinite limits in Section <a href="/Valculus/calculus/1.6-Limits-with-Infinity.html">1.6</a>.
+</p>
+<p>
+    <span class="label-emph">Infinite Limits</span>
+    In general, the notation 
+    \[\lim_{x \to a} f(x) = \infty\]
+    means that the values of \(f(x)\) become bigger and bigger—increasing without bound—as \(x\) is made closer and closer to \(a.\)
+    We may choose to say a limit <q>equals infinity</q> instead of writing <q>does not exist,</q>
+    which provides less information about a function's behavior.
+    The former statement concedes that a limit doesn't exist while communicating that the function 
+    approaches \(\infty.\)
+    Likewise, writing 
+    \[\lim_{x \to a} f(x) = -\infty\]
+    asserts that the values of \(f(x)\) decrease without bound as \(x\) approaches \(a.\)
+    This statement suggests that the limit fails to exist <i>because</i> \(f(x)\) approaches negative infinity.
+    In either definition, the value of \(f(a)\) (or whether it is undefined) is irrelevant.
+</p>
+
+<div class="box-title">INFINITE LIMITS</div>
+<div class="box">
+    Let \(f\) be a function defined on both sides of \(a,\) except possibly at \(a\) itself. 
+    <ol class="list-alpha">
+        <li>
+            The statement 
+            \[\lim_{x \to a} f(x) = \infty\]
+            means that \(f(x)\) increases without bound as \(x\) is made closer to \(a\)
+            (but not equal to \(a\)).
+        </li>
+        <li>
+            The statement 
+            \[\lim_{x \to a} f(x) = -\infty\]
+            means that \(f(x)\) decreases without bound as \(x\) is made closer to \(a\)
+            (but not equal to \(a\)).
+        </li>
+    </ol>
+</div>
+
+<p>
+    Now let's merge the ideas of <i>limits at infinity</i> with <i>infinite limits</i>:
+    The family of functions \(1/x^k,\) 
+    where \(k\) is a positive constant, satisfies 
+    \begin{equation} 
+    \lim_{x \to \infty} x^k = \infty \pd \label{eq:lim-x^k}
+    \end{equation}
+    This formula is intuitive because if \(x\) is large, 
+    then \(x^k\) is also large.
+    Hence, \(x^k\) grows with \(x.\)
+    Accordingly, the fraction \(1/x^k\) shrinks to \(0\)
+    due to the division of \(1\) by an increasingly large number. 
+    Thus, 
+    \begin{equation} 
+    \lim_{x \to \infty} \frac{1}{x^k} = 0 \pd \label{eq:lim-1/x^k}
+    \end{equation}
+    In <a href="#ex-1/x">Example 6</a> we used this logic
+    to verify \(\eqref{eq:lim-1/x^k}\) for \(k = 1.\) 
+</p>
+
+<div class="box-title">THE FAMILY OF FUNCTIONS \(x^k\) AND \(1/x^k\)</div>
+<div class="box">
+    If \(k\) is a positive constant, then 
+    \begin{flalign} 
+    &&\lim_{x \to \infty} x^k &= \infty \eqlabel{eq:lim-x^k} &\nl
+    \laWord{and} &&\lim_{x \to \infty} \frac{1}{x^k} &= 0 \pd \eqlabel{eq:lim-1/x^k}
+    \end{flalign}
+</div>
+
+<div class="example-title" id="ex-x^k"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following limits.
+        <ol class="list-alpha">
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} \frac{1}{x^5}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} \sqrt[3]{x}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} x^{-2}\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    <ol class="list-alpha">
+        <li>
+            We use \(\eqref{eq:lim-1/x^k},\) 
+            where \(k = 5 \gt 0,\) to assert that 
+            \[\lim_{x \to \infty} \frac{1}{x^5} = \boxed 0\]
+        </li>
+        <hr>
+        <li>
+            Rewriting \(\sqrt[3]{x}\) as \(x^{1/3},\) we apply \(\eqref{eq:lim-x^k}\)
+            with \(k = 1/3 \gt 0\) to conclude
+            \[\lim_{x \to \infty} \sqrt[3]{x} = \boxed{\infty}\]
+            (We could also say the limit <b>does not exist</b>.)
+        </li>
+        <hr>
+        <li>
+            Since \(x^{-2} = 1/x^2,\) 
+            using \(\eqref{eq:lim-1/x^k}\) with \(k = 2 \gt 0\) shows 
+            \[\lim_{x \to \infty} x^{-2} = \lim_{x \to \infty} \frac{1}{x^2} = \boxed 0\]
+        </li>
+    </ol>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#def-limit" class="summary-anchor">Definition of a Limit (Intuitive)</a>
+        A <span class="emph">limit</span> is the number \(f(x)\) approaches as
+        its input \(x\) approaches some number \(a.\)
+        We write 
+        \[\lim_{x \to a} f(x) = L\]
+        if we can make the values of \(f(x)\) arbitrarily close to \(L\)
+        by making \(x\) sufficiently close to \(a\) on either side of \(a\)
+        but not equal to \(a.\)
+        We read this statement as follows: <q>The limit, as \(x\) approaches \(a,\) of \(f(x)\) equals \(L.\)</q>
+        In <span class="emph">arrow notation</span>, we write 
+        \(f(x) \to L\) as \(x \to a.\)
+        Constructing a table with values of \(f\) close to \(a\)
+        can help us determine a limit, although tables and graphs can sometimes be misleading.
+    </p>
+    <p>
+        <a href="#one-sided-limits" class="summary-anchor">One-Sided Limits</a>
+        <span class="emph">One-sided limits</span> tell us what number \(f(x)\) approaches 
+        as \(x\) approaches \(a\) for either \(x \lt a\) or for \(x \gt a.\)
+        Let \(f\) be defined near \(a\) (except possibly at \(a\) itself).
+        <ol class="list-alpha">
+            <li>
+                <span class="label-emph">Left-Hand Limits</span>
+                We write 
+                \[\lim_{x \to a^-} f(x) = L\]
+                if \(f(x)\) can be made arbitrarily close to \(L\)
+                as \(x\) is made sufficiently close to \(a\) (but not equal to \(a\))
+                for \(x\) <i>less than </i> \(a.\)
+            </li>
+            <li>
+                <span class="label-emph">Right-Hand Limits</span>
+                We write 
+                \[\lim_{x \to a^+} f(x) = L\]
+                if \(f(x)\) can be made arbitrarily close to \(L\)
+                as \(x\) is made sufficiently close to \(a\) (but not equal to \(a\))
+                for \(x\) <i>greater than </i> \(a.\)
+            </li>
+        </ol>
+    </p>
+    <p class="no-indent">
+        If a function \(f(x)\) fails to settle to a single value as \(x \to a,\)
+        then the limit \(\lim_{x \to a} f(x)\) <b>does not exist</b>. 
+        This can happen due to a disagreement in one-sided limits or if \(f\) oscillates 
+        as \(x \to a.\)
+        The one-sided limits of a function \(f\) at \(a\) must be equivalent
+        for \(\lim_{x \to a} f(x)\) to exist; 
+        namely, \(\lim_{x \to a} f(x) = L\) if and only if 
+        \[\lim_{x \to a^-} f(x) = L \and \lim_{x \to a^+} f(x) = L \pd\]
+    </p>
+    <p>
+        <a href="#limits-with-infinity" class="summary-anchor">Limits with Infinity</a>
+        We can model the behavior of a function \(f(x)\) as \(x \to \infty\) or as \(x \to -\infty.\)
+        <ol class="list-alpha">
+            <li>
+                If \(f(x)\) is defined for all \(x \geq a,\) then 
+                \[\lim_{x \to \infty} f(x) = L\]
+                means that \(f(x)\) approaches \(L\) as \(x\) increases without bound.
+            </li>
+            <li>
+                If \(f(x)\) is defined for all \(x \leq a,\) then 
+                \[\lim_{x \to -\infty} f(x) = L\]
+                means that \(f(x)\) approaches \(L\) as \(x\) decreases without bound.
+            </li>
+        </ol>
+    </p>
+    <p class="no-indent">
+        Let \(f\) be a function defined on both sides of \(a,\) except possibly at \(a\) itself. 
+        <ol class="list-alpha">
+            <li>
+                The statement 
+                \[\lim_{x \to a} f(x) = \infty\]
+                means that \(f(x)\) increases without bound as \(x\) is made closer to \(a\)
+                (but not equal to \(a\)).
+            </li>
+            <li>
+                The statement 
+                \[\lim_{x \to a} f(x) = -\infty\]
+                means that \(f(x)\) decreases without bound as \(x\) is made closer to \(a\)
+                (but not equal to \(a\)).
+            </li>
+        </ol>
+    </p>
+    <p class="no-indent">
+        Note that <span class="warning">\(\infty\) is not a number</span>. 
+        When we say a limit equals \(\infty\) or \(-\infty,\)
+        we implying that it <span class="warning">does not exist</span> 
+        while clarifying <i>how</i> it fails to exist.
+        If \(k\) is a positive constant, then 
+        \begin{flalign} 
+        &&\lim_{x \to \infty} x^k &= \infty \eqlabel{eq:lim-x^k} &\nl
+        \laWord{and} &&\lim_{x \to \infty} \frac{1}{x^k} &= 0 \pd \eqlabel{eq:lim-1/x^k}
+        \end{flalign}
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

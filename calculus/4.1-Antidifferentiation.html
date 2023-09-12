@@ -56,8 +56,9 @@
     <a class="page-anchor" href="#defining-an-antiderivative">Defining an Antiderivative</a>;
     <a class="page-anchor" href="#evaluating-antiderivatives">Evaluating Antiderivatives</a>; and 
     connecting antiderivatives to 
-    <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a> and 
-    <a class="page-anchor" href="#freefalling-objects">Objects in Free fall</a>.
+    <a class="page-anchor" href="#diff-eq">Differential Equations</a>,
+    <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>, and 
+    <a class="page-anchor" href="#freefalling-objects">Objects in Free Fall</a>.
 </p>
 <h4 id="defining-an-antiderivative">Defining an Antiderivative</h4>
 <p>
@@ -216,7 +217,7 @@
     If \(f(x) = x^n,\) where \(n \ne -1,\) then the <span class="emph">Reverse Power Rule</span> 
     gives an antiderivative of \(f\) to be
     \begin{equation} 
-    F(x) = \frac{x^{n + 1}}{n + 1} \pd \label{eq:reverse-power-rule}
+    F(x) = \frac{x^{n + 1}}{n + 1} + C \pd \label{eq:reverse-power-rule}
     \end{equation}
     In words, \(\eqRefer{eq:reverse-power-rule}\) states that to find an antiderivative of a power function
     (if the power isn't \(-1\)), 
@@ -235,36 +236,40 @@
     \(0;\) rather, \(\int \dd x = \int 1 \di x.\)
     And \(\textDeriv{}{x}\,[x + C] = 1,\) thus affirming the result in \(\eqRefer{eq:int-n=0}.\)
     But if \(n = -1,\) then an antiderivative of \(f(x) = x^n\) is \(\ln|x|,\)
-    as we asserted in (iii) of <a href="#ex-1">Example 1</a>.
+    as we asserted in <a href="#ex-1">Example 1</a>.
 </p>
 <aside class="box-remark">
     It is common to see expressions like \(\int \dd x/x^2,\)
     whose meaning is identical to \(\int \frac{1}{x^2} \di x.\)
-    Likewise, when an integrand contains a sum or difference,
+    <!-- Likewise, when an integrand contains a sum or difference,
     using parentheses is a stylistic decision:
     Some people write \(\int (2x - 3)\di x,\)
     while others prefer \(\int 2x - 3 \di x.\)
-    Both expressions carry the same meaning.
+    Both expressions carry the same meaning. -->
 </aside>
 <div class="box-title">INTEGRATING POWER FUNCTIONS</div>
 <div class="box">
     If \(n \ne -1,\) then the <span class="emph">Reverse Power Rule</span> gives
-    \[\int x^n \di x = \frac{x^{n + 1}}{n + 1} + C \pd \]
+    \[\int x^n \di x = \frac{x^{n + 1}}{n + 1} + C \pd \eqlabel{eq:reverse-power-rule}\]
     If \(n = -1,\) then \(\int (1/x) \di x = \ln|x| + C.\)
 </div>
 <p>
     If functions \(f\) and \(g\) have antiderivatives \(F\) and \(G,\)
-    respectively, then 
+    respectively, then the <span class="emph">Sum Rule for Antiderivatives</span>
+    and the <span class="emph">Difference Rule for Antiderivatives</span> state the following:
+    \begin{alignat}{2} 
+    \int \parbr{f(x) + g(x)} \di x &= \int f(x) \di x + \int g(x) \di x &&= F(x) + G(x) + C \cma \label{eq:int-sum} \nl 
+    \int \parbr{f(x) - g(x)} \di x &= \int f(x) \di x - \int g(x) \di x &&= F(x) - G(x) + C \pd \label{eq:int-diff} \nl
+    \end{alignat}
+    If \(c\) is a constant, then the <span class="emph">Constant Multiple Rule for Antiderivatives</span>
+    asserts that 
     \begin{equation} 
-    \int f(x) \pm g(x) \di x = \int f(x) \di x \pm \int g(x) \di x = F(x) \pm G(x) + C \pd \label{eq:int-sum}
+    \int cf(x) \di x = c \int f(x) \di x = cF(x) + C \pd \label{eq:int-constant}
     \end{equation}
-    If \(k\) is a constant, then 
-    \begin{equation} 
-    \int kf(x) \di x = k \int f(x) \di x = kF(x) + C \pd \label{eq:int-constant}
-    \end{equation}
-    Antiderivatives are said to be <i>linear</i> because they satisfy \(\eqref{eq:int-sum}\) and \(\eqref{eq:int-constant}.\)
-    In \(\eqRefer{eq:int-sum},\) \(\int f(x) \di x\) and \(\int g(x) \di x\) 
-    each output a constant of integration; we write the sum or difference of these constants simply as \(C,\)
+    In \(\eqref{eq:int-sum}\) and \(\eqref{eq:int-diff},\)
+    the expressions \(\int f(x) \di x\) and \(\int g(x) \di x\) 
+    each output a constant of integration. 
+    We write the sum or difference of these constants simply as \(C,\)
     because adding or subtracting two constants gives another <i>arbitrary</i> constant.
     By similar logic, multiplying or dividing a constant of integration by a number does <i>not</i>
     alter the identity of the constant—the constant can still be <i>any</i> value.  
@@ -272,23 +277,27 @@
     \(2C\) and \(C + 100\) simply as \(C.\)
 </p>
 
-<div class="box-title">LINEARITY OF ANTIDERIVATIVES</div>
+<div class="box-title">PROPERTIES OF ANTIDERIVATIVES</div>
 <div class="box">
-    <ol class="list-alpha">
-        <li>
-            \(\int f(x) \pm g(x) \di x = \int f(x) \di x \pm \int g(x) \di x.\)
-        </li>
-        <li>
-            If \(k\) is a constant, then \(\int kf(x) \di x = k \int f(x) \di x.\)
-        </li>
-    </ol>
+    Let \(c\) be a constant.
+    If \(F\) is an antiderivative of \(f\)
+    and \(G\) is an antiderivative of \(g,\)
+    then the following properties of antiderivatives are true:
+    \begin{alignat}{3} 
+    \int \parbr{f(x) + g(x)} \di x &= F(x) + G(x) + C \cma 
+    &[\textrm{Sum Rule}] \eqlabel{eq:int-sum} \nl 
+    \int \parbr{f(x) - g(x)} \di x &= F(x) - G(x) + C \cma
+    &[\textrm{Difference Rule}]  \eqlabel{eq:int-diff} \nl
+    \int c f(x) \di x &= c F(x) + C \pd 
+    &[\textrm{Constant Multiple Rule}] \eqlabel{eq:int-constant}
+    \end{alignat}
 </div>
 
 <div class="example-title" id="ex-2"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
         Evaluate each expression.
-        <ol class="list-roman">
+        <ol class="list-alpha">
             <li>
                 <span>
                     \(\ds \int \frac{1}{x^2} \di x\)   
@@ -296,12 +305,12 @@
             </li>
             <li>
                 <span>
-                    \(\ds \int 5x^4 + \cos x \di x\)   
+                    \(\ds \int \par{5x^4 + \cos x} \di x\)   
                 </span>
             </li>
             <li>
                 <span>
-                    \(\ds \int \sqrt{t} - 2 \sin t + \frac{4}{1 + t^2} \di t\)   
+                    \(\ds \int \par{\sqrt{t} - 2 \sin t + \frac{4}{1 + t^2}} \di t\)   
                 </span>
             </li>
         </ol>
@@ -309,14 +318,14 @@
 </div>
 <button onclick="toggle2()" class="solution-button"></button>
 <div id="solution2" class="solution">
-    <ol class="list-roman">
+    <ol class="list-alpha">
         <li>
-            We use the Reverse Power Rule to obtain 
+            We use the Reverse Power Rule, following \(\eqref{eq:reverse-power-rule},\) to obtain 
             \[\int x^{-2} \di x = \frac{x^{-2 + 1}}{-2 + 1} + C = \boxed{\frac{-1}{x} + C}\]
         </li>
         <hr>
         <li>
-            Since antiderivatives are linear, as in \(\eqRefer{eq:int-sum},\)
+            We use the <b>Sum Rule</b>, as in \(\eqRefer{eq:int-sum},\)
             we split the integral into two:
             \[\int 5x^4 \di x + \int \cos x \di x \pd\]
             In the first integral we pull out the constant \(5\) [by \(\eqref{eq:int-constant}\)], obtaining 
@@ -329,13 +338,13 @@
             \[5 \par{\frac{x^{4 + 1}}{4 + 1}} + \sin x + C = \boxed{x^5 + \sin x + C}\]
         </li>
         <aside class="box-remark">
-            In (ii) and (iii), we only need to write one constant of integration, \(C.\)
+            In parts (a) and (b), we only need to write one constant of integration, \(C.\)
         </aside>
         <hr>
         <li>
-            By \(\eqref{eq:int-sum}\) we split the integral into a sum of three integrals:
+            By \(\eqref{eq:int-sum}\) and \(\eqref{eq:int-diff},\) we split the integral into a sum of three integrals:
             \begin{equation} 
-            \int \sqrt t \di t + \int -2 \sin t \di t + \int \frac{4}{1 + t^2} \di t \pd \label{eq:ex-sqrtt-s1}
+            \int \sqrt t \di t - \int 2 \sin t \di t + \int \frac{4}{1 + t^2} \di t \pd \label{eq:ex-sqrtt-s1}
             \end{equation}
             In \(\eqref{eq:ex-sqrtt-s1}\) we write \(\sqrt t\) as \(t^{1/2}\)
             and use the Reverse Power Rule.
@@ -349,12 +358,14 @@
         </li>
     </ol>
 </div> 
+
+<h4 id="diff-eq">Differential Equations</h4>
 <p>
     An equation that relates \(f\) and its derivatives is called a
     <span class="emph">differential equation</span>.
     In calculus, we often have a rate \(f'\) and need to find a <i>solution</i> \(f.\)
     (Differential equations are fundamental to modeling natural phenomena, 
-    which we discuss further in Section <a href="/Valculus/calculus/7.1-Modeling-with-Differential-Equations.html">7.1</a>.)
+    which we discuss further in Section <a href="/Valculus/calculus/8.1-Modeling-with-Differential-Equations.html">8.1</a>.)
     We often want \(f\) that satisfies a specific point, called an 
     <span class="emph">initial condition</span>. 
     To find \(f\) given \(f'\) and an initial condition, we first integrate \(f'.\)
@@ -364,11 +375,11 @@
     We then plug in the initial condition to solve for this constant. 
     For example, if \(f'(x) = 2x\) and \(\orange{f(1) = 2},\)
     then we antidifferentiate \(f'(x)\) and substitute the given initial condition to solve for the constant of integration:
-    \begin{align} 
-    f(x) = \int 2x \di x &= x^2 + C \nonumber \nl 
-    \orange{f(1)} &= (1)^2 + C = \orange{2} \implies C = 1 \pd \nonumber \nl 
-    \therefore f(x) &= \boxed{x^2 + 1} \label{eq:diff-eq-f(x)-particular}
-    \end{align}
+    \begin{flalign} 
+    &&f(x) = \int 2x \di x &= x^2 + C \nonumber &\nl 
+    &&\orange{f(1)} &= (1)^2 + C = \orange{2} \implies C = 1 \cma \nonumber &\nl 
+    \laWord{so} &&f(x) &= \boxed{x^2 + 1} \label{eq:diff-eq-f(x)-particular}
+    \end{flalign}
     \(\eqRefer{eq:diff-eq-f(x)-particular}\) is called the 
     <span class="emph">particular solution</span>
     of the differential equation \(f'(x) = 2x\) that satisfies the initial condition \(\orange{f(1) = 2}.\)
@@ -425,7 +436,7 @@
         the graph of \(y = f(x)\) is shown for \(0 \lt x \lt 4.\)
         Let \(F\) be an antiderivative of \(f\) such that \(F(0) = 2.\)
         Sketch a rough graph of \(y = F(x).\)
-        <span class="white-space"></span>
+        <span class="white-space-medium"></span>
     </div>
 </div>
 <button onclick="toggle4()" class="solution-button"></button>
@@ -565,16 +576,16 @@
     Let's make a few remarks about objects in free fall:
     <ul>
         <li id="remark-1">
-            <i>Remark 1.</i> An object <i>dropped</i> from rest has an initial velocity of \(0.\)
+            <span class="text-remark">REMARK 1</span> An object <i>dropped</i> from rest has an initial velocity of \(0.\)
         </li>
         <li id="remark-2">
-            <i>Remark 2.</i> When an object hits the ground, its final velocity is 
+            <span class="text-remark">REMARK 2</span> When an object hits the ground, its final velocity is 
             <span class="warning">not \(0.\)</span>
             We take the object's final velocity to be the velocity 
             <i>the instant before</i> it hits the ground.
         </li>
         <li id="remark-3">
-            <i>Remark 3.</i> An object that is thrown upward reaches its maximum height when its velocity is \(0.\)
+            <span class="text-remark">REMARK 3</span> An object that is thrown upward reaches its maximum height when its velocity is \(0.\)
         </li>
     </ul>
 </p>
@@ -706,6 +717,7 @@
 
 <div class="section-summary">
     <p>
+        <a class="summary-anchor" href="#defining-an-antiderivative">Defining an Antiderivative</a>
         <span class="emph">Antidifferentiation</span> is the inverse operation of differentiation.
         Function \(F\) is called an <span class="emph">antiderivative</span>
         of function \(f\) if \(F' = f.\)
@@ -723,31 +735,35 @@
         but <span class="warning">never</span> write \(+C\) when you evaluate a derivative.
     </p>
     <p>
+        <a class="summary-anchor" href="#evaluating-antiderivatives">Evaluating Antiderivatives</a>
         To integrate a power function \(x^n,\) \(n \ne -1,\) we use the <span class="emph">Reverse Power Rule</span>:
-        \[\int x^n \di x = \frac{x^{n + 1}}{n + 1} + C \pd\]
+        \[\int x^n \di x = \frac{x^{n + 1}}{n + 1} + C \pd \eqlabel{eq:reverse-power-rule}\]
         But if \(n = -1,\) then \(\int x^{-1} \di x = \ln|x| + C.\)
+        Let \(c\) be a constant.
+        If \(F\) is an antiderivative of \(f\)
+        and \(G\) is an antiderivative of \(g,\)
+        then the following properties of antiderivatives are true:
+        \begin{alignat}{3} 
+        \int \parbr{f(x) + g(x)} \di x &= F(x) + G(x) + C \cma 
+        &[\textrm{Sum Rule}] \eqlabel{eq:int-sum} \nl 
+        \int \parbr{f(x) - g(x)} \di x &= F(x) - G(x) + C \cma
+        &[\textrm{Difference Rule}]  \eqlabel{eq:int-diff} \nl
+        \int c f(x) \di x &= c F(x) + C \pd 
+        &[\textrm{Constant Multiple Rule}] \eqlabel{eq:int-constant}
+        \end{alignat} 
     </p>
     <p>
-        Antiderivatives are <i>linear</i>; that is, if \(f\) and \(g\) are functions and \(k\) is a constant, then 
-        <ul>
-            <li>
-                \(\int f(x) \pm g(x) \di x = \int f(x) \di x \pm \int g(x) \di x.\)
-            </li>
-            <li>
-                If \(k\) is a constant, then \(\int kf(x) \di x = k \int f(x) \di x.\)
-            </li>
-        </ul>
-    </p>
-    <p>
-        A <span class="emph">differential equation</span> relates function \(f\) with its derivatives. 
+        <a href="#diff-eq" class="summary-anchor">Differential Equations</a>
+        A <span class="emph">differential equation</span> relates a function \(f\) to its derivatives. 
         To solve a differential equation in which you are given \(f'\) and a specific point 
         (called an <span class="emph">initial condition</span>), 
         integrate \(f'\) and plug in the initial condition to solve for the constant of integration \(C.\)
         A <span class="emph">general solution</span> of a differential equation does not have a value for the constant \(C,\)
         whereas a <span class="emph">particular solution</span> does have a value for \(C.\)
-        If you are given an initial condition, then you want to find the <i>particular</i> solution.
+        If you are given an initial condition, then it is possible to find the <i>particular</i> solution.
     </p>
     <p>
+        <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>
         In particle motion, position is related to velocity and acceleration through differential equations. 
         Velocity and acceleration are then connected to position by integrals:
         If \(t\) is time, \(s(t)\) is position, \(v(t)\) is velocity, and \(a(t)\) is acceleration, then
@@ -761,23 +777,24 @@
         </ul>
     </p>
     <p>
+        <a class="page-anchor" href="#freefalling-objects">Objects in Free Fall</a>
         To solve problems with freefalling objects, select an axis orientation. 
         It is logical to let the upward direction be the positive direction.
         In these cases a falling object's acceleration is \(-9.8 \undiv{m}{sec}^2,\) 
         or \(-32 \undiv{ft}{sec}^2.\)
         Note the following:
         <ul>
-            <li id="remark-1">
-                <i>Remark 1.</i> An object <i>dropped</i> from rest has an initial velocity of \(0.\)
+            <li>
+                <span class="text-remark">REMARK 1</span> An object <i>dropped</i> from rest has an initial velocity of \(0.\)
             </li>
-            <li id="remark-2">
-                <i>Remark 2.</i> When an object hits the ground, its final velocity is 
+            <li>
+                <span class="text-remark">REMARK 2</span> When an object hits the ground, its final velocity is 
                 <span class="warning">not \(0.\)</span>
                 We take the object's final velocity to be the velocity 
                 <i>the instant before</i> it hits the ground.
             </li>
-            <li id="remark-3">
-                <i>Remark 3.</i> An object that is thrown upward reaches its maximum height when its velocity is \(0.\)
+            <li>
+                <span class="text-remark">REMARK 3</span> An object that is thrown upward reaches its maximum height when its velocity is \(0.\)
             </li>
         </ul>
     </p>

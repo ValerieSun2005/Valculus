@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.5: Alternating Series</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.5 — Alternating Series</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.5-Alternating-Series-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.5-Alternating-Series-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Alternating-Series-Test]]]--> 
+<p>
+    Up to this point, we have focused on series whose terms were all positive. 
+    For example, in Section <a href="/Valculus/calculus/10.3-Integral-Test.html">10.3</a>
+    we learned the Integral Test, which applies to a series with positive terms. 
+    Then in Section <a href="/Valculus/calculus/10.4-Comparison-Tests.html">10.4</a>, we introduced 
+    a pair of tests that permits us to compare two series whose terms are all positive.
+    But what if some terms are negative?
+    In this section
+    we define <i>alternating series</i>, introduce a test to establish whether they converge, 
+    and learn to bound the errors in their partial sums.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#alt-series" class="page-anchor">Alternating Series Test</a>
+        </li>
+        <li>
+            <a href="#alt-series-error-bound" class="page-anchor">Alternating Series Error Bound</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="alt-series">Alternating Series Test</h4>
+<p>
+    <span class="emph">Alternating series</span> are series whose terms alternate in sign. 
+    Consider the following examples of alternating series: 
+    \begin{align} 
+    -1 + 2 - 3 + 4 - 5 + \cdots &= \sum_{n = 1}^\infty (-1)^n \, n \cma \label{eq:alt-n} \nl
+    1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \cdots  
+    &= \sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n} \pd \label{eq:alt-harmonic}
+    \end{align}
+    In general, an alternating series takes the form 
+    \[\sum_{n = 1}^\infty (-1)^{n + 1} \, b_n \or \sum_{n = 1}^\infty (-1)^n \, b_n \cma\]
+    where \(b_n \gt 0.\)
+    We call the term \((-1)^n\) or \((-1)^{n + 1}\) the <span class="emph">alternator</span> because it changes 
+    sign depending on whether \(n\) is odd or even.
+    \(\eqrefer{eq:alt-harmonic}\) is the <span class="emph">Alternating Harmonic Series</span>
+    since it's the sum of reciprocals whose signs are alternating.
+</p>    
+
+<h4 id="alt-series-test">Alternating Series Test</h4>
+
+<p> 
+    Let's now discuss a test to determine whether an alternating series converges. 
+    The <span class="emph">Alternating Series Test</span> asserts that 
+    \(\sum_{n = 1}^\infty (-1)^n \, b_n\) (where \(b_n\) is positive) converges 
+    if \(\lim_{n \to \infty} b_n = 0\) 
+    and \(\{b_n\}\) is a decreasing sequence (that is, \(b_{n + 1} \leq b_n\)). 
+    In words, the test states that an alternating series converges 
+    if its terms are shrinking in magnitude to \(0.\)
+</p>
+
+<div class="box-title"> ALTERNATING SERIES TEST </div>
+<div class="box">
+    The <span class="emph">Alternating Series Test</span> states that 
+    \[\sum_{n = 1}^\infty (-1)^n \, b_n \cmaa b_n \gt 0 \cma\]
+    converges if \(\lim_{n \to \infty} b_n = 0\)
+    and \(b_{n + 1} \leq b_n\) for all \(n \geq 1.\)
+</div>
+
+<p>
+    The Alternating Series Test can only establish convergence; 
+    it <span class="warning">cannot prove that a series diverges</span>. 
+    If a series does not meet the conditions of the Alternating Series Test, then the test is inconclusive. 
+    In many situations, if \(\lim_{n \to \infty} b_n \ne 0,\) then we can use the 
+    Divergence Test to prove that \(\sum (-1)^n \, b_n\) diverges.  
+</p>
+
+<figure class="alt-series-line figure-wide" id="alt-series-line">
+    <img src="../images/sectionImages/alt-series-line.jpg" class="alt-series-line" alt="Figure 1">
+</figure>
+
+<style>
+    .alt-series-line::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    <a href="#alt-series-line">Figure 1</a> enables us to grasp the intuition behind the 
+    Alternating Series Test by using a number line.
+    Suppose that the infinite series \(\sum_{n = 1}^\infty (-1)^{n + 1} \, b_n\) 
+    (where \(b_n\) is positive) converges to \(S.\)
+    Let \(S_N\) denote the <nobr>\(N\)th</nobr> partial sum of this alternating series.  
+    First, we add the term \(b_1\) to \(0;\) doing so, we arrive at the 
+    value \(S_1\) on the number line. 
+    Then we subtract the term \(b_2,\) so \(S_2\) is to the left of \(S_1.\)
+    Adding \(b_3,\) we attain the value \(S_3\) to the right of \(S_2.\)
+    This pattern <i>repeats</i>—we continue adding or subtracting incrementally smaller numbers
+    since \(b_n \to 0.\)
+    In doing so, the value of \(S_N\) gets closer and closer to the number \(S.\)
+    Accordingly, if we repeat this process 
+    <i>infinitely many times</i>—that is, letting \(N \to \infty\)—then 
+    it appears that \(S_N \to S.\) 
+    We observe the following:
+    For odd \(N,\) \(S_N\) always lies to the <i>right</i> of \(S.\)
+    Note that the partial sums \(S_1, S_3,\) \(S_5, \dots\)
+    are decreasing toward \(S.\)
+    Conversely, for even \(N,\) \(S_N\) always lies to the <i>left</i> of \(S.\)
+    And the partial sums \(S_2, S_4,\) \(S_6, \dots\)
+    are increasing toward \(S.\)
+    Hence, the odd partial sums and even partial sums 
+    both seem to converge to \(S.\)
+    We use this observation to motivate the following proof.
+</p>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let's split the proof into two cases—one for even \(N\) and one for odd \(N.\)
+    Since \(b_n\) is decreasing, we have \(b_2 \leq b_3 \leq b_4\) \(\leq b_5 \leq \dots \leq b_{2N}\) and so  
+    \[
+    \ba
+    S_2 &= b_1 - b_2 \geq 0 \cma \nl 
+    S_4 &= S_2 + (b_3 - b_4) \geq S_2 \cma \nl 
+    & \vdotss \nl 
+    S_{2N} &= S_{2N - 2} + (b_{2N - 1} + b_{2N}) \geq S_{2N - 2} \pd
+    \ea
+    \]
+    But observe that 
+    \[S_{2N} = b_1 - (b_2 - b_3) - (b_4 - b_5) - \cdots - (b_{2N - 2} - b_{2N - 1}) - b_{2N} \pd\]
+    In each set of parentheses, the difference is positive <nobr>(or \(0\)).</nobr>
+    Accordingly, \(0 \lt S_{2N} \leq b_1.\)
+    Because 
+    \[S_{2N} = \sum_{i = 1}^{2N} (-1)^{i + 1} \, b_i \cma\]
+    we see 
+    \[\lim_{N \to \infty} S_{2N} = \lim_{N \to \infty} \sum_{i = 1}^{2N} (-1)^{i + 1} \, b_i 
+    = \sum_{n = 1}^\infty (-1)^{n + 1} \, b_n \leq b_1 \pd\]
+    We say \(\sum_{n = 1}^\infty (-1)^{n + 1} \, b_n\) converges because 
+    it is less than (or equal to) some finite number \(b_1\) and greater than \(0.\) 
+    Let's call \(S = \lim_{N \to \infty} S_{2N}.\)
+    Then for odd \(N,\) we see 
+    \[
+    \ba 
+    \lim_{N \to \infty} S_{2N + 1} &= \lim_{N \to \infty} \par{S_{2N} + b_{2N + 1}} \nl 
+    &= \lim_{N \to \infty} S_{2N} + \lim_{N \to \infty} b_{2N + 1} \nl 
+    &= S + 0 = S \cma
+    \ea 
+    \]
+    where the last step is true because we require \(\lim_{n \to \infty} b_n = 0.\)
+    Hence, for both even and odd \(N,\) the alternating series \(\sum_{n = 1}^\infty (-1)^n \, b_n\)
+    converges.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{\sqrt{n}} \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    We identify \(b_n = 1/\sqrt{n},\)
+    and the alternator is \((-1)^{n + 1}.\)
+    For \(n \geq 1\) we see
+    \[\underbrace{\frac{1}{\sqrt{n + 1}}}_{b_{n + 1}} \leq \underbrace{\frac{1}{\sqrt{n}}}_{b_n}. \]
+    Therefore, \(b_n\) is decreasing for all \(n \geq 1.\) 
+    Additionally, \(\lim_{n \to \infty } (1/\sqrt{n} \, ) = 0,\)
+    so the series converges by the <b>Alternating Series Test</b>. 
+</div>
+
+<p>
+    It turns out that the Alternating Harmonic Series, as in 
+    \(\eqref{eq:alt-harmonic},\) satisfies 
+    \[\lim_{n \to \infty} \frac{1}{n} = 0 \and \frac{1}{n + 1} \leq \frac{1}{n} \pd\]
+    In words, the terms of the Alternating Harmonic Series are shrinking 
+    in magnitude toward \(0.\)
+    Thus, the Alternating Test asserts that the series converges—unlike 
+    the standard Harmonic Series, which diverges.
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 1}^\infty (-1)^{n + 1} \frac{\sqrt{n}}{n + 2} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <p>
+        We identify \(b_n = \sqrt{n}/(n + 2),\)
+        but it isn't clear whether this function is decreasing. 
+        Let's therefore compare \(b_n\) to the function \(f(x) = \sqrt x/(x + 2),\)
+        which is continuous for all nonnegative \(x.\)
+        Differentiating shows 
+        \[
+        f'(x) = \frac{\dfrac{x + 2}{2 \sqrt x} - \sqrt x}{(x + 2)^2} 
+        = \frac{-x + 2}{2 (x + 2)^2 \sqrt x} \cma
+        \]
+        which is negative for all \(x \gt 2.\)
+        Hence, \(f'\) is decreasing on \([2, \infty),\)
+        meaning \(b_{n + 1} \leq b_n\) for all \(n \geq 2.\) 
+        Since \(\lim_{n \to \infty} b_n = 0,\)
+        the Alternating Series Test states that 
+        \[\sum_{n = 1}^\infty (-1)^{n + 1} \frac{\sqrt{n}}{n + 2} \convBoxed\]
+    </p>
+    <p>
+        <span class="text-remark">REMARK</span>
+        Note that \(b_n\) is decreasing for \(n \geq 2,\)
+        but the series' index begins at \(n = 1.\)
+        Can we still use the Alternating Series Test?
+        <span class="good">Yes</span>; we only require that the terms of \(\{b_n\}\)
+        <i>eventually be decreasing</i> to \(0.\) 
+        Writing out some terms of \(\sum_{n = 1}^\infty b_n\) shows 
+        \[\sum_{n = 1}^\infty (-1)^{n + 1} \frac{\sqrt{n}}{n + 2} = \underbrace{\frac{1}{3}}_{0.333 \dots} - \underbrace{\frac{\sqrt 2 }{4}}_{0.354 \dots} 
+        + \underbrace{\frac{\sqrt 3 }{5}}_{0.346 \dots} - \underbrace{\frac{1}{3}}_{0.333\dots} 
+        + \underbrace{\frac{\sqrt 5}{7}}_{0.319 \dots} + \cdots \pd \]
+        After the second term \(-\sqrt 2/4\), each incremental term is decreasing in magnitude to \(0.\)
+        Because \(\sum_{n = 2}^\infty (-1)^{n + 1} \, b_n\) converges, \(\sum_{n = 1}^\infty (-1)^{n + 1} \, b_n\)
+        also converges. (Adding or subtracting a finite number of numbers to a series doesn't 
+        alter whether it converges or diverges.)
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following series for convergence or divergence:
+        \[\sum_{n = 1}^\infty \cos(\pi n) \frac{n}{n^2 + 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    Note that \(\cos(\pi n) \) is the alternator in this series
+    because \(\cos(\pi n)\) \(= (-1)^n.\)
+    We identify \(b_n = n/(n^2 + 1).\)
+    To determine whether the terms of the sequence \(\{b_n\}\) are decreasing, 
+    we compare \(b_n\) to the continuous function \(f(x) = x/(x^2 + 1).\) 
+    Differentiating \(f(x),\) we get 
+    \[
+    f'(x) = \frac{(x^2 + 1) - x(2x)}{(x^2 + 1)^2} \nl
+    = \frac{1 - x^2}{(x^2 + 1)^2} \cma
+    \]
+    which is negative for all \(x \gt 1.\) 
+    Therefore, \(f\) is decreasing over \([1, \infty),\) 
+    so \(b_{n + 1} \leq b_n\) for all \(n \geq 1.\)
+    And since \(\lim_{n \to \infty} b_n = 0,\) the <b>Alternating Series Test</b> states that 
+    \[\sum_{n = 1}^\infty \cos(\pi n) \frac{n}{n^2 + 1} \convBoxed\]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether \(\ds \sum_{n = 1}^\infty (-1)^n \frac{n^3}{3n^3 + 1} \) converges or diverges.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    We see \(b_n = n^3/\par{3n^3 + 1}.\)
+    But because 
+    \[\lim_{n \to \infty} b_n = \lim_{n \to \infty} \frac{n^3}{3n^3 + 1} = \frac{1}{3} \ne 0 \cma\]
+    the series does <span class="warning">not</span> pass the Alternating Series Test. 
+    We therefore cannot use the test to prove convergence, but 
+    <span class="warning">we also cannot use it to establish divergence</span>. 
+    Instead, we see that the limit  
+    \[\lim_{n \to \infty} (-1)^n \frac{n^3}{3n^3 + 1}\]
+    does not exist. 
+    [As \(n\) grows big, the alternator \((-1)^n\) causes the function to oscillate 
+    between \(-1/3\) and \(1/3.\)]
+    So by the Divergence Test,
+    \[\sum_{n = 1}^\infty (-1)^n \frac{n^3}{3n^3 + 1} \divBoxed\] 
+</div>
+
+<h4 id="alt-series-error-bound">Alternating Series Error Bound</h4>
+
+<p>
+    Consider the infinite, convergent alternating series 
+    \[S = \sum_{n = 1}^\infty (-1)^n \, b_n \cmaa b_n \gt 0 \pd\]
+    In most cases, it's impossible to evaluate \(S\) explicitly. 
+    Instead, we can estimate \(S\) by using a partial sum 
+    \(S_N = \sum_{i = 1}^{N} (-1)^i \, b_i.\) 
+    Yet how do we know how accurate our partial sum is?
+    An <i>error bound</i> is the maximum amount by which \(S_N\)
+    is inaccurate in estimating the true sum \(S.\)
+    The <span class="emph">Alternating Series Error Bound</span>  
+    enables us to bound an error using the <i>absolute value of the first omitted term</i>, \(b_{N + 1}.\)
+    In other words, the value of \(S_N\) differs from the value of \(S\)
+    by <i>no more than</i> \(b_{N + 1}.\)
+    Mathematically, we express this fact by
+    \[\underbrace{\left|S - S_N\right|}_{\textrm{magnitude of error}} 
+    \leq \underbrace{b_{N + 1}}_{\textrm{next term}}. \]
+    But this fact only applies to alternating series; 
+    it is <span class="warning">not</span>
+    true for series in general.
+</p>
+
+<!-- <p>
+    <span class="text-caution">CAUTION</span>
+    The <i>error bound</i> is the maximum amount by which our partial sum \(S_N\) differs from 
+    the infinite sum \(S.\)
+    This is not to be confused with <i>error</i>, the magnitude of the <i>exact</i> difference
+    \(\abs{S_N - S}.\)
+</p> -->
+
+<div class="box-title"> ALTERNATING SERIES ERROR BOUND </div>
+<div class="box">
+    Consider the convergent alternating series 
+    \[S = \sum_{n = 1}^\infty (-1)^n \, b_n \cmaa b_n \gt 0 \pd\]
+    If \(S_N = \sum_{i = 1}^N (-1)^i \, b_i\) is used to estimate \(S,\) 
+    then the <span class="emph">Alternating Series Error Bound</span> gives  
+    \[\abs{S - S_N} \leq b_{N + 1} \pd\]
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    The error \(R_N\) is given by \(S - S_N.\)
+    We subtract terms of the partial sum \(S_N\) from the terms of the infinite series \(S \col\)
+    \[
+    \ba 
+    R_N &= S - S_N \nl 
+    &= \sum_{n = 1}^\infty (-1)^n \, b_n - \sum_{n = 1}^N (-1)^n \, b_n \nl 
+    &= (-1)^{N + 1} \, b_{N + 1} + (-1)^{N + 2} \, b_{N + 2} 
+    + (-1)^{N + 3} \, b_{N + 3} + (-1)^{N + 4} \, b_{N + 4} + (-1)^{N + 5} \, b_{N + 5} + \cdots \nl 
+    &= (-1)^{N + 1} \par{b_{N + 1} - b_{N + 2} + b_{N + 3} - b_{N + 4} + b_{N + 5} - \cdots} \pd 
+    \ea 
+    \]
+    Hence, we see 
+    \[
+    \ba 
+    \abs{R_N} &= \abs{(-1)^{N + 1} \par{b_{N + 1} - b_{N + 2} + b_{N + 3} - b_{N + 4} + b_{N + 5} - \cdots}} \nl 
+    &= b_{N + 1} - b_{N + 2} + b_{N + 3} - b_{N + 4} + b_{N + 5} - \cdots \nl 
+    &= b_{N + 1} - \par{b_{N + 2} - b_{N + 3}} - \par{b_{N + 4} - b_{N + 5}} - \cdots \cma 
+    \ea 
+    \]
+    where each difference in parentheses is positive (or \(0\)) because 
+    \(b_{N + 2} \geq b_{N + 3}\) \(\geq b_{N + 4} \geq \cdots.\)
+    Thus, \(\abs{R_N} \leq b_{N + 1}.\)
+    So we conclude that the error to \(S_N\) is no greater than \(b_{N + 1}.\)
+    \[\qedproof\] 
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        The infinite series \(\ds S = \sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n^2 + 2}\) 
+        is approximated by the partial sum \(\ds S_5 = \sum_{n = 1}^5 \frac{(-1)^{n + 1}}{n^2 + 2}.\)
+        Use the Alternating Series Error Bound to find a number \(K\) such that \( \left| S - S_5 \right| \leq K.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    The sum \(S_5\) uses five terms to estimate \(S.\) 
+    The sixth term is the first omitted term, whose magnitude is 
+    \[b_6 = \frac{1}{6^2 + 2} = \frac{1}{38} \pd\]
+    So using the <b>Alternating Series Error Bound</b>, we see  
+    \[
+    \abs{S - S_5} \leq b_6 = \underbrace{\boxed{\frac{1}{38}}}_K 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        The value of the Alternating Harmonic Series
+        \[S = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + \frac{(-1)^{n + 1}}{n} + \cdots\]
+        is approximated by the partial sum \(S_3 = 1 - \frac{1}{2} + \frac{1}{3}.\) 
+        Construct an interval in which the value of \(S\) must reside. 
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    Applying the <b>Alternating Series Error Bound</b>, 
+    we assert that the value of \(S_3\) differs from \(S\) by no more than
+    the magnitude of the <i>first term we exclude</i>, 
+    \(b_4 = 1/4.\)
+    Accordingly, a lower bound to \(S\) is \(\par{S_3 - 1/4}\)
+    and an upper bound to \(S\) is \(\par{S_3 + 1/4}.\)
+    Therefore, 
+    \[S_3 - \frac{1}{4} \leq S \leq S_3 + \frac{1}{4} \pd\]  
+    Since \(S_3 = 1 - \frac{1}{2} + \frac{1}{3} = \frac{5}{6},\)
+    we have 
+    \[S_3 - \frac{1}{4} = \frac{7}{12} \and S_3 + \frac{1}{4} = \frac{13}{12} \pd\]
+    Our interval is therefore 
+    \[\boxed{\frac{7}{12} \leq S \leq \frac{13}{12}}\]
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        The alternating series \(\ds S = \sum_{n = 1}^\infty \frac{(-1)^n}{2\sqrt{n + 3}} \)
+        converges and is approximated by the partial sum 
+        \(\ds S_N = \sum_{i = 1}^N \frac{(-1)^i}{2\sqrt{i + 3}} . \)
+        Find the values of \(N\) such that the error of \(S_N\) is no greater than \(0.1.\) 
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    By the <b>Alternating Series Error Bound</b>, an error bound to \(S_N\) is 
+    \[\abs{\frac{(-1)^{N + 1}}{2 \sqrt{(N + 1) + 3}}} = \frac{1}{2 \sqrt{N + 4}} \pd\]
+    We equate this expression to be less than or equal to \(0.1,\) finding 
+    \[
+    \frac{1}{2 \sqrt{N + 4}} \leq 0.1 \implies N \geq 21 \pd
+    \]
+    In words, for \(\boxed{N \geq 21}\) the partial sum \(S_N\) differs from \(S\) by no more than \(0.1.\)
+</div>
+
+
+<div class="section-summary">
+    <p>
+        <a href="#alt-series" class="page-anchor">Alternating Series Test</a>
+        An <span class="emph">alternating series</span> is a series whose terms 
+        alternate in sign. 
+        In general, an alternating series takes the form 
+        \[\sum_{n = 1}^\infty (-1)^{n + 1} \,b_n \or \sum_{n = 1}^\infty (-1)^n \, b_n \cma\]
+        where \(b_n \gt 0.\)
+        The factor \((-1)^n\) or \((-1)^{n + 1}\) is called an <span class="emph">alternator</span> since  
+        its sign changes based on whether \(n\) is odd or even.
+        The <span class="emph">Alternating Series Test</span> states that 
+        \[\sum_{n = 1}^\infty (-1)^n \, b_n \cmaa b_n \gt 0 \cma\]
+        converges if \(\lim_{n \to \infty} b_n = 0\)
+        and \(b_{n + 1} \leq b_n\) for all \(n \geq 1.\)
+        In words, an alternating series converges if its terms are decreasing in magnitude to \(0.\)
+        But this test <span class="warning">cannot prove divergence</span>; 
+        usually, we use the Divergence Test to assert that an alternating series is divergent.
+        The <span class="emph">Alternating Harmonic Series</span> is the sum of alternating reciprocals:
+        \begin{equation} 
+        1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \cdots  
+        = \sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n} \cma \eqlabel{eq:alt-harmonic}
+        \end{equation}
+        which converges by the Alternating Series Test.
+    </p>
+    <p>
+        <a href="#alt-series-error-bound" class="page-anchor">Alternating Series Error Bound</a>
+        We use the <span class="emph">Alternating Series Error Bound</span> to 
+        calculate the maximum amount (maximum <i>error</i>) by which a partial sum 
+        \(S_N\) differs from the infinite sum \(S.\)
+        Consider the convergent alternating series 
+        \[S = \sum_{n = 1}^\infty (-1)^n \, b_n \cmaa b_n \gt 0 \pd\]
+        If \(S_N = \sum_{i = 1}^N (-1)^i \, b_i\) is used to estimate \(S,\) 
+        then the <span class="emph">Alternating Series Error Bound</span> gives  
+        \[\abs{S - S_N} \leq b_{N + 1} \pd\]
+        In words, the magnitude of the error is no greater than the first omitted term in the approximation.
+    </p>
+</div>
+
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

@@ -44,7 +44,1894 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        What is <b>implicit differentiation</b>?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<b>Implicit differentiation</b> is the process by which 
+        we find \(\textderiv{y}{x}\) in an <i>implicit equation</i>—an equation 
+        in which \(y\) isn't expressed as a function of \(x.\)
+        To accomplish this goal we treat \(y\) as \(y(x),\) 
+        a function of \(x,\)
+        and differentiate using the Chain Rule. 
+        Finally, we solve for \(\textderiv{y}{x},\) an expression that typically contains both \(x\) and \(y.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Why do we use the number \(e\) in calculus?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The number \(e\) enables the derivatives of exponential and logarithmic functions to have 
+        very convenient derivatives; that is, 
+        \[\deriv{}{x} \par{e^x} = e^x \and \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^2 + xy - x = 2\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        It is not feasible to solve for \(y;\)
+        thus, we apply <b>implicit differentiation</b>.
+        We treat \(y\) as a function of \(x.\)
+        Using the Chain Rule, we differentiate both sides of the equation with respect to \(x.\) 
+        Doing so gives 
+        \[
+        \ba 
+        \deriv{}{x}(x^2 + xy - x) &amp;= \deriv{}{x}(2) \nl 
+        2x + \par{x \deriv{y}{x} + y} - 1 &amp;= 0 \nl 
+        x \deriv{y}{x} &amp;= 1 - 2x - y \nl
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{1 - 2x - y}{x}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^7 - 3x = \sin y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To use <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        Using the Chain Rule, we differentiate both sides of the equation with respect to \(x.\) 
+        Doing so gives 
+        \[
+        \ba 
+        \deriv{}{x}(x^7 - 3x) &amp;= \deriv{}{x}(\sin y) \nl 
+        7x^6 - 3 &amp;= \cos y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{7x^6 - 3}{\cos y}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds y^3 + xy - 4x = 3\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<b>Implicit differentiation</b> requires us to treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides of the equation with respect to \(x \col\)
+        \[
+        \ba 
+        \deriv{}{x}(y^3 + xy - 4x) &amp;= \deriv{}{x}(3) \nl 
+        3y^2 \deriv{y}{x} + y + x \deriv{y}{x} - 4 &amp;= 0 \nl 
+        \deriv{y}{x} \par{3y^2 + x} &amp;= 4 - y \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{4 - y}{3y^2 + x}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \tan y = x^2 - y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        When we perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        Using the Chain Rule to differentiate both sides, we find
+        \[
+        \ba 
+        \deriv{}{x}(\tan y) &amp;= \deriv{}{x}(x^2 - y) \nl 
+        \sec^2 y \deriv{y}{x} &amp;= 2x - \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{\sec^2 y + 1} &amp;= 2x \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{2x}{\sec^2 y + 1}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^2 - xy - y^3 = x + 8\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<b>Implicit differentiation</b> requires us to treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides of the equation with respect to \(x \col\)
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 - xy - y^3} &amp;= \deriv{}{x}(x + 8) \nl 
+        2x - y - x \deriv{y}{x} - 3y^2 \deriv{y}{x} &amp;= 1 \nl 
+        \deriv{y}{x} \par{-x - 3y^2} &amp;= 1 + y - 2x \nl 
+        \implies \deriv{y}{x} &amp;= \frac{1 + y - 2x}{-x - 3y^2} = \boxed{\frac{2x - y - 1}{x + 3y^2}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4y \sin x = e^y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recall that the derivative of \(\sin x\) is \(\cos x\) and the derivative of \(e^x\) is \(e^x\)
+        (see Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>). 
+        Differentiating both sides of the implicit equation with respect to \(x\) gives  
+        \[4 \sin x \deriv{y}{x} + 4y \cos x = e^y \deriv{y}{x} \pd\]
+        Moving all terms with \(\textderiv{y}{x}\) to the left side, we attain 
+        \[
+        \ba 
+        4 \sin x \deriv{y}{x} - e^y \deriv{y}{x} &amp;= 4y \cos x \nl 
+        \deriv{y}{x} \par{4 \sin x - e^y} &amp;= 4 y \cos x \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{4 y \cos x}{4 \sin x - e^y}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^2 y^3 + xy - 4 = x^6\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        When we perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        Using the Chain Rule to differentiate both sides, we find
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 y^3 + xy - 4} &amp;= \deriv{}{x} \par{x^6} \nl 
+        2x y^3 + 3x^2 y^2 \deriv{y}{x} + y + x \deriv{y}{x} - 0 &amp;= 6x^5 \nl 
+        \deriv{y}{x} \par{3x^2 y^2 + x} &amp;= 6x^5 - 2x y^3 - y \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{6x^5 - 2x y^3 - y}{3x^2 y^2 + x}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds xe^y = y^2 - 4x\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        When we perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{xe^y} &amp;= \deriv{}{x} \par{y^2 - 4x} \nl 
+        e^y + xe^y \deriv{y}{x} &amp;= 2y \deriv{y}{x} - 4 \nl 
+        \deriv{y}{x} \par{xe^y - 2y} &amp;= -4 - e^y \nl 
+        \implies \deriv{y}{x} &amp;= \frac{-4 - e^y}{xe^y - 2y} = \boxed{\frac{4 + e^y}{2y - xe^y}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4x^3 \sin y - x^2 = y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        When we apply <b>implicit differentiation</b>, 
+        we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{4x^3 \sin y - x^2} &amp;= \deriv{}{x} \par{y} \nl 
+        12x^2 \sin y + 4x^3 \cos y \deriv{y}{x} - 2x &amp;= \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{4x^3 \cos y - 1} &amp;= 2x - 12x^2 \sin y \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{2x - 12x^2 \sin y}{4x^3 \cos y - 1}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds xe^{3y} = \tan y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recall that the derivative of \(\tan x\) is \(\sec^2 x.\)
+        To perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{xe^{3y}} &amp;= \deriv{}{x} \par{\tan y} \nl 
+        e^{3y} + 3xe^{3y} \deriv{y}{x} &amp;= \sec^2 y \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{\sec^2 y - 3xe^{3y}} &amp;= e^{3y} \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{e^{3y}}{\sec^2 y - 3xe^{3y}}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^2 \sqrt y - \sec y = x\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Note that the derivative of \(\sec x\) is \(\sec x \tan x.\)
+        When we apply <b>implicit differentiation</b>, 
+        we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 \sqrt y - \sec y} &amp;= \deriv{}{x} \par{x} \nl 
+        2x \sqrt y + \frac{x^2}{2 \sqrt y} \deriv{y}{x} - \sec y \tan y \deriv{y}{x} &amp;= 1 \nl 
+        \deriv{y}{x} \par{\frac{x^2}{2 \sqrt y} - \sec y \tan y} &amp;= 1 - 2x \sqrt y \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{1 - 2x \sqrt y}{\dfrac{x^2}{2 \sqrt y} - \sec y \tan y}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds xy^3 - \ln y = \frac{2}{x^2}\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\ln x\) is \(1/x.\)
+        When we apply <b>implicit differentiation</b>, 
+        we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{xy^3 - \ln y} &amp;= \deriv{}{x} \par{\frac{2}{x^2}} \nl 
+        y^3 + 3xy^2 \deriv{y}{x} - \frac{1}{y} \deriv{y}{x} &amp;= -\frac{4}{x^3} \nl 
+        \deriv{y}{x} \par{3xy^2 - \frac{1}{y}} &amp;= -y^3 - \frac{4}{x^3} \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{y^3 + \dfrac{4}{x^3}}{\dfrac{1}{y} - 3xy^2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds y^3 - 2x = \sin xy\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{y^3 - 2x} &amp;= \deriv{}{x} \par{\sin xy} \nl 
+        3y^2 \deriv{y}{x} - 2 &amp;= (\cos xy) \par{y + x \deriv{y}{x}} \nl 
+        3y^2 \deriv{y}{x} - 2 &amp;= y \cos xy + x \cos xy \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{3y^2 - x \cos xy} &amp;= 2 + y \cos xy \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{2 + y \cos xy}{3y^2 - x \cos xy}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4 \sin \par{y^2} = x^3 + y\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To perform <b>implicit differentiation</b>, we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \parbr{4 \sin \par{y^2}} &amp;= \deriv{}{x} \par{x^3 + y} \nl 
+        4 \cos \par{y^2} \cdot 2y \deriv{y}{x} &amp;= 3x^2 + \deriv{y}{x} \nl 
+        \deriv{y}{x} \parbr{8y \cos \par{y^2} - 1} &amp;= 3x^2 \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{3x^2}{8y \cos \par{y^2} - 1}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \atan y = y + x^8\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Note that the derivative of \(\atan x\) is \(1/(x^2 + 1).\)
+        Using <b>implicit differentiation</b> requires that we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{\atan y} &amp;= \deriv{}{x} \par{y + x^8} \nl 
+        \frac{1}{y^2 + 1} \cdot \deriv{y}{x} &amp;= \deriv{y}{x} + 8x^7 \nl 
+        \deriv{y}{x} \par{\frac{1}{y^2 + 1} - 1} &amp;= 8x^7 \nl 
+        \deriv{y}{x} \par{\frac{-y^2}{y^2 + 1}} &amp;= 8x^7 \nl
+        \implies \deriv{y}{x} &amp;= \frac{8x^7}{\dfrac{-y^2}{y^2 + 1}} = \boxed{-\frac{8x^7 \par{y^2 + 1}}{y^2}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^3 y^3 + \asin y = x^2 - 4\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Note that the derivative of \(\asin x\) is \(1/\sqrt{1 - x^2}.\)
+        When we apply <b>implicit differentiation</b>, 
+        we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^3 y^3 + \asin y} &amp;= \deriv{}{x} \par{x^2 - 4} \nl 
+        3x^2 y^3 + 3x^3 y^2 \deriv{y}{x} + \frac{1}{\sqrt{1 - y^2}} \cdot \deriv{y}{x} &amp;= 2x \nl 
+        \deriv{y}{x} \par{3x^3 y^2 + \frac{1}{\sqrt{1 - y^2}}} &amp;= 2x - 3x^2 y^3 \nl 
+        \implies \deriv{y}{x} &amp;= \boxed{\frac{2x - 3x^2 y^3}{\ds 3x^3 y^2 + \frac{1}{\sqrt{1 - y^2}}}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \acsc y = x^2 y - y^2 + 10\]
+     find \(\textderiv{y}{x}\) using implicit differentiation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Note that the derivative of \(\acsc x\) is \(-1/\par{\abs{x} \sqrt{x^2 - 1}}.\)
+        When we apply <b>implicit differentiation</b>, 
+        we treat \(y\) as a function of \(x.\)
+        We use the Chain Rule to differentiate both sides with respect to \(x\) 
+        and then solve for \(\textderiv{y}{x},\) as follows: 
+        \[
+        \ba 
+        \deriv{}{x} \par{\acsc y} &amp;= \deriv{}{x} \par{x^2 y - y^2 + 10} \nl 
+        -\frac{1}{\abs y \sqrt{y^2 - 1}} \deriv{y}{x} &amp;= 2xy + x^2 \deriv{y}{x} - 2y \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{x^2 - 2y + \frac{1}{\abs y \sqrt{y^2 - 1}}} &amp;= -2xy \nl 
+        \implies \deriv{y}{x} &amp;= \frac{-2xy}{\ds x^2 - 2y + \frac{1}{\abs y \sqrt{y^2 - 1}}} 
+        = \boxed{\frac{2xy}{\ds 2y - x^2 - \frac{1}{\abs y \sqrt{y^2 - 1}}}} 
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds x^2 + y^2 = 36\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To find \(\textderivOrder{y}{x}{2},\) we first attain \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 + y^2} &amp;= \deriv{}{x} \par{36} \nl 
+        2x + 2y \deriv{y}{x} &amp;= 0 \nl 
+        \implies \deriv{y}{x} &amp;= -\frac{2x}{2y} = -\frac{x}{y} \pd 
+        \ea 
+        \]
+        We use the Quotient Rule to differentiate \(\textderiv{y}{x};\)
+        in doing so, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we see the expression \(\textderiv{y}{x},\) we 
+        substitute the expression \(-x/y.\)
+        We see 
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \par{-\frac{x}{y}} \nl 
+        &amp;= -\frac{\ds y - x \deriv{y}{x}}{y^2} \nl 
+        &amp;= \frac{\ds -y + x \par{-\frac{x}{y}}}{y^2} \nl 
+        &amp;= \boxed{-\frac{x^2 + y^2}{y^3}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 2x^2 + \sin y = -44\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To find \(\textderivOrder{y}{x}{2},\) we first attain \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{2x^2 + \sin y} &amp;= \deriv{}{x} \par{-44} \nl 
+        4x + \cos y \deriv{y}{x} &amp;= 0 \nl 
+        \implies \deriv{y}{x} &amp;= -\frac{4x}{\cos y} \pd 
+        \ea 
+        \]
+        We use the Quotient Rule to differentiate \(\textderiv{y}{x};\)
+        in doing so, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we see the expression \(\textderiv{y}{x},\) we 
+        substitute the expression \(-4x/\cos y.\)
+        We see 
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \par{-\frac{4x}{\cos y}} \nl 
+        &amp;= -\frac{\ds 4 \cos y - (4x) (-\sin y) \deriv{y}{x}}{\cos^2 y} \nl 
+        &amp;= -\frac{\ds 4 \cos y + 4x \sin y \par{-\frac{4x}{\cos y}}}{\cos^2 y} \nl 
+        &amp;= \boxed{\frac{16x^2 \sin y - 4 \cos^2 y}{\cos^3 y}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \ln y = x^3 - e^x\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recall that the derivative of \(\ln x\) is \(1/x.\)
+        To find \(\textderivOrder{y}{x}{2},\) we first attain \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{\ln y} &amp;= \deriv{}{x} \par{x^3 - e^x} \nl 
+        \frac{1}{y} \deriv{y}{x} &amp;= 3x^2 - e^x \nl 
+        \implies \deriv{y}{x} &amp;= \par{3x^2 - e^x} y \pd 
+        \ea 
+        \]
+        We use the Product Rule to differentiate \(\textderiv{y}{x};\)
+        as we differentiate, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we see the expression \(\textderiv{y}{x},\) we 
+        substitute the expression we attained for it.
+        Doing so shows 
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \parbr{\par{3x^2 - e^x} y} \nl 
+        &amp;= \par{6x - e^x} y + \par{3x^2 - e^x} \deriv{y}{x} \nl 
+        &amp;= \par{6x - e^x} y + \par{3x^2 - e^x} \cdot \par{3x^2 - e^x} y \nl 
+        &amp;= \boxed{\par{6x - e^x} y + \par{3x^2 - e^x}^2 y}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 4e^y + y^2 = 2x^2 - 4\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To find \(\textderivOrder{y}{x}{2},\) we first attain \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{4e^y + y^2} &amp;= \deriv{}{x} \par{2x^2 - 4} \nl 
+        4e^y \deriv{y}{x} + 2y \deriv{y}{x} &amp;= 4x \nl 
+        \implies \deriv{y}{x} &amp;= \frac{4x}{4e^y + 2y} = \frac{2x}{2e^y + y} \pd 
+        \ea 
+        \]
+        We use the Quotient Rule to differentiate \(\textderiv{y}{x};\)
+        in doing so, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we have \(\textderiv{y}{x},\) we 
+        substitute the expression we attained for it.
+        We find
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \par{\frac{2x}{2e^y + y}} \nl 
+        &amp;= \frac{\ds 2 \par{2e^y + y} - 2x \par{2e^y + 1} \deriv{y}{x}}{\par{2e^y + y}^2} \nl 
+        &amp;= \frac{\ds 2 \par{2e^y + y} - 2x \par{2e^y + 1} \par{\frac{2x}{2e^y + y}}}{\par{2e^y + y}^2} \nl 
+        &amp;= \boxed{\frac{2 \par{2e^y + y}^2 - 4x^2 \par{2e^y + 1}}{\par{2e^y + y}^3}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds e^{2y} = x + y\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To find \(\textderivOrder{y}{x}{2},\) we first attain \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{2y}} &amp;= \deriv{}{x} \par{x + y} \nl 
+        2e^{2y} \deriv{y}{x} &amp;= 1 + \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= \frac{1}{2e^{2y} - 1} \pd 
+        \ea 
+        \]
+        We use the Quotient Rule to differentiate \(\textderiv{y}{x};\)
+        in doing so, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we have \(\textderiv{y}{x},\) we 
+        substitute the expression we attained for it.
+        We find
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \par{\frac{1}{2e^{2y} - 1}} \nl 
+        &amp;= \frac{\ds 0 - 4e^{2y} \deriv{y}{x}}{\par{2e^{2y} - 1}^2} \nl 
+        &amp;= \frac{\ds 0 - 4e^{2y} \par{\frac{1}{2e^{2y} - 1}}}{\par{2e^{2y} - 1}^2} \nl 
+        &amp;= \boxed{\frac{-4e^{2y}}{\par{2e^{2y} - 1}^3}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 2x^2 - y^3 = y^4\]
+     use implicit differentiation to find \(\textderivOrder{y}{x}{2}\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The first step of getting \(\textderivOrder{y}{x}{2}\) is to determine \(\textderiv{y}{x},\) as follows:
+        \[
+        \ba 
+        \deriv{}{x} \par{2x^2 - y^3} &amp;= \deriv{}{x} \par{y^4} \nl 
+        4x - 3y^2 \deriv{y}{x} &amp;= 4y^3 \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= \frac{4x}{4y^3 + 3y^2} \pd 
+        \ea 
+        \]
+        We use the Quotient Rule to differentiate \(\textderiv{y}{x};\)
+        in doing so, we apply the Chain Rule to differentiate all instances of \(y.\)
+        Whenever we have \(\textderiv{y}{x},\) we 
+        substitute the expression we attained for it.
+        These steps show
+        \[
+        \ba 
+        \derivOrder{y}{x}{2} &amp;= \deriv{}{x} \deriv{y}{x} \nl 
+        &amp;= \deriv{}{x} \par{\frac{4x}{4y^3 + 3y^2}} \nl 
+        &amp;= \frac{\ds 4 \par{4y^3 + 3y^2} - 4x \par{12y^2 + 6y} \deriv{y}{x}}{\par{4y^3 + 3y^2}^2} \nl 
+        &amp;= \frac{\ds 4 \par{4y^3 + 3y^2} - 4x \par{12y^2 + 6y} \par{\frac{4x}{4y^3 + 3y^2}}}{\par{4y^3 + 3y^2}^2} \nl 
+        &amp;= \boxed{\frac{4 \par{4y^3 + 3y^2}^2 - 16x^2 \par{12y^2 + 6y}}{\par{4y^3 + 3y^2}^3}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        The function \(f\) satisfies the implicit equation \(2x^2 + [f(x)]^3 = 4.\)
+        If \(f(2) = 2,\) then write an equation of the line tangent to the curve 
+        at \(x = 2.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recall from Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+        that an equation of a tangent line requires both the point of tangency and the slope at that point. 
+        The slope at \(x = 2\) is given by \(f'(2),\)
+        which we find through implicit differentiation. 
+        Differentiating both sides of the implicit equation with respect to \(x,\) we see  
+        \[
+        \ba 
+        4x + 3[f(x)]^2 f'(x) &amp;= 0 \nl 
+        f'(x) &amp;= -\frac{4x}{3[f(x)]^2} \nl 
+        \implies f'(2) &amp;= -\frac{4(2)}{3[f(2)]^2} = -\frac{8}{3(2)^2} = -\frac{2}{3} \pd
+        \ea     
+        \]
+        The point of tangency is \((2, f(2))\) \(= (2, 2);\) 
+        thus, an equation of the tangent line is 
+        \[\boxed{y - 2 = -\tfrac{2}{3} (x - 2)}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Consider the ellipse represented by the implicit equation 
+        \(x^2 - xy + y^2 = 3.\)
+        <ol class="list-alpha">
+<li>
+                Show that 
+                \[\deriv{y}{x} = \frac{y - 2x}{2y - x} \pd\]
+            </li>
+<li>
+                Find the points on the ellipse to which the tangent is horizontal. 
+            </li>
+<li>
+                Locate the coordinates at which the ellipse has vertical tangents. 
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Differentiating both sides of the implicit equation with respect to \(x\) gives 
+                \[
+                \ba 
+                2x - y - x \deriv{y}{x} + 2y \deriv{y}{x} &amp;= 0 \nl 
+                \deriv{y}{x} \par{2y - x} &amp;= y - 2x \nl 
+                \implies \deriv{y}{x} &amp;= \frac{y - 2x}{2y - x} \cma
+                \ea     
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                The tangent is horizontal to the curve when \(\textderiv{y}{x} = 0\)—that is, 
+                when its numerator is \(0\) and the denominator is nonzero. 
+                We see 
+                \[y - 2x = 0 \implies y = 2x \pd\]
+                (For \(y = 2x,\) the denominator of \(\textderiv{y}{x}\) is nonzero.)
+                Substituting this expression into the implicit equation reveals
+                \[
+                \ba 
+                x^2 - x(2x) + (2x)^2 &amp;= 3 \nl
+                3x^2 &amp;= 3 \nl 
+                \implies x &amp;= -1 \cma x = 1 \pd 
+                \ea 
+                \]
+                These values correspond to \(y = -2\) and \(y = 2,\)
+                respectively.
+                So the curve has horizontal tangents at 
+                \(\boxed{(-1, -2)}\) and \(\boxed{(1, 2)}.\) 
+            </li>
+<hr/>
+<li>
+                The curve has vertical tangents when the denominator of \(\textderiv{y}{x}\) is \(0\)
+                and the numerator is nonzero. 
+                Equating the denominator to \(0\) shows 
+                \[2y - x = 0 \implies x = 2y \pd\]
+                Substituting this expression into the implicit equation reveals
+                \[
+                \ba 
+                (2y)^2 - (2y)y + y^2 &amp;= 3 \nl
+                3y^2 &amp;= 3 \nl 
+                \implies y &amp;= -1 \cma y = 1 \pd
+                \ea 
+                \]
+                Then \(x = -2\) and \(x = 2,\) respectively.
+                Accordingly, the curve has vertical tangents at 
+                \(\boxed{(-2, -1)}\) and \(\boxed{(2, 1)}.\)
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Locate all the horizontal tangents to the curve \(x^3 - x^2y = 2.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We first find \(\textDeriv{y}{x} \col\)
+        \[
+        \ba 
+        \deriv{}{x} \par{x^3 - x^2y} &amp;= \deriv{}{x} (2) \nl 
+        3x^2 - \par{2xy + x^2 \deriv{y}{x}} &amp;= 0 \nl 
+        -x^2 \deriv{y}{x}  &amp;= 2xy - 3x^2 \nl 
+        \implies \deriv{y}{x}  &amp;= \frac{3x - 2y}{x} \pd 
+        \ea 
+        \]
+        A horizontal tangent occurs when the slope of the tangent is \(0.\)
+        Thus, we solve \(\textderiv{y}{x} = 0,\)
+        which is satisfied when the numerator is \(0\) and the denominator is nonzero:
+        \[3x - 2y = 0 \implies y = \tfrac{3}{2} x \pd\] 
+        Substituting this expression into the implicit equation 
+        \(x^3 - x^2y = 2\) shows 
+        \[
+        \ba 
+        x^3 - x^2 \par{\tfrac{3}{2} x} &amp;= 2 \nl 
+        -\tfrac{1}{2} x^3 &amp;= 2 \nl 
+        \implies x &amp;= \sqrt[3]{-4} \pd
+        \ea 
+        \] 
+        Then \(y = \tfrac{3}{2} \sqrt[3]{-4}.\)
+        Hence, the curve has a horizontal tangent at
+        \(\boxed{\par{\sqrt[3]{-4}, \tfrac{3}{2} \sqrt[3]{-4}}}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find all the vertical tangents to the curve \(xy - y^2 = 4.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We differentiate both sides of the equation with respect to \(x\) to solve for \(\textDeriv{y}{x} \col\)
+        \[
+        \ba 
+        \deriv{}{x} \par{xy - y^2} &amp;= \deriv{}{x}(4) \nl
+        \par{y + x \deriv{y}{x}} - 2y \deriv{y}{x} &amp;= 0 \nl
+        \deriv{y}{x} \par{x - 2y} &amp;= -y \nl
+        \implies \deriv{y}{x} &amp;= \frac{y}{2y - x} \pd 
+        \ea
+        \]
+        To find the vertical tangents to the curve, 
+        we equate the denominator of \(\textderiv{y}{x}\) 
+        to \(0.\)
+        We see  
+        \[2y - x = 0 \implies x = 2y \pd\]
+        Substituting this expression into the implicit equation \(xy - y^2 = 4\) shows 
+        \[(2y) y - y^2 = 4 \implies y = \pm 2 \pd\]
+        Since \(x = 2y,\) we have
+        \[x = 2(-2) = -4 \and x = 2(2) = 4 \pd\]
+        Therefore, the curve has vertical tangents at the points 
+        \(\boxed{(-4, -2)}\) and \(\boxed{(4, 2)}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        A curve is defined by the implicit equation \(4xy - x^3 = y^2.\)
+        Find the points on the curve at which the tangent to the curve is vertical.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We differentiate both sides of the equation with respect to \(x\) to solve for \(\textDeriv{y}{x} \col\)
+        \[
+        \ba 
+        \deriv{}{x} \par{4xy - x^3} &amp;= \deriv{}{x} \par{y^2} \nl
+        4y + 4x \deriv{y}{x} - 3x^2 &amp;= 2y \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{4x - 2y} &amp;= 3x^2 - 4y \nl
+        \implies \deriv{y}{x} &amp;= \frac{3x^2 - 4y}{4x - 2y} \pd 
+        \ea
+        \]
+        The curve has a vertical tangent when \(\textderiv{y}{x}\)
+        is undefined.
+        So we equate the denominator of \(\textderiv{y}{x}\) 
+        to \(0,\) seeing
+        \[4x - 2y = 0 \implies y = 2x \pd\]
+        Substituting this expression into the implicit equation \(4xy - x^3 = y^2\) gives 
+        \[
+        \ba 
+        4x(2x) - x^3 &amp;= (2x)^2 \nl 
+        x^3 &amp;= 4x^2 \nl 
+        \implies x &amp;= 0 \cma x = 4 \pd
+        \ea 
+        \]
+        Observe that when \(x = 0,\) the implicit equation becomes \(0 - 0 = y^2,\)
+        meaning \(y\) must be \(0.\) 
+        But when \(x = 0\) and \(y = 0,\) <i>both the numerator and denominator of</i> \(\textderiv{y}{x}\) are \(0,\)
+        meaning we ignore the point \((0, 0).\)
+        Instead, for our other solution \(x = 4,\) we have \(y = 2(4) = 8;\)
+        at the point \((4, 8)\) only the denominator is \(0.\)
+        Hence, the curve has a vertical tangent at the point 
+        \(\boxed{(4, 8)}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find the points on the curve \(x^4 - 3y^2 = y^3\)
+        to which the tangent is vertical.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We differentiate both sides of the equation with respect to \(x\) to solve for \(\textDeriv{y}{x} \col\)
+        \[
+        \ba 
+        \deriv{}{x} \par{x^4 - 3y^2} &amp;= \deriv{}{x} \par{y^3} \nl
+        4x^3 - 6y \deriv{y}{x} &amp;= 3y^2 \deriv{y}{x} \nl 
+        \deriv{y}{x} \par{3y^2 + 6y} &amp;= 4x^3 \nl
+        \implies \deriv{y}{x} &amp;= \frac{4x^3}{3y^2 + 6y} \pd 
+        \ea
+        \]
+        The curve has a vertical tangent when \(\textderiv{y}{x}\)
+        is undefined.
+        So we equate the denominator of \(\textderiv{y}{x}\) 
+        to \(0,\) seeing
+        \[3y^2 + 6y = 0 \implies y = -2 \cma y = 0 \pd\]
+        When \(y = 0\) the implicit equation becomes \(x^4 - 0 = 0,\)
+        meaning \(x = 0.\)
+        Yet when \(x = 0\) and \(y = 0,\) both the numerator and denominator in \(\textderiv{y}{x}\)
+        are \(0,\) so we ignore the point \((0, 0).\)
+        On the other hand, substituting \(y = -2\) into the implicit equation \(x^4 - 3y^2 = y^3\) reveals 
+        \[
+        \ba 
+        x^4 - 3(-2)^2 &amp;= (-2)^3 \nl 
+        x^4 &amp;= 4 \nl 
+        \implies x &amp;= \pm \sqrt[4]{4} \pd
+        \ea 
+        \]
+        The curve has vertical tangents at the points \(\boxed{\par{-\sqrt[4]{4}, -2}}\)
+        and \(\boxed{\par{\sqrt[4]{4}, -2}}\) because only the denominator of \(\textderiv{y}{x}\)
+        is \(0\) at those points.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f(x) = 5x^6 + 7x^3 - 6x + 8.\)
+        Calculate \(\par{\inv f}'(8).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<i>It is impossible to determine</i> the inverse function 
+        \(\inv f.\)
+        Simply put, we cannot simply find the inverse function \(\inv f(x)\) algebraically and then differentiate it.
+        To calculate the derivative of an inverse function at a point, we use the formula 
+        \[
+        \par{\inv f}'(8) = \frac{1}{f'(\inv f(8))} \pd
+        \]
+        Observe that \(f(0) = 8,\) so \(\inv f(8) = 0.\)
+        Also, 
+        \[
+        f'(x) = 30x^5 + 21x^2 - 6 \cma \so f'(0) = -6 \pd
+        \]
+        Thus, 
+        \[
+        \par{\inv f}'(8) = \frac{1}{f'(0)} = \boxed{-\tfrac{1}{6}} 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Suppose \(f\) and \(g\) are inverse functions such that 
+        \(f(2) = -3\) and \(f'(2) = 1/4.\)
+        Calculate \(g'(-3).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Since \(f\) and \(g\) are inverse functions, we have 
+        \[g'(x) = \frac{1}{f'(g(x))} \pd\]
+        Thus, we see 
+        \[g'(-3) = \frac{1}{f'(g(-3))} \pd\]
+        Because \(f(2) = -3,\) it follows that \(g(-3) = 2\) and so
+        \[g'(3) = \frac{1}{f'(2)} = \frac{1}{1/4} = \boxed 4\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        If \(f(x) = 2x + 3 - \cos x,\)
+        then determine \(\par{\inv f}'(2).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<i>It is impossible to determine</i> the inverse function 
+        \(\inv f.\)
+        Simply put, we cannot simply find the inverse function \(\inv f(x)\) algebraically and then differentiate it.
+        To calculate the derivative of an inverse function at a point, we use the formula 
+        \[
+        \par{\inv f}'(2) = \frac{1}{f'(\inv f(2))} \pd
+        \]
+        By inspection we see \(f(0) = 2,\) meaning \(\inv f(2) = 0.\)
+        In addition,
+        \[
+        f'(x) = 2 + \sin x \cma \so f'(0) = 2 \pd
+        \]
+        Thus, 
+        \[
+        \par{\inv f}'(2) = \frac{1}{f'(0)} = \boxed{\tfrac{1}{2}} 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(g(x) = x^4 - 2x^3 + 7.\)
+        Calculate \(\par{\inv g}'(6).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Since we cannot algebraically determine the inverse function \(\inv g,\)
+        we instead rely on the formula
+        \[
+        \par{\inv g}'(6) = \frac{1}{g'(\inv g(6))} \pd
+        \]
+        By inspection we notice \(g(1) = 6,\) meaning \(\inv g(6) = 1.\)
+        We also have 
+        \[
+        g'(x) = 4x^3 - 6x^2 \cma \so g'(1) = -2 \pd
+        \]
+        Thus, 
+        \[
+        \par{\inv g}'(6) = \frac{1}{g'(1)} = \boxed{-\tfrac{1}{2}} 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \acos x = -\frac{1}{\sqrt{1 - x^2}}\]
+     prove the given formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(y = \acos x,\) so \(x = \cos y.\)
+        We see \(\textderiv{x}{y} = -\sin y\) and so 
+        \[\deriv{y}{x} = \frac{1}{\textderiv{x}{y}} = \frac{1}{-\sin y} \pd\]
+        To relate \(-1/\sin y\) to \(x = \cos y,\) we use the Pythagorean identity: 
+        Since \(\sin^2 y + \cos^2 y = 1\) and \(0 \leq y \leq \pi,\)
+        we see \(x = \cos y \) \(\geq 0.\) 
+        Thus, 
+        \[\sin y = \sqrt{1 - \cos^2 x} = \sqrt{1 - x^2} \pd\]
+        So, as requested, we have 
+        \[\deriv{}{x} \par{\acos x} = -\frac{1}{\sqrt{1 - x^2}} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \acsc x = -\frac{1}{\abs{x} \sqrt{x^2 - 1}}\]
+     prove the given formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(y = \acsc x\) \(\iffArrow x = \csc y.\)
+        We see \(\textderiv{x}{y} = -\csc y \cot y\)
+        (recall from Section <a href="/Valculus/calculus/2.3-Product-Rule-and-Quotient-Rule.html">2.3</a>); thus,  
+        \[\deriv{y}{x} = \frac{1}{\textderiv{x}{y}} = -\frac{1}{\csc y \cot y} \pd\]
+        To relate this expression to \(x = \csc y,\) we use the Pythagorean identity: 
+        Because \(\cot^2 y\) \(= \csc^2 y - 1,\) we have 
+        \[\cot y = \pm \sqrt{\csc^2 y - 1} = \pm \sqrt{x^2 - 1} \pd\]
+        The inverse cosecant function is defined for \(y\) in \((-\pi/2, \pi/2).\)
+        Over \(0 \leq y \lt \pi/2\) both cosecant and cotangent are positive (or \(0\)); thus, we choose 
+        the positive square root and so
+        \[\deriv{}{x} \par{\acsc x} = -\frac{1}{x \sqrt{x^2 - 1}} \pd\]
+        But over \(-\pi/2 \lt y \leq 0,\) both cosecant and cotangent are negative (or \(0\)). 
+        So we pick the negative square root solution, resulting in 
+        \[\deriv{}{x} \par{\acsc x} = -\frac{1}{x \par{-\sqrt{x^2 - 1}}} \pd\]
+        Observe that the \(x\) in the denominator is negative (since \(x = \csc y\) and \(-\pi/2 \lt y \leq 0\)), 
+        so we write \(x = - \abs x.\)
+        Doing so gives 
+        \[\deriv{}{x} \par{\acsc x} = -\frac{1}{- \abs x \par{-\sqrt{x^2 - 1}}} = -\frac{1}{\abs x \sqrt{x^2 - 1}}\pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\asin 2x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\asin x\) is \(1/\sqrt{1 - x^2}.\)
+        Accordingly, the Chain Rule asserts that 
+        \[
+        \ba 
+        \deriv{}{x} \par{\asin 2x} 
+        &amp;= \frac{1}{\sqrt{1 - (2x)^2}} \cdot 2 \nl 
+        &amp;= \boxed{\frac{2}{\sqrt{1 - 4x^2}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\ln ax}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\ln x\) is \(1/x.\)
+        The Chain Rule shows 
+        \[
+        \ba 
+        \deriv{}{x} \par{\ln ax}
+        &amp;= \frac{1}{ax} \cdot a \nl 
+        &amp;= \boxed{\frac{1}{x}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{y} \par{\asin y + \acos y}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Note that 
+        \[
+        \baf 
+        &amp;&amp;\deriv{}{y} \par{\asin y} &amp;= \frac{1}{\sqrt{1 - y^2}} &amp;\nl 
+        \laWord{and} &amp;&amp;\deriv{}{y} \par{\acos y} &amp;= -\frac{1}{\sqrt{1 - y^2}} \pd
+        \eaf
+        \]
+        Thus, 
+        \[\deriv{}{y} \par{\asin y + \acos y} = \frac{1}{\sqrt{1 - y^2}} + \par{-\frac{1}{\sqrt{1 - y^2}}} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \parbr{\par{\asec x} \par{\acsc x}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recall that 
+        \[
+        \baf
+        &amp;&amp;\deriv{}{x} \par{\asec x} &amp;= \frac{1}{\abs{x} \sqrt{x^2 - 1}} &amp;\nl
+        \laWord{and} &amp;&amp;\deriv{}{x} \par{\acsc x} &amp;= -\frac{1}{\abs{x} \sqrt{x^2 - 1}} \pd 
+        \eaf
+        \]
+        Thus, by the Product Rule 
+        \[
+        \ba 
+        \deriv{}{x} \parbr{\par{\asec x} \par{\acsc x}} 
+        &amp;= \par{\frac{1}{\abs{x} \sqrt{x^2 - 1}}} \acsc x + \asec x \par{-\frac{1}{\abs{x} \sqrt{x^2 - 1}}} \nl 
+        &amp;= \boxed{\frac{\acsc x - \asec x}{\abs{x} \sqrt{x^2 - 1}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{u} \par{\frac{1}{\acos u}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\acos x\) is \(-1/\sqrt{1 - x^2}.\)
+        Accordingly, we use the Quotient Rule to see
+        \[
+        \ba 
+        \deriv{}{u} \par{\frac{1}{\acos u}}
+        &amp;= \frac{\ds (0) - 1 \par{-\frac{1}{\sqrt{1 - u^2}}}}{\par{\acos u}^2} \nl 
+        &amp;= \boxed{\frac{1}{\par{\acos u}^2 \sqrt{1 - u^2}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \ln \par{2t^3 - e^t - \acsc t}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\ln x\) is \(1/x;\) also observe that 
+        \[\deriv{}{t} \par{2t^3 - e^t - \acsc t} = 6t^2 - e^t + \frac{1}{\abs t \sqrt{t^2 - 1}} \pd\]
+        Hence, the derivative of \(\ln \par{2t^3 - e^t - \acsc t}\) is, by the Chain Rule,
+        \[\frac{1}{2t^3 - e^t - \acsc t} \cdot \par{6t^2 - e^t + \frac{1}{\abs t \sqrt{t^2 - 1}}} 
+        = \boxed{\frac{\ds 6t^2 - e^t + \frac{1}{\abs t \sqrt{t^2 - 1}}}{2t^3 - e^t - \acsc t}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^3 \acot x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\acot x\) is \(-1/(x^2 + 1).\)
+        So the Product Rule gives 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^3 \acot x}
+        &amp;= \par{3x^2} \acot x + x^3 \par{-\frac{1}{x^2 + 1}} \nl 
+        &amp;= \boxed{3x^2 \acot x - \frac{x^3}{x^2 + 1}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \atan \par{\ln x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\atan x\) is \(1/(x^2 + 1),\)
+        and the derivative of \(\ln x\) is \(1/x.\)
+        Accordingly, the Chain Rule asserts that 
+        \[
+        \ba 
+        \deriv{}{x} \atan \par{\ln x} 
+        &amp;= \frac{1}{(\ln x)^2 + 1} \cdot \frac{1}{x} \nl 
+        &amp;= \boxed{\frac{1}{x(\ln x)^2 + x}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\log_5 x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We use the Change of Base Rule for Logarithms
+        to rewrite \(\log_5 x\) using natural logarithms:  
+        \[\log_5 x = \frac{\ln x}{\ln 5} \pd\]
+        So 
+        \[
+        \ba 
+        \deriv{}{x} \par{\log_5 x} &amp;= \deriv{}{x} \par{\frac{\ln x}{\ln 5}} \nl 
+        &amp;= \frac{1}{\ln 5} \deriv{}{x} \par{\ln x} \nl 
+        &amp;= \frac{1}{\ln 5} \cdot \frac{1}{x} \nl 
+        &amp;= \boxed{\frac{1}{x \ln 5}}
+        \ea 
+        \]
+        Alternatively, you could simply remember that the derivative of a logarithm whose base isn't \(e\) 
+        (and is a constant)
+        is \(1/x\) divided by the natural logarithm of the base.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{x^2 \log_{14} x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To rewrite \(\log_{14} x\) using natural logarithms, we use the 
+        Change of Base Rule for Logarithms:  
+        \[\log_{14} x = \frac{\ln x}{\ln 14} \pd\]
+        Thus, we see 
+        \[
+        \ba 
+        \deriv{}{x} \par{\log_{14} x} &amp;= \deriv{}{x} \par{\frac{\ln x}{\ln 14}} \nl 
+        &amp;= \frac{1}{\ln 14} \deriv{}{x} \par{\ln x} \nl 
+        &amp;= \frac{1}{\ln 14} \cdot \frac{1}{x} \nl 
+        &amp;= \frac{1}{x \ln 14} \pd
+        \ea 
+        \]
+        Accordingly, the Product Rule gives 
+        \[
+        \ba 
+        \deriv{}{x} \par{x^2 \log_{14} x} 
+        &amp;= (2x) \log_{14} x + x^2 \par{\frac{1}{x \ln 14}} \nl 
+        &amp;= \boxed{2x \log_{14} x + \frac{x}{\ln 4}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{\frac{x^5}{\acos x}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\acos x\) is \(-1/\sqrt{1 - x^2}.\)
+        Accordingly, the Quotient Rule asserts that 
+        \[
+        \ba 
+        \deriv{}{x} \par{\frac{x^5}{\acos x}}
+        &amp;= \frac{\ds (5x^4) \acos x - x^5 \par{-\frac{1}{\sqrt{1 - x^2}}}}{\par{\acos x}^2} \nl 
+        &amp;= \boxed{\frac{\ds 5x^4 \acos x + \frac{x^5}{\sqrt{1 - x^2}}}{\par{\acos x}^2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \par{\frac{\asec t}{\ln t}}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\asec t\) is 
+        \[\frac{1}{\abs t \sqrt{t^2 - 1}} \cma\]
+        and the derivative of \(\ln t\) is \(1/t.\)
+        Hence, the Quotient Rule shows 
+        \[
+        \ba 
+        \deriv{}{t} \par{\frac{\asec t}{\ln t}}
+        &amp;= \frac{\ds \par{\frac{1}{\abs t \sqrt{t^2 - 1}}}\ln t - \asec t \par{\frac{1}{t}}}{(\ln t)^2} \nl 
+        &amp;= \boxed{\frac{\ds \frac{\ln t}{\abs t \sqrt{t^2 - 1}} - \frac{\asec t}{t}}{(\ln t)^2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \par{e^{x^2} \atan x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\atan x\) is \(1/(x^2 + 1).\)
+        So applying the Product Rule and Chain Rule gives 
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{x^2} \atan x}
+        &amp;= \par{2x e^{x^2}} \atan x + e^{x^2} \par{\frac{1}{x^2 + 1}} \nl 
+        &amp;= \boxed{2x e^{x^2} \atan x + \frac{e^{x^2}}{x^2 + 1}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{y} \acot \par{e^y}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\acot x\) is \(-1/(x^2 + 1).\)
+        Accordingly, the Chain Rule gives  
+        \[
+        \ba 
+        \deriv{}{y} \acot \par{e^y} 
+        &amp;= -\frac{1}{\par{e^y}^2 + 1} \cdot e^y \nl 
+        &amp;= \boxed{-\frac{e^y}{e^{2y} + 1}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \par{2e^{3t} \asec 3t}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        By the Chain Rule, the derivative of \(\asec 3t\) is 
+        \[\frac{1}{\abs{3t} \sqrt{(3t)^2 - 1}} \cdot 3 = \frac{1}{\abs{t} \sqrt{9t^2 - 1}} \pd\]
+        Thus, the Product Rule shows 
+        \[
+        \ba 
+        \deriv{}{t} \par{2e^{3t} \asec 3t}
+        &amp;= \par{6e^{3t}} \asec 3t + 2e^{3t} \par{\frac{1}{\abs{t} \sqrt{9t^2 - 1}}} \nl 
+        &amp;= \boxed{6e^{3t} \asec 3t + \frac{2e^{3t}}{\abs{t} \sqrt{9t^2 - 1}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{t} \par{t^t}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-53"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Do not use the Power Rule. 
+        The Power Rule is applicable only if the exponent is constant.
+        Instead, the Change of Base Rule for Exponents gives 
+        \[t^t = e^{t \ln t} \cma\] 
+        a composite function of inner function \(t \ln t.\)
+        Hence, the Chain Rule gives the derivative to be 
+        \[
+        \ba 
+        e^{t \ln t} \cdot \deriv{}{t} \par{t \ln t} &amp;= e^{t \ln t} \cdot (\ln t + 1) \nl
+        &amp;= \boxed{t^t \par{\ln t + 1}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-54"> 
+  <div class="box-solution__head">     EXERCISE 54 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{\theta} \acsc \par{\sin \theta}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-54"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The derivative of \(\acsc x\) is 
+        \[-\frac{1}{\abs{x} \sqrt{x^2 - 1}} \pd\]
+        Therefore, the Chain Rule shows  
+        \[
+        \ba 
+        \deriv{}{\theta} \acsc \par{\sin \theta} 
+        &amp;= -\frac{1}{\abs{\sin \theta} \sqrt{\sin^2 \theta - 1}} \cdot \cos \theta \nl 
+        &amp;= \boxed{-\frac{\cos \theta}{\abs{\sin \theta} \sqrt{\sin^2 \theta - 1}}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-55"> 
+  <div class="box-solution__head">     EXERCISE 55 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \deriv{}{x} \log_{4x^2 - 3} \par{\atan x}\]
+     evaluate the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-55"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Using the Change of Base Rule for Logarithms shows 
+        \[\log_{4x^2 - 3} \atan x = \frac{\ln \par{\atan x}}{\ln \par{4x^2 - 3}} \pd\]
+        Observe that, by the Chain Rule,
+        \[
+        \baf 
+        &amp;&amp;\deriv{}{x} \ln \par{\atan x} &amp;= \frac{1}{\atan x} \cdot \frac{1}{x^2 + 1} = \frac{1}{\par{x^2 + 1} \atan x} &amp;\nl 
+        \laWord{and} &amp;&amp;\deriv{}{x} \ln \par{4x^2 - 3} &amp;= \frac{1}{4x^2 - 3} \cdot (8x) = \frac{8x}{4x^2 - 3} \pd
+        \eaf 
+        \]
+        Thus, the Quotient Rule shows 
+        \[
+        \ba 
+        \deriv{}{x} \par{\log_{4x^2 - 3} \atan x} &amp;= \deriv{}{x} \frac{\ln \par{\atan x}}{\ln \par{4x^2 - 3}} \nl 
+        &amp;= \frac{\ds \par{\frac{1}{\par{x^2 + 1} \atan x}} \ln \par{4x^2 - 3} - \par{\frac{8x}{4x^2 - 3}} \ln \par{\atan x}}{\parbr{\ln \par{4x^2 - 3}}^2} \nl 
+        &amp;= \boxed{\frac{\ds \frac{\ln \par{4x^2 - 3}}{\par{x^2 + 1} \atan x} - \frac{8x \ln \par{\atan x}}{4x^2 - 3}}{\parbr{\ln \par{4x^2 - 3}}^2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-56"> 
+  <div class="box-solution__head">     EXERCISE 56 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find the point on the graph of \(y = \ln x + 1\)
+        to which the tangent line passes through the origin.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-56"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let's call the point of tangency \((a, \ln a + 1).\)
+        The slope of the tangent at \(a\) is \(1/a,\)
+        so an equation of the tangent line at \(x = a\) is 
+        \[y - \par{\ln a + 1} = \tfrac{1}{a} (x - a) \pd\]
+        This line must pass through the origin, so \((0, 0)\)
+        must be a valid point; substituting \(x = 0\) and \(y = 0\) shows 
+        \[
+        \ba 
+        0 - \par{\ln a + 1} &amp;= \tfrac{1}{a} (0 - a) \nl 
+        \ln a &amp;= 0 \nl 
+        \implies a &amp;= 1 \pd
+        \ea 
+        \]
+        Then \(y = \ln 1 + 1\) \(= 1.\)
+        So the point on the curve is \(\boxed{(1, 1)}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-57"> 
+  <div class="box-solution__head">     EXERCISE 57 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[HARD]]]-->
+        For what value of \(C\) does the equation \(x^2 = C + \ln x\)
+        have only one solution?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-57"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        For the curves of \(f(x) = x^2\) and \(g(x) = C + \ln x\)
+        to intersect once, they must be <i>tangent</i> 
+        at some point \(x = a.\)
+        Recall that the word tangent means \(f(a) = g(a)\)
+        and \(f'(a) = g'(a).\) 
+        Observe that \(f'(x) = 2x\) and \(g'(x) = 1/x.\)
+        Equating the derivatives at \(a\) shows 
+        \[2a = \tfrac{1}{a} \implies a = \tfrac{1}{\sqrt 2} \pd\]
+        Now we substitute this value into the equation \(x^2 = C + \ln x,\)
+        seeing 
+        \[
+        \ba 
+        \par{\tfrac{1}{\sqrt 2}}^2 &amp;= C + \ln \tfrac{1}{\sqrt 2} \nl 
+        \implies C &amp;= \boxed{\tfrac{1}{2} - \ln \tfrac{1}{\sqrt 2}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-58"> 
+  <div class="box-solution__head">     EXERCISE 58 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[HARD]]]-->
+        Determine the area of the triangle bounded between the \(y\)-axis, 
+        the tangent line to \(y = \ln x\) at \(x = e,\)
+        and the normal line to \(y = \ln x\) at \(x = e.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-58"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The bounded region is a triangle of width \(e.\)
+        To find its height, we must calculate the \(y\)-intercept of the normal line. 
+        Recall from Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+        that a normal line is perpendicular to a tangent line. 
+        The derivative of \(\ln x\) is \(1/x,\) so the tangent to the curve at \(x = e\) has slope \(1/e.\)
+        Accordingly, the normal's slope is the negative reciprocal of this value, that is, \(-e.\)
+        An equation of the normal line is therefore 
+        \[y - \ln e = -e(x - e) \or y = 1 - e(x - e) \pd\]
+        When \(x = 0\) we see 
+        \[y = 1 - e(0 - e) = 1 + e^2 \pd\]
+        The \(y\)-intercept \((1 + e^2)\) is the height of the bounded triangle.
+        Thus, its area is 
+        \[\tfrac{1}{2} (e)(1 + e^2) = \boxed{\tfrac{1}{2} (e + e^3)}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-59"> 
+  <div class="box-solution__head">     EXERCISE 59 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<!--[[[HARD]]]-->
+        The function \(f(x) = 1/x + \atan x\) is invertible for \(x \gt 0.\)
+        Show that 
+        \[\lim_{x \to (\pi/2)^+} \par{\inv f}'(x) = -\infty \pd\]
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-59"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Observe that \(f(x) \to (\pi/2)^+\)
+        as \(x \to \infty.\)
+        Consequently, \(\inv f(x) \to \infty\) as \(x \to (\pi/2)^+.\)
+        We have 
+        \[
+        \baf 
+        &amp;&amp;f'(x) &amp;= -\frac{1}{x^2} + \frac{1}{x^2 + 1} = -\frac{1}{x^4 + x^2} &amp;\nl 
+        \laWord{and} &amp;&amp;\lim_{x \to (\pi/2)^+} \par{\inv f}'(x) &amp;= \lim_{x \to (\pi/2)^+} \frac{1}{f' \par{\inv f(x)}} \pd 
+        \eaf
+        \]
+        To evaluate this limit, we substitute \(u = \inv f(x).\)
+        Then \(u \to \infty\) as \(x \to (\pi/2)^+,\)
+        so our limit becomes 
+        \[
+        \ba 
+        \lim_{u \to \infty} \frac{1}{f'(u)} &amp;= \lim_{u \to \infty} \frac{1}{-\dfrac{1}{u^4 + u^2}} \nl 
+        &amp;= \lim_{u \to \infty} - \par{u^4 + u^2} \nl 
+        &amp;= -\infty \pd
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">

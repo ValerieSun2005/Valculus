@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9.6: Areas with Polar Curves</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>9.6 — Areas with Polar Curves</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.6-Areas-with-Polar-Curves-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="9.6-Areas-with-Polar-Curves-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Areas-with-Polar-Curves]]]-->
+<p>
+    In Section <a href="/Valculus/calculus/5.1-Areas-between-Curves.html">5.1</a> 
+    we calculated areas between graphs of Cartesian functions.
+    We now extend this skill to calculating areas bounded by graphs of <i>polar functions</i>,
+    through the following topics:
+    <ul>
+        <li>
+            <a href="#polar-area-derivation" class="page-anchor">Area Bounded by a Single Polar Curve</a>
+        </li>
+        <li>
+            <a href="#polar-area-two" class="page-anchor">Areas between Two Polar Curves</a>
+        </li>
+    </ul> 
+</p>
+
+<h4 id="polar-area-derivation">Area Bounded by a Single Polar Curve</h4>
+<p>
+    Let \(f\) be a positive, continuous function over the interval \([\alpha, \beta].\)
+    In <a href="#polar-area-R">Figure 1A</a>, let \(R\) be the region enclosed 
+    by the graph of \(r = f(\theta)\) and the lines \(\theta = \alpha\) and \(\theta = \beta.\)
+    Think of the region \(R\) as being swept out by a ray rotating counterclockwise through the <i>pole</i> \(O\)
+    from \(\theta = \alpha\) to \(\theta = \beta.\)
+</p>
+
+<div class="figure-center">
+    <figure class="polar-area-R" id="polar-area-R">
+        <img src="../images/sectionImages/polar-area-R.jpg" class="polar-area-R" alt="Figure 1A">
+    </figure>
+    <figure class="polar-area-sectors" id="polar-area-sectors">
+        <img src="../images/sectionImages/polar-area-sectors.jpg" class="polar-area-sectors" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .polar-area-R::before{
+        content:'FIGURE 1A';
+    }
+
+    .polar-area-sectors::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<figure class="sector-sum" id="sector-sum">
+    <img src="../images/sectionAnimations/sector-sum.gif" alt="ANIMATION 1">
+</figure>
+<style>
+    .sector-sum::before{
+        content:'ANIMATION 1';
+    }
+</style>
+
+<p>
+    To determine the area of \(R,\) we use a method similar to a Riemann sum: 
+    We cut the interval \([\alpha, \beta]\) into \(n\) equally sized subintervals 
+    with endpoints \(\theta_1, \theta_2,\) \(\dots , \theta_{n - 1}, \theta_n.\)
+    Each subinterval has an angle measure of \(\Delta \theta\) \(= (\beta - \alpha)/n.\)
+    The area of each subinterval can be approximated by 
+    a circular sector whose central angle is \(\Delta \theta.\)
+    In <a href="#polar-area-sectors">Figure 1B</a>, an inscribed sector is 
+    shown in the labeled subinterval \([\theta_{i - 1}, \theta_i].\)
+    Letting \(\theta_i^*\) be any sample point in \([\theta_{i - 1}, \theta_i],\) 
+    the circular sector has area 
+    \[\Delta A = \tfrac{1}{2} [f(\theta_i^*)]^2 \Delta \theta \pd\]
+    Hence, we approximate the total area of \(R\) by summing the areas of all \(n\) circular sectors 
+    in \(\alpha \leq \theta \leq \beta\)—that is, 
+    \[A \approx \sum_{i = 1}^n \tfrac{1}{2} [f(\theta_i^*)]^2 \Delta \theta \pd\]
+    If we increase \(n,\) then \(\Delta \theta \to 0\) and so 
+    the many thinner circular sectors better fit into region \(R.\)
+    (See <a href="#sector-sum">Animation 1</a>.)
+    In fact, the exact area of \(R\) is the limiting value of \(A\) as \(n \to \infty \col\)
+    \[
+    A = \lim_{n \to \infty} \sum_{i = 1}^n \tfrac{1}{2} [f(\theta_i^*)]^2 \Delta \theta \pd 
+    \]
+    This form is a Riemann sum for the function \(\tfrac{1}{2} [f(\theta)]^2,\) so we have
+    \begin{equation} 
+    A = \int_\alpha^\beta \tfrac{1}{2} [f(\theta)]^2 \di \theta \pd \label{eq:area-A}
+    \end{equation}
+</p>
+<p>
+    <span class="text-caution">CAUTION</span>
+    It is easy to forget the exponent or the coefficient \(\tfrac{1}{2}\) in \(\eqref{eq:area-A}.\)
+    Over the interval \(\alpha \leq \theta \leq \beta,\)
+    be sure that the graph of \(r = f(\theta)\) only traces out a curve <i>once</i>. 
+    If the graph stacks on top of itself over this interval, then 
+    you need to alter the bounds to ensure a correct area. 
+    Lastly, if \(\alpha \lt \beta\) then \(\eqref{eq:area-A}\) should <span class="warning">never</span> return a negative result,
+    regardless of the quadrant in which the region lies.
+</p>
+
+<div class="box-title">AREA BOUNDED BY A SINGLE POLAR CURVE</div>
+<div class="box">
+    If \(r = f(\theta)\) is continuous and positive and traces out a curve once over \(\alpha \leq \theta \leq \beta,\) 
+    then the area enclosed from \(\theta = \alpha\) to \(\theta = \beta\) is given by 
+    \begin{equation} 
+    A = \int_\alpha^\beta \tfrac{1}{2} [f(\theta)]^2 \di \theta \pd \eqlabel{eq:area-A}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area bounded by the polar graph \(r = \theta\) 
+        over \(0 \leq \theta \leq \pi/2.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="polar-area-spiral" id="polar-area-spiral">
+        <img src="../images/sectionImages/polar-area-spiral.jpg" alt="Figure 2">
+    </figure>
+    
+    <style>
+        .polar-area-spiral::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The graph of \(r = \theta\) is a spiral, and the bounded region is in the first 
+    quadrant (<a href="#polar-area-spiral">Figure 2</a>).
+    Accordingly, this region begins at the line \(\theta = 0\) and terminates at the line \(\theta = \pi/2.\)
+    So in \(\eqref{eq:area-A}\) we substitute \(\alpha = 0,\) \(\beta = \pi/2,\)
+    and \(f(\theta) = \theta\) to see 
+    \[
+    \ba 
+    A &= \int_0^{\pi/2} \tfrac{1}{2} (\theta)^2 \di \theta \nl 
+    &= \tfrac{1}{6} \theta^3 \intEval_0^{\pi/2} = \tfrac{1}{6} \par{\frac{\pi}{2}}^3  - 0 \nl 
+    &= \boxed{\frac{\pi^3}{48}}
+    \ea 
+    \]
+</div>
+
+<p>
+    Ensure that you have a good understanding of polar graphs;
+    in the next examples, we will sketch polar curves. 
+    If you need to review the types of polar graphs, then see 
+    Section <a href="/Valculus/calculus/9.4-Polar-Coordinates-and-Functions.html">9.4</a>.
+    Since many polar graphs are defined using trigonometric functions, 
+    it is common to work with powers of sine and cosine functions.
+    In Section <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a> we discussed methods to deal with such integrals. 
+    In particular, we used the <span class="emph">power-reduction formulas</span> to 
+    simplify \(\sin^2 \theta\) and \(\cos^2 \theta,\) given as follows. 
+</p>
+<div class="box-title">POWER-REDUCTION FORMULAS FOR SINE AND COSINE</div>
+<div class="box">
+    \begin{align} 
+    \sin^2 \theta &= \tfrac{1}{2} (1 - \cos 2 \theta) \label{eq:sin-reduce} \nl 
+    \cos^2 \theta &= \tfrac{1}{2} (1 + \cos 2 \theta) \label{eq:cos-reduce}
+    \end{align}
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine the area enclosed by the cardioid \(r = 1 + \cos \theta.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="polar-area-cardioid-1" id="polar-area-cardioid-1">
+        <img src="../images/sectionImages/polar-area-cardioid-1.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .polar-area-cardioid-1::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    The entire cardioid is traced out once over the interval \(0 \leq \theta \leq 2 \pi\) 
+    (<a href="#polar-area-cardioid-1">Figure 3</a>). 
+    Accordingly, the bounds of integration are \(\alpha = 0\) to \(\beta = 2 \pi.\)
+    Thus, we use \(\eqref{eq:area-A}\) to calculate the area, as follows:
+    \[
+    \ba 
+    A &= \tfrac{1}{2} \int_0^{2 \pi} \par{1 + \cos \theta}^2 \di \theta \nl 
+    &= \tfrac{1}{2} \int_0^{2 \pi} \par{1 + 2 \cos \theta + \cos^2 \theta} \di \theta \nl 
+    &= \tfrac{1}{2} \int_0^{2 \pi} \parbr{1 + 2 \cos \theta + \tfrac{1}{2} (1 + \cos 2 \theta)} \di \theta 
+    &&[\text{by } \eqref{eq:cos-reduce}] \nl 
+    &= \tfrac{1}{2} \int_0^{2 \pi} \par{\tfrac{3}{2} + 2 \cos \theta + \tfrac{1}{2} \cos 2 \theta} \di \theta \nl 
+    &= \tfrac{1}{2} \par{\tfrac{3}{2} \theta + 2 \sin \theta + \tfrac{1}{4} \sin 2 \theta} \intEval_0^{2 \pi} \nl 
+    &= \tfrac{1}{2} \parbr{\tfrac{3}{2} (2 \pi) + 2 \sin 2 \pi + \tfrac{1}{4} \sin 4 \pi} - 0  
+    = \boxed{\tfrac{3}{2} \pi}
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area of one petal of the rose \(r = \cos 2 \theta.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="polar-area-rose-petal" id="polar-area-rose-petal">
+        <img src="../images/sectionImages/polar-area-rose-petal.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .polar-area-rose-petal::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    Let's calculate the area of the petal that resides on the positive \(x\)-axis.
+    To obtain the bounds \(\alpha\) and \(\beta,\) we determine when the graph hits the pole \(O\)—that 
+    is, when \(r = 0.\)
+    Solving \(\cos 2 \theta = 0\) gives, for \(\theta\) in the first and fourth quadrants, 
+    \(\theta = \pm \pi/4.\)
+    Hence, the graph of \(r = \cos 2 \theta\) traces out the top half of this petal over \(0 \leq \theta \leq \pi/4\)
+    and the bottom half over \(-\pi/4 \leq \theta \leq 0.\)
+    (See <a href="#polar-area-rose-petal">Figure 4</a>.)
+    We therefore use \(\eqref{eq:area-A}\) with the limits \(\alpha = -\pi/4\) and \(\beta = \pi/4.\)
+    Doing so gives the petal's area to be 
+    \[A = \tfrac{1}{2} \int_{-\pi/4}^{\pi/4} \cos^2 2\theta \di \theta \pd\]
+    But by symmetry, the petal's area is double the area of the top half. 
+    Accordingly, we can simplify the calculation as follows:
+    \[
+    \ba 
+    A = 2 \cdot \tfrac{1}{2} \int_0^{\pi/4} \cos^2 2 \theta \di \theta 
+    &= \int_0^{\pi/4} \cos^2 2 \theta \di \theta \nl 
+    &= \tfrac{1}{2} \int_0^{\pi/4} (1 + \cos 4 \theta) \di \theta &&[\text{by } \eqref{eq:cos-reduce}] \nl 
+    &= \tfrac{1}{2} \par{\theta + \tfrac{1}{4} \sin 4 \theta} \intEval_0^{\pi/4} \nl 
+    &= \tfrac{1}{2} \par{\frac{\pi}{4} + \tfrac{1}{4} \sin \pi} - 0 = \boxed{\frac{\pi}{8}}
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the area of the inner loop of the limacon \(r = 1 + 2 \sin \theta.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="polar-area-limacon-inner" id="polar-area-limacon-inner">
+        <img src="../images/sectionImages/polar-area-limacon-inner.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .polar-area-limacon-inner::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    The graph of the limacon \(r = 1 + 2 \sin \theta\) is symmetric about the \(y\)-axis
+    (<a href="#polar-area-limacon-inner">Figure 5</a>).
+    To find the interval over which the inner loop is traced, 
+    we solve for the values of \(\theta\) at which the graph touches the pole—namely, when \(r = 0 \col\)
+    \[
+    \ba 
+    1 + 2 \sin \theta &= 0 \nl 
+    \sin \theta &= -\tfrac{1}{2} \nl 
+    \implies \theta &= \frac{7 \pi}{6} \cma \frac{11 \pi}{6} \pd
+    \ea 
+    \]
+    Hence, the inner loop is traced out over \(7 \pi/6 \leq \theta \leq 11 \pi/6,\)
+    so we use the bounds \(\alpha = 7 \pi/6\) and \(\beta = 11 \pi/6.\)
+    Accordingly, by \(\eqref{eq:area-A}\) an expression for the area is 
+    \[A = \tfrac{1}{2} \int_{7 \pi/6}^{11 \pi/6} \par{1 + 2 \sin \theta}^2 \di \theta \pd\]
+    Expanding the integrand and applying the power-reduction formula for sine 
+    enable us to calculate the area, as follows:
+    \[
+    \ba 
+    A &= \tfrac{1}{2} \int_{7 \pi/6}^{11 \pi/6} \par{1 + 4 \sin \theta + 4 \sin^2 \theta} \di \theta \nl
+    &= \tfrac{1}{2} \int_{7 \pi/6}^{11 \pi/6} \parbr{1 + 4 \sin \theta + 4 \cdot \tfrac{1}{2} (1 - \cos 2 \theta)} \di \theta 
+    &&[\text{by } \eqref{eq:sin-reduce}] \nl 
+    &= \tfrac{1}{2} \int_{7 \pi/6}^{11 \pi/6} \par{3 + 4 \sin \theta - 2 \cos 2 \theta} \di \theta \nl  
+    &= \tfrac{1}{2} \par{3 \theta - 4 \cos \theta - \sin 2 \theta} \intEval_{7 \pi/6}^{11 \pi/6} \nl 
+    &= \tfrac{1}{2} \par{ \frac{11 \pi}{2} - 2 \sqrt 3 + \frac{\sqrt 3}{2} } 
+    - \tfrac{1}{2} \par{ \frac{7 \pi}{2} + 2 \sqrt{3} - \frac{\sqrt 3}{2} }  \nl 
+    &= \boxed{\pi - \frac{3 \sqrt 3}{2}} \approx 0.544 \pd
+    \ea 
+    \]
+</div>
+
+<h4 id="polar-area-two">Areas between Two Polar Curves</h4>
+
+<figure class="polar-area-between" id="polar-area-between">
+    <img src="../images/sectionImages/polar-area-between.jpg" alt="Figure 6">
+</figure>
+<style>
+    .polar-area-between::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<p>
+    Suppose that \(f\) and \(g\) are positive, continuous functions 
+    over \([\alpha, \beta].\)
+    If \(f(\theta) \geq g(\theta)\) over \(\alpha \leq \theta \leq \beta,\)
+    then the polar graphs of both functions enclose a region of area \(A.\)
+    The curve \(r = f(\theta)\) is called the <i>outer boundary function</i>
+    (because it's farther from the origin), 
+    and the curve \(r = g(\theta)\) is the <i>inner boundary function</i>.
+    To calculate \(A\) we do the following:
+    We take the area bounded by \(f\) over \(\alpha \leq \theta \leq \beta\)
+    and subtract the area bounded by \(g\) over \(\alpha \leq \theta \leq \beta.\)
+    In <a href="#polar-area-between">Figure 6</a>, for a subinterval \([\theta_{i - 1}, \theta_i]\)
+    with sample point \(\theta_i^*,\) we subtract 
+    the area of the inner sector from the area of the outer sector. 
+    The difference in areas is therefore 
+    \[\Delta A = \tfrac{1}{2} [f(\theta_i^*)]^2 \Delta \theta - \tfrac{1}{2} [g(\theta_i^*)]^2 \Delta \theta \pd\]
+    Summing the differences in areas of \(n\) sectors throughout the entire interval \(\alpha \leq \theta \leq \beta,\) 
+    we see 
+    \[
+    A \approx \sum_{i = 1}^n \tfrac{1}{2} [f(\theta_i^*)]^2 \Delta \theta - \sum_{i = 1}^n \tfrac{1}{2} [g(\theta_i^*)]^2 \Delta \theta \pd 
+    \]
+    The total area of \(A\) is the limiting value of this sum as \(n \to \infty.\)
+    The first summation is a Riemann sum for \(\tfrac{1}{2} [f(\theta)]^2,\)
+    and the second summation is a Riemann sum for \(\tfrac{1}{2} [g(\theta)]^2.\)
+    We therefore have
+    \begin{align} 
+    A &= \int_\alpha^\beta \tfrac{1}{2} [f(\theta)]^2 \di \theta 
+    - \int_\alpha^\beta \tfrac{1}{2} [g(\theta)]^2 \di \theta \nonum \nl 
+    &= \tfrac{1}{2} \int_\alpha^\beta \par{[f(\theta)]^2 - [g(\theta)]^2} \di \theta \pd \label{eq:polar-area-2}
+    \end{align}
+    In this formula,
+    the integrand is the outer boundary function squared minus the inner boundary function squared. 
+</p>
+
+<aside class="box-caution">
+    \(\eqrefer{eq:polar-area-2}\) should never return a negative number,
+    and do <span class="warning">not</span> mistake the integrand for \([f(\theta) - g(\theta)]^2.\)
+</aside>
+
+<div class="box-title">AREA BOUNDED BY TWO POLAR CURVES</div>
+<div class="box">
+    If \(f\) and \(g\) are positive, continuous functions on \([\alpha, \beta]\)
+    such that \(f(\theta) \geq g(\theta)\) on \(\alpha \leq \theta \leq \beta,\)
+    then the area enclosed by the polar graphs \(r = f(\theta)\) and \(r = g(\theta)\) 
+    over \(\alpha \leq \theta \leq \beta\) is given by 
+    \begin{equation} 
+    A = \tfrac{1}{2} \int_\alpha^\beta \par{[f(\theta)]^2 - [g(\theta)]^2} \di \theta \pd \eqlabel{eq:polar-area-2}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-card-circle"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area of the region that is outside the cardioid \(r = 1 + \sin \theta\) 
+        and also inside the circle \(r = 3 \sin \theta.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="polar-area-between-circle-card" id="polar-area-between-circle-card">
+        <img src="../images/sectionImages/polar-area-between-circle-card.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .polar-area-between-circle-card::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    It is imperative to sketch the two graphs 
+    and label the enclosed area, which resembles a rotated moon, 
+    as shown by <a href="#polar-area-between-circle-card">Figure 7</a>. 
+    Equating the two functions \(r = 1 + \sin \theta\) and \(r = 3 \sin \theta\) shows 
+    \[
+    \ba 
+    1 + \sin \theta &= 3 \sin \theta \nl 
+    \sin \theta &= \tfrac{1}{2} \nl 
+    \implies \theta &= \frac{\pi}{6} \cma \frac{5 \pi}{6} \pd
+    \ea 
+    \]
+    Thus, these graphs intersect at \(\theta = \pi/6\) and \(\theta = 5 \pi/6.\)
+    Imagine a ray rotating counterclockwise about the pole \(O\) and sweeping out the region 
+    over \(\pi/6 \leq \theta \leq 5 \pi/6.\)
+    Over this interval the outer boundary function is \(f(\theta) = 3 \sin \theta\)
+    (since this curve is farther from the origin),
+    and the inner boundary function is \(g(\theta) = 1 + \sin \theta.\)
+    Accordingly, by \(\eqref{eq:polar-area-2}\) the enclosed area is given by the integral  
+    \[A = \tfrac{1}{2} \int_{\pi/6}^{5 \pi/6} \parbr{(3 \sin \theta)^2 - (1 + \sin \theta)^2} \di \theta \pd\]
+    Expanding and using the power-reduction formula for sine, we see 
+    \[
+    \ba 
+    A &= \tfrac{1}{2} \int_{\pi/6}^{5 \pi/6} \par{9 \sin^2 \theta - 1 - 2 \sin \theta - \sin^2 \theta} \di \theta \nl 
+    &= \tfrac{1}{2} \int_{\pi/6}^{5 \pi/6} \par{8 \sin^2 \theta - 2 \sin \theta - 1} \di \theta \nl 
+    &= \tfrac{1}{2} \int_{\pi/6}^{5 \pi/6} \parbr{8 \cdot \tfrac{1}{2}(1 - \cos 2 \theta) - 2 \sin \theta - 1} \di \theta 
+    &&[\text{by } \eqref{eq:sin-reduce}] \nl
+    &= \tfrac{1}{2} \int_{\pi/6}^{5 \pi/6} \par{3 - 4 \cos 2 \theta - 2 \sin \theta} \di \theta \nl 
+    &= \tfrac{1}{2} \par{3 \theta - 2 \sin 2 \theta + 2 \cos \theta} \intEval_{\pi/6}^{5 \pi/6} = \boxed \pi
+    \ea 
+    \]
+</div>
+
+<p>
+    Let's develop some problem-solving tips for calculating areas bounded between polar curves.
+    <a href="#ex-card-circle">Example 5</a> shows an example in which one curve \(f\)
+    is constantly greater than another curve \(g\) over some interval. 
+    But if this isn't the case, then we must split the region and add integrals. 
+    Consider the following steps.
+</p>
+
+<div class="steps-title">STEPS FOR CALCULATING AREAS BOUNDED BETWEEN POLAR GRAPHS</div>
+<div class="steps">
+    <ol class="list-num">
+        <li>
+            Sketch the polar graphs, label the intersection points, and shade the bounded region.
+        </li>
+        <li>
+            Trace the perimeter of the bounded region counterclockwise,
+            and imagine a ray rotating through the origin 
+            sweeping out the area.
+            Identify the outer boundary function \(f(\theta)\)
+            and the inner boundary function \(g(\theta);\)
+            split the region if the boundary functions differ throughout the interval.
+        </li>
+        <li>
+            Calculate the values of \(\theta\) at which the polar graphs intersect 
+            by solving \(f(\theta) = g(\theta).\)
+        </li>
+        <li>
+            Use \(\eqref{eq:polar-area-2}\) as necessary to calculate the area of the bounded region, 
+            with \(\alpha\) and \(\beta\) being angles of intersection.
+        </li>
+    </ol>
+</div>
+
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area of the region that is inside the circle \(r = 2\) 
+        and also inside the limacon \(r = 2 + \sin \theta.\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <p>
+        <figure class="polar-area-between-limacon-circle" id="polar-area-between-limacon-circle">
+            <img src="../images/sectionImages/polar-area-between-limacon-circle.jpg" alt="Figure 8">
+        </figure>
+        <style>
+            .polar-area-between-limacon-circle::before{
+                content:'FIGURE 8';
+            }
+        </style>
+        We plot the two curves and shade the area inside the circle and also inside the limacon, 
+        as shown by <a href="#polar-area-between-limacon-circle">Figure 8</a>. 
+        If we imagine a ray rotating counterclockwise about the pole \(O\)
+        and sweeping out the area, then we see the following:
+        <ul>
+            <li>
+                Over \(0 \leq \theta \leq \pi,\)
+                the enclosed region is bounded only by the circle \(r = 2.\)
+            </li>
+            <li>
+                Over \(\pi \leq \theta \leq 2 \pi,\)
+                the region is bounded solely by the limacon \(r = 2 + \sin \theta.\)
+            </li>
+        </ul>
+        In fact, the top half of the enclosed region is a semicircle of area \(\tfrac{1}{2} \pi(2)^2 = 2 \pi.\)
+        We add this result to the area of the bottom half of the enclosed area, 
+        so the total area is given by 
+        \[
+        A = 2 \pi + \tfrac{1}{2} \int_\pi^{2 \pi} \par{2 + \sin \theta}^2 \di \theta \pd
+        \]
+        Expanding the integrand and using the power-reduction formula for sine, we see 
+        \[
+        \ba 
+        A &= 2 \pi + \tfrac{1}{2} \int_\pi^{2 \pi} \par{4 + 4 \sin \theta + \sin^2 \theta} \di \theta \nl 
+        &= 2 \pi + \tfrac{1}{2} \int_\pi^{2 \pi} \parbr{4 + 4 \sin \theta + \tfrac{1}{2} (1 - \cos 2 \theta)} \di \theta 
+        &&[\text{by } \eqref{eq:sin-reduce}] \nl 
+        &= 2 \pi + \tfrac{1}{2} \int_\pi^{2 \pi} \par{\tfrac{9}{2} + 4 \sin \theta - \tfrac{1}{2} \cos 2 \theta} \di \theta \nl 
+        &= 2 \pi + \tfrac{1}{2} \par{\tfrac{9}{2} \theta - 4 \cos \theta - \tfrac{1}{4} \sin 2 \theta} \intEval_\pi^{2 \pi} \nl 
+        <!-- &= 2 \pi + \tfrac{1}{2} \par{9 \pi - 4} - \tfrac{1}{2} \par{\tfrac{9}{2} \pi + 4} \nl  -->
+        &= \boxed{\frac{17 \pi}{4} - 4} \approx 9.352 \pd
+        \ea  
+        \]
+    </p>
+    <p>
+        <span class="text-remark">REMARK</span>
+        Over each interval \(0 \leq \theta \leq \pi\)
+        and \(\pi \leq \theta \leq 2 \pi,\)
+        <i>only one boundary function is present</i>.
+        It is not appropriate to model the region 
+        using an outer boundary function and inner boundary function.  
+        We therefore split the region 
+        at \(\theta = \pi,\) the point 
+        at which the boundary functions change, 
+        and add the areas. 
+        In fact, we could use integrals to write the area as 
+        \[A = \tfrac{1}{2} \int_0^\pi 2^2 \di \theta + \tfrac{1}{2} \int_\pi^{2 \pi} \par{2 + \sin \theta}^2 \di \theta \cma\]
+        where the first interval evaluates to \(2 \pi.\)
+        Regardless, 
+        it would be <span class="warning">wrong</span> to take the difference of areas using \(\eqref{eq:polar-area-2}.\)
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area bounded between the two circles \(r = 3 \cos \theta\)
+        and \(r = 3 \sin \theta.\)
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    <figure class="polar-area-between-circles" id="polar-area-between-circles">
+        <img src="../images/sectionImages/polar-area-between-circles.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .polar-area-between-circles::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    Sketching the graphs of \(r = 3 \cos \theta\) and \(r = 3 \sin \theta,\)
+    we identify the bounded region to be in the first quadrant. 
+    Note that these circles intersect when \(3 \sin \theta = 3 \cos \theta,\)
+    which occurs in the first quadrant when \(\theta = \pi/4.\)
+    Starting at the origin, we trace the perimeter of the enclosed region and imagine 
+    a ray sweeping out this region.  
+    We see the following:
+    <ul>
+        <li>
+            Over \(0 \leq \theta \leq \pi/4,\)
+            the region is bounded by the circle \(r = 3 \sin \theta.\)
+        </li>
+        <li>
+            Over \(\pi/4 \leq \theta \leq \pi/2,\)
+            the region is bounded by the other circle \(r = 3 \cos \theta.\)
+        </li>
+    </ul>
+    Because the boundary functions change at \(\theta = \pi/4,\) 
+    we split the region at \(\theta = \pi/4\) and add the subregions' areas:
+    \[
+    A = \tfrac{1}{2} \int_0^{\pi/4} (3 \sin \theta)^2 \di \theta 
+    + \tfrac{1}{2} \int_{\pi/4}^{\pi/2} (3 \cos \theta)^2 \di \theta \pd
+    \]
+    By symmetry, both subregions have the same area and so both integrals are equivalent. 
+    The area is therefore given by double the value of one integral—say,
+    \[
+    \ba 
+    A &= 2 \cdot \tfrac{1}{2} \int_0^{\pi/4} (3 \sin \theta)^2 \di \theta \nl 
+    &= 9 \int_0^{\pi/4} \sin^2 \theta \di \theta = 9 \int_0^{\pi/4} \tfrac{1}{2}(1 - \cos 2 \theta) \di \theta \nl 
+    &= \tfrac{9}{2} \par{\theta - \tfrac{1}{2} \sin 2 \theta} \intEval_0^{\pi/4} \nl 
+    <!-- &= \frac{9}{2} \par{\frac{\pi}{4} - \frac{1}{2}} \nl  -->
+    &= \boxed{\frac{9 \pi - 18}{8}} \approx 1.284 \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine the area of the region that lies inside the circle \(r = \cos \theta\)
+        and outside the cardioid \(r = 1 - \cos \theta.\)
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    <figure class="polar-area-between-limacon-circle-2" id="polar-area-between-limacon-circle-2">
+        <img src="../images/sectionImages/polar-area-between-limacon-circle-2.jpg" alt="Figure 10">
+    </figure>
+    <style>
+        .polar-area-between-limacon-circle-2::before{
+            content:'FIGURE 10';
+        }
+    </style>
+    Sketching the graphs, we identify the enclosed area to lie within the first and fourth quadrants 
+    (<a href="#polar-area-between-limacon-circle-2">Figure 10</a>). 
+    If we trace the perimeter of the region, then we see 
+    that its outer boundary function is \(f(\theta) = \cos \theta\)
+    and its inner boundary function is \(g(\theta) = 1 - \cos \theta.\)
+    These two graphs intersect when \(\cos \theta = 1 - \cos \theta,\)
+    which occurs when \(\theta = \pm \pi/3.\)
+    Accordingly, in \(\eqref{eq:polar-area-2}\) we use the bounds \(\alpha = -\pi/3\)
+    and \(\beta = \pi/3,\)
+    so the area is given by 
+    \[A = \tfrac{1}{2} \int_{-\pi/3}^{\pi/3} \parbr{(\cos \theta)^2 - (1 - \cos \theta)^2} \di \theta \pd\]
+    But by symmetry, we can simplify the calculation as follows:  
+    \[
+    \ba 
+    A &= 2 \cdot \tfrac{1}{2} \int_0^{\pi/3} \parbr{(\cos \theta)^2 - (1 - \cos \theta)^2} \di \theta \nl 
+    &= \int_0^{\pi/3} \par{\cos^2 \theta - 1 + 2 \cos \theta - \cos^2 \theta} \di \theta \nl 
+    &= \int_0^{\pi/3} \par{2 \cos \theta - 1} \di \theta 
+    = \par{2 \sin \theta - \theta} \intEval_0^{\pi/3} \nl 
+    &= \boxed{\sqrt{3} - \frac{\pi}{3}} \approx 0.685 \pd
+    \ea    
+    \]  
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#polar-area-derivation" class="summary-anchor">Area Bounded by a Single Polar Curve</a>
+        If \(r = f(\theta)\) is continuous and positive and traces a curve once over \(\alpha \leq \theta \leq \beta,\) 
+        then the area enclosed from \(\theta = \alpha\) to \(\theta = \beta\) is given by 
+        \begin{equation} 
+        A = \int_\alpha^\beta \tfrac{1}{2} [f(\theta)]^2 \di \theta \pd \eqlabel{eq:area-A}
+        \end{equation}
+        Do not forget the exponent or the coefficient \(\tfrac{1}{2}.\)
+        This formula should never return a negative value, regardless of the quadrant in which the region lies. 
+    </p>
+    <p>
+        <a href="#polar-area-two" class="summary-anchor">Areas between Two Polar Curves</a>
+        If \(f\) and \(g\) are positive, continuous functions on \([\alpha, \beta]\)
+        such that \(f(\theta) \geq g(\theta)\) on \(\alpha \leq \theta \leq \beta,\)
+        then the area enclosed by the polar graphs \(r = f(\theta)\) and \(r = g(\theta)\) 
+        over \(\alpha \leq \theta \leq \beta\) is given by 
+        \begin{equation} 
+        A = \tfrac{1}{2} \int_\alpha^\beta \par{[f(\theta)]^2 - [g(\theta)]^2} \di \theta \pd \eqlabel{eq:polar-area-2}
+        \end{equation}
+        The following steps help us calculate the area between two polar curves:
+        <ol class="list-num">
+            <li>
+                Sketch the polar graphs, label the intersection points, and shade the bounded region.
+            </li>
+            <li>
+                Trace the perimeter of the bounded region counterclockwise,
+                and imagine a ray rotating through the origin 
+                sweeping out the area.
+                Identify the outer boundary function \(f(\theta)\)
+                and the inner boundary function \(g(\theta);\)
+                split the region if the boundary functions differ throughout the interval.
+            </li>
+            <li>
+                Calculate the values of \(\theta\) at which the polar graphs intersect 
+                by solving \(f(\theta) = g(\theta).\)
+            </li>
+            <li>
+                Use \(\eqref{eq:polar-area-2}\) as necessary to calculate the area of the bounded region, 
+                with \(\alpha\) and \(\beta\) being angles of intersection.
+            </li>
+        </ol>
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

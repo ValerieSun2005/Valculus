@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.6 Exercise Solutions: Absolute Convergence and the Ratio and Root Tests</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.6 Exercise Solutions — Absolute Convergence and the Ratio and Root Tests</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="10.6-Absolute-Convergence-and-the-Ratio-and-Root-Tests.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.6-Absolute-Convergence-and-the-Ratio-and-Root-Tests-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Define <b>absolute convergence</b> and <b>conditional convergence</b>. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The series \(\sum a_n\) is <b>absolutely convergent</b> if and only if 
+        \(\sum \abs{a_n}\) converges. 
+        Conversely, \(\sum a_n\) is <b>conditionally convergent</b> 
+        if and only if \(\sum a_n\) converges but \(\sum \abs{a_n}\) diverges. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        If \(\sum \abs{a_n}\) is convergent, then what is true about \(\sum a_n \ques\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If \(\sum a_n\) is absolutely convergent, then it is convergent. 
+        In other words, if \(\sum \abs{a_n}\) converges, then \(\sum a_n\) 
+        converges.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        How do you use the <b>Ratio Test</b>
+        to test \(\sum a_n\) for convergence or divergence?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To test whether \(\sum a_n\) converges or diverges,
+        we consider the ratio \(\abs{a_{n + 1}/a_n}\) as \(n\) grows large. 
+        That is, we let 
+        \[L = \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \pd\]
+        The Ratio Test then states the following: 
+        <ul>
+<li>
+                If \(L \lt 1,\) then \(\sum a_n\) converges absolutely.
+            </li>
+<li>
+                If \(L \gt 1,\) then \(\sum a_n\) diverges.
+            </li>
+<li>
+                If \(L = 1,\) then the test gives no information.
+                We must use another test if this is the case. 
+            </li>
+</ul>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Using the <b>Root Test</b>,
+        how do you test \(\sum a_n\) for convergence or divergence?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To test whether \(\sum a_n\) converges or diverges,
+        we consider the \(n\)th root of \(\abs{a_n}\) as \(n\) grows large. 
+        We let  
+        \[L = \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = \lim_{n \to \infty} \abs{a_n}^{1/n} \pd\]
+        The Root Test then states the following: 
+        <ul>
+<li>
+                If \(L \lt 1,\) then \(\sum a_n\) converges absolutely.
+            </li>
+<li>
+                If \(L \gt 1,\) then \(\sum a_n\) diverges.
+            </li>
+<li>
+                If \(L = 1,\) then we have no information 
+                and must use another test.
+            </li>
+</ul>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        What does the Ratio Test conclude about \(\sum a_n\)
+        in each of the following cases?
+        <ol class="list-alpha">
+<li>
+                \(\ds \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} = 0.2\)
+            </li>
+<li>
+                \(\ds \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} = 1.2\)
+            </li>
+<li>
+                \(\ds \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} = 1\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Since \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1,\)
+                the Ratio Test gives \(\sum a_n\) to be <b>convergent</b>. 
+            </li>
+<hr/>
+<li>
+                Because \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \gt 1,\)
+                the Ratio Test states that \(\sum a_n\) is <b>divergent</b>. 
+            </li>
+<hr/>
+<li>
+                Since \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} = 1,\)
+                the Ratio Test is <b>inconclusive</b> in determining whether 
+                \(\sum a_n\) converges or diverges. 
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        By the Root Test, what do we know about \(\sum a_n\)
+        in each of the following cases?
+        <ol class="list-alpha">
+<li>
+                \(\ds \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = 0.5\)
+            </li>
+<li>
+                \(\ds \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = 3.5\)
+            </li>
+<li>
+                \(\ds \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = 1\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Since \(\lim_{n \to \infty} \sqrt[n]{\abs{a_n}} \lt 1,\)
+                the Root Test gives \(\sum a_n\) to be <b>convergent</b>. 
+            </li>
+<hr/>
+<li>
+                Because \(\lim_{n \to \infty} \sqrt[n]{\abs{a_n}} \gt 1,\)
+                by the Root Test \(\sum a_n\) is <b>divergent</b>. 
+            </li>
+<hr/>
+<li>
+                Since \(\lim_{n \to \infty} \sqrt[n]{\abs{a_n}} = 1,\)
+                the Root Test is <b>inconclusive</b> in determining whether 
+                \(\sum a_n\) converges or diverges. 
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^{\infty} \frac{(-1)^n}{n^3}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (-1)^n/n^3.\) 
+        Our goal is to determine whether \(\sum a_n\) converges or diverges.
+        If it converges, then we proceed to test whether \(\sum \abs{a_n}\) 
+        is convergent. 
+        For \(n \geq 1,\) \(a_n\) is alternating 
+        and decreasing in magnitude to \(0.\) 
+        Hence, \(\sum a_n\) converges by the Alternating Series Test.
+        Moreover, 
+        \[\sum \abs{a_n} = \sum \frac{1}{n^3}\] 
+        is a \(p\)-series with \(p = 3 \gt 1,\) so \(\sum \abs{a_n}\) converges.
+        Since \(\sum \abs{a_n}\) converges, 
+        \(\sum a_n\) \(= \sum (-1)^n/n^3\) <b>converges absolutely</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^{\infty} \frac{(-1)^n}{n^6}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We let \(a_n = (-1)^n/n^6.\) 
+        Our first goal is to test whether \(\sum_{n = 1}^\infty a_n\) converges or diverges.
+        If it converges, then we proceed to test whether \(\sum_{n = 1}^\infty \abs{a_n}\) 
+        is convergent. 
+        For \(n \geq 1,\) \(a_n\) is alternating 
+        and decreasing in magnitude to \(0.\) 
+        Thus, \(\sum_{n = 1}^\infty a_n\) converges by the Alternating Series Test.
+        Now we note that 
+        \[\sum_{n = 1}^\infty \abs{a_n} = \sum_{n = 1}^\infty \frac{1}{n^6}\] 
+        is a \(p\)-series with \(p = 6 \gt 1,\) and so converges.
+        Since \(\sum_{n = 1}^\infty \abs{a_n}\) converges, 
+        \(\sum_{n = 1}^\infty a_n\) \(= \sum_{n = 1}^\infty (-1)^n/n^6\) <b>converges absolutely</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 3}^{\infty} \frac{(-1)^n}{\sqrt{n}}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (-1)^n/\sqrt{n}.\)
+        The terms of \(\{a_n\} \subsuper{3}{\infty}\) are alternating, 
+        and the terms are decreasing in magnitude to zero.  
+        Thus, \(\sum a_n\) converges by the Alternating Series Test.
+        But 
+        \[\sum \abs{a_n} = \sum \frac{1}{\sqrt{n}}\] 
+        is a \(p\)-series with \(p = 1/2 \lt 1,\) so \(\sum \abs{a_n}\) diverges.
+        Since \(\sum a_n\) converges but \(\sum \abs{a_n}\) diverges, 
+        we say \(\sum a_n\) = \(\sum (-1)^n/\sqrt{n}\) <b>converges conditionally</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^{\infty} (-2)^n\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We call \(a_n = (-2)^n.\)
+        We immediately notice that 
+        \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} (-2)^n\]
+        does not exist, 
+        because the terms of \(a_n\) continually switch sign from \(-2\) and \(2.\)
+        Hence, the Divergence Test states that \(\sum a_n\) \(= \sum (-2)^n\) <b>diverges</b>.
+        A divergent series is divergent, clearly;
+        it cannot also be absolutely convergent or conditionally convergent.  
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{1}{n^3}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The series \(\sum (1/n^3)\) is a \(p\)-series with \(p = 3 \gt 1,\)
+        and therefore is convergent. 
+        Because \(\sum \abs{1/n^3} = \sum 1/n^3\) converges,
+        we conclude that \(\sum (1/n^3)\) is <b>absolutely convergent</b>. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^{\infty} \frac{(-1)^n}{n^{3/2}}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = (-1)^n/n^{3/2}.\)
+        The terms of \(\{a_n\} \subsuper{1}{\infty}\) are alternating. 
+        Also, the terms are decreasing in magnitude, and \(\lim_{n \to \infty} \par{1/n^{3/2}} = 0.\) 
+        Consequently, \(\sum a_n\) converges by the Alternating Series Test.
+        We now consider the sum of the absolute values of \(a_n;\)
+        that is, 
+        \[\sum \abs{a_n} = \sum \frac{1}{n^{3/2}}\] 
+        is a \(p\)-series with \(p = 3/2 \gt 1\)
+        and therefore converges. 
+        Since \(\sum \abs{a_n}\) converges, 
+        \(\sum a_n\) = \(\sum (-1)^n/n^{3/2}\) <b>converges absolutely</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^{\infty} \frac{\cos(\pi n)}{\sqrt[3]{n}}\]
+     determine whether the series converges absolutely, converges conditionally, or diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We immediately recognize that the term \(\cos(\pi n)\) is equivalent to 
+        \((-1)^n.\)
+        So we rewrite the sum as 
+        \[\sum_{n = 1}^{\infty} \frac{(-1)^n}{\sqrt[3]{n}} = \sum_{n = 1}^\infty \frac{(-1)^n}{n^{1/3}} \pd\]
+        Let \(a_n = (-1)^n/n^{1/3}.\)
+        For \(n \geq 1\) the terms of \(\{a_n\} \subsuper{1}{\infty}\) are alternating; 
+        also, \(1/n^{1/3}\) is decreasing and \(\lim_{n \to \infty} \par{1/n^{1/3}} = 0.\)
+        Therefore, \(\sum a_n\) converges by the Alternating Series Test.
+        We now consider 
+        \[\sum \abs{a_n} = \sum \frac{1}{n^{1/3}} \cma\] 
+        which is a \(p\)-series with \(p = 1/3 \lt 1.\) 
+        Thus, \(\sum \abs{a_n}\) diverges.
+        Because \(\sum a_n\) converges and \(\sum \abs{a_n}\) diverges, 
+        we say \(\sum a_n\) = \(\sum (-1)^n/\sqrt[3]{n}\) <b>converges conditionally</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Show that \(\sum_{n = 1}^\infty (\cos n)/n^2\) converges. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        It is difficult to test this series' convergence or divergence in its raw form. 
+        We cannot readily perform a comparison test with \(a_n = (\cos n)/n^2,\)
+        since we cannot bound the sum of \(\sum a_n\) in any useful way.
+        We <i>can</i>, however, bound the sum of \(\sum \abs{a_n}\) 
+        \(= \sum \abs{\cos n}/n^2\) by the convergent series \(\sum (1/n^2),\)
+        enabling us to establish that \(\sum \abs{a_n}\) converges by Direct Comparison. 
+        Since \(0 \leq \abs{\cos n} \leq 1,\) we see 
+        \[
+        0 \leq \sum_{n = 1}^{\infty} \frac{\abs{\cos n}}{n^2} \leq 
+        \sum_{n = 1}^{\infty} \frac{1}{n^2} \pd  
+        \]
+        Therefore, \(\sum \abs{a_n}\) \(= \sum \abs{\cos n}/n^2\)
+        converges by the Direct Comparison Test. 
+        Hence, \(\sum a_n\) \(= \sum (\cos n)/n^2\) is absolutely convergent 
+        and therefore converges.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Show that \(\sum_{n = 1}^\infty (\sin n)/n^3\) converges. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We cannot immediately perform a Direct Comparison with \(a_n = (\sin n)/n^3.\)
+        But we can bound the sum of \(\sum \abs{a_n}\) 
+        \(= \sum \abs{\sin n}/n^3\) by the convergent series \(\sum (1/n^3),\)
+        allowing us to establish that \(\sum \abs{a_n}\) converges by Direct Comparison. 
+        Since \(0 \leq \abs{\sin n} \leq 1,\) we see 
+        \[
+        0 \leq \sum_{n = 1}^{\infty} \frac{\abs{\sin n}}{n^3} \leq 
+        \sum_{n = 1}^{\infty} \frac{1}{n^3} \pd  
+        \]
+        Therefore, \(\sum \abs{\sin n}/n^3\)
+        converges by the Direct Comparison Test. 
+        So \(\sum (\sin n)/n^3\) is absolutely convergent 
+        and therefore converges.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(a_n = (-1)^n/n.\)
+        Show that \(\sum a_n\) is conditionally convergent 
+        but \(\sum a_{2n}\) is divergent.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The function \(1/n\) is decreasing to \(0,\) so \(\sum a_n\)
+        converges by the Alternating Series Test.
+        But the sum of \(\abs{a_n}\) is 
+        \(\sum (1/n),\) the divergent Harmonic Series,
+        so \(\sum a_n\) is conditionally convergent. 
+        The series \(\sum a_{2n}\) is 
+        \[\sum \frac{(-1)^{2n}}{2n} = \sum \frac{1}{2n} \cma\]
+        which diverges.
+        [Note that \((-1)^{2n} = 1\) for all \(n.\)]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Prove that \(\sum_{n = 1}^\infty (-1)^n/n^p\)
+        converges conditionally if \(0 \lt p \leq 1\)
+        and converges absolutely if \(p \gt 1.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        For all \(p \gt 0,\)
+        \(\sum_{n = 1}^\infty (-1)^n/n^p\)
+        converges by the Alternating Series Test because 
+        \(1/n^p\) is decreasing and \(\lim_{n \to \infty} \par{1/n^p} = 0.\)
+        Now we consider the series 
+        \[\sum_{n = 1}^\infty \abs{\frac{(-1)^n}{n^p}} = \sum_{n = 1}^\infty \frac{1}{n^p} \pd\]
+        This \(p\)-series converges if \(p \gt 1\) and diverges if \(0 \lt p \leq 1.\)
+        Hence, \(\sum_{n = 1}^\infty (-1)^n/n^p\) is absolutely convergent if \(p \gt 1\)
+        and conditionally convergent if \(0 \lt p \leq 1.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty e^n\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If \(a_n = e^n,\) then we consider
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n},\)
+        where \(a_{n + 1} = e^{n + 1} = e^n \, e.\)
+        Thus, we have 
+        \[L = \lim_{n \to \infty} \abs{\frac{e^n \, e}{e^n}} = e \pd\]
+        Because \(L = e \gt 1,\) the Ratio Test asserts that 
+        this series <b>diverges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty 4^{-n}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = 4^{-n};\) then we consider
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)
+        We see  
+        \[a_{n + 1} = 4^{-(n + 1)} = 4^{-n} \cdot 4^{-1}\]
+        We have 
+        \[L = \lim_{n \to \infty} \abs{\frac{4^{-n} \cdot 4^{-1}}{4^{-n}}} = \tfrac{1}{4} \pd\]
+        Because \(L = 1/4 \lt 1,\) the Ratio Test asserts that 
+        this series <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty n\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If \(a_n = n,\) then we consider
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n},\)
+        which is 
+        \[L = \lim_{n \to \infty} \abs{\frac{n + 1}{n}} = 1 \pd\]
+        Because \(L = 1,\) the Ratio Test is <b>inconclusive</b>. 
+        The test fails to determine whether 
+        \(\sum_{n = 1}^\infty n\) converges or diverges. 
+        Of course, we know that this sum is divergent because \(\lim_{n \to \infty} a_n \ne 0.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{1}{n}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If \(a_n = 1/n,\) then we have 
+        \(a_{n + 1} = 1/(n + 1).\)
+        So 
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}\) becomes 
+        \[L = \lim_{n \to \infty} \abs{\frac{1}{n + 1} \cdot \frac{n}{1}} = 1 \pd\]
+        Because \(L = 1,\) the Ratio Test is <b>inconclusive</b>
+        in testing the Harmonic Series for convergence or divergence.
+        But we recognize immediately that this series is divergent. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{2^n}{n!}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = 2^n/n! \, ;\) then we consider
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)    
+        We see  
+        \[a_{n + 1} = \frac{2^{n + 1}}{(n + 1)!} = \frac{2^n \, 2}{(n + 1) \, n!} \pd\]
+        Then we find 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{2^n \, 2}{(n + 1) \, n!} \cdot \frac{n!}{2^n}} \nl 
+        &amp;= \lim_{n \to \infty} \frac{2}{n + 1} \nl 
+        &amp;= 0 \pd 
+        \ea 
+        \]
+        Because \(L \lt 1,\) the Ratio Test asserts that 
+        \(\sum_{n = 0}^\infty 2^n/n!\) <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(-1)^n \, 5^{2n}}{n!}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We assert that the alternator \((-1)^n\) has no effect in absolute value bars, 
+        as \(\abs{(-1)^n}\) \(= 1.\)
+        Thus, we ignore this factor. 
+        Let \(a_n = 5^{2n}/n! \, ;\) then we consider
+        \(L =\) \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)
+        Note that 
+        \[a_{n + 1} = \frac{5^{2(n + 1)}}{(n + 1)!} = \frac{5^{2n} \, 5^2}{(n + 1) \, n!} \pd\]
+        Thus, 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{5^{2n} \, 5^2}{(n + 1) \, n!} \cdot \frac{n!}{5^{2n}}} \nl 
+        &amp;= \lim_{n \to \infty} \frac{5^2}{n + 1} \nl 
+        &amp;= 0 \pd 
+        \ea 
+        \]
+        Because \(L \lt 1,\) the Ratio Test asserts that 
+        \(\sum_{n = 1}^\infty 5^{2n}/n!\) <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty \frac{(-4)^n}{(2n)!}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We first rewrite  
+        \[(-4)^n = 4^n \, (-1)^n \pd\]
+        Since \(\abs{(-1)^n} = 1,\) 
+        we ignore the factor \((-1)^n.\) 
+        Let \(a_n = 4^n/(2n)! \, ;\) then we consider
+        \(L = \lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)    
+        We have 
+        \[a_{n + 1} = \frac{4^{n + 1}}{(2n + 2)!} = \frac{4^n \, 4}{(2n + 2)(2n + 1)(2n)!} \pd\]
+        Then 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{4^n \, 4}{(2n + 2)(2n + 1)(2n)!} \cdot \frac{(2n)!}{4^n}} \nl 
+        &amp;= \lim_{n \to \infty} \frac{4}{(2n + 2)(2n + 1)} \nl 
+        &amp;= 0 \pd 
+        \ea 
+        \]
+        Because \(L \lt 1,\) the Ratio Test asserts that 
+        \(\sum_{n = 0}^\infty (-4)^n/(2n)!\) <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(-1)^n (n + 3)}{\sqrt{n}}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We ignore the term \((-1)^n\) because it has no effect in absolute value.
+        So we call \(a_n = (n + 3)/\sqrt{n}.\) 
+        We see 
+        \(a_{n + 1} = (n + 4)/\sqrt{n + 1}.\)
+        Then we find 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{n + 4}{\sqrt{n + 1}} \cdot \frac{\sqrt n}{n + 3}} \nl 
+        &amp;= 1 \pd 
+        \ea 
+        \]
+        Because \(L = 1,\) the Ratio Test is <b>inconclusive</b>. 
+        We must use another series test. 
+        This series turns out to be divergent by the Divergent Test, 
+        since 
+        \[\lim_{n \to \infty} \frac{(-1)^n (n + 3)}{\sqrt{n}} \ne 0 \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(-1)^n \sqrt[3]{n}}{n + 4}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because \((-1)^n\) has no effect in absolute value, 
+        we ignore this term. 
+        Thus, we let \(a_n = \sqrt[3]{n}/(n + 4).\) 
+        We see 
+        \(a_{n + 1} = \sqrt[3]{n + 1}/(n + 5).\)
+        Then 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{ \frac{\sqrt[3]{n + 1}}{n + 5} \cdot \frac{n + 4}{\sqrt[3]{n}} } \nl 
+        &amp;= 1 \pd 
+        \ea 
+        \]
+        Because \(L = 1,\) the Ratio Test is <b>inconclusive</b>. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{n!}{n^n}\]
+     use the Ratio Test to determine whether the series converges or diverges,
+        or state that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(a_n = n!/n^n.\) 
+        We have 
+        \[a_{n + 1} = \frac{(n + 1)!}{(n + 1)^{n + 1}} = \frac{(n + 1) \, n!}{(n + 1)^n \, (n + 1)} = \frac{n!}{(n + 1)^n} \pd \]
+        Then 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{ \frac{n!}{(n + 1)^n} \cdot \frac{n^n}{n!} } \nl 
+        &amp;= \lim_{n \to \infty} \par{\frac{n}{n + 1}}^n \nl 
+        &amp;= \lim_{n \to \infty} \par{1 + \tfrac{1}{n}}^{-n} \nl 
+        &amp;= e^{-1} \pd 
+        \ea 
+        \]
+        Since \(L \lt 1,\) the Ratio Test states that \(\sum_{n = 1}^\infty \par{n!/n^n}\)
+        <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 0}^\infty 7^n\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        In using the Root Test, we consider the behavior of \(\abs{7^n}^{1/n}\) as \(n \to \infty,\)
+        or 
+        \[\lim_{n \to \infty} \abs{7^n}^{1/n} = \lim_{n \to \infty} 7 = 7 \pd\]
+        Because this limit is greater than \(1,\)
+        the Root Test states that \(\sum_{n = 0}^\infty 7^n\) <b>diverges</b>, 
+        as we expect.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \par{\frac{2n - 2}{3n + 1}}^n\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To use the Root Test, we raise the absolute value of the summation function to the power of \(1/n\)
+        and take the limit as \(n \to \infty.\)
+        We have 
+        \[
+        \ba 
+        \lim_{n \to \infty} \parbr{\abs{\frac{2n - 2}{3n + 1}}^n}^{1/n} 
+        &amp;= \lim_{n \to \infty} \frac{2n - 2}{3n + 1} \nl
+        &amp;= \tfrac{2}{3} \pd  
+        \ea 
+        \] 
+        Because this limit is less than \(1,\)
+        the Root Test asserts that this series <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 2}^\infty \par{\frac{n + 4}{n + 8}}^n\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Taking the limit of the absolute value of the summation function raised to the power of \(1/n,\)
+        we get 
+        \[
+        \ba 
+        \lim_{n \to \infty} \parbr{\abs{\frac{n + 4}{n + 8}}^n}^{1/n} 
+        &amp;= \lim_{n \to \infty} \frac{n + 4}{n + 8} \nl
+        &amp;= 1 \pd  
+        \ea 
+        \] 
+        This limit is \(1,\)
+        so the Root Test is <b>inconclusive</b>; 
+        another test is required to determine whether this series is convergent or divergent.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(-3)^n}{n}\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We consider \(\abs{(-3)^n/n}^{1/n}\) \(= \par{3^n/n}^{1/n}\) as \(n \to \infty \col\)
+        \[
+        \lim_{n \to \infty} \par{\frac{3^n}{n}}^{1/n} 
+        = \lim_{n \to \infty} \frac{3}{n^{1/n}} \pd 
+        \] 
+        We recall that if \(k\) is any positive number, then \(\lim_{n \to \infty} n^{k/n} = 1;\)
+        here, \(k = 1.\) 
+        Hence, the limit becomes \(3/1 = 3,\)
+        which is greater than \(1.\)
+        So by the Root Test, \(\sum_{n = 1}^\infty 3^n/n\)
+        <b>diverges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{(-1)^n}{n^n}\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We consider \(\abs{(-1)^n/n^n}^{1/n}\) \(= \par{1/n^n}^{1/n}\) as \(n \to \infty.\)
+        We have 
+        \[
+        \lim_{n \to \infty} \par{\frac{1}{n^n}}^{1/n} 
+        = \lim_{n \to \infty} \frac{1}{n} = 0 \pd 
+        \] 
+        This limit is less than \(1,\) so the Root Test 
+        states that \(\sum_{n = 1}^\infty (-1)^n/n^n\)
+        <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty \frac{n^5}{4^n}\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The limit of interest is 
+        \[
+        \lim_{n \to \infty} \abs{\frac{n^5}{4^n}}^{1/n} 
+        = \lim_{n \to \infty} \frac{n^{5/n}}{4} \pd 
+        \] 
+        If \(k\) is a positive number, then \(\lim_{n \to \infty} n^{k/n} = 1.\)
+        In the numerator we find \(k = 5,\) so our limit becomes \(1/4 \lt 1,\)
+        and the Root Test therefore 
+        states that \(\sum_{n = 1}^\infty n^5/4^n\)
+        <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \sum_{n = 1}^\infty (-1)^n \, \frac{3^n}{n^6}\]
+     use the Root Test to test the series for convergence or divergence,
+        or show that the test is inconclusive. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We consider \(\abs{(-1)^n \, 3^n/n^6}^{1/n}\) \(= \par{3^n/n^6}^{1/n}\)
+        as \(n \to \infty \col\)
+        \[
+        \lim_{n \to \infty} \par{\frac{3^n}{n^6}}^{1/n} 
+        = \lim_{n \to \infty} \frac{3}{n^{6/n}} \pd 
+        \] 
+        If \(k\) is a positive number, then \(\lim_{n \to \infty} n^{k/n} = 1.\)
+        Thus, our limit becomes \(3/1 \gt 1,\)
+        so the Root Test 
+        states that \(\sum_{n = 1}^\infty n^5/4^n\)
+        <b>diverges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        A series' terms are defined recursively by the equation 
+        \[a_{n + 1} = (-1)^n \, \frac{3n + 4}{e^n} \, a_n \pd\]
+        Determine whether \(\sum a_n\) converges or diverges.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We divide both sides by \(a_n\) and take the absolute value of the quotient, finding 
+        \[\abs{\frac{a_{n + 1}}{a_n}} = \abs{(-1)^n \frac{3n + 4}{e^n}} = \frac{3n + 4}{e^n} \pd\]
+        As \(n \to \infty,\) this ratio approaches \(0\)
+        (by L'Hopital's Rule).
+        Hence, the Ratio Test asserts that \(\sum a_n\) <b>converges</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        An infinite geometric series \(\sum a_n\) 
+        satisfies the following recursive formula:
+        \[a_{n + 1} = r \, a_n \cma\]
+        where \(r\) is the common ratio.
+        Find \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n}.\)
+        Using the Ratio Test, find the values of \(r\) for which \(\sum a_n\)
+        converges absolutely.
+        Is this result expected? 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Dividing both sides of the recursive formula by \(a_n\) gives 
+        \(r = a_{n + 1}/a_n.\)
+        We then have 
+        \[\lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} = \lim_{n \to \infty} \abs r = \abs r \pd\]
+        The Ratio Test asserts that \(\sum a_n\) is absolutely convergent if 
+        \(\abs r \lt 1.\)
+        This result is expected because we know, by heart, 
+        that a geometric series \(\sum r^n\) converges if \(\abs r \lt 1.\)
+        So we now extend this fact by specifying that \(\sum r^n\) converges <i>absolutely</i>
+        if \(\abs r \lt 1.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(\sum a_n\) be a series such that \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        Using the Ratio Test, prove that \(\sum (a_n/n)\) is convergent. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To use the Ratio Test for \(\sum (a_n/n),\) we have 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{n + 1} \cdot \frac{n}{a_n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \cdot \lim_{n \to \infty} \abs{\frac{n}{n + 1}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \pd 
+        \ea 
+        \]
+        We know that \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \lt 1.\)
+        Since \(L \lt 1,\) the Ratio Test asserts that \(\sum (a_n/n)\) is convergent.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Suppose that the Ratio Test asserts that \(\sum a_n\) is divergent.  
+        Prove that \(\sum na_n\) is also divergent. 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because the Ratio Test asserts that \(\sum a_n\) diverges, 
+        we know \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \gt 1.\)
+        To use the Ratio Test for \(\sum n a_n,\) we have 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{(n + 1) a_{n + 1}}{n a_n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \cdot \lim_{n \to \infty} \abs{\frac{n + 1}{n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \pd 
+        \ea 
+        \]
+        Because \(\lim_{n \to \infty} \abs{a_{n + 1}/a_n} \gt 1,\)
+        we have \(L \gt 1.\)
+        Thus, \(\sum na_n\) is divergent.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Prove that \(\sum \par{n^k/n!}\) converges for all \(k.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Using the Ratio Test, we have  
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{(n + 1)^k}{(n + 1) \, n!} \cdot \frac{n!}{n^k}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{(n + 1)^k}{n^k}} \cdot \lim_{n \to \infty} \abs{\frac{1}{n + 1}} \nl 
+        &amp;=  \lim_{n \to \infty} \abs{\frac{1}{(n + 1)}} \nl 
+        &amp;= 0 \pd 
+        \ea 
+        \]
+        We see that \(L = 0 \lt 1\) for all \(k,\)
+        meaning \(\sum \par{n^k/n!}\) converges for all \(k.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        For what values of \(k\) does \(\sum \par{k^n/n}\) converge?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        From the Ratio Test, we set up the following limit:
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{k^{n + 1}}{n + 1} \cdot \frac{n}{k^n}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{kn}{n + 1}} \nl 
+        &amp;= \abs{k} \pd 
+        \ea 
+        \]
+        We want \(L \lt 1,\) or 
+        \[\abs{k} \lt 1 \arrowTwoWay -1 \lt k \lt 1 \pd\]
+        Since the Ratio Test is inconclusive when \(k = -1\) and \(k = 1\) (because \(L = 1\)),
+        we must test these endpoints manually:
+        If \(k = -1,\) then we have \(\sum (-1)^n/n,\) 
+        which converges by the Alternating Series Test. 
+        But if \(k = 1,\) then we have \(\sum (1/n),\)
+        the divergent Harmonic Series. 
+        So we include \(k = -1\) and exclude \(k = 1;\)
+        the interval of \(k\) is 
+        \[\boxed{-1 \leq k \lt 1}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Justify why the sum of a polynomial is divergent. 
+        Then show that the Ratio Test fails to prove that the sum of a polynomial 
+        is divergent.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Let \(P(n)\) be a polynomial as a function of \(n.\)
+        Then \(\lim_{n \to \infty} P(n)\) must be either \(-\infty\) or \(\infty.\)
+        Because \(\lim_{n \to \infty} P(n) \ne 0,\) the Divergence Test 
+        asserts that \(\sum P(n)\) is divergent. 
+        Now we prove that the Ratio Test fails to give this result. 
+        As \(n \to \infty,\) the ratio \(\abs{P(n + 1)/P(n)}\) is dominated by the highest-degree terms
+        of the numerator and denominator: \(P(n + 1)\) and \(P(n),\) respectively.
+        But both functions share the same degree and leading coefficient. 
+        Hence, \(\lim_{n \to \infty} \abs{P(n + 1)/P(n)} = 1\)
+        and so the Ratio Test is inconclusive.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(P(n)\) be a polynomial. 
+        Prove that \(\sum P(n) \, e^{-n}\) is absolutely convergent.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        With the Ratio Test, we have 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \abs{\frac{P(n + 1) \cdot e^{-n} \, e^{-1}}{P(n) \cdot e^{-n}}} \nl 
+        &amp;= \lim_{n \to \infty} \abs{\frac{P(n + 1)}{P(n) \, e}} \pd 
+        \ea 
+        \]
+        The ratio \(P(n + 1)/P(n)\) tends to \(1\) as \(n \to \infty,\)
+        because the limit becomes the ratio of coefficients of the highest-degree terms. 
+        Hence, we have \(L = 1/e.\)
+        Because \(L \lt 1,\) we conclude that \(\sum P(n) \, e^{-n}\) is absolutely convergent. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

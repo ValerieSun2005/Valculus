@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8.4: Logistic Models</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>8.4 — Logistic Models</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.4-Logistic-Models-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.4-Logistic-Models-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Logistic-Models]]]-->
+<p>
+    In this section we introduce the <i>logistic function</i>, 
+    which has many applications in modeling population growth, disease spread, and social media engagement.
+    We modify the <i>exponential function</i> (from Section <a href="/Valculus/calculus/8.3-Exponential-Models.html">8.3</a>)
+    to characterize limited growth. 
+    This section covers the following topics:
+    <ul>
+        <li>
+            <a href="#logistic-growth" class="page-anchor">Logistic Growth</a>
+        </li>
+        <li>
+            <a href="#logistic-decay" class="page-anchor">Logistic Decay</a>
+        </li>
+        <li>
+            <a href="#properties-logistic-models" class="page-anchor">Properties of Logistic Functions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="logistic-growth">Logistic Growth</h4>
+<p>
+    In Section <a href="/Valculus/calculus/8.3-Exponential-Models.html">8.3</a> we modeled 
+    populations that grow <i>exponentially</i>. 
+    Under these models, we assumed that species had the resources to reproduce indefinitely.  
+    Yet a limit exists to how many individuals a population can sustain; 
+    we call this limit the <span class="emph">carrying capacity</span> of an ecosystem. 
+    To model these ecosystems, we need a function that grows exponentially when the population is small 
+    but slows in growth as the population approaches its carrying capacity.
+</p>
+<figure class="logistic-growth" id="logistic-growth">
+    <img src="../images/sectionImages/logistic-growth.jpg" alt="Figure 1">
+</figure>
+<style>
+    .logistic-growth::before{
+        content:'FIGURE 1';
+    }
+</style> 
+<p>
+    If \(y\) grows exponentially with \(x,\) then \(y\) satisfies the differential equation
+    \[\deriv{y}{x} = ky \cma\]
+    where \(k\) is a positive constant. 
+    To slow the growth as \(y\) approaches the <i>carrying capacity</i>
+    \(L,\) we modify the exponential model by including the factor 
+    \(\par{1 - y/L}\) on the right side. 
+    Doing so gives the model
+    \begin{equation} 
+    \deriv{y}{x} = ky \par{1 - \frac{y}{L}} \pd \label{eq:logistic-diff-eq}  
+    \end{equation}
+    This differential equation defines <span class="emph">logistic growth</span>. 
+    Observe that as \(y\) grows toward \(L,\) the factor \((1 - y/L)\) approaches \(0\)
+    and so \(\textDeriv{y}{x}\) approaches \(0.\)
+    Accordingly, the growth of \(y\) is inhibited as \(y \to L.\)
+    If \(y\) represents a population of animals and \(x\) is time, then the model in
+    \(\eqref{eq:logistic-diff-eq}\) ensures <i>the population growth halts as the population approaches its carrying capacity</i>. 
+    Note that the rate of change of \(y\) depends only on itself, not on \(x.\)
+    The solution to \(\eqref{eq:logistic-diff-eq}\) is 
+    \begin{equation} 
+    y = \frac{L}{1 + Ce^{-kx}} \pd \label{eq:logistic-eq}
+    \end{equation}
+    We see that 
+    \[
+    \lim_{x \to \infty} \frac{L}{1 + Ce^{-kx}} = L \and \lim_{x \to -\infty} \frac{L}{1 + Ce^{-kx}} = 0 \pd
+    \]
+    Thus, \(y = 0\) and \(y = L\)—the line representing the carrying capacity—are <i>horizontal asymptotes</i> of a logistic 
+    model. 
+    A quantity undergoing logistic growth is constantly increasing
+    toward the carrying capacity.
+    Because the graph's shape resembles the letter <i>J</i>, 
+    a logistic curve can be called an <i>S-curve</i>.
+    (See <a href="#logistic-growth">Figure 1</a>.)
+    
+</p>
+
+<div class="box-title">LOGISTIC GROWTH</div>
+<div class="box">
+    The quantity \(y\) undergoes <span class="emph">logistic growth</span> with \(x\) if, for \(k \gt 0,\)
+    \begin{equation} 
+    \deriv{y}{x} = ky \par{1 - \frac{y}{L}} \cma \eqlabel{eq:logistic-diff-eq}  
+    \end{equation}
+    whose solution is 
+    \begin{equation} 
+    y = \frac{L}{1 + Ce^{-kx}} \pd \eqlabel{eq:logistic-eq}
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:logistic-eq}\)</span>
+    We rewrite \(\eqref{eq:logistic-diff-eq}\) as  
+    \[
+    \ba 
+    \deriv{y}{x} &= ky \par{\frac{L - y}{L}} \nl 
+    \frac{1}{ky(L - y)} \di y &= \frac{1}{L} \di x \pd \nl 
+    \ea  
+    \]
+    We break the left side into <i>partial fractions</i>
+    (from Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>):
+    \begin{equation} 
+    \par{\frac{A}{ky} + \frac{B}{L - y}} \di y = \frac{1}{L} \di x \pd \label{eq:logistic-partial-fractions}
+    \end{equation}
+    On the left side, we see
+    \[
+    \ba 
+    \frac{A}{ky} + \frac{B}{L - y} &= \frac{1}{ky(L - y)} \nl 
+    \frac{A(L - y) + Bky}{ky(L - y)} &= \frac{1}{ky(L - y)} \nl 
+    A(L - y) + Bky &= 1 \pd
+    \ea 
+    \]
+    Letting \(y = 0\) shows 
+    \[A(L - 0) + Bk(0) = 1 \implies A = \frac{1}{L} \pd\]
+    Similarly, for \(y = L\) we see   
+    \[A(0) + Bk(L) = 1 \implies B = \frac{1}{kL} \pd\]
+    Thus, \(\eqref{eq:logistic-partial-fractions}\) becomes 
+    \[
+    \ba
+    \par{\frac{1/L}{ky} + \frac{1/kL}{L - y}} \di y &= \frac{1}{L} \di x \nl
+    \par{\frac{1}{y} - \frac{1}{y - L}} \di y &= k \di x \pd
+    \ea
+    \]
+    Integrating both sides gives 
+    \[
+    \ba 
+    \ln \abs{y} - \ln \abs{y - L} &= kx + C_1 \nl 
+    \ln \abs{y - L} - \ln \abs{y} &= C_1 - kx \nl 
+    \ln \abs{\frac{y - L}{y}} &= C_1 - kx \nl 
+    \ln \abs{1 - \frac{L}{y}} &= C_1 - kx \nl
+    \ln \abs{\frac{L}{y} - 1} &= C_1 - kx \pd
+    \ea 
+    \]
+    We now exponentiate both sides, obtaining
+    \[
+    \ba 
+    \frac{L}{y} - 1 &= e^{C_1 - kx} \nl 
+    &= e^{C_1} e^{-kx} \pd 
+    \ea 
+    \]
+    If we let \(C = \pm e^{C_1},\) then we attain 
+    \begin{align}
+    \frac{L}{y} &= 1 + Ce^{-kx} \nonum \nl 
+    y &= \frac{L}{1 + Ce^{-kx}} \pd \eqlabel{eq:logistic-eq}
+    \end{align}
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the initial-value problem 
+        \[\deriv{y}{x} = 0.05 y \par{1 - \frac{y}{140}} \cma y(0) = 70 \pd\]
+        Sketch a slope field and the solution curve satisfying the initial condition.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <p>
+        We compare this differential equation to \(\eqref{eq:logistic-diff-eq},\)
+        where \(k = 0.05\) and \(L = 140.\)
+        Thus, the general solution to the differential equation is, by comparison to \(\eqref{eq:logistic-eq},\)
+        \[y = \frac{140}{1 + Ce^{-0.05x}}\]
+        for some constant \(C.\)
+    </p>
+    <figure class="logistic-dfield-140" id="logistic-dfield-140">
+        <img src="../images/sectionImages/logistic-dfield-140.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .logistic-dfield-140::before{
+            content:'FIGURE 2';
+        }
+    </style> 
+    <p>
+        <span class="label-emph">Solving for \(C\)</span>
+        We solve for \(C\) by substituting the initial condition \(y(0) = 70 \col\)
+        \[
+        \ba 
+        \frac{140}{1 + Ce^{0}} &= 70 \nl
+        1 + C &= 2 \nl 
+        \implies C &= 1 \pd
+        \ea 
+        \]
+        Thus, the solution to this initial-value problem is 
+        \[y = \boxed{\frac{1400}{1 + e^{-0.05x}}}\]
+        The solution curve passing through \((0, 70)\)
+        is shown in <a href="#logistic-dfield-140">Figure 2</a>.
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        A population of zebras grows with time \(t \geq 0\) (measured in years) according to the differential equation
+        \[\deriv{N}{t} = 0.4N \par{2 - \frac{N}{300}} \pd\]
+        The population is initially \(20\) zebras.  
+        <ol class="list-alpha">
+            <li>
+                Find the rate at which the population changes 
+                when there are \(50\) zebras.
+            </li>
+            <li>
+                Determine the ecosystem's carrying capacity.
+            </li>
+            <li>
+                What is the range of \(N(t) \ques\)
+            </li>
+        </ol>  
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="logistic-zebra-graph" id="logistic-zebra-graph">
+        <img src="../images/sectionImages/logistic-zebra-graph.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .logistic-zebra-graph::before{
+            content:'FIGURE 3';
+        }
+    </style> 
+    <ol class="list-alpha">
+        <li>
+            When \(N = 50,\) we find the rate of change to be  
+            \[
+            \ba 
+            \deriv{N}{t} \intEval_{N = 50} &= 0.4 (50) \par{2 - \frac{50}{300}} \nl 
+            &= \tfrac{110}{3} \approx \boxed{36.667 \undiv{zebras}{yr}}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            Since a logistic curve flattens as the carrying capacity is reached, we let 
+            \(\textderiv{N}{t} = 0\)
+            and solve for \(N.\)
+            Doing so, we find  
+            \[
+            \ba 
+            0.4N \par{2 - \frac{N}{300}} &= 0 \nl 
+            \implies N &= 0 \cma N = 600 \pd
+            \ea 
+            \]
+            We ignore \(N = 0\) because, 
+            given that \(N(0) = 20\) and \(t \geq 0,\) 
+            a logistic growth function <i>never decreases</i>.
+            So the carrying capacity is \(\boxed{600}\)
+            zebras.
+        </li>
+        <hr>
+        <li>
+            Note that \(t \geq 0\) and \(N(0) = 20.\)
+            Since \(N(t) \to 600\) as \(t \to \infty,\)
+            the range is \(\boxed{[20, 600)}.\)
+        </li>
+        <hr>
+    </ol>
+    The graph of \(y = N(t)\) is shown by <a href="#logistic-zebra-graph">Figure 3</a>.
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        In a bamboo forest, an ecologist finds a population of \(50\) pandas, which 
+        grows to \(200\) pandas three years later.
+        After a very long time, the ecologist discovers that the population remains 
+        relatively stable at \(1000\) pandas.
+        Use a logistic function to model the panda's population \(P(t)\) 
+        as a function of time \(t\) in years.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <p>
+        Because the population remains <i>stable</i> at \(1000,\)
+        the <b>carrying capacity</b> of the ecosystem is \(L = 1000.\)
+        Thus, \(\eqref{eq:logistic-eq}\) gives the model 
+        \[P(t) = \frac{1000}{1 + Ce^{-kt}} \cma\]
+        where \(C\) and \(k\) are constants. 
+        Our strategy is to determine these constants by substituting the initial conditions \(P(0) = 50\) and \(P(3) = 200.\)
+        Each initial condition allows us to solve for one constant; 
+        we therefore use two initial conditions to determine the two constants \(C\) and \(k.\)
+    </p>
+    <figure class="logistic-panda-graph" id="logistic-panda-graph">
+        <img src="../images/sectionImages/logistic-panda-graph.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .logistic-panda-graph::before{
+            content:'FIGURE 4';
+        }
+    </style> 
+    <p>
+        <span class="label-emph">Solving for \(C\) and \(k\)</span>
+        Substituting \(P(0) = 50\)
+        shows 
+        \[
+        \ba 
+        \frac{1000}{1 + Ce^{0}} &= 50 \nl 
+        1 + C &= 20 \nl 
+        \implies C &= 19 \pd 
+        \ea 
+        \]
+        Plugging in \(P(3) = 200\) reveals
+        \[
+        \ba 
+        \frac{1000}{1 + 19e^{-3k}} &= 200 \nl 
+        1 + 19e^{-3k} &= 5 \nl 
+        e^{-3k} &= \tfrac{4}{19} \nl 
+        \implies k &= -\tfrac{1}{3} \ln \tfrac{4}{19} \pd
+        \ea 
+        \]
+        Therefore, we have 
+        \[
+        \ba 
+        P(t) &= \frac{1000}{1 + 19e^{-\par{-\tfrac{1}{3} \ln \tfrac{4}{19}} t}} \nl 
+        &= \boxed{\frac{1000}{1 + 19 \par{\frac{4}{19}}^{t/3}}}
+        \ea 
+        \]
+        (See <a href="#logistic-panda-graph">Figure 4</a>.)
+    </p>
+</div>
+
+<h4 id="logistic-decay">Logistic Decay</h4>
+
+<figure class="logistic-decay-graph" id="logistic-decay-graph">
+    <img src="../images/sectionImages/logistic-decay.jpg" alt="Figure 5">
+</figure>
+<style>
+    .logistic-decay-graph::before{
+        content:'FIGURE 5';
+    }
+</style>
+
+<p>
+    Whereas a quantity is always increasing under logistic <i>growth</i>,
+    a quantity is always <i>decreasing</i> under <span class="emph">logistic decay</span>. 
+    Recall that \(y\) <i>decays exponentially</i> with \(x\) if 
+    \[\deriv{y}{x} = -ky \cma\]
+    where \(k\) is a positive constant.
+    Similar to our strategy in <a href="#logistic-growth" class="page-anchor">Logistic Growth</a>, 
+    we tack on the factor \((1 - y/L)\) to attain 
+    \begin{equation} 
+    \deriv{y}{x} = -ky \par{1 - \frac{y}{L}} \pd \label{eq:decay-diff-eq}
+    \end{equation}
+    In this differential equation, the rate of decay of \(y\) slows as \(y\) approaches 
+    \(L.\)
+    Because \(\eqref{eq:decay-diff-eq}\) is analogous to \(\eqref{eq:logistic-diff-eq}\) 
+    (the negative sign is the only discrepancy),
+    its solution is given by replacing \(k\) with \(-k\) in 
+    \(\eqref{eq:logistic-eq} \col\)
+    \begin{flalign} 
+    &&y &= \frac{L}{1 + Ce^{-(-k)x}} \nonum &\nl
+    \laWord{or} && y &= \frac{L}{1 + Ce^{kx}} \pd \label{eq:logistic-decay}
+    \end{flalign}
+    Observe that 
+    \[\lim_{x \to -\infty} \frac{L}{1 + Ce^{kx}} = L \and \lim_{x \to \infty} \frac{L}{1 + Ce^{kx}} = 0 \pd\]
+    Thus, \(y = 0\) and \(y = L\) are the horizontal asymptotes 
+    of this curve. 
+    Unlike a logistic <i>growth</i> model, 
+    a logistic <i>decay</i> model approaches \(0\)
+    as \(x \to \infty\)
+    and is <i>always decreasing</i>.
+    (See <a href="#logistic-decay-graph">Figure 5</a>.)
+</p>
+
+<div class="box-title">LOGISTIC DECAY</div>
+<div class="box">
+    The quantity \(y\) undergoes <span class="emph">logistic decay</span> with \(x\) if,
+    for \(k \gt 0,\)
+    \begin{equation} 
+    \deriv{y}{x} = -ky \par{1 - \frac{y}{L}} \cma \eqlabel{eq:decay-diff-eq}
+    \end{equation}
+    whose solution is 
+    \[
+    y = \frac{L}{1 + Ce^{kx}} \pd \eqlabel{eq:logistic-decay}
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        A function \(f(x)\) undergoes logistic decay 
+        such that 
+        \[\andFour
+        {\lim_{x \to -\infty} f(x) = 1500}
+        {f(0) = 700}
+        {f(5) = 400}
+        {\lim_{x \to \infty} f(x) = 0}
+        \pd
+        \]
+        Determine the identity of \(f.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <p>
+        Because \(\lim_{x \to -\infty} f(x) = 1500,\) \(\eqrefer{eq:logistic-decay}\) gives the function \(f\) to be 
+        \[f(x) = \frac{1500}{1 + Ce^{kx}} \cma\]
+        where \(C\) and \(k\) are constants. 
+        We determine their values by substituting the initial conditions \(f(0) = 700\)
+        and \(f(5) = 400.\)
+    </p>
+
+    <figure class="logistic-graph-1500-decay" id="logistic-graph-1500-decay">
+        <img src="../images/sectionImages/logistic-graph-1500-decay.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .logistic-graph-1500-decay::before{
+            content:'FIGURE 6';
+        }
+    </style>
+
+    <p>
+        <span class="label-emph">Solving for \(C\) and \(k\)</span>
+        Substituting \(f(0) = 700\) shows 
+        \[
+        \ba 
+        \frac{1500}{1 + Ce^0} &= 700 \nl 
+        1 + C &= \tfrac{15}{7} \nl 
+        \implies C &= \tfrac{8}{7} \pd
+        \ea 
+        \]
+        Substituting \(f(5) = 400,\) we attain 
+        \[
+        \ba 
+        \frac{1500}{1 + \tfrac{8}{7}e^{5k}} &= 400 \nl 
+        1 + \tfrac{8}{7}e^{5k} &= \tfrac{15}{4} \nl 
+        e^{5k} &= \tfrac{77}{32} \nl
+        \implies k &= \tfrac{1}{5} \ln \tfrac{77}{32} \pd
+        \ea 
+        \]
+        Therefore, we have 
+        \[
+        \ba 
+        f(x) &= \frac{1500}{1 + \tfrac{8}{7} e^{\par{\tfrac{1}{5} \ln \tfrac{77}{32}}x}} \nl 
+        &= \boxed{\frac{1500}{1 + \tfrac{8}{7} \par{\tfrac{77}{32}}^{x/5}}}
+        \ea 
+        \]
+        (See <a href="#logistic-graph-1500-decay">Figure 6</a>.)
+    </p>
+</div>
+
+<h4 id="properties-logistic-models">Properties of Logistic Functions</h4>
+<p>
+    We can undercover many facts about a logistic function by determining its second derivative.
+    In \(\eqref{eq:logistic-diff-eq}\) we use the Chain Rule to differentiate \(y\) with respect to \(x;\)
+    doing so gives 
+    \[
+    \ba 
+    \derivOrder{y}{x}{2} &= k \deriv{y}{x} \par{1 - \frac{y}{L}} + ky \par{-\frac{1}{L}} \deriv{y}{x} \nl 
+    &= k \deriv{y}{x} \par{1 - \frac{2y}{L}} \pd 
+    \ea 
+    \]
+    Recall, from Section <a href="/Valculus/calculus/3.4-Using-the-First-and-Second-Derivatives.html">3.4</a>, 
+    that a function has an inflection point when \(\textderivOrder{y}{x}{2}\)
+    changes sign. 
+    We therefore equate the second derivative to \(0\) to see
+    \[
+    \ba 
+    k \deriv{y}{x} \par{1 - \frac{2y}{L}} &= 0 \nl 
+    \implies y &= \frac{L}{2} \pd
+    \ea 
+    \] 
+    Note that \(\textderiv{y}{x}\) never changes sign,
+    and we attain the same result for logistic decay by differentiating \(\eqref{eq:decay-diff-eq}.\)
+    At \(y = L/2,\) for both logistic growth and logistic decay, \(\textderivOrder{y}{x}{2}\) changes sign from positive to negative.
+    Therefore, a logistic function <i>has an inflection point when \(y\) reaches half of the carrying capacity</i>.
+    Also observe the following:
+    <ul>
+        <li>
+            The graph of a logistic function is concave up for \(y \lt L/2\)
+            and concave down for \(y \gt L/2.\)
+        </li>
+        <li>
+            A logistic <i>growth</i> function exhibits the fastest rate of growth 
+            when it reaches the inflection point at \(y = L/2.\)
+            (See <a href="#logistic-growth-inflection">Figure 7A</a>.)
+        </li>
+        <li>
+            A logistic <i>decay</i> function decreases fastest 
+            upon reaching the inflection point at \(y = L/2.\)
+            (See <a href="#logistic-decay-inflection">Figure 7B</a>.)
+        </li>
+    </ul>
+    Note that all of these conditions assume no vertical shift in the logistic graph. 
+    In other words, these properties hold true only if graph has horizontal asymptotes of \(y = 0\) and \(y = L.\)
+</p>
+
+<div class="figure-center">
+    <figure class="logistic-growth-inflection" id="logistic-growth-inflection">
+        <img src="../images/sectionImages/logistic-growth-inflection.jpg" class="logistic-growth-inflection" alt="Figure 7A">
+    </figure>
+    <figure class="logistic-decay-inflection" id="logistic-decay-inflection">
+        <img src="../images/sectionImages/logistic-decay-inflection.jpg" class="logistic-decay-inflection" alt="Figure 7B">
+    </figure>
+</div>
+<style>
+    .logistic-growth-inflection::before{
+        content:'FIGURE 7A';
+    }
+
+    .logistic-decay-inflection::before{
+        content:'FIGURE 7B';
+    }
+</style>
+
+<div class="box-title">PROPERTIES OF LOGISTIC MODELS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>Logistic Growth, \(\ds \frac{L}{1 + Ce^{-kx}}\)</th>
+                <th>Logistic Decay, \(\ds \frac{L}{1 + Ce^{kx}}\)</th>
+            </tr>
+        </thead>
+        
+        <!-- as x -> infty -->
+        <tr>
+            <td>
+                As \(x \to \infty,\)
+            </td>
+            <td>
+                approaches \(L.\)
+            </td>
+            <td>
+                approaches \(0.\)
+            </td>
+        </tr>
+
+        <!-- as x -> -infty -->
+        <tr>
+            <td>
+                As \(x \to -\infty,\)
+            </td>
+            <td>
+                approaches \(0.\)
+            </td>
+            <td>
+                approaches \(L.\)
+            </td>
+        </tr>
+
+        <!-- at y = L/2 -->
+        <tr>
+            <td>
+                At \(y = L/2\)
+                (inflection point),
+            </td>
+            <td>
+                increases most rapidly.
+            </td>
+            <td>
+                decreases most rapidly.
+            </td>
+        </tr>
+
+        <!-- for y < L/2 -->
+        <tr>
+            <td>
+                For \(y \lt L/2,\)
+            </td>
+            <td>
+                is concave up.
+            </td>
+            <td>
+                is concave up.
+            </td>
+        </tr>
+
+        <!-- for y > L/2 -->
+        <tr>
+            <td>
+                For \(y \gt L/2,\)
+            </td>
+            <td>
+                is concave down.
+            </td>
+            <td>
+                is concave down.
+            </td>
+        </tr>
+    </table>
+</div>
+
+<figure class="logistic-graph-smallpox" id="logistic-graph-smallpox">
+    <img src="../images/sectionImages/logistic-graph-smallpox.jpg" alt="Figure 8">
+</figure>
+<style>
+    .logistic-graph-smallpox::before{
+        content:'FIGURE 8';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Modeling Disease</span>
+    Logistic functions are excellent models for the recorded number of cases 
+    of a disease.  
+    One such example is modeling <b>smallpox</b>, a disease that ravaged the world for millennia. 
+    Fortunately, due to the advances in medicine and vaccine development, 
+    new cases became exceedingly rare in the \(1950\)s and \(1960\)s.
+    In \(1980,\) the World Health Organization 
+    declared smallpox to be eradicated; 
+    today, billions of children live without fear of smallpox.
+    <a href="#logistic-graph-smallpox">Figure 8</a> shows data points
+    representing the number of total documented cases, in millions, of smallpox 
+    in the United States each year after \(1900.\)
+    By the method of regression analysis, the logistic growth function
+    \[y = \frac{1.49}{1 + e^{-0.15(t - 1918)}}\]
+    is a good fit for these data. 
+    Observe that the spread of smallpox accelerated from \(1900\) to \(1920;\)
+    around \(1920,\) the logistic curve contains an <i>inflection point</i>—the 
+    point at which new cases were increasing most rapidly.  
+    But after hitting the inflection point, the spread of smallpox
+    diminished between \(1930\) and \(1940.\)
+    (A logistic growth model is concave down for \(y\) past the inflection point, 
+    meaning the growth <i>rate</i> of \(y\) is decreasing.)
+    In \(1949\) the last natural outbreak of smallpox occurred in the United States.
+    Accordingly, our logistic model asserts that the total number of cases undergoes almost no change
+    after \(t = 1949.\)
+    Therefore, during an outbreak scientists often look for inflection points 
+    in the total number of recorded cases, since they signal diminishing infections ahead.
+    For example, during the COVID-19 virus pandemic—amid years of isolation, millions of devastated families, 
+    and sharp increases in mental health issues—epidemiologists were pleased to discover 
+    an inflection point in the count of total cases, about four years after the virus's onset in China in \(2019.\)
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        An initial outbreak of \(20\) infected residents 
+        causes a disease to spread throughout a \(4000\)-person town.
+        The following day, \(4\) more residents are infected. 
+        Assuming logistic growth with a carrying capacity of \(2000\) cases, 
+        after how many days from the onset of the disease is its infection rate the highest?
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <p>
+        The disease's growth rate is <i>highest</i> when the number of total cases 
+        equals <i>half of the carrying capacity</i>, provided to be \(L = 2000.\)
+        By \(\eqref{eq:logistic-eq}\) a logistic growth function for the number of cases 
+        is given by 
+        \[y = \frac{2000}{1 + Ce^{-kt}} \cma\]
+        where \(t\) is time in days.
+        We want to find the time \(t\) at which \(y = L/2\) \(= 1000.\)
+    </p>
+    <p>
+        <span class="label-emph">Solving for \(C\) and \(k\)</span>
+        Note the initial conditions \(y(0) = 20\) and \(y(1) = 24.\)
+        Substituting the former condition shows 
+        \[
+        \ba 
+        \frac{2000}{1 + Ce^{0}} &= 20 \nl 
+        1 + C &= 100 \nl 
+        \implies C &= 99 \pd
+        \ea 
+        \]
+        Then substituting \(y(1) = 24\) reveals 
+        \[
+        \ba 
+        \frac{2000}{1 + 99e^{-k}} &= 24 \nl 
+        1 + 99 e^{-k} &= \tfrac{250}{3} \nl 
+        \implies k &= -\ln \tfrac{247}{297} \pd
+        \ea 
+        \]
+        Thus, the logistic function modeling the cases of the virus is 
+        \[
+        \ba 
+        y &= \frac{2000}{1 + 99e^{-\par{-\ln \tfrac{247}{297}}t}} \nl 
+        &= \frac{2000}{1 + 99 \par{\tfrac{247}{297}}^t} \pd
+        \ea 
+        \] 
+        We therefore see 
+        \[
+        \ba 
+        \frac{2000}{1 + 99 \par{\tfrac{247}{297}}^t} &= 1000 \nl 
+        1 + 99 \par{\tfrac{247}{297}}^t &= 2 \nl 
+        \implies t &= \log_{247/297} \par{\tfrac{1}{99}} \approx \boxed{25 \un{days}}
+        \ea 
+        \]
+    </p>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#logistic-growth" class="summary-anchor">Logistic Growth</a>
+        The quantity \(y\) undergoes <span class="emph">logistic growth</span> with \(x\) if, for \(k \gt 0,\)
+        \begin{equation} 
+        \deriv{y}{x} = ky \par{1 - \frac{y}{L}} \cma \eqlabel{eq:logistic-diff-eq}  
+        \end{equation}
+        whose solution is 
+        \begin{equation} 
+        y = \frac{L}{1 + Ce^{-kx}} \pd \eqlabel{eq:logistic-eq}
+        \end{equation}
+        The quantity \(L\) is called the <span class="emph">carrying capacity</span>. 
+        In many applications, we take \(y\) to be population size and \(x\) to be time; 
+        then the carrying capacity can be interpreted as the maximum population size 
+        an ecosystem can sustain. 
+    </p>
+    <p>
+        <a href="#logistic-decay" class="summary-anchor">Logistic Decay</a>
+        The quantity \(y\) undergoes <span class="emph">logistic decay</span> with \(x\) if,
+        for \(k \gt 0,\)
+        \begin{equation} 
+        \deriv{y}{x} = -ky \par{1 - \frac{y}{L}} \cma \eqlabel{eq:decay-diff-eq}
+        \end{equation}
+        whose solution is 
+        \[
+        y = \frac{L}{1 + Ce^{kx}} \pd \eqlabel{eq:logistic-decay}
+        \]
+    </p>
+    <p>
+        <a href="#properties-logistic-models" class="summary-anchor">Properties of Logistic Functions</a>
+        The following table describes the properties of logistic growth functions 
+        and logistic decay functions. 
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Condition</th>
+                    <th>Logistic Growth, \(\ds \frac{L}{1 + Ce^{-kx}}\)</th>
+                    <th>Logistic Decay, \(\ds \frac{L}{1 + Ce^{kx}}\)</th>
+                </tr>
+            </thead>
+            
+            <!-- as x -> infty -->
+            <tr>
+                <td>
+                    As \(x \to \infty,\)
+                </td>
+                <td>
+                    approaches \(L.\)
+                </td>
+                <td>
+                    approaches \(0.\)
+                </td>
+            </tr>
+    
+            <!-- as x -> -infty -->
+            <tr>
+                <td>
+                    As \(x \to -\infty,\)
+                </td>
+                <td>
+                    approaches \(0.\)
+                </td>
+                <td>
+                    approaches \(L.\)
+                </td>
+            </tr>
+    
+            <!-- at y = L/2 -->
+            <tr>
+                <td>
+                    At \(y = L/2\)
+                    (inflection point),
+                </td>
+                <td>
+                    increases most rapidly.
+                </td>
+                <td>
+                    decreases most rapidly.
+                </td>
+            </tr>
+    
+            <!-- for y < L/2 -->
+            <tr>
+                <td>
+                    For \(y \lt L/2,\)
+                </td>
+                <td>
+                    is concave up.
+                </td>
+                <td>
+                    is concave up.
+                </td>
+            </tr>
+    
+            <!-- for y > L/2 -->
+            <tr>
+                <td>
+                    For \(y \gt L/2,\)
+                </td>
+                <td>
+                    is concave down.
+                </td>
+                <td>
+                    is concave down.
+                </td>
+            </tr>
+        </table>
+    </p>
+</div>
+
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

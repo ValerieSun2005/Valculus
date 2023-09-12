@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5.4: Average Value of a Function</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>5.4 — Average Value of a Function</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="5.4-Average-Value-of-a-Function-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="5.4-Average-Value-of-a-Function-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Average-Value-of-a-Function]]]-->
+
+<p>
+    This section covers the following topics:
+    <ul>
+        <li>
+            <a href="#avg-value-function" class="page-anchor">Average Value of a Function</a>
+        </li>
+        <li>
+            <a href="#mvt-integrals" class="page-anchor">Mean Value Theorem for Integrals</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="avg-value-function">Average Value of a Function</h4>
+
+<figure class="f-avg" id="f-avg">
+    <img src="../images/sectionImages/f-avg.jpg" alt="Figure 1">
+</figure>
+<style>
+    .f-avg::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    We know how to compute the <i>average</i> (arithmetic mean) of a finite set of numbers.
+    The average of \(n\) numbers \(y_1, y_2, \dots, y_n\) is 
+    \[\avg{y} = \frac{y_1 + y_2 + \dots + y_n}{n} \pd \]
+    But what if we wish to find the average of infinitely many numbers?
+    Let's represent these numbers using the continuous function \(f\) over the interval \([a, b].\)
+    To estimate the average value of \(f\) over \([a, b],\)
+    we cut the interval into \(n\) equal subintervals, each of width \(\Delta x = (b - a)/n.\)
+    Let \(x_1^*, x_2^*, \dots, x_n^*\) be the \(x\)-values of the subintervals. 
+    The average value of \(f\) over \([a, b]\) is therefore approximated by
+    \[\avg f \approx \frac{f(x_1^*) + f(x_2^*) + \cdots + f(x_n^*)}{n} \pd\]
+    Since \(\Delta x = (b - a)/n,\) we have \(n = (b - a)/\Delta x.\)
+    Thus, 
+    \[\avg f \approx \frac{f(x_1^*) + f(x_2^*) + \cdots + f(x_n^*)}{(b - a)/\Delta x} 
+    = \frac{1}{b - a} \parbr{f(x_1^*) + f(x_2^*) + \cdots + f(x_n^*)} \Delta x \pd\]
+    As \(n\) increases, the subintervals shrink and so this expression better represents \(\avg f.\)
+    So if we let \(n \to \infty,\) our approximation for \(\avg f\) improves in accuracy until it is exact.
+    Hence,
+    \[\avg f = \lim_{n \to \infty} \frac{1}{b - a} \parbr{f(x_1^*) + f(x_2^*) + \cdots + f(x_n^*)} \Delta x \pd\]
+    This Riemann sum represents the definite integral \(1/(b - a) \int_a^b f(x) \di x.\)
+    We therefore have 
+    \begin{equation} 
+    \avg f = \frac{1}{b - a} \int_a^b f(x) \di x \pd \label{eq:f-avg}
+    \end{equation}
+</p>
+<p>
+    In <a href="#f-avg">Figure 1</a>, \(\avg f\) is the average value of \(f\) over the interval 
+    \([a, b].\)
+    If we view the curve as a two-dimensional mountain between \(x = a\) and \(x = b,\)
+    then the following geometric property is true:
+    Imagine cutting off the mountain's top and using it to fill in the mountain's bottom.
+    The graph, for \(a \leq x \leq b,\) then becomes the uniform line \(y = \avg f.\) 
+</p>
+
+<div class="box-title">AVERAGE VALUE OF A FUNCTION</div>
+<div class="box">
+    The average value of the continuous function \(f\) over the interval \([a, b]\) is 
+    \[\avg f = \frac{1}{b - a} \int_a^b f(x) \di x \pd \tag*{\(\eqref{eq:f-avg}\)}\]
+</div>
+
+<p>
+    Knowing the average value of a function is useful if measurements are taken continuously.
+    For example, if the temperature of a city can be measured constantly (as opposed to every hour),
+    then these measurements form a continuous function. 
+    You can bet that continuous temperature measurements are more accurate in determining the city's average temperature than 
+    are discrete hourly measurements. 
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the average value of \(f(x) = 3x^2 + 1\) over the interval 
+        \([0, 2].\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="f-avg-5" id="f-avg-5">
+        <img src="../images/sectionImages/f-avg-5.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .f-avg-5::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    From \(\eqref{eq:f-avg},\) the average value of \(f\) over \([0, 2]\) is 
+    \[
+    \ba 
+    \avg f &= \frac{1}{2 - 0} \int_0^2 3x^2 + 1 \di x \nl 
+    &= \tfrac{1}{2} \par{x^3 + x} \intEval_0^2 \nl 
+    &= \tfrac{1}{2} (8 + 2) \nl 
+    &= \boxed 5
+    \ea 
+    \]
+    (See <a href="#f-avg-5">Figure 2</a>.)
+</div>
+
+<h4 id="mvt-integrals">Mean Value Theorem for Integrals</h4>
+
+<figure class="mvt-integrals" id="mvt-integrals">
+    <img src="../images/sectionImages/mvt-integrals.jpg" alt="Figure 3">
+</figure>
+<style>
+    .mvt-integrals::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    We know how to find the average of a continuous function \(f\) over the interval \([a, b].\)
+    Now the question is whether \(f\) is guaranteed to take on this average value somewhere in this interval.
+    The answer is yes!
+    The <span class="emph">Mean Value Theorem for Integrals</span>
+    guarantees a value \(c\) in this interval
+    such that \(f(c) = \avg f.\)
+</p>
+
+<div class="box-title">MEAN VALUE THEOREM FOR INTEGRALS</div>
+<div class="box">
+    If \(f\) is continuous over \([a, b],\) 
+    then a value \(c\) exists in \([a, b]\) such that \(f(c) = \avg f \col\)
+    \begin{equation} 
+    f(c) = \frac{1}{b - a} \int_a^b f(x) \di x \pd \label{eq:mvt-integrals}
+    \end{equation}
+</div>
+
+<p>
+    Multiplying both sides of \(\eqrefer{eq:mvt-integrals}\) by \((b - a)\) gives 
+    \[\int_a^b f(x) \di x = f(c) (b - a) \pd\]
+    This form asserts the following:
+    Assume \(f\) is positive.
+    In <a href="#mvt-integrals">Figure 3</a>,
+    the rectangle of height \(f(c)\) and width \((b - a)\)
+    equals the area of the region under \(f\) from \(a\) to \(b.\)
+    For negative \(f,\) this same interpretation applies 
+    but with a negative rectangle area.
+    Of course, multiple values of \(c\) can 
+    satisfy the Mean Value Theorem for Integrals
+    for \(f\) over \([a, b].\)
+</p>
+
+<p>
+    <span class="proof">PROOF</span>
+    This proof is based on the Mean Value Theorem we discussed in Section 
+    <a href="/Valculus/calculus/3.3-Mean-Value-Theorem-and-Rolle's-Theorem.html">3.3</a>. 
+    Let \(F(x) = \int_a^x f(t) \di t\) for \(a \leq x \leq b.\)
+    Since \(F\) is continuous over \([a, b]\) and differentiable over \((a, b),\)
+    the Mean Value Theorem guarantees a value \(c\) in \((a, b)\) such that 
+    \[F'(c) = \frac{F(b) - F(a)}{b - a} = \frac{1}{b - a} \parbr{\int_a^b f(t) \di t - \int_a^a f(t) \di t} \pd\]
+    Since \(\int_a^a f(t) \di t = 0,\) our expression simplifies to 
+    \[F'(c) = \frac{1}{b - a} \int_a^b f(t) \di t = \frac{1}{b - a} \int_a^b f(x) \di x \pd\]
+    But by Part I of the Fundamental Theorem of Calculus, 
+    \(F'(c) = f(c).\)
+    Hence, we have 
+    \[f(c) = \frac{1}{b - a} \int_a^b f(x) \di x = \avg f \pd\]
+    \[\qedproof\]
+    The Mean Value Theorem guarantees a number in the <i>open</i> interval \((a, b)\) such that 
+    \(f(c) = \avg f.\)
+    The Mean Value Theorem for Integrals states that \(c\) can also lie at the endpoints, that is, in the <i>closed</i> 
+    interval \([a, b].\)
+    But this difference isn't significant, so we will omit this part of the proof.
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = 4 - x^2\) for \(0 \leq x \leq 3.\)
+        Find the value \(c\) that satisfies the Mean Value Theorem for Integrals for \(f.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    The <b>Mean Value Theorem for Integrals</b> states that there is a number \(c\) in \([0, 3]\)
+    such that 
+    \[f(c) = \avg f = \frac{1}{3 - 0} \int_0^3 f(x) \di x \pd\]
+    Our goal is to find this \(c.\)
+    We evaluate the integral:
+    \[
+    \ba 
+    \avg f &= \tfrac{1}{3} \par{4x - \tfrac{1}{3} x^3} \intEval_0^3 \nl 
+    &= \tfrac{1}{3} \parbr{4(3) - \tfrac{1}{3}(3)^3} \nl 
+    &= 1 \pd
+    \ea 
+    \]
+    Now we solve \(f(c) = 1 \col\)
+    \[4 - c^2 = 1 \implies \boxed{c = \sqrt 3}\]
+    Hence, \(c = \sqrt 3\) satisfies the Mean Value Theorem for Integrals for \(f\) 
+    over \([0, 3].\)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#avg-value-function" class="summary-anchor">Average Value of a Function</a>
+        The average value of the continuous function \(f\) over the interval \([a, b]\) is 
+        \[\avg f = \frac{1}{b - a} \int_a^b f(x) \di x \pd \tag*{\(\eqref{eq:f-avg}\)}\]
+    </p>
+    <p>
+        <a href="#mvt-integrals" class="summary-anchor">Mean Value Theorem for Integrals</a>
+        If \(f\) is continuous over \([a, b],\) 
+        then a value \(c\) exists in \([a, b]\) such that \(f(c) = \avg f \col\)
+        \begin{equation*} 
+        f(c) = \frac{1}{b - a} \int_a^b f(x) \di x \pd \tag*{\(\eqref{eq:mvt-integrals}\)}
+        \end{equation*}
+        We can also express this form as 
+        \[\int_a^b f(x) \di x = f(c)(b - a) \pd\]
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

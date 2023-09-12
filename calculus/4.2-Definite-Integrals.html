@@ -46,7 +46,1146 @@
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
       <!--[[[crefId.Definite-Integrals]]]--> 
+<p>
+    One of the key goals of calculus is to determine the area of any shape. 
+    It is easy to calculate areas of simple geometric figures such as rectangles, squares, and even hexagons.
+    But for other shapes, especially if their edges are curved and they are asymmetrical, we need a new strategy
+    since no simple geometric formula exists for the area.
+    Areas under curves enable us to calculate many quantities, such as displacement from velocity, 
+    change in volume from flow rate, and energy from power. 
+    These concepts are linked to the <i>integral</i>, which forms the entire basis of <i>integral calculus</i>—the second 
+    big half of calculus, following differential calculus.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#areas-curve" class="page-anchor">Areas under Curves</a>
+        </li>
+        <li>
+            <a href="#def-def-integral" class="page-anchor">Defining a Definite Integral</a>
+        </li>
+        <li>
+            <a href="#evaluating-def-int" class="page-anchor">Evaluating Definite Integrals</a>
+        </li>
+        <li>
+            <a href="#properties-def-int" class="page-anchor">Properties of Definite Integrals</a>
+        </li>
+        <li>
+            <a href="#comparison-properties" class="page-anchor">Comparison Properties of Definite Integrals</a>
+        </li>
+    </ul>
+</p>
 
+<h4 id="areas-curve">Areas under Curves</h4>
+
+<p>
+    In <a href="#d-int-area-R">Figure 1A</a>, consider the region \(R\)
+    bounded between the continuous curve \(y = f(x)\) and the \(x\)-axis from \(x = a\) to \(x = b.\)
+</p>
+
+<div class="figure-center">
+    <figure class="d-int-area-R" id="d-int-area-R">
+        <img src="../images/sectionImages/d-int-area-R.jpg" class="d-int-area-R" alt="Figure 1A">
+    </figure>
+    <figure class="d-int-area-R-riemann" id="d-int-area-R-riemann">
+        <img src="../images/sectionImages/d-int-area-R-riemann.jpg" class="d-int-area-R-riemann" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .d-int-area-R::before{
+        content:'FIGURE 1A';
+    }
+
+    .d-int-area-R-riemann::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<figure class="riemann-sum" id="riemann-sum">
+    <img src="../images/sectionAnimations/riemann-sum.gif" alt="ANIMATION 1">
+</figure>
+<style>
+    .riemann-sum::before{
+        content:'ANIMATION 1';
+    }
+</style>
+
+<p>
+    We can estimate the area of \(R\) by inscribing a number \(n\) of rectangles under the curve. 
+    In <a href="#d-int-area-R-riemann">Figure 1B</a>, we split the interval \([a, b]\)
+    into \(n\) equal subintervals, one of which is labeled \([x_{i - 1}, x_i].\)  
+    Observe that the inscribed rectangle in this subinterval 
+    (called an <span class="emph">approximating rectangle</span>) has width \(\Delta x\) and height \(f(x_i).\)
+    Since each subinterval has width \(\Delta x,\) the sum of the rectangles' areas is given by 
+    \[A \approx \parbr{f(x_1) + f(x_2) + \cdots + f(x_{n - 1}) + f(x_n)} \Delta x \pd\]
+    The right-hand side of the equation is called a <span class="emph">Riemann sum</span>, 
+    a sum of rectangles used to approximate the area of a region.
+    Specifically, it is a <b>right Riemann sum</b> because each rectangle's height 
+    is given by \(f\) evaluated at the <i>right endpoint</i> of each subinterval.
+    We can condense this form by using <b>sigma notation</b>:
+    \[A \approx \sum_{i = 1}^n f(x_i) \Delta x \cma\]
+    where \(\Delta x = (b - a)/n.\)
+    The magic begins as we increase the number of subintervals \(n \col\)
+    Then \(\Delta x\) shrinks, meaning more rectangles of smaller widths are inscribed under the curve.
+    In <a href="#riemann-sum">Animation 1</a>, 
+    observe that as we let \(n\) grow, the many thinner rectangles better fit into the region \(R,\) 
+    meaning the sum of the rectangles better approximates \(A.\)  
+    Hence, as \(n \to \infty\) the sum of the rectangles becomes <i>exactly</i> \(A\)—namely, 
+    \begin{equation} 
+    A = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i) \Delta x \pd \label{eq:A-lim-right}
+    \end{equation}
+    This equation assumes that we take sample points <i>only at the right endpoints of each subinterval</i>. 
+    Yet the same result arises if we set up the rectangles' heights differently.
+    For example, we could make each rectangle's height be \(f\) evaluated at the <i>left sample point</i> of each subinterval—that
+    is, if each rectangle's height were \(f(x_{i - 1}).\)
+    The corresponding sum would be called a <b>left Riemann sum</b>.
+    Or we could let each rectangle's height be given by \(f\) evaluated at the <i>midpoint</i> of each subinterval; 
+    the sum of these rectangles would be called a <b>midpoint Riemann sum</b>.
+    In fact, subintervals in a Riemann sum do not need to be equal sizes, nor must our
+    selection of sample points be consistent throughout all the subintervals. 
+    Regardless, increasing the number of rectangles (and decreasing their widths)
+    enables the entire region \(R\) to be covered.
+    (See <a href="#riemann-sum-left">Animation 2A</a> and <a href="#riemann-sum-midpoint">Animation 2B</a>.)
+</p>
+
+<div class="figure-center">
+    <figure class="riemann-sum-left" id="riemann-sum-left">
+        <img src="../images/sectionAnimations/riemann-sum-left.gif" alt="ANIMATION 2A">
+    </figure>
+    <figure class="riemann-sum-midpoint" id="riemann-sum-midpoint">
+        <img src="../images/sectionAnimations/riemann-sum-midpoint.gif" alt="ANIMATION 2B">
+    </figure>
+</div>
+
+<style>
+    .riemann-sum-left::before{
+        content:'ANIMATION 2A';
+    }
+
+    .riemann-sum-midpoint::before{
+        content:'ANIMATION 2B';
+    }
+</style>
+
+<p>
+    If \(x_1, x_2,\) \(\dots, x_n\)
+    are the endpoints of \(n\) subintervals, then let's 
+    call \(x_1^*, x_2^*,\) \(\dots, x_n^*\) <i>any sample points</i> in these subintervals. 
+    Hence, we generalize \(\eqref{eq:A-lim-right}\) by writing 
+    \begin{equation} 
+    A = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \pd \label{eq:A-lim}
+    \end{equation}
+    If the limit exists, then this formula enables us to calculate the area under a curve \(y = f(x)\)
+    over \([a, b]\)
+    if \(f\) is nonnegative over this interval.
+    We also require \(\eqref{eq:A-lim}\) to yield the same result \(A\) regardless of which sample points \(x_i^*\) we choose
+    in the subintervals. 
+</p>
+
+<h4 id="def-def-integral">Defining a Definite Integral</h4>
+
+<p>
+    A <span class="emph">definite integral</span> is an expression whose 
+    magnitude is the area bounded by the graph of a function and the \(x\)-axis. 
+    We write definite integrals as \(\int_a^b f(x) \di x,\)
+    so we can write \(\eqref{eq:A-lim}\) as 
+    \begin{equation} 
+    \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \pd \label{eq:A-int}
+    \end{equation}
+    If this limit exists and gives the same number for all possible sample points \(x_i^*,\) then \(f\) is called
+    <span class="emph">integrable</span> on \([a, b].\)
+    The symbol \(\int\) (the <b>integral sign</b>) resembles an elongated <i>S</i> shape
+    by virtue of \(\eqref{eq:A-int}\)—because an integral is the limit of a <i>sum</i>.
+    Note the following terminology in \(\eqref{eq:A-int} \col\)
+    <ul>
+        <li>
+            \(a\) and \(b\) are called the <span class="emph">limits of integration</span>; 
+            \(a\) is the <span class="emph">lower bound</span>, and \(b\) is the <span class="emph">upper bound</span>.
+        </li>
+        <li>
+            \(f(x)\) is called the <b>integrand</b>.
+        </li>
+        <li>
+            \(\dd x\) is called the <b>differential</b>.
+        </li>
+    </ul>
+    The quantity \(\int_a^b f(x) \di x\) is just a number. 
+    It is not a function of \(x;\)
+    in fact, we often call \(x\) a <span class="emph">dummy variable</span>
+    because we could replace it with another letter without affecting the integral's value. 
+    For example,
+    \[\int_a^b f(x) \di x = \int_a^b f(t) \di t = \int_a^b f(u) \di u \pd\]
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a> we discussed <span class="emph">indefinite integrals</span>, 
+    in which we used the same symbol \(\int\) (without bounds) to denote an antiderivative. 
+    There is a very strong connection between areas and antiderivatives—such a strong connection, in fact, 
+    that the same symbol \(\int\) is warranted for both operations. 
+    In Section <a href="/Valculus/calculus/4.3-Fundamental-Theorem-of-Calculus.html">4.3</a> 
+    we will explore this beautiful relationship.
+</p>
+
+<div class="box-title">DEFINITION OF A DEFINITE INTEGRAL</div>
+<div class="box">
+    Suppose that \(f\) is a function defined over \(a \leq x \leq b.\)
+    We split \([a, b]\) into \(n\) subintervals 
+    whose endpoints are \(x_1, x_2,\) \(\dots, x_n.\)
+    Let \(x_1^*, x_2^*,\) \(\dots, x_n^*\) be any sample points in the subintervals.
+    Then the <span class="emph">definite integral</span> of \(f\) from \(a\) to \(b\) 
+    is given by 
+    \begin{equation} 
+    \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \eqlabel{eq:A-int}
+    \end{equation}
+    if this limit exists and yields the same result for all possible choices of sample points \(x_i^*.\)
+    If so, then \(f\) is called <span class="emph">integrable</span> over \([a, b].\)
+</div>
+<p>
+    <span class="label-emph">Precise Definition of Definite Integral</span>
+    \(\eqrefer{eq:A-int}\) is called the <span class="emph">Riemann definition</span> of a definite integral. 
+    The precise meaning of the limit is as follows: 
+    For any number \(\varepsilon \gt 0,\) an integer \(N\) exists such that 
+    \[\abs{\int_a^b f(x) \di x - \sum_{i = 1}^n f(x_i^*) \Delta x} \lt \varepsilon\]
+    for every \(n \gt N\) and for every choice of \(x_i^*\) in \([x_{i - 1}, x_i].\)
+    This statement asserts that if we increase \(n\) past a certain threshold \(N,\)
+    then the value of \(\int_a^b f(x) \di x\) differs from the value of the limit by no more than some 
+    number \(\varepsilon.\)
+    As \(N\) increases, the value of \(\varepsilon\) shrinks, meaning the limit 
+    gets closer and closer to the value of \(\int_a^b f(x) \di x.\)
+</p>
+
+<figure class="def-int-signs" id="def-int-signs">
+    <img src="../images/sectionImages/def-int-signs.jpg" alt="Figure 2">
+</figure>
+
+<style>
+    .def-int-signs::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Sign of a Definite Integral</span>
+    If \(f(x) \geq 0,\) then the definite integral \(\int_a^b f(x) \di x\) equals the area under the curve \(y = f(x)\)
+    from \(x = a\) to \(x = b.\)
+    But if \(f\) is under the \(x\)-axis over \([a, b],\) then 
+    \(\int_a^b f(x) \di x\) returns a negative value.
+    Although area is a magnitude (and is always nonnegative), 
+    we may choose to describe regions using <span class="emph">signed areas</span>. 
+    A region above the \(x\)-axis is said to have "positive area," meaning a definite integral 
+    over this region returns a positive number.
+    Conversely, a region below the \(x\)-axis has "negative area,"
+    implying that a definite integral over the region takes on a negative value. 
+    For example, in <a href="#def-int-signs">Figure 2</a> we see \(f(x) \geq 0\)
+    over \([p, q],\)
+    meaning \(\int_p^q f(x) \di x \gt 0.\)
+    (This region has "positive area.")
+    But \(f(x) \leq 0\) over \([q, r],\)
+    so \(\int_q^r f(x) \di x \lt 0.\)
+    (This region has "negative area.")
+    Integrating over the entire region \([p, r]\)
+    produces the <i>net</i> signed area of these regions; namely, 
+    \[\int_p^r f(x) \di x = A_1 - A_2 \cma\]
+    where \(A_1\) is the area above the \(x\)-axis and \(A_2\) is the area below the \(x\)-axis.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using geometry, evaluate the following definite integrals.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \int_{-3}^3 \sqrt{9 - x^2} \di x\)</span>
+            </li>
+            <li>
+                <span>\(\ds \int_{-2}^1 2x \di x\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="def-int-semicircle-3" id="def-int-semicircle-3">
+        <img src="../images/sectionImages/def-int-semicircle-3.jpg" alt="Figure 3">
+    </figure>
+    
+    <style>
+        .def-int-semicircle-3::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    <ol class="list-alpha">
+        <li>            
+            The graph of \(y = \sqrt{9 - x^2}\) is a semicircle of radius \(3\) above the \(x\)-axis. 
+            The definite integral \(\int_{-3}^3 \sqrt{9 - x^2} \di x\) equals 
+            the entire area under the semicircle. 
+            Since the area of a circle of radius \(3\) is \(\pi(3)^2,\)
+            a <i>semicircle</i> of radius \(3\) has half this area.
+            Thus,  
+            \[\int_{-3}^3 \sqrt{9 - x^2} \di x = \tfrac{1}{2} \pi (3)^2 = \boxed{\tfrac{9}{2} \pi}\]
+            (See <a href="#def-int-semicircle-3">Figure 3</a>.)
+        </li>
+        <hr>
+        <li>
+            The definite integral \(\int_{-2}^1 2x \di x\) 
+            gives the net signed area bounded by the graph of \(y = 2x\) 
+            and the \(x\)-axis between \(x = -2\) and \(x = 1.\)
+            The region under the \(x\)-axis ("negative area") is a triangle of area \(4,\)
+            whereas the region above the \(x\)-axis ("positive area") is a triangle of area \(1.\)
+            So 
+            \[\int_{-2}^4 2x \di x = 1 - 4 = \boxed{-3}\]
+            (See <a href="#def-int-2x">Figure 4</a>.)
+        </li>
+        <figure class="def-int-2x" id="def-int-2x">
+            <img src="../images/sectionImages/def-int-2x.jpg" alt="Figure 4">
+        </figure>
+        
+        <style>
+            .def-int-2x::before{
+                content:'FIGURE 4';
+            }
+        </style>
+    </ol>
+</div>
+
+<h4 id="evaluating-def-int">Evaluating Definite Integrals</h4>
+<p>
+    Calculations often become easier if we select each sample point \(x_i^*\)
+    to be the right endpoint \(x_i.\)
+    Then \(\eqref{eq:A-int}\) becomes the right Riemann sum
+    \begin{equation} 
+    \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i) \Delta x \cma \label{eq:A-int-right}
+    \end{equation}
+    where \(x_i = a + i \Delta x\) and \(\Delta x = (b - a)/n.\)
+    But this Riemann sum isn't the only definition of \(\int_a^b f(x) \di x;\)
+    it is merely a single, convenient definition.
+    In many problems, we will use \(\eqref{eq:A-int-right}\) to calculate integrals. 
+</p>
+
+<div class="steps-title">EVALUATING A DEFINITE INTEGRAL</div>
+<div class="steps">
+    If \(f\) is integrable on \([a, b],\) then 
+    \begin{equation} 
+    \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i) \Delta x \cma \eqlabel{eq:A-int-right}
+    \end{equation}
+    where 
+    \[\Delta x = \frac{b - a}{n} \and x_i = a + i \Delta x \pd\]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Rewrite the limit
+        \[\lim_{n \to \infty} \sum_{i = 1}^n \par{1 + \frac{3i}{n}}^4 \, \frac{3}{n} \]
+        as a definite integral over \([1, 4].\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    By comparison to \(\eqref{eq:A-int-right},\) 
+    we are given \(a = 1\) and \(b = 4.\)
+    We identify 
+    \[f(x_i) = f(a + i \Delta x) = \par{1 + \frac{3i}{n}}^4 \pd\]
+    Thus, we see \(f(x) = x^4\)
+    and \(\Delta x = 3/n.\)
+    So
+    \[
+    \lim_{n \to \infty} \sum_{i = 1}^n \par{1 + \frac{3i}{n}}^4 \, \frac{3}{n}
+    = \boxed{\int_1^4 x^4 \di x}
+    \]
+</div>
+
+<p>
+    Generally, to convert a limit to a definite integral, as in \(\eqref{eq:A-int-right},\) we perform the following replacements:
+    <ul>
+        <li>
+            \(\lim \sum\) is replaced by \(\int.\)
+        </li>
+        <li>
+            \(x_i^*\) is replaced by \(x.\)
+        </li>
+        <li>
+            \(\Delta x\) is replaced by \(\dd x.\)
+        </li>
+    </ul>
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        By using a right Riemann sum with five equal-width rectangles, estimate 
+        \[\int_0^2 \par{x^3 - 2x} \di x \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="def-int-area-ex-riemann-estimate" id="def-int-area-ex-riemann-estimate">
+        <img src="../images/sectionImages/def-int-area-ex-riemann-estimate.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .def-int-area-ex-riemann-estimate::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    In a <b>right Riemann sum</b>, each rectangle's height is the right endpoint of a subinterval \([x_{i - 1}, x_i].\)
+    We have five equal-width rectangles, so each width is
+    \[\Delta x = \frac{b - a}{n} = \frac{2 - 0}{5} = 0.4 \pd\]
+    Thus, the right endpoints are
+    \(x_1 = 0.4,\) \(x_2 = 0.8,\) \(x_3 = 1.2,\) \(x_4 = 1.6,\) and \(x_5 = 2.\)
+    Accordingly, the Riemann sum provides the approximation
+    \[
+    \ba 
+    \int_0^2 \par{x^3 - 2x} \di x 
+    & \approx \sum_{i = 1}^6 f(x_i) \Delta x \nl 
+    &= f(0.4) \Delta x + f(0.8) \Delta x + f(1.2) \Delta x + f(1.6) \Delta x + f(2) \Delta x \nl 
+    &= 0.4 \par{-0.736 - 1.088 - 0.672 + 0.896 + 4} = \boxed{0.96}
+    \ea 
+    \]
+    The Riemann sum approximates the net signed area,
+    given by the area above the \(x\)-axis (the "positive area")
+    minus the area below the \(x\)-axis (the "negative area").
+    Since our answer is positive, 
+    our Riemann sum estimates that the area above the \(x\)-axis is greater than the area below the \(x\)-axis.
+    (See <a href="#def-int-area-ex-riemann-estimate">Figure 5</a>.)
+</div>
+
+<p>
+    <span class="label-emph">Summation Properties</span>
+    The following summation formulas are essential in evaluating limits as we compute definite integrals.
+    If \(c\) is a constant, then the following relations hold:
+    \begin{alignat}{2} 
+    &\sum_{i = 1}^n ca_i = c \sum_{i = 1}^n a_i \cma \label{eq:sum-c} \nl 
+    &\sum_{i = 1}^n c = c\,n \pd \label{eq:sum-cn} \nl
+    \end{alignat}
+    Observe that by \(\eqref{eq:sum-c},\) we can pull constants out of a summation expression; 
+    this is similar to how we can pull constants out of expressions in limits and derivatives.
+    We also use the following formulas to deal with sums and differences in a summation expression:
+    \begin{alignat}{2} 
+    &\sum_{i = 1}^n \par{a_i + b_i} &&= \sum_{i = 1}^n a_i + \sum_{i = 1}^n b_i \cma \label{eq:sum-sum} \nl 
+    &\sum_{i = 1}^n \par{a_i - b_i} &&= \sum_{i = 1}^n a_i - \sum_{i = 1}^n b_i \pd \label{eq:sum-difference} \nl 
+    \end{alignat}
+    In words, the <i>sum of</i> addition or subtraction 
+    is the addition or subtraction <i>of sums</i>.
+    As we evaluate limits to calculate definite integrals, we often work with sums of powers of positive integers,
+    as we'll see in the following examples.
+    Thus, the following formulas are critical:
+    \begin{alignat}{2}
+    &\sum_{i = 1}^n i &&= \frac{n(n + 1)}{2} \cma \label{eq:sum-i1} \nl 
+    &\sum_{i = 1}^n i^2 &&= \frac{n(n + 1)(2n + 1)}{6} \cma \label{eq:sum-i2} \nl 
+    &\sum_{i = 1}^n i^3 &&= \parbr{\frac{n(n + 1)}{2}}^2 \pd \label{eq:sum-i3}
+    \end{alignat}
+</p>
+
+<div class="steps-title">PROPERTIES OF SUMMATIONS</div>
+<div class="steps">
+    Let \(c\) be a constant.
+    \begin{alignat}{2} 
+    &\sum_{i = 1}^n ca_i = c \sum_{i = 1}^n a_i \eqlabel{eq:sum-c} \nl 
+    &\sum_{i = 1}^n c = c\,n \eqlabel{eq:sum-cn} \nl
+    \end{alignat}
+
+    \begin{alignat}{2} 
+    &\sum_{i = 1}^n \par{a_i + b_i} &&= \sum_{i = 1}^n a_i + \sum_{i = 1}^n b_i \eqlabel{eq:sum-sum} \nl 
+    &\sum_{i = 1}^n \par{a_i - b_i} &&= \sum_{i = 1}^n a_i - \sum_{i = 1}^n b_i \eqlabel{eq:sum-difference} \nl 
+    \end{alignat}
+
+    \begin{alignat}{2} 
+    &\sum_{i = 1}^n i &&= \frac{n(n + 1)}{2} \eqlabel{eq:sum-i1} \nl 
+    &\sum_{i = 1}^n i^2 &&= \frac{n(n + 1)(2n + 1)}{6} \eqlabel{eq:sum-i2} \nl 
+    &\sum_{i = 1}^n i^3 &&= \parbr{\frac{n(n + 1)}{2}}^2 \eqlabel{eq:sum-i3}
+    \end{alignat}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the area below the parabola \(y = x^2\) from \(x = 0\)
+        to \(x = 2.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="def-int-area-parabola" id="def-int-area-parabola">
+        <img src="../images/sectionImages/def-int-area-parabola.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .def-int-area-parabola::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    The area below the parabola \(y = x^2\) from \(x = 0\) to \(x = 2\) is given by the definite integral 
+    \[\int_0^2 x^2 \di x \pd\]
+    Using \(\eqref{eq:A-int-right}\) we see \(a = 0,\) \(b = 2,\) and \(f(x) = x^2.\) 
+    We also use \(x_i = 0 + i \Delta x,\)
+    where \(\Delta x\) \(= (2 - 0)/n.\)
+    Thus, we have
+    \[
+    \ba 
+    \int_0^2 x^2 \di x &= \lim_{n \to \infty} \sum_{i = 1}^n \par{0 + i \Delta x}^2 \Delta x \nl 
+    &= \lim_{n \to \infty} \sum_{i = 1}^n i^2 (\Delta x)^3 \nl 
+    &= \lim_{n \to \infty} \sum_{i = 1}^n i^2 \par{\frac{2}{n}}^3 \nl 
+    &= \lim_{n \to \infty} \frac{8}{n^3} \sum_{i = 1}^n i^2 \pd &&[\textrm{by } \eqref{eq:sum-c}] 
+    \ea
+    \] 
+    Note that we can take \((2/n)^3\) \(= 8/n^3\) out of the summation expression 
+    because it does not depend on \(i.\)
+    Using \(\eqref{eq:sum-i2}\) enables us to eliminate the summation; the definite integral therefore becomes 
+    \[
+    \ba 
+    \int_0^2 x^2 \di x &= \lim_{n \to \infty} \parbr{\frac{8}{n^3} \cdot \frac{n(n + 1)(2n + 1)}{6}} \nl 
+    &= \tfrac{4}{3} \lim_{n \to \infty} \parbr{\frac{2n^2 + 3n + 1}{n^2}} \nl 
+    &= \tfrac{4}{3} \lim_{n \to \infty} \parbr{2 + \frac{3}{n} + \frac{1}{n^2}} \nl 
+    &= \boxed{\frac{8}{3}}
+    \ea 
+    \]
+    (See Section <a href="/Valculus/calculus/1.6-Limits-with-Infinity.html">1.6</a>
+    to review the procedure of computing infinite limits.)
+    The area below the parabola from \(x = 0\) to \(x = 2\) is \(8/3,\)
+    as shown by <a href="#def-int-area-parabola">Figure 6</a>.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int_0^3 \par{x^3 - 3x^2 + 1} \di x\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <p>
+        By comparison to \(\eqref{eq:A-int-right}\) we see \(a = 0,\) \(b = 3,\)
+        and \(f(x) = x^3 - 3x^2 + 1.\)
+        Thus, 
+        \[\Delta x = \frac{3 - 0}{n} = \frac{3}{n} \and x_i = 0 + i \Delta x = \frac{3i}{n} \pd\]
+        Accordingly, 
+        \[
+        \ba 
+        \int_0^3 \par{x^3 - 3x^2 + 1} \di x
+        &= \lim_{n \to \infty} \sum_{i = 1}^n f \par{\frac{3i}{n}} \frac{3}{n} \nl 
+        &= \lim_{n \to \infty} \frac{3}{n} \sum_{i = 1}^n f \par{\frac{3i}{n}} && [\text{by } \eqref{eq:sum-c}] \nl 
+        &= \lim_{n \to \infty} \frac{3}{n} \sum_{i = 1}^n \parbr{\par{\frac{3i}{n}}^3 - 3 \par{\frac{3i}{n}}^2 + 1} \nl 
+        &= \lim_{n \to \infty} \frac{3}{n} \parbr{\sum_{i = 1}^n \par{\frac{3i}{n}}^3 - 3 \sum_{i = 1}^n \par{\frac{3i}{n}}^2 + \sum_{i = 1}^n 1} 
+        &&[\text{by } \eqref{eq:sum-c}, \eqref{eq:sum-sum}, \text{and } \eqref{eq:sum-difference}] \nl 
+        &= \lim_{n \to \infty} \frac{3}{n} \parbr{\frac{27}{n^3} \sum_{i = 1}^n i^3 - \frac{27}{n^2} \sum_{i = 1}^n i^2 + \sum_{i = 1}^n 1} \pd
+        && [\text{by } \eqref{eq:sum-c}]
+        \ea 
+        \]
+        To simplify the sums in the brackets, we apply \(\eqref{eq:sum-i3},\) \(\eqref{eq:sum-i2},\) and \(\eqref{eq:sum-cn}\)
+        to each respective sum.
+        Doing so shows 
+        \[
+        \ba 
+        \int_0^3 \par{x^3 - 3x^2 + 1} \di x
+        &= \lim_{n \to \infty} \frac{3}{n} \parbr{\frac{27}{n^3} \par{\frac{n(n + 1)}{2}}^2
+        - \frac{27}{n^2} \cdot \frac{n(n + 1)(2n + 1)}{6} + n 
+        } \nl 
+        &= \lim_{n \to \infty} \frac{3}{n} \parbr{\frac{27(n + 1)^2}{4n}
+        - \frac{9(n + 1)(2n + 1)}{2n} + n } \nl 
+        &= \lim_{n \to \infty} \parbr{\frac{81(n + 1)^2}{4n^2} - \frac{27(n + 1)(2n + 1)}{2n^2} + 3} \pd
+        \ea 
+        \]
+        To compute this limit with ease, we use the Sum and Difference Laws of Limits
+        (see Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>). 
+        Doing so and expanding each numerator give 
+        \[
+        \ba 
+        \int_0^3 \par{x^3 - 3x^2 + 1} \di x
+        &= \parbr{\lim_{n \to \infty} \frac{81n^2 + 162n + 81}{4n^2}} 
+        - \parbr{\lim_{n \to \infty} \frac{54n^2 + 81n + 27}{2n^2}} 
+        + \parbr{\lim_{n \to \infty} 3} \nl 
+        &= \frac{81}{4} - 27 + 3 \nl 
+        &= \boxed{-\frac{15}{4}}
+        \ea 
+        \]
+    </p>
+    <figure class="def-int-polynomial" id="def-int-polynomial">
+        <img src="../images/sectionImages/def-int-polynomial.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .def-int-polynomial::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    <p>
+        We interpret this result as follows: 
+        Over \(0 \leq x \leq 3\) let \(A_1\) be the total area bounded by \(y = x^3 - 3x^2 + 1\) above the \(x\)-axis, 
+        and let \(A_2\) be the area bounded by \(y = x^3 - 3x^2 + 1\) below the \(x\)-axis. 
+        Since \(A_1\) is positive and \(A_2\) is negative, the definite integral 
+        \(\int_0^3 \par{x^3 - 3x^2 + 1} \di x\) yields the net signed area \(A_1 - A_2.\)
+        So  
+        \[
+        \int_0^3 \par{x^3 - 3x^2 + 1} \di x = A_1 - A_2 = -\frac{15}{4} \pd
+        \]
+        Because this result is negative, the area of the region below the \(x\)-axis is larger 
+        than the combined areas of the regions above the \(x\)-axis. 
+        (See <a href="#def-int-polynomial">Figure 7</a>.) 
+    </p>
+</div>
+
+<p>
+    <span class="label-emph">Applications of Integrals</span>
+    Definite integrals have more applications than 
+    simply calculating areas of arcane shapes. 
+    The area bounded by a curve is an extremely useful quantity in <i>accumulation</i>. 
+    For example, suppose that a particle travels along a straight line with velocity \(v\)
+    as a function of time \(t.\)
+    Then the net area bounded between the curve \(y = v(t)\)
+    and the \(t\)-axis over \(a \leq t \leq b\)
+    gives the particle's displacement.
+    (See <a href="#def-int-v">Figure 8A</a>.)
+    Likewise, if water enters a container with flow rate \(y = f(t),\)
+    then the area under the curve \(f\) from \(a\) to \(b\) gives the volume of water that 
+    flows in over \(a \leq t \leq b.\)
+    (See <a href="#def-int-f">Figure 8B</a>.)
+    And if a power grid outputs power with time according to the function \(y = P(t),\)
+    then the area under \(P\) from \(a\) to \(b\) represents the energy delivered over \(a \leq t \leq b,\)
+    as shown by <a href="#def-int-P">Figure 8C</a>.
+    Of course, countless more applications exist.
+    Integral calculus is fundamental to nearly every scientific field; we'll discuss 
+    more uses in later sections.
+</p>
+
+<div class="figure-center">
+    <figure class="def-int-v" id="def-int-v">
+        <img src="../images/sectionImages/def-int-v.jpg" alt="FIGURE 8A">
+    </figure>
+    <figure class="def-int-f" id="def-int-f">
+        <img src="../images/sectionImages/def-int-f.jpg" alt="FIGURE 8B">
+    </figure>
+    <figure class="def-int-P" id="def-int-P">
+        <img src="../images/sectionImages/def-int-P.jpg" alt="FIGURE 8C">
+    </figure>
+</div>
+
+<style>
+    .def-int-v::before{
+        content:'FIGURE 8A';
+    }
+
+    .def-int-f::before{
+        content:'FIGURE 8B';
+    }
+
+    .def-int-P::before{
+        content:'FIGURE 8C';
+    }
+</style>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Water is pumped into a beverage cooler 
+        at a rate given by the function 
+        \[f(t) = 16 - 4t^2 \cma\]
+        where \(f(t)\) is measured in liters per minute and \(t\) is measured in minutes.
+        Using a definite integral, determine the volume of water pumped into the cooler during 
+        the first two minutes.
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <figure class="def-int-water-flow" id="def-int-water-flow">
+        <img src="../images/sectionImages/def-int-water-flow.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .def-int-water-flow::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    The volume of water pumped into the cooler from \(t = 0\) to \(t = 2\) 
+    is given by the integral \(\int_0^2 f(t) \di t.\)
+    By comparison to \(\eqref{eq:A-int-right}\) we see \(a = 0,\) \(b = 2,\)
+    and \(f(t) = 16 - 4t^2.\)
+    We therefore use 
+    \[\Delta t = \frac{2 - 0}{n} = \frac{2}{n} \and t_i = 0 + i \Delta t = \frac{2i}{n} \pd\]
+    Accordingly, 
+    \[
+    \ba 
+    \int_0^2 \par{16 - 4t^2} \di t &= \lim_{n \to \infty} \sum_{i = 1}^n f \par{\frac{2i}{n}} \frac{2}{n} \nl 
+    &= \lim_{n \to \infty} \frac{2}{n} \sum_{i = 1}^n \parbr{16 - 4 \cdot \frac{4i^2}{n^2}} &&[\text{by } \eqref{eq:sum-c}] \nl 
+    &= \lim_{n \to \infty} \frac{2}{n} \parbr{\sum_{i = 1}^n 16 - \frac{16}{n^2} \sum_{i = 1}^n i^2} \pd
+    && [\text{by } \eqref{eq:sum-c} \text{ and } \eqref{eq:sum-difference}] 
+    \ea 
+    \]
+    We now apply \(\eqref{eq:sum-cn}\) and \(\eqref{eq:sum-i2}\) to simplify the respective sums in the brackets. 
+    Doing so shows
+    \[
+    \ba 
+    \int_0^2 \par{16 - 4t^2} \di t 
+    &= \lim_{n \to \infty} \frac{2}{n} \parbr{16n - \frac{16}{n^2} \cdot \frac{n(n + 1)(2n + 1)}{6}} \nl 
+    &= \lim_{n \to \infty} \frac{2}{n} \parbr{16n - \frac{16n^2 + 24n + 8}{3n}} \nl 
+    &= \lim_{n \to \infty} \parbr{32 - \frac{32n^2 + 48n + 16}{3n^2}} \nl 
+    &= 32 - \frac{32}{3} = \frac{64}{3} \pd
+    \ea 
+    \]
+    So the volume of water pumped into the cooler in the first two minutes is \(\boxed{64/3}\) liters. 
+    (See <a href="#def-int-water-flow">Figure 9</a>.)
+</div>
+
+<h4 id="properties-def-int">Properties of Definite Integrals</h4>
+<p>
+    In earlier chapters, we saw that it was very useful to develop properties for limits and derivatives. 
+    Similarly, we find great utility in properties of definite integrals.
+</p>
+<p>
+    <span class="label-emph">Manipulating \(\Delta x\)</span>
+    Let \(f\) be an integrable function on some interval \([a, b].\)
+    In <a href="#def-def-integral" class="page-anchor">Defining a Definite Integral</a>, 
+    we defined \(\int_a^b f(x) \di x\) such that \(a \lt b.\)
+    But if \(a \gt b,\) then the integral is still valid. 
+    Reversing \(a\) and \(b\) causes \(\Delta x\) to be \((a - b)/n,\)
+    so \(\eqref{eq:A-int}\) becomes 
+    \[
+    \ba 
+    \int_b^a f(x) \di x &= \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \par{-\Delta x} \nl 
+    &= - \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \nl 
+    &= - \int_a^b f(x) \di x \pd
+    \ea 
+    \]
+    Thus, we attain the general formula 
+    \begin{equation} 
+    \int_b^a f(x) \di x = -\int_a^b f(x) \di x \pd \label{eq:int-bounds-reversed}
+    \end{equation}
+    This property allows us to switch the bounds of integration if we tack on a negative sign.
+    If \(a = b,\) then we see
+    \begin{flalign} 
+    &&\Delta x = \frac{(a) - a}{n} &= 0 \cma \nonum &\nl
+    \laWord{so} && \int_a^a f(x) \di x &= 0 \pd \label{eq:int-a-a}
+    \end{flalign}
+</p>
+
+<div class="box-title">SPECIAL DEFINITIONS FOR DEFINITE INTEGRALS</div>
+<div class="box">
+    If \(f\) is integrable on \([a, b],\) then 
+    \begin{equation} 
+    \int_b^a f(x) \di x = -\int_a^b f(x) \di x \pd \eqlabel{eq:int-bounds-reversed}
+    \end{equation}
+    If \(f\) is defined at \(a,\) then 
+    \[\int_a^a f(x) \di x = 0 \pd \eqlabel{eq:int-a-a}\]
+</div>
+
+<figure class="def-int-prop-rectangle" id="def-int-prop-rectangle">
+    <img src="../images/sectionImages/def-int-prop-rectangle.jpg" alt="Figure 10">
+</figure>
+<style>
+    .def-int-prop-rectangle::before{
+        content:'FIGURE 10';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Integrals with Constants</span>
+    Just as we can pull a constant out of a derivative expression, 
+    we can pull a constant out of a definite integral. 
+    If \(f\) is integrable on \([a, b]\) and \(c\) is a constant, then 
+    \begin{equation} 
+    \int_a^b cf(x) \di x = c \int_a^b f(x) \di x \pd \label{eq:int-c}
+    \end{equation}
+    This formula is called the <span class="emph">Constant Multiple Rule for Integrals</span>. 
+    Since multiplying a function by \(c\) stretches or shrinks its graph by a factor \(c,\)
+    each approximating rectangle's height is also stretched or shrunk by the factor \(c.\)
+    If \(f(x) \geq 0,\) then the area under \(cf\) is \(c\) times the area under \(f.\)
+    A similar geometric argument provides us the property
+    \begin{equation} 
+    \int_a^b c \di x = c (b - a) \cma \label{eq:int-c-rectangle}
+    \end{equation}
+    called the <span class="emph">Constant Rule for Integrals</span>.
+    <a href="#def-int-prop-rectangle">Figure 10</a> shows a geometric interpretation of \(\eqref{eq:int-c-rectangle} \col\)
+    For positive \(c,\) the area under the line \(y = c\) from \(x = a\) to \(x = b\) 
+    is a rectangle of height \(c\) and width \((b - a).\)
+    Its area is therefore \(c(b - a).\) 
+    Observe that if \(c = 1,\) then \(\eqref{eq:int-c-rectangle}\) becomes \(\int_a^b \di x = b - a.\)
+    In this case the integrand, despite appearing to be missing, is \(1.\)
+</p>
+
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:int-c}\)</span>
+    Let's treat \(cf(x)\) as a single integrable function on \([a, b].\)
+    Then by \(\eqref{eq:A-int},\) we have 
+    \[
+    \int_a^b cf(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n c f(x_i^*) \Delta x \pd
+    \]
+    Using \(\eqref{eq:sum-c}\) enables us to pull the constant \(c\) out of the summation 
+    function, and the Constant Multiple Law for Limits enables us to 
+    take \(c\) out of the limit expression. 
+    Doing so shows 
+    \[
+    \ba 
+    \int_a^b cf(x) \di x &= \lim_{n \to \infty} c \sum_{i = 1}^n f(x_i^*) \Delta x \nl 
+    &= c \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \nl 
+    &= c \int_a^b f(x) \di x \pd 
+    \ea  
+    \] 
+    \[\qedproof\]
+</p>
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:int-c-rectangle}\)</span>
+    If we let \(f(x) = c,\) then we see 
+    \(f(x_i^*) = c\)
+    because the line \(y = c\) is uniform.
+    Accordingly, \(\eqref{eq:A-int}\) gives
+    \[
+    \int_a^b c \di x = \lim_{n \to \infty} \sum_{i = 1}^n c \Delta x \pd
+    \]
+    Applying \(\eqref{eq:sum-c}\) permits us to pull the \(c\) out of the summation expression; 
+    the Constant Multiple Law for Limits allows us to take \(c\) out of the limit. We see
+    \[
+    \int_a^b c \di x = \lim_{n \to \infty} c \sum_{i = 1}^n \Delta x  
+    = c \lim_{n \to \infty} \sum_{i = 1}^n \Delta x \pd
+    \]
+    By \(\eqref{eq:sum-cn},\) the last step becomes 
+    \[
+    \int_a^b c \di x = c \, n \Delta x 
+    = c \, n \cdot \frac{b - a}{n} 
+    = c(b - a) \pd
+    \]
+    \[\qedproof\]
+</p>
+
+<div class="box-title">INTEGRALS WITH CONSTANTS</div>
+<div class="box">
+    Let \(c\) be a constant, and let \(f\) be an integrable function over \([a, b].\) 
+    Then 
+    \begin{align} 
+    &\int_a^b cf(x) \di x = c \int_a^b f(x) \di x \cma &&[\text{Constant Multiple Rule}] \eqlabel{eq:int-c} \nl 
+    &\int_a^b c \di x = c (b - a) \pd &&[\text{Constant Rule}] \eqlabel{eq:int-c-rectangle}
+    \end{align}
+</div>
+
+<p>
+    <span class="label-emph">Integrals of Sums and Differences</span>
+    Properties of integrals are very similar to properties of derivatives.
+    Let \(f\) and \(g\) be integrable functions over an interval \([a, b].\)
+    Then
+    \begin{flalign} 
+    &&\int_a^b \parbr{f(x) + g(x)} \di x &= \int_a^b f(x) \di x + \int_a^b g(x) \di x \label{eq:int-sum} &\nl
+    \laWord{and} && \int_a^b \parbr{f(x) - g(x)} \di x &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \pd \label{eq:int-difference}
+    \end{flalign}
+    We call these properties the <span class="emph">Sum Rule for Integrals</span>
+    and the <span class="emph">Difference Rule for Integrals</span>, respectively.
+    For positive functions, \(\eqref{eq:int-sum}\) asserts 
+    that the area under the curve \(f + g\) is the area under \(f\)
+    plus the area under \(g.\)
+    And \(\eqref{eq:int-sum}\) states that the area under \(f - g\) is the area under \(f\)
+    minus the area under \(g.\)
+</p>
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:int-sum}\) AND \(\eqref{eq:int-difference}\)</span>
+    Using \(\eqref{eq:A-int},\) the Riemann sum for the integral of \(f + g\) on \([a,b]\) is given by 
+    \[
+    \ba 
+    \int_a^b [f(x) + g(x)] \di x &= \lim_{n \to \infty} \sum_{i = 1}^n \parbr{f(x_i^*) + g(x_i^*)} \Delta x \nl 
+    &= \lim_{n \to \infty} \sum_{i = 1}^n  f(x_i^*) \Delta x 
+    + \lim_{n \to \infty} \sum_{i = 1}^n g(x_i^*) \Delta x &&[\text{by } \eqref{eq:sum-sum}] \nl 
+    &= \int_a^b f(x) \di x + \int_a^b g(x) \di x \pd &&[\text{by } \eqref{eq:A-int}]
+    \ea 
+    \]
+    The proof for \(\eqref{eq:int-difference}\) is nearly identical.
+    The Riemann sum for the integral of \(f - g\) on \([a,b]\) is given by 
+    \[
+    \ba 
+    \int_a^b [f(x) - g(x)] \di x &= \lim_{n \to \infty} \sum_{i = 1}^n \parbr{f(x_i^*) - g(x_i^*)} \Delta x \nl 
+    &= \lim_{n \to \infty} \sum_{i = 1}^n  f(x_i^*) \Delta x 
+    - \lim_{n \to \infty} \sum_{i = 1}^n g(x_i^*) \Delta x &&[\text{by } \eqref{eq:sum-difference}] \nl 
+    &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \pd &&[\text{by } \eqref{eq:A-int}]
+    \ea 
+    \]
+    \[\qedproof\]
+</p>
+
+<div class="box-title">SUM AND DIFFERENCE PROPERTIES FOR INTEGRALS</div>
+<div class="box">
+    If \(f\) and \(g\) are integrable functions on \([a, b],\) then 
+    \begin{align} 
+    \int_a^b \parbr{f(x) + g(x)} \di x &= \int_a^b f(x) \di x + \int_a^b g(x) \di x \cma &&[\text{Sum Rule}] \eqlabel{eq:int-sum} \nl 
+    \int_a^b \parbr{f(x) - g(x)} \di x &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \pd &&[\text{Difference Rule}] \eqlabel{eq:int-difference}
+    \end{align}
+</div>
+
+<figure class="def-int-split" id="def-int-split">
+    <img src="../images/sectionImages/def-int-split.jpg" alt="Figure 11">
+</figure>
+<style>
+    .def-int-split::before{
+        content:'FIGURE 11';
+    }
+</style>
+
+<p>
+    We introduce a final property that enables us to merge integrals of the same function \(f\) 
+    over adjacent intervals. 
+    If \(c\) is a constant and \(f\) is integrable over \([a, b],\) \([a, c],\) and \([c, b],\) then 
+    \begin{equation} 
+    \int_a^b f(x) \di x = \int_a^c f(x) \di x + \int_c^b f(x) \di x \pd \label{eq:int-adj}
+    \end{equation}
+    For the special case \(f(x) \geq 0\) and \(a \lt c \lt b,\) \(\eqrefer{eq:int-adj}\)
+    asserts that the area under \(f\) over \([a, c]\)
+    plus the area under \(f\) over \([c, b]\) 
+    equals the area under \(f\) over \([a, b].\) 
+    Think of the line \(x = c\) splitting the region under \(f\) over \([a, b].\)
+    (See <a href="#def-int-split">Figure 11</a>.)
+</p>
+
+<div class="box-title">ADDITIVE INTERVAL PROPERTY</div>
+<div class="box">
+    If \(c\) is a constant and \(f\) is integrable over \([a, b],\) \([a, c],\) and \([c, b],\) then 
+    \begin{equation} 
+    \int_a^b f(x) \di x = \int_a^c f(x) \di x + \int_c^b f(x) \di x \pd \eqlabel{eq:int-adj}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(\int_1^3 f(x) \di x = 7,\) then calculate 
+        \[\int_1^3 \parbr{f(x) - 2} \di x \pd\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    Applying the <b>Difference Rule</b>, following \(\eqref{eq:int-difference},\)
+    we attain
+    \[\int_1^3 \parbr{f(x) - 2} \di x = \int_1^3 f(x) \di x - \int_1^3 2 \di x \pd\]
+    We use the <b>Constant Rule</b>, as in \(\eqref{eq:int-c},\)
+    to evaluate the far-right integral.
+    Doing so and substituting the given \(\int_1^3 f(x) \di x = 7\) 
+    show
+    \[
+    \int_1^3 \parbr{f(x) - 2} \di x 
+    = 7 - 2(3 - 1) = \boxed 3
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(\int_{-5}^6 f(x) \di x = 6\) 
+        and \(\int_3^6 f(x) \di x = -8,\)
+        then calculate \(\int_{-5}^3 f(x) \di x.\)
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    The <b>Additive Interval Property</b>, as in \(\eqref{eq:int-adj},\)
+    asserts that 
+    \[
+    \int_{-5}^6 f(x) \di x = \int_{-5}^3 f(x) \di x + \int_3^6 f(x) \di x \pd
+    \]
+    So we solve for \(\int_{-5}^3 f(x) \di x,\) obtaining
+    \[
+    \ba 
+    \int_{-5}^3 f(x) \di x 
+    &= \int_{-5}^6 f(x) \di x - \int_3^6 f(x) \di x \nl 
+    &= 6 - (-8) \nl 
+    &= \boxed{14}
+    \ea 
+    \]
+</div>
+
+<h4 id="comparison-properties">Comparison Properties of Definite Integrals</h4>
+<p>
+    Let's discuss some properties to help us infer the value of a definite integral. 
+    We begin with the simplest property. If \(f(x)\) is integrable over \([a, b]\)
+    and \(f(x) \geq 0,\) then the region bounded by \(f\) 
+    is above the \(x\)-axis. Thus,
+    \begin{equation} 
+    \int_a^b f(x) \di x \geq 0 \pd \label{eq:int-prop-pos}
+    \end{equation}
+    This form is simple yet powerful in making inferences. 
+    If we can show that a function is positive, then its area—which can represent physical quantities 
+    such as displacement, volume, and energy—must be positive and related to the function.
+    (We will explore this relationship in Section <a href="/Valculus/calculus/4.3-Fundamental-Theorem-of-Calculus.html">4.3</a>.)
+</p>
+<p>
+    If \(f\) and \(g\) are integrable functions over \([a, b]\) 
+    such that \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) then 
+    \begin{equation} 
+    \int_a^b f(x) \di x \geq \int_a^b g(x) \di x \pd \label{eq:int-inequality}
+    \end{equation}
+    In words, a larger function has a larger integral. 
+    Thus, <i>inequalities are preserved when we take definite integrals</i>.
+    If \(f(x) \geq 0\) and \(g(x) \geq 0\) over \([a, b],\) then \(f\) encloses 
+    a larger region than \(g\) and so the area under \(f\) is greater than the area under \(g.\) 
+</p>
+<figure class="def-int-areas-bound" id="def-int-areas-bound">
+    <img src="../images/sectionImages/def-int-areas-bound.jpg" alt="Figure 12">
+</figure>
+<style>
+    .def-int-areas-bound::before{
+        content:'FIGURE 12';
+    }
+</style>
+
+<p>
+    The final property we discuss allows us to <i>bound</i> an integral—that is, 
+    prove that its value lies between two numbers. 
+    If \(m \leq f(x) \leq M\) for \(a \leq x \leq b,\) then \(\eqref{eq:int-inequality}\) gives 
+    \[\int_a^b m \di x \leq \int_a^b f(x) \di x \leq \int_a^b M \di x \pd\]
+    We use \(\eqref{eq:int-c-rectangle}\) to evaluate the left- and right-bounding integrals;
+    the inequality therefore becomes 
+    \begin{equation} 
+    m(b - a) \leq \int_a^b f(x) \di x \leq M(b - a) \pd \label{eq:int-prop-bounds}
+    \end{equation}
+    If \(f(x) \geq 0,\) then this formula asserts that \(\int_a^b f(x) \di x\) 
+    is greater than the area of a rectangle of height \(m\) 
+    but less than the area of a rectangle of height \(M.\)
+    (See <a href="#def-int-areas-bound">Figure 12</a>.)
+    This property is especially useful if we choose 
+    \(m\) and \(M\) to be the absolute minimum and absolute maximum values, respectively, 
+    of \(f\) over \([a, b].\)
+</p>
+
+<div class="box-title">COMPARISON PROPERTIES OF DEFINITE INTEGRALS</div>
+<div class="box">
+    <ol class="list-num">
+        <li>
+            If \(f(x) \geq 0\) for \(a \leq x \leq b,\) then 
+            \begin{equation} 
+            \int_a^b f(x) \di x \geq 0 \pd \eqlabel{eq:int-prop-pos}
+            \end{equation}
+        </li>
+        <li>
+            If \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) then 
+            \begin{equation} 
+            \int_a^b f(x) \di x \geq \int_a^b g(x) \di x \pd \eqlabel{eq:int-inequality}
+            \end{equation}
+        </li>
+        <li>
+            If \(m \leq f(x) \leq M\) for \(a \leq x \leq b,\) then 
+            \begin{equation} 
+            m(b - a) \leq \int_a^b f(x) \di x \leq M(b - a) \pd \eqlabel{eq:int-prop-bounds}
+            \end{equation}
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Show that the area under \(y = 1 + \sin x\) from \(x = 0\) to \(x = \pi\) 
+        is between \(\pi\) and \(2 \pi.\)
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button">  </button>
+<div id="solution9" class="solution">
+    <figure class="def-int-areas-bound-sin" id="def-int-areas-bound-sin">
+        <img src="../images/sectionImages/def-int-areas-bound-sin.jpg" alt="Figure 13">
+    </figure>
+    <style>
+        .def-int-areas-bound-sin::before{
+            content:'FIGURE 13';
+        }
+    </style>
+    For \(0 \leq x \leq \pi\) we have \(0 \leq \sin x \leq 1,\)
+    so we see \(1 \leq (\sin x + 1) \leq 2.\)
+    Using \(\eqref{eq:int-prop-bounds}\) in combination with the 
+    Constant Rule for Integrals, we find 
+    \[
+    \baat{2} 
+    \int_0^\pi 1 \di x &\leq \int_0^\pi (\sin x + 1) \di x &&\leq \int_0^\pi 2 \di x \nl 
+    \pi &\leq \int_0^{\pi} (\sin x + 1) \di x && \leq 2 \pi \pd
+    \eaat 
+    \]
+    Thus, the area under \(y = 1 + \sin x\) over \([0, \pi]\) 
+    is between \(\pi\) and \(2 \pi.\)
+    (See <a href="#def-int-areas-bound-sin">Figure 13</a>.)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#areas-curve" class="summary-anchor">Areas under Curves</a>
+        To estimate the area under a curve \(y = f(x),\)
+        where \(f(x) \geq 0\) over \(a \leq x \leq b,\)
+        we cut the region into many rectangles of width \(\Delta x = (b - a)/n.\)
+        The sum of these rectangles is called a <span class="emph">Riemann sum</span>. 
+        As we increase \(n,\) \(\Delta x\) shrinks and more rectangles are inscribed under the curve.
+        If we let \(n \to \infty,\) then a Riemann sum gives the exact area under a curve. 
+        Let \(x_1, x_2,\) \(\dots, x_n\)
+        be the endpoints of \(n\) subintervals, and
+        let \(x_1^*, x_2^*,\) \(\dots, x_n^*\) be <i>any sample points</i> in these subintervals. 
+        Then  
+        \begin{equation} 
+        A = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \pd \eqlabel{eq:A-lim}
+        \end{equation}
+        If this limit exists and gives the same number \(A\) for all possible sample points \(x_i^*,\) then \(f\) is called
+        <span class="emph">integrable</span> over \([a, b].\)
+    </p>
+    <p>
+        <a href="#def-def-integral" class="summary-anchor">Defining a Definite Integral</a>
+        A <span class="emph">definite integral</span> is an expression whose 
+        magnitude is the area bounded by the graph of a function and the \(x\)-axis. 
+        The <span class="emph">Riemann definition</span> of an integral is given by
+        \begin{equation} 
+        \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i^*) \Delta x \pd \eqlabel{eq:A-int}
+        \end{equation}
+        A definite integral yields a positive number if the region is above the \(x\)-axis 
+        but a negative number if the region is below the \(x\)-axis.
+        If we integrate over an interval \([a, b]\) in which some regions are above the \(x\)-axis 
+        and some regions are below, then the definite integral returns the <i>net signed area</i>—namely, 
+        \[\int_a^b f(x) \di x = A_1 - A_2 \cma\]
+        where \(A_1\) is the area above the \(x\)-axis and \(A_2\) is the area below the \(x\)-axis.
+    </p>
+    <p>
+        <a href="#evaluating-def-int" class="summary-anchor">Evaluating Definite Integrals</a>
+        It is convenient to pick sample points such that \(x_i^* = x_i.\)
+        If \(f\) is integrable on \([a, b],\) then 
+        \begin{equation} 
+        \int_a^b f(x) \di x = \lim_{n \to \infty} \sum_{i = 1}^n f(x_i) \Delta x \cma \eqlabel{eq:A-int-right}
+        \end{equation}
+        where 
+        \[\Delta x = \frac{b - a}{n} \and x_i = a + i \Delta x \pd\]
+        This form is an easy way to compute many definite integrals.
+    </p>
+    <p>
+        <a href="#properties-def-int" class="summary-anchor">Properties of Definite Integrals</a>
+        We have a few special definitions for definite integrals. 
+        If \(f\) is integrable on \([a, b],\) then 
+        \begin{equation} 
+        \int_b^a f(x) \di x = -\int_a^b f(x) \di x \pd \eqlabel{eq:int-bounds-reversed}
+        \end{equation}
+        If \(f\) is defined at \(a,\) then 
+        \[\int_a^a f(x) \di x = 0 \pd \eqlabel{eq:int-a-a}\]
+        Properties with integrals are similar to properties with derivatives.
+        Let \(c\) be a constant, and let \(f\) be an integrable function over \([a, b].\) 
+        Then 
+        \begin{align} 
+        &\int_a^b cf(x) \di x = c \int_a^b f(x) \di x \cma &&[\text{Constant Multiple Rule}] \eqlabel{eq:int-c} \nl 
+        &\int_a^b c \di x = c (b - a) \pd &&[\text{Constant Rule}] \eqlabel{eq:int-c-rectangle}
+        \end{align}
+        If \(f\) and \(g\) are integrable functions on \([a, b],\) then 
+        \begin{align} 
+        \int_a^b \parbr{f(x) + g(x)} \di x &= \int_a^b f(x) \di x + \int_a^b g(x) \di x \cma &&[\text{Sum Rule}] \eqlabel{eq:int-sum} \nl 
+        \int_a^b \parbr{f(x) - g(x)} \di x &= \int_a^b f(x) \di x - \int_a^b g(x) \di x \pd &&[\text{Difference Rule}] \eqlabel{eq:int-difference}
+        \end{align}
+        The <span class="emph">Additive Interval Property</span> asserts that 
+        if \(c\) is a constant and \(f\) is integrable over \([a, b],\) \([a, c],\) and \([c, b],\) then 
+        \begin{equation} 
+        \int_a^b f(x) \di x = \int_a^c f(x) \di x + \int_c^b f(x) \di x \pd \eqlabel{eq:int-adj}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#comparison-properties" class="summary-anchor">Comparison Properties of Definite Integrals</a>
+        Comparison properties enable us to infer values of definite integrals. 
+        In general, <i>inequalities are conserved when we take definite integrals</i>, as shown by the following properties.
+        <ol class="list-num">
+            <li>
+                If \(f(x) \geq 0\) for \(a \leq x \leq b,\) then 
+                \begin{equation} 
+                \int_a^b f(x) \di x \geq 0 \pd \eqlabel{eq:int-prop-pos}
+                \end{equation}
+            </li>
+            <li>
+                If \(f(x) \geq g(x)\) for \(a \leq x \leq b,\) then 
+                \begin{equation} 
+                \int_a^b f(x) \di x \geq \int_a^b g(x) \di x \pd \eqlabel{eq:int-inequality}
+                \end{equation}
+            </li>
+            <li>
+                If \(m \leq f(x) \leq M\) for \(a \leq x \leq b,\) then 
+                \begin{equation} 
+                m(b - a) \leq \int_a^b f(x) \di x \leq M(b - a) \pd \eqlabel{eq:int-prop-bounds}
+                \end{equation}
+            </li>
+        </ol>
+    </p>
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">

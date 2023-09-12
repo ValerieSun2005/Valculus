@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.3: Probability</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.3 — Probability</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.3-Probability-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.3-Probability-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <p>
+    <span class="emph">Probability</span> measures the chance that an event occurs.
+    Outcomes of dice rolling, card selection, and basketball shots are examples of <i>discrete</i> probabilities
+    because they have finite outcomes.
+    In calculus we work with <i>continuous</i> probabilities, in which a number can take on <i>any</i> value.
+    A store might want to determine the probability that a customer waits in line for more than \(2\) minutes, 
+    or a doctor might want to know the probability that her patient has a blood pressure above \(130 \un{mm Hg}.\) 
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#probability-density" class="page-anchor">Probability Density Functions</a>
+        </li>
+        <li>
+            <a href="#exp-prob-density" class="page-anchor">Exponential Probability Density Functions</a>
+        </li>
+        <li>
+            <a href="#avg-value-pdf" class="page-anchor">Mean of a Probability Density Function</a>
+        </li>
+        <li>
+            <a href="#normal-distribution" class="page-anchor">The Normal Distribution</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="probability-density">Probability Density Functions</h4>
+
+<figure class="probability-graph-a-b" id="probability-graph-a-b">
+    <img src="../images/sectionImages/probability-graph-a-b.jpg" alt="Figure 1">
+</figure>
+<style>
+    .probability-graph-a-b::before{
+        content:'FIGURE 1';
+    }
+</style> 
+
+<p>
+    Let \(X\) denote a <i>continuous random variable</i>,
+    meaning \(X\) is randomly assigned any number.
+    The probability that the value of \(X\) lands between the numbers \(a\) and \(b\) is written as 
+    \[P(a \leq X \leq b) \pd\]
+    Every continuous random variable \(X\) has a <span class="emph">probability density function</span> \(f,\) 
+    defined such that \(f(x) \geq 0\) and
+    \begin{equation} 
+    P(a \leq X \leq b) = \int_a^b f(x) \di x \pd \label{eq:P-int}
+    \end{equation}
+    In words, to calculate the probability that \(X\) is between the numbers \(a\) and \(b,\)
+    we find the area under the curve \(y = f(x)\) from \(x = a\) to \(x = b.\)
+    (See <a href="#probability-graph-a-b">Figure 1</a>.)  
+    Because probabilities are measured from \(0\) to \(1,\) it is a fact that
+    \begin{equation} 
+    \int_{-\infty}^\infty f(x) \di x = 1 \pd \label{eq:prob-1}
+    \end{equation}
+    For a continuous random variable, we value probability density functions for the area under them;
+    the particular values they output have little use to us.
+</p>
+
+<div class="box-title">PROBABILITY DENSITY FUNCTIONS</div>
+<div class="box">
+    If \(X\) is a continuous random variable and \(f(x)\) is a <span class="emph">probability density function</span>, 
+    then \(f(x) \geq 0\) and \(\int_{-\infty}^\infty f(x) \di x = 1,\) and the probability that \(X\) lies between \(a\) and \(b\) is 
+    \begin{equation} 
+    P(a \leq X \leq b) = \int_a^b f(x) \di x \pd \eqlabel{eq:P-int}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(f(x) = 6x(1 - x)\) for \(0 \leq x \leq 1\) and \(f(x) = 0\) for all other \(x.\)
+        <ol class="list-alpha">
+            <li>
+                Verify that \(f\) is a probability density function.
+            </li>
+            <li>
+                Find and interpret \(P(0 \leq x \leq 1/4).\)
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <ol class="list-alpha">
+        <li>
+            Observe that \(f(x) \geq 0\) for all \(x.\)
+            The area under \(f\) is \(0\) for all \(x\) outside the interval \([0, 1],\)
+            so
+            \[
+            \ba 
+            \int_{-\infty}^{\infty} f(x) \di x &= \int_0^1 6x(1 - x) \di x \nl
+            &= \par{3x^2 - 2x^3} \intEval_{0}^1 \nl 
+            &= 1 \pd
+            \ea 
+            \]
+            Since \(\int_{-\infty}^{\infty} f(x) \di x = 1,\)
+            \(\eqrefer{eq:prob-1}\) is satisfied and so \(f(x)\) is a probability density function.
+        </li>
+        <hr>
+        <li>
+            Using \(\eqref{eq:P-int},\) the probability \(P(0 \leq x \leq 1/4)\) is given by 
+            integrating \(f(x)\) from \(x = 0\) to \(x = 1/4 \col\)
+            \[
+            \ba 
+            P(0 \leq x \leq 1/4) &= \int_0^{1/4} 6x(1 - x) \di x \nl 
+            &= \par{3x^2 - 2x^3} \intEval_{0}^{1/4} \nl 
+            &= \parbr{3 \par{\tfrac{1}{4}}^2 - 2 \par{\tfrac{1}{4}}^3} - 0 \nl 
+            &= \boxed{\tfrac{5}{32}} \approx 0.156 \pd
+            \ea 
+            \]
+            Thus, under the distribution \(y = f(x),\) the probability of any number \(X\) residing between \(0\) and \(1/4\) is 
+            \(0.156,\) or \(15.6\%.\)
+        </li>
+    </ol>
+</div>
+
+<h4 id="exp-prob-density">Exponential Probability Density Functions</h4>
+<p>
+    Exponential decay functions are excellent probability density functions for phenomena 
+    such as waiting times and equipment longevity.
+    Consider the following examples:
+    At the checkout counter, you'll likely be helped within a few minutes, 
+    whereas long wait times are rarer.
+    Likewise, among people who call into a support center, few customers are willing to wait for a long time.
+    And a light bulb is unlikely to function for much longer than its expected lifespan.
+    To derive a general probability density function \(f\) for such models, we let \(t\) be time 
+    (in any unit) such that \(f(t) = 0\) for \(t \lt 0.\) 
+    (You cannot be helped before you enter the line.)
+    We have, for \(k \gt 0,\)
+    \[
+    f(t) = 
+    \bc 
+    0 & t \lt 0 \nl
+    Ce^{-kt} & t \geq 0 \pd 
+    \ec 
+    \]
+    Let's derive an expression for the area under the curve \(y = f(t).\)
+    Clearly, the area under \(f\) over \(t\) in \((-\infty, 0)\) is \(0.\) 
+    Thus, we evaluate the improper integral 
+    (using the methods of Section <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>) as follows:
+    \[
+    \ba 
+    \int_{-\infty}^\infty f(t) \di t &= \int_0^\infty Ce^{-kt} \di t \nl 
+    &= \lim_{b \to \infty} \int_0^b Ce^{-kt} \di t \nl 
+    &= \frac{C}{-k} \lim_{b \to \infty} \par{e^{-kt}} \intEval_0^b \nl 
+    &= \frac{C}{-k} \par{0 - 1} \nl 
+    &= \frac{C}{k} \pd
+    \ea 
+    \]
+    By \(\eqref{eq:prob-1},\) \(\int_{-\infty}^\infty f(t) \di t\) must equal \(1.\)
+    So \(C/k = 1,\) meaning \(C = k.\)
+    Accordingly, all exponential decay functions are of the form
+    \begin{equation} 
+    f(t) = 
+    \bc 
+    0 & t \lt 0 \nl
+    ke^{-kt} & t \geq 0 \pd 
+    \ec 
+    \label{eq:exp-density}
+    \end{equation}  
+    (See <a href="#probability-exp-decay">Figure 2</a>.)
+    If \(C \ne k,\) then \(\eqref{eq:prob-1}\) is not satisfied and so \(f(t)\) 
+    cannot be a probability density function.
+</p>
+
+<figure class="probability-exp-decay" id="probability-exp-decay">
+    <img src="../images/sectionImages/probability-exp-decay.jpg" alt="Figure 2">
+</figure>
+<style>
+    .probability-exp-decay::before{
+        content:'FIGURE 2';
+    }
+</style> 
+
+<div class="box-title">EXPONENTIAL PROBABILITY DENSITY FUNCTIONS</div>
+<div class="box">
+    If \(k \gt 0,\) then an <span class="emph">exponential probability density function</span> takes the form 
+    \begin{equation} 
+    f(t) = 
+    \bc 
+    0 & t \lt 0 \nl
+    ke^{-kt} & t \geq 0 \pd 
+    \ec 
+    \eqlabel{eq:exp-density}
+    \end{equation}  
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        A store manager counts that \(80\%\) of customers are 
+        helped at the checkout counter within \(2\) minutes. 
+        <ol class="list-alpha">
+            <li>
+                Determine an exponential probability density function to model 
+                the wait times of customers at the checkout line.
+            </li>
+            <li>
+                Calculate the probability that a customer is helped 
+                within \(5\) minutes.
+            </li>
+            <li>
+                What is the probability that a customer waits more than \(5\) minutes 
+                for checkout?
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <ol class="list-alpha">
+        <li>    
+            By \(\eqref{eq:exp-density},\) 
+            we model the wait times using the exponential decay function 
+            \[
+            f(t) = 
+            \bc 
+            0 & t \lt 0 \nl
+            ke^{-kt} & t \geq 0 \cma 
+            \ec 
+            \]
+            where \(t\) is the time (in minutes) that a customer waits.
+            Our goal is to solve for \(k.\)
+            Since \(80\%\) of customers are helped at the checkout counter within \(2\) minutes, 
+            we have \(\int_0^2 f(t) \di t = 0.8.\)
+            We see 
+            \[
+            \ba 
+            \int_0^2 ke^{-kt} \di t &= 0.8 \nl 
+            \frac{k}{-k} e^{-kt} \intEval_0^2 &= 0.8 \nl
+            e^0 - e^{-2k} &= 0.8 \nl 
+            \implies k &= -\tfrac{1}{2} \ln 0.2 \approx 0.805 \pd
+            \ea 
+            \]
+            Hence, the exponential probability density function is 
+            \[
+            f(t) = 
+            \boxed{
+            \bc 
+            0 & t \lt 0 \nl
+            0.805e^{-0.805t} & t \geq 0 
+            \ec}
+            \]
+        </li>
+        <hr>
+        <li id="exp-prob-(b)">
+            Let \(T\) be the time a customer waits in line.
+            The requested probability is \(P(0 \leq T \leq 5),\)
+            whose value is given by the area under \(y = f(t)\) from \(0 \leq t \leq 5.\)
+            By \(\eqref{eq:P-int},\) we have 
+            \[
+            \ba 
+            P(0 \leq T \leq 5) &= \int_0^5 0.805e^{-0.805t} \di t \nl 
+            &= \frac{0.805}{-0.805} e^{-0.805t} \intEval_0^5 \nl 
+            &= e^{0} - e^{-0.805(5)} \nl 
+            &\approx \boxed{0.982} = 98.2 \% \pd 
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            If a customer waits in line for \(T\) minutes, then 
+            the probability of a wait longer than \(5\) minutes is given by \(P(T \gt 5).\)
+            We see 
+            \[
+            P(T \gt 5) = \int_5^\infty f(t) \di t \pd
+            \]
+            Instead of computing the improper integral, we recognize that \(\int_0^\infty f(t) \di t = 1.\) 
+            Since the improper integral converges, it's easier to compute \(P(T \gt 5)\) by 
+            using the result from part <a href="#exp-prob-(b)">(b)</a>, as follows:
+            \[
+            \ba 
+            \int_0^\infty f(t) \di t &= \int_0^5 f(t) \di t + \int_5^\infty f(t) \di t \nl 
+            \implies \int_5^\infty f(t) \di t &= \int_0^\infty f(t) \di t - \int_0^5 f(t) \di t \nl
+            &= 1 - 0.982 \nl 
+            &= \boxed{0.018} = 1.8 \% \pd
+            \ea
+            \]
+        </li>
+    </ol>
+</div>
+
+<h4 id="avg-value-pdf">Mean of a Probability Density Function</h4>
+
+<figure class="probability-avg-value" id="probability-avg-value">
+    <img src="../images/sectionImages/probability-avg-value.jpg" alt="Figure 3">
+</figure>
+<style>
+    .probability-avg-value::before{
+        content:'FIGURE 3';
+    }
+</style> 
+
+<p>
+    In a store or call center, it's imperative to know the average time a customer waits.
+    Similarly, an equipment manufacturer must know how long a piece of equipment tends to last.
+    These applications motivate the calculation of the <i>mean</i> of a probability density function—the 
+    long-run average value of a random variable \(X.\)
+    Let \(y = f(x)\) be a probability density function.
+    Suppose that \(N\) numbers are chosen in the interval \([a, b];\) 
+    we want to determine the sum of these \(N\) numbers. 
+    We split the interval \([a, b]\) into \(n\) subintervals;
+    consider one subinterval from \(x_{i - 1}\) to \(x_i.\)
+    If \(\overline{x}_i\) is the midpoint of these two numbers, then we assert the following:
+    <i>As we pick more and more numbers between \(x_{i - 1}\) and \(x_i,\) then 
+    the average of these numbers will approach \(\overline{x}_i.\)</i>
+    The probability of picking a number in \([a, b]\)
+    and having it land in \([x_{i - 1}, x_i]\) is approximately
+    \(f \par{\overline{x}_i} \Delta x,\)
+    which is the area of the approximating rectangle in <a href="#probability-avg-value">Figure 3</a>.
+    Accordingly, we estimate that the number of values landing in \([x_{i - 1}, x_i]\) is \(N f \par{\overline{x}_i} \Delta x.\)
+    Each value is approximately \(\overline{x}_i,\) so the sum of these numbers is roughly
+    \[N \, \overline{x}_i f \par{\overline{x}_i} \Delta x \pd\]
+    To get the sum of <i>all</i> \(N\) numbers (across all \(n\) subintervals), we add the sums 
+    of the numbers in all \(n\) subintervals—that is, using the sum
+    \[\sum_{i = 1}^n N \, \overline{x}_i f \par{\overline{x}_i} \Delta x \pd\]
+    This form is a Riemann sum for \(x f(x).\)
+    We make each subinterval infinitely small by letting \(n \to \infty\) and \(\Delta x \to 0,\) 
+    so the limiting value of this Riemann sum is 
+    \[\int_a^b N x f(x) \di x \pd\]
+    This is the <i>sum</i> of all \(N\) numbers, so we divide by \(N\) to get the mean \(\mu\) (<i>mu</i>):
+    \[\mu = \int_a^b x f(x) \di x \pd\]
+    More generally, the <span class="emph">mean of a probability density function</span> \(f(x)\) is given by 
+    \begin{equation} 
+    \mu = \int_{-\infty}^\infty x f(x) \di x \pd \label{eq:avg-X}
+    \end{equation}
+    This formula asserts that if we choose many values of the continuous random variable \(X,\) then 
+    the long-run average of \(X\) will be \(\mu.\)
+    Observe that because \(\eqref{eq:avg-X}\) contains an extra term \(x\) in the integrand,
+    <span class="warning">the integral does not measure a probability</span>; 
+    do not confuse it with \(\eqref{eq:prob-1}.\)
+</p>
+
+<div class="box-title">MEAN OF A PROBABILITY DENSITY FUNCTION</div>
+<div class="box">
+    If \(f\) is a probability density function, then the <span class="emph">mean of a probability density function</span>
+    is given by
+    \begin{equation} 
+    \mu = \int_{-\infty}^\infty x f(x) \di x \pd \eqlabel{eq:avg-X}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-mean-exp"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the mean of the exponential probability density function
+        in \(\eqref{eq:exp-density}.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    By \(\eqref{eq:avg-X},\) the mean of the probability density function is given by 
+    \[\mu = \int_{-\infty}^\infty t f(t) \di t \pd\]
+    In \(\eqref{eq:exp-density}\) we see that, because \(f(t) = 0\) for \(t \lt 0,\)
+    it follows that \(\int_{-\infty}^0 f(t) \di t = 0.\)
+    Thus, we have 
+    \[
+    \ba 
+    \mu &= \int_0^\infty k te^{-kt} \di t \nl 
+    &= k \lim_{b \to \infty} \int_0^b te^{-kt} \di t \pd
+    \ea 
+    \]
+    By Integration by Parts 
+    (from Section <a href="/Valculus/calculus/6.1-Integration-by-Parts.html">6.1</a>), we have 
+    \[
+    \ba 
+    \mu &= \lim_{b \to \infty} \par{-e^{-kt} \, \frac{kt + 1}{k}} \intEval_0^b \nl 
+    &= \par{\lim_{b \to \infty} -e^{-kb} \, \frac{kb + 1}{k}} + \par{\frac{1}{k}} \nl 
+    &= \boxed{\frac{1}{k}}
+    \ea 
+    \]
+</div>
+
+<p>
+    Since the mean of an exponential probability density function is \(\mu = 1/k\)
+    (from <a href="#ex-mean-exp">Example 3</a>), 
+    we can rewrite the probability density function in \(\eqref{eq:avg-X}\) as 
+    \begin{equation} 
+    f(t) = 
+    \bc 
+    0 & t \lt 0 \nl
+    \dfrac{e^{-t/\mu}}{\mu} & t \geq 0 \pd 
+    \ec 
+    \label{eq:prob-density-mu}
+    \end{equation}
+    This form is useful if we know the average waiting time \(\mu.\)
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        At a call center, the average waiting time for a customer is \(2\) minutes. 
+        Using an exponential probability density function,
+        calculate the probability that a customer's call is answered within the first minute.
+        (The first minute is critical to customers, since most hang up 
+        within this time.)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    The average waiting time is \(2\) minutes, so \(\mu = 2.\)
+    Using \(\eqref{eq:prob-density-mu},\) we attain
+    the following exponential probability density function:
+    \[
+    f(t) = 
+    \bc 
+    0 & t \lt 0 \nl
+    \dfrac{e^{-t/2}}{2} & t \geq 0 \pd 
+    \ec 
+    \] 
+    The probability that a customer is helped within the first minute is given by 
+    integrating \(f\) from \(0\) to \(1,\) as follows:
+    \[
+    \ba 
+    P(0 \leq T \leq 1) &= \int_0^1 \frac{e^{-t/2}}{2} \di t \nl 
+    &= -e^{-t/2} \intEval_0^1 \nl 
+    &= e^0 - e^{-1/2} \nl 
+    &\approx \boxed{0.393} = 39.3 \% \pd
+    \ea 
+    \]
+    Only \(39.3\%\) of calls are answered within the first minute. 
+    Since most customers aren't willing to wait for more than a minute, 
+    the call center needs to reduce its wait times.
+</div>
+
+<h4 id="normal-distribution">The Normal Distribution</h4>
+
+<figure class="normal-dist-sd" id="normal-dist-sd">
+    <img src="../images/sectionImages/normal-dist-sd.jpg" alt="Figure 4">
+</figure>
+<style>
+    .normal-dist-sd::before{
+        content:'FIGURE 4';
+    }
+</style> 
+
+<p>
+    For centuries, statisticians have noticed a peculiar finding in homogeneous populations: Phenomena
+    such as intelligence scores, test results, and heights are often distributed symmetrically around a central peak, 
+    resembling a <i>bell curve</i>.
+    Specifically, a random variable \(X\) in these scenarios follows a <span class="emph">Normal distribution</span>, 
+    whose probability density function is
+    \begin{equation} 
+    f(x) = \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \pd \label{eq:normal-pdf}
+    \end{equation}
+    This is one of the most important distributions in statistics,
+    with many applications in inferential statistics, probability calculations, and the natural sciences. 
+    It turns out that the factor \(1/\par{\sigma \sqrt{2 \pi}}\) is needed to 
+    satisfy \(\int_{-\infty}^\infty f(x) \di x = 1,\) thus enabling \(f\) to be a probability function.
+    The mean of this function is \(\mu,\)
+    and the parameter \(\sigma\) (<i>sigma</i>) is called the <span class="emph">standard deviation</span>, 
+    a measure of variation in the values of \(X.\)
+    Low values of \(\sigma\) imply little spread,
+    meaning the graph of \(y = f(x)\) tends to be clustered around the mean. 
+    Conversely, high values of \(\sigma\) indicate large spread,
+    so the graph of \(y = f(x)\) is more flattened around the mean.
+    (See <a href="#normal-dist-sd">Figure 4</a>.)
+</p>
+
+<div class="box-title">THE NORMAL DISTRIBUTION</div>
+<div class="box">
+    A <span class="emph">Normal distribution</span> has a probability density function given by
+    \begin{equation} 
+    f(x) = \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \cma \eqlabel{eq:normal-pdf}
+    \end{equation}
+    where \(\mu\) is the mean of the probability density function and \(\sigma\) is the <span class="emph">standard deviation</span>, 
+    a measure of variation.
+</div>
+
+<aside class="box-caution">
+    The <b>68–95–99.7 Rule</b> 
+    applies only to <i>Normal</i> distributions. 
+    It should not be used for distributions that do not resemble bell curves.
+</aside>
+
+<p>
+    <span class="label-emph">The 68–95–99.7 Rule</span>
+    Unfortunately, the function in \(\eqref{eq:normal-pdf}\) has no elementary antiderivative. 
+    We must instead use methods such as Riemann sums or Simpson's Rule to approximate integrals 
+    with this function. 
+    Using such methods produces the following results:
+    \[
+    \ba 
+    \int_{\mu -\sigma}^{\mu + \sigma} \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \di x &\approx 0.68 \cma\nl 
+    \int_{\mu -2\sigma}^{\mu + 2\sigma} \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \di x &\approx 0.95 \cma \nl
+    \int_{\mu -3\sigma}^{\mu + 3\sigma} \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \di x &\approx 0.997 \pd
+    \ea 
+    \]
+    These results are summarized by the <span class="emph">68–95–99.7 Rule</span> (also called the <b>Empirical Rule</b>), 
+    which says that 
+    about \(68\%\) of the data lie within \(1\) standard deviation of the mean, 
+    about \(95\%\) of the data lie within \(2\) standard deviations of the mean, and 
+    about \(99.7\%\) of the data lie within \(3\) standard deviations of the mean.
+    Hence, it is very rare for a random variable \(X\) to lie more than \(3\) standard deviations 
+    away from the mean.
+    We use the 68–95–99.7 Rule to estimate probabilities in our heads, as well as how likely an outcome is to occur. 
+    In general, statisticians consider significant 
+    any value of \(X\) located more than \(2\) standard deviations away from the mean, 
+    which has only a \(5\%\) chance to occur.
+</p>
+
+<figure class="iq-scores" id="iq-scores">
+    <img src="../images/sectionImages/iq-scores.jpg" alt="Figure 5">
+</figure>
+<style>
+    .iq-scores::before{
+        content:'FIGURE 5';
+    }
+</style> 
+
+<p>
+    <span class="label-emph">The Intelligence Quotient</span>
+    A measure of intelligence is the <b>Intelligence Quotient</b> (<b>IQ</b>), 
+    whose scores are Normally distributed with a mean of \(\mu = 100\) and a
+    standard deviation of \(\sigma = 15.\)
+    Substituting these parameters into \(\eqref{eq:normal-pdf}\) 
+    gives a probability density function for IQ scores to be 
+    \begin{equation} 
+    f(x) = \normalPdf{100}{15}{x} \pd \label{eq:iq}
+    \end{equation}
+    (See <a href="#iq-scores">Figure 5</a>.)
+    By the 68–95–99.7 Rule, we conclude the following:
+    <ul>
+        <li>
+            About \(68 \%\) of people have IQs between \(85\) and \(115.\)
+        </li>
+        <li>
+            About \(95 \%\) of people have IQs between \(70\) and \(130.\)
+        </li>
+        <li>
+            About \(99.7 \%\) of people have IQs between \(55\) and \(145.\)
+        </li>
+    </ul>
+    Any IQ lower than \(55\) or higher than \(145\) is therefore very rare.
+    It has been estimated that the IQs of some famous physicists and chess players
+    are around \(160.\)
+    The probability of an individual having an IQ of \(160\) or higher is given by integrating \(\eqref{eq:iq}\)
+    from \(x = 160\) to \(x = \infty.\)
+    For approximation purposes, we note that nearly nobody has an IQ above \(200\)
+    (almost \(6.7\) standard deviations above the mean). 
+    So it is safe to replace \(x = \infty\) with \(x = 200,\)
+    from which we see
+    \[
+    \ba 
+    P(x \geq 160) &\approx \int_{160}^{200} \normalPdf{100}{15}{x} \di x \nl
+    &\approx 3.169 \times 10^{-5} \nl 
+    &= 0.003169 \% \pd
+    \ea 
+    \]
+    Thus, out of approximately every \(31500\) people, only one person has an IQ of \(160\) or greater. 
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem"> 
+        <figure class="womens-heights" id="womens-heights">
+            <img src="../images/sectionImages/womens-heights.jpg" alt="Figure 6">
+        </figure>
+        <style>
+            .womens-heights::before{
+                content:'FIGURE 6';
+            }
+        </style> 
+        The heights of women in the United States are Normally distributed 
+        with an average height of \(64.5\) inches and a standard deviation of \(2.5\) inches 
+        (<a href="#womens-heights">Figure 6</a>).
+        <ol class="list-alpha">
+            <li>
+                Derive the probability density function for this model.
+            </li>
+            <li>
+                In a sample of \(1000\) randomly selected women, approximately
+                how many have a height between \(62\) inches and \(67\) inches?
+            </li>
+            <li>
+                What is the probability that a woman is \(68\) inches or taller?
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The <b>mean</b> of this distribution is \(\mu = 64.5,\)
+            with a <b>standard deviation</b> of \(\sigma = 2.5.\)
+            Substituting these values into \(\eqref{eq:normal-pdf}\) gives 
+            the probability density function 
+            \[f(x) = \boxed{\normalPdf{64.5}{2.5}{x}}\]
+        </li>
+        <hr>
+        <li>
+            The value \(62\) is \(1\) standard deviation lower than the mean, 
+            and the value \(67\) is \(1\) standard deviation higher than the mean. 
+            By the <b>68–95–99.7 Rule</b>, in a Normal distribution approximately \(68\%\) of 
+            values lie within one standard deviation of the mean.
+            So we estimate that, out of \(1000\) women, the number 
+            whose heights are between \(62\) and \(67\) inches is 
+            \[1000 \times 0.68 = \boxed{680}\]
+        </li>
+        <hr>
+        <li>
+            The probability that a woman is taller than \(68\)
+            inches is given by integrating the probability density function \(f(x)\)
+            from \(x = 68\) to \(x = \infty.\)
+            But to avoid the improper integral, we instead use a sufficiently large number as an upper 
+            bound—for example, \(x = 90,\)
+            which is more than \(10\) standard deviations away from the mean and is therefore extremely rare.
+            Using numerical methods or a calculator, we see
+            \[
+            \ba 
+            P(X \geq 68) &\approx \int_{68}^{90} \normalPdf{64.5}{2.5}{x} \di x \nl 
+            &\approx \boxed{0.0808} = 8.08 \% \pd
+            \ea 
+            \]
+            Thus, about \(8.08\%\) of women in the United States are \(68\) inches or taller.
+        </li>
+    </ol>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#probability-density" class="summary-anchor">Probability Density Functions</a>
+        If \(X\) is a continuous random variable (that is, \(X\) is randomly assigned any number)
+        and \(f(x)\) is a <span class="emph">probability density function</span>, 
+        then \(f(x) \geq 0\) and \(\int_{-\infty}^\infty f(x) \di x = 1,\) and the probability that \(X\) lies between \(a\) and \(b\) is 
+        \begin{equation} 
+        P(a \leq X \leq b) = \int_a^b f(x) \di x \pd \eqlabel{eq:P-int}
+        \end{equation}
+        For a continuous random variable, we value probability density functions for the area under them;
+        the particular values they output have little use to us.
+    </p>
+    <p>
+        <a href="#exp-prob-density" class="summary-anchor">Exponential Probability Density Functions</a>
+        We often use exponential decay functions as probability density functions for phenomena 
+        such as waiting times and equipment longevity.
+        If \(k \gt 0,\) then an <span class="emph">exponential probability density function</span> takes the form 
+        \begin{equation} 
+        f(t) = 
+        \bc 
+        0 & t \lt 0 \nl
+        ke^{-kt} & t \geq 0 \pd 
+        \ec 
+        \eqlabel{eq:exp-density}
+        \end{equation}  
+    </p>
+    <p>
+        <a href="#avg-value-pdf" class="summary-anchor">Mean of a Probability Density Function</a>
+        If \(f\) is a probability density function, then the <span class="emph">mean of a probability density function</span>
+        is given by
+        \begin{equation} 
+        \mu = \int_{-\infty}^\infty x f(x) \di x \pd \eqlabel{eq:avg-X}
+        \end{equation}
+        The number \(\mu\) is the long-run average of the random variable \(X;\)
+        as we select more and more values of \(X,\)
+        the average of these numbers becomes \(\mu.\)
+        An <i>exponential probability density function</i> has a mean of \(\mu = 1/k,\)
+        so we can write the density function as
+        \begin{equation} 
+        f(t) = 
+        \bc 
+        0 & t \lt 0 \nl
+        \dfrac{e^{-t/\mu}}{\mu} & t \geq 0 \pd 
+        \ec 
+        \eqlabel{eq:prob-density-mu}
+        \end{equation}
+        This form is useful if \(\mu\) is measurable (for example, the average time a customer waits in line).
+    </p>
+    <p>
+        <a href="#normal-distribution" class="page-anchor">The Normal Distribution</a>
+        A <span class="emph">Normal distribution</span> has a probability density function given by
+        \begin{equation} 
+        f(x) = \frac{1}{\sigma \sqrt{2 \pi}} \, e^{-(x - \mu)^2/\par{2 \sigma^2}} \cma \eqlabel{eq:normal-pdf}
+        \end{equation}
+        where \(\mu\) is the mean of the probability density function and \(\sigma\) is the <span class="emph">standard deviation</span>, 
+        a measure of variation.
+        The graph of \(y = f(x)\) is symmetrical about a central peak and is a bell-shaped curve.
+        The <span class="emph">68–95–99.7 Rule</span> (also called the <b>Empirical Rule</b>), 
+        enables us to estimate probabilities within a Normal distribution, as follows: 
+        <ul>
+            <li>
+                About \(68\%\) of the data lie within \(1\) standard deviation of the mean. 
+            </li>
+            <li>
+                About \(95\%\) of the data lie within \(2\) standard deviations of the mean.
+            </li>
+            <li>
+                About \(99.7\%\) of the data lie within \(3\) standard deviations of the mean.
+                It is very rare for a random variable \(X\) to lie more than \(3\) standard deviations 
+                away from the mean.
+            </li>
+        </ul>
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

@@ -49,14 +49,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         What is the <b>Chain Rule</b>?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The <b>Chain Rule</b> enables us to differentiate composite functions. 
         If \(F(x) = f(g(x))\) where \(f\) and \(g\) are differentiable, 
         then the Chain Rule gives 
@@ -66,7 +66,7 @@
         in which we view \(f\) and \(g\) as variables 
         such that \(f\) changes with \(g,\) which changes with \(x.\)
         This rule, combined with other differentiation rules, enables us to <i>differentiate any function</i>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -75,14 +75,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         What is the <b>General Power Rule</b>?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The <b>General Power Rule</b> is a special case—an application—of the Chain Rule 
         in which the outer function is a power function. 
         If \(g\) is a differentiable function and \(n\) is a constant, then 
@@ -91,7 +91,7 @@
         \]
         This equation is entirely derived using the Chain Rule;
         it is not a unique concept.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -100,8 +100,8 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="label-emph">Walkthrough of Using the Chain Rule</label>
+            <ques>
+<span class="label-emph">Walkthrough of Using the Chain Rule</span>
         Let \(y = \sqrt{2x - 7}.\)
         <ol class="list-alpha">
 <li>
@@ -118,12 +118,12 @@
                 Find \(\textderiv{y}{x}.\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 The <b>outer function</b> is \(f(x) = \sqrt x,\)
@@ -159,7 +159,7 @@
                 \[\frac{1}{2 \sqrt{2x - 7}} \cdot 2 = \boxed{\frac{1}{\sqrt{2x - 7}}}\]
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -175,7 +175,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(\sin(3x + 2)\) is composite, so 
         we use the Chain Rule to differentiate it. 
         We identify the outer function to be \(f(x) = \sin x\) 
@@ -184,7 +184,7 @@
         \[f'(x) = \cos x \and g'(x) = 3 \pd\]
         The Chain Rule therefore gives the derivative to be 
         \[f'(g(x)) \cdot g'(x) = \cos(3x + 2) \cdot 3 = \boxed{3 \cos(3x + 2)}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -200,7 +200,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(\cos 3t\) is composite, so 
         we use the Chain Rule to differentiate it. 
         We find the outer function to be \(f(t) = \cos t\) 
@@ -209,7 +209,7 @@
         \[f'(t) = -\sin t \and g'(t) = 3 \pd\]
         Thus, by the Chain Rule the derivative is  
         \[f'(g(t)) \cdot g'(t) = (-\sin 3t) \cdot 3 = \boxed{-3 \sin 3t}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -225,7 +225,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because this function is composite,  
         we use the Chain Rule to differentiate it. 
         We find the outer function to be \(f(x) = \sin x\) 
@@ -234,7 +234,7 @@
         \[f'(x) = \cos x \and g'(x) = 1 \pd\]
         Thus, by the Chain Rule the derivative is  
         \[f'(g(x)) \cdot g'(x) = \cos(x - 5) \cdot 1 = \boxed{\cos(x - 5)}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -250,7 +250,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(e^{2x}\) is composite, so 
         we use the Chain Rule to differentiate it. 
         We find the outer function to be \(f(x) = e^x\) 
@@ -259,7 +259,7 @@
         \[f'(x) = e^x \and g'(x) = 2 \pd\]
         Thus, by the Chain Rule the derivative is  
         \[f'(g(x)) \cdot g'(x) = e^{2x} \cdot 2 = \boxed{2 e^{2x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -275,12 +275,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This function is composite, but using properties of exponents 
         permits us to see  
         \[\sqrt[3]{x^6} = x^{6/3} = x^2 \pd\]
         A simple application of the Power Rule shows the derivative to be \(\boxed{2x}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -296,7 +296,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         At first glance, the function \(\sin^2 x\) doesn't appear to be composite. 
         But upon rewriting it as \((\sin x)^2,\)
         we identify the outer function to be \(f(x) = x^2\) and the inner function to be \(g(x) = \sin x.\)
@@ -306,7 +306,7 @@
         The <b>double-angle identity</b> for sine states that \(\sin 2x = 2 \sin x \cos x.\)
         Thus, 
         \[\deriv{}{x} \parbr{\sin^2 x} = \boxed{\sin 2x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -322,7 +322,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the composite function as 
         \[(\tan \theta)^2 \cma\]
         which has outer function \(f(\theta) = \theta^2\)
@@ -331,7 +331,7 @@
         \[f'(\theta) = 2 \theta \and g'(\theta) = \sec^2 \theta \pd\]
         Thus, by the Chain Rule the derivative is  
         \[f'(g(\theta)) \cdot g'(\theta) = \boxed{2 \tan \theta \sec^2 \theta}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -347,7 +347,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Let's call \(y = \sin \par{\theta^2}.\)
         Let some variable be the inner function—say, \(u = \theta^2.\)
         Hence, the Chain Rule gives 
@@ -364,7 +364,7 @@
         This solution uses Leibniz's notation solely for diversity 
         of methods. 
         However, you are free to choose the method with which you feel most comfortable.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -380,7 +380,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The outer function is \(f(t) = \cot t,\)
         and the inner function is \(g(t) = 1 - 4t + 8t^2.\)
         We see 
@@ -392,7 +392,7 @@
         &amp;= \boxed{(4 - 16t)\csc^2 \par{1 - 4t + 8t^2}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -408,7 +408,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <i>Do not use the Power Rule</i>;
         we use the Power Rule only if the exponent is constant.
         Let \(y = e^{-x^2 + 3x - 4}.\)
@@ -428,7 +428,7 @@
         the formula 
         \(f'(g(x)) \cdot g'(x).\)
         You can pick the method with which you feel most comfortable.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -444,7 +444,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <i>Do not use the Power Rule</i>;
         we use the Power Rule only if the exponent is constant.
         Let \(y = e^{1/x}.\)
@@ -458,7 +458,7 @@
         &amp;= \boxed{-\frac{e^{1/x}}{x^2}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -474,12 +474,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         To differentiate an exponential function whose base is non-\(e,\) 
         we copy down the exponential function and multiply it by the natural logarithm of the base. 
         The base is \(8,\) so the derivative is 
         \[\boxed{8^t \ln 8}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -495,14 +495,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the exponential function as 
         \[\par{5^2}^t = 25^t \pd\]
         When we differentiate an exponential function whose base is not \(e,\)
         we copy down the exponential function and multiply it by the natural logarithm of the base. 
         The base is \(25,\) so the derivative is 
         \[\boxed{25^t \ln 25}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -518,7 +518,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The General Power Rule 
         (that is, the Chain Rule applied to an expression whose outer function is a power function) 
         yields 
@@ -529,7 +529,7 @@
         &amp;= \boxed{1000 \par{2x - 9}^{499}} 
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -545,7 +545,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using the General Power Rule 
         (following the Chain Rule applied to an expression whose outer function is a power function), 
         we find that the derivative is 
@@ -556,7 +556,7 @@
         &amp;= \boxed{8092 x \par{4 + 2x^2}^{2022}} 
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -572,7 +572,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the composite function as 
         \[\par{y^2 - 4y + 8}^{1/2}.\]
         By the General Power Rule 
@@ -584,7 +584,7 @@
         &amp;= \boxed{\frac{y - 2}{\sqrt{y^2 - 4y + 8}}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -600,7 +600,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Change of Base formula for exponents gives 
         \[2^{\sec \theta} = \par{e^{\ln 2}}^{\sec \theta} = e^{(\sec \theta) \ln 2} \pd\]
         This is a composite function with outer function 
@@ -615,7 +615,7 @@
         &amp;= \boxed{2^{\sec \theta} (\sec \theta \tan \theta) \ln 2}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -631,7 +631,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Chain Rule gives 
         \[
         \ba 
@@ -639,7 +639,7 @@
         &amp;= \boxed{e^{e^x} \, e^x}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -655,7 +655,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because the function has terms of \(x\) in both the numerator and denominator, 
         we first apply the Quotient Rule to attain 
         \[\frac{1 \cdot \sqrt{4 - x^2} - x \cdot \deriv{}{x} \sqrt{4 - x^2}}{4 - x^2} \pd\]
@@ -666,7 +666,7 @@
         \[\frac{\sqrt{4 - x^2} + \frac{x^2}{\sqrt{4 - x^2}}}{4 - x^2} \pd\]
         Multiplying the numerator and denominator by \(\sqrt{4 - x^2}\) gives 
         \[\frac{(4 - x^2) + x^2}{\par{4 - x^2}^{3/2}} = \boxed{\frac{4}{\par{4 - x^2}^{3/2}}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -682,7 +682,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Product Rule shows that the derivative can be broken down into  
         \[\sqrt{w^3 + 1} \cdot \deriv{}{w} e^{2w} + e^{2w} \cdot \deriv{}{w} \sqrt{w^3 + 1} \pd\]
         By the Chain Rule, 
@@ -696,7 +696,7 @@
         \[\sqrt{w^3 + 1} \cdot 2e^{2w} + e^{2w} \cdot \frac{3w^2}{2 \sqrt{w^3 + 1}}
         = \boxed{e^{2w} \par{2 \sqrt{w^3 + 1} + \frac{3w^2}{2 \sqrt{w^3 + 1}}}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -712,7 +712,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Product Rule shows that the derivative is equivalent to 
         \[2y \sqrt{4y^3 + 7} + y^2 \cdot \deriv{}{y} \sqrt{4y^3 + 7} \pd\]
         By the Chain Rule, 
@@ -722,7 +722,7 @@
         Hence, our derivative becomes 
         \[2y \sqrt{4y^3 + 7} + y^2 \cdot \frac{6y^2}{\sqrt{4y^3 + 7}} 
         = \boxed{2y \sqrt{4y^3 + 7} + \frac{6y^4}{\sqrt{4y^3 + 7}}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -738,7 +738,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because the function has terms of \(t\) in both the numerator and denominator, 
         we first apply the Quotient Rule to attain 
         \[\frac{(4t + 9)^3 \cdot \deriv{}{t} \parbr{(3t - 1)^2} - (3t - 1)^2 \cdot \deriv{}{t} \parbr{(4t + 9)^3}}{\parbr{(4t + 9)^3}^2} \pd\]
@@ -752,7 +752,7 @@
         Thus, our derivative becomes 
         \[\frac{6 (4t + 9)^3 (3t - 1) - 12 (3t - 1)^2 (4t + 9)^2}{(4t + 9)^6} 
         = \boxed{\frac{6 (4t + 9) (3t - 1) - 12 (3t - 1)^2}{(4t + 9)^4}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -768,7 +768,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function has terms of \(x\) in both the numerator and denominator, 
         so we first apply the Quotient Rule to attain 
         \[\frac{(x^2 + 9)^5 \cdot \deriv{}{x} \parbr{(6x + 5)^3} - (6x + 5)^3 \cdot \deriv{}{x} \parbr{(x^2 + 9)^5}}{\parbr{(x^2 + 9)^5}^2} \pd\]
@@ -786,7 +786,7 @@
         = \, &amp;\boxed{\frac{18(x^2 + 9) (6x + 5)^2 - 10 x (6x + 5)^3}{(x^2 + 9)^6}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -802,14 +802,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         First applying the Product Rule yields 
         \[(\sin t) \cdot \deriv{}{t} \orange{(3t + 1)^{200}} + (3t + 1)^{200} \cos t \pd\]
         The Chain Rule then gives 
         \[(\sin t) \cdot \parbr{\orange{200(3t + 1)^{199} \cdot 3}} + (3t + 1)^{200} \cos t
         = \boxed{600(3t + 1)^{199} \sin t + (3t + 1)^{200} \cos t}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -825,7 +825,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This function is composed of three layers, 
         so we apply the Chain Rule twice.
         Beginning with the outermost layer, we 
@@ -836,7 +836,7 @@
         \[\cos(\sin(\sin x)) \cdot \parbr{\orange{\cos(\sin x) \cdot \cos x}}
         = \boxed{\cos(\sin(\sin x)) \cos(\sin x) \cos x}
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -852,14 +852,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         There exists no reason to draw out the differentiation process by applying the Chain Rule 
         three times.
         Using properties of exponents, we rewrite the function as 
         \[\par{\par{\par{x^{1/2}}^{1/2}}^{1/2}}^{1/2} = x^{1/16} \pd\]
         We simply apply the Power Rule once to obtain 
         \[\tfrac{1}{16} x^{-15/16} = \boxed{\frac{1}{16 \sqrt[16]{x^{15}}}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -869,42 +869,13 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For 
-        \[\ds \deriv{}{t} t^t\]
+        \[\ds \deriv{}{\theta} \sin^2 6 \theta\]
      evaluate the derivative. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
-        Do not use the Power Rule. 
-        The Power Rule is applicable only if the exponent is constant.
-        Instead, the Change of Base formula for exponents gives 
-        \[e^{t \ln t} \cma\] 
-        a composite function of inner function \(t \ln t.\)
-        Hence, the Chain Rule gives the derivative to be 
-        \[
-        \ba 
-        e^{t \ln t} \cdot \deriv{}{t} \par{t \ln t} &amp;= e^{t \ln t} \cdot (\ln t + 1) \nl
-        &amp;= \boxed{t^t \par{\ln t + 1}}
-        \ea 
-        \]
-    </span> 
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For 
-        \[\ds \deriv{}{\theta} \sin^2 6 \theta\]
-     evaluate the derivative. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
-            <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the function as 
         \[(\sin 6 \theta)^2 \pd\]
         This function is composed of three layers, 
@@ -920,12 +891,12 @@
         The double-angle identity for sine gives \(\sin 2x = 2 \sin x \cos x.\)
         Thus, we rewrite our final answer as 
         \[\boxed{6 \sin 12 \theta}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -934,9 +905,9 @@
      evaluate the derivative. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Since this function is composed of three layers, 
         we apply the Chain Rule twice.
         Starting with the outermost layer, we 
@@ -947,12 +918,12 @@
         \[e^{\sin 4x} \cdot \parbr{\orange{4 \cos 4x}}
         = \boxed{4 e^{\sin 4x} \cos 4x}
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -961,9 +932,9 @@
      evaluate the derivative. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         As this function is composed of three layers, 
         we apply the Chain Rule twice.
         Starting with the outermost layer, we 
@@ -974,12 +945,12 @@
         \[-\sin \parbr{(x^2 + 4)^{50}} \cdot \parbr{\orange{50(x^2 + 4)^{49} \cdot 2x}}
         = \boxed{-100x(x^2 + 4)^{49} \sin \parbr{(x^2 + 4)^{50}} }
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -988,9 +959,9 @@
      evaluate the derivative. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         For clarity, we rewrite the function as 
         \[\parbr{\sec(\tan \theta)}^4 \pd\]
         Because this function contains three layers, 
@@ -1011,12 +982,12 @@
         It is understandable if the algebra wearies you; 
         the only remedy is to continue practicing difficult derivatives.
         Differentiation is a skill!
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1025,9 +996,9 @@
      evaluate the derivative. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         For improved clarity, we consider the function as 
         \[\parbr{\tan \sqrt{2x + 1}}^5 \pd\]
         Because this function contains four layers, 
@@ -1047,12 +1018,12 @@
         \] 
         Thus, our final answer is 
         \[\boxed{\frac{5 \tan^4 \par{\sqrt{2x + 1}} \sec^2 \par{\sqrt{2x + 1}}}{\sqrt{2x + 1}}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-36"> 
-  <div class="box-solution__head">     EXERCISE 36 </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1061,9 +1032,9 @@
      evaluate the derivative. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-36"> 
+        <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We use the Chain Rule one step at a time, slowly. 
         Recall that the derivative of \(\cot \theta\) is 
         \(-\csc^2 \theta.\) 
@@ -1080,7 +1051,30 @@
         &amp;= \boxed{\frac{-6 e^{\cot^{15} \par{\sqrt[5]{\sin 2x}}} \cot^{14} \par{\sqrt[5]{\sin 2x}} \csc^2 \par{\sqrt[5]{\sin 2x}} \cos 2x}{\sqrt[5]{\sin^4 2x}}}
         \ea 
         \]
-    </span> 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f\) be a differentiable function, and 
+        let \(a\) and \(b\) be constants. 
+        Determine the derivative of the family of functions \(f(ax + b).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        In the composite function \(f(ax + b),\)
+        the outer layer is \(f\) and the inner layer is \(ax + b.\)
+        Thus, the Chain Rule gives the derivative to be 
+        \[f'(ax + b) \cdot \deriv{}{x} \par{ax + b} = \boxed{a f'(ax + b)}\]
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1089,41 +1083,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-        Let \(f\) be a differentiable function, and 
-        let \(a\) and \(b\) be constants. 
-        Determine the derivative of the family of functions \(f(ax + b).\)
-    </div> 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
-            <span class="solution-text">SOLUTION</span> 
-            <span>
-        In the composite function \(f(ax + b),\)
-        the outer layer is \(f\) and the inner layer is \(ax + b.\)
-        Thus, the Chain Rule gives the derivative to be 
-        \[f'(ax + b) \cdot \deriv{}{x} \par{ax + b} = \boxed{a f'(ax + b)}\]
-    </span> 
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-38"> 
-  <div class="box-solution__head">     EXERCISE 38 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(f\) and \(g\) be differentiable functions, 
         and let \(F(x) = f(g(x)).\)
         It is known that \(f'(3) = 6,\) 
         \(g(2) = 3,\) and \(g'(2) = 2.\)
         Calculate \(F'(2).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-38"> 
+        <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By the Chain Rule, we have 
         \[F'(x) = f'(g(x)) \cdot g'(x) \pd\]
         Substituting \(x = 2\) shows 
@@ -1134,28 +1105,28 @@
         &amp;= 6 \cdot 2 = \boxed{12}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-39"> 
-  <div class="box-solution__head">     EXERCISE 39 </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The graph of \(f\) passes through the point \((8, 1)\)
         with slope \(3.\)
         Conversely, the function \(g\) 
         satisfies \(g(4) = 2\) and \(g'(4) = -4.\)
         Determine the slope of the line tangent to the graph of 
         \(y = f(2x)/g(x)\) when \(x = 4.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-39"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We seek the value of 
         \[\deriv{}{x} \frac{f(2x)}{g(x)} \intEval_{x = 4} \pd\]
         The function \(f\) satisfies \(f(8) = 1\)
@@ -1170,28 +1141,28 @@
         &amp;= \boxed 4
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-40"> 
-  <div class="box-solution__head">     EXERCISE 40 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The function \(f\) is differentiable at \(x = 2.\)
         An equation of the line tangent to the graph of \(y = f(x)\) at \(x = 2\) 
         is 
         \[y - 4 = -2(x - 2) \pd\]
         Let \(a\) be the function given by \(a(x) = x^3 \, f(2x).\)
         Calculate \(a'(1).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-40"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         From the equation of the tangent line, 
         one point on the curve \(f\) is \((2, 4),\)
         at which the slope is \(-2.\)
@@ -1207,25 +1178,25 @@
         &amp;= \boxed 8
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-41"> 
-  <div class="box-solution__head">     EXERCISE 41 </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         By applying the Chain Rule to each term, 
         show that the derivatives of \(\sin^2 \alpha\) and \(\cos^2 \alpha\)
         sum to \(0.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-41"> 
+        <div class="box-solution__solution" id="solution-40"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the terms as 
         \[(\sin \alpha)^2 \and (\cos \alpha)^2\]
         to identify each term as a composite function whose inner function is trigonometric.
@@ -1247,24 +1218,24 @@
         This result is expected because the Pythagorean identity asserts that \(\sin^2 \alpha + \cos^2 \alpha\)
         \(= 1,\)
         whose derivative is \(0\) by the Constant Rule for Derivatives.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-42"> 
-  <div class="box-solution__head">     EXERCISE 42 </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Show that \(\sec^2 \theta\) 
         and \(\tan^2 \theta\) have the same derivatives.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-42"> 
+        <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We differentiate each function using the Chain Rule 
         and expect to attain the same results. 
         Recall that the derivative of \(\sec \theta\) is \(\sec \theta \tan \theta\)
@@ -1280,25 +1251,25 @@
         Thus, differentiating \(\sec^2 \theta\) is actually differentiating \(\tan^2 \theta + 1,\)
         and the derivative of the constant \(1\) is \(0\)
         by the Constant Rule for Derivatives. 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-43"> 
-  <div class="box-solution__head">     EXERCISE 43 </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(p(x) = \csc^2 x\)
         and \(q(x) = \cot^2 x.\)
         Show that \(p\) and \(q\) satisfy \(p'(x) - q'(x) = 0.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-43"> 
+        <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         For increased clarity, we write 
         \[p(x) = \par{\csc x}^2 \and q(x) = \par{\cot x}^2 \pd\]
         Recall that the derivative of \(\csc x\) is \(-\csc x \cot x\)
@@ -1318,23 +1289,23 @@
         This is expected because of the Pythagorean identity: 
         \[\cot^2 x + 1 = \csc^2 x \pd\]
         Differentiating \(\csc^2 x\) is the same as differentiating \(\cot^2 x + 1.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-44"> 
-  <div class="box-solution__head">     EXERCISE 44 </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Find the values of \(x\) corresponding to the horizontal tangents of the graph \(y = \sqrt{x^2 + 1}.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-44"> 
+        <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The graph has a <b>horizontal tangent</b> when \(\textderiv{y}{x} = 0.\)
         By the Chain Rule, we see 
         \[
@@ -1345,16 +1316,16 @@
         \ea 
         \]
         which is \(0\) when \(\boxed{x = 0}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-45"> 
-  <div class="box-solution__head">     EXERCISE 45 </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Consider the function \(f(x) = \sqrt{x^2 - 4}.\)
         <ol class="list-alpha">
 <li>
@@ -1369,12 +1340,12 @@
                 Does \(f\) have a horizontal tangent when \(x = 0 \ques\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-45"> 
+        <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 Using the Chain Rule, we have 
@@ -1406,28 +1377,28 @@
                 which is \((-\infty, -2] \cup [2, \infty).\)
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-46"> 
-  <div class="box-solution__head">     EXERCISE 46 </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         An object moves along a path with time \(t\) as modeled by the position function 
         \(s(t),\) velocity function \(v(t),\) and acceleration function \(a(t).\) 
         Show that 
         \[a(t) = v(t) \deriv{v}{s}\]
         and interpret this equation.
         (We use this relationship to derive fundamental equations in physics.) 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-46"> 
+        <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         From Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>, 
         we defined 
         \[a(t) = \deriv{v}{t} \pd\]
@@ -1441,23 +1412,23 @@
         depends on its velocity at a certain time 
         multiplied by <i>how quickly its velocity is changing with position</i>.
         This form is useful because it doesn't involve time.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-47"> 
-  <div class="box-solution__head">     EXERCISE 47 </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Prove that the derivative of an even function is an odd function.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-47"> 
+        <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <aside class="box-remark">
             A function \(g\) is <i>odd</i> if and only if 
             \[g(x) = -g(-x) \pd\]
@@ -1476,23 +1447,23 @@
         Thus, we have 
         \[f'(x) = -f'(-x) \cma\]
         meaning that \(f'\) is an odd function.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-48"> 
-  <div class="box-solution__head">     EXERCISE 48 </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Prove that the derivative of an odd function is an even function.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-48"> 
+        <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <aside class="box-remark">
             A function \(f\) is <i>even</i> if and only if 
             \[f(x) = f(-x) \pd\]
@@ -1511,25 +1482,25 @@
         Thus, we see 
         \[g'(x) = g'(-x) \cma\]
         meaning that \(g'\) is an even function.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-49"> 
-  <div class="box-solution__head">     EXERCISE 49 </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(f\) and \(g\) be differentiable functions such that \(g(x) \ne 0.\)
         By applying the Product Rule and Chain Rule, verify the Quotient Rule 
         by differentiating \(f(x) \cdot [g(x)]^{-1}.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-49"> 
+        <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using the Product Rule for \(f(x) \cdot [g(x)]^{-1}\) gives the derivative to be 
         \[f'(x) [g(x)]^{-1} + f(x) \cdot \deriv{}{x} [g(x)]^{-1} \pd\]
         We use the Chain Rule to differentiate the last term, which becomes 
@@ -1543,25 +1514,25 @@
         \ea 
         \]
         which is the Quotient Rule.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-50"> 
-  <div class="box-solution__head">     EXERCISE 50 </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Given that \(\abs x = \sqrt{x^2},\)
         use the Chain Rule to show that 
         \[\deriv{}{x} \abs x = \frac{x}{\abs x} \pd\]
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-50"> 
+        <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By the Chain Rule, 
         \[
         \ba 
@@ -1572,23 +1543,23 @@
         \ea 
         \]
         as requested.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-51"> 
-  <div class="box-solution__head">     EXERCISE 51 </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Find the \(n\)th derivative of \(f(x) = e^{5x} \pd\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-51"> 
+        <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Let us write out a few derivatives, as follows:
         \[
         \ba 
@@ -1601,28 +1572,28 @@
         Every subsequent derivative is multiplied by \(5\).
         Thus, 
         \[f^{(n)}(x) = \boxed{5^n e^{5x}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-52"> 
-  <div class="box-solution__head">     EXERCISE 52 </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(x\) represent the measure of an angle in radians, 
         and let \(x \degree\) be the same measure in degrees.
         Show that 
         \[\deriv{}{x} \sin x \degree = \frac{\pi}{180} \cos x \degree \pd\]
         (<i>Note</i>: \(x \degree\) can be treated as a function of \(x.\)
         Thus, the Chain Rule is needed to differentiate the composite function \(\sin x \degree.\))
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-52"> 
+        <div class="box-solution__solution" id="solution-51"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         To convert from degrees to radians, we multiply the number of degrees by the conversion factor \(\pi/180.\)
         Thus, 
         \[
@@ -1645,26 +1616,26 @@
         Because differentiating functions that involve degrees requires 
         us to tack on the factor \(\pi/180,\)
         we typically perform all our calculations using radians for simplicity.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-53"> 
-  <div class="box-solution__head">     EXERCISE 53 </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(g\) be a function defined by 
         \[g(x) = (f \circ f \circ f)(x) \cma\]
         where \(f\) is a differentiable function.
         Determine an expression for \(g'(x).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-53"> 
+        <div class="box-solution__solution" id="solution-52"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The \(\circ\) symbols are an alternate notation for 
         \[g(x) = f(f(f(x))) \pd\]
         Using the Chain Rule, we first treat \(f(f(x))\)  
@@ -1677,16 +1648,16 @@
         &amp;= \boxed{f'(f(f(x))) \cdot f'(f(x)) \cdot f'(x)}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-54"> 
-  <div class="box-solution__head">     EXERCISE 54 </div> 
+</div><div id="exercise-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <figure class="spring-compress" id="spring-compress">
 <img alt="Figure 1" src="../images/sectionImages/spring-compress.jpg"/>
 </figure>
@@ -1709,12 +1680,12 @@
         This equation asserts that acceleration, caused by a restoring spring force, 
         varies directly with the distance between the block and its equilibrium position. 
         This relationship is called <b>Hooke's Law</b>.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-54"> 
+        <div class="box-solution__solution" id="solution-53"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Recall that acceleration is the second derivative of position with respect to time 
         (see Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>). 
         Thus, we differentiate \(x\) twice. 
@@ -1739,28 +1710,28 @@
         the previous step becomes 
         \[a = -\frac{k}{m} x \cma\]
         as requested.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-55"> 
-  <div class="box-solution__head">     EXERCISE 55 </div> 
+</div><div id="exercise-54"> 
+  <div class="box-solution__head">     EXERCISE 54 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(k\) be any constant and \(n\) be a positive integer.
         Consider the function \(f(x) = \sin kx.\)
         Write an expression for \(f^{(n)}(x)\)
         when \(n\) is even and when \(n\) is odd. 
         (<i>Hint</i>: The number \(-1\) becomes positive when raised to an even power 
         and negative when raised to an odd power.)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-55"> 
+        <div class="box-solution__solution" id="solution-54"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Recall that \(f^{(n)}(x)\) represents the \(n\)th derivative of \(f(x).\)
         To find the \(n\)th derivative of \(f,\)
         we write out some derivatives to identify a pattern. 
@@ -1774,7 +1745,7 @@
         \ea 
         \]
         <p>
-<label class="label-emph">Even \(n\)</label>
+<span class="label-emph">Even \(n\)</span>
             The second derivative of \(f\) has a negative sign, 
             but its fourth derivative has a positive sign. 
             Likewise, \(n = 6\) features a negative sign and \(n = 8\)
@@ -1785,7 +1756,7 @@
             \[f^{(n)}(x) = \boxed{(-1)^{n/2} k^n \sin kx \cma n \; \textrm{even}}\]
         </p>
 <p>
-<label class="label-emph">Odd \(n\)</label>
+<span class="label-emph">Odd \(n\)</span>
             The first derivative of \(f\) has a positive sign, 
             but its third derivative has a negative sign. 
             If we kept repeating the pattern, then 
@@ -1795,7 +1766,7 @@
             Thus, we have 
             \[f^{(n)}(x) = \boxed{(-1)^{1 + (n + 1)/2} k^n \sin kx \cma n \; \textrm{odd}}\]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 

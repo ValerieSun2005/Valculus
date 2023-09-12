@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.1 Exercise Solutions: Defining a Limit</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.1 Exercise Solutions — Defining a Limit</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="1.1-Defining-a-Limit.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.1-Defining-a-Limit-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Interpret the limit statement
+        \[\lim_{x \to a} f(x) = L \pd\]
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This limit statement asserts that the values of \(f(x)\) become 
+        and closer and closer to \(L\) as 
+        we make \(x\) closer and closer to \(a\)
+        but not equal to \(a.\)
+        In <b>arrow notation</b>, we can write \(f(x) \to L\) as \(x \to a.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f\) be a function that satisfies 
+        \[\lim_{x \to 3^-} f(x) = 5 \and \lim_{x \to 3^+} f(x) = -8 \pd\]
+        <ol class="list-alpha">
+<li>
+                Does \(\lim_{x \to 3} f(x)\) exist?
+            </li>
+<li>
+                What do these one-sided limits tell you about \(f(3) \ques\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+<b>No</b>, this limit does not exist. 
+                Since the one-sided limits of \(f\) at \(3\) do not equal each other, 
+                \(\lim_{x \to 3} f(x)\) does not exist.
+            </li>
+<hr/>
+<li>
+<b>Nothing</b>. The values of one-sided limits 
+                provide no information about the value of \(f(3)\)
+                or whether it exists. 
+                Limits only tell us <i>what number a function approaches</i>, 
+                not what value the function outputs.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        If \(\lim_{x \to -1} f(x) = 3,\) then evaluate 
+        the following expressions if possible.
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \lim_{x \to -1^-} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to -1^+} f(x)\)</span>
+</li>
+<li>
+<span>\(f(-1)\)</span>
+</li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                The statement \(\lim_{x \to -1} f(x) = 3\) is true if and only if 
+                the one-sided limits to \(f\) at \(-1\) also equal \(3.\)
+                Thus, 
+                \[\lim_{x \to -1^-} f(x) = \boxed 3\]
+            </li>
+<hr/>
+<li>
+                Since \(\lim_{x \to -1} f(x) = 3,\)
+                the one-sided limits to \(f\) at \(-1\) must also equal \(3.\)
+                So
+                \[\lim_{x \to -1^+} f(x) = \boxed 3\]
+            </li>
+<hr/>
+<li>
+<b>Impossible to evaluate</b>.
+                The value of \(\lim_{x \to -1} f(x)\)
+                is unrelated to the value of \(f(-1).\)
+                We only know that \(f(x)\) approaches \(3\) as \(x\) approaches \(-1,\)
+                but we don't know what value \(f\) takes on at \(3\)
+                or whether \(f(3)\) is defined.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="lim-graph-grid-ex-1" id="lim-graph-grid-ex-1">
+<img alt="Figure 1" src="../images/sectionImages/lim-graph-grid-ex-1.jpg"/>
+</figure>
+<style>
+            .lim-graph-grid-ex-1::before{
+                content:'FIGURE 1';
+            }
+        </style>
+        For the graph of \(y = f(x)\) in <a href="#lim-graph-grid-ex-1">Figure 1</a>, 
+        evaluate the following limits if they exist. 
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \lim_{x \to 6^-} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to -1^+} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 1} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 3} f(x)\)</span>
+</li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                We trace the graph of \(f\) from the left of \(x = 6.\)
+                For \(x\) near \(6\) and less than \(6,\)
+                the value of \(f(x)\) is constantly \(-1.\)
+                Accordingly, \(f(x) \to -1\) as \(x \to 6^-,\)
+                or 
+                \[\lim_{x \to 6^-} f(x) = \boxed{-1}\]
+            </li>
+<hr/>
+<li>
+                Tracing the graph of \(f\) from the right of \(x = -1,\)
+                we see that \(f(x)\) approaches the value \(2.\)
+                So 
+                \[\lim_{x \to -1^+} f(x) = \boxed 2\]
+            </li>
+<hr/>
+<li>
+                As we trace the graph of \(f\) from the <i>left</i> of \(x = 1,\)
+                we see \(f(x)\) approaches \(3.\)
+                Conversely, as we trace the graph of \(f\) from the <i>right</i> of \(x = 1,\)
+                we observe that \(f(x)\) tends to \(5.\)
+                So 
+                \[\lim_{x \to 1^-} f(x) = 3 \and \lim_{x \to 1^+} f(x) = 5 \pd\]
+                Since these one-sided limits do not equal each other, 
+                \(\lim_{x \to 1} f(x)\) <b>does not exist</b>.
+            </li>
+<hr/>
+<li>
+                Tracing \(f\) from the <i>left</i> of \(x = 3,\) 
+                we notice the value of \(f(x)\) approaching \(1.\)
+                But when we trace \(f\) from the <i>right</i> of \(x = 3,\)
+                we see \(f(x)\) approaching \(-1.\)
+                Accordingly, 
+                \[\lim_{x \to 3^-} f(x) = 1 \and \lim_{x \to 3^+} f(x) = -1 \pd\]
+                These one-sided limits don't agree with each other, meaning 
+                \(\lim_{x \to 3} f(x)\) <b>does not exist</b>.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="lim-graph-grid-ex-2" id="lim-graph-grid-ex-2">
+<img alt="Figure 2" src="../images/sectionImages/lim-graph-grid-ex-2.jpg"/>
+</figure>
+<style>
+            .lim-graph-grid-ex-2::before{
+                content:'FIGURE 2';
+            }
+        </style>
+        For the graph of \(y = f(x)\) in <a href="#lim-graph-grid-ex-2">Figure 2</a>, 
+        evaluate the following limits if they exist. 
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \lim_{x \to -1} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 6^-} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to -3} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 2} f(x)\)</span>
+</li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                If we trace the graph of \(f\) near \(x = -1,\)
+                then we see \(f(x)\) approaches \(1\)
+                from both sides of \(x = -1.\)
+                Therefore, 
+                \[\lim_{x \to -1} f(x) = \boxed 1\]
+            </li>
+<hr/>
+<li>
+                We trace the graph of \(f\) from the <i>left</i> of \(x = 6,\)
+                seeing that \(f(x)\) approaches \(-5.\)
+                Thus, 
+                \[\lim_{x \to 6^-} f(x) = \boxed{-5}\]
+            </li>
+<hr/>
+<li>
+                Tracing the graph of \(f\) from the <i>left</i> of \(x = -3,\)
+                we see \(f(x)\) approaches \(4.\)
+                Yet tracing the graph from the <i>right</i> of \(x = -3\)
+                shows \(f(x)\) approaching \(3.\)
+                Thus, 
+                \[\lim_{x \to -3^-} f(x) = 4 \and \lim_{x \to -3^+} f(x) = 3 \pd\]
+                Since these one-sided limits are not equivalent, \(\lim_{x \to -3} f(x)\)
+                <b>does not exist</b>. 
+            </li>
+<hr/>
+<li>
+                From the <i>left</i> of \(x = 2,\) \(f(x)\) approaches (roughly) \(5.5.\)
+                But from the <i>right</i> of \(x = 2,\) \(f(x)\) approaches \(1.\)
+                Accordingly, 
+                \[\lim_{x \to 2^-} f(x) = 5.5 \and \lim_{x \to 2^+} f(x) = 1 \pd\]
+                Because these limits don't agree with each other, 
+                \(\lim_{x \to 2} f(x)\) <b>does not exist</b>. 
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="lim-graph-grid-ex-3" id="lim-graph-grid-ex-3">
+<img alt="Figure 3" src="../images/sectionImages/lim-graph-grid-ex-3.jpg"/>
+</figure>
+<style>
+            .lim-graph-grid-ex-3::before{
+                content:'FIGURE 3';
+            }
+        </style>
+        Evaluate the following limits, if they exist, 
+        for the graph of \(y = f(x)\) in <a href="#lim-graph-grid-ex-3">Figure 3</a>.
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \lim_{x \to 4} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 2} f(x)\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to -1} f(x)\)</span>
+</li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                From both sides of \(x = 4,\) \(f(x)\) 
+                approaches \(-2.\)
+                Thus, 
+                \[\lim_{x \to 4} f(x) = \boxed{-2}\]
+            </li>
+<hr/>
+<li>
+                Because \(f(x)\) doesn't approach the same value 
+                as we trace the graph from the <i>left</i> of \(x = 2\) or as we trace from the <i>right</i> 
+                of \(x = 2,\) 
+                \(\lim_{x \to 2} f(x)\) <b>does not exist</b>.
+            </li>
+<hr/>
+<li>
+                The graph of \(f(x)\) oscillates as \(x\) approaches \(-1.\)
+                Through the endless waves, \(f\) does not settle to a final value 
+                as we make \(x\) close to \(-1.\)
+                So \(\lim_{x \to -1} f(x)\) <b>does not exist</b>.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        The function \(g\) is a piecewise function defined by 
+        \[g(x) = 
+        \bc 
+        6 &amp;x \leq 0 \nl 
+        5 &amp;x \gt 0 \pd
+        \ec  
+        \]
+        For what value of \(a\) does \(\lim_{x \to a} g(x)\) fail to exist?
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The limit \(\lim_{x \to a} g(x)\) fails to exist if the one-sided limits of \(g\) at \(a\) aren't equal—that is, if  
+        \[\lim_{x \to a^-} g(x) \ne \lim_{x \to a^+} g(x) \pd\]
+        We investigate \(x = 0,\) the point of the piecewise split.
+        As \(x\) approaches \(0\) from the <i>left</i> of \(x = 0,\)
+        \(g(x)\) approaches \(6.\)
+        So 
+        \[\lim_{x \to 0^-} g(x) = 6 \pd\]
+        But as \(x\) approaches \(0\) from the <i>right</i> of \(x = 0,\)
+        \(g(x)\) tends to \(5.\)
+        Accordingly, 
+        \[\lim_{x \to 0^+} g(x) = 5 \pd\]
+        Since these one-sided limits do not equal each other, \(\lim_{x \to 0} g(x)\)
+        does not exist, meaning \(\boxed{a = 0}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2} \par{x^2 - 3x + 2}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The table below shows selected values of \(f(x) = x^2 - 3x + 2\)
+        for \(x\) close to \(2\) on both sides.
+        <div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr>
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(f(x) = x^2 - 3x + 2\)
+                    </td>
+</tr>
+<tr>
+<td>\(1\)</td>
+<td>\(0\)</td>
+</tr>
+<tr>
+<td>\(1.5\)</td>
+<td>\(-0.25\)</td>
+</tr>
+<tr>
+<td>\(1.9\)</td>
+<td>\(-0.09\)</td>
+</tr>
+<tr>
+<td>\(1.99\)</td>
+<td>\(-0.0099\)</td>
+</tr>
+<tr>
+<td>\(1.999\)</td>
+<td>\(-0.000999\)</td>
+</tr>
+</table>
+<table class="table-vertical">
+<tr>
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(f(x) = x^2 - 3x + 2\)
+                    </td>
+</tr>
+<tr>
+<td>\(2.001\)</td>
+<td>\(0.001001\)</td>
+</tr>
+<tr>
+<td>\(2.01\)</td>
+<td>\(0.0101\)</td>
+</tr>
+<tr>
+<td>\(2.1\)</td>
+<td>\(0.11\)</td>
+</tr>
+<tr>
+<td>\(2.5\)</td>
+<td>\(0.75\)</td>
+</tr>
+<tr>
+<td>\(3\)</td>
+<td>\(2\)</td>
+</tr>
+</table>
+</div>
+        As \(x\) is made closer to \(2,\) the value of \(f(x)\) approaches \(0.\) So we guess that 
+        \[\lim_{x \to 2} \par{x^2 - 3x + 2} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 3} \frac{x^2 - 9}{x - 3}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = \frac{x^2 - 9}{x - 3}\)
+                    </td>
+</tr>
+<tr>
+<td>\(2\)</td>
+<td>\(5\)</td>
+</tr>
+<tr>
+<td>\(2.5\)</td>
+<td>\(5.5\)</td>
+</tr>
+<tr>
+<td>\(2.9\)</td>
+<td>\(5.9\)</td>
+</tr>
+<tr>
+<td>\(2.99\)</td>
+<td>\(5.99\)</td>
+</tr>
+<tr>
+<td>\(2.999\)</td>
+<td>\(5.999\)</td>
+</tr>
+</table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = \frac{x^2 - 9}{x - 3}\)
+                    </td>
+</tr>
+<tr>
+<td>\(3.001\)</td>
+<td>\(6.001\)</td>
+</tr>
+<tr>
+<td>\(3.01\)</td>
+<td>\(6.01\)</td>
+</tr>
+<tr>
+<td>\(3.1\)</td>
+<td>\(6.1\)</td>
+</tr>
+<tr>
+<td>\(3.5\)</td>
+<td>\(6.5\)</td>
+</tr>
+<tr>
+<td>\(4\)</td>
+<td>\(7\)</td>
+</tr>
+</table>
+</div>
+        From this table, we see that the values of \(f(x)\) approach \(6\)
+        as \(x \to 3.\)
+        Thus, we estimate 
+        \[\lim_{x \to 3} \frac{x^2 - 9}{x - 3} = \boxed 6\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 4} \par{3 \sqrt x + 2}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 3 \sqrt x + 2\)
+                    </td>
+</tr>
+<tr>
+<td>\(3\)</td>
+<td>\(7.1961524\)</td>
+</tr>
+<tr>
+<td>\(3.5\)</td>
+<td>\(7.6124861\)</td>
+</tr>
+<tr>
+<td>\(3.9\)</td>
+<td>\(7.9245253\)</td>
+</tr>
+<tr>
+<td>\(3.99\)</td>
+<td>\(7.9924953\)</td>
+</tr>
+<tr>
+<td>\(3.999\)</td>
+<td>\(7.99925\)</td>
+</tr>
+</table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 3 \sqrt x + 2\)
+                    </td>
+</tr>
+<tr>
+<td>\(4.001\)</td>
+<td>\(8.00075\)</td>
+</tr>
+<tr>
+<td>\(4.01\)</td>
+<td>\(8.0074953\)</td>
+</tr>
+<tr>
+<td>\(4.1\)</td>
+<td>\(8.074537\)</td>
+</tr>
+<tr>
+<td>\(4.5\)</td>
+<td>\(8.363961\)</td>
+</tr>
+<tr>
+<td>\(5\)</td>
+<td>\(8.7082039\)</td>
+</tr>
+</table>
+</div>
+        From this table, we see that \(f(x)\) tends to \(8\) 
+        as \(x\) is made closer to \(4.\)
+        Therefore, we estimate 
+        \[\lim_{x \to 4} \par{3 \sqrt x + 2} = \boxed 8\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 3} \par{2^x - 4}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 2^x - 4\)
+                    </td>
+</tr>
+<tr>
+<td>\(2\)</td>
+<td>\(0\)</td>
+</tr>
+<tr>
+<td>\(2.5\)</td>
+<td>\(1.6568542\)</td>
+</tr>
+<tr>
+<td>\(2.9\)</td>
+<td>\(3.4642639\)</td>
+</tr>
+<tr>
+<td>\(2.99\)</td>
+<td>\(3.94474\)</td>
+</tr>
+<tr>
+<td>\(2.999\)</td>
+<td>\(3.9944567\)</td>
+</tr>
+</table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 2^x - 4\)
+                    </td>
+</tr>
+<tr>
+<td>\(3.001\)</td>
+<td>\(4.0055471\)</td>
+</tr>
+<tr>
+<td>\(3.01\)</td>
+<td>\(4.0556444\)</td>
+</tr>
+<tr>
+<td>\(3.1\)</td>
+<td>\(4.5741877\)</td>
+</tr>
+<tr>
+<td>\(3.5\)</td>
+<td>\(7.3137085\)</td>
+</tr>
+<tr>
+<td>\(4\)</td>
+<td>\(12\)</td>
+</tr>
+</table>
+</div>
+        The table shows \(f(x)\) getting closer to \(4\) 
+        as \(x\) approaches \(3.\)
+        Therefore, we guess that 
+        \[\lim_{x \to 3} \par{2^x - 4} = \boxed 4\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -3} 3^{-x}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr>
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 3^{-x}\)
+                    </td>
+</tr>
+<tr>
+<td>\(-4\)</td>
+<td>\(81\)</td>
+</tr>
+<tr>
+<td>\(-3.5\)</td>
+<td>\(46.7653718\)</td>
+</tr>
+<tr>
+<td>\(-3.01\)</td>
+<td>\(27.2982607\)</td>
+</tr>
+<tr>
+<td>\(-3.001\)</td>
+<td>\(27.0296788\)</td>
+</tr>
+<tr>
+<td>\(-3.0001\)</td>
+<td>\(27.0029664\)</td>
+</tr>
+</table>
+<table class="table-vertical">
+<tr>
+<td class="label-cell">
+                        \(x\)
+                    </td>
+<td class="label-cell">
+                        \(\ds f(x) = 3^{-x}\)
+                    </td>
+</tr>
+<tr>
+<td>\(-2.9999\)</td>
+<td>\(26.9970339\)</td>
+</tr>
+<tr>
+<td>\(-2.999\)</td>
+<td>\(26.9703538\)</td>
+</tr>
+<tr>
+<td>\(-2.99\)</td>
+<td>\(26.7049981\)</td>
+</tr>
+<tr>
+<td>\(-2.5\)</td>
+<td>\(15.5884573\)</td>
+</tr>
+<tr>
+<td>\(-2\)</td>
+<td>\(9\)</td>
+</tr>
+</table>
+</div>
+        Hence, \(f(x) \to 27\) as \(x \to -3.\)
+        So we guess 
+        \[\lim_{x \to -3} 3^{-x} = \boxed{27}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -1} \frac{\abs{x + 1}}{x + 1}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+            \(x\)
+            </td>
+<td class="label-cell">
+            \(\ds f(x) = \frac{\abs{x + 1}}{x + 1}\)
+            </td>
+<tr>
+<tr>
+<td>\(-2\)</td>
+<td>\(-1\)</td>
+</tr>
+<tr>
+<td>\(-1.5\)</td>
+<td>\(-1\)</td>
+</tr>
+<tr>
+<td>\(-1.01\)</td>
+<td>\(-1\)</td>
+</tr>
+<tr>
+<td>\(-1.001\)</td>
+<td>\(-1\)</td>
+</tr>
+<tr>
+<td>\(-1.0001\)</td>
+<td>\(-1\)</td>
+</tr>
+</tr></tr></table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+            \(x\)
+            </td>
+<td class="label-cell">
+            \(\ds f(x) = \frac{\abs{x + 1}}{x + 1}\)
+            </td>
+<tr>
+<tr>
+<td>\(-0.9999\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>\(-0.999\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>\(-0.99\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>\(-0.5\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>\(0\)</td>
+<td>\(1\)</td>
+</tr>
+</tr></tr></table>
+</div>
+        Since \(f(x) = \abs{x + 1}/(x + 1)\) approaches 
+        \(-1\) as \(x \to -1^-\) 
+        but approaches \(1\) as \(x \to -1^+,\)
+        \[\lim_{x \to -1^-} f(x) = -1 \and \lim_{x \to -1^+} f(x) = 1 \pd\]
+        These one-sided limits do not equal each other, so we 
+        guess that \(\lim_{x \to -1} f(x)\) <b>does not exist</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{t \to 4} \frac{1}{\sqrt t}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+        \(t\)
+        </td>
+<td class="label-cell">
+        \(\ds f(t) = \frac{1}{\sqrt t}\)
+        </td>
+<tr>
+<tr>
+<td>\(3\)</td>
+<td>\(0.5773503\)</td>
+</tr>
+<tr>
+<td>\(3.5\)</td>
+<td>\(0.5345225\)</td>
+</tr>
+<tr>
+<td>\(3.99\)</td>
+<td>\(0.5006262\)</td>
+</tr>
+<tr>
+<td>\(3.999\)</td>
+<td>\(0.5000625\)</td>
+</tr>
+<tr>
+<td>\(3.9999\)</td>
+<td>\(0.5000063\)</td>
+</tr>
+</tr></tr></table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+        \(t\)
+        </td>
+<td class="label-cell">
+        \(\ds f(t) = \frac{1}{\sqrt t}\)
+        </td>
+<tr>
+<tr>
+<td>\(4.0001\)</td>
+<td>\(0.4999938\)</td>
+</tr>
+<tr>
+<td>\(4.001\)</td>
+<td>\(0.4999375\)</td>
+</tr>
+<tr>
+<td>\(4.01\)</td>
+<td>\(0.4993762\)</td>
+</tr>
+<tr>
+<td>\(4.5\)</td>
+<td>\(0.4714045\)</td>
+</tr>
+<tr>
+<td>\(5\)</td>
+<td>\(0.4472136\)</td>
+</tr>
+</tr></tr></table>
+</div>
+        We observe that \(f(t)\) tends to \(0.5,\) or \(1/2,\)
+        as \(t\) is made closer to \(4.\)
+        So we guess 
+        \[\lim_{t \to 4} \frac{1}{\sqrt t} = \boxed{\tfrac{1}{2}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{y \to 3} \frac{1}{y^2 - 4y + 1}\]
+     use a calculator to construct a table and estimate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<div class="table-vertical-adjacent">
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+            \(y\)
+            </td>
+<td class="label-cell">
+            \(\ds f(y) = \frac{1}{y^2 - 4y + 1}\)
+            </td>
+<tr>
+<tr>
+<td>\(2\)</td>
+<td>\(-0.3333333\)</td>
+</tr>
+<tr>
+<td>\(2.5\)</td>
+<td>\(-0.3636364\)</td>
+</tr>
+<tr>
+<td>\(2.99\)</td>
+<td>\(-0.495074\)</td>
+</tr>
+<tr>
+<td>\(2.999\)</td>
+<td>\(-0.4995007\)</td>
+</tr>
+<tr>
+<td>\(2.9999\)</td>
+<td>\(-0.49995\)</td>
+</tr>
+</tr></tr></table>
+<table class="table-vertical">
+<tr class="tall-row">
+<td class="label-cell">
+            \(y\)
+            </td>
+<td class="label-cell">
+            \(\ds f(y) = \frac{1}{y^2 - 4y + 1}\)
+            </td>
+<tr>
+<tr>
+<td>\(3.0001\)</td>
+<td>\(-0.50005\)</td>
+</tr>
+<tr>
+<td>\(3.001\)</td>
+<td>\(-0.5005008\)</td>
+</tr>
+<tr>
+<td>\(3.01\)</td>
+<td>\(-0.505076\)</td>
+</tr>
+<tr>
+<td>\(3.5\)</td>
+<td>\(-1.3333333\)</td>
+</tr>
+<tr>
+<td>\(4\)</td>
+<td>\(1\)</td>
+</tr>
+</tr></tr></table>
+</div>
+        The table shows that the values of \(f(y)\) get closer to 
+        \(-0.5,\) or \(-1/2,\) as \(y\) is made closer to \(3.\)
+        Accordingly, we guess
+        \[\lim_{y \to 3} \frac{1}{y^2 - 4y + 1} = \boxed{-\tfrac{1}{2}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} x^5\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x\) is allowed to grow without bound, the function \(x^5\) also grows without bound toward infinity. 
+        So 
+        \[\lim_{x \to \infty} x^5 = \boxed{\infty}\]
+        We could also say the limit <b>does not exist</b>. 
+        But writing infinity implies this while describing <i>why</i> the limit doesn't exist. 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \frac{1}{x^3}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If we make \(x\) larger and larger, then \(x^3\) grows to infinity. 
+        So the fraction \(1/x^3\) becomes smaller and smaller, approaching \(0,\)
+        because \(1\) is divided by an increasingly large number. 
+        Thus, 
+        \[\lim_{x \to \infty} \frac{1}{x^3} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} x^{-4}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We rewrite the expression as \(1/x^4.\)
+        If we make \(x\) larger and larger, then \(x^4\) grows to infinity. 
+        So the fraction \(1/x^4\) becomes smaller and smaller, approaching \(0,\)
+        because \(1\) is divided by an increasingly large number. 
+        Thus, 
+        \[\lim_{x \to \infty} x^{-4} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \cos x\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The limit of any trigonometric function as \(x \to \infty\) 
+        does not exist:
+        Graphs of trigonometric functions are periodic, repeating themselves in regular intervals. 
+        Accordingly, \(\cos x\) continually oscillates and never settles to a final value as \(x \to \infty,\)
+        meaning \(\lim_{x \to \infty} \cos x\) <b>does not exist</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \sin(2x - 4)\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The limit of any trigonometric function as \(x \to \infty\) 
+        does not exist:
+        Graphs of trigonometric functions are periodic, repeating themselves in regular intervals. 
+        Thus, \(\sin(2x - 4)\) continually oscillates and never settles to a final value as \(x \to \infty.\)
+        So \(\lim_{x \to \infty} \sin(2x - 4)\) <b>does not exist</b>.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 4^-} \frac{\abs{x - 4}}{x - 4}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        For \(x \lt 4,\) the quantity \((x - 4)\) is negative. 
+        Accordingly, over this interval \(\abs{x - 4}\) \(= -(x - 4),\)
+        meaning 
+        \[\frac{\abs{x - 4}}{x - 4} = \frac{-(x - 4)}{x - 4} = -1 \pd\]
+        Thus, as we trace the graph from the left of \(x = 4,\)
+        we simply trace the flat line \(y = -1,\) so 
+        \[\lim_{x \to 4^-} \frac{\abs{x - 4}}{x - 4} = \boxed{-1}\]
+        If you substitute any \(x \lt 4\) (<span class="warning">but \(x \ne 4\)</span>) 
+        into the fraction—for example, \(x = 3.5\) or \(x = 3.9\)—then 
+        you see that \(\abs{x - 4}/(x - 4) = -1.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 6^+} \frac{\abs{x - 6}}{x - 6}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol> 
+        For \(x \gt 6,\) the quantity \((x - 6)\) is positive. 
+        Thus, over this interval \(\abs{x - 6}\) \(= x - 6,\)
+        meaning 
+        \[\frac{\abs{x - 6}}{x - 6} = \frac{x - 6}{x - 6} = 1 \pd\]
+        If we trace the graph of \(\abs{x - 6}/(x - 6)\) from the right of \(x = 6,\)
+        then we are simply tracing the flat line \(y = 1.\) 
+        So 
+        \[\lim_{x \to 6^+} \frac{\abs{x - 6}}{x - 6} = \boxed{1}\]
+        If you substitute any \(x \gt 6\) (<span class="warning">but \(x \ne 6\)</span>) 
+        into the fraction—for example, \(x = 6.5\) or \(x = 6.1\)—then 
+        you see that \(\abs{x - 6}/(x - 6) = 1.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} 2^{-x}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If we write 
+        \[2^{-x} = \frac{1}{2^x} \cma\]
+        then we see \(2^x\) grows to infinity as \(x\) increases without bound. 
+        Accordingly, the fraction \(1/2^x\) decays to \(0\) since \(1\) 
+        is divided by an increasingly big number. 
+        This logic justifies that 
+        \[\lim_{x \to \infty} 2^{-x} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{u \to \infty} \frac{u}{2u^2}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We simplify the expression:
+        \[\frac{u}{2u^2} = \frac{1}{2u} \pd\]
+        Thus, as \(u \to \infty\) the expression \(2u\) also goes to infinity. 
+        So the fraction \(1/2u\) tends to \(0\) because \(1\) is divided by an 
+        increasingly large number. 
+        Thus, 
+        \[\lim_{u \to \infty} \frac{u}{2u^2} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 3^-} \frac{\abs{3x - 9}}{3 - x}\]
+     determine the exact value of the limit or justify why it does not exist. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol> 
+        For \(x \lt 3,\) the quantity \((3x - 9)\) is negative.
+        To eliminate the absolute value bars, we write  
+        \(\abs{3x - 9}\) \(= -(3x - 9)\) for \(x \lt 3,\)
+        so 
+        \[
+        \ba 
+        \frac{\abs{3x - 9}}{3 - x} &amp;= \frac{-(3x - 9)}{3 - x} \nl 
+        &amp;= \frac{9 - 3x}{3 - x} \nl 
+        &amp;= 3 \cdot \frac{3 - x}{3 - x} \nl 
+        &amp;= 3 \pd
+        \ea 
+        \]
+        Thus, the function \(\abs{3x - 9}/(3 - x)\) constantly 
+        evaluates to \(3\) for \(x \lt 3.\)
+        Therefore,
+        \[\lim_{x \to 3^-} \frac{\abs{3x - 9}}{3 - x} = \boxed 3\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

@@ -49,16 +49,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         How do we define an <b>infinite series</b>?
         When does an infinite series <b>converge</b>, 
         and when does one <b>diverge</b>?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We define an <b>infinite series</b>
         as the limit of a partial sum as its number of terms increases. 
         Namely, we define the infinite series \(\sum_{n = 1}^\infty a_n\)
@@ -68,7 +68,7 @@
         The sum \(\sum_{n = 1}^\infty a_n\) <b>converges</b>
         if the limit exists but <b>diverges</b>
         if the limit does not exist.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -77,19 +77,19 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         State the <b>Divergence Test</b>. 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The <b>Divergence Test</b> enables us to determine whether a series diverges. 
         The series \(\sum_{n = 1}^\infty a_n\) 
         diverges if \(\lim_{n \to \infty} a_n \ne 0.\)
         But the test is inconclusive if the limit equals \(0\) or does not exist.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -105,12 +105,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We see 
         \[\lim_{n \to \infty} \frac{2n^2}{5n^2 + 11n - 7} = \frac{2}{5} \pd\]
         This limit doesn't equal \(0,\) 
         so the Divergence Test states that the series <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -126,12 +126,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The function \(\cos n\) oscillates continually as \(n \to \infty,\)
         never settling to any final value. 
         The limit \(\lim_{n \to \infty} \cos n\) therefore does not exist. 
         So the Divergence Test asserts that the sum <b>diverges</b>. 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -147,7 +147,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the series as 
         \[\sum_{n = 1}^\infty \par{\frac{e}{3}}^n \pd\]
         Then  
@@ -157,7 +157,7 @@
         Because this limit is \(0,\) 
         the Divergence Test is 
         <b>inconclusive</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -173,13 +173,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The sum can be expressed in summation notation as 
         \[\sum_{n = 0}^\infty 2 \par{\frac{1}{4}}^n \pd\]
         We see 
         \[\lim_{n \to \infty} 2 \par{\frac{1}{4}}^n = \lim_{n \to \infty} \frac{2}{4^n} = 0 \pd\]
         Thus, the Divergence Test is <b>inconclusive</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -195,12 +195,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Factorials grow faster than do exponential functions. 
         Thus, 
         \[\lim_{n \to \infty} \frac{n!}{n^{1234567890}} = \infty \pd\]
         Since this limit doesn't equal \(0,\) the sum <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -216,7 +216,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This series has common ratio \(r = 1/2.\) 
         Since \(|r| \lt 1,\) the sum converges.
         The series starts at \(n = 0,\) so the first term is \((1/2)^0 = 1.\)
@@ -224,7 +224,7 @@
         \[
         \frac{1}{1 - \tfrac{1}{2}} = \boxed{2}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -240,13 +240,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We find the common ratio to be \(r = 2/3.\)
         The magnitude of \(r\) is less than \(1,\) so the infinite geometric series is convergent. 
         The first term in the sum is \((2/3)^1 = 2/3.\)
         Thus, the sum is 
         \[\frac{2/3}{1 - \tfrac{2}{3}} = \boxed{2}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -262,7 +262,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         At first glance, the series does not appear to be geometric.
         But we rewrite the series as 
         \[3 \sum_{n = 0}^\infty \par{\frac{1}{5}}^n \cma \]
@@ -270,7 +270,7 @@
         The first term in the series is \(3 \par{1/5}^0 = 3.\)
         Thus, the sum of the series is 
         \[\frac{3}{1 - \tfrac{1}{5}} = \boxed{\frac{15}{4}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -286,12 +286,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the series as 
         \[\sum_{n = 0}^\infty \frac{5^n}{e^n \, e} = \frac{1}{e} \sum_{n = 0}^\infty \par{\frac{5}{e}}^n \pd\]
         The common ratio is \(r = 5/e,\) which is greater than \(1.\)
         Therefore, the series <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -307,11 +307,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We identify the series as geometric with common ratio \(r = -1/5.\)
         The first term is \(3,\) so the sum is 
         \[\frac{3}{1 + \tfrac{1}{5}} = \boxed{\frac{5}{2}}\] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -327,10 +327,10 @@
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This series is geometric with common ratio \(r = \pi.\)
         Because \(r \gt 1,\) the series <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -346,7 +346,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the sum either as  
         \[5\sum_{n = 2}^\infty \left(\frac{1}{4} \right)^n \]
         or 
@@ -355,7 +355,7 @@
         \]
         In either case we get  
         \[\frac{5/16}{1 - \frac{1}{4}} = \boxed{\frac{5}{12}} \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -371,11 +371,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because 
         \[\lim_{n \to \infty} n^2 = \infty \ne 0 \cma\]
         this series <b>diverges</b> by the Divergence Test.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -391,7 +391,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using exponent properties, we rewrite the sum as 
         \[ 
         \ba 
@@ -401,7 +401,7 @@
         &amp;= \boxed{\frac{3}{4}}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -417,7 +417,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the series as 
         \[\sum_{n = 0}^\infty \frac{e^n \, e^3}{\pi^n} = e^3 \sum_{n = 0}^\infty \par{\frac{e}{\pi}}^n \cma\]
         a geometric series with common ratio \(r = e/\pi.\)
@@ -425,7 +425,7 @@
         The first term of the series is \(e^3 \par{e/\pi}^0 = e^3.\)
         Thus, the sum becomes
         \[\frac{e^3}{1 - \tfrac{e}{\pi}} = \boxed{\frac{\pi e^3}{\pi - e}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -441,7 +441,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         When the summation function is a rational function, 
         the sum may be <b>telescoping</b>. 
         We perform partial fraction decomposition;
@@ -481,7 +481,7 @@
         Thus, \(S_N = 1 - 1/N.\)
         Accordingly, 
         \[\sum_{n = 2}^\infty \frac{1}{n^2 - n} = \lim_{N \to \infty} S_N = \lim_{N \to \infty} \par{1 - \frac{1}{N}} = \boxed 1\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -497,11 +497,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because 
         \[\lim_{n \to \infty} \frac{n^3 + 2}{4n^2 - 1} = \infty \ne 0 \cma\]
         this series <b>diverges</b> by the Divergence Test.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -517,7 +517,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The sum may be <b>telescoping</b> because we see a rational expression.
         We perform partial fraction decomposition 
         (to review, see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>). 
@@ -556,7 +556,7 @@
         and so 
         \[\sum_{n = 0}^\infty \frac{3}{n^2 + 9n + 20} = \lim_{N \to \infty} S_N 
         = \lim_{N \to \infty} \par{\frac{3}{4} - \frac{3}{N + 5}} = \boxed{\frac{3}{4}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -572,7 +572,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The sum may be <b>telescoping</b> because we see a rational expression.
         We perform partial fraction decomposition.
         (For a review, see Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>.)
@@ -612,7 +612,7 @@
         \]
         As \(N \to \infty,\) 
         \[S_N \to 1 + \frac{1}{2} + \frac{1}{3} = \boxed{\frac{11}{6}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -628,12 +628,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The series is equivalent to 
         \[\sum_{n = 0}^\infty \frac{2^{3n} \cdot 2^{-1}}{7^n} = \frac{1}{2} \sum_{n = 0}^\infty \frac{8^n}{7^n} \pd\]
         We identify that the common ratio is \(r = 8/7.\)
         Since \(r \gt 1,\) the series <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -649,12 +649,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We rewrite the series as 
         \[\sum_{n = 0}^\infty \frac{25^n}{e^n \cdot e} \pd\]
         We see that the common ratio is \(r = 25/e,\) which is greater than \(1.\)
         Therefore, the series <b>diverges</b>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -670,7 +670,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         If you find it difficult to identify the common ratio of a known geometric series, 
         then you may divide a term by its preceding term. 
         For example, dividing the second term by the first term shows  
@@ -679,7 +679,7 @@
         \[
         \frac{2/3}{1 - \par{-\tfrac{e}{3}}} = \boxed{\frac{2}{3 + e}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -695,14 +695,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The common ratio \(5k\) must be within \((-1, 1)\)
         for the infinite series to converge.
         We therefore find 
         \[
         \abs{5k} \lt 1 \arrowTwoWay \boxed{-\tfrac{1}{5} \lt k \lt \tfrac{1}{5}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -718,13 +718,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We identify the common ratio to be \(r = 2k/3.\)
         For convergence, we require \(-1 \lt r \lt 1,\) so the series converges for 
         \[
         \boxed{-\tfrac{3}{2} \lt \; k \lt \tfrac{3}{2}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -740,14 +740,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The common ratio \(3 + 7k\) must be within \((-1, 1)\)
         for the infinite series to converge.
         We therefore find 
         \[
         \abs{3 + 7k} \lt 1 \arrowTwoWay -1 \lt 3 + 7k \lt 1 \arrowTwoWay \boxed{-\tfrac{4}{7} \lt k \lt -\tfrac{2}{7}}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -763,13 +763,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Rewriting the series as 
         \[\sum_{n = 0}^\infty \frac{k^n}{3^n \, 3^2} = \frac{1}{3^2} \sum_{n = 0}^\infty \par{\frac{k}{3}}^n \cma\]
         we find the common ratio to be \(r = k/3.\)
         We need \(-1 \lt r \lt 1,\) so the series converges for 
         \[\boxed{-3 \lt k \lt 3}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -785,13 +785,13 @@
         <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The series representation of the repeating decimal \(0.444 \dots\) is 
         \[\frac{4}{10} \par{1 + \frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \cdots} \cma\]
         a geometric series of common ratio \(r = 1/10.\)
         The first term of the series is \(4/10,\) so the sum is 
         \[\frac{4/10}{1 - \tfrac{1}{10}} = \boxed{\frac{4}{9}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -807,7 +807,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We express the decimal as \(4 + 0.333 \dots.\)
         We write the latter term as 
         \[3 \par{\frac{1}{10} + \frac{1}{100} + \frac{1}{1000} + \cdots} \pd\]
@@ -816,7 +816,7 @@
         \[\frac{3/10}{1 - \tfrac{1}{10}} = \frac{1}{30} = \frac{1}{3} \pd\]
         We add this value to \(4\) to obtain 
         \[4 + \frac{1}{3} = \boxed{\frac{13}{3}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -832,7 +832,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We represent the repeating decimal as follows:
         \[
         \ba
@@ -844,7 +844,7 @@
         &amp;= \boxed{\frac{11}{90}}\nl
         \ea
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -860,7 +860,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We attain 
         \[
         \ba 
@@ -872,7 +872,7 @@
         &amp;= \boxed{\frac{577}{900}}\nl
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -888,7 +888,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         A series representation is as follows:
         \[
         \begin{aligned}
@@ -900,7 +900,7 @@
         &amp;= \boxed{\frac{23}{30}}\nl
         \end{aligned}
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -916,7 +916,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The repeating decimal is the same as \(5.3 + 0.0\overline{2}.\)
         We express \(0.0\overline{2}\) as 
         \[2\par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma \]
@@ -926,7 +926,7 @@
         The decimal \(5.3\) is \(5 + 3/10\) \(= 53/10.\)
         The repeating decimal \(5.3\overline{2}\) is then 
         \[\frac{53}{10} + \frac{1}{45} = \boxed{\frac{479}{90}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -942,7 +942,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Note that the decimal is equivalent to \(2.8 + 0.0\overline{5}.\)
         We write \(0.0\overline{5}\) as 
         \[5 \par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma\]
@@ -952,7 +952,7 @@
         We write \(2.8\) as \(28/10 = 14/5,\) 
         so \(2.8\overline{5}\) equals 
         \[\frac{14}{5} + \frac{1}{18} = \boxed{\frac{257}{90}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -968,7 +968,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We split the decimal as \(4.6 + 0.0\overline{7}.\)
         The piece \(0.0\overline{7}\) is equivalent to 
         \[7 \par{\frac{1}{100} + \frac{1}{1000} + \frac{1}{10000} + \cdots} \cma\]
@@ -977,7 +977,7 @@
         \[\frac{7/100}{1 - \tfrac{1}{10}} = \frac{7}{90} \pd\]
         We add this value to \(4.6 = 46/10,\) getting 
         \[\frac{46}{10} + \frac{7}{90} = \boxed{\frac{421}{90}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -986,7 +986,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Consider the two infinite geometric series 
         \[S = \sum_{n = 1}^\infty \frac{1}{9^n} \and T = \sum_{n = 0}^\infty (-1)^n \, \frac{e^n}{5^n} \pd\]
         <ol class="list-alpha">
@@ -1001,12 +1001,12 @@
                 Evaluate \(ST.\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 We rewrite the series as 
@@ -1038,7 +1038,7 @@
                 \[ST = \par{\frac{1}{8}} \par{\frac{5}{5 + e}} = \boxed{\frac{5}{40 + 8e}}\] 
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1047,7 +1047,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The series \(\sum_{n = 1}^\infty a_n\) converges to \(S.\)
         Let \(c\) be a positive integer.
         Decide whether each of the following series converges or diverges. 
@@ -1062,12 +1062,12 @@
                 \(c \sum_{n = 1}^\infty a_n\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 Adding a finite number \(c\) to \(S\) results in a finite number.
@@ -1085,7 +1085,7 @@
                 So this series <b>converges</b>.
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1094,20 +1094,20 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> If \(\lim_{n \to \infty} a_n = 0,\) 
+            <ques>
+<span class="true-or-false"></span> If \(\lim_{n \to \infty} a_n = 0,\) 
         then \(\sum a_n\) converges.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>false</b>. 
         The Divergence Test asserts that \(\sum a_n\) <i>diverges</i>
         if \(\lim_{n \to \infty} a_n \ne 0;\)
         the test gives no information when \(\lim_{n \to \infty} = 0.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1116,20 +1116,20 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> If \(\{a_n\}\) 
+            <ques>
+<span class="true-or-false"></span> If \(\{a_n\}\) 
         diverges, then \(\sum a_n\) also diverges.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-40"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>true</b>. 
         If \(\{a_n\}\) diverges, then \(\lim_{n \to \infty} a_n\) does not exist. 
         The Divergence Test states that \(\sum a_n\) <i>diverges</i>
         if \(\lim_{n \to \infty} a_n \ne 0.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1138,15 +1138,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> If \(\{a_n\}\) 
+            <ques>
+<span class="true-or-false"></span> If \(\{a_n\}\) 
         converges, then \(\sum a_n\) also converges.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>false</b>. 
         If \(\{a_n\}\) converges, then \(\lim_{n \to \infty} a_n\) 
         equals a finite value. 
@@ -1161,7 +1161,7 @@
         But the sum 
         \[1 + 1 + 1 + \cdots\]
         diverges.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1170,21 +1170,21 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> Adding or subtracting two convergent 
+            <ques>
+<span class="true-or-false"></span> Adding or subtracting two convergent 
         series results in a convergent series.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>true</b>. 
         If two series converge, then the limits of their partial sums are existent. 
         The limit of a sum is the sum of limits,
         and the limit of a difference is the difference of limits. 
         Hence, the partial sums of the combination of series settle to a final value.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1193,15 +1193,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> Adding or subtracting two divergent 
+            <ques>
+<span class="true-or-false"></span> Adding or subtracting two divergent 
         series gives a divergent series.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>false</b>. 
         Consider the functions 
         \[a_n = n \and b_n = -n \pd\]
@@ -1212,7 +1212,7 @@
         so the sum is convergent. 
         In fact, this premise allows us to consider telescoping series, in which we subtract 
         terms of otherwise divergent series to attain a finite sum.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1221,22 +1221,22 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="true-or-false"></label> If \(\sum a_n\) and \(\sum b_n\)
+            <ques>
+<span class="true-or-false"></span> If \(\sum a_n\) and \(\sum b_n\)
         both diverge, then \(\sum [a_n b_n]\) is divergent.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         This statement is <b>false</b>. 
         Consider 
         \[a_n = b_n = \frac{1}{n} \pd\]
         Then \(\sum (1/n)\) diverges because it is the Harmonic Series; but 
         \(a_n b_n = 1/n^2,\)
         and \(\sum (1/n^2)\) happens to converge. 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1245,17 +1245,17 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let 
         \[S = \sum_{n=2}^{\infty} \left(\frac{k^2 + 1}{5}\right)^n \period \]
         Find the values of \(k\) for which \(S\) converges. 
         Then determine the value \(S\) in terms of \(k.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The common ratio of the series is \(r = (k^2 + 1)/5.\)
         The series converges if \(|r| \lt 1.\)
         Since \((k^2 + 1)/5\) is positive for all \(k,\) we find 
@@ -1276,7 +1276,7 @@
         &amp;= \boxed{\frac{(k^2+1)^2}{25-5(k^2+1)}}
         \ea   
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1285,16 +1285,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(k\) be any real number. 
         In terms of \(k,\) find the value of 
         \[\sum_{n = 1}^\infty \frac{k}{n^2 + n} \pd\]
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Performing partial fraction decomposition reveals that 
         \[\frac{k}{n^2 + n} = \frac{k}{n} - \frac{k}{n + 1} \pd\]
         Consider the partial sum 
@@ -1309,7 +1309,7 @@
         \]
         Thus, 
         \[\sum_{n = 1}^\infty \frac{k}{n^2 + n} = \lim_{N \to \infty} \par{k - \frac{k}{N + 1}} = \boxed k\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1318,7 +1318,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Consider the family of sums 
         \[S = \sum_{n = 1}^\infty a_n + \sum_{n = 1}^\infty b_n \pd\]
         <ol class="list-alpha">
@@ -1335,12 +1335,12 @@
                 and \(S\) converges. 
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 If \(a_n = n\) and \(b_n = n,\) then both 
@@ -1374,7 +1374,7 @@
                 represent <i>one</i> satisfactory option. 
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1383,16 +1383,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         A bouncy ball is dropped from \(100\) feet.
         Each time the ball hits the floor, it rebounds to one-third of the height from which it fell. 
         What is the total vertical distance the ball travels?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         When the ball is initially dropped, it travels \(100\) feet. 
         On the first rebound, it travels up \(100/3\) feet before falling back down \(100/3\) feet—thus 
         traveling a distance of \(200/3\) feet. 
@@ -1403,7 +1403,7 @@
         \[\frac{200/3}{1 - \tfrac{1}{3}} = 100 \un{feet}.\]
         Since the ball was initially dropped from \(100 \un{feet},\)
         the total distance the ball travels is \(\boxed{200 \un{feet}.}\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1412,7 +1412,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         In physics, the <b>coefficient of restitution</b> measures an object's ability to bounce.
         If an object is dropped from a height \(H\) and rebounds to a height \(h,\) then 
         its coefficient of restitution is  
@@ -1427,12 +1427,12 @@
                 What is the total vertical distance traveled by the ball?
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 The coefficient of restitution is 
@@ -1454,7 +1454,7 @@
                 \]
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1463,18 +1463,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Suppose that a country's citizens, on average, spend \(70\) percent of their income and save \(30\) percent.
         Because money changes hands indefinitely, the government can spend \(x\) dollars to generate  
         \[x + 0.7x + (0.7)^2 x + (0.7)^3 x + \cdots\]
         dollars of economic activity. 
         How much money must the government spend to generate \(\$60\) billion of economic activity?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We must solve for \(x\) in 
         \[x + 0.7x + (0.7)^2x + (0.7)^3 x + \cdots = 60 \pd\]
         (For simplicity we let \(x\) be in billions.)
@@ -1483,7 +1483,7 @@
         \[\frac{x}{1 - 0.7} = 60 \pd\]
         Thus, 
         \[x = 60(0.3) = \boxed{\$18 \; \textrm{billion}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1492,7 +1492,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         When banks provide loans, a country's money supply increases.
         Banks loan money to other banks, 
         but banks are required to hold a certain proportion—called the 
@@ -1522,12 +1522,12 @@
                 Calculate and interpret \(\lim_{R \to 0^+} M.\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-51"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 The total money produced is the sum of lent money:
@@ -1557,7 +1557,7 @@
                 during times of recession, overall economic activity is slowed and so fewer bank transactions are seen.
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1566,7 +1566,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(c\) be any real number, and consider the series \(\sum_{n = 1}^\infty a_n.\)
         <ol class="list-alpha">
 <li>
@@ -1578,12 +1578,12 @@
                 also diverges.
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-52"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 Let \(T = c\sum_{n = 1}^\infty a_n,\)
@@ -1594,7 +1594,7 @@
                 Thus, 
                 \[T = \lim_{N \to \infty} T_N = \lim_{N \to \infty} c \sum_{i = 1}^N a_i \pd\]
                 By the Constant Multiple Law of Limits 
-                (from Section <a href="/Valculus/calculus/1.1-Limit-Properties.html">1.1</a>), we have 
+                (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>), we have 
                 \[T = c \lim_{N \to \infty} \sum_{i = 1}^N a_i \pd\]
                 Since \(\sum_{n = 1}^\infty a_n\) converges to \(S,\) \(T\)
                 approaches \(cS\) as \(N \to \infty\) and so \(T\) converges.
@@ -1613,7 +1613,7 @@
                 so \(c \sum_{n = 1}^\infty a_n\) is divergent.
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1622,16 +1622,17 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
+<!--[[[HARD]]]-->
         An infinite geometric series converges to a positive value \(S.\)
         If the second term in the series is \(2,\)
         then what is the smallest possible value of \(S \ques\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-53"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Because the second term of the series is \(2,\)
         the first term must be \(2/r\) where \(r\) is the common ratio. 
         Thus, we express \(S\) as 
@@ -1642,7 +1643,7 @@
         This value corresponds to an absolute minimum of \(S.\)
         Accordingly, 
         \[S_{\text{min}} = \frac{2}{\frac{1}{2} - \par{\frac{1}{2}}^2} = \frac{2}{1/4} = \boxed 8\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 

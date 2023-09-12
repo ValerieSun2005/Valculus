@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.6 Exercise Solutions: Limits with Infinity</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.6 Exercise Solutions — Limits with Infinity</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="1.6-Limits-with-Infinity.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.6-Limits-with-Infinity-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Define a <b>vertical asymptote</b> 
+        and a <b>horizontal asymptote</b>.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The vertical line \(x = p\) is a <b>vertical asymptote</b> of 
+        a function \(f\) if the graph of \(f(x)\) approaches \(\pm \infty\) from 
+        one or both sides of the line \(x = p.\)
+        Conversely, a <b>horizontal asymptote</b> 
+        is a horizontal line to which \(f(x)\) approaches as \(x \to \infty\) or \(x \to -\infty.\)
+        A graph may have up to two horizontal asymptotes, but a graph can have infinitely many vertical asymptotes.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="graph-lim-inf-exercise" id="graph-lim-inf-exercise">
+<img alt="Figure 1" src="../images/sectionImages/graph-lim-inf-exercise.jpg"/>
+</figure>
+<style>
+            .graph-lim-inf-exercise::before{
+                content:'FIGURE 1';
+            }
+        </style>
+        Answer the following questions about the graph of \(y = f(x)\) in <a href="#graph-lim-inf-exercise">Figure 1</a>.
+        <ol class="list-alpha">
+<li>
+                Find \(\lim_{x \to 1^-} f(x)\) and \(\lim_{x \to 1^+} f(x).\)
+            </li>
+<li>
+                Where does the graph of \(f\) have a vertical asymptote?
+            </li>
+<li>
+                Determine the horizontal asymptotes of the graph of \(f.\)
+            </li>
+<li>
+                Describe the end behavior of \(f(x).\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                From the left of \(x = 1,\) the graph of \(f\) runs down toward negative infinity.
+                Hence, \(\lim_{x \to 1^-} f(x) = \boxed{-\infty}.\)
+                Conversely, from the right of \(x = 1\) the graph runs up to positive infinity.
+                Thus, \(\lim_{x \to 1^+} f(x) = \boxed{\infty}.\)
+            </li>
+<hr/>
+<li>
+                The function \(f\) has a <b>vertical asymptote</b> at \(\boxed{x = 1}\)
+                because the graph approaches \(\pm \infty\) from at least one 
+                side of the line \(x = 1.\)  
+            </li>
+<hr/>
+<li>
+                The graph of \(f\) has a <b>horizontal asymptote</b>
+                if \(f(x)\) approaches a fixed value as \(x \to \infty\) or \(x \to -\infty.\)
+                As \(x \to \infty,\) \(f(x) \to -3;\)
+                as \(x \to -\infty,\) \(f(x) \to 2.\)
+                Thus, the horizontal asymptotes of \(f\) are \(\boxed{y = -3}\)
+                and \(\boxed{y = 2}.\)
+            </li>
+<hr/>
+<li>
+                The <b>end behavior</b> of \(f\) describes how \(f(x)\) behaves as \(x \to \infty\)
+                and as \(x \to -\infty.\)
+                The end behavior is as follows: 
+                \(f(x)\) approaches \(-3\) as \(x\) approaches infinity and \(2\) as \(x\)
+                approaches negative infinity. 
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \frac{3x - 1}{x + 3}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        To evaluate the limit of a rational expression as its input approaches infinity, 
+        we consider the limit of solely the highest-degree terms.
+        Hence, we see 
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{3x - 1}{x + 3} &amp;= \lim_{x \to \infty} \frac{3x}{x} \nl 
+        &amp;= \lim_{x \to \infty} \frac{3}{1} \nl 
+        &amp;= \boxed 3
+        \ea 
+        \]
+        Alternatively, you could divide each term by the overall highest-degree term, \(x,\)
+        and take the limit
+        to attain the same result.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \frac{1 - x^2}{2x^2 + x}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x \to -\infty,\) only the highest-degree terms are relevant. 
+        The limit therefore becomes 
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{-x^2}{2x^2} &amp;= \lim_{x \to -\infty} \frac{-1}{2} \nl 
+        &amp;= \boxed{-\frac{1}{2}}
+        \ea 
+        \]
+        Or you could divide each term by the overall highest-degree term, \(x^2,\)
+        to evaluate the limit to get the same result \(-1/2.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{u \to \infty} \frac{4 - u^3}{8 + 2u^4}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(u \to \infty,\) the value of the rational expression is driven only 
+        by the highest-degree terms; we neglect all the lower-order terms. 
+        The limit is therefore equivalent to
+        \[
+        \ba 
+        \lim_{u \to \infty} \frac{-u^3}{2u^4} &amp;= \lim_{u \to \infty} \frac{-1}{2u} \nl 
+        &amp;= \boxed 0
+        \ea 
+        \]
+        Alternatively, we could have immediately noticed that the degree of the denominator is 
+        greater than the degree of the numerator;
+        when this is true, the rational expression approaches \(0\) as \(u \to \infty.\)
+        You could also divide everything by the overall highest-degree term, \(u^4,\)
+        and take the limit to attain the same result.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \frac{4x^3 + 2x^2 - 3}{1 - x^2}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This limit is equivalent to a limit in which the lower-degree terms are stripped—namely,
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{4x^3}{-x^2} &amp;= \lim_{x \to \infty} -4x \nl 
+        &amp;= \boxed{-\infty}
+        \ea 
+        \]
+        This result is logical: The degree of the numerator is greater than the degree of the denominator.
+        Hence, the numerator grows faster than the denominator, driving the rational expression toward an infinite value.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \frac{x - \sqrt x}{4x + 2}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The term \(\sqrt x\) seems unorthodox, but you can rewrite it as \(x^{1/2}.\)
+        We remove all the lower-degree terms from the rational expression; we have 
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{x}{4x} &amp;= \lim_{x \to \infty} \frac{1}{4} \nl 
+        &amp;= \boxed{\frac{1}{4}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{t \to \infty} \sqrt{\frac{t^8 - 4t^3 + t - 3}{9t^8 + 4}}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Although the entire expression is under a square root, 
+        we still consider only the highest-degree terms. 
+        The limit is equivalent to 
+        \[\lim_{t \to \infty} \sqrt{\frac{t^8}{9t^8}} = \lim_{t \to \infty} \sqrt{\frac{1}{9}} = \boxed{\frac{1}{3}}\]
+        You could also divide each term by \(\sqrt{t^8};\)
+        doing so gives the same result.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \sqrt{\frac{x^8 + 3x^2 - 5}{4x^8 + x - 2}}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Even though the entire expression is under a square root,
+        we still consider only the highest-degree terms. 
+        The limit is equivalent to 
+        \[\lim_{x \to -\infty} \sqrt{\frac{x^8}{4x^8}} = \lim_{x \to -\infty} \sqrt{\frac{1}{4}} = \boxed{\frac{1}{2}}\]
+        You could also divide each term by \(\sqrt{x^8};\)
+        doing so gives the same result.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \frac{\sqrt{x^2 + 11x - 3}}{6x - 4}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Despite the square root,
+        we consider only the highest-degree terms. 
+        The limit is equivalent to 
+        \[\lim_{x \to -\infty} \frac{\sqrt{x^2}}{6x} 
+        = \lim_{x \to -\infty} \frac{\abs x}{6x} \pd\]
+        Since \(x \to -\infty,\) we assume \(x \lt 0\) and so we rewrite \(\abs x\) as \(-x\)
+        (because \(-x \gt 0\) if \(x\) is negative).
+        The limit therefore becomes 
+        \[\lim_{x \to -\infty} \frac{-x}{6x} = \lim_{x \to -\infty} \frac{-1}{6} = \boxed{-\frac{1}{6}}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \frac{\sqrt{x^6 + 7x - 3}}{5x^3 - 8x}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Taking only the highest-degree terms, the limit becomes 
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{\sqrt{x^6}}{5x^3} &amp;= \lim_{x \to \infty} \frac{\abs{x^3}}{5x^3} \nl 
+        &amp;= \lim_{x \to \infty} \frac{x^3}{5x^3} \nl 
+        &amp;= \lim_{x \to \infty} \frac{1}{5} \nl 
+        &amp;= \boxed{\frac{1}{5}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \frac{\sqrt{4x^6 + 2x^2 - 3}}{7x^3 + 4}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We consider the limit with only the highest-degree terms: 
+        \[
+        \lim_{x \to -\infty} \frac{\sqrt{4x^6}}{7x^3} = \lim_{x \to -\infty} \frac{2 \abs{x^3}}{7x^3} \pd 
+        \] 
+        Because \(x \to -\infty,\) we see \(x \lt 0.\) 
+        We rewrite \(\abs{x^3}\) as \(-x^3\) to find
+        \[
+        \ba 
+        \lim_{x \to -\infty} \frac{-2x^3}{7x^3} 
+        &amp;= \lim_{x \to -\infty} \frac{-2}{7} \nl 
+        &amp;= \boxed{-\frac{2}{7}}
+        \ea 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} (x + 1) \sqrt x\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x \to \infty,\) both factors \((x + 1)\)
+        and \(\sqrt x\) become arbitrarily large;
+        hence, their product approaches \(\boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} (x^2 - 3x)\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We <i>cannot</i> rewrite the limit as 
+        \[\lim_{x \to \infty} x^2 - \lim_{x \to \infty} 3x\]
+        and take the difference of limits using the Difference Law of Limits
+        (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>),
+        since each limit is unbounded.
+        In fact, the form \(\infty - \infty\) is an indeterminate form,
+        so we must convert the difference to a workable form.
+        Instead, we rewrite the limit as 
+        \[\lim_{x \to \infty} x(x - 3) \pd\]
+        Both factors increase without bound as \(x \to \infty,\)
+        so this limit equals \(\boxed{\infty}.\)
+        This result makes sense; 
+        \(x^2\) grows faster than \(-3x\) decreases 
+        and so drives \((x^2 - 3x)\) to be arbitrarily large. 
+        (Think of a "tug of war" between \(x^2\) and \(-3x.\))
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} (x^2 - x^3)\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        It is <i>incorrect</i> to rewrite the limit as 
+        \[\lim_{x \to \infty} x^2 - \lim_{x \to \infty} x^3\]
+        using the Difference Law of Limits
+        (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>)
+        because neither limit exists.
+        On the other hand, we <i>can</i> rewrite the limit as
+        \[\lim_{x \to \infty} x^2(1 - x) \pd\]
+        As \(x \to \infty,\) \(x^2 \to \infty\) and \((1 - x) \to -\infty.\)
+        Thus, the product approaches \(\boxed{-\infty}.\)
+        We find logic in this result:
+        \(x^3\) is stronger than \(x^2\) and so pushes the difference \((x^3 - x^2)\) to \(-\infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \par{\sqrt{x^2 + 1} - x}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        It is difficult to predict this limit through inspection.
+        Because both terms \(\sqrt{x^2 + 1}\) and \(x\) approach \(\infty\) as \(x \to \infty,\)
+        this limit takes the indeterminate form \(\infty - \infty.\)
+        So we need to convert this difference to a workable form; we attempt multiplying 
+        by the <i>conjugate</i>:
+        \[
+        \ba 
+        \par{\sqrt{x^2 + 1} - x} \cdot \frac{\sqrt{x^2 + 1} + x}{\sqrt{x^2 + 1} + x} 
+        &amp;= \frac{(x^2 + 1) - x^2}{\sqrt{x^2 + 1} + x} \nl 
+        &amp;= \frac{1}{\sqrt{x^2 + 1} + x} \pd
+        \ea 
+        \]
+        This new, equivalent form is no longer in an indeterminate form.
+        As \(x \to \infty\) 
+        the denominator tends to \(\infty\) and so the fraction 
+        \(1/(\sqrt{x^2 + 1} + x)\) goes to \(0.\)
+        Thus, 
+        \[\lim_{x \to \infty} \par{\sqrt{x^2 + 1} - x} = \lim_{x \to \infty} \frac{1}{\sqrt{x^2 + 1} + x} = \boxed 0\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \par{-2x - \sqrt{x^2 + 8}}\]
+     evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We cannot guess any useful result in this current form.
+        As \(x \to -\infty,\) the term \(-2x\) pushes the difference \(\par{-2x - \sqrt{x^2 + 8}}\)
+        toward \(\infty\) whereas the term \(- \sqrt{x^2 + 8}\) pushes the difference to \(-\infty.\)
+        The winner of this battle cannot be easily identified.
+        To rectify this indeterminate form, we multiply by the <i>conjugate</i>:
+        \[
+        \ba 
+        \par{-2x - \sqrt{x^2 + 8}} \cdot \frac{-2x + \sqrt{x^2 + 8}}{-2x + \sqrt{x^2 + 8}} 
+        &amp;= \frac{4x^2 - (x^2 + 8)}{-2x + \sqrt{x^2 + 8}} \nl 
+        &amp;= \frac{3x^2 - 8}{-2x + \sqrt{x^2 + 8}} \pd
+        \ea 
+        \]
+        Therefore, the limit becomes 
+        \[\lim_{x \to -\infty} \frac{3x^2 - 8}{-2x + \sqrt{x^2 + 8}} \pd\]
+        We could divide each term by the overall highest degree, \(x^2.\)
+        Or we could simply consider the highest-degree terms of the numerator and denominator; 
+        doing so gives 
+        \[\lim_{x \to -\infty} \frac{3x^2}{-2x + \sqrt{x^2}} 
+        = \lim_{x \to -\infty} \frac{3x^2}{-2x + \abs x} 
+        \pd\]
+        Because \(x \to -\infty,\) we presume \(x \lt 0.\)
+        Accordingly, we rewrite \(\abs x\) as \(-x,\) giving us 
+        \[\lim_{x \to -\infty} \frac{3x^2}{-2x - x} = \lim_{x \to -\infty} \frac{3x^2}{-3x} = \lim_{x \to -\infty} -x = \boxed{\infty}\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2^-} \frac{1}{x - 2}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We identify \(x = 2\) as a vertical asymptote of \(1/(x - 2).\)
+        Thus, the function runs to \(\pm \infty\) on either side of the asymptote.
+        We have two ways to tackle this problem:
+        The first option is to substitute \(t = x - 2.\)
+        Then \(t \to 0^-\) as \(x \to 2^-,\) so the limit becomes 
+        \[\lim_{t \to 0^-} \frac{1}{t} = \boxed{-\infty}\]
+        The second method is to identify the sign of \(1/(x - 2)\) for \(x \lt 2 \col\)
+        Over this interval the denominator \(x - 2\) is negative. 
+        The numerator is positive, so dividing a positive quantity by a negative quantity yields a negative quantity. 
+        So \(1/(x - 2) \lt 0\) for \(x \lt 2,\) meaning \(\lim_{x \to 2^-} 1/(x - 2)\) must be \(-\infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 0^+} \frac{1}{\sqrt x}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The graph of \(y = 1/\sqrt x\) has a vertical asymptote at \(x = 0\) 
+        because when \(x = 0\) the denominator is \(0\) but the numerator is nonzero.
+        For \(x \gt 0,\) \(1/\sqrt x\) is always positive.
+        The quantity \(\sqrt x\) shrinks to \(0\) as \(x \to 0^+,\)
+        so \(1/\sqrt x \to \infty\) as \(x \to 0^+.\)
+        Thus, \(\lim_{x \to 0^+} 1/\sqrt x = \boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 6} \frac{3}{(x - 6)^2}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The graph of \(y = 3/(x - 6)^2\) has a vertical asymptote at \(x = 6\) 
+        because when \(x = 6\) the denominator is \(0\) but the numerator is nonzero.
+        The sign of \(3/(x - 6)^2\) is positive for both \(x \lt 6\) and \(x \gt 6.\)
+        Thus, the graph approaches infinity from both sides of the asymptote;
+        accordingly, \(\lim_{x \to 6} 3/(x - 6)^2 = \boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} (2x - 3)(x + 7)(1 - x)^2\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x \to \infty,\)
+        the sign of each of the factors \((2x - 3),\)
+        \((x + 7),\) and \((1 - x)^2\)
+        is positive.
+        Thus, as \(x \to \infty\) the product grows arbitrarily large, to \(\boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{t \to \infty} t(3 - t)(t + 1)\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(t \to \infty,\)
+        the signs of \(t\) and \((t + 1)\) are both positive, 
+        but the sign of \((3 - t)\) is negative.
+        The overall sign of the product is 
+        \[(+)(-)(+) = (-) \cma\]
+        meaning as \(t \to \infty\) the product approaches \(\boxed{-\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} (x - 5)(x^2 + 4)(x + 3)\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x \to -\infty,\)
+        the signs of \((x - 5)\) and \((x + 3)\) both become negative, 
+        but the sign of \((x^2 + 4)\) is positive.
+        The overall sign of the product is 
+        \[(-)(+)(-) = (+) \cma\]
+        so as \(x \to -\infty\) the product approaches \(\boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 2^+} \frac{x}{(x - 2)(x + 4)}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The graph of \(y = x/(x - 2)(x + 4)\) has a vertical asymptote at \(x = 2\) 
+        because when \(x = 2\) the denominator is \(0\) but the numerator is nonzero.
+        Therefore, we consider the sign of this function as \(x \to 2^+ \col\)
+        For \(x \gt 2\) we see \(x \gt 0,\) \((x - 2) \gt 0,\) and \((x + 4) \gt 0.\)
+        So the overall sign of the rational function as \(x \to 2^+\) is 
+        \[\frac{(+)}{(+)(+)} = (+) \pd\]
+        Thus, the limit is \(\boxed{\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -3^-} \frac{3x + 1}{(x - 7)(x + 3)}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The graph of \(y = (3x + 1)/(x - 7)(x + 3)\) has a vertical asymptote at \(x = -3\) 
+        since when \(x = -3\) the denominator is \(0\) but the numerator is nonzero.
+        Our goal is to find the sign of this function as \(x \to -3^- \col\)
+        For \(x \lt -3\) we see \((3x + 1) \lt 0,\) \((x - 7) \lt 0,\) and \((x + 3) \lt 0.\)
+        Thus, the overall sign of the rational function as \(x \to -3^-\) is 
+        \[\frac{(-)}{(-)(-)} = (-) \pd\]
+        The limit is therefore \(\boxed{-\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{u \to 0^+} \frac{1}{1 - e^u}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        At \(u = 0\) the graph of \(y = 1/(1 - e^u)\) has a vertical asymptote
+        because 
+        \[1 - e^0 = 0 \and 1 \ne 0 \pd\]
+        For \(u \gt 0\) the denominator is negative, so the sign of the rational expression as \(u \to 0^+\) is 
+        \[\frac{(+)}{(-)} = (-) \pd\]
+        Thus, the limit is \(\boxed{-\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to 5^+} \frac{x(2x - 3)}{(x - 5)(9 - 2x)}\]
+     determine whether the limit equals \(\infty\) or \(-\infty\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The graph of this rational function has a vertical asymptote when \(x = 5\)
+        since when \(x = 5\) the denominator is \(0\) but the numerator is nonzero.
+        For \(x \gt 5\)  
+        we see \(x \gt 0,\) \((2x - 3) \gt 0,\) 
+        \((x - 5) \gt 0,\) and \((9 - 2x) \lt 0.\)
+        Thus, the overall sign of the rational function as \(x \to 5^+\) is 
+        \[\frac{(+)(+)}{(+)(-)} = (-) \pd\]
+        The limit is therefore \(\boxed{-\infty}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{x^2 - 7}{5x^2 + x}\]
+     find all the horizontal asymptotes of the given function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Our mission is to determine the end behavior of the function, namely, 
+        its behavior as \(x \to \infty\) and \(x \to -\infty.\)
+        We consider only the highest-degree terms when we take limits at infinity.
+        Thus, 
+        \[
+        \lim_{x \to \infty} \frac{x^2 - 7}{5x^2 + x} 
+        = \lim_{x \to \infty} \frac{x^2}{5x^2} 
+        = \frac{1}{5} \pd
+        \]
+        Also, 
+        \[
+        \lim_{x \to -\infty} \frac{x^2 - 7}{5x^2 + x} 
+        = \lim_{x \to -\infty} \frac{x^2}{5x^2} 
+        = \frac{1}{5} \pd
+        \]
+        Since both limits are the same, the function \((x^2 - 7)/(5x^2 + x)\) has only one horizontal asymptote:
+        \(\boxed{y = 1/5}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{x + 4}{8 - x^2}\]
+     find all the horizontal asymptotes of the given function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because the degree of the denominator (two) is greater than the degree of the numerator (one),
+        the rational function approaches \(0\) as \(x \to \infty\) or \(x \to -\infty.\)
+        Hence, the only horizontal asymptote is \(\boxed{y = 0}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \frac{2x^3 + x + 7}{\sqrt{16x^6 + 2}}\]
+     find all the horizontal asymptotes of the given function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We seek the end behavior of the function; that is,
+        we find its behavior as \(x \to \infty\) and \(x \to -\infty.\)
+        Only the highest-degree terms are important when we take these limits.
+        Thus, 
+        \[
+        \ba 
+        \lim_{x \to \infty} \frac{2x^3 + x + 7}{\sqrt{16x^6 + 2}} 
+        &amp;= \lim_{x \to \infty} \frac{2x^3}{4 \abs{x^3}} \nl 
+        &amp;= \lim_{x \to \infty} \frac{x^3}{2x^3} \nl 
+        &amp;= \frac{1}{2} \pd
+        \ea 
+        \]
+        Also, 
+        \[\lim_{x \to -\infty} \frac{2x^3 + x + 7}{\sqrt{16x^6 + 2}} 
+        = \lim_{x \to -\infty} \frac{2x^3}{4 \abs{x^3}} \pd\]
+        (When you take the square root of a term, remember to add absolute value bars.)
+        Because \(x \to -\infty,\) \(x \lt 0\) 
+        and so \(\abs{x^3} = -x^3.\)
+        The limit is therefore 
+        \[\lim_{x \to -\infty} \frac{2x^3}{-4x^3} = \lim_{x \to -\infty} \frac{2}{-4} = -\frac{1}{2} \pd\]
+        Thus, the horizontal asymptotes are \(\boxed{y = -1/2}\) and \(\boxed{y = 1/2}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 3 + \frac{8x^2 + 3x - 5}{7x^2 + 2}\]
+     find all the horizontal asymptotes of the given function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Our mission is to determine the end behavior of the function, namely, 
+        its behavior as \(x \to \infty\) and \(x \to -\infty.\)
+        We consider only the highest-degree terms when we take limits at infinity.
+        Thus, 
+        \[
+        \lim_{x \to \infty} \par{3 + \frac{8x^2 + 3x - 5}{7x^2 + 2}}
+        = \lim_{x \to \infty} \par{3 + \frac{8x^2}{7x^2}}
+        = 3 + \frac{8}{7} = \frac{29}{7} \pd
+        \]
+        In addition,
+        \[
+        \lim_{x \to -\infty} \par{3 + \frac{8x^2 + 3x - 5}{7x^2 + 2}}
+        = \lim_{x \to -\infty} \par{3 + \frac{8x^2}{7x^2}}
+        = 3 + \frac{8}{7} = \frac{29}{7} \pd
+        \]
+        Since both limits are the same, the function has only one horizontal asymptote:
+        \(\boxed{y = 29/7}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds 3 + e^{-x}\]
+     find all the horizontal asymptotes of the given function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        As \(x \to \infty,\) \(e^{-x} \to 0\) and so \(3 + e^{-x} \to 3.\)
+        Thus, \(y = 3\) is a horizontal asymptote to the graph of \(3 + e^{-x}.\)
+        However, \(e^{-x} \to \infty\) as \(x \to -\infty.\)
+        Since the graph is unbounded as \(x\) goes to negative infinity, 
+        the graph has no horizontal asymptote for \(x \lt 0.\)
+        So \(\boxed{y = 3}\) is the only horizontal asymptote.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<span class="true-or-false"></span>
+        All rational functions have at least one vertical asymptote.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This statement is <b>false</b>.
+        Consider the rational function \(f(x) = 1/(x^2 + 1).\)
+        The denominator \(x^2 + 1\) is never zero, so \(f\) cannot have any vertical asymptotes.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<span class="true-or-false"></span>
+        Polynomials do not have horizontal asymptotes.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This statement is <b>true</b>.
+        A function \(f(x)\) needs to approach a finite value as \(x \to \infty\) or \(x \to -\infty\) to have a horizontal asymptote.
+        But polynomials tend to \(\pm \infty\) as their input goes to \(\infty\) or \(-\infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<span class="true-or-false"></span>
+        If \(f(x)\) has a vertical asymptote at \(x = 0,\)
+        then \(f(0)\) is undefined.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        This statement is <b>false</b>;
+        a counterexample is the function 
+        \[
+        f(x) = 
+        \begin{cases} 
+        \frac{1}{x}  &amp;x \ne 0 \nl 
+        0  &amp;x = 0 \pd
+        \end{cases} 
+        \]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find the vertical asymptotes of \(f(x) = 1/(x^2 - 25).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The function \(f\) has a vertical asymptote when its denominator is \(0\) but the numerator is nonzero. 
+        We equate the denominator to \(0 \col\)
+        \[x^2 - 25 = 0 \arrowTwoWay (x + 5)(x - 5) = 0 \arrowTwoWay x = -5 \cma x = 5 \pd\]
+        Neither of these values makes the numerator \(0.\)
+        Thus, \(f\) has vertical asymptotes at \(\boxed{x = -5}\) and \(\boxed{x = 5}.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find the vertical asymptotes of \(g(x) = (x + 3)/(x^2 - 9).\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The function \(g\) has a vertical asymptote when its denominator is \(0\) but the numerator is nonzero. 
+        We equate the denominator to \(0 \col\)
+        \[x^2 - 9 = 0 \arrowTwoWay (x + 3)(x - 3) = 0 \arrowTwoWay x = -3 \cma x = 3 \pd\]
+        When \(x = -3\) both the numerator and denominator equal \(0,\)
+        which is inconclusive.
+        We factor the denominator (recognizing that it is a difference of squares) to rewrite \(g\) as 
+        \[g(x) = \frac{x + 3}{(x + 3)(x - 3)} = \frac{1}{x - 3} \cma x = -3 \pd\]
+        In this simplified form, when \(x = -3\) the denominator is nonzero; 
+        thus, we ignore this value.
+        In contrast, when \(x = 3\) the denominator is \(0\) but the numerator is nonzero.
+        Hence, \(\boxed{x = 3}\) is the only vertical asymptote of \(g.\) 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Find \(\lim_{x \to \infty} x^3\) and \(\lim_{x \to -\infty} x^3.\)
+        Describe the end behavior of \(x^3.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        If you don't immediately recognize the limits, then 
+        try substituting large values of \(x;\) for example, 
+        \[
+        \ba 
+        f(1) &amp;= 1^3 = 1 \nl 
+        f(10) &amp;= 10^3 = 1000 \nl 
+        f(100) &amp;= 100^3 = 1000000 \pd \nl 
+        \ea 
+        \]
+        This pattern repeats, in which \(f(x)\) grows without bound as \(x \to \infty,\) 
+        so \(\lim_{x \to \infty} x^3 = \infty.\)
+        In contrast,
+        \[
+        \ba 
+        f(-1) &amp;= (-1)^3 = -1 \nl 
+        f(-10) &amp;= (-10)^3 = -1000 \nl 
+        f(-100) &amp;= (-100)^3 = -1000000 \pd \nl 
+        \ea 
+        \]
+        Thus, \(f(x)\) decreases without bound as \(x \to -\infty,\) 
+        so \(\lim_{x \to -\infty} x^3 = -\infty.\)
+        We therefore describe the end behavior as follows:
+        as \(x \to \infty,\) \(x^3 \to \infty;\) as \(x \to -\infty,\) \(x^3 \to -\infty.\)
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f(x) = \sqrt{x^2 + 4x + 1}/(3x - 3).\)
+        <ol class="list-alpha">
+<li>
+                Find all the horizontal asymptotes to the graph of \(f.\)
+            </li>
+<li>
+                Locate the vertical asymptotes of \(f.\)
+            </li>
+<li>
+                Describe the behavior of \(f\) at each vertical asymptote.
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                We find horizontal asymptotes of \(f\) by calculating \(\lim_{x \to \infty} f(x)\)
+                and \(\lim_{x \to -\infty} f(x).\)
+                The behavior of \(f(x)\) as \(x \to \infty\) matches the ratio of the highest-degree terms,
+                \(\sqrt{x^2}/3x\) \(= \abs{x}/3x,\) as \(x \to \infty.\)
+                Thus, \(\lim_{x \to \infty} f(x)\) is equivalent to 
+                \[\lim_{x \to \infty} \frac{\abs x}{3x} = \lim_{x \to \infty} \frac{x}{3x} = \lim_{x \to \infty} \frac{1}{3} = \frac{1}{3}\]
+                Also, \(\lim_{x \to -\infty} f(x)\) becomes 
+                \[\lim_{x \to -\infty} \frac{\abs x}{3x} = \lim_{x \to -\infty} \frac{-x}{3x} = \lim_{x \to -\infty} \frac{-1}{3} = -\frac{1}{3}\]
+                Hence, \(f\) has horizontal asymptotes of \(\boxed{y = -1/3}\) and \(\boxed{y = 1/3}.\)
+            </li>
+<hr/>
+<li>
+                The graph of \(f\) has a vertical asymptote when the denominator equals \(0\) but the numerator is nonzero. 
+                Equating the denominator to \(0,\) we find 
+                \[3x - 3 = 0 \implies x = 1 \pd\]
+                At this value, the numerator is \(\sqrt 6 \ne 0.\)
+                Thus, the line \(\boxed{x = 1}\) is the only vertical asymptote of \(f.\)
+            </li>
+<hr/>
+<li>
+                We find the sign of \(f\) on either side of the vertical asymptote.
+                For \(x \lt 1,\) the numerator is positive and the denominator is negative.
+                The overall sign of \(f\) is 
+                \[\frac{(+)}{(-)} = (-) \cma\]
+                so the graph runs to \(-\infty\) to the left of the vertical asymptote \(x = 1.\) 
+                For \(x \gt 1,\) the sign of \(f\) is 
+                \[\frac{(+)}{(+)} = (+) \cma\]
+                so the graph runs to \(\infty\) to the right of the vertical asymptote.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(f(x) = x^2/x\) and \(g(x) = x/x^2.\)
+        <ol class="list-alpha">
+<li>
+                Does \(f\) have a vertical asymptote at \(x = 0 \ques\)
+                Explain your answer.
+            </li>
+<li>
+                Describe the end behavior of \(f.\)
+            </li>
+<li>
+                Justify whether \(g\) has a vertical asymptote at \(x = 0.\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Although the denominator is \(0\) when \(x = 0,\) the numerator is also \(0.\)
+                Canceling a factor \(x\) gives \(f(x) = x\) for \(x \ne 0;\)
+                in this form, the denominator is never zero. 
+                Thus, \(f\) does <i>not</i> have a vertical asymptote at \(x = 0.\)
+            </li>
+<hr/>
+<li>
+                The <b>end behavior</b> of \(f\) describes what happens to \(f(x)\) as \(x \to \infty\)
+                and as \(x \to -\infty.\)
+                Canceling \(x\) from the numerator and denominator permits us to rewrite \(f\) as 
+                \[f(x) = x \cma x \ne 0 \pd\]
+                We therefore see \(\lim_{x \to -\infty} f(x) = -\infty\)
+                and \(\lim_{x \to \infty} f(x) = \infty.\)
+                Thus, we say:
+                as \(x \to \infty,\) \(f(x) \to \infty;\) as \(x \to -\infty,\) \(f(x) \to -\infty.\)
+            </li>
+<hr/>
+<li>
+                We rewrite \(g\) by canceling a common factor \(x \col\)
+                \[g(x) = \frac{1}{x} \pd\]
+                In this new form, it is apparent that when \(x = 0\) the denominator is \(0\)
+                and the numerator is nonzero. 
+                Hence, \(g\) has a vertical asymptote at \(x = 0.\)
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<b>Boyle's Law</b> states that the pressure \(P\) exerted on a sample of gas at constant temperature 
+        is inversely proportional to the volume \(V\) of the container.
+        Find and interpret \(\lim_{V \to 0^+} P.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Since \(P\) is inversely proportional to \(V,\) we have 
+        \[P = \frac{k}{V}\]
+        for any proportionality constant \(k.\)
+        Then \(P \to \infty\) as \(V \to 0^+.\)
+        Thus, as the volume of the gas is decreased to \(0,\)
+        the pressure needed to compress the gas grows to \(\infty.\)
+        Imagine sealing the hole of a syringe (so that no gas can escape) and trying to squeeze in
+        the syringe completely—it's impossible! 
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+<figure class="triangle-sector" id="triangle-sector">
+<img alt="Figure 2" src="../images/sectionImages/triangle-sector.jpg"/>
+</figure>
+<style>
+            .triangle-sector::before{
+                content:'FIGURE 2';
+            }
+        </style>
+        A circular sector that subtends an angle \(\theta\) 
+        is inscribed in a right triangle whose base has length \(\ell.\)
+        Let \(A(\theta)\) be the area of the region bounded between the sector and right triangle 
+        (<a href="#triangle-sector">Figure 2</a>).
+        <ol class="list-alpha">
+<li>
+                Determine an expression for \(A(\theta)\)
+                in terms of \(\ell\) and \(\theta.\)
+            </li>
+<li>
+                Identify the domain of \(A(\theta).\)
+            </li>
+<li>
+                Find and interpret \(\lim_{\theta \to (\pi/2)^+} A(\theta).\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                We find the area by subtracting the area of the sector from the area of the triangle.
+                The triangle's length is \(\ell,\) so its height is \(\ell \tan \theta.\)
+                Thus, its area is \(1/2\) \(\times \text{length}\) \(\times \text{height},\) or  
+                \[\tfrac{1}{2} \ell (\ell \tan \theta) = \tfrac{1}{2} \ell^2 \tan \theta \pd\]
+                In addition, the area of the sector is 
+                \[\tfrac{1}{2} \theta \ell^2 \pd\]
+                Thus, the difference of these values is 
+                \[A(\theta) = \tfrac{1}{2} \ell^2 \tan \theta - \tfrac{1}{2} \theta \ell^2 
+                = \boxed{\tfrac{1}{2} \ell^2 (\tan \theta - \theta)}\]
+            </li>
+<hr/>
+<li>
+                The angle \(\theta\) can only range between \(0\) and \(90 \degree\) (or \(\pi/2\) radians).
+                The value \(0\) is acceptable because \(A(\theta) = 0,\) a finite value. 
+                But \(\pi/2\) is unacceptable because \(A(\pi/2)\) is undefined,
+                so the domain is \(\boxed{[0, \pi/2)}.\)
+            </li>
+<hr/>
+<li>
+                The factor \((\tan \theta - \theta)\) approaches \(\infty\) as \(\theta \to (\pi/2)^+.\)
+                Thus, \(\lim_{\theta \to (\pi/2)^+} A(\theta) = \boxed{\infty}.\)
+                As \(\theta\) is increased to \(\pi/2\) radians, the region enclosed by the right triangle 
+                and inscribed sector becomes infinite.
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(g\) be a function such that \(\lim_{x \to 0^-} g(x) = 5\) and \(\lim_{x \to 0^+} g(x) = -2.\)
+        As \(x \to \infty,\) \(g(x) \to 7;\)
+        as \(x \to -\infty,\) \(g(x) \to 0.\)
+        Calculate the following limits of composite functions with \(g.\)
+        <ol class="list-alpha">
+<li>
+                \(\ds \lim_{x \to -\infty} \sin[g(x)]\)
+            </li>
+<li>
+                \(\ds \lim_{x \to \infty} g \par{e^{-x}}\)
+            </li>
+<li>
+                \(\ds \lim_{x \to 0^+} g \par{\frac{1}{x}}\)
+            </li>
+</ol>
+</ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+<ol class="list-alpha">
+<li>
+                Because \(g(x) \to 0\) as \(x \to -\infty,\)
+                we have \(\lim_{x \to -\infty} g(x) = 0.\)
+                Sine is a continuous function, so 
+                \[\lim_{x \to -\infty} \sin[g(x)] = \sin \parbr{\lim_{x \to -\infty} g(x)} = \sin 0 = \boxed 0\]
+                (See Section <a href="/Valculus/calculus/1.4-Determining-Continuity.html">1.4</a> to review properties of continuous functions.)
+            </li>
+<hr/>
+<li>
+                We substitute \(t = e^{-x} \col\)
+                As \(x \to \infty,\) \(t \to 0^+.\)
+                Thus, the limit becomes 
+                \[\lim_{t \to 0^+} g(t) = \boxed{-2}\]
+            </li>
+<hr/>
+<li>
+                If we substitute \(t = 1/x,\) 
+                then we see \(t \to \infty\) as \(x \to 0^+.\)
+                Thus, the limit becomes 
+                \[\lim_{t \to \infty} g(t) = \boxed 7\]
+            </li>
+</ol>
+</sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} e^x = \infty\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Since \(e^x\) goes to infinity as \(x \to \infty,\) 
+        there must exist a number \(N\) such that for any \(M,\)
+        \[e^x \gt M \for x \gt N \pd\]
+        We want to express \(N\) in terms of \(M.\)
+        In the first inequality, solving for \(x\) gives 
+        \(x \gt \ln M.\)
+        This form is parallel to \(x \gt N,\)
+        so we see \(N = \ln M.\)
+        This choice ensures that
+        \(\lim_{x \to \infty} e^x = \infty\) because 
+        \[e^x \gt M \for x \gt N = \ln M \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} \frac{1}{x} = 0\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We must show that there exists a number \(N\) such that for any \(\varepsilon \gt 0,\)
+        \[\abs{\frac{1}{x} - 0} \lt \varepsilon \for x \lt N \pd\]
+        Our mission is to express \(N\) in terms of \(\varepsilon.\)
+        Because \(x \to -\infty,\) \(x \lt 0\)
+        and so \(\abs{1/x} = -1/x.\)
+        We therefore rewrite the first inequality as \(-1/x \lt \varepsilon,\)
+        from which we solve for \(x,\) as follows:
+        \[-x \gt \frac{1}{\varepsilon} \arrowTwoWay x \lt -\frac{1}{\varepsilon} \pd\]
+        (Remember that we flip the inequality sign whenever we multiply both sides by a negative or take the reciprocal of both sides.)
+        This inequality matches \(x \lt N,\) so we have \(N = -1/\varepsilon;\)
+        this is the easiest choice of \(N.\)
+        Hence, \(\lim_{x \to -\infty} (1/x) = 0\) because 
+        \[\abs{\frac{1}{x} - 0} \lt \varepsilon \for x \lt N = -\frac{1}{\varepsilon} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} \sqrt x = \infty\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because \(\sqrt x \to \infty\) as \(x \to \infty,\) 
+        a number \(N\) must exist such that for any \(M,\)
+        \[\sqrt x \gt M \for x \gt N \pd\]
+        We express \(N\) in terms of \(M.\)
+        In the first inequality, solving for \(x\) gives 
+        \(x \gt M^2.\)
+        This inequality matches \(x \gt N,\)
+        so \(N = M^2.\)
+        Hence, \(\lim_{x \to \infty} \sqrt x = \infty\) because 
+        \[\sqrt x \gt M \for x \gt N = M^2 \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} e^{-x} = 0\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The key idea is to find a number \(N\) such that for any \(\varepsilon \gt 0,\)
+        \[\abs{e^{-x} - 0} \lt \varepsilon \for x \gt N \pd\]
+        We want to express \(N\) in terms of \(\varepsilon.\)
+        Since \(e^{-x} \gt 0\) for all \(x,\)
+        the first inequality becomes \(e^{-x} \lt \varepsilon.\)
+        Now we solve for \(x,\) as follows:
+        \[-x \lt \ln \varepsilon \arrowTwoWay x \gt -\ln \varepsilon = \ln \frac{1}{\varepsilon} \pd\]
+        (Remember that we flip the inequality sign whenever we multiply both sides by a negative or take the reciprocal of both sides.)
+        This inequality matches \(x \gt N,\) so we choose \(N = \ln(1/\varepsilon).\)
+        Hence, \(\lim_{x \to \infty} e^{-x} = 0\) because 
+        \[\abs{e^{-x} - 0} \lt \varepsilon \for x \gt N = \ln \frac{1}{\varepsilon} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to -\infty} 2^x = 0\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We find a number \(N\) such that for any bound \(\varepsilon \gt 0,\)
+        \[\abs{2^x - 0} \lt \varepsilon \for x \lt N \pd\]
+        Our goal is to express \(N\) in terms of \(\varepsilon.\)
+        The first inequality becomes \(2^x \lt \varepsilon.\)
+        Solving for \(x\) then reveals \(x \lt \log_2 \varepsilon.\)
+        This inequality matches \(x \lt N,\) so we choose \(N = \log_2 \varepsilon.\)
+        Hence, \(\lim_{x \to -\infty} 2^x = 0\) because our choice of \(N\) ensures that 
+        \[\abs{2^x - 0} \lt \varepsilon \for x \lt N = \log_2 \varepsilon \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For 
+        \[\ds \lim_{x \to \infty} (2x + 3) = \infty\]
+     prove the given limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Because \((2x + 3) \to \infty\) as \(x \to \infty,\) 
+        a number \(N\) must exist such that for any \(M,\)
+        \[2x + 3 \gt M \for x \gt N \pd\]
+        Our goal is to express \(N\) in terms of \(M.\)
+        In the first inequality, solving for \(x\) gives 
+        \(x \gt \frac{1}{2}(M - 3).\)
+        This inequality matches \(x \gt N,\)
+        so \(N = \frac{1}{2}(M - 3).\)
+        Hence, \(\lim_{x \to \infty} (2x + 3) = \infty\) because 
+        \[(2x + 3) \gt M \for x \gt N = \tfrac{1}{2} (M - 3) \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Let \(k\) be a positive constant.
+        In physics, the function \(k/r^2\) appears frequently as a model of intensity
+        due to distance, \(r.\)
+        Prove that \(\lim_{r \to \infty} (k/r^2) = 0.\) 
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        We show that \(\abs{k/r^2 - 0}\) is confined within a positive number \(\varepsilon\)
+        for sufficiently large \(r\)—say, \(r \gt N.\)
+        Mathematically, for \(\varepsilon \gt 0\) we aim to show that 
+        \[\abs{\frac{k}{r^2} - 0} \lt \varepsilon \for r \gt N \pd\]
+        Since \(r \gt 0,\) the first inequality becomes \(k/r^2 \lt \varepsilon.\) 
+        Solving for \(r\) gives \(r \gt \sqrt{k/\varepsilon}.\)
+        This form matches \(r \gt N,\) so choosing \(N = \sqrt{k/\varepsilon}\) guarantees that 
+        \[\abs{\frac{k}{r^2} - 0} \lt \varepsilon \for r \gt N = \sqrt{\frac{k}{\varepsilon}} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        For positive constants \(a\) and \(b,\) 
+        prove that \(\lim_{x \to \infty} ax^b = \infty.\)
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        The limit \(\lim_{x \to \infty} ax^b = \infty\) is true if and only if there exists a number \(N\)
+        such that for any \(M,\)
+        \[ax^b \gt M \for x \gt N \pd\]
+        Our objective is to find \(N\) in terms of \(M.\)
+        In the first inequality, solving for \(x\) gives \(x \gt \sqrt[b]{M/a}.\)
+        This matches the form \(x \gt N,\)
+        so \(N = \sqrt[b]{M/a}.\)
+        Hence, 
+        \[ax^b \gt M \for x \gt \sqrt[b]{\frac{M}{a}} \pd\]
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            <ques>
+        Consider the family of polynomials \(g(x) = x^b,\)
+        where \(b\) is a positive integer. 
+        Prove that \(\lim_{x \to -\infty} g(x) = -\infty\)
+        if and only if \(b\) is odd.
+    </ques> 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            <sol>
+        Recognize that \(\lim_{x \to -\infty} g(x) = -\infty\) if and only if
+        there exists a number \(N\) such that for any \(M,\) 
+        \[\abs{x^b} \lt M \for x \lt N \pd\]
+        In the first inequality we take the \(b\)th root of both sides to attain \(x = \sqrt[b]{M}.\)
+        Since \(x \to -\infty,\) it is safe to say \(x \lt 0.\)
+        The range of \(\sqrt[b]{M}\) is all real numbers if \(b\) is odd, 
+        but its range is \([0, \infty)\) if \(b\) is even. 
+        Thus, \(\sqrt[b]{M}\) can be negative only if \(b\) is odd.
+        Accordingly, for odd \(b\) there exists \(N\) such that \(x^b \lt N = \sqrt[b]{M}.\)
+        But for even \(b\) no such \(N\) exists. 
+        Therefore, \(\lim_{x \to -\infty} x^b = -\infty\) 
+        only if \(b\) is odd.
+    </sol> 
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

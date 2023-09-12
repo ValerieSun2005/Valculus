@@ -49,14 +49,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         If \(y = f(x),\) then define and interpret the <b>differential</b> \(\dd y.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The <b>differential</b> \(\dd y\) is given by 
         \[\dd y = f'(x) \di x \pd\]
         In this form, \(\dd x\) is an independent variable whose value we choose. 
@@ -67,7 +67,7 @@
         small values of \(\dd x.\)
         Hence, for infinitely small values of \(\dd x,\)
         the tangent line behaves identically to the curve \(f.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -76,14 +76,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         What is <b>linearization</b>?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <b>Linearization</b> is the process by which we approximate the values of a function \(f\)
         by using a tangent line to \(f\) at some <b>center</b> \(x = a.\)
         An equation of the line tangent to \(f\) at \(x = a\) is given by 
@@ -94,7 +94,7 @@
         and then plug in some \(x\) to obtain an estimate for \(f(x).\)
         We could also use differentials as a linear approximation if we take 
         \(\dd x = x - a\) and \(\dd y \approx f(x) - f(a).\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -110,11 +110,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The derivative of \(x^3\) is, by the Power Rule, \(3x^2.\)
         So the differential \(\dd \par{x^3}\) is given by this result multiplied by \(\dd x \col\) 
         \[\boxed{3x^2 \di x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -130,11 +130,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Chain Rule gives the derivative of \(e^{2x}\) to be \(2e^{2x}.\)
         Hence, the differential is 
         \[\boxed{2e^{2x} \di x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -150,11 +150,11 @@
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The Chain Rule gives the derivative of \(\sin 3t\) to be \(3 \cos 3t.\)
         Hence, the differential is 
         \[\boxed{3 \cos 3t \di t}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -170,12 +170,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using the Product Rule and Chain Rule, we find the derivative of \(x^2 \sin 4x\) to be 
         \[2x \sin 4x + 4 x^2 \cos 4x \pd\]
         So 
         \[\dd \par{x^2 \sin 4x} = \boxed{\par{2x \sin 4x + 4 x^2 \cos 4x} \di x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -191,12 +191,12 @@
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         By the Quotient Rule, the derivative of the fraction is 
         \[\frac{(2x) e^x - e^x (x^2 + 4)}{e^{2x}} = \frac{-x^2 + 2x - 4}{e^x} \pd\]
         Hence, its differential is 
         \[\boxed{\frac{-x^2 + 2x - 4}{e^x} \di x}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -205,8 +205,8 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
-<label class="label-emph">Walkthrough of Linearization</label>
+            <ques>
+<span class="label-emph">Walkthrough of Linearization</span>
         Let's use <b>linearization</b> to estimate the value of \(\sqrt{5}.\)
         The number \(5\) is closest to the perfect square \(4,\)
         so we <b>center</b> our linearization at \(x = 4.\)
@@ -227,12 +227,12 @@
                 but what value does your linearization provide for \(\sqrt{100} \ques\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 To construct a tangent line to \(y = \sqrt x,\)
@@ -263,7 +263,7 @@
                 This disparity shows that linearization often leads to inaccuracy for inputs far away from its center.
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -279,7 +279,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We see \(f(3) = 4.\)
         We also have  
         \[f'(x) = 2x - 1 \cma\]
@@ -290,7 +290,7 @@
         When we construct a <b>linearization</b>, we approximate \(f(x)\) as the output of this tangent line at \(x.\)
         So we use 
         \[\boxed{f(x) \approx 5x - 11}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -306,7 +306,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Observe that \(g(-1) = -1.\)
         We see 
         \[g'(x) = -6x \cma\]
@@ -317,7 +317,7 @@
         When we construct a <b>linearization</b>, we approximate values of \(g(x)\) as the outputs of this tangent line.
         So we use 
         \[\boxed{g(x) \approx 6x + 5}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -333,7 +333,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Note that \(f(\pi/4) = 4.\)
         By the Chain Rule,
         \[f'(x) = 2 \sin 2x \cma\]
@@ -344,7 +344,7 @@
         A <b>linearization</b> of \(f(x)\) uses the outputs of this tangent line to approximate \(f.\)
         So we use 
         \[\boxed{f(x) \approx 2x + 4 - \tfrac{\pi}{2}}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -360,7 +360,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Note that \(g(2) = 1/2.\)
         We see 
         \[g'(x) = -\frac{1}{x^2} \cma\]
@@ -370,7 +370,7 @@
         \[y - \tfrac{1}{2} = -\tfrac{1}{4} (x - 2) \or y = -\tfrac{x}{4} + 1 \pd\]
         Thus, the <b>linearization</b> for \(g\) centered at \(a = 2\) is given by 
         \[\boxed{g(x) \approx -\tfrac{x}{4} + 1}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -386,7 +386,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We see \(g(\pi/2) = 1.\)
         Note that 
         \[g' \par{\tfrac{\pi}{2}}= \cos \tfrac{\pi}{2} = 0 \pd\]
@@ -395,7 +395,7 @@
         \[y - 1 = 0 \par{x - \tfrac{\pi}{2}} \or y = 1 \pd\]
         Thus, for \(x\) near \(\pi/2\) we approximate \(g\) as 
         \[\boxed{g(x) \approx 1}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -411,7 +411,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We see that \(h(8) = 7\)
         and 
         \[h'(t) = \frac{1}{2 \sqrt{2t}} \cdot 2 = \frac{1}{\sqrt{2t}} \pd\]
@@ -422,7 +422,7 @@
         \[y - 7 = \tfrac{1}{4} (t - 8) \or y = \tfrac{t}{4} + 5 \pd\]
         Accordingly, we use the following <b>linearization</b> for \(h\) with center \(a = 8 \col\)  
         \[\boxed{h(t) \approx \tfrac{t}{4} + 5}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -438,7 +438,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Note that \(f(3) = e^3 - 2.\)
         Observe that 
         \[f'(x) = e^x \cma\]
@@ -448,7 +448,7 @@
         \[y - \par{e^3 - 2} = e^3 (x - 3) \or y = xe^3 - 2e^3 - 2 \pd\]
         So a <b>linearization</b> of \(f\) centered at \(a = 3\) is 
         \[\boxed{f(x) \approx xe^3 - 2e^3 - 2}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -465,7 +465,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We find 
         \[\Delta y = \parbr{2 - 1.02^2} - \parbr{2 - 1^2} = \boxed{-0.0404}\]
         Since \(\textderiv{y}{x} = -2x,\) we see 
@@ -477,7 +477,7 @@
         &amp;= \boxed{-0.04}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -494,7 +494,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We attain 
         \[\Delta y = \frac{2}{2.1} - \frac{2}{2} \approx \boxed{-0.048}\]
         Observe that 
@@ -508,7 +508,7 @@
         &amp;= \boxed{-0.05}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -525,7 +525,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We attain 
         \[\Delta y = \sqrt{6.3 - 5} - \sqrt{6 - 5} \approx \boxed{0.140}\]
         Observe that 
@@ -539,7 +539,7 @@
         &amp;= \boxed{0.15}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -555,7 +555,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
@@ -563,7 +563,7 @@
             The actual value of \(\sqrt{23}\) is roughly \(4.796\)—very close!
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We have the freedom to decide where to center our <b>linearization</b>.
             (Different centers yield different estimates.)
             Notice that \(23\) is close to \(25,\) a perfect square. 
@@ -582,7 +582,7 @@
             required adding rational numbers.
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             We use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(\sqrt x\) changes as \(x\) decreases from \(25\) to \(23.\)
             Since \(y = \sqrt x,\) the differential \(\dd y\) is given by 
@@ -594,7 +594,7 @@
             Because \(\Delta y = \sqrt{23} - \sqrt{25},\) we have 
             \[\sqrt{23} = \sqrt{25} + \Delta y \approx 5 - \tfrac{1}{5} = \boxed{4.8}\]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -610,7 +610,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
@@ -618,7 +618,7 @@
             The actual value of \(\sqrt{41}\) is roughly \(6.403\)—not bad!
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We have the freedom to decide where to center our <b>linearization</b>.
             (Different centers yield different estimates.)
             Notice that \(41\) is close to the perfect square \(36.\)  
@@ -638,7 +638,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             For \(y = \sqrt x,\) we use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(\sqrt x\) changes as \(x\) increases from \(36\) to \(41.\)
             We have 
@@ -656,7 +656,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -672,7 +672,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Choosing either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
@@ -680,7 +680,7 @@
             The actual value of \(e^{1.2}\) is roughly \(3.320\)—not bad!
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We choose to center our <b>linearization</b> at \(x = 1\) 
             since it is most convenient;
             some other center would yield a different estimate for \(e^{1.2}.\) 
@@ -699,7 +699,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             We use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(e^x\) changes as \(x\) increases from \(1\) to \(1.2.\)
             The differential \(\dd y\) is given by 
@@ -717,7 +717,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -733,7 +733,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Choosing either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
@@ -743,7 +743,7 @@
             for small values of \(x.\)
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We choose to center our <b>linearization</b> at \(x = 0,\) 
             meaning we construct a tangent line to \(\cos x\) at \(x = 0\)
             and then plug in \(x = 0.1.\)
@@ -755,7 +755,7 @@
             \[\cos 0.1 \approx \boxed 1\]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             We use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(\cos x\) changes as \(x\) increases from \(0\) to \(0.1.\)
             Observe that the differential \(\dd y\) is given by 
@@ -765,7 +765,7 @@
             So we estimate that \(y\) does not change; that is, 
             \[\cos 0.1 \approx \cos 0 + 0 = \boxed 1\]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -781,7 +781,7 @@
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Choosing either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
@@ -790,7 +790,7 @@
             Our estimate has excellent accuracy due to the small value of \(\dd x.\)
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We choose to center our <b>linearization</b> at \(x = 4 \col\) 
             We approximate \(4.01^3\) using a tangent line to \(y = x^3\)
             at \(x = 4.\)
@@ -807,7 +807,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             We use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(x^3\) changes as \(x\) increases from \(4\) to \(4.01.\)
             Observe that the differential \(\dd y\) is given by 
@@ -825,7 +825,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -841,14 +841,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Choosing either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
             The actual value of \(1.1^5\) is roughly \(1.611.\)
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             It is easiest to center our <b>linearization</b> at \(x = 1 \col\) 
             We approximate \(1.1^5\) using a tangent line to \(y = x^5\)
             at \(x = 1.\)
@@ -865,7 +865,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             With \(y = x^5,\) the <b>differential</b> \(\dd y\) estimates \(\Delta y\)
             over \(1 \leq x \leq 1.1.\)
             We see
@@ -883,7 +883,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -899,14 +899,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Using either linearization or differentials yields 
         the same result. We present both methods, but you can choose the one with which you feel most comfortable.
         <aside class="box-remark">
             The actual value of \(1/2.05^2\) is about \(0.2380.\)
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We find the linearization to \(y = 1/x^2\) centered at \(a = 2 \col\)
             The slope of this tangent line is 
             \[\deriv{}{x} \par{\frac{1}{x^2}} \intEval_{x = 2} = -\frac{2}{(2)^3} = -\frac{1}{4} \pd\]
@@ -919,7 +919,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             If \(y = 1/x^2,\) then the <b>differential</b> \(\dd y\) estimates \(\Delta y\)
             over \(2 \leq x \leq 2.05.\)
             We see  
@@ -936,7 +936,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -952,14 +952,14 @@
         <hr> 
         <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Choosing either linearization or differentials yields 
         the same result. Select the method with which you feel most comfortable.
         <aside class="box-remark">
             The actual value of \(e^{0.2} \cos 0.2\) is about \(1.197.\)
         </aside>
 <p>
-<label class="label-emph">Using Linearization</label>
+<span class="label-emph">Using Linearization</span>
             We choose to center our <b>linearization</b> at \(x = 0 \col\) 
             We construct a tangent line to \(y = e^x \cos x\)
             at \(x = 0.\)
@@ -974,7 +974,7 @@
             \]
         </p>
 <p>
-<label class="label-emph">Using Differentials</label>
+<span class="label-emph">Using Differentials</span>
             We use the <b>differential</b> \(\dd y\) to estimate \(\Delta y,\)
             the amount by which \(e^x \cos x\) changes as \(x\) rises from \(0\) to \(0.2.\)
             We see  
@@ -991,7 +991,7 @@
             \ea 
             \]
         </p>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1000,7 +1000,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!-- [[[CALC]]] -->
         Let \(f(x) = \sqrt{2x + 3}.\)
         <ol class="list-alpha">
@@ -1013,12 +1013,12 @@
                 differs from \(f\) by no more than \(0.3.\)
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 The slope to \(f\) at \(x = 3\) is given by 
@@ -1039,7 +1039,7 @@
                 \[\boxed{-0.125 \leq x \leq 7.925}\]
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1048,7 +1048,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!-- [[[CALC]]] -->
         Let \(g(x) = \ln(x - 3).\)
         <ol class="list-alpha">
@@ -1062,12 +1062,12 @@
                 estimates \(g\) accurately to one decimal place.
             </li>
 </ol>
-</div> 
+</ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
 <ol class="list-alpha">
 <li>
                 The slope to \(g\) at \(x = 4\) is given by 
@@ -1088,7 +1088,7 @@
                 \[\boxed{3.617 \lt x \lt 4.516}\]
             </li>
 </ol>
-</span> 
+</sol> 
         </div> 
        </div>  
    </div> 
@@ -1097,16 +1097,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The sides of a cube are each \(10\) centimeters long. 
         Using differentials, calculate the amount by which the cube's volume increases 
         when each side is increased by \(0.01\) centimeter.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Let \(s\) be one of the cube's sides and \(V\) be its volume. 
         The maximum measurement error of \(s\) is \(\Delta s = 0.01.\)
         We have \(V = s^3\) and 
@@ -1115,7 +1115,7 @@
         for which we take \(\dd s = \Delta s\) \(= 0.01.\)
         So we see 
         \[\Delta V \approx 3(10)^2 (0.01) = \boxed{3 \un{cm}^3}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1124,16 +1124,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         A square's sides are measured to be \(4\) inches each 
         with a maximum error of \(0.05\) inch.
         Use differentials to approximate the maximum percent error in the square's area.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We will call \(s\) one of the square's sides and \(A\) its area. 
         Then \(A = s^2\) and so 
         \[\dd A = 2s \di s \pd\]
@@ -1149,7 +1149,7 @@
         \ea
         \]
         So the maximum <b>percent error</b> in \(A\) is \(0.025 \times 100\%\) \(= \boxed{2.5\%}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1158,15 +1158,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         A circle's radius is measured to be \(5.6 \pm 0.3\) inches. 
         Using differentials, approximate the maximum percent error in the circle's area.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The notation \(5.6 \pm 0.3\) means that the radius is measured to be \(5.6 \un{in}\)
         with an error of no more than \(0.3 \un{in}.\)
         Let \(r\) be the circle's radius and \(A\) be its area, 
@@ -1180,7 +1180,7 @@
         \]
         With \(r = 5.6\) and \(\dd r = 0.3,\) this expression becomes 
         \[\frac{2(0.3)}{5.6} \times 100\% \approx \boxed{10.714 \%}\]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1189,15 +1189,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         The side \(s\) of a square is increased in length by \(1\%.\)
         Using a linear approximation, estimate the square's new area in terms of \(s.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         Let \(A\) denote the square's area. Then \(A = s^2,\) from which we attain 
         \[\dd A = 2s \di s \pd\]
         Since \(s\) is increased by \(1\%,\) \(\dd s = 0.01s\) and so we see 
@@ -1210,7 +1210,7 @@
         &amp;= s^2 + 0.02s^2 = \boxed{1.02s^2}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1219,16 +1219,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Earth can be approximated by a sphere whose radius is roughly \(6360\) miles. 
         If Earth's radius were shrunk by \(1\) mile, 
         then approximately by what percent would its surface area decrease?
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         A sphere of radius \(r\) has surface area given by the formula \(A = 4 \pi r^2.\)
         The differential \(\dd A\) is given by 
         \[\dd A = 8 \pi r \di r \pd\]
@@ -1243,7 +1243,7 @@
         &amp;\approx \boxed{0.003 \%}
         \ea 
         \]
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1252,16 +1252,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         Let \(g\) be a differentiable function that satisfies \(g(2) = 7\)
         and \(g'(x) = x^2 - 1.\)
         Approximate \(g(2.1).\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         We don't know the function \(g;\) we only have its derivative \(g'.\)
         Hence, we use a linear approximation to estimate \(g(2.1) \col\)
         The slope to the graph of \(g\) at \(x = 2\) is 
@@ -1277,7 +1277,7 @@
         &amp;= \boxed{7.3}
         \ea 
         \] 
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1286,15 +1286,15 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
         For nonzero \(x,\) let \(Q(x) = x^k\) where \(k \gt 0.\)
         Show that the maximum relative error of \(Q\) is \(k\) times the maximum relative error of \(x.\) 
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The maximum <b>relative error</b> of \(x\) is \(\Delta x/x,\)
         and the maximum <b>relative error</b> of \(Q\) is \(\Delta Q/Q.\)
         We approximate the numerators in each expression as \(\dd x\) and \(\dd Q,\)
@@ -1304,7 +1304,7 @@
         So the relative error of \(Q\) is 
         \[\frac{\dd Q}{Q} = \frac{k x^{k - 1} \di x}{x^k} = \frac{k \di x}{x} \pd\]
         This expression represents \(k\) times the relative error of \(x.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1313,16 +1313,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!--[[[HARD]]]-->
         Let \(f(x) = x^2 + C\) and \(T(x) = 6x - 5.\)
         Find the value of \(C\) such that \(T\) is the linearization of \(f\) at \(x = 3.\)
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         The line \(T(x)\) is the linearization of \(f(x)\) at \(x = 3\)
         if and only if \(T\) is tangent to \(f\) at \(3\)—that is, 
         \(T(3) = f(3)\) and \(T'(3) = f'(3).\)
@@ -1336,7 +1336,7 @@
         You can view an interactive plot of \(f\) and \(T\)
         at 
         <a class="external-link" href="https://www.desmos.com/calculator/4lpyxm3m1v?lang=en" rel="noopener noreferrer" target="_blank">https://www.<wbr/>desmos.com/<wbr/>calculator/<wbr/>4lpyxm3m1v?lang=en</a>.
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
@@ -1345,16 +1345,16 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <div>
+            <ques>
 <!--[[[HARD]]]-->
         The line \(T(x) = -4x - 3\) is a linearization of the parabola \(f(x) = x^2 + 1.\)
         Find the \(x\)-value at which the linearization is centered.
-    </div> 
+    </ques> 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
-            <span>
+            <sol>
         A linearization \(T(x)\) is <b>centered</b> at \(x = a\) if and only if \(T\)
         is tangent to \(f\) at \(a.\)
         The word <i>tangent</i> means that \(T(a) = f(a)\)
@@ -1371,7 +1371,7 @@
         meaning the two graphs are tangent when \(x = -2.\)
         Hence, the linearization \(T(x) = -4x - 3\) for \(f\) 
         is centered at \(\boxed{x = -2}.\)
-    </span> 
+    </sol> 
         </div> 
        </div>  
    </div> 
