@@ -26,17 +26,23 @@
           <ul>
             <li>
               <button>
-                <a href="8.5-First-Order-Linear-Differential-Equations.html">Section <i class="fa fa-external-link"></i></a>
+                <a href="8.5-First-Order-Linear-Differential-Equations.html">Section 
+                  <i class="fa fa-external-link"></i>
+                </a>
               </button>
             </li>
             <li>
               <button>
-                <a href="8.5-First-Order-Linear-Differential-Equations-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+                <a href="8.5-First-Order-Linear-Differential-Equations-exercises.html">Exercises 
+                  <i class="fa fa-external-link"></i>
+                </a>
               </button>
             </li>
             <li>
               <button>
-                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions 
+                  <i class="fa fa-external-link"></i>
+                </a>
               </button>
             </li>
           </ul>
@@ -49,17 +55,17 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <ques>
+            
         The <i>standard form</i> of a first-order linear differential equation is 
         \[y' + P(x) y = Q(x) \pd\]
         Find an expression for an <i>integrating factor</i>, \(\mu(x).\)
         How do we use this function?
-    </ques> 
+     
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         An integrating factor is 
         \[\mu(x) = e^{\int P(x) \di x} \pd\]
         We only require one integrating factor, 
@@ -68,7 +74,7 @@
         \[y' + P(x) y = Q(x)\]
         as the derivative of the product \(y e^{\int P(x) \di x}.\)
         We then integrate and solve for \(y.\)
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -77,14 +83,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds y' - 4xy = e^{2x^2}\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         This differential equation is in the form 
         \[y' + P(x) y = Q(x) \cma\]
         with \(P(x) = -4x\) and \(Q(x) = e^x.\)
@@ -100,7 +106,7 @@
         \[\par{ye^{-2x^2}}' = 1 \pd\]
         Integrating both sides then gives 
         \[ye^{-2x^2} = x + C \implies \boxed{y = e^{2x^2}(x + C)}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -109,14 +115,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds xy' - y = x\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         The differential equation is linear and non-separable. 
         We divide the equation by \(x\) to get 
         \begin{equation}
@@ -141,7 +147,7 @@
         \implies \boxed{y = x \ln|x| + Cx} 
         \]
 
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -150,14 +156,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds xy' - y = 1 \cma y(1) = 1\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         We divide the differential equation by \(x \col\)
         \begin{equation}
         y' - \frac{1}{x} y = \frac{1}{x} \pd \label{eq:xy'-y=1-standard}
@@ -181,7 +187,7 @@
         Thus, \(\eqRefer{eq:xy'-y=1-C}\) becomes 
         \[\frac{1}{x} y = -\frac{1}{x} + 2 \implies \boxed{y = -1 + 2x}\]
 
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -190,14 +196,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds y' + 2xy = 4x \cma y(0) = 3\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         This differential equation is in the form 
         \[y' + P(x) y = Q(x) \cma\]
         with \(P(x) = 2x\) and \(Q(x) = 4x.\)
@@ -230,7 +236,7 @@
         \[3 = 2 + C \implies C = 1 \pd\]
         Then we solve for \(y\) in \(\eqRefer{eq:2xy-constant} \col\)
         \[y = \boxed{2 + e^{-x^2}}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -239,14 +245,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds (\csc x) y' - y = 3 \cma y(0) = 1\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         We first manipulate the coefficient of \(y'\) to be \(1,\)
         so we multiply the equation by \(\sin x.\)
         We get 
@@ -277,7 +283,7 @@
         \[e = -3e + C \implies C = 4e \pd\]
         Hence, \(\eqRefer{eq:cscx-mu-C}\) becomes 
         \[ye^{\cos x} = - 3e^{\cos x} + 4e \implies \boxed{y = -3 + 4e^{1 -\cos x}}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -286,14 +292,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds y' + y = x \cma y(0) = 0\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         The coefficient of \(y\) is \(1,\)
         so we select an integrating factor to be 
         \[\mu(x) = e^{\int 1 \di x} = e^x \pd\]
@@ -327,7 +333,7 @@
         \[0 = 0 - 1 + C \implies C = 1 \pd\]
         Thus, \(\eqRefer{eq:y'+y-C}\) becomes 
         \[y \, e^x = xe^x - e^x + 1 \implies \boxed{y = x - 1 + e^{-x}}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -336,14 +342,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds y' = 2x - y\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         We rewrite the differential equation as 
         \begin{equation}
         y' + y = 2x \pd \label{eq:2x-y-standard}
@@ -378,7 +384,7 @@
         \]
         Thus, \(\eqRefer{eq:2x-y-int}\) becomes
         \[ye^x = 2xe^x - 2e^x + C \implies \boxed{y = 2x - 2 + Ce^{-x}}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -387,14 +393,14 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For 
+            For <blockquote class="box-problem-display"> 
         \[\ds y' + 2xy = x^3\]
-     use an integrating factor to solve the differential equation. 
+    </blockquote> use an integrating factor to solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         The coefficient of \(y\) is \(2x,\) so an integrating factor is 
         \[\mu(x) = e^{\int 2x \di x} = e^{x^2} \pd\]
         We then multiply the differential equation by this factor to obtain 
@@ -432,7 +438,7 @@
         \]
         Thus, \(\eqRefer{eq:-2xy=x^3-int}\) is 
         \[y \, e^{x^2} = \tfrac{1}{2} x^2 e^{x^2} - \tfrac{1}{2} e^{x^2} + C \implies \boxed{y = \tfrac{1}{2} x^2 - \tfrac{1}{2} + Ce^{-x^2}}\]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -441,7 +447,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <ques>
+            
         A ball of mass \(m\) is dropped from rest.
         Let \(v(t)\) be the ball's velocity at any time \(t.\)
         The ball experiences two forces: <i>gravitational force</i> and <i>drag force</i>. 
@@ -454,12 +460,12 @@
         <i>Terminal velocity</i>, \(v_T,\) 
         is the maximum velocity of the ball. 
         Show that \(v_T = mg/b.\)
-    </ques> 
+     
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         For simplicity we write \(v(t)\) as \(v.\)
         We divide the given differential equation by \(m\) to get 
         \begin{equation}
@@ -499,7 +505,7 @@
         &amp;= \frac{mg}{b} \pd
         \ea 
         \]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
@@ -508,7 +514,7 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <ques>
+            
 <figure class="linear-diff-eq-tank-torricelli" id="linear-diff-eq-tank-torricelli">
 <img alt="linear-diff-eq-tank-torricelli.jpg" src="../images/sectionImages/linear-diff-eq-tank-torricelli.jpg"/>
 </figure>
@@ -525,13 +531,13 @@
         The tank's initial water level is \(50 \un{cm},\)
         and after \(60\) seconds the water level is \(20 \un{cm}.\)
         Find \(h(t),\) the water level in the tank at time \(t.\)
-    </ques> 
+     
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
-</sol> 
+            
+ 
         </div> 
        </div>  
    </div> 
@@ -540,19 +546,19 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            <ques>
+            
         A <i>Bernoulli</i> differential equation is of the form 
         \[\deriv{y}{x} + P(x) y = Q(x) y^n \pd\]
         To solve this differential equation, 
         we first rewrite the equation by substituting \(y = u^{1/(1 - n)}.\)
         Use this method to solve 
         \[\deriv{y}{x} + \frac{1}{x} y = 2x y^3 \pd\]
-    </ques> 
+     
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
-            <sol>
+            
         We see \(n = 3.\)
         Thus, we substitute
         \begin{equation} 
@@ -587,7 +593,7 @@
         y &amp;= \boxed{\par{-4 x^2 \ln|x| + Cx^2}^{-1/2}}
         \ea 
         \]
-    </sol> 
+     
         </div> 
        </div>  
    </div> 
