@@ -106,6 +106,7 @@ window.MathJax = {
             out: ["#1_{\\text{out}}", 1], // r_out
             in: ["#1_{\\text{in}}", 1], // r_in
             qed: "\\tag*{$\\blacksquare$}",
+            muUnit: ["\\un{µ#1}", 1],
             un: ["\\, \\textrm{#1} ", 1],
             undiv: ["\\; \\textrm{#1}/\\textrm{#2}", 2],
             subsuper:["_{\\hspace{0.1em} #1}^{\\Large^#2}",2],

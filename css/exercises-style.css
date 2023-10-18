@@ -196,8 +196,8 @@ main figure::after{
     margin-bottom: 5%;
 }
 
-.box-problem-display{
-    margin-left: 2%;
+.box-problem-display{ /* the blockquote for "LIST" environment */
+    margin-left: 3%;
 }
 
 .box-solution__head{
