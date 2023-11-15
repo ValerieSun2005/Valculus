@@ -53,7 +53,7 @@
     which requires a variable change using a substitution. 
     At the end of this section, you'll build your pattern recognition 
     and be able to compute simple substitutions in your head.  
-    This module is split into the following subsections:
+    We discuss the following topics:
     <ul>
         <li>
             <a href="#sub-rule" class="page-anchor">The Substitution Rule</a>
@@ -63,6 +63,9 @@
         </li>
         <li>
             <a href="#changing-bounds" class="page-anchor">Changing Bounds</a>
+        </li>
+        <li>
+            <a href="#trig-integrals" class="page-anchor">Integrals of Trigonometric Functions</a>
         </li>
     </ul>
 </p>
@@ -253,7 +256,7 @@
 <div class="box-title">INTEGRATING \(f(ax + b)\)</div>
 <div class="box">
     Let \(F\) be an antiderivative of \(f.\) 
-    If \(a \ne 0,\) then, for any constant \(C,\)
+    If \(a \ne 0,\) then for any constant \(C,\)
     \[
     \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
     \]
@@ -376,10 +379,106 @@
     </p>
 </div>  
 
+<h4 id="trig-integrals">Integrals of Trigonometric Functions</h4>
 <p>
-    There is no wrong substitution, but some substitutions are more useful than others. 
-    With practice, you'll be able to identify useful substitutions.
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a> 
+    we learned that \(\int \cos x \di x\) \(= \sin x + C\)
+    and \(\int \sin x \di x\) \(= - \cos x + C.\)
+    The Substitution Rule enables us to determine antiderivatives 
+    for the remaining four trigonometric functions: tangent, cotangent, secant, and cosecant. 
 </p>
+<p>
+    Let's begin by determining an antiderivative for \(\cot x.\)
+    Because \(\cot x\) \(= \cos x /\sin x,\) we have 
+    \[\int \cot x \di x = \int \frac{\cos x}{\sin x} \di x \pd\]
+    We choose the substitution \(u = \sin x\) because 
+    the differential \(\dd u = \cos x \di x\) lies in the integral.
+    Then the integral becomes
+    \[\int \frac{1}{u} \di u = \ln \abs u + C = \ln \abs{\sin x} + C \pd\]
+    To integrate secant, we employ a clever trick:
+    We multiply the numerator and denominator by the sum \((\sec x + \tan x)\) to get 
+    \[\int \sec x \di x = \int \sec x \cdot \frac{\sec x + \tan x}{\sec x + \tan x} \di x 
+    = \int \frac{\sec^2 x + \sec x \tan x}{\sec x + \tan x} \di x \pd \]
+    Letting \(u = \sec x + \tan x,\) we see \(\dd u = \par{\sec x \tan x + \sec^2 x} \di x\)
+    and so the integral becomes 
+    \[
+    \int \frac{1}{u} \di u = \ln \abs u + C = \ln \abs{\sec x + \tan x} + C \pd
+    \]
+    The same tricks enable us to attain the antiderivatives of \(\tan x\)
+    and \(\csc x.\)
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \tan x \di x\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    Since \(\tan x\) \(= \sin x/\cos x,\) we see 
+    \[\int \tan x \di x = \int \frac{\sin x}{\cos x} \di x \pd\]
+    We let \(u = \cos x\) because \(\dd u = -\sin x \di x,\)
+    so the integral becomes 
+    \[-\int \frac{1}{u} \di u = - \ln \abs u + C = - \ln \abs{\cos x} + C = \ln \abs{\frac{1}{\cos x}} + C 
+    = \boxed{\ln \abs{\sec x} + C}\]
+</div>
+
+<p>
+    The integral \(\int \csc x \di x\) is left as an exercise in the Exercises section.
+    The following table represents the integrals of all six trigonometric functions. 
+    In Sections <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
+    and <a href="/Valculus/calculus/6.3-Trigonometric-Substitution.html">6.3</a>, 
+    it will be essential to have them memorized.
+</p>
+
+<div class="box-title">INTEGRALS OF TRIGONOMETRIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \int \sin x \di x = -\cos x + C\)
+                </td>
+                <td>
+                    \(\ds \int \cos x \di x = \sin x + C\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \int \tan x \di x = \ln \abs{\sec x} + C\)
+                </td>
+                <td>
+                    \(\ds \int \cot x \di x = \ln \abs{\sin x} + C\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \int \sec x \di x = \ln \abs{\sec x + \tan x} + C\)
+                </td>
+                <td>
+                    \(\ds \int \csc x \di x = - \ln \abs{\csc x + \cot x} + C\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int 2 e^{4 \sec x} \sec x \tan x \di x\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    Observe that 
+    \[\int 2 e^{4 \sec x} \sec x \tan x \di x = \tfrac{1}{2} \int e^{4 \sec x} (4\sec x \tan x) \di x \pd\]
+    We therefore substitute \(u = 4 \sec x\) because the differential \(\dd u = 4 \sec x \tan x \di x\)
+    appears in the integral. 
+    Doing so gives
+    \[\tfrac{1}{2} \int e^u \di u = \tfrac{1}{2} e^u + C = \boxed{\tfrac{1}{2} e^{4 \sec x} + C}\]
+</div>
 
 <div class="section-summary">
     <p>
@@ -390,7 +489,7 @@
         and let \(f\) be continuous over \(I.\)
         To evaluate the integral \(\int f(g(x)) \, g'(x) \di x,\)
         substitute \(u = g(x).\)
-        Then \(\di u = g'(x) \di x,\) and 
+        Then \(\dd u = g'(x) \di x,\) and 
         \[
         \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \pd \tag*{\(\eqref{eq:u-sub-f}\)}
         \]
@@ -398,7 +497,7 @@
     <p>
         <a href="#ax+b" class="summary-anchor">Integrating \(f(ax + b)\)</a>
         Let \(F\) be an antiderivative of \(f.\) 
-        If \(a \ne 0,\) then, for any constant \(C,\)
+        If \(a \ne 0,\) then for any constant \(C,\)
         \[
         \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
         \]
@@ -410,6 +509,38 @@
         The second option is to change the bounds to be in terms of \(u \col\)
         \[\int_a^b f(g(x)) g'(x) \di x = \int_{g(a)}^{g(b)} f(u) \di u \cma\]
         and evaluate without converting back to \(x.\)
+    </p>
+    <p>
+        <a href="#trig-integrals" class="summary-anchor">Integrals of Trigonometric Functions</a>
+        The following table shows the integrals for all six trigonometric functions:
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \int \sin x \di x = -\cos x + C\)
+                    </td>
+                    <td>
+                        \(\ds \int \cos x \di x = \sin x + C\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \int \tan x \di x = \ln \abs{\sec x} + C\)
+                    </td>
+                    <td>
+                        \(\ds \int \cot x \di x = \ln \abs{\sin x} + C\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \int \sec x \di x = \ln \abs{\sec x + \tan x} + C\)
+                    </td>
+                    <td>
+                        \(\ds \int \csc x \di x = - \ln \abs{\csc x + \cot x} + C\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </p>
 </div>
     </main>

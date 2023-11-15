@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8.1: Slope Fields and Euler's Method</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>8.1 — Slope Fields and Euler's Method</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.1-Slope-Fields-and-Euler's-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Slope-Fields-and-Euler's-Method]]]--> 
+<p>
+    It turns out that a ball in free fall produces a parabolic trajectory, 
+    whereas a population of animals grows exponentially. 
+    As we will learn later in this chapter, we know these systems' behaviors by analyzing their <i>differential equations</i>. 
+    Differential equations are extremely powerful tools
+    in science, economics, and ecology.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#defining-a-differential-equation" class="page-anchor">Defining a Differential Equation</a>
+        </li>
+        <li>
+            <a href="#slope-fields" class="page-anchor">Slope Fields</a>
+        </li>
+        <li>
+            <a href="#euler's-method" class="page-anchor">Euler's Method</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="defining-a-differential-equation">Defining a Differential Equation</h4>
+<p>
+    A <span class="emph">differential equation</span> relates 
+    a function to its independent variable and derivatives.
+    Generally, a differential equation in \(y\) and \(x\) 
+    is some equation that includes \(x,\) \(y,\) and the derivatives of \(y.\)
+    In an algebraic equation we solve for some unknown value, 
+    such as solving for \(a\) in the equation \(3a - 6 = 0.\)
+    Yet the solution to a <i>differential equation</i> is a <i>function</i>.
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a> we discussed 
+    the simplest type of differential equation:
+    \[\deriv{y}{x} = f(x) \cma\]
+    whose <span class="emph">general solution</span> is the function \(y = \int f(x) \di x.\)
+    An <span class="emph">\(\bf n\)th-order differential equation</span> 
+    includes an <nobr>\(n\)th</nobr>-order derivative as its highest-order derivative.
+    For example, an example of a <i>second-order</i> differential equation is
+    \[\derivOrder{y}{x}{2} + \deriv{y}{x} + 5y = 0\] 
+    because the highest-order derivative has order \(2.\)
+    In this chapter we focus primarily on <span class="emph">first-order differential equations</span>,
+    which relate the rate of change of \(y\)—that is, \(\textderiv{y}{x}\)—to \(x\) and \(y.\)
+    As an example, the first-order differential equation 
+    \[\deriv{y}{x} = x + y\]
+    asserts that the rate at which \(y\) changes with \(x\)
+    equals the sum of \(x\) and \(y.\) 
+</p>
+<p>
+    <span class="label-emph">Particular Solutions</span>
+    Recall, from Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>, 
+    that we often combine a differential equation with an <span class="emph">initial condition</span>. 
+    This pair is called an <span class="emph">initial-value problem</span>.
+    We may seek some function \(f(x)\) that 
+    solves a differential equation while satisfying \(f \par{x_0} = y_0.\)
+    Then \(f(x)\) is called a <span class="emph">particular solution</span> to that differential equation,
+    and \(\par{x_0, y_0}\) is an initial condition.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        For constants \(A\) and \(b,\)
+        show that the family of functions \(y = A \sin bx\)
+        satisfies the second-order differential equation 
+        \[\derivOrder{y}{x}{2} + b^2 y = 0 \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    To verify a solution to a differential equation, 
+    we find the second derivative of \(y = A \sin bx\)
+    and see whether it satisfies the given equation. 
+    Doing so gives  
+    \[\deriv{y}{x} = Ab \cos bx \and \derivOrder{y}{x}{2} = -Ab^2 \sin bx \pd\]
+    We see
+    \[\underbrace{-Ab^2 \sin bx}_{\textderivOrder{y}{x}{2}} 
+    + \underbrace{b^2 \par{A \sin bx}}_{b^2 y} \equalsCheck 0 \cma\]
+    so \(y = A \sin bx\) is a solution.
+</div>
+
+<h4 id="slope-fields">Slope Fields</h4>
+<p>
+    Most differential equations are very difficult or even impossible to solve analytically. 
+    Consider the first-order differential equation
+    \[\deriv{y}{x} = F(x, y) \cma\]
+    where \(F(x, y)\) is some expression containing \(x\) and \(y.\)
+    Regardless of whether this differential equation can be solved,
+    we can better understand this model by 
+    drawing short line segments of slope \(F(x, y)\) at several points \((x, y).\)
+    The result is a <span class="emph">slope field</span> (or <span class="emph">direction field</span>), 
+    which provides the blueprint for a solution curve. 
+    <a href="#slope-field-F">Figure 1A</a> shows the slope field for some differential equation 
+    \(\textderiv{y}{x} = F(x, y).\)
+    Each line segment indicates the direction in which a solution curve 
+    travels at \((x, y).\)
+    A <i>particular</i> solution curve is a graph that follows a slope field 
+    and passes through some point \(\par{x_0, y_0};\)
+    for example, <a href="#slope-field-F-solution-pt">Figure 1B</a>
+    shows the particular solution curve \(y = f(x)\) that satisfies 
+    the initial condition \(y_0 = f(x_0).\) 
+</p>
+
+<div class="figure-center">
+    <figure class="slope-field-F" id="slope-field-F">
+        <img src="../images/sectionImages/slope-field-F.jpg" class="slope-field-F" alt="Figure 1A">
+    </figure>
+    <figure class="slope-field-F-solution-pt" id="slope-field-F-solution-pt">
+        <img src="../images/sectionImages/slope-field-F-solution-pt.jpg" class="slope-field-F-solution-pt" alt="Figure 1B">
+    </figure>
+</div>
+<style>
+    .slope-field-F::before{
+        content:'FIGURE 1A';
+    }
+
+    .slope-field-F-solution-pt::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Draw a slope field for the differential equation 
+        \[\deriv{y}{x} = x^2 - 2y\]
+        at the points \(A(0, 1),\) \(B(2, -1),\) and \(C(2, 2).\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="slope-field-3pts" id="slope-field-3pts">
+        <img src="../images/sectionImages/slope-field-3pts.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .slope-field-3pts::before{
+            content:'FIGURE 2';
+        }
+    </style> 
+    At each of points \(A,\) \(B,\) and \(C,\)
+    we compute the slope \(\textderiv{y}{x} = x^2 - 2y.\)
+    The slope at \(A(0, 1)\) is 
+    \[(0)^2 - 2(1) = -2 \pd\]
+    So in the \(xy\)-plane, we draw a line segment of slope \(-2\)
+    at the point \((0, 1).\)
+    Likewise, the slope at \(B(2, -1)\) is 
+    \[(2)^2 - 2(-1) = 6 \pd\]
+    We therefore sketch a line segment of slope \(6\)
+    at the point \((2, -1).\)
+    Lastly, the slope at \(C(2, 2)\) is 
+    \[(2)^2 - 2(2) = 0 \pd\]
+    Hence, we draw a horizontal line segment at the point \((2, 2).\)
+    The slope field for these three points is shown by 
+    <a href="#slope-field-3pts">Figure 2</a>.
+</div>
+
+<div class="example-title" id="ex-slope-match"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="slope-field-y" id="slope-field-y">
+            <img src="../images/sectionImages/slope-field-y.jpg" alt="Figure 3">
+        </figure>
+        <style>
+            .slope-field-y::before{
+                content:'FIGURE 3';
+            }
+        </style> 
+        Which choice could be the differential equation for the slope field in 
+        <a href="#slope-field-y">Figure 3</a>?
+        <ol class="list-mcq">
+            <li>
+                <span>\(\ds \deriv{y}{x} = x\)</span> 
+            </li>
+            <li>
+                <span>\(\ds \deriv{y}{x} = y\)</span> 
+            </li>
+            <li>
+                <span>\(\ds \deriv{y}{x} = x + y\)</span> 
+            </li>
+            <li>
+                <span>\(\ds \deriv{y}{x} = xy\)</span> 
+            </li>
+        </ol>
+        <span class="white-space-small"></span>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    To connect a slope field to a differential equation, 
+    it is easiest to analyze the line segments along \(x = 0\) and \(y = 0.\)
+    In <a href="#slope-field-y">Figure 3</a>
+    the slopes are \(0\) along the \(x\)-axis,
+    so we require \(\textderiv{y}{x} = 0\) when \(y = 0.\) 
+    Options (A) and (C) are therefore eliminated.
+    The slopes aren't \(0\) along the \(y\)-axis,
+    whereas the slope field for \(\textderiv{y}{x} = xy\) would contain this characteristic.
+    Thus, the correct answer is option <b>(B)</b>,
+    \(\textderiv{y}{x} = y.\)
+    This differential equation <i>is independent of</i> \(x;\)
+    simply put, the slopes are unchanged if \(x\) is altered.
+</div>
+
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        For \(-3 \leq x \leq 3\) and \(-3 \leq y \leq 3,\)
+        sketch a slope field for the differential equation 
+        \[\deriv{y}{x} = x - y \pd\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="slope-field-x-y" id="slope-field-x-y">
+        <img src="../images/sectionImages/slope-field-x-y.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .slope-field-x-y::before{
+            content:'FIGURE 4';
+        }
+    </style> 
+    At any \((x, y),\) the slope is \(\textderiv{y}{x} = x - y.\)
+    To construct a slope field, we evaluate \(\textderiv{y}{x}\) at
+    several points of \((x, y).\)
+    The following observations help us sketch the field:
+    <ul>
+        <li>
+            When \(x = y,\) we see \(x - y = 0.\) 
+            Thus, the slope is \(0\) at the points \((1, 1),\) \((2, 2),\) \((3, 3)\) 
+            and \((-1, -1),\) \((-2, -2),\) \((-3, -3).\)
+            We therefore draw short horizontal line segments at these points.
+        </li>
+        <li>
+            When \(x\) is negative and \(y\) is positive, \(\textderiv{y}{x} = x - y \lt 0.\) 
+            So the slopes are negative in the second quadrant.
+        </li>
+        <li>
+            In the fourth quadrant, the slopes are positive because \(x\) is positive 
+            and \(y\) is negative.
+        </li>
+        <li>
+            When \(x\) is bigger than \(y,\) the slope is positive. 
+            Conversely, when \(x\) is smaller than \(y,\) the slopes are negative.
+        </li>
+    </ul>
+    We therefore attain the slope field in <a href="#slope-field-x-y">Figure 4</a>.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="slope-field-ex-solution-curve-q figure-center-one" id="slope-field-ex-solution-curve-q">
+            <img src="../images/sectionImages/slope-field-ex-solution-curve-q.jpg" alt="Figure 5">
+        </figure>
+        <style>
+            .slope-field-ex-solution-curve-q::before{
+                content:'FIGURE 5';
+            }
+        </style> 
+        For the slope field in <a href="#slope-field-ex-solution-curve-q">Figure 5</a>,
+        sketch the particular solution curve that passes through the point \((1, 1).\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    Starting at the point \((1, 1),\)
+    we <i>follow the direction of the nearby line segments</i>.
+    The slope is positive at \((1, 1),\)
+    so from this point we trace the curve upward and rightward—roughly 
+    <i>parallel</i> to the nearby line segments. 
+    Conversely, to the left of \((1, 1),\)
+    we extend the curve downward and leftward 
+    (according to the direction of the nearby slopes), 
+    until it attains a relative minimum at \(x = 0.\)
+    Afterward, we sketch the curve leftward and upward
+    to match the slopes of the line segments. 
+    The solution curve should be parallel to the nearby line segments.  
+    (See <a href="#slope-field-ex-solution-curve-s">Figure 6</a>.)
+    <figure class="slope-field-ex-solution-curve-s figure-center-one" id="slope-field-ex-solution-curve-s">
+        <img src="../images/sectionImages/slope-field-ex-solution-curve-s.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .slope-field-ex-solution-curve-s::before{
+            content:'FIGURE 6';
+        }
+    </style> 
+</div>
+
+<h4 id="euler's-method">Euler's Method</h4>
+<figure class="euler-method-curves" id="euler-method-curves">
+    <img src="../images/sectionImages/euler-method-curves.jpg" alt="Figure 7">
+</figure>
+<style>
+    .euler-method-curves::before{
+        content:'FIGURE 7';
+    }
+</style> 
+<p>
+    Most differential equations have no analytical solutions; 
+    we must therefore use a method to approximate particular solutions. 
+    Given a differential equation 
+    \[\deriv{y}{x} = F(x, y) \cma\]
+    <span class="emph">Euler's Method</span> enables us 
+    to estimate a particular solution with the initial condition \(\par{x_0, y_0}\)
+    by using a series of linear approximations. 
+    We approximate points on the solution curve at equally spaced numbers 
+    \(x_0,\) \(x_1 = x_0 + h,\) \(x_2 = x_1 + h, \dots.\) 
+    We call \(h\) the <span class="emph">step size</span>,
+    the amount by which we increment \(x\) as we take more and more approximation points.
+    In <a href="#euler-method-curves">Figure 7</a> 
+    a solution curve is approximated by the points 
+    \(\par{x_0, y_0},\) \(\par{x_1, y_1},\) \(\par{x_2, y_2},\)
+    \(\par{x_3, y_3},\) and \(\par{x_4, y_4}.\)
+    The slope at \(\par{x_0, y_0}\) is \(F \par{x_0, y_0},\)
+    so we have
+    \[y_1 = y_0 + hF\par{x_0, y_0} \pd\] 
+    Likewise, we observe that 
+    \[y_2 = y_1 + h F \par{x_1, y_1} \pd\]
+    In general, the horizontal distance between any points 
+    \(\par{x_{n - 1}, y_{n - 1}}\) and \(\par{x_n, y_n}\) is the step size \(h;\)
+    the vertical distance is \(hF\par{x_{n - 1}, y_{n - 1}}.\)
+    Mathematically, 
+    \begin{equation}
+    y_n = y_{n - 1} + hF\par{x_{n - 1}, y_{n - 1}} \pd \label{eq:euler-method}
+    \end{equation}
+    In words, we attain each subsequent approximation for \(y\)
+    by adding on the slope \(F\par{x_{n - 1}, y_{n - 1}}\)
+    multiplied by the step size \(h.\) 
+    Why is this useful?
+    Remember that the slope \(F(x, y)\) is <i>known</i>,
+    while the exact solution curve is <i>unknown</i>. 
+    Euler's Method therefore enables us to approximate a solution curve 
+    by using its rate of change \(F.\)
+    Methodically, we begin at the point \(\par{x_0, y_0}\) 
+    and proceed in the direction of the slope field. 
+    After \(x\) is incremented by a distance \(h,\)
+    we take the slope at the new location and traverse in that direction. 
+    We repeat this process until \(x\) is some desired number. 
+    Doing so gives us several points that we can plot to approximate a solution curve.
+    Observe that the first step in Euler's Method is a linearization
+    for \(y_1\) (see Section <a href="/Valculus/calculus/2.7-Linearization-and-Differentials.html">2.7</a>).
+    Decreasing the step size \(h\) allows us to sample more points,
+    so the approximated solution curve better fits 
+    the exact solution curve.
+    (See <a href="#euler-method">Animation 1</a>.)
+    This method lets computers output accurate solutions to many differential equations
+    whose solutions are difficult to obtain.
+    Even a spreadsheet is sufficient to use Euler's Method, 
+    and many computer-algebra systems produce slope fields for us—the beauty of 
+    technology in the modern world.
+</p>
+
+<figure class="euler-method figure-center-one" id="euler-method">
+    <img src="../images/sectionAnimations/euler-method.gif" alt="ANIMATION 1">
+</figure>
+<style>
+    .euler-method::before{
+        content:'ANIMATION 1';
+    }
+</style>
+
+<div class="box-title">EULER'S METHOD</div>
+<div class="box">
+    If \(x_n = x_{n - 1} + h\) (where \(h\) is the <span class="emph">step size</span>)
+    and \(\par{x_0, y_0}\) is an initial condition to the differential equation 
+    \(\textderiv{y}{x} = F(x, y),\) 
+    then <span class="emph">Euler's Method</span> gives the approximation 
+    \begin{equation}
+    y_n = y_{n - 1} + hF\par{x_{n - 1}, y_{n - 1}} \pd \eqlabel{eq:euler-method}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using Euler's Method with step size \(h = 0.5,\)
+        approximate \(y(3)\) if \(y(1) = 3\) and 
+        \[\deriv{y}{x} = x^2 - y \pd\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    Repeatedly using \(\eqref{eq:euler-method}\) with \(x_0 = 1\) and \(y_0 = 3,\) 
+    we find 
+    \[
+    \ba 
+    y_1 &= 3 + 0.5 \parbr{(1)^2 - 3} = 2 \cma \nl 
+    y_2 &= 2 + 0.5 \parbr{(1.5)^2 - 2} = 2.125 \cma \nl 
+    &\vdotss \nl
+    y(3) \approx y_4 &= 3.0625 + 0.5 \parbr{(2.5)^2 - 3.0625} = \boxed{4.65625}
+    \ea 
+    \]
+    The following table shows all the calculations of \(y_n.\)
+    <table class="table-vertical">
+    <tr>
+        <td class="label-cell">
+        \(n\)
+        </td>
+        <td class="label-cell">
+        \(x_n\)
+        </td>
+        <td class="label-cell">
+        \(y_n\)
+        </td>
+    </tr>
+        <tr>
+        <td>\(0\)</td>
+        <td>\(1\)</td>
+        <td>\(3\)</td>
+        </tr>
+        <tr>
+        <td>\(1\)</td>
+        <td>\(1.5\)</td>
+        <td>\(2\)</td>
+        </tr>
+        <tr>
+        <td>\(2\)</td>
+        <td>\(2\)</td>
+        <td>\(2.125\)</td>
+        </tr>
+        <tr>
+        <td>\(3\)</td>
+        <td>\(2.5\)</td>
+        <td>\(3.0625\)</td>
+        </tr>
+        <tr>
+        <td>\(4\)</td>
+        <td>\(3\)</td>
+        <td>\(4.65625\)</td>
+        </tr>
+        </table>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-a-differential-equation" class="summary-anchor">Defining a Differential Equation</a>
+        A <span class="emph">differential equation</span> connects some function
+        to its independent variable and derivatives—for example, 
+        an equation that includes \(x,\) \(y,\) and the derivatives of \(y.\)
+        The solution to a differential equation is a function.
+        The simplest form of differential equation is 
+        \[\deriv{y}{x} = f(x) \cma\]
+        whose <span class="emph">general solution</span> is the function \(y = \int f(x) \di x.\)
+        An <span class="emph">\(\bf n\)th-order differential equation</span> 
+        contains an <nobr>\(n\)th</nobr>-order derivative as its highest-order derivative.
+    </p>
+    <p>
+        <a href="#slope-fields" class="summary-anchor">Slope Fields</a>
+        To better understand a system modeled by a first-order differential equation,
+        we construct a <span class="emph">slope field</span>. 
+        For \(\textderiv{y}{x} = F(x, y),\)
+        we draw short line segments with slope \(F(x, y)\) at several points of \((x, y).\)
+        These line segments show the direction in which a slope curve travels. 
+        A particular solution curve is a graph that follows the slope field 
+        while passing through some point \(\par{x_0, y_0}.\)
+    </p>
+    <p>
+        <a href="#euler's-method" class="summary-anchor">Euler's Method</a>
+        If \(x_n = x_{n - 1} + h\) (where \(h\) is the <span class="emph">step size</span>)
+        and \(\par{x_0, y_0}\) is an initial condition to the differential equation 
+        \(\textderiv{y}{x} = F(x, y),\) 
+        then <span class="emph">Euler's Method</span> gives the approximation 
+        \begin{equation}
+        y_n = y_{n - 1} + hF\par{x_{n - 1}, y_{n - 1}} \pd \eqlabel{eq:euler-method}
+        \end{equation}
+        In words, we begin at the point \(\par{x_0, y_0}\) 
+        and proceed in the direction of the slope field. 
+        After \(x\) is incremented by a distance \(h,\)
+        we take the slope at the new location and traverse in the new direction. 
+        We repeat this process until \(x\) is some desired number. 
+        Doing so gives us several points that we can plot to approximate a solution curve.
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

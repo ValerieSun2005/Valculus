@@ -751,7 +751,7 @@
     \deriv{P}{t} = 2I \deriv{I}{t} R + I^2 \deriv{R}{t} \pd \label{eq:power-diff}
     \end{equation}
     We are given that the resistance is increasing at \(3 \, \Omega/\text{sec}\) and current is increasing at \(0.1 \undiv{A}{sec}.\)
-    Thus, \(\textDeriv{R}{t} = 3\) and \(\textDeriv{I}{t} = 0.1.\)
+    Thus, \(\textDeriv{R}{t} = 3 \, \Omega/\text{sec}\) and \(\textDeriv{I}{t} = 0.1 \undiv{A}{sec}.\)
     We want to find \(\textDeriv{P}{t}\) when \(R = 20 \, \Omega\) and \(I = 2 \un{A}.\)
     Substituting these values in \(\eqRefer{eq:power-diff}\) gives 
     \[\deriv{P}{t} = 2(2)(0.1)(20) + (2)^2(3) = 20 \pd\]
@@ -898,6 +898,53 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+    Brenton is jogging parallel to a railroad at a constant speed of \(3\) meters per second;
+    his path is a perpendicular distance of \(5\) meters away from the track.
+    A train approaches Brenton from behind with a speed of \(18\) meters per second.  
+    How fast is the distance between Brenton and the train's chimney changing
+    \(2\) seconds after the chimney overtakes Brenton?
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="related-rates-railroad-brenton" id="related-rates-railroad-brenton">
+<img alt="related-rates-railroad-brenton.jpg" src="../images/sectionImages/related-rates-railroad-brenton.jpg"/>
+</figure>
+    Let \(x\) be the parallel distance between Brenton and the chimney. 
+    The perpendicular distance is \(5 \un m,\)
+    so we construct a right triangle of legs \(x\) and \(5 \un m.\)
+    Letting \(r\) be the hypotenuse length, the Pythagorean Theorem gives 
+    \[r^2 = x^2 + 5^2 \pd\]
+    Differentiating both sides with respect to time \(t\) gives 
+    \[
+    \ba 
+    2r \deriv{r}{t} &amp;= 2x \deriv{x}{t} \nl 
+    \implies \deriv{r}{t} &amp;= \frac{x}{r} \deriv{x}{t} \pd
+    \ea 
+    \]
+    It is imperative to note that Brenton's jogging decreases \(x,\)
+    while the train's movement increases \(x.\)
+    So \(\textderiv{x}{t} = \) \(18 - 3\) \(= 15 \undiv{m}{sec}.\)
+    After \(2 \un{sec},\) the train has traveled \(18 \times 2\) \(= 36 \un m\)
+    and Brenton has jogged \(3 \times 2\) \(= 6 \un m.\)
+    Thus, at this time \(x = 36 - 6\) \(= 30 \un m,\) and 
+    \[r = \sqrt{30^2 + 5^2} = \sqrt{925} = 5 \sqrt{37} \pd\]
+    We therefore attain 
+    \[\deriv{r}{t} \intEval_{t = 2} = \frac{30}{5 \sqrt{37}} (15) = \frac{90}{\sqrt{37}} \pd\]
+    So the distance between Brenton and the train's chimney is increasing 
+    at a rate of \(90/\sqrt{37}\) \(\approx 14.796 \undiv{m}{sec}.\)
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
     Two resistors with resistances \(R_1\) and \(R_2\) are connected in parallel with each other.
     The <b>equivalent resistance</b> of this configuration is 
     \[\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} \pd\]
@@ -908,7 +955,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
     Quantities \(R_1,\) \(R_2,\) and \(R_{\text{eq}}\) all change with time, 
@@ -931,8 +978,63 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+    The <b>decibel</b> is a unit that measures the loudness of a sound source.
+    A sound's loudness is defined by a logarithmic relationship between 
+    its decibel rating \(\beta\) and its intensity \(I\) 
+    (measured in watts per square meter)—that is, 
+    \[\beta = \log \par{\frac{I}{10^{-12}}} \pd\]
+    An idling generator produces a sound of \(50\) decibels;
+    as the load is increased, its loudness increases at a rate of 
+    \(3\) decibels per minute. 
+    After \(2\) minutes of increasing load, 
+    calculate the rate at which the sound intensity is changing.
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    We seek the value of \(\textderiv{I}{t}\) after \(2 \un{min},\)
+    and we are given \(\textderiv{\beta}{t} = 3 \undiv{dB}{min}.\)
+    By the Chain Rule, we have 
+    \[
+    \ba 
+    \deriv{\beta}{t} &amp;= \deriv{\beta}{I} \deriv{I}{t} \nl
+    \implies \deriv{I}{t} &amp;= \frac{\textderiv{\beta}{t}}{\textderiv{\beta}{I}} 
+    = \frac{3}{\textderiv{\beta}{I}} \cma
+    \ea 
+    \] 
+    where 
+    \[\deriv{\beta}{I} 
+    = \deriv{}{I} \parbr{\frac{\ln \par{\dfrac{I}{10^{-12}}}}{\ln 10}}
+    = \frac{1}{I \ln 10} \pd
+    \]
+    (See Section 
+    <a href="/Valculus/calculus/2.5-Implicit-Differentiation-and-Differentiating-Inverse-Functions.html">2.5</a>
+    to review the differentiation of logarithmic functions whose bases are not <nobr>\(e.\))</nobr>
+    After \(2 \un{min},\) \(\beta\) \(= 50 + 3(2) = 56 \un{dB};\)
+    at this time,
+    \[56 = \log \par{\frac{I}{10^{-12}}} \implies I = 10^{44} \undiv{W}{m}^2 \pd\]
+    Hence, we attain 
+    \[\deriv{I}{t} \intEval_{t = 2} = \frac{3}{\dfrac{1}{10^{44} \ln 10}} 
+    = (3 \ln 10) \times 10^{44} \approx \boxed{6.908 \times 10^{44} \par{\undiv{W}{m}^2}/\un{min}}\]
+    <i>Note</i>: 
+    Due to the logarithmic relationship between the sound intensity \(I\)
+    and decibel level \(\beta,\) a \(1 \un{dB}\)
+    increase in sound level means that the sound's intensity is \(10\) times greater. 
+    For example, there is a huge difference between a \(90 \un{dB}\) sound and a \(100 \un{dB}\) sound! 
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -942,7 +1044,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-shadow-exercise" id="related-rates-shadow-exercise">
@@ -980,8 +1082,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -992,7 +1094,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
     We call \(s\) the shadow's length and \(x\) the distance between the man and light post.
@@ -1038,8 +1140,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1050,7 +1152,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-inverted-cone-exercise" id="related-rates-inverted-cone-exercise">
@@ -1086,8 +1188,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1099,7 +1201,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
     Because \(x\) increases at \(3 \undiv{in}{sec},\) this value is \(\textDeriv{x}{t}.\)
@@ -1130,8 +1232,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-27"> 
-  <div class="box-solution__head">     EXERCISE 27 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1143,7 +1245,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
     Let \(h\) be the kite's height in the air.
@@ -1172,8 +1274,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1185,7 +1287,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
     The ground distance between the house and the hot air balloon is a constant \(100 \un{ft}.\)
@@ -1218,8 +1320,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1232,7 +1334,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
     Let \(r\) be the cylinder's radius and \(h\) be its thickness. 
@@ -1260,8 +1362,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1272,7 +1374,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
     Suppose that the clock begins ticking at some time—say, 
@@ -1318,8 +1420,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1330,7 +1432,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-ladder-angle" id="related-rates-ladder-angle">
@@ -1381,8 +1483,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1393,7 +1495,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-parking-lot" id="related-rates-parking-lot">
@@ -1434,8 +1536,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1446,7 +1548,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-lighthouse" id="related-rates-lighthouse">
@@ -1482,8 +1584,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1501,7 +1603,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
             
     Quantities \(\lambda\) and \(r\) both vary with time. 
@@ -1520,21 +1622,21 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-    Danielle is paragliding toward the ground at a constant speed of \(15\) miles per hour 
-    with an angle of depression of \(30 \degree.\)
+    Danielle is paragliding toward the ground with a constant speed of \(15\) miles per hour 
+    at an angle of depression of \(30 \degree.\)
     Initially, she is \(6\) miles directly above point \(A\) on the ground. 
     Calculate the rate at which her distance from \(A\) is changing 
     after \(12\) minutes.
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-paragliding" id="related-rates-paragliding">
@@ -1573,8 +1675,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-36"> 
-  <div class="box-solution__head">     EXERCISE 36 </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1595,7 +1697,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-36"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-baseball-23" id="related-rates-baseball-23">
@@ -1626,19 +1728,19 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-37"> 
-  <div class="box-solution__head">     EXERCISE 37 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-    A batter hits a baseball from home plate straight to second base at a speed of \(122\) feet per second.
+    A batter hits a baseball from home plate straight toward second base at a speed of \(122\) feet per second.
     After \(0.5\) second, how quickly is the ground distance between the baseball and first base changing? 
     (See <a href="#related-rates-baseball-field">Figure 9</a>.)
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="related-rates-baseball-home2" id="related-rates-baseball-home2">

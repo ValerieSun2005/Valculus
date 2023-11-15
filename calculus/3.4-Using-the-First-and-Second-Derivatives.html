@@ -131,7 +131,7 @@
     Thus, 
     \[f(x_2) - f(x_1) \lt 0 \or f(x_1) \gt f(x_2) \cma\] 
     meaning \(f\) is decreasing over \([x_1, x_2].\)
-    Part <a href="#first-deriv-b">(b)</a> is proved. 
+    Part <a href="#first-deriv-b">(b)</a> is therefore proved. 
     \[\qedproof\]
 </p>
 
@@ -278,8 +278,7 @@
 <div class="example">
     <div class="example-problem">  
         Let \(f(x) = \tfrac{1}{6}x^3 - x^2 + 6x + 1.\)
-        Describe the characteristics of the graph of \(f(x)\)
-        when \(x = 1.\)
+        Describe the graph of \(f(x)\) at \(x = 1.\)
     </div>
 </div>
 <button onclick="toggle3()" class="solution-button">  </button>
@@ -299,7 +298,7 @@
     Then 
     \[
     \ba 
-    f'(1) &= \tfrac{1}{2}(1)^2 - 2(1) + 6 = \tfrac{5}{2} \nl 
+    f'(1) &= \tfrac{1}{2}(1)^2 - 2(1) + 6 = \tfrac{5}{2} \cma \nl 
     f''(1) &= 1 - 2 = -1 \pd 
     \ea 
     \]
@@ -358,6 +357,11 @@
     is to identify a point at which \(f\) crosses its tangent.
 </p>
 
+<aside class="box-caution">
+    To find inflection points of \(f,\) it is not sufficient to solve \(f''(x) = 0.\)
+    You must also determine whether \(f''(x)\) changes sign at that point.
+</aside>
+
 <div class="box-title">INFLECTION POINT</div>
 <div class="box">
     The function \(f\) has an <span class="emph">inflection point</span> at 
@@ -407,11 +411,6 @@
     (See <a href="#concavity-ex-inflection-pt">Figure 8</a>.)
 </div>
 
-<p>
-    To find inflection points of \(f,\) it is not sufficient to solve \(f''(x) = 0.\)
-    You must also determine whether \(f''(x)\) changes sign at that point.
-</p>
-
 <h4 id="second-deriv-test">The Second-Derivative Test</h4>
 <p>
     Another application of second derivatives is the <span class="emph">Second-Derivative Test</span>, 
@@ -449,13 +448,13 @@
 <p>
     In part <a href="#second-deriv-test-a">(a)</a>,
     because \(f''(c) \gt 0,\) \(f\) is concave up at \(c.\)
-    Accordingly, the graph of \(f\) must lie <i>above</i>
-    its tangent at \(c,\) so \(f\) has a relative minimum at \(c.\)
+    Accordingly, the graph of \(f\) must be <i>above</i>
+    the tangent at \(c,\) so \(f\) has a relative minimum at \(c.\)
     (See <a href="#second-deriv-test-min">Figure 9A</a>.) 
     Conversely, in part <a href="#second-deriv-test-b">(b)</a>
     \(f''(c) \lt 0,\) meaning \(f\) is concave down at \(c.\)
     So the graph of \(f\) lies <i>below</i>
-    its tangent at \(c,\) meaning \(c\) must be a relative maximum of \(f,\)
+    the tangent at \(c;\) accordingly, \(c\) must be a relative maximum of \(f,\)
     as in <a href="#second-deriv-test-max">Figure 9B</a>.
     Part <a href="#second-deriv-test-c">(c)</a> states that \(f\) 
     can have either a relative minimum, relative maximum, or neither at

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8.1 Exercises: Slope Fields and Euler's Method</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>8.1 Exercises — Slope Fields and Euler's Method</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="8.1-Slope-Fields-and-Euler's-Method.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <section><p class="exercises-hint">Click on a problem number to see its solution.</p> 
+<!--div1--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-1" target="_blank" rel="noopener">\(\hspace{0.56em}1.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Classify the following differential equations by order.
+        <ol class="list-alpha">
+<li>
+<span>\(\ds 8 \derivOrder{y}{x}{2} - 5 \deriv{y}{x} = 2\)</span>
+</li>
+<li>
+<span>\(\ds \deriv{y}{x} = y + 4x\)</span>
+</li>
+<li>
+<span>\(\ds x^8 - y''' + \cos y = 4 e^{2x}\)</span>
+</li>
+<li>
+<span>\(\ds y^{(5)} + 4 y^{(6)} - 15x^4 = y''\)</span>
+</li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+</section><p class="problems-note">For each of exercises 2–7, determine whether the function is a solution to the differential equation. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-2" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}2.\)</a> 
+        \(\ds \deriv{y}{x} = 4y \scoll y = 2e^{4x}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-3" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}3.\)</a> 
+        \(\ds \deriv{y}{x} = 6x \scoll y = x^2 + 3\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-4" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}4.\)</a> 
+        \(\ds 2y'' - 9y' + y - 8 = 0 \scoll y = 8\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-5" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}5.\)</a> 
+        \(\ds y'' + y' = 0 \scoll y = 7e^{-x} + 4\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-6" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}6.\)</a> 
+        \(\ds P''(t) = 5P(t) \scoll P(t) = 4 \cos t\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-7" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}7.\)</a> 
+        \(\ds \deriv{y}{t} = 5 - 3y \scoll y = \frac{5}{3} - e^{-3t}\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><!--div8--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-8" target="_blank" rel="noopener">\(\hspace{0.56em}8.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        In many phenomena, a quantity changes at a rate proportional to itself. 
+        The differential equation that models this behavior is 
+        \[\deriv{y}{x} = ky\]
+        for some constant \(k.\)
+        Show that the family of exponential functions \(y = Ce^{kx}\) satisfies this differential equation. 
+        (We will examine exponential models in Section <a href="/Valculus/calculus/8.3-Exponential-Models.html">8.3</a>.)
+    </ques> 
+   </div>  
+</div> 
+<!--div9--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-9" target="_blank" rel="noopener">\(\hspace{0.56em}9.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Show that the particular solution to the initial-value problem 
+        \[y' = x + 2y \cmaa y(1) = 3\]
+        is 
+        \[y = \tfrac{1}{4} \par{-2x + 15e^{2x - 2} - 1} \pd\] 
+    </ques> 
+   </div>  
+</div> 
+<!--div10--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-10" target="_blank" rel="noopener">\(10.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Determine whether each function is a solution 
+        to the fourth-order differential equation
+        \[y^{(4)} - 16y = 0 \pd\]
+        <ol class="list-alpha">
+<li>
+<span>\(\ds y = Ce^{2x}\)</span>
+</li>
+<li>
+<span>\(\ds y = 2 \ln x\)</span>
+</li>
+<li>
+<span>\(\ds y = x^5\)</span>
+</li>
+<li>
+<span>\(\ds y = C_1 e^{2x} + C_2 e^{-2x} + C_3 \cos 2x + C_4 \sin 2x\)</span>
+</li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+</section><p class="problems-note">For each of exercises 11–13, use Euler's Method to approximate the value given 
+        the differential equation, initial condition, and step size \(h\). 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-11" class="problem-number" rel="noopener" target="_blank">\(11.\)</a> 
+        \(\ds \deriv{y}{x} = \tfrac{1}{4} y \cmaa y(-3) = 4 \scoll y(5) \text{ using } h = 2\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-12" class="problem-number" rel="noopener" target="_blank">\(12.\)</a> 
+        \(\ds \deriv{y}{t} = \frac{2}{t} \cmaa y(1) = 2 \scoll y(3) \text{ using } h = 0.5\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-13" class="problem-number" rel="noopener" target="_blank">\(13.\)</a> 
+        \(\ds \deriv{y}{x} = x^2 \, y \cmaa y(2) = 1 \scoll y(3.5) \text{ using } h = 0.5\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><p class="problems-note">For each of exercises 14–17, sketch the particular solution curve through the given point. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-14" class="problem-number" rel="noopener" target="_blank">\(14.\)</a> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/slope-field-ex-1.jpg
+    " alt="slope-field-ex-1.jpg
+    ">
+</figure>
+ 
+</td> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-15" class="problem-number" rel="noopener" target="_blank">\(15.\)</a> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/slope-field-ex-2.jpg
+    " alt="slope-field-ex-2.jpg
+    ">
+</figure>
+ 
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-16" class="problem-number" rel="noopener" target="_blank">\(16.\)</a> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/slope-field-ex-3.jpg
+    " alt="slope-field-ex-3.jpg
+    ">
+</figure>
+ 
+</td> 
+<td class="grid-problem-cell"> 
+<a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-17" class="problem-number" rel="noopener" target="_blank">\(17.\)</a> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/slope-field-ex-4.jpg
+    " alt="slope-field-ex-4.jpg
+    ">
+</figure>
+ 
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><!--div18--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-18" target="_blank" rel="noopener">\(18.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        In an <b>autonomous</b> first-order differential equation,
+        the rate does not depend on the independent variable;
+        that is, it can be written in the form
+        \[\deriv{y}{x} = f(y) \pd\]
+        Classify whether the following differential equations are autonomous.
+        <ol class="list-alpha">
+<li>
+<span>\(\ds y' = xy \sin y\)</span>
+</li>
+<li>
+<span>\(\ds y' = A\) for any constant \(A\)</span>
+</li>
+<li>
+<span>\(\ds 3y' + 6y + 7 = 0\)</span>
+</li>
+<li>
+<span>\(\ds y' + x = 2 - y\)</span>
+</li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+<!--div19--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-19" target="_blank" rel="noopener">\(19.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<figure class="slope-field-1-y" id="slope-field-1-y">
+<img alt="Figure 8" src="../images/sectionImages/slope-field-1-y.jpg"/>
+</figure>
+<style>
+            .slope-field-1-y::before{
+                content:'FIGURE 8';
+            }
+        </style> 
+        The slope field for the differential equation \(y' = 1 - y\) is shown in
+        <a href="#slope-field-1-y">Figure 8</a>.
+        Let \(y = f(x)\) be the particular solution to the differential equation, with \(f(0) = 2.\)
+        <ol class="list-alpha">
+<li>
+                Sketch the curve \(y = f(x).\)
+            </li>
+<li>
+                Use Euler's Method with step size \(h = 0.1\) to estimate \(f(0.3).\)
+            </li>
+<li>
+                An <b>equilibrium solution</b> has a derivative of \(0\)
+                at all \(x.\)
+                Identify the equilibrium solution for \(y' = 1 - y.\)
+            </li>
+<li>
+                What is \(\lim_{x \to \infty} f(x) \ques\)
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+<!--div20--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-20" target="_blank" rel="noopener">\(20.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        In the slope field for \(y' = 1/x\) and \(x \gt 0,\) 
+        the line segments' slopes are independent of \(y\) and decrease as \(x\) increases,
+        as shown by <a href="#slope-field-recip-x">Figure 9</a>. 
+        Sketch the particular solution curve that passes through the point \((1, 2).\)
+        Then use integration to solve the differential equation and therefore determine the identity of the graph.
+        <figure class="slope-field-recip-x figure-center-one" id="slope-field-recip-x">
+<img alt="Figure 9" src="../images/sectionImages/slope-field-recip-x.jpg"/>
+</figure>
+<style>
+            .slope-field-recip-x::before{
+                content:'FIGURE 9';
+            }
+        </style>
+</ques> 
+   </div>  
+</div> 
+<!--div21--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="8.1-Slope-Fields-and-Euler's-Method-exercises-solutions.html#exercise-21" target="_blank" rel="noopener">\(21.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<figure class="euler-method-ex-lr-circuit" id="euler-method-ex-lr-circuit">
+<img alt="Figure 10" src="../images/sectionImages/euler-method-ex-lr-circuit.jpg"/>
+</figure>
+<style>
+            .euler-method-ex-lr-circuit::before{
+                content:'FIGURE 10';
+            }
+        </style> 
+        In a circuit, an <b>inductor</b> is a device that opposes a change in current.
+        A battery of electromotive force \(20\) volts is connected to a circuit with resistance \(10\) ohms
+        and inductance \(5\) henries (<a href="#euler-method-ex-lr-circuit">Figure 10</a>). 
+        Let \(I\) be the circuit's current, which changes with time \(t,\) measured in seconds.
+        The voltage drops are \(10 I\) across the resistor and \(5 \, \textderiv{I}{t}\) across the inductor. 
+        Applying one of Kirchhoff's Laws gives the differential equation 
+        \[20 - 10I - 5 \deriv{I}{t} = 0 \pd\]
+        The initial current is \(0\) amps.
+        <ol class="list-alpha">
+<li>
+                Using Euler's Method with step size \(h = 0.25,\)
+                approximate the current after \(1\) second has elapsed.
+            </li>
+<li>
+                What is the current after a very long time (that is, as <nobr>\(t \to \infty\))?</nobr>
+</li>
+<li>
+                The particular solution to the differential equation turns out to be 
+                \[I(t) = 2 \par{1 - e^{-2t}} \pd\]
+                Verify this result.
+                Does this function make physical sense?
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+</section>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>
