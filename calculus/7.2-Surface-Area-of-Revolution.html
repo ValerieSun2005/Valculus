@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.2: Surface Area of Revolution</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.2 — Surface Area of Revolution</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.2-Surface-Area-of-Revolution-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.2-Surface-Area-of-Revolution-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Surface-Area-of-Revolution]]]--> 
+
+<p>
+    A three-dimensional object has two properties of interest: volume (which we explored in Chapter 5) and <i>surface area</i>. 
+    We define a solid's surface area to be how much area its outer surface occupies.
+    You are likely familiar with calculating surface areas of cubes and rectangular prisms,
+    but how do we calculate the surface area of any smooth object?
+    In this section we discuss how to find the surface area 
+    of the solid produced upon rotating a region about an axis. 
+</p>
+<figure class="cylinder-unwrap figure-wide" id="cylinder-unwrap">
+    <img src="../images/sectionImages/cylinder-unwrap.jpg" class="cylinder-unwrap" alt="Figure 1">
+</figure>
+
+<style>
+    .cylinder-unwrap::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<figure class="sa-cone-frustum" id="sa-cone-frustum">
+    <img src="../images/sectionImages/sa-cone-frustum.jpg" class="sa-cone-frustum" alt="Figure 2">
+</figure>
+
+<style>
+    .sa-cone-frustum::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    Let's first establish formulas for the surface areas of simple solids.
+    In <a href="#cylinder-unwrap">Figure 1</a>
+    the body of a cylinder of radius \(r\) and length \(L\) is <q>unwrapped</q>
+    into a rectangular sheet of dimensions \(L\) by \(2 \pi r\) (the circumference of the circular base).
+    The cylinder's lateral surface area is therefore \(A = 2 \pi r L.\) 
+    Conversely, to find the lateral surface area of a right cone's large base (a conical <i>frustum</i>),
+    we average its radii \(r_1\) and \(r_2.\)
+    If \(L\) is the frustum's slant height, 
+    then we treat it as a cylinder of length \(L\) and average radius \(r.\)
+    Since the average radius is \(r = \par{r_1 + r_2}/2,\)
+    the frustum's lateral surface area is 
+    \begin{align}
+    A &= 2 \pi \par{\frac{r_1 + r_2}{2}} L \nonum \nl 
+    &= \pi \par{r_1 + r_2} L \pd \label{eq:A-frus}
+    \end{align}
+    (See <a href="#sa-cone-frustum">Figure 2</a>.)
+</p>
+
+<div class="figure-center">
+    <figure class="sa-rev-area" id="sa-rev-area">
+        <img src="../images/sectionImages/sa-rev-area.jpg" class="sa-rev-area" alt="Figure 3A">
+    </figure>
+    <figure class="sa-rev-solid" id="sa-rev-solid">
+        <img src="../images/sectionImages/sa-rev-solid.jpg" class="sa-rev-solid" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .sa-rev-area::before{
+        content:'FIGURE 3A';
+    }
+
+    .sa-rev-solid::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Surface Area of Smooth Solid</span>
+    Suppose that some region \(R,\) bounded by the smooth curve \(y = f(x)\)
+    and the \(x\)-axis from \(x = a\) to \(x = b\) (<a href="#sa-rev-area">Figure 3A</a>), 
+    is rotated about the \(x\)-axis to generate a solid.
+    We can calculate this solid's volume using the Disk and Washer Methods of 
+    Section <a href="/Valculus/calculus/5.3-Solids-of-Revolution.html">5.3</a>. 
+    Yet to compute its surface area, we employ a new strategy:
+    We cut the interval \([a, b]\) into \(n\) subintervals with endpoints  
+    \(x_0, x_1, \dots, x_{n}\) and equal width \(\Delta x.\)
+    In each subinterval we calculate the surface area of a band of the solid.
+    Let \(P_0, P_1, \dots, P_n\) be points that lie on the curve.
+    If \(n\) is small, then each approximating band resembles a conical frustum.
+    Then we sum the surface areas of all \(n\) bands and take the limit as \(n \to \infty.\)    
+    In a general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    in which \(x_i^*\) is a sample point,
+    the band's left radius is \(y_{i - 1},\) its right radius is \(y_i,\) 
+    and its slant height is \(\length{P_{i - 1} P_i}.\)
+    (See <a href="#sa-rev-solid">Figure 3B</a>.)
+    By \(\eqref{eq:A-frus},\) the band's surface area is roughly 
+    \[\Delta A \approx 2 \pi \par{\frac{y_{i - 1} + y_i}{2}} \length{P_{i - 1} P_i} = \pi \par{y_{i - 1} + y_i} \length{P_{i - 1} P_i} \pd\]
+    From Section <a href="/Valculus/calculus/7.1-Arc-Length.html">7.1</a>, the arc length \(\length{P_{i - 1} P_i}\)
+    is given by \(\sqrt{1 + [f'\par{x_i^*}]^2}.\)
+    Assuming \(\Delta x\) is small, and because \(f\) is continuous, 
+    we take \(y_{i - 1} = f \par{x_{i - 1}}\) 
+    \(\approx f \par{x_i^*}\) and \(y_i = f \par{x_i}\) \(\approx f \par{x_i^*}.\) 
+    Thus, we have 
+    \[\Delta A \approx \pi \parbr{2 f \par{x_i^*}} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x 
+    = 2 \pi f \par{x_i^*} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x \pd\] 
+    Summing the surface areas of all \(n\) bands, we obtain 
+    \[A = \lim_{n \to \infty} \sum_{i = 1}^n 2 \pi f \par{x_i^*} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x \pd\]
+    As \(n \to \infty,\) our assumptions become more valid and the limit approaches the solid's surface area. 
+    We recognize the right-hand side as a Riemann Sum for the function \(2 \pi f(x) \sqrt{1 + [f'(x)]^2},\)
+    so we get 
+    \begin{equation}
+    A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \label{eq:A-x-f}
+    \end{equation}
+    Or in Leibniz notation, we write 
+    \[A = \int_a^b 2 \pi y \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd\]
+    Similarly, if a region is bounded between the smooth curve \(x = g(y)\)
+    and the \(y\)-axis from \(y = c\) to \(y = d,\) 
+    then the surface area of the generated solid is 
+    \begin{equation}
+    A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \cma \label{eq:A-y-g}
+    \end{equation}
+    or in Leibniz notation, 
+    \[A = \int_c^d 2 \pi x \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
+</p>
+
+<div class="box-title">SURFACE AREAS OF REVOLUTION</div>
+<div class="box">
+    If the region bounded by the smooth curve \(y = f(x)\) and the \(x\)-axis 
+    from \(x = a\) to \(x = b\) is rotated about the \(x\)-axis, 
+    then the generated solid has a surface area of 
+    \begin{equation}
+    A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
+    \end{equation}
+    Likewise, if the region bounded by the smooth curve \(x = g(y)\) and the \(y\)-axis 
+    from \(y = c\) to \(y = d\) is rotated about the \(y\)-axis, 
+    then the generated solid has a surface area of 
+    \begin{equation}
+    A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
+    \end{equation}
+</div>
+
+<p>
+    <span class="label-emph">General Formulas for Surface Area</span>
+    If we rotate a region about the \(x\)-axis, 
+    then \(\eqref{eq:A-x-f}\) can only be used if 
+    we express all quantities in terms of \(x.\) 
+    Similarly, if we rotate about the \(y\)-axis, 
+    then \(\eqref{eq:A-y-g}\) is only applicable if 
+    we work entirely in terms of \(y.\)
+    Yet sometimes we must rotate about an axis
+    while using the opposite variable—for example, 
+    rotating about the \(x\)-axis while integrating with \(y.\) 
+    The following formulas provide us this flexibility:
+    We generalize \(\eqref{eq:A-x-f}\) as
+    \begin{align}
+    A &= \int_a^b 2 \pi y \di s \pd \label{eq:A-x}
+    \end{align}
+    Likewise, \(\eqref{eq:A-y-g}\) is generalized as 
+    \begin{align}
+    A &= \int_c^d 2 \pi x \di s \pd \label{eq:A-y}
+    \end{align}
+    In each case, we choose the differential \(\dd s\) to be either
+    \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
+</p>
+
+<div class="box-title">GENERALIZED FORMULAS FOR SURFACE AREAS OF REVOLUTION</div>
+<div class="box">
+    We calculate the surface area of revolution using the following formulas:
+    \begin{alignat}{2}
+    A &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
+    A &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
+    \end{alignat}
+    where 
+    \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the surface area of the solid generated 
+        when the region bounded by the graph of \(y = x^3,\) the \(x\)-axis,
+        the \(y\)-axis, and the line \(x = 1\) is rotated about the \(x\)-axis.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="sa-rev-x3" id="sa-rev-x3">
+        <img src="../images/sectionImages/sa-rev-x3.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .sa-rev-x3::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    The region is bounded from \(x = 0\) to \(x = 1.\)
+    Using \(\eqref{eq:A-x-f}\) with \(f(x) = x^3,\) 
+    we find the surface area to be 
+    \[A = \int_0^1 2 \pi \par{x^3} \sqrt{1 + \par{3x^2}^2} \di x = 2 \pi \int_0^1 x^3 \sqrt{1 + 9x^4} \di x \pd\]
+    Letting \(u = 1 + 9x^4,\) we get \(\dd u = 36x^3 \di x.\)
+    When \(x = 0,\) \(u = 1;\) when \(x = 1,\) \(u = 10.\)
+    We therefore get 
+    \[
+    \ba 
+    A &= 2 \pi \par{\tfrac{1}{36}} \int_1^{10} \sqrt u \di u 
+    = \frac{\pi}{27} u^{3/2} \intEval_1^{10} \nl 
+    &= \boxed{\frac{\pi}{27} \par{\sqrt{1000} - 1}} \approx 3.563 \pd
+    \ea 
+    \]
+    (See <a href="#sa-rev-x3">Figure 4</a>.)
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by the parabola \(y = x^2,\) the \(y\)-axis, 
+        and the lines \(y = 1\) and \(y = 4\) is rotated about the \(y\)-axis. 
+        Calculate the surface area of the generated solid.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="sa-rev-x2" id="sa-rev-x2">
+        <img src="../images/sectionImages/sa-rev-x2.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .sa-rev-x2::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Method 1 (Integrating with <nobr>\(x\))</nobr></span>
+        If we choose to integrate with \(x,\) then we express all quantities in terms of \(x.\)
+        The region is bounded between \(x = 1\) and \(x = 2.\)
+        We have \(\textderiv{y}{x} = 2x,\) so we use 
+        \[\dd s = \sqrt{1 + (2x)^2} \di x = \sqrt{1 + 4x^2} \di x \pd\]
+        So by \(\eqref{eq:A-y},\) the surface area is given by 
+        \[A = \int_1^2 2 \pi x \sqrt{1 + 4x^2} \di x \pd\]
+        Letting \(u = 1 + 4x^2,\) we have \(\dd u = 8x \di x.\)
+        When \(x = 1,\) \(u = 5;\) when \(x = 2,\) \(u = 17.\)
+        The integral therefore becomes 
+        \[
+        \ba 
+        A &= 2 \pi \par{\tfrac{1}{8}} \int_5^{17} \sqrt u \di u 
+        = \frac{\pi}{6} u^{3/2} \intEval_5^{17} \nl 
+        &= \boxed{\frac{\pi}{6} \par{17 \sqrt{17} - 5 \sqrt 5}} \approx 30.846 \pd
+        \ea
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2 (Integrating with <nobr>\(y\))</nobr></span>
+        In integrating with \(y,\) we need all quantities to be in terms of \(y.\)
+        We therefore rewrite \(y = x^2\) as \(x = \sqrt y.\)
+        The region is bounded between \(y = 1\) and \(y = 4.\)
+        Since \(\textderiv{x}{y} = \tfrac{1}{2} y^{-1/2},\) we attain 
+        \[\dd s = \sqrt{1 + \par{\tfrac{1}{2} y^{-1/2}}^2} = \sqrt{1 + \frac{1}{4y}} \pd\]
+        Then \(\eqref{eq:A-y}\) gives the surface area to be 
+        \[
+        \ba
+        A &= \int_1^4 2 \pi \sqrt y \sqrt{1 + \frac{1}{4y}} \di y \nl 
+        &= \int_1^4 2 \pi \sqrt{y + \tfrac{1}{4}} \di y \nl 
+        &= \pi \int_1^4 \sqrt{4y + 1} \di y \pd 
+        \ea 
+        \]
+        Substituting \(u = 4y + 1,\) we find \(\dd u = 4 \di y.\)
+        When \(y = 1,\) \(u = 5;\) when \(y = 4,\) \(u = 17.\)
+        Thus, we have 
+        \[
+        \ba 
+        A &= \frac{\pi}{4} \int_5^{17} \sqrt u \di u 
+        = \frac{\pi}{6} u^{3/2} \intEval_5^{17} \nl 
+        &= \boxed{\frac{\pi}{6} \par{17 \sqrt{17} - 5 \sqrt 5}} \approx 30.846 \pd
+        \ea
+        \]
+        Both methods provide the same surface area \(A.\)
+        (See <a href="#sa-rev-x2">Figure 5</a>.)
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the surface area of the solid generated by rotating 
+        the region bounded by the graph of \(y = \cos x,\) 
+        the \(x\)-axis, the \(y\)-axis, and the line \(x = \pi/2\)
+        about the \(x\)-axis. 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="sa-rev-cos" id="sa-rev-cos">
+        <img src="../images/sectionImages/sa-rev-cos.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .sa-rev-cos::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    Because \(\textderiv{y}{x} = -\sin x,\) we have
+    \[\dd s = \sqrt{1 + (-\sin x)^2} = \sqrt{1 + \sin^2 x} \pd\]
+    So using \(\eqref{eq:A-x}\) from \(a = 0\) to \(b = \pi/2,\) 
+    we find the surface area to be 
+    \[A = \int_0^{\pi/2} 2 \pi (\cos x) \sqrt{1 + \sin^2 x} \di x \pd\]
+    Substituting \(u = \sin x,\) we attain \(\dd u = \cos x \di x.\)
+    When \(x = 0,\) \(u = 0;\) when \(x = \pi/2,\) \(u = 1.\)
+    The integral therefore becomes
+    \[A = 2 \pi \int_0^1 \sqrt{1 + u^2} \di u \pd\]
+    Now we perform the trigonometric substitution 
+    \(u = \tan \theta,\) from which \(\dd u = \sec^2 \theta \di \theta.\)
+    (See Section <a href="/Valculus/calculus/6.3-Trigonometric-Substitution.html">6.3</a>
+    to review how to select trigonometric substitutions.)
+    Observe that \(\theta = 0\) when \(u = 0,\) and \(\theta = \pi/4\) when \(u = 1.\)
+    We then obtain 
+    \[A = 2 \pi \int_0^{\pi/4} \sqrt{\sec^2 \theta} \sec^2 \theta \di \theta = 2 \pi \int_0^{\pi/4} \sec^3 \theta \di \theta \pd\]
+    In Section <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a> we used Integration by Parts 
+    to antidifferentiate \(\sec^3 \theta.\) 
+    Using this result, we see
+    \[
+    \ba 
+    A &= 2 \pi \par{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} } \intEval_0^{\pi/4} \nl 
+    &= 2 \pi \parbr{\tfrac{1}{2} \par{\sqrt 2} (1) + \tfrac{1}{2} \ln \par{\sqrt 2 + 1}} - 0 \nl 
+    &= \boxed{\pi \parbr{\sqrt 2 + \ln \par{\sqrt 2 + 1}}} \approx 7.212 \pd
+    \ea 
+    \]
+    (See <a href="#sa-rev-cos">Figure 6</a>.)
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        If the region bounded by the smooth curve \(y = f(x)\) and the \(x\)-axis 
+        from \(x = a\) to \(x = b\) is rotated about the \(x\)-axis, 
+        then the generated solid has a surface area of 
+        \begin{equation}
+        A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
+        \end{equation}
+        Likewise, if the region bounded by the smooth curve \(x = g(y)\) and the \(y\)-axis 
+        from \(y = c\) to \(y = d\) is rotated about the \(y\)-axis, 
+        then the generated solid has a surface area of 
+        \begin{equation}
+        A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
+        \end{equation}
+        More generally, we use the following formulas:
+        \begin{alignat}{2}
+        A &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
+        A &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
+        \end{alignat}
+        where 
+        \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

@@ -48,9 +48,9 @@
       <!--[[[crefId.Power-Series]]]-->
 <p>
     In this section, we learn to express functions as infinite polynomials—called <i>power series</i>.
-    Power series have many applications: We use them to integrate functions that don't have elementary derivatives. 
-    They serve a key role in approximating physical phenomena. 
-    This section covers 
+    Power series have many applications. We use them to integrate functions that don't have elementary derivatives, 
+    and they serve a key role in approximating physical phenomena. 
+    This section covers the following topics:
     <li>
         <a class="page-anchor" href="#defining-power-series">Power Series, Radius of Convergence, and Interval of Convergence</a>
     </li>
@@ -297,11 +297,11 @@
     and this series converges to \(f \par{\frac{1}{2}} = 1/\par{1 - \frac{1}{2}}.\) 
     But if \(x = 2\) (a value outside the interval of convergence of \(f \,\)), then the geometric series \(\sum_{n = 0}^\infty x^n\) becomes 
     \[1 + 2 + 2^2 + 2^3 + \cdots + 2^n + \cdots \cma\]
-    which diverges and therefore does <i>not</i> represent \(f(2) = 1/(1 - 2).\)
+    which diverges and therefore does <span class="warning">not</span> represent \(f(2) = 1/(1 - 2).\)
 </p>
 
 <p>
-    We can obtain many useful power series representations by manipulating \(\eqref{eq:geo-power-series};\)
+    We obtain many useful power series representations by manipulating \(\eqref{eq:geo-power-series};\)
     for example, replacing \(x\) with \(2x\) gives 
     \[1 + (2x) + (2x)^2 + (2x)^3 + \cdots + (2x)^n + \cdots = \frac{1}{1 - 2x} \pd\]
     Likewise, we can derive power series expansions for many rational functions—for example, \(1/(1 + x^2),\) \(1/(1 - x^3),\) 
@@ -653,7 +653,7 @@
         = C + \sum_{n = 0}^\infty \frac{(x - a)^{n + 1}}{n + 1} \pd 
         \end{align*}
         The power series of \(f'(x)\) and \(\int f(x) \di x\) each have a radius of convergence of \(R.\)
-        Differentiating or integrating a power series conserves the radius of convergence but <i>not</i>
+        Differentiating or integrating a power series conserves the radius of convergence but <span class="warning">not</span>
         necessarily the interval of convergence.
         Thus, when we differentiate or integrate a power series, we must check the endpoints of the interval of convergence.
     </p>

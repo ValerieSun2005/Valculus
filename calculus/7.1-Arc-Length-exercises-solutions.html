@@ -78,11 +78,186 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
+        \[\ds y = x + \sin x \cmaa 0 \leq x \leq 3\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We see \(\textderiv{y}{x} = 1 + \cos x,\)
+        so 
+        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + (1 + \cos x)^2} \pd\]
+        The integral setup for the arc length of the curve over \([0, 3]\) is therefore
+        \[
+        \ba 
+        L &amp;= \int_0^3 \sqrt{1 + (1 + \cos x)^2} \di x \nl 
+        &amp;= \boxed{\int_0^3 \sqrt{2 + 2 \cos x + \cos^2 x} \di x} \nl 
+        &amp;\approx 4.612 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x = \sin \par{y^2} \cmaa 0 \leq y \leq 1\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\textderiv{x}{y} = 2y \cos \par{y^2},\)
+        we have 
+        \[\sqrt{1 + \par{\deriv{x}{y}}^2} = \sqrt{1 + \parbr{2y \cos \par{y^2}}^2} \pd\]
+        The integral setup for the arc length of the curve over \([0, 1]\) is therefore
+        \[
+        \ba 
+        L &amp;= \int_0^1 \sqrt{1 + \parbr{2y \cos \par{y^2}}^2} \di y \nl 
+        &amp;= \boxed{\int_0^1 \sqrt{1 + 4y^2 \cos^2 \par{y^2}} \di y} \nl 
+        &amp;\approx 1.349 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = e^{-x^2} \cmaa 1 \leq x \leq 4\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We see \(\textderiv{y}{x} = -2x e^{-x^2},\)
+        from which
+        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + \par{-2x e^{-x^2}}^2} \pd\]
+        The integral setup for the arc length of the curve over \([1, 4]\) is therefore
+        \[
+        \ba 
+        L &amp;= \int_1^4 \sqrt{1 + \par{-2x e^{-x^2}}^2} \di x \nl 
+        &amp;= \boxed{\int_1^4 \sqrt{1 + 4x^2 e^{-2x^2}} \di x} \nl 
+        &amp;\approx 3.076 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x = \sqrt{y^3 + 2} \cmaa 1 \leq y \leq 3\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating the function, we see 
+        \[\deriv{x}{y} = \frac{3y^2}{2 \sqrt{y^3 + 2}} \pd\]
+        Thus, we have 
+        \[\sqrt{1 + \par{\deriv{x}{y}}^2} = \sqrt{1 + \par{\frac{3y^2}{2 \sqrt{y^3 + 2}}}^2} \pd\]
+        The integral setup for the arc length of the curve over \([1, 3]\) is therefore
+        \[
+        \ba 
+        L &amp;= \int_1^3 \sqrt{1 + \par{\frac{3y^2}{2 \sqrt{y^3 + 2}}}^2} \di y \nl 
+        &amp;= \boxed{\int_1^3 \sqrt{1 + \frac{9y^4}{4 \par{y^3 + 2}}} \di y} \nl 
+        &amp;\approx 4.193 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = 4 + \cos^2 x \cmaa \frac{\pi}{6} \leq x \leq \frac{\pi}{4}\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(\textderiv{y}{x} = -2 \cos x \sin x\)
+        and
+        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + (-2 \cos x \sin x)^2} \pd\]
+        The integral setup for the arc length of the curve over \([\pi/6, \pi/4]\) is therefore
+        \[
+        \ba 
+        L &amp;= \int_{\pi/6}^{\pi/4} \sqrt{1 + (-2 \cos x \sin x)^2} \di x \nl 
+        &amp;= \boxed{\int_{\pi/6}^{\pi/4} \sqrt{1 + 4 \cos^2 x \sin^2 x} \di x} \nl 
+        &amp;\approx 0.362 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = \ln \par{x^4} \cmaa e \leq x \leq 2e\]
+    </blockquote> set up the integral for the arc length of the curve. 
+        Use a calculator to compute the integral to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We rewrite \(\ln \par{x^4}\) as \(4 \ln \abs x.\)
+        Because \(\textderiv{y}{x} = 4/x,\)
+        we see
+        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + \frac{16}{x^2}} \pd\]
+        The integral setup for the arc length of the curve over \([e, 2e]\) is therefore
+        \[
+        \ba 
+        L &amp;= \boxed{\int_e^{2e} \sqrt{1 + \frac{16}{x^2}} \di x} 
+        \approx 3.902 \pd
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
         \[\ds y = 3 + 6 x^{3/2} \cmaa 0 \leq x \leq 2\]
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-2"> 
+        <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function, we get 
@@ -108,8 +283,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-3"> 
-  <div class="box-solution__head">     EXERCISE 3 </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -118,7 +293,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-3"> 
+        <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function gives 
@@ -144,8 +319,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-4"> 
-  <div class="box-solution__head">     EXERCISE 4 </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -154,7 +329,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-4"> 
+        <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
             
         The length of the line \(y = 2x\) is the hypotenuse of 
@@ -170,8 +345,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-5"> 
-  <div class="box-solution__head">     EXERCISE 5 </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -180,7 +355,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-5"> 
+        <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function shows 
@@ -201,8 +376,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-6"> 
-  <div class="box-solution__head">     EXERCISE 6 </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -211,7 +386,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-6"> 
+        <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function, we see 
@@ -229,8 +404,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-7"> 
-  <div class="box-solution__head">     EXERCISE 7 </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -239,7 +414,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-7"> 
+        <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function \(\ln(\sec x),\) we get 
@@ -267,8 +442,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-8"> 
-  <div class="box-solution__head">     EXERCISE 8 </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -277,7 +452,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-8"> 
+        <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function gives 
@@ -304,8 +479,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-9"> 
-  <div class="box-solution__head">     EXERCISE 9 </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -314,7 +489,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-9"> 
+        <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function \(y = \tfrac{1}{4} \ln \par{\sin 4 x},\) we see 
@@ -343,8 +518,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-10"> 
-  <div class="box-solution__head">     EXERCISE 10 </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -353,7 +528,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-10"> 
+        <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
             
         We see 
@@ -409,8 +584,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-11"> 
-  <div class="box-solution__head">     EXERCISE 11 </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -419,7 +594,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-11"> 
+        <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
             
         We see \(\textderiv{x}{y} = e^y\)
@@ -461,8 +636,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-12"> 
-  <div class="box-solution__head">     EXERCISE 12 </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -474,7 +649,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-12"> 
+        <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
             
         Because the points \((x_1, y_1)\) and \((x_2, y_2)\) lie on a line,
@@ -499,8 +674,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-13"> 
-  <div class="box-solution__head">     EXERCISE 13 </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -554,7 +729,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-13"> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
         To be organized, let's define 
@@ -620,8 +795,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-14"> 
-  <div class="box-solution__head">     EXERCISE 14 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -676,7 +851,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-14"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         To be organized, let's define 
@@ -738,181 +913,6 @@
         &amp;\approx \boxed{16.803}
         \ea 
         \]
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-15"> 
-  <div class="box-solution__head">     EXERCISE 15 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds y = x + \sin x \cmaa 0 \leq x \leq 3\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-15"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        We see \(\textderiv{y}{x} = 1 + \cos x,\)
-        so 
-        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + (1 + \cos x)^2} \pd\]
-        The integral setup for the arc length of the curve over \([0, 3]\) is therefore
-        \[
-        \ba 
-        L &amp;= \int_0^3 \sqrt{1 + (1 + \cos x)^2} \di x \nl 
-        &amp;= \boxed{\int_0^3 \sqrt{2 + 2 \cos x + \cos^2 x} \di x} \nl 
-        &amp;\approx 4.612 \pd
-        \ea 
-        \] 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-16"> 
-  <div class="box-solution__head">     EXERCISE 16 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds x = \sin \par{y^2} \cmaa 0 \leq y \leq 1\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-16"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        Because \(\textderiv{x}{y} = 2y \cos \par{y^2},\)
-        we have 
-        \[\sqrt{1 + \par{\deriv{x}{y}}^2} = \sqrt{1 + \parbr{2y \cos \par{y^2}}^2} \pd\]
-        The integral setup for the arc length of the curve over \([0, 1]\) is therefore
-        \[
-        \ba 
-        L &amp;= \int_0^1 \sqrt{1 + \parbr{2y \cos \par{y^2}}^2} \di y \nl 
-        &amp;= \boxed{\int_0^1 \sqrt{1 + 4y^2 \cos^2 \par{y^2}} \di y} \nl 
-        &amp;\approx 1.349 \pd
-        \ea 
-        \] 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-17"> 
-  <div class="box-solution__head">     EXERCISE 17 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds y = e^{-x^2} \cmaa 1 \leq x \leq 4\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-17"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        We see \(\textderiv{y}{x} = -2x e^{-x^2},\)
-        from which
-        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + \par{-2x e^{-x^2}}^2} \pd\]
-        The integral setup for the arc length of the curve over \([1, 4]\) is therefore
-        \[
-        \ba 
-        L &amp;= \int_1^4 \sqrt{1 + \par{-2x e^{-x^2}}^2} \di x \nl 
-        &amp;= \boxed{\int_1^4 \sqrt{1 + 4x^2 e^{-2x^2}} \di x} \nl 
-        &amp;\approx 3.076 \pd
-        \ea 
-        \] 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds x = \sqrt{y^3 + 2} \cmaa 1 \leq y \leq 3\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        Differentiating the function, we see 
-        \[\deriv{x}{y} = \frac{3y^2}{2 \sqrt{y^3 + 2}} \pd\]
-        Thus, we have 
-        \[\sqrt{1 + \par{\deriv{x}{y}}^2} = \sqrt{1 + \par{\frac{3y^2}{2 \sqrt{y^3 + 2}}}^2} \pd\]
-        The integral setup for the arc length of the curve over \([1, 3]\) is therefore
-        \[
-        \ba 
-        L &amp;= \int_1^3 \sqrt{1 + \par{\frac{3y^2}{2 \sqrt{y^3 + 2}}}^2} \di y \nl 
-        &amp;= \boxed{\int_1^3 \sqrt{1 + \frac{9y^4}{4 \par{y^3 + 2}}} \di y} \nl 
-        &amp;\approx 4.193 \pd
-        \ea 
-        \] 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds y = 4 + \cos^2 x \cmaa \frac{\pi}{6} \leq x \leq \frac{\pi}{4}\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        Observe that \(\textderiv{y}{x} = -2 \cos x \sin x\)
-        and
-        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + (-2 \cos x \sin x)^2} \pd\]
-        The integral setup for the arc length of the curve over \([\pi/6, \pi/4]\) is therefore
-        \[
-        \ba 
-        L &amp;= \int_{\pi/6}^{\pi/4} \sqrt{1 + (-2 \cos x \sin x)^2} \di x \nl 
-        &amp;= \boxed{\int_{\pi/6}^{\pi/4} \sqrt{1 + 4 \cos^2 x \sin^2 x} \di x} \nl 
-        &amp;\approx 0.362 \pd
-        \ea 
-        \] 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds y = \ln \par{x^4} \cmaa e \leq x \leq 2e\]
-    </blockquote> set up the integral for the arc length of the curve. 
-        Use a calculator to compute the integral to three decimal places. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        We rewrite \(\ln \par{x^4}\) as \(4 \ln \abs x.\)
-        Because \(\textderiv{y}{x} = 4/x,\)
-        we see
-        \[\sqrt{1 + \par{\deriv{y}{x}}^2} = \sqrt{1 + \frac{16}{x^2}} \pd\]
-        The integral setup for the arc length of the curve over \([e, 2e]\) is therefore
-        \[
-        \ba 
-        L &amp;= \boxed{\int_e^{2e} \sqrt{1 + \frac{16}{x^2}} \di x} 
-        \approx 3.902 \pd
-        \ea 
-        \] 
      
         </div> 
        </div>  
