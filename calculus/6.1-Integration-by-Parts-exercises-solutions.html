@@ -44,7 +44,2049 @@
       </div>
       <!--BEGIN BODY-->
       <hr id="mainBodyBegin">
-      
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int (2x + 1) \cos x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The factor \((2x + 1)\) becomes simpler when differentiated. 
+        So let's try Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= 2x + 1 \lspace &amp;\dd v &amp;= \cos x \di x \nl 
+        \dd u &amp;= 2 \di x \lspace &amp;v &amp;= \sin x \pd
+        \eaat
+        \]
+        Hence, we find
+        \[
+        \ba 
+        \int (2x + 1) \cos x \di x &amp;= (2x + 1) \sin x - \int (\sin x)(2) \di x \nl
+        &amp;= \boxed{2x \sin x + \sin x + 2 \cos x + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int x e^{7x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The factor \(x\) becomes simpler when differentiated. 
+        Let's therefore perform Integration by Parts with
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{7x} \di x \nl 
+        \dd u &amp;= 1 \di x = \dd x \lspace &amp;v &amp;= \tfrac{1}{7} e^{7x} \pd
+        \eaat
+        \]
+        We then see
+        \[
+        \ba 
+        \int x e^{7x} \di x &amp;= x \par{\tfrac{1}{7} e^{7x}} - \int \par{\tfrac{1}{7} e^{7x}} (1) \di x \nl 
+        &amp;= \boxed{\tfrac{1}{7} x e^{7x} - \tfrac{1}{49} e^{7x} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{\pi/2} x \cos x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(x\) becomes simpler when differentiated. 
+        Let's therefore perform Integration by Parts with
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= \cos x \di x \nl 
+        \dd u &amp;= 1 \di x = \dd x \lspace &amp;v &amp;= \sin x \pd
+        \eaat
+        \]
+        We therefore see
+        \[
+        \ba
+        \int_0^{\pi/2} x \cos x \di x &amp;= \par{x \sin x} \intEval_0^{\pi/2} - \int_0^{\pi/2} \sin x \di x \nl
+        &amp;= \par{x \sin x + \cos x} \intEval_0^{\pi/2} \nl
+        &amp;= \par{\frac{\pi}{2} \sin \frac{\pi}{2} + \cos \frac{\pi}{2}} - \par{0 + \cos 0} \nl
+        &amp;= \boxed{\frac{\pi}{2} - 1}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^e x \ln x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        In using Integration by Parts, we generally reserve \(u\) 
+        to be a logarithmic function or an inverse trigonometric function. 
+        The function \(\ln x\) becomes simpler when integrated, 
+        so let's choose 
+        \[
+        \baat{2} 
+        u &amp;= \ln x \lspace &amp;\dd v &amp;= x \di x \nl 
+        \dd u &amp;= \frac{1}{x} \di x \lspace &amp;v &amp;= \frac{x^2}{2} \pd
+        \eaat
+        \]
+        We then have 
+        \[
+        \ba
+        \int_1^e x \ln x \di x 
+        &amp;= \par{\frac{x^2}{2} \ln x} \intEval_1^e - \int_1^e \par{\frac{x^2}{2}} \par{\frac{1}{x}} \di x \nl
+        &amp;=  \par{\tfrac{1}{2} x^2 \ln x} \intEval_1^e - \tfrac{1}{2} \int_1^e x \di x \nl
+        &amp;= \par{\tfrac{1}{2} x^2 \ln x - \tfrac{1}{4} x^2} \intEval_1^e \nl
+        &amp;= \boxed{\tfrac{1}{4} \par{e^2 + 1}}
+        \ea
+        \]              
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 z^2 \sqrt z \di z\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        No reason exists to use Integration by Parts!
+        Instead, it is much easier to rewrite the integrand as 
+        \(z^2 \cdot z^{1/2}\) \(= z^{5/2}.\)
+        We then see
+        \[
+        \ba 
+        \int_0^1 z^2 \sqrt z \di z 
+        &amp;= \int_0^1 z^{5/2} \di z \nl 
+        &amp;= \tfrac{2}{7} z^{7/2} \intEval_0^1 = \boxed{\tfrac{2}{7}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \ln \par{x^9} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\ln \par{x^9} = 9 \ln x,\) the integral becomes 
+        \[\int 9 \ln x \di x = 9 \int \ln x \di x \pd\]
+        By <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-ln-ibp" target="_blank">Example 3</a>, the integral is 
+        \[9 \par{x \ln x - x} + C = \boxed{9x \ln x - 9x + C}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int t^4 \ln t \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        When we use Integration by Parts, we usually prioritize \(u\) 
+        to be a logarithmic function or an inverse trigonometric function.
+        Because \(\ln t\) becomes simpler when differentiated, we use 
+        \[
+        \baat{2} 
+        u &amp;= \ln t \lspace &amp;\dd v &amp;= t^4 \di t \nl 
+        \dd u &amp;= \frac{1}{t} \di t \lspace &amp;v &amp;= \frac{t^5}{5} \pd
+        \eaat
+        \]
+        Doing so, we see 
+        \[
+        \ba 
+        \int t^4 \ln t \di t &amp;= \par{\ln t} \par{\frac{t^5}{5}} 
+        - \int \par{\frac{t^5}{5}} \par{\frac{1}{t}} \di t \nl 
+        &amp;= \tfrac{1}{5} t^5 \ln t - \tfrac{1}{5} \int t^4 \di t \nl 
+        &amp;= \boxed{\tfrac{1}{5} t^5 \ln t - \tfrac{1}{25} t^5 + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{\pi/4} \theta \cos 4 \theta \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The expression \(\theta\) becomes simpler when differentiated. 
+        We therefore use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \theta \lspace &amp;\dd v &amp;= \cos 4 \theta \di \theta \nl 
+        \dd u &amp;= \dd \theta \lspace &amp;v &amp;= \tfrac{1}{4} \sin 4 \theta \pd
+        \eaat
+        \]
+        We therefore find 
+        \[
+        \ba 
+        \int_0^{\pi/4} \theta \cos 4 \theta \di \theta 
+        &amp;= \par{\tfrac{1}{4} \theta \sin 4 \theta} \intEval_0^{\pi/4} 
+        - \int_0^{\pi/4} \tfrac{1}{4} \sin 4 \theta \di \theta \nl 
+        &amp;= 0 + \tfrac{1}{16} \cos 4 \theta \intEval_0^{\pi/4} 
+        = \boxed{-\tfrac{1}{8}} 
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \theta \sec^2 \theta \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The expression \(\theta\) becomes simpler when differentiated. 
+        So let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \theta \lspace &amp;\dd v &amp;= \sec^2 \theta \di \theta \nl 
+        \dd u &amp;= \dd \theta \lspace &amp;v &amp;= \tan \theta \pd
+        \eaat
+        \]
+        We see 
+        \[
+        \ba 
+        \int \theta \sec^2 \theta \di \theta &amp;= \theta \tan \theta - \int \tan \theta \di \theta \nl 
+        &amp;= \theta \tan \theta - \ln \abs{\sec \theta} + C \nl 
+        &amp;= \boxed{\theta \tan \theta + \ln \abs{\cos \theta} + C}
+        \ea
+        \]
+        (Recall that \(\int \tan t \di t\) \(= \ln \abs{\sec t} + C\)
+        from <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html#int-tan"target = "_blank">Example 4.4-6</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{x - 1}{e^x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's reexpress the integral as follows:
+        \[
+        \ba
+        \int \frac{x - 1}{e^x} \di x &amp;= \int \par{\frac{x}{e^x} - \frac{1}{e^x}}\di x \nl 
+        &amp;= \int xe^{-x} \di x - \int e^{-x} \di x \pd
+        \ea
+        \]
+        To evaluate \(\int xe^{-x} \di x,\) 
+        we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= -e^{-x} \pd
+        \eaat
+        \]
+        So we see 
+        \[
+        \ba 
+        \int xe^{-x} \di x &amp;= -xe^{-x} - \int \par{-e^{-x}} \di x \nl 
+        &amp;= -xe^{-x} - e^{-x} + C \pd
+        \ea 
+        \]
+        Accordingly, we find 
+        \[
+        \ba 
+        \int \frac{x - 1}{e^x} \di x &amp;= \par{-xe^{-x} - e^{-x}} - \int e^{-x} \di x \nl
+        &amp;= \par{-xe^{-x} - e^{-x}} - \par{-e^{-x}} + C \nl 
+        &amp;= \boxed{-xe^{-x} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \acos y \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \acos y \lspace &amp;\dd v &amp;= \dd y \nl 
+        \dd u &amp;= \frac{-1}{\sqrt{1 - y^2}} \di y \lspace &amp;v &amp;= y \pd
+        \eaat
+        \]
+        So we have
+        \[
+        \ba
+        \int \acos y \di y &amp;= y \acos y - \int \frac{-y}{\sqrt{1 - y^2}} \di y \nl 
+        &amp;= y \acos y + \int \frac{y}{\sqrt{1 - y^2}} \di y \pd
+        \ea
+        \]
+        We evaluate \(\int y/\sqrt{1 - y^2} \di y\) by substituting
+        \(w = 1 - y^2.\) Then \(\dd w = -2y \di y\) and so the integral becomes
+        \[
+        \ba
+        -\int \frac{1}{2\sqrt w} \di w &amp;= -\tfrac{1}{2} \par{2 \sqrt w} + C \nl 
+        &amp;= - \sqrt w + C \nl
+        &amp;= -\sqrt{1 - y^2} + C \pd
+        \ea
+        \]   
+        So we have
+        \[
+        \ba
+        \int \acos y \di y &amp;= y \acos y + \par{-\sqrt{1 - y^2}} + C \nl
+        &amp;= \boxed{y \acos y - \sqrt{1 - y^2} + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \asin 2t \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \asin 2t \lspace &amp;\dd v &amp;= \dd t \nl 
+        \dd u &amp;= \frac{2}{\sqrt{1 - 4t^2}} \di t \lspace &amp;v &amp;= t \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \int \asin 2t \di t = t \asin 2t - \int \frac{2t}{\sqrt{1 - 4t^2}} \di t \pd
+        \]
+        To evaluate \(\int 2t/\sqrt{1 - 4t^2} \di t,\) we substitute \(w = 1 - 4t^2.\)
+        Then \(\dd w = -8t \di t\) and so the integral becomes 
+        \[
+        \ba
+        -\int \frac{1}{4 \sqrt w} \di w 
+        &amp;= -\tfrac{1}{4} \par{2 \sqrt w} + C \nl
+        &amp;= -\tfrac{1}{2} \sqrt w + C \nl 
+        &amp;= -\tfrac{1}{2} \sqrt{1 - 4t^2} + C \pd
+        \ea
+        \]
+        Accordingly, we have 
+        \[
+        \ba
+        \int \asin 2t \di t &amp;= t \asin 2t - \par{-\tfrac{1}{2} \sqrt{1 - 4t^2}} + C \nl 
+        &amp;= \boxed{t \asin 2t + \tfrac{1}{2} \sqrt{1 - 4t^2} + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 \atan x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        To maintain organization, 
+        it is a good idea to first determine an antiderivative 
+        and then use the Fundamental Theorem of Calculus. 
+        <p>
+<span class="label-emph">Antidifferentiation</span>
+            As we perform Integration by Parts, 
+            our only option is 
+            \[
+            \baat{2} 
+            u &amp;= \atan x \lspace &amp;\dd v &amp;= \dd x \nl 
+            \dd u &amp;= \frac{1}{x^2 + 1} \di x \lspace &amp;v &amp;= x \pd
+            \eaat
+            \]
+            Doing so, we see 
+            \[
+            \int \atan x \di x = x \atan x - \int \frac{x}{x^2 + 1} \di x \pd
+            \]
+            To evaluate the integral on the right side, 
+            we substitute \(w = x^2 + 1.\) 
+            Then \(\dd w = 2x \di x\) and so we see 
+            \[
+            \ba 
+            \int \frac{x}{x^2 + 1} \di x &amp;= \int \frac{1}{2w} \di w \nl 
+            &amp;= \tfrac{1}{2} \ln \abs w + C \nl 
+            &amp;= \tfrac{1}{2} \ln \par{x^2 + 1} + C \pd
+            \ea 
+            \]
+            (We exclude the absolute value bars around the natural logarithm because \(x^2 + 1\) is always positive.)
+            Hence, we get
+            \[
+            \int \atan x \di x = x \atan x - \tfrac{1}{2} \ln \par{x^2 + 1} + C \pd
+            \]
+        </p>
+<p>
+<span class="label-emph">Definite Integral</span>
+            By Part II of the Fundamental Theorem of Calculus, we have 
+            \[
+            \ba 
+            \int_0^1 \atan x \di x &amp;= \parbr{x \atan x - \tfrac{1}{2} \ln \par{x^2 + 1}} \intEval_0^1 \nl 
+            &amp;= \par{1 \atan 1 - \tfrac{1}{2} \ln 2} - \par{0} \nl 
+            &amp;= \boxed{\frac{\pi}{4} - \ln \sqrt 2} \approx 0.439 \pd
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{1/3} (7y + 4)(6y - 2)^6 \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        For simplicity, we first find an antiderivative and then use 
+        the Fundamental Theorem of Calculus. 
+        <p>
+<span class="label-emph">Antidifferentiation</span>
+            Instead of expanding these factors, 
+            it is far better to use Integration by Parts with 
+            \[
+            \baat{2} 
+            u &amp;= 7y + 4 \lspace &amp;\dd v &amp;= (6y - 2)^6 \di y \nl 
+            \dd u &amp;= 7 \di y \lspace &amp;v &amp;= \tfrac{1}{42} (6y - 2)^7 \pd
+            \eaat
+            \]
+            We therefore have 
+            \[
+            \ba 
+            \int (7y + 4)(6y - 2)^6 \di y 
+            &amp;= (7y + 4) \parbr{\tfrac{1}{42} (6y - 2)^7} - \int \parbr{\tfrac{1}{42} (6y - 2)^7} (7) \di y \nl 
+            &amp;= \tfrac{1}{42} (7y + 4)(6y - 2)^7 - \tfrac{1}{6} \int (6y - 2)^7 \di y \nl 
+            &amp;= \tfrac{1}{42} (7y + 4)(6y - 2)^7 - \tfrac{1}{288} (6y - 2)^8 + C \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Definite Integral</span>
+            By Part II of the Fundamental Theorem of Calculus, we see 
+            \[
+            \ba 
+            \int_0^{1/3} (7y + 4)(6y - 2)^6 \di y &amp;= \parbr{\tfrac{1}{42} (7y + 4)(6y - 2)^7 - \tfrac{1}{288} (6y - 2)^8} \intEval_0^{1/3} \nl 
+            &amp;= \boxed{\tfrac{824}{63}}
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int (3t - 5)^2 (t + 9)^8 \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Instead of spending hours expanding these binomials, 
+        we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= (3t - 5)^2 \lspace &amp;\dd v &amp;= (t + 9)^8 \di t \nl 
+        \dd u &amp;= 6(3t - 5) \di t \lspace &amp;v &amp;= \tfrac{1}{9} (t + 9)^9 \pd
+        \eaat
+        \]
+        Doing so, we get 
+        \[
+        \ba 
+        \int (3t - 5)^2 (t + 9)^8 \di t &amp;= (3t - 5)^2 \parbr{\tfrac{1}{9} (t + 9)^9} - \int \parbr{\tfrac{1}{9} (t + 9)^9} \parbr{6(3t - 5)} \di t \nl 
+        &amp;= \tfrac{1}{9} (3t - 5)^2 (t + 9)^9 - \tfrac{2}{3} \int (3t - 5)(t + 9)^9 \di t \pd
+        \ea 
+        \]
+        Finally, we use Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= 3t - 5 \lspace &amp;\dd v &amp;= (t + 9)^9 \di t \nl 
+        \dd u &amp;= 3 \di t \lspace &amp;v &amp;= \tfrac{1}{10} (t + 9)^{10} \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba 
+        \int (3t - 5)^2 (t + 9)^8 \di t 
+        &amp;= \tfrac{1}{9} (3t - 5)^2 (t + 9)^9 - \tfrac{2}{3} \parbr{\tfrac{1}{10} (3t - 5)(t + 9)^{10} - \tfrac{3}{10} \int (t + 9)^{10} \di t} \nl 
+        &amp;= \boxed{\tfrac{1}{9} (3t - 5)^2 (t + 9)^9 - \tfrac{1}{15} (3t - 5)(t + 9)^{10} + \tfrac{1}{55} (t + 9)^{11} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int (\ln t)^2 \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Let's use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= (\ln t)^2 \lspace &amp;\dd v &amp;= \dd t \nl 
+        \dd u &amp;= \frac{2 \ln t}{t} \di t \lspace &amp;v &amp;= t \pd
+        \eaat
+        \]
+        Doing so gives 
+        \[
+        \ba 
+        \int (\ln t)^2 \di t &amp;= (\ln t)^2 \, t - \int t \par{\frac{2 \ln t}{t}} \di t \nl 
+        &amp;= t (\ln t)^2 - 2 \int \ln t \di t \pd
+        \ea 
+        \]
+        By <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-ln-ibp" target="_blank">Example 3</a>, 
+        we get 
+        \[
+        \ba 
+        \int (\ln t)^2 \di t &amp;= t (\ln t)^2 - 2  \par{t \ln t - t} + C \nl 
+        &amp;= \boxed{t (\ln t)^2 - 2t \ln t + 2t + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int x^2 \, e^{-x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The factor \(x^2\) becomes simpler when differentiated, 
+        so we should conduct Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x^2 \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= 2x \di x \lspace &amp;v &amp;= -e^{-x} \pd
+        \eaat
+        \]
+        Doing so, we find 
+        \[
+        \ba 
+        \int x^2 e^{-x} \di x &amp;= \par{x^2} \par{-e^{-x}} - \int \par{-e^{-x}} (2x) \di x \nl 
+        &amp;= -x^2 e^{-x} + 2 \int x e^{-x} \di x \pd
+        \ea 
+        \]
+        The resulting integral \(\int xe^{-x} \di x\) is simpler. 
+        To evaluate it, we use Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= -e^{-x} \pd
+        \eaat
+        \]
+        Accordingly, we see 
+        \[
+        \ba 
+        \int x^2 e^{-x} \di x &amp;= -x^2 e^{-x} + 2 \parbr{x \par{-e^{-x}} - \int \par{-e^{-x}} \di x} \nl 
+        &amp;= -x^2 e^{-x} - 2x e^{-x} + 2 \int e^{-x} \di x \nl 
+        &amp;= \boxed{-x^2 e^{-x} - 2x e^{-x} - 2 e^{-x} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int 3^y \par{y^2 - 1} \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's first rewrite \(3^y\) as \(e^{y \ln 3}.\)
+        The integral then becomes 
+        \[\int e^{y \ln 3} \par{y^2 - 1} \di y \pd\]
+        The factor \((y^2 - 1)\) becomes simpler  
+        when differentiated;
+        thus, we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= y^2 - 1 \lspace &amp;\dd v &amp;= e^{y \ln 3} \di y \nl 
+        \dd u &amp;= 2y \di y \lspace &amp;v &amp;= \frac{e^{y \ln 3}}{\ln 3} \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba 
+        \int 3^y \par{y^2 - 1} \di y 
+        &amp;= \par{y^2 - 1} \frac{e^{y \ln 3}}{\ln 3} 
+        - \int \frac{2y e^{y \ln 3}}{\ln 3} \di y \nl 
+        &amp;= \par{y^2 - 1} \frac{e^{y \ln 3}}{\ln 3}
+        - \frac{2}{\ln 3} \int y e^{y \ln 3} \di y \pd
+        \ea 
+        \]
+        Let's perform Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= y \lspace &amp;\dd v &amp;= e^{y \ln 3} \di y \nl 
+        \dd u &amp;= \dd y \lspace &amp;v &amp;= \frac{e^{y \ln 3}}{\ln 3} \pd
+        \eaat
+        \]
+        Accordingly, we find 
+        \[
+        \ba 
+        \int 3^y \par{y^2 - 1} \di y 
+        &amp;= \par{y^2 - 1} \frac{e^{y \ln 3}}{\ln 3} 
+        - \frac{2}{\ln 3} \par{\frac{ye^{y \ln 3}}{\ln 3} - \int \frac{e^{y \ln 3}}{\ln 3} \di y} \nl
+        &amp;= \par{y^2 - 1} \frac{e^{y \ln 3}}{\ln 3} - \frac{2ye^{y \ln 3}}{(\ln 3)^2} + \frac{2 e^{y \ln 3}}{(\ln 3)^3} + C \nl
+        &amp;= \boxed{\frac{3^y \par{y^2 - 1}}{\ln 3} - \frac{2y \par{3^y}}{(\ln 3)^2} + \frac{2 \par{3^y}}{(\ln 3)^3} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \atan \par{\frac{1}{x}} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Performing Integration by Parts, we have only one option: 
+        \[
+        \baat{2} 
+        u &amp;= \atan \par{\frac{1}{x}} \lspace &amp;\dd v &amp;= \dd x \nl 
+        \dd u &amp;= \frac{-1/x^2}{1 + (1/x)^2} \di x \lspace &amp;v &amp;= x \nl 
+        &amp;= \frac{-1}{x^2 + 1} \di x \pd
+        \eaat
+        \]
+        These choices show
+        \[
+        \ba 
+        \int \atan \par{\frac{1}{x}} \di x &amp;= x \atan \par{\frac{1}{x}} - \int x \par{\frac{-1}{x^2 + 1}} \di x \nl 
+        &amp;= x \atan \par{\frac{1}{x}} + \int \frac{x}{x^2 + 1} \di x \pd
+        \ea 
+        \]
+        Let's evaluate \(\int x/\par{x^2 + 1} \di x\) by substituting \(w = x^2 + 1.\)
+        Then \(\dd w = 2x \di x\) and so we have 
+        \[
+        \ba 
+        \int \frac{x}{x^2 + 1} \di x &amp;= \int \frac{1}{2w} \di w \nl 
+        &amp;= \tfrac{1}{2} \ln \abs w + C \nl 
+        &amp;= \tfrac{1}{2} \ln \par{x^2 + 1} + C \cma
+        \ea 
+        \]
+        where we dropped the absolute value bars because \(x^2 + 1\) is always positive. 
+        Hence, we conclude that
+        \[
+        \int \atan \par{\frac{1}{x}} \di x = \boxed{x \atan \par{\frac{1}{x}} + \tfrac{1}{2} \ln \par{x^2 + 1} + C}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int z (\ln 6z)^2 \di z\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The solution to this problem may not be obvious. 
+        When this occurs, it may require several tries to identify the strategy for integration. 
+        In general, when we perform Integration by Parts 
+        we should prioritize \(u\) to be any logarithmic or trigonometric function lying in the integrand. 
+        Let's therefore use 
+        \[
+        \baat{2} 
+        u &amp;= (\ln 6z)^2 \lspace &amp;\dd v &amp;= z \di z \nl 
+        \dd u &amp;= \frac{2 \ln 6z}{z} \di z \lspace &amp;v &amp;= \frac{z^2}{2} \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba 
+        \int z (\ln 6z)^2 \di z &amp;= \frac{z^2}{2} (\ln 6z)^2 - \int \par{\frac{z^2}{2}} \par{\frac{2 \ln 6z}{z}} \di z \nl 
+        &amp;= \tfrac{1}{2} z^2 (\ln 6z)^2 - \int z \ln 6z \di z \pd
+        \ea 
+        \]
+        To evaluate \(\int z \ln 6z \di z,\) we perform Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= \ln 6z \lspace &amp;\dd v &amp;= z \di z \nl 
+        \dd u &amp;= \frac{1}{z} \di z \lspace &amp;v &amp;= \frac{z^2}{2} \pd
+        \eaat
+        \]
+        Hence, we get 
+        \[
+        \ba 
+        \int z (\ln 6z)^2 \di z 
+        &amp;= \tfrac{1}{2} z^2 (\ln 6z)^2 - \parbr{\frac{z^2}{2} \ln 6z - \int \par{\frac{z^2}{2}} \par{\frac{1}{z}} \di z} \nl 
+        &amp;= \tfrac{1}{2} z^2 (\ln 6z)^2 - \tfrac{1}{2} z^2 \ln 6z + \tfrac{1}{2} \int z \di z \nl 
+        &amp;= \boxed{\tfrac{1}{2} z^2 (\ln 6z)^2 - \tfrac{1}{2} z^2 \ln 6z + \tfrac{1}{4} z^2 + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int e^y \cos 2y \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We apply a similar procedure as in <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>:
+        Neither \(e^y\) nor \(\cos 2y\) is simpler when differentiated, 
+        but let's try Integration by Parts regardless with 
+        \[
+        \baat{2} 
+        u &amp;= \cos 2y \lspace &amp;\dd v &amp;= e^y \di y \nl 
+        \dd u &amp;= -2 \sin 2y \di y \lspace &amp;v &amp;= e^y \pd
+        \eaat
+        \]
+        (Swapping our choices of \(u\) and \(\dd v\) would make little difference.)
+        So we see 
+        \[
+        \ba 
+        \int e^y \cos 2y \di y &amp;= (\cos 2y) e^y - \int e^y (-2 \sin 2y) \di y \nl 
+        &amp;= e^y \cos 2y + 2 \int e^y \sin 2y \di y \pd
+        \ea 
+        \]
+        We want to express \(\int e^y \sin 2y \di y\) in terms of the original integral \(\int e^y \cos 2y \di y.\)
+        So let's perform Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= \sin 2y \lspace &amp;\dd v &amp;= e^y \di y \nl 
+        \dd u &amp;= 2 \cos 2y \di y \lspace &amp;v &amp;= e^y \pd
+        \eaat
+        \]
+        These choices of \(u\) and \(v\) are interchangeable; the ultimate goal is to cycle 
+        whether the integrand contains sine or cosine.
+        Accordingly, we get 
+        \[
+        \ba 
+        \int e^y \cos 2y \di y &amp;= e^y \cos 2y + 2 \par{e^y \sin 2y - 2 \int e^y \cos 2y \di y} \nl 
+        &amp;= e^y \cos 2y + 2 e^y \sin 2y - 4 \int e^y \cos 2y \di y \pd
+        \ea 
+        \]
+        If we add \(4 \int e^y \cos 2y \di y\) to both sides and include the constant of integration \(C,\) 
+        then we get 
+        \[
+        \ba 
+        5 \int e^y \cos 2y \di y &amp;= e^y \cos 2y + 2 e^y \sin 2y + C \nl 
+        \implies \int e^y \cos 2y \di y &amp;= \boxed{\tfrac{1}{5} e^y \cos 2y + \tfrac{2}{5} e^y \sin 2y + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int e^{x/3} \sin 5 x  \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We apply a similar procedure as in <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>:
+        Neither \(e^{x/3}\) nor \(\sin 5x\) becomes simpler when differentiated.
+        Nevertheless, let's try Integration by Parts with
+        \[
+        \baat{2} 
+        u &amp;= \sin 5x \lspace &amp;\dd v &amp;= e^{x/3} \di x \nl 
+        \dd u &amp;= 5 \cos 5x \di x \lspace &amp;v &amp;= 3e^{x/3} \pd
+        \eaat
+        \]
+        (Swapping our choices of \(u\) and \(\dd v\) would make little difference.)
+        Then we see
+        \[
+        \ba 
+        \int e^{x/3} \sin 5 x \di x &amp;= (\sin 5x) \par{3e^{x/3}} - \int 3e^{x/3} (5 \cos 5x) \di x \nl 
+        &amp;= 3 e^{x/3} \sin 5x - 15 \int e^{x/3} \cos 5x \di x \pd
+        \ea 
+        \]
+        We want to express \(\int e^{x/3} \cos 5x \di x\) in terms of the original integral \(\int e^{x/3} \sin 5 x \di x.\)
+        So let's perform Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= \cos 5x \lspace &amp;\dd v &amp;= e^{x/3} \di x \nl 
+        \dd u &amp;= -5 \sin 5x \di x \lspace &amp;v &amp;= 3 e^{x/3} \pd
+        \eaat
+        \]
+        (We could swap our choices for \(u\) and \(\dd v\) without significant consequences.)
+        Accordingly, we see
+        \[
+        \ba 
+        \int e^{x/3} \sin 5 x \di x 
+        &amp;= 3 e^{x/3} \sin 5x - 15 \par{3 e^{x/3} \cos 5x - \int \par{3 e^{x/3}} (-5 \sin 5x) \di x} \nl 
+        &amp;= 3 e^{x/3} \sin 5x - 45 e^{x/3} \cos 5x - 225 \int e^{x/3} \sin 5x \di x \pd
+        \ea 
+        \]
+        Solving for \(\int e^{x/3} \sin 5x \di x\) and including the constant of integration \(C,\) we get 
+        \[
+        \ba 
+        226 \int e^{x/3} \sin 5 x \di x &amp;= 3 e^{x/3} \sin 5x - 45 e^{x/3} \cos 5x + C \nl
+        \implies \int e^{x/3} \sin 5 x \di x &amp;= \boxed{\tfrac{3}{226} e^{x/3} \sin 5x - \tfrac{45}{226} e^{x/3} \cos 5x + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int r e^r \sin r \di r\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= r \lspace &amp;\dd v &amp;= e^r \sin r \di r \nl 
+        \dd u &amp;= \dd r \lspace &amp;v &amp;= \tfrac{1}{2} e^r \sin r - \tfrac{1}{2} e^r \cos r \pd
+        \eaat
+        \]
+        (We get \(v\) by referencing the result in <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>.)
+        So we see 
+        \[
+        \ba 
+        \int r e^r \sin r \di r &amp;= r \par{\tfrac{1}{2} e^r \sin r - \tfrac{1}{2} e^r \cos r} 
+        - \int \par{\tfrac{1}{2} e^r \sin r - \tfrac{1}{2} e^r \cos r} \di r \nl 
+        &amp;= \tfrac{1}{2} r e^r \sin r - \tfrac{1}{2} r e^r \cos r 
+        - \tfrac{1}{2} \int e^r \sin r \di r + \tfrac{1}{2} \int e^r \cos r \di r \pd 
+        \ea 
+        \] 
+        On the right side, we evaluated the first integral \(\int e^r \sin r \di r\) in 
+        <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>; 
+        the second integral \(\int e^r \cos r \di r\) can be evaluated by a nearly identical method. 
+        You may verify that 
+        \[
+        \int e^r \cos r \di r = \tfrac{1}{2} e^r \sin r + \tfrac{1}{2} e^r \cos r + C \pd
+        \]
+        Thus, we attain
+        \[
+        \ba
+        \int r e^r \sin r \di r
+        &amp;= \tfrac{1}{2} r e^r \sin r - \tfrac{1}{2} r e^r \cos r 
+        - \tfrac{1}{2} \par{\tfrac{1}{2} e^r \sin r - \tfrac{1}{2} e^r \cos r} 
+        + \tfrac{1}{2} \par{\tfrac{1}{2} e^r \sin r + \tfrac{1}{2} e^r \cos r} + C \nl 
+        &amp;= \boxed{\tfrac{1}{2} r e^r \sin r - \tfrac{1}{2} r e^r \cos r + \tfrac{1}{2} e^r \cos r + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The function \(g\) has derivatives of all orders. 
+        It is known that \(g(1) = -3,\) \(g(4) = 7,\) and \(\int_1^4 g(x) \di x = 8.\)
+        Calculate \(\int_1^4 x g'(x) \di x.\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        To reexpress the integral in terms of \(\int_1^4 g(x) \di x,\)
+        let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= g'(x) \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= g(x) \pd
+        \eaat
+        \]
+        Doing so, we see
+        \[
+        \ba 
+        \int_1^4 x g'(x) \di x &amp;= x g(x) \intEval_1^4 - \int_1^4 g(x) \di x \nl 
+        &amp;= \parbr{4 g(4) - 1 g(1)} - \int_1^4 g(x) \di x \nl 
+        &amp;= [4(7) - 1(-3)] - 8 = \boxed{23}
+        \ea
+        \]
+        <i>Note</i>: Because \(g\) has derivatives of all orders, 
+        the first derivative \(g'(x)\) is continuous. 
+        Thus, the product \(x g'(x)\) is also continuous, 
+        meaning it is justified to apply the Fundamental Theorem of Calculus
+        to \(\int_1^4 x g'(x) \di x.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f\) and \(g\) be twice-differentiable functions such that
+        \(f(2) = 0,\) \(f(3) = -2,\) \(g(3) = 5,\) and \(\int_2^3 f(x) g'(x) \di x = 13.\)
+        Evaluate \(\int_2^3 f'(x) g(x) \di x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Our goal is to reexpress \(\int_2^3 f'(x) g(x) \di x\) in terms of the given integral
+        \(\int_2^3 f(x) g'(x) \di x = 13.\)
+        To do so, we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= g(x) \lspace &amp;\dd v &amp;= f'(x) \di x \nl 
+        \dd u &amp;= g'(x) \di x \lspace &amp;v &amp;= f(x) \pd
+        \eaat
+        \]
+        Hence, we find 
+        \[
+        \ba 
+        \int_2^3 f'(x) g(x) \di x &amp;= f(x) g(x) \intEval_2^3 - \int_2^3 f(x) g'(x) \di x \nl 
+        &amp;= \parbr{f(3) g(3) - f(2) g(2)} - \int_2^3 f(x) g'(x) \di x \nl 
+        &amp;= \parbr{(-2)(5) - 0} - 13 = \boxed{-23}
+        \ea 
+        \]
+        <i>Note</i>: 
+        Since \(f(2) = 0,\) the product \(f(2) g(2)\) also equals \(0.\)
+        Hence, the value of \(\int_2^3 f'(x) g(x) \di x\) is independent of \(g(2).\)
+        In addition, \(f\) and \(g\) are twice-differentiable, 
+        so both \(f'(x)\) and \(g'(x)\) are continuous. 
+        The products \(f'(x) g(x)\) and \(f(x) g'(x)\) are therefore also continuous, 
+        so it is justified to use the Fundamental Theorem of Calculus for \(\int_2^3 f'(x) g(x) \di x\)
+        and \(\int_2^3 f(x) g'(x) \di x.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(p\) be a differentiable function.
+        Show that 
+        \[\int_0^5 p(x) \di x = 5p(5) - \int_0^5 x p'(x) \di x \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= p(x) \lspace &amp;\dd v &amp;= \dd x \nl 
+        \dd u &amp;= p'(x) \di x \lspace &amp;v &amp;= x \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba 
+        \int_0^5 p(x) \di x &amp;= x p(x) \intEval_0^5 - \int_0^5 x p'(x) \di x \nl 
+        &amp;= \parbr{5 p(5) - 0} - \int_0^5 x p'(x) \di x \nl 
+        &amp;= 5 p(5) - \int_0^5 x p'(x) \di x \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that 
+        \[\int \frac{\sin x}{x} \di x = (\sin x) \ln \abs x - \int (\cos x) \ln \abs x \di x \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \sin x \lspace &amp;\dd v &amp;= \frac{1}{x} \di x \nl 
+        \dd u &amp;= \cos x \di x \lspace &amp;v &amp;= \ln \abs x \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \int \frac{\sin x}{x} \di x = (\sin x) \ln \abs x - \int (\cos x) \ln \abs x \di x \cma
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Evaluate \(\int \ln x \di x\) by substituting \(w = \ln x\)
+        and using the result of <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e" target="_blank">Example 1</a>.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Substituting \(w = \ln x,\) we get \(\dd w = (1/x) \di x\)
+        and \(x = e^w.\)
+        The integral therefore becomes 
+        \[\int w x \di w = \int w e^w \di w \pd\]
+        By <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e" target="_blank">Example 1</a>, 
+        the integral is 
+        \[
+        \ba
+        we^w - e^w + C 
+        &amp;= (\ln x) e^{\ln x} - e^{\ln x} + C \nl 
+        &amp;= \boxed{x \ln x - x + C}
+        \ea
+        \]
+        as expected from <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-ln-ibp" target="_blank">Example 3</a>.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int x^3 e^{x^2} \di x\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        It is best to begin with the substitution \(w = x^2,\)
+        from which \(\dd w = 2x \di x.\) 
+        The integral therefore becomes 
+        \[\tfrac{1}{2} \int w e^w \di w \pd\]
+        From <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e" target="_blank">Example 1</a>, the integral is 
+        \[
+        \ba
+        \tfrac{1}{2} \par{we^w - e^w + C} 
+        &amp;= \tfrac{1}{2} \par{x^2 e^{x^2} - e^{x^2} + C} \nl 
+        &amp;= \boxed{\tfrac{1}{2} x^2 e^{x^2} - \tfrac{1}{2} e^{x^2} + C}
+        \ea    
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin \alpha \cos \alpha \ln (\sec \alpha) \di \alpha\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that 
+        \[\ln(\sec \alpha) = \ln (\cos \alpha)^{-1} = - \ln(\cos \alpha) \pd\]
+        We therefore rewrite the integral as
+        \[- \int \sin \alpha \cos \alpha \ln(\cos \alpha ) \di \alpha \pd\]
+        Substituting \(w = \cos \alpha,\)
+        we attain \(\dd w = -\sin \alpha \di \alpha\) and so the integral becomes
+        \[\int w \ln w \di w \pd\]
+        Let's now perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \ln w \lspace &amp;\dd v &amp;= w \di w \nl 
+        \dd u &amp;= \frac{1}{w} \di w \lspace &amp;v &amp;= \frac{w^2}{2} \pd
+        \eaat
+        \]
+        We then have
+        \[
+        \ba
+        \int w \ln w \di w &amp;= \frac{w^2 \ln w}{2} - \int \par{\frac{w^2}{2}} \par{\frac{1}{w}} \di w \nl
+        &amp;= \tfrac{1}{2} w^2 \ln w - \tfrac{1}{2} \int w \di w \nl
+        &amp;= \tfrac{1}{2} w^2 \ln w - \tfrac{1}{4} w^2 + C \nl 
+        &amp;= \boxed{\tfrac{1}{2} \cos^2 \alpha \ln(\cos \alpha) - \tfrac{1}{4} \cos^2 \alpha + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 e^{-2 \sqrt s} \di s\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Substituting \(w = -2 \sqrt s,\) 
+        we have \(\dd w = \par{-1/\sqrt s} \di s\)
+        and \(\sqrt s = -w/2.\)
+        When \(s = 0,\) \(w = 0;\) when \(s = 1,\) \(w = -2.\)
+        The integral therefore becomes 
+        \[\int_0^{-2} e^w \par{-\sqrt s} \di w = \tfrac{1}{2} \int_0^{-2} w e^w \di w \pd\]
+        By <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e" target="_blank">Example 1</a> and Part II of the Fundamental Theorem of Calculus, 
+        the integral becomes
+        \[
+        \ba 
+        \tfrac{1}{2} \par{we^w - e^w} \intEval_0^{-2}
+        &amp;= \tfrac{1}{2} \par{-2 e^{-2} - e^{-2}} - \tfrac{1}{2} \par{0 - 1} \nl 
+        &amp;= \boxed{\frac{1 - 3e^{-2}}{2}} \approx 0.297 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int e^{\acos y} \di y\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We first perform the substitution \(w = \acos y;\)
+        then \(\dd w = -1/\sqrt{1 - y^2} \di y\) and \(y = \cos w.\) 
+        Accordingly, the integral becomes 
+        \[
+        \ba
+        \int e^w \par{-\sqrt{1 - y^2}} \di w 
+        &amp;= -\int e^w \sqrt{1 - \cos^2 w} \di w \nl 
+        &amp;= -\int e^w \abs{\sin w} \di w \nl
+        &amp;= -\int e^w \sin w \di w \pd
+        \ea
+        \]
+        (It is safe to say \(\abs{\sin w}\) \(= \sin w\) because \(w = \acos y\) 
+        is never negative.)
+        By <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>, the integral becomes 
+        \[
+        \ba 
+        -\par{\tfrac{1}{2} e^w \sin w - \tfrac{1}{2} e^w \cos w + C} 
+        &amp;= \tfrac{1}{2} e^w \cos w - \tfrac{1}{2} e^w \sin w + C \nl
+        &amp;= \tfrac{1}{2} e^{\acos y} \cos \par{\acos y} - \tfrac{1}{2} e^{\acos y} \sin \par{\acos y} + C \nl 
+        &amp;= \boxed{\tfrac{1}{2} y e^{\acos y} - \tfrac{1}{2} e^{\acos y} \sqrt{1 - y^2} + C}
+        \ea 
+        \]
+        <i>Note</i>: \(\sin \par{\acos y} = \sqrt{1 - y^2}\)
+        because \(\acos y\) is the angle of a right triangle whose hypotenuse is \(1\) and adjacent side is \(y.\)
+        Hence, the side opposite the angle is \(\sqrt{1 - y^2},\)
+        so the angle's sine is \(\sqrt{1 - y^2}/1.\)
+        <figure class="ibp-acos-y-triangle figure-center-one" id="ibp-acos-y-triangle">
+<img alt="Figure 3A" class="ibp-acos-y-triangle" src="../images/sectionImages/ibp-acos-y-triangle.jpg"/>
+</figure>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^4 \sin(\ln x) \di x\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        It is easiest to first determine an antiderivative of \(\sin(\ln x)\) and then apply the Fundamental Theorem of Calculus.
+        <p>
+<span class="label-emph">Antidifferentiation</span>
+            Trying the substitution \(w = \ln x,\)
+            we see \(\dd w = (1/x) \di x\) and \(x = e^w.\) 
+            Thus, the indefinite integral \(\int \sin(\ln x) \di x\) becomes 
+            \[\int e^w \sin w \di w = \tfrac{1}{2} e^w \sin w - \tfrac{1}{2} e^w \cos w + C \pd\]
+            (See <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e-sin" target="_blank">Example 7</a>.) 
+            Substituting back, we get 
+            \[
+            \ba 
+            \int \sin(\ln x) \di x &amp;= \tfrac{1}{2} e^{\ln x} \sin(\ln x) - \tfrac{1}{2} e^{\ln x} \cos(\ln x) + C \nl 
+            &amp;= \tfrac{1}{2} x \sin(\ln x) - \tfrac{1}{2} x \cos(\ln x) + C \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Definite Integral</span>
+            By Part II of the Fundamental Theorem of Calculus, we have 
+            \[
+            \ba 
+            \int_1^4 \sin(\ln x) \di x &amp;= \parbr{\tfrac{1}{2} x \sin(\ln x) - \tfrac{1}{2} x \cos(\ln x)} \intEval_1^4 \nl 
+            &amp;= \parbr{2 \sin(\ln 4) - 2 \cos(\ln 4)} - \parbr{0 - \tfrac{1}{2}} \nl 
+            &amp;= \boxed{\tfrac{1}{2} + 2 \sin(\ln 4) - 2 \cos(\ln 4)} \approx 2.099 \pd
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int e^{\sin \theta} \cos^3 \theta \di \theta\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the Pythagorean identity, we rewrite the integral as
+        \[\int e^{\sin \theta} \cos^2 \theta \cos \theta \di \theta 
+        = \int e^{\sin \theta} \par{1 - \sin^2 \theta} \cos \theta \di \theta \pd\]
+        Substituting \(w = \sin \theta,\) 
+        we find \(\dd w = \cos \theta \di \theta\) and so the integral becomes 
+        \[\int e^w \par{1 - w^2} \di w \pd\]
+        Let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= 1 - w^2 \lspace &amp;\dd v &amp;= e^w \di w \nl 
+        \dd u &amp;= -2w \di w \lspace &amp;v &amp;= e^w \pd
+        \eaat
+        \]
+        Doing so shows 
+        \[
+        \ba 
+        \int e^w \par{1 - w^2} \di w &amp;= 
+        \par{1 - w^2} e^w - \int e^w (-2w) \di w \nl 
+        &amp;= e^w \par{1 - w^2} + 2 \int w e^w \di w \pd 
+        \ea 
+        \]
+        From <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e" target="_blank">Example 1</a>, 
+        we get 
+        \[
+        \ba 
+        \int e^w \par{1 - w^2} \di w &amp;= e^w \par{1 - w^2} + 2 \par{we^w - e^w} + C \nl 
+        &amp;= -w^2 e^w + 2we^w - e^w + C \nl 
+        &amp;= \boxed{-e^{\sin \theta} \sin^2 \theta + 2 e^{\sin \theta} \sin \theta - e^{\sin \theta} + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let region \(R\) be bounded above by the line \(y = \pi/4,\)
+        below by the graph of \(y = \atan 2x,\)
+        and on the left by the line \(x = -1/2.\)
+        Calculate the area of \(R.\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="ibp-atan-area" id="ibp-atan-area">
+<img alt="ibp-atan-area.jpg" src="../images/sectionImages/ibp-atan-area.jpg"/>
+</figure>
+        The graph of \(y = \atan 2x\) intersects the line \(y = \pi/4\) when 
+        \(\atan 2x = \pi/4\)—that is, when
+        \[2x = \tan \frac{\pi}{4} = 1 \implies x = \frac{1}{2} \pd\]
+        Hence, region \(R\) is bounded from \(x = -1/2\) to \(x = 1/2.\)
+        The upper boundary function is \(y = \pi/4,\)
+        while the lower boundary function is \(y = \atan 2x.\)
+        The region's area is therefore given by 
+        \begin{equation} 
+        A = \int_{-1/2}^{1/2} \par{\frac{\pi}{4} - \atan 2x} \di x \pd \label{eq:atan-area}
+        \end{equation}
+        (See Section <a href="/Valculus/calculus/5.1-Areas-between-Curves.html">5.1</a>
+        to review finding areas between curves.)
+        <p>
+<span class="label-emph">Antidifferentiating \(\atan 2x\)</span>
+            To find \(\int \atan 2x \di x,\) we use Integration by Parts with
+            \[
+            \baat{2} 
+            u &amp;= \atan 2x \lspace &amp;\dd v &amp;= \dd x \nl 
+            \dd u &amp;= \frac{2}{4x^2 + 1} \di x \lspace &amp;v &amp;= x \pd
+            \eaat
+            \]
+            Doing so, we see 
+            \[\int \atan 2x \di x = x \atan 2x - \int \frac{2x}{4x^2 + 1} \di x \pd\]
+            Substituting \(w = 4x^2 + 1,\) we see \(\dd w = 8x \di x\) and so
+            \[
+            \ba
+            \int \frac{2x}{4x^2 + 1} \di x &amp;= \int \frac{1}{4w} \di w \nl 
+            &amp;= \tfrac{1}{4} \ln \abs w + C \nl 
+            &amp;= \tfrac{1}{4} \ln \par{4x^2 + 1} + C \pd
+            \ea
+            \]
+            (We dropped the absolute value bars around the natural logarithm because \(4x^2 + 1\) is always positive.)
+            Hence, we have 
+            \[
+            \ba 
+            \int \atan 2x \di x = x \atan 2x - \tfrac{1}{4} \ln \par{4x^2 + 1} + C \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Definite Integral</span>
+            With this antiderivative, \(\eqref{eq:atan-area}\) becomes 
+            \[
+            \ba
+            A 
+            &amp;= \parbr{\frac{\pi}{4} x - x \atan 2x + \tfrac{1}{4} \ln \par{4x^2 + 1}} \intEval_{-1/2}^{1/2} \nl 
+            &amp;= \boxed{\frac{\pi}{4}} \approx 0.785 \pd
+            \ea
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The density of sprinkles on a circular cake as a function of the distance, \(r,\) from the center of the cake 
+        is given by \(s(r) = \tfrac{1}{10} e^{r/3},\) 
+        where \(r\) is measured in inches and \(s(r)\) is measured in sprinkles per square inch.
+        The total number of sprinkles on the cake is given by 
+        \[T = 2 \pi \int_0^{10} r s(r) \di r \pd\] 
+        Calculate this number.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We want to evaluate 
+        \[T = 2 \pi \int_0^{10} r \par{\tfrac{1}{10} e^{r/3}} \di r 
+        = \frac{\pi}{5} \int_0^{10} r e^{r/3} \di r \pd\]
+        To evaluate the integral, 
+        we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= r \lspace &amp;\dd v &amp;= e^{r/3} \di r \nl 
+        \dd u &amp;= \dd r \lspace &amp;v &amp;= 3 e^{r/3} \pd
+        \eaat
+        \]
+        We see 
+        \[
+        \ba 
+        T &amp;= \frac{\pi}{5} \par{3r e^{r/3}} \intEval_0^{10} - \frac{3 \pi}{5} \int_0^{10} e^{r/3} \di r \nl 
+        &amp;= \frac{\pi}{5} \par{3r e^{r/3}} \intEval_0^{10} - \frac{9 \pi}{5} e^{r/3} \intEval_0^{10} \nl
+        &amp;= \frac{21 \pi}{5} e^{10/3} + \frac{9 \pi}{5} \approx 375.52 \cma
+        \ea 
+        \]
+        which we round up to \(\boxed{376}\) sprinkles.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A social media account gains followers according to the rate function
+        \(f(t) = 10 - te^{-t/40},\) where \(t\) is time in hours.
+        If the account initially has \(30\) followers, 
+        then calculate how many followers the user will have after \(6\) hours.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The number of followers the user will have after \(6\) hours is given by 
+        \[
+        \ba
+        F_6 &amp;= 30 + \int_0^6 f(t) \di t \nl 
+        &amp;= 30 + \int_0^6 10 \di t - \int_0^6 te^{-t/40} \di t \pd
+        \ea
+        \]
+        To evaluate the latter integral, we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= t \lspace &amp;\dd v &amp;= e^{-t/40} \di t \nl 
+        \dd u &amp;= \dd t \lspace &amp;v &amp;= -40 e^{-t/40} \pd
+        \eaat
+        \]
+        Doing so, we see
+        \[\int_0^6 te^{-t/40} \di t = -40t e^{-t/40} \intEval_0^6 + 40 \int_0^6 e^{-t/40} \di t \pd\]
+        Therefore, we have
+        \[
+        \ba
+        F_6 &amp;= 30 + \int_0^6 10 \di t - \par{-40t e^{-t/40} \intEval_0^6 + 40 \int_0^6 e^{-t/40} \di t} \nl
+        &amp;= 30 + 10(6 - 0) - \parbr{-40 \par{6e^{-6/40} - 0} - 1600 \par{e^{-6/40} - e^0}} \nl
+        &amp;= 1840e^{-6/40} - 1510 \nl
+        &amp;\approx 73.703 \cma
+        \ea
+        \]
+        which we round up to \(\boxed{74}\) followers.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The velocity of a car driving on a straight road as a function of time \(t\) is given by
+        \(v(t) = t^2 e^{-t/6},\)
+        where \(t\) is measured in seconds and \(v(t)\) is measured in meters per second.
+        How far does the car travel in the first \(T\) seconds?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        In the first \(T\) seconds, the car travels a distance given by
+        \[D = \int_0^T \abs{v(t)} \di t = \int_0^T t^2 e^{-t/6} \di t \pd\]
+        To antidifferentiate \(t^2 e^{-t/6},\) we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= t^2 \lspace &amp;\dd v &amp;= e^{-t/6} \di t \nl 
+        \dd u &amp;= 2t \di t \lspace &amp;v &amp;= -6 e^{-t/6} \pd
+        \eaat
+        \]
+        Doing so shows 
+        \[
+        \ba
+        \int t^2 e^{-t/6} \di t 
+        &amp;= -6 t^2 e^{-t/6} - \int -6 e^{-t/6} (2t) \di t \nl 
+        &amp;= -6 t^2 e^{-t/6} + 12 \int te^{-t/6} \di t \pd
+        \ea
+        \]
+        Now we antidifferentiate \(t e^{-t/6}\) by conducting Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= t \lspace &amp;\dd v &amp;= e^{-t/6} \di t \nl 
+        \dd u &amp;= \dd t \lspace &amp;v &amp;= -6 e^{-t/6} \pd
+        \eaat
+        \]
+        Thus, we find 
+        \[
+        \ba 
+        \int t^2 e^{-t/6} \di t 
+        &amp;= -6 t^2 e^{-t/6} + 12 \par{-6te^{-t/6} + 6 \int e^{-t/6} \di t} \nl 
+        &amp;= -6 t^2 e^{-t/6} - 72 te^{-t/6} - 432 e^{-t/6} + C \pd
+        \ea 
+        \]
+        By Part II of the Fundamental Theorem of Calculus, we have 
+        \[
+        \ba 
+        D &amp;= \par{-6 t^2 e^{-t/6} - 72 te^{-t/6} - 432 e^{-t/6}} \intEval_0^T \nl 
+        &amp;= \boxed{432 -6 T^2 e^{-T/6} - 72 Te^{-T/6} - 432 e^{-T/6}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Function \(k\) has a positive second derivative on \((0, 2).\)
+        If \(k(0) = 1,\) \(k(2) = 3,\) and \(k'(2) = 4,\)
+        then show that
+        \[0 \leq \int_0^2 x k''(x) \sin x \di x \leq 6 \pd \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Over \(0 \lt x \lt 2\) the functions \(x,\) \(\sin x,\) and \(k''(x)\) are all positive. 
+        Because \(0 \leq \sin x \leq 1,\) we have
+        \[
+        0 \leq x k''(x) \sin x \leq x k''(x) \pd
+        \]
+        By the Comparison Properties for Definite Integrals 
+        (from Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>), 
+        we have 
+        \begin{alignat}{2}
+        \int_0^2 0 \di x &amp;\leq \int_0^2 x k''(x) \sin x \di x &amp;&amp;\leq \int_0^2 x k''(x) \di x \nonum \nl 
+        0 &amp;\leq \int_0^2 x k''(x) \sin x \di x &amp;&amp;\leq \int_0^2 x k''(x) \di x \pd 
+        \label{eq:inequality-k(x)}
+        \end{alignat}
+        To evaluate \(\int_0^2 x k''(x) \di x,\)
+        we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= k''(x) \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= k'(x) \pd
+        \eaat
+        \]
+        Then we see 
+        \[
+        \ba
+        \int_0^2 x k''(x) \di x &amp;= x k'(x) \intEval_0^2 - \int_0^2 k'(x) \di x \nl
+        &amp;= [2k'(2) - 0] - [k(2) - k(0)] \nl
+        &amp;= 2(4) - (3 - 1) = 6 \pd
+        \ea
+        \]
+        Hence, \(\eqref{eq:inequality-k(x)}\) becomes 
+        \[0 \leq \int_0^2 x k''(x) \sin x \di x \leq 6 \cma\]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Solve the initial-value problem 
+        \[\deriv{y}{x} = x^3 \ln 7x \cmaa y(1) = 2 \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The <i>general solution</i> to the differential equation 
+        \(\textderiv{y}{x} = x^3 \ln 7x\) is given by antidifferentiating this function. 
+        (See Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>
+        to review solving differential equations.)
+        To antidifferentiate \(x^3 \ln 7x,\) we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \ln 7x \lspace &amp;\dd v &amp;= x^3 \di x \nl 
+        \dd u &amp;= \frac{1}{x} \di x \lspace &amp;v &amp;= \frac{x^4}{4} \pd
+        \eaat
+        \]
+        The general solution to the differential equation is therefore
+        \[
+        \ba 
+        y = \int x^3 \ln 7x \di x &amp;= \par{\ln 7x} \par{\frac{x^4}{4}} - \int \par{\frac{x^4}{4}} \par{\frac{1}{x}} \di x \nl 
+        &amp;= \tfrac{1}{4} x^4 \ln 7x - \tfrac{1}{4} \int x^3 \di x \nl 
+        &amp;= \tfrac{1}{4} x^4 \ln 7x - \tfrac{1}{16} x^4 + C \pd
+        \ea     
+        \]
+        Now we fit \(C\) to satisfy the initial condition \(y(1) = 2 \col\)
+        Substituting \(x = 1,\) we see 
+        \[
+        \ba 
+        y(1) = \tfrac{1}{4} (1)^4 \ln 7 - \tfrac{1}{16} (1)^4 + C &amp;= 2 \nl
+        \implies C &amp;= \tfrac{33}{16} - \tfrac{1}{4} \ln 7 \pd
+        \ea 
+        \]
+        Hence, the particular solution to the initial-value problem is 
+        \[y = \boxed{\tfrac{1}{4} x^4 \ln 7x - \tfrac{1}{16} x^4 + \tfrac{33}{16} - \tfrac{1}{4} \ln 7}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find the particular solution to the differential equation \(f'(x) = 2x \cos 4x\)
+        such that \(f(0) = 3.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This problem requires us to antidifferentiate \(f'(x)\)
+        and then solve for \(C\) to fit the initial condition.
+        We use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= 2x \lspace &amp;\dd v &amp;= \cos 4x \di x \nl 
+        \dd u &amp;= 2 \di x \lspace &amp;v &amp;= \tfrac{1}{4} \sin 4x \pd
+        \eaat
+        \]
+        Doing so, we see 
+        \[
+        \ba 
+        f(x) = \int 2x \cos 4x \di x &amp;= (2x) \par{\tfrac{1}{4} \sin 4x} - \int \par{\tfrac{1}{4} \sin 4x} (2) \di x \nl 
+        &amp;= \tfrac{1}{2} x \sin 4x - \tfrac{1}{2} \int \sin 4x \di x \nl 
+        &amp;= \tfrac{1}{2} x \sin 4x + \tfrac{1}{8} \cos 4x + C \pd
+        \ea 
+        \]
+        Substituting the initial condition \(f(0) = 3,\) we see 
+        \[
+        \ba 
+        f(0) = \tfrac{1}{2} (0) + \tfrac{1}{8} (1) + C &amp;= 3 \nl 
+        \implies C &amp;= \tfrac{23}{8} \pd
+        \ea 
+        \]
+        Thus, the particular solution to the initial-value problem is 
+        \[f(x) = \boxed{\tfrac{1}{2} x \sin 4x + \tfrac{1}{8} \cos 4x + \tfrac{23}{8}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The force exerted on a particle as it travels along the \(x\)-axis 
+        is given by 
+        \[F(x) = x e^{-6x} \cma\]
+        where \(F(x)\) is measured in kilonewtons and \(x\) is measured in meters. 
+        How much work is done on the particle as it moves from \(x = 1\) to \(x = 2 \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As the particle moves from \(x = 1\) to \(x = 2,\)
+        the work is given by 
+        \[W = \int_1^2 F(x) \di x = \int_1^2 x e^{-6x} \di x \pd\]
+        To evaluate this definite integral, 
+        let's first find an antiderivative and then apply the Fundamental Theorem of Calculus. 
+        <p>
+<span class="label-emph">Antidifferentiation</span>
+            To antidifferentiate \(xe^{-6x},\) we use Integration by Parts with
+            \[
+            \baat{2} 
+            u &amp;= x \lspace &amp;\dd v &amp;= e^{-6x} \di x \nl 
+            \dd u &amp;= \dd x \lspace &amp;v &amp;= -\tfrac{1}{6} e^{-6x} \pd
+            \eaat
+            \]
+            We therefore see 
+            \[
+            \ba 
+            \int xe^{-6x} \di x 
+            &amp;= x \par{-\tfrac{1}{6} e^{-6x}} - \int \par{-\tfrac{1}{6} e^{-6x}} \di x \nl 
+            &amp;= -\tfrac{1}{6} x e^{-6x} + \tfrac{1}{6} \int e^{-6x} \di x \nl 
+            &amp;= -\tfrac{1}{6} xe^{-6x} - \tfrac{1}{36} e^{-6x} + C \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Definite Integral</span>
+            By Part II of the Fundamental Theorem of Calculus, we have 
+            \[
+            \ba 
+            W &amp;= \par{-\tfrac{1}{6} xe^{-6x} - \tfrac{1}{36} e^{-6x}} \intEval_1^2 \nl 
+            <!-- &= -\tfrac{1}{6} \par{2e^{-12} - e^{-6}} - \tfrac{1}{36} \par{e^{-12} - e^{-6}} \nl  -->
+            &amp;= \boxed{\tfrac{7}{36} e^{-6} - \tfrac{13}{36} e^{-12}}
+            \approx 0.00048 \un{kN} \pd
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Determine the average value of \(f(x) = x e^{-x}\) over \(0 \leq x \leq 2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The expression for the average value of \(f\) over \([0, 2]\) is 
+        \[\avg f = \frac{1}{2 - 0} \int_0^2 xe^{-x} \di x \pd\]
+        (See Section <a href="/Valculus/calculus/5.5-Average-Value-of-a-Function.html">5.5</a>.)
+        To evaluate this integral, we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= -e^{-x} \pd
+        \eaat
+        \]
+        Hence, we see 
+        \[
+        \ba 
+        \avg f &amp;= \tfrac{1}{2} \par{-xe^{-x}} \intEval_0^2 - \tfrac{1}{2} \int_0^2 -e^{-x} \di x \nl 
+        &amp;= \tfrac{1}{2} \par{-xe^{-x} - e^{-x}} \intEval_0^2 \nl 
+        &amp;= \boxed{\tfrac{1}{2} - \tfrac{3}{2} e^{-2}} \approx 0.297 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Calculate the average value of \(g(t) = t \sec^2 t\) over \(0 \leq t \leq \pi/4.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The average value of \(g\) over \([0, \pi/4]\) is 
+        \[
+        \ba
+        \avg g &amp;= \frac{1}{\frac{\pi}{4} - 0} \int_0^{\pi/4} t \sec^2 t \di t \nl 
+        &amp;= \frac{4}{\pi} \int_0^{\pi/4} t \sec^2 t \di t \pd
+        \ea
+        \]
+        To evaluate this integral, we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= t \lspace &amp;\dd v &amp;= \sec^2 t \di t \nl 
+        \dd u &amp;= \dd t \lspace &amp;v &amp;= \tan t \pd
+        \eaat
+        \]
+        Recalling that \(\int \tan t \di t\) \(= \ln \abs{\sec t} + C\)
+        (see <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html#int-tan"target = "_blank">Example 4.4-6</a>), 
+        we finish the computation as follows:
+        \[
+        \ba 
+        \avg g &amp;= \frac{4}{\pi} t \tan t \intEval_0^{\pi/4} - \frac{4}{\pi} \int_0^{\pi/4} \tan t \di t \nl 
+        &amp;= \par{\frac{4}{\pi} t \tan t - \frac{4}{\pi} \ln \abs{\sec t}} \intEval_0^{\pi/4} \nl  
+        &amp;= \boxed{1 - \frac{4}{\pi} \ln \sqrt 2} \approx 0.559 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The region bounded above by the graph of \(y = \cos x\) and the \(x\)-axis 
+        from \(x = 0\) to \(x = \pi/2\) is the base of a solid whose cross sections perpendicular 
+        to the \(x\)-axis are rectangles of height \(3x.\)
+        Calculate the solid's volume.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        (See Section <a href="/Valculus/calculus/5.2-Volumes-with-Cross-Sections.html">5.2</a>
+        to review volumes with known cross sections.)
+        At some \(x,\) a cross section perpendicular to the \(x\)-axis 
+        is a rectangle of height \(3x\) and base \(\cos x.\)
+        Its area is therefore \(A(x) = 3x \cos x.\)
+        To get the solid's volume, we integrate \(A(x)\) from \(x = 0\) to \(x = \pi/2\)—that is, 
+        by evaluating
+        \[V = \int_0^{\pi/2} 3x \cos x \di x = 3 \int_0^{\pi/2} x \cos x \di x \pd\]
+        Integrating by Parts, we choose 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= \cos x \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= \sin x \pd
+        \eaat
+        \]
+        So we see 
+        \[
+        \ba 
+        V &amp;= 3 \par{x \sin x} \intEval_0^{\pi/2} - 3 \int_0^{\pi/2} \sin x \di x \nl 
+        &amp;= 3 \par{x \sin x + \cos x} \intEval_0^{\pi/2} \nl 
+        &amp;= \boxed{\frac{3 \pi}{2} - 3} \approx 1.712 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A solid's base is the region bounded by the \(y\)-axis, the curve \(y = e^{2x},\)
+        and the line \(y = e^2.\)
+        If cross sections perpendicular to the \(y\)-axis are rectangles of height \(y^2,\)
+        then calculate the solid's volume.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        (See Section <a href="/Valculus/calculus/5.2-Volumes-with-Cross-Sections.html">5.2</a>
+        to review volumes with known cross sections.)
+        The region is bounded from \(y = 1\) to \(y = e^2.\)
+        Let's rewrite \(y = e^{2x}\) as \(x = \tfrac{1}{2} \ln y.\)
+        At some \(y,\) a cross section perpendicular to the \(y\)-axis 
+        is a rectangle of height \(y^2\) and base \(\tfrac{1}{2} \ln y.\)
+        Its area is therefore \(A(y) = \tfrac{1}{2} y^2 \ln y.\)
+        To compute the solid's volume, we integrate \(A(y)\) from \(y = 1\) to \(y = e^2\)—namely,
+        by evaluating 
+        \[V = \int_1^{e^2} \tfrac{1}{2} y^2 \ln y \di y = \tfrac{1}{2} \int_1^{e^2} y^2 \ln y \di y \pd\]
+        To antidifferentiate \(y^2 \ln y,\) 
+        we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \ln y \lspace &amp;\dd v &amp;= y^2 \di y \nl 
+        \dd u &amp;= \frac{1}{y} \di y \lspace &amp;v &amp;= \frac{y^3}{3} \pd
+        \eaat
+        \]
+        Doing so shows 
+        \[
+        \ba 
+        \int y^2 \ln y \di y &amp;= (\ln y) \par{\frac{y^3}{3}} - \int \par{\frac{y^3}{3}} \par{\frac{1}{y}} \di y \nl 
+        &amp;= \tfrac{1}{3} y^3 \ln y - \tfrac{1}{3} \int y^2 \di y \nl 
+        &amp;= \tfrac{1}{3} y^3 \ln y - \tfrac{1}{9} y^3 + C \pd
+        \ea 
+        \]
+        Thus, we see 
+        \[
+        \ba 
+        V &amp;= \tfrac{1}{2} \par{\tfrac{1}{3} y^3 \ln y - \tfrac{1}{9} y^3} \intEval_1^{e^2} \nl 
+        &amp;= \boxed{\tfrac{1}{18} \par{1 + 5e^6}} \approx 112.119 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For positive \(n,\) prove the reduction formula
+        \[\int \cos^n \theta \di \theta =
+        \frac{1}{n} \sin \theta \cos^{n - 1} \theta  + \frac{n - 1}{n} \int \cos^{n - 2} \theta \di \theta \pd \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the integral as \(\int \cos^{n - 1} \theta \cos \theta \di \theta,\) 
+        we perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \cos^{n - 1} \theta \lspace &amp;\dd v &amp;= \cos \theta \di \theta \nl 
+        \dd u &amp;= -(n - 1) \cos^{n - 2} \theta \sin \theta \di \theta \lspace &amp;v &amp;= \sin \theta \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba
+        \int \cos^n \theta \di \theta &amp;= \sin \theta \cos^{n - 1} \theta + (n - 1) \int \sin^2 \theta \cos^{n - 2} \theta \di \theta \nl
+        &amp;= \sin \theta\cos^{n - 1} \theta + (n - 1) \int (1 - \cos^2 \theta) \cos^{n - 2} \theta \di \theta \nl
+        &amp;= \sin \theta\cos^{n - 1} \theta + (n - 1) \int \cos^{n - 2} \theta \di \theta - (n - 1)\int \cos^n \theta \di \theta \nl
+        n \int \cos^n \theta \di \theta &amp;= \sin \theta\cos^{n - 1} \theta + (n - 1) \int \cos^{n - 2} \theta \di \theta \nl
+        \implies \int \cos^n \theta \di \theta &amp;= \frac{1}{n} \sin \theta\cos^{n - 1} \theta + \frac{n - 1}{n} \int \cos^{n - 2} \theta \di \theta \cma
+        \ea
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
     </main>
     <!-- <footer>
     <div class="footer-body">

@@ -94,7 +94,7 @@
     H(x) = \int h(x) \di x = \int x^2 \di x = \tfrac{1}{3} x^3 + C \pd \label{eq:int-h(x)}
     \end{equation}
     The term \(\dd x\) specifies that we antidifferentiate with respect to \(x.\)
-    Note the following terminology in \(\eqRefer{eq:int-h(x)} \col\)
+    Note the following terminology in \(\eqref{eq:int-h(x)} \col\)
     <ul>
         <li>
             "\(\int \,\)" is the <span class="emph">integral sign</span>.
@@ -219,7 +219,7 @@
     \begin{equation} 
     F(x) = \frac{x^{n + 1}}{n + 1} + C \pd \label{eq:reverse-power-rule}
     \end{equation}
-    In words, \(\eqRefer{eq:reverse-power-rule}\) states that to find an antiderivative of a power function
+    In words, \(\eqref{eq:reverse-power-rule}\) states that to find an antiderivative of a power function
     (if the power isn't \(-1\)), 
     we add one to the power and divide by the result. 
     This fact is easy to verify because \(F'(x) = x^n = f(x).\)
@@ -234,7 +234,7 @@
     \end{equation}
     In \(\int \dd x,\) the integrand is <span class="warning">not</span>
     \(0;\) rather, \(\int \dd x = \int 1 \di x.\)
-    And \(\textDeriv{}{x}\,[x + C] = 1,\) thus affirming the result in \(\eqRefer{eq:int-n=0}.\)
+    And \(\textDeriv{}{x}\,[x + C] = 1,\) thus affirming the result in \(\eqref{eq:int-n=0}.\)
     But if \(n = -1,\) then an antiderivative of \(f(x) = x^n\) is \(\ln|x|,\)
     as we asserted in <a href="#ex-1">Example 1</a>.
 </p>
@@ -320,7 +320,7 @@
         </li>
         <hr>
         <li>
-            We use the <b>Sum Rule</b>, as in \(\eqRefer{eq:int-sum},\)
+            We use the <b>Sum Rule</b>, as in \(\eqref{eq:int-sum},\)
             we split the integral into two:
             \[\int 5x^4 \di x + \int \cos x \di x \pd\]
             In the first integral we pull out the constant \(5\) [by \(\eqref{eq:int-constant}\)], obtaining 
@@ -360,14 +360,15 @@
     <span class="emph">differential equation</span>.
     In calculus, we often have a rate \(f'\) and need to find a <i>solution</i> \(f.\)
     (Differential equations are fundamental to modeling natural phenomena, 
-    which we will discuss further in Section <a href="/Valculus/calculus/8.1-Slope-Fields-and-Euler's-Method.html">8.1</a>.)
-    We often want \(f\) that satisfies a specific point, called an 
-    <span class="emph">initial condition</span>. 
+    which we will discuss further in Chapter 8.)
     To find \(f\) given \(f'\) and an initial condition, we first integrate \(f'.\)
     Doing so produces a 
-    <span class="emph">general solution</span>
-    that contains a constant of integration. 
-    We then plug in the initial condition to solve for this constant. 
+    <span class="emph">general solution</span>,
+    which contains a constant of integration. 
+    But we often want \(f\) to pass through a certain point, called an 
+    <span class="emph">initial condition</span>. 
+    These problems are called <span class="emph">initial-value problems</span>.
+    To solve one, we substitute the given initial condition and solve for the constant of integration. 
     For example, if \(f'(x) = 2x\) and \(\orange{f(1) = 2},\)
     then we antidifferentiate \(f'(x)\) and substitute the given initial condition to solve for the constant of integration:
     \begin{flalign} 
@@ -375,7 +376,7 @@
     &&\orange{f(1)} &= (1)^2 + C = \orange{2} \implies C = 1 \cma \nonumber &\nl 
     \laWord{so} &&f(x) &= \boxed{x^2 + 1} \label{eq:diff-eq-f(x)-particular}
     \end{flalign}
-    \(\eqRefer{eq:diff-eq-f(x)-particular}\) is called the 
+    \(\eqref{eq:diff-eq-f(x)-particular}\) is called the 
     <span class="emph">particular solution</span>
     of the differential equation \(f'(x) = 2x\) that satisfies the initial condition \(\orange{f(1) = 2}.\)
 </p>
@@ -394,7 +395,7 @@
         \begin{equation} 
         f(x) = e^x + x^2 + 7x + C \pd \label{eq:ex-diff-eq} 
         \end{equation}
-        We call \(\eqRefer{eq:ex-diff-eq}\) a <i>general</i>
+        We call \(\eqref{eq:ex-diff-eq}\) a <i>general</i>
         solution to the differential equation \(f'(x) = e^x + 2x + 7.\)
         To find the <i>particular</i> solution,
         we substitute in \(\eqref{eq:ex-diff-eq}\) the given initial condition, \(\orange{f(0) = 4},\) 
@@ -408,7 +409,7 @@
     </p>
     <p>
         Checking our answer is simple: 
-        It's easy to see that \(\eqRefer{eq:ex-diff-eq-f(x)-particular}\) passes through \((0, 4)\) because 
+        It's easy to see that \(\eqref{eq:ex-diff-eq-f(x)-particular}\) passes through \((0, 4)\) because 
         \[\orange{f(0)} = e^0 + 0^2 + 7(0) + 3 \equalsCheck \orange{4} \pd\]
         Moreover, differentiating \(\eqref{eq:ex-diff-eq-f(x)-particular}\) yields  
         \[f'(x) = e^x + 2x + 7 \cma\]
@@ -448,8 +449,7 @@
     at any point \(x,\) the slope of \(F(x)\) is \(f(x).\)
     In <a href="#antidiff-ex-graph-f-antideriv">Figure 3</a>
     we begin the graph at the point \((0, 2).\)
-    We make the following remarks about the first derivative of \(F,\)
-    \(f \col\)
+    We make the following remarks about \(f,\) the first derivative of \(F \col\)
     <ul>
         <li>
             When \(0 \lt x \lt 1\) and \(x \gt 3,\) \(f\) is negative, meaning the slope of \(F\) is negative.
@@ -466,14 +466,14 @@
             and \(F(3)\) is a local <i>maximum</i> because \(F' = f\) changes sign from positive to negative at \(x = 3.\)
         </li>
     </ul>
-    We now consider the graph's shape using the second derivative of \(F,\) \(f' \col\)
+    We now elaborate on the graph's shape by analyzing \(f',\) the second derivative of \(F \col\)
     <ul>
-        <li>
-            \(F''(2) = f'(2) = 0,\) so \(F\) has an inflection point when \(x = 2.\)
-        </li>
         <li>
             \(F'' = f' \gt 0\) for \(0 \lt x \lt 2,\) so \(F\) is concave <i>up</i> on this interval. 
             In contrast, \(F'' = f' \lt 0\) when \(x \gt 2,\) so \(F\) is concave <i>down</i> for \(x \gt 2.\)
+        </li>
+        <li>
+            \(F''(2) = f'(2) = 0,\) so \(F\) has an inflection point when \(x = 2.\)
         </li>
     </ul>
 </div>
@@ -508,7 +508,7 @@
 <button onclick="toggle5()" class="solution-button"></button>
 <div id="solution5" class="solution">
     <p>
-        Velocity is the integral of acceleration [\(\eqRefer{eq:v(t)=inta(t)}\)].
+        Velocity is the integral of acceleration [\(\eqref{eq:v(t)=inta(t)}\)].
         The particle's <i>general</i> velocity function is then  
         \begin{align} 
         v(t) &= \int 4t + 6 \di t \nonumber \nl 
@@ -536,13 +536,13 @@
         To solve for \(D\) we plug into \(\eqref{eq:particle-xaxis-x(t)}\) the initial condition \(\orange{x(0) = 2}\) 
         to obtain 
         \[\orange{x(0)} = \tfrac{2}{3}(0)^3 + 3(0)^2 + 3(0) + D = \orange 2 \implies D = 2 \pd\]
-        Thus, \(\eqRefer{eq:particle-xaxis-x(t)}\) becomes 
+        Thus, \(\eqref{eq:particle-xaxis-x(t)}\) becomes 
         \begin{equation} 
         x(t) = \boxed{\tfrac{2}{3} t^3 + 3t^2 + 3t + 2} \label{eq:particle-xaxis-x(t)-particular}
         \end{equation}
     </p>
     <p>
-        To check our answer, we need to verify that \(\eqRefer{eq:particle-xaxis-x(t)-particular}\)
+        To check our answer, we need to verify that \(\eqref{eq:particle-xaxis-x(t)-particular}\)
         satisfies the given initial conditions and that \(x''(t) = 4t + 6,\) the given differential equation.
         It's easy to see that \(\eqref{eq:particle-xaxis-x(t)-particular}\)
         satisfies \(\orange{x(0) = 2} \col\)
@@ -603,7 +603,7 @@
         both negative as it falls.
     </p>
     <p>
-        By \(\eqRefer{eq:v(t)=inta(t)},\) the rock's velocity function is the integral of acceleration.
+        By \(\eqref{eq:v(t)=inta(t)},\) the rock's velocity function is the integral of acceleration.
         The acceleration due to gravity is \(g = -32 \undiv{ft}{sec}^2,\)
         so we get 
         \begin{align} 
@@ -630,7 +630,7 @@
         In \(\eqref{eq:rock-h(t)-general}\) we substitute this initial condition
         to solve for \(D \col\)
         \[\orange{h(0)} = -16(0)^2 + D = \orange{100} \implies D = 100 \pd\]
-        Thus, \(\eqRefer{eq:rock-h(t)-general}\) becomes 
+        Thus, \(\eqref{eq:rock-h(t)-general}\) becomes 
         \begin{equation} 
         h(t) = \boxed{-16t^2 + 100} \label{eq:rock-h(t)-ans}
         \end{equation}
@@ -642,7 +642,7 @@
         Equating \(\eqref{eq:rock-h(t)-ans}\) to \(0\) and solving for the positive value of \(t,\) we have 
         \[-16t^2 + 100 = 0 \implies t = \tfrac{10}{4} = 2.5 \pd\]
         The ball therefore hits the ground after \(2.5\) seconds.
-        In \(\eqRefer{eq:rock-v(t)-particular}\) we substitute \(t = 2.5 \col\)
+        In \(\eqref{eq:rock-v(t)-particular}\) we substitute \(t = 2.5 \col\)
         \[v(t) = -32(2.5) = -80 \pd\]
         Speed is the magnitude (absolute value) of velocity, so
         the rock's final <i>speed</i> is \(|-80| = 80 \undiv{ft}{sec}.\)
@@ -671,7 +671,7 @@
             We choose up to be the positive direction.
             The ball's initial velocity is \(16 \undiv{ft}{sec},\)
             and the ball's acceleration due to gravity is \(-32 \undiv{ft}{sec}^2.\)
-            By \(\eqRefer{eq:v(t)=inta(t)},\) 
+            By \(\eqref{eq:v(t)=inta(t)},\) 
             we integrate acceleration to find the ball's general velocity function: 
             \begin{align} 
             v(t) &= \int -32 \di t \nonumber \nl 
@@ -685,7 +685,7 @@
             \end{equation}
             The ball reaches its maximum height when \(v = 0\) 
             (<a href="#remark-3">Remark 3</a>).
-            In \(\eqRefer{eq:ball-v(t)-ans}\) solving \(v(t) = 0\) gives 
+            In \(\eqref{eq:ball-v(t)-ans}\) solving \(v(t) = 0\) gives 
             \(t = 16/32.\)
             The ball therefore reaches its maximum height after \(0.5 \un{sec}.\)
         </li>
@@ -700,7 +700,7 @@
             We choose the ground to be \(h = 0;\)
             the ball initially begins on the ground,
             so \(\orange{h(0) = 0}.\)
-            Plugging this initial condition into \(\eqRefer{eq:ball-h(t)}\) shows 
+            Plugging this initial condition into \(\eqref{eq:ball-h(t)}\) shows 
             \[\orange{h(0)} = -16(0)^2 + 16(0) + D = \orange 0 \implies D = 0 \pd\]
             Thus, \(\eqref{eq:ball-h(t)}\) becomes 
             \[h(t) = -16t^2 + 16t \pd\]

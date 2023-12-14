@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.8 Exercise Solutions: Taylor and Maclaurin Series</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.8 Exercise Solutions — Taylor and Maclaurin Series</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="10.8-Taylor-and-Maclaurin-Series.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.8-Taylor-and-Maclaurin-Series-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        In each series, identify the center.
+        <ol class="list-alpha">
+<li>
+<span>
+                    \(\ds 2 - 3(x - 6) + 4(x - 6)^2 - 5(x - 6)^3 + \cdots \)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds \sum_{n = 0}^\infty \frac{(-1)^n}{n!} (x + 4)^n\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds 1 - t^3 + t^5 - t^7 + \cdots\)
+                </span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The series is centered at \(x = a\) if each term contains
+        the factor \((x - a)\) raised to some power.
+        <ol class="list-alpha">
+<li>
+                Each incremental term is multiplied by the factor \((x - 6),\)
+                so the center is \(\boxed{a = 6}.\)
+            </li>
+<hr/>
+<li>
+                The series' terms contain the factor \((x + 4),\)
+                meaning the center is \(\boxed{a = -4}.\)
+            </li>
+<hr/>
+<li>
+                The factor \(t\) is equivalent to \((t - 0),\)
+                so the series' center is \(\boxed{a = 0}.\)
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The following table shows derivatives of the function \(f\)
+        at \(3.\)
+        If \(f(3) = 4,\)
+        then write the fourth-degree Taylor polynomial for \(f\) centered at \(a = 3.\)
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(n\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(f^{(n)}(3)\)
+                </td>
+<td>
+                    \(-7\)
+                </td>
+<td>
+                    \(0\)
+                </td>
+<td>
+                    \(5\)
+                </td>
+<td>
+                    \(-3\)
+                </td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The fourth-degree Taylor polynomial for \(f\) centered at \(a = 3\) is, by the table's values,
+        \[
+        \ba 
+        T_4(x) &amp;= f(3) + f'(3) (x - 3) + \frac{f''(3)}{2!} (x - 3)^2 + \frac{f'''(3)}{3!} (x - 3)^3
+        + \frac{f^{(4)}(3)}{4!} (x - 4)^4 \nl 
+        &amp;= 4 - 7 (x - 3) + \frac{0}{2!} (x - 3)^2 + \frac{5}{3!} (x - 3)^3 + \frac{-3}{4!} (x - 4)^4 \nl 
+        &amp;= \boxed{4 - 7(x - 3) + \frac{5}{6} (x - 3)^3 - \frac{1}{8} (x - 4)^4}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The function \(f\) has a Maclaurin series given by 
+        \[f(x) = 3 - 4x + 6x^2 - 9x^3 + \cdots \pd\]
+        Find \(f'(0)\) and \(f''(0).\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's consider two solutions to this problem.
+        <p>
+<span class="label-emph">Solution 1</span>
+            The definition of a Maclaurin series for \(f\) is 
+            \[f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!} x^2 + \frac{f'''(0)}{3!} x^3 + \cdots \pd\]
+            By comparing terms, we see
+            \[
+            \baat{2}
+            f'(0)x &amp;= -4x &amp;&amp;\implies \boxed{f'(0) = -4} \nl 
+            \frac{f''(0)}{2!} x^2 &amp;= 6x^2 &amp;&amp;\implies \boxed{f''(0) = 12} 
+            \eaat
+            \]
+        </p>
+<p>
+<span class="label-emph">Solution 2</span>
+            Differentiating \(f,\) we see 
+            \[
+            \ba 
+            f'(x) &amp;= -4 + 12x - 27x^2 + \cdots \nl 
+            \implies f'(0) &amp;= -4 + 0 + 0 + \cdots = \boxed{-4}
+            \ea     
+            \]
+            Taking the second derivative, we find 
+            \[
+            \ba 
+            f''(x) &amp;= 12 - 54x + \cdots \nl
+            \implies f''(0) &amp;= \boxed{12}
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A function \(g\) is increasing and concave down at \(2.\)
+        Which polynomial could be the second-degree Taylor series of \(g\)
+        centered at \(a = 2 \ques\)
+        <ol class="list-mcq">
+<li>
+<span>
+                    \(\ds 4 + 7x - 8x^2 + \cdots\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds 4 - 7x + 8x^2 + \cdots\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds 4 + 7(x - 2) - 8(x - 2)^2 + \cdots\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds 4 + 7(x - 2) + 8(x - 2)^2 + \cdots\)
+                </span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Options (A) and (B) are immediately eliminated because the polynomials 
+        are not centered at \(2.\)
+        The function \(g(x)\) is increasing and concave down at \(x = 2\)
+        if \(g'(2) \gt 0\) and \(g''(2) \lt 0.\)
+        In option (C) the coefficient of the linear term \((x - 2)\) is \(7 \gt 0,\)
+        and the coefficient of the quadratic term \((x - 2)^2\) is \(-8 \lt 0.\)
+        Hence, the polynomial in (C) satisfies \(f'(2) \gt 0\) and \(f''(-2) \lt 0,\)
+        so <b>option (C)</b> is correct. 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\cos 0.4\) using a fourth-degree Maclaurin polynomial
+    </blockquote> using a Taylor polynomial of the given degree, approximate 
+        the expression to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The fourth-degree Maclaurin polynomial for \(\cos x\) is 
+        \[1 - \frac{x^2}{2!} + \frac{x^4}{4!} \pd\]
+        Thus, our estimate for \(\cos 0.4\) is 
+        \[\cos 0.4 \approx 1 - \frac{(0.4)^2}{2!} + \frac{(0.4)^4}{4!} \approx \boxed{0.921}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(e^{0.6}\) using a third-degree Maclaurin polynomial
+    </blockquote> using a Taylor polynomial of the given degree, approximate 
+        the expression to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The third-degree Maclaurin polynomial for \(e^x\) is 
+        \[1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} \pd\]
+        So we approximate \(e^{0.6}\) to be 
+        \[e^{0.6} \approx 1 + (0.6) + \frac{(0.6)^2}{2!} + \frac{(0.6)^3}{3!} 
+        = \boxed{1.816}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\sin 0.7\) using a fifth-degree Maclaurin polynomial
+    </blockquote> using a Taylor polynomial of the given degree, approximate 
+        the expression to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The fifth-degree Maclaurin polynomial for \(\sin x\) is 
+        \[x - \frac{x^3}{3!} + \frac{x^5}{5!} \pd\]
+        Substituting \(x = 0.7,\) we get
+        \[\sin 0.7 \approx (0.7) - \frac{(0.7)^3}{3!} + \frac{(0.7)^5}{5!} \approx \boxed{0.644}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\atan 0.5\) using a third-degree Maclaurin polynomial
+    </blockquote> using a Taylor polynomial of the given degree, approximate 
+        the expression to three decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The third-degree Maclaurin polynomial for \(\atan x\) is 
+        \[x - \frac{x^3}{3} \pd\]
+        Substituting \(x = 0.5,\) we get
+        \[\atan 0.5 \approx (0.5) - \frac{(0.5)^3}{3} \approx \boxed{0.458}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \cos x \cmaa a = \frac{\pi}{2}\]
+    </blockquote> find the Taylor series for the function at the given center \(a\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Letting \(f(x) = \cos x,\) we take derivatives at \(x = \pi/2 \col\)
+        \[
+        \ba 
+        f \par{\frac{\pi}{2}} &amp;= 0 \cma \nl 
+        f'\par{\frac{\pi}{2}} &amp;= -1 \cma \nl 
+        f''\par{\frac{\pi}{2}} &amp;= 0 \cma \nl 
+        f'''\par{\frac{\pi}{2}} &amp;= 1 \cma \nl 
+        f^{(4)} \par{\frac{\pi}{2}} &amp;= 0 \cma \nl 
+        f^{(5)} \par{\frac{\pi}{2}} &amp;= -1 \cma \nl
+        &amp;\vdotss
+        \ea 
+        \]
+        The Taylor series for \(f(x) = \cos x\) centered at \(a = \pi/2\) is therefore
+        \[
+        \ba
+        \cos x &amp;= 0 - 1 \par{x - \frac{\pi}{2}} + \frac{0}{2!} \par{x - \frac{\pi}{2}}^2 
+        + \frac{1}{3!} \par{x - \frac{\pi}{2}}^3 \nl 
+        &amp;+ \frac{0}{4!} \par{x - \frac{\pi}{2}}^4 
+        + \frac{-1}{5!} \par{x - \frac{\pi}{2}}^5 + \cdots \nl 
+        &amp;= - \par{x - \frac{\pi}{2}} + \frac{1}{3!} \par{x - \frac{\pi}{2}}^3 - 
+        \frac{1}{5!} \par{x - \frac{\pi}{2}}^5 + \cdots \pd
+        \ea
+        \] 
+        Because the derivatives repeat in cycles of four, 
+        we continue the pattern to attain the power series representation
+        \[\cos x = \boxed{\sum_{n = 0}^\infty \frac{(-1)^{n + 1}}{(2n + 1)!} \, \par{x - \dfrac{\pi}{2}}^{2n + 1}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt x \cmaa a = 1\]
+    </blockquote> find the Taylor series for the function at the given center \(a\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        For \(f(x) = \sqrt x,\) 
+        we take derivatives at the center \(a = 1 \col\)
+        \[
+        \baat{2}
+        &amp;f(x) = x^{1/2} \cma \lspace &amp;&amp;f(1) = 1 \cma \nl
+        &amp;f'(x) = \tfrac{1}{2} x^{-1/2} \cma \lspace &amp;&amp;f'(1) = \tfrac{1}{2} \cma \nl 
+        &amp;f''(x) = -\tfrac{1}{4} x^{-3/2} \cma \lspace &amp;&amp;f''(1) = -\tfrac{1}{4} \cma \nl 
+        &amp;f'''(x) = \tfrac{3}{8} x^{-5/2} \cma \lspace &amp;&amp;f'''(1) = \tfrac{3}{8} \cma \nl 
+        &amp;f^{(4)}(x) = -\tfrac{15}{16} x^{-7/2} \cma \lspace &amp;&amp;f^{(4)}(1) = -\tfrac{15}{16} \cma \nl 
+        &amp;\vdotss \lspace &amp;&amp;\vdotss
+        \eaat   
+        \] 
+        The Taylor series centered at \(a = 1\) is therefore 
+        \[
+        \ba
+        \sqrt x &amp;= 1 + \frac{1}{2} (x - 1) + \frac{-1/4}{2!} (x - 1)^2 
+        + \frac{3/8}{3!} (x - 1)^3 + \frac{-15/16}{4!} (x - 1)^4 + \cdots \nl 
+        &amp;= \boxed{1 + \frac{1}{2} (x - 1) - \frac{1}{8} (x - 1)^2 + \frac{1}{16} (x - 1)^3 
+        - \frac{5}{128} (x - 1)^4 + \cdots}
+        \ea    
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds e^{2x} \cmaa a = 4\]
+    </blockquote> find the Taylor series for the function at the given center \(a\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(f(x) = e^{2x}\) we see the following:
+        \[
+        \baat{2}
+        &amp;f(x) = e^{2x} \cma \lspace &amp;&amp;f(4) = e^8 \cma \nl
+        &amp;f'(x) = 2e^{2x} \cma \lspace &amp;&amp;f'(4) = 2e^8 \cma \nl 
+        &amp;f''(x) = 4e^{2x} \cma \lspace &amp;&amp;f''(4) = 4e^8 \cma \nl 
+        &amp;f'''(x) = 8e^{2x} \cma \lspace &amp;&amp;f'''(4) = 8e^8 \cma \nl 
+        &amp;f^{(4)}(x) = 16e^{2x} \cma \lspace &amp;&amp;f^{(4)}(4) = 16e^8 \cma \nl 
+        &amp;\vdotss \lspace &amp;&amp;\vdotss
+        \eaat
+        \]
+        The Taylor series is therefore given by
+        \[
+        \ba
+        e^{2x} &amp;= e^8 + 2e^8 (x - 4) + \frac{4e^8}{2!} (x - 4)^2 + \frac{8e^8}{3!} (x - 4)^3 + \frac{16e^8}{4!} (x - 4)^4 + \cdots \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{2^n \, e^8}{n!} (x - 4)^n}
+        \ea
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \ln 3x \cmaa a = e\]
+    </blockquote> find the Taylor series for the function at the given center \(a\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(f(x) = \ln 3x\) we see the following:
+        \[ 
+        \baat{2}
+        &amp;f(x) = \ln 3x \cma \lspace &amp;&amp;f(e) = \ln 3e \cma \nl
+        &amp;f'(x) = \frac{1}{x} \cma \lspace &amp;&amp;f'(e) = \frac{1}{e} \cma \nl
+        &amp;f''(x) = -\frac{1}{x^2} \cma \lspace &amp;&amp;f''(e) = -\frac{1}{e^2} \cma \nl 
+        &amp;f'''(x) = \frac{2}{x^3} \cma \lspace &amp;&amp;f'''(e) = \frac{2}{e^3} \cma \nl 
+        &amp;f^{(4)}(x) = -\frac{6}{x^4} \cma \lspace &amp;&amp;f^{(4)}(e) = -\frac{6}{e^4} \cma \nl 
+        &amp;f^{(5)}(x) = \frac{24}{x^5} \cma \lspace &amp;&amp;f^{(5)}(e) = \frac{24}{e^5} \cma \nl 
+        &amp;\vdotss \lspace &amp;&amp;\vdotss
+        \eaat
+        \]
+        The Taylor series for \(f(x) = \ln 3x\) centered at \(a = e\) is therefore 
+        \[
+        \ba 
+        \ln 3x &amp;= \ln 3e + \frac{1}{e} (x - e) + \frac{-1/e^2}{2!} (x - e)^2 
+        + \frac{2/e^3}{3!} (x - e)^3 \nl 
+        &amp;+ \frac{-6/e^4}{4!} (x - e)^4 + \frac{24/e^5}{5!} (x - e)^5 + \cdots \nl 
+        &amp;= \ln 3e + \frac{(x - e)}{e} - \frac{(x - e)^2}{2e^2} 
+        + \frac{(x - e)^3}{3e^3} - \frac{(x - e)^4}{4e^4} + \frac{(x - e)^5}{5e^5} + \cdots \nl
+        &amp;= \boxed{\ln 3e + \sum_{n = 1}^\infty \frac{(-1)^{n + 1} \, (x - e)^n}{n e^n}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \atan 4x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's use an existing power series; 
+        no reason exists to reinvent the wheel by taking derivatives at \(x = 0.\)
+        The Maclaurin series for \(\atan x\) is 
+        \[
+        \ba
+        \atan x &amp;= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \pd
+        \ea
+        \]
+        So replacing \(x\) with \(4x\) shows 
+        \[
+        \ba
+        \atan 4x &amp;= (4x) - \frac{(4x)^3}{3} + \frac{(4x)^5}{5} - \frac{(4x)^7}{7} + \cdots \nl
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, (4x)^{2n + 1}}{2n + 1}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x^2 \sin x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's use an existing power series; 
+        no reason exists to reinvent the wheel by taking derivatives at \(x = 0.\)
+        Because the Maclaurin series for \(\sin x\) is 
+        \[
+        \ba
+        \sin x &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!} \cma 
+        \ea
+        \]
+        we multiply the series by \(x^2\) to get 
+        \[
+        \ba
+        x^2 \sin x &amp;= x^3 - \frac{x^5}{3!} + \frac{x^7}{5!} - \frac{x^9}{7!} + \cdots \nl
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 3}}{(2n + 1)!}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds e^{-x^3}\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's use an existing power series; 
+        no reason exists to reinvent the wheel by taking derivatives at \(x = 0.\)
+        The Maclaurin series for \(e^x\) is 
+        \[e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{n = 0}^\infty \frac{x^n}{n!} \pd\]
+        Replacing \(x\) with \(-x^3,\) we see 
+        \[
+        \ba
+        e^{-x^3} &amp;= 1 + \par{-x^3} + \frac{\par{-x^3}^2}{2!} + \frac{\par{-x^3}^3}{3!} + \cdots \nl 
+        &amp;= 1 - x^3 + \frac{x^6}{2!} - \frac{x^9}{3!} + \cdots \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, x^{3n}}{n!}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \ln(1 - x)\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's use an existing power series; 
+        no reason exists to reinvent the wheel by taking derivatives at \(x = 0.\)
+        The Maclaurin series for \(\ln(1 + x)\) is given by
+        \[
+        \ba
+        \ln(1 + x) &amp;= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \nl
+        &amp;= \sum_{n = 1}^\infty (-1)^{n + 1} \frac{x^n}{n} \pd 
+        \ea
+        \]
+        So replacing \(x\) with \(-x\) gives 
+        \[
+        \ba
+        \ln(1 - x) &amp;= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \frac{(-x)^4}{4} + \cdots \nl 
+        &amp;= -x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} - \cdots \nl
+        &amp;= \boxed{- \sum_{n = 1}^\infty \frac{x^n}{n}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sin^2 x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(\sin^2 x = \tfrac{1}{2}(1 - \cos 2x),\) 
+        and the Maclaurin series for \(\cos 2x\) is 
+        \[
+        \ba
+        \cos 2x &amp;= 1 - \frac{(2x)^2}{2!} + \frac{(2x)^4}{4!} - \frac{(2x)^6}{6!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, (2x)^{2n}}{(2n)!} \pd
+        \ea
+        \]
+        So we have 
+        \[
+        \ba
+        \sin^2 x &amp;= \tfrac{1}{2} \parbr{1 - \par{1 - \frac{(2x)^2}{2!} + \frac{(2x)^4}{4!} - \frac{(2x)^6}{6!} + \cdots}} \nl 
+        &amp;= \tfrac{1}{2} \par{\frac{(2x)^2}{2!} - \frac{(2x)^4}{4!} + \frac{(2x)^6}{6!} + \cdots} \nl 
+        &amp;= \boxed{\tfrac{1}{2} \sum_{n = 1}^\infty \frac{(-1)^{n + 1} \, (2x)^{2n}}{(2n)!}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sin x \cos x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Instead of multiplying power series, 
+        it is much easier to use the double-angle identity for sine:
+        \[\sin 2x = 2 \sin x \cos x \iffArrow \sin x \cos x = \tfrac{1}{2} \sin 2x \pd\]
+        The Maclaurin series for \(\sin 2x\) is 
+        \[
+        \ba
+        \sin 2x &amp;= (2x) - \frac{(2x)^3}{3!} + \frac{(2x)^5}{5!} - \frac{(2x)^7}{7!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, (2x)^{2n + 1}}{(2n + 1)!} \pd
+        \ea 
+        \]
+        Accordingly, we have 
+        \[\sin x \cos x = \tfrac{1}{2} \sin 2x = \boxed{\tfrac{1}{2} \sum_{n = 0}^\infty \frac{(-1)^n \, (2x)^{2n + 1}}{(2n + 1)!}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int x^3 \atan x \di x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(x^3 \atan x\) is 
+        \[
+        \ba
+        x^3 \atan x &amp;= 
+        x^3 \par{x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots} \nl
+        &amp;= x^4 - \frac{x^6}{3} + \frac{x^8}{5} - \frac{x^{10}}{7} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 4}}{2n + 1} \pd
+        \ea
+        \]
+        So integrating this series, we find 
+        \[
+        \ba 
+        \int x^3 \atan x \di x &amp;= \int \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 4}}{2n + 1} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{2n + 1} \int x^{2n + 4} \di x \nl 
+        &amp;= \boxed{C + \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 5}}{(2n + 1)(2n + 5)}}
+        \ea 
+        \]
+        for any constant \(C.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \cos \par{x^4} \di x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\cos \par{x^4}\) is given by replacing \(x\) with \(x^4\)
+        in the Maclaurin series for \(\cos x \col\)
+        \[
+        \ba 
+        \cos \par{x^4} &amp;= 1 - \frac{\par{x^4}^2}{2!} + \frac{\par{x^4}^4}{4!} - \frac{\par{x^4}^6}{6!} + \cdots \nl 
+        &amp;= 1 - \frac{x^8}{2!} + \frac{x^{16}}{4!} - \frac{x^{24}}{6!} + \cdots \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n}}{(2n)!} \pd
+        \ea 
+        \]
+        Integrating this series, we see 
+        \[
+        \ba 
+        \int \cos \par{x^4} \di x 
+        &amp;= \int \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n}}{(2n)!} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n)!} \int x^{8n} \di x \nl 
+        &amp;= \boxed{C + \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n + 1}}{(2n)! \, (8n + 1)}} 
+        \ea 
+        \]
+        for any constant \(C.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\cos \par{x^2}}{x^4} \di x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We find the Maclaurin series for \(\cos \par{x^2}\) by replacing \(x\) with \(x^2\)
+        in the Maclaurin series for \(\cos x \col\)
+        \[
+        \ba 
+        \cos \par{x^2} &amp;= 1 - \frac{\par{x^2}^2}{2!} + \frac{\par{x^2}^4}{4!} - \frac{\par{x^2}^6}{6!} + \cdots \nl 
+        &amp;= 1 - \frac{x^4}{2!} + \frac{x^{8}}{4!} - \frac{x^{12}}{6!} + \cdots \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{4n}}{(2n)!} \pd
+        \ea 
+        \]
+        Thus, 
+        \[
+        \ba 
+        \int \frac{\cos \par{x^2}}{x^4} \di x &amp;= \int \frac{1}{x^4} \sum_{n = 0}^\infty \frac{(-1)^n \, x^{4n}}{(2n)!} \di x \nl 
+        &amp;= \int \sum_{n = 0}^\infty \frac{(-1)^n \, x^{4n - 4}}{(2n)!} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n)!} \int x^{4n - 4} \di x \nl 
+        &amp;= \boxed{C + \sum_{n = 0}^\infty \frac{(-1)^n \, x^{4n - 3}}{(2n)! \, (4n - 3)}}
+        \ea
+        \]
+        for any constant \(C.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\sin \par{x^4}}{x^4} \di x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\sin \par{x^4}\) is 
+        \[
+        \ba 
+        \sin \par{x^4} &amp;=
+        \par{x^4} - \frac{\par{x^4}^3}{3!} + \frac{\par{x^4}^5}{5!} - \frac{\par{x^4}^7}{7!} + \cdots \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n + 4}}{(2n + 1)!} \pd
+        \ea
+        \]
+        Accordingly, we have 
+        \[
+        \ba
+        \int \frac{\sin \par{x^4}}{x^4} \di x
+        &amp;= \int \frac{1}{x^4} \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n + 4}}{(2n + 1)!} \di x \nl 
+        &amp;= \int \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n}}{(2n + 1)!} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n + 1)!} \int x^{8n} \di x \nl 
+        &amp;= \boxed{C + \sum_{n = 0}^\infty \frac{(-1)^n \, x^{8n + 1}}{(2n + 1)! \, (8n + 1)}}
+        \ea
+        \]
+        for some constant \(C.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\ln \par{1 + x^2}}{x} \di x\]
+    </blockquote> find the Maclaurin series for the function. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\ln \par{1 + x^2}\) is 
+        \[
+        \ba
+        \ln \par{1 + x^2} 
+        &amp;= \par{x^2} - \frac{\par{x^2}^2}{2} + \frac{\par{x^2}^3}{3} - \frac{\par{x^2}^4}{4} + \cdots \nl
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^n \, x^{2n}}{n}\pd
+        \ea
+        \]
+        Hence, we see
+        \[
+        \ba 
+        \int \frac{\ln \par{1 + x^2}}{x} \di x 
+        &amp;= \int \frac{1}{x} \sum_{n = 1}^\infty \frac{(-1)^n \, x^{2n}}{n} \di x \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^n}{n} \int x^{2n - 1} \di x \nl 
+        &amp;= C + \sum_{n = 1}^\infty \frac{(-1)^n}{n} \par{\frac{x^{2n}}{2n}} \nl 
+        &amp;= \boxed{C + \sum_{n = 1}^\infty \frac{(-1)^n \, x^{2n}}{2n^2}}
+        \ea     
+        \]
+        if \(C\) is any constant.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The function \(g\) is defined by the following Taylor series centered at \(a = 4 \col\) 
+        \[g(x) = \sum_{n = 1}^\infty \frac{(-1)^n}{n^3} (x - 4)^n \pd\]
+        Calculate \(g^{(4)}(4).\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 4,\) we find the fourth-degree term to be 
+        \[\frac{(-1)^4}{4^3} (x - 4)^4 = \frac{1}{64} (x - 4)^4 \pd\]
+        But by the Maclaurin definition, the fourth-degree term is
+        \[\frac{g^{(4)}(4)}{4!}(x - 4)^4 \pd\]
+        We equate these expressions to see
+        \[
+        \ba
+        \frac{g^{(4)}(4)}{4!}(x - 4)^4 &amp;= \frac{1}{64} (x - 4)^4 \nl 
+        \implies g^{(4)}(4) &amp;= \frac{4!}{64} = \boxed{\frac{3}{8}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let function \(g\) have the following Taylor series centered at \(a = 7 \col\)
+        \[g(x) = \sum_{n = 0}^\infty \frac{(-1)^{n + 1}}{e^n} (x - 7)^n \pd\]
+        Calculate \(g^{(5)}(7).\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 5,\) the fifth-degree term is 
+        \[\frac{(-1)^{5 + 1}}{e^5} (x - 7)^5 \pd\]
+        By the Maclaurin definition, the fifth-degree term is
+        \[\frac{g^{(5)}(7)}{5!}(x - 7)^5 \pd\]
+        Equating these two expressions shows
+        \[
+        \ba 
+        \frac{g^{(5)}(7)}{5!}(x - 7)^5 &amp;= \frac{(-1)^{5 + 1}}{e^5} (x - 7)^5 \nl 
+        \implies g^{(5)}(7) &amp;= \frac{(-1)^{5 + 1}}{e^5} (5!) = \boxed{\frac{5!}{e^5}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \pi - \frac{\pi^3}{3!} + \frac{\pi^5}{5!} - \frac{\pi^7}{7!} + \cdots\]
+    </blockquote> find the exact sum. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This expansion is the Maclaurin series for \(\sin x\) evaluated at \(x = \pi.\)
+        Since \(\sin \pi = 0,\) the series equals \(\boxed 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 2 + 2 + \frac{2}{2!} + \frac{2}{3!} + \frac{2}{4!} + \cdots\]
+    </blockquote> find the exact sum. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Observe that this series is 
+        \[2 \par{1 + 1 + \frac{1^2}{2!} + \frac{1^3}{3!} + \frac{1^4}{4!} + \cdots} \pd\]
+        This expansion represents \(2e^x\) at \(x = 1,\)
+        so the sum is \(\boxed{2e}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{1}{1 \cdot 3} - \frac{1}{2 \cdot 3^2} + \frac{1}{3 \cdot 3^3} - \frac{1}{4 \cdot 3^4} + \cdots\]
+    </blockquote> find the exact sum. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Writing the series in sigma notation, we have 
+        \[\sum_{n = 1}^\infty \frac{(-1)^{n + 1} \par{\frac{1}{3}}^n}{n} \pd\]
+        This sum represents \(\ln(1 + x)\) at \(x = 1/3,\)
+        so it equals 
+        \[\ln \par{1 + \tfrac{1}{3}} = \boxed{\ln \tfrac{4}{3}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 90 - \frac{90}{2!} \par{\frac{\pi}{2}}^2 + \frac{90}{4!} \par{\frac{\pi}{2}}^4 
+        - \frac{90}{6!} \par{\frac{\pi}{2}}^6 + \cdots\]
+    </blockquote> find the exact sum. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using sigma notation, we rewrite the series as 
+        \[90 \sum_{n = 0}^\infty \frac{(-1)^n}{(2n)!} \par{\frac{\pi}{2}}^{2n} \cma\]
+        which represents \(90 \cos x\) at \(x = \pi/2.\)
+        So the series equals \(90 \cos(\pi/2) = \boxed{0}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0} \frac{1 + x - e^x}{x^2}\]
+    </blockquote> evaluate the limit by using a series. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since both \(\par{1 + x - e^x}\) and \(x^2\) approach \(0\) as \(x \to 0,\)
+        this limit is in the indeterminate form \(\indZero.\)
+        Whereas this limit could be evaluated by L'Hôpital's Rule, 
+        it is easier to instead use a series.
+        Using the Maclaurin series 
+        \[e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \cma\]
+        we find the limit to be 
+        \[
+        \ba 
+        \lim_{x \to 0} \frac{\ds 1 + x - \par{1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots}}{x^2}
+        &amp;= \lim_{x \to 0} \frac{\ds -\frac{x^2}{2!} - \frac{x^3}{3!} - \cdots}{x^2} \nl 
+        &amp;= \lim_{x \to 0} \par{-\frac{1}{2!} - \frac{x}{3!} - \cdots} \nl 
+        &amp;= \boxed{-\frac{1}{2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0} \frac{\atan x - x}{x^3}\]
+    </blockquote> evaluate the limit by using a series. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Both \(\par{\atan x - x}\) and \(x^3\) approach \(0\) as \(x \to 0,\)
+        so this limit is in the indeterminate form \(\indZero.\)
+        Whereas this limit could be evaluated by L'Hôpital's Rule, 
+        it is easier to instead use a series. 
+        By the Maclaurin series 
+        \[\atan x = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \cma\]
+        the limit becomes 
+        \[
+        \ba 
+        \lim_{x \to 0} \frac{\ds \par{x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots} - x}{x^3} 
+        &amp;= \lim_{x \to 0} \frac{\ds -\frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots}{x^3} \nl 
+        &amp;= \lim_{x \to 0} \par{-\frac{1}{3} + \frac{x^2}{5} - \frac{x^4}{7} + \cdots} \nl 
+        &amp;= \boxed{-\frac{1}{3}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0} \frac{\ln \par{1 + x^2}}{x^2}\]
+    </blockquote> evaluate the limit by using a series. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\ln \par{1 + x^2}\) is given by
+        \[
+        \ba
+        \ln \par{1 + x^2} &amp;=
+        \par{x^2} - \frac{\par{x^2}^2}{2} + \frac{\par{x^2}^3}{3} - \frac{\par{x^2}^4}{4} + \cdots \nl
+        &amp;= x^2 - \frac{x^4}{2} + \frac{x^6}{3} - \frac{x^8}{4} + \cdots \pd
+        \ea
+        \]
+        So the limit becomes 
+        \[
+        \ba 
+        \lim_{x \to 0} \frac{\ds x^2 - \frac{x^4}{2} + \frac{x^6}{3} - \frac{x^8}{4} + \cdots}{x^2} 
+        &amp;= \lim_{x \to 0} \par{1 - \frac{x^2}{2} + \frac{x^4}{3} - \frac{x^6}{4} + \cdots} = \boxed 1
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to \infty} \par{x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The expansion in the parentheses is the Maclaurin series of \(\atan x,\) so we have 
+        \[\lim_{x \to \infty} \atan x = \boxed{\frac{\pi}{2}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to -1^+} \par{x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The expansion in the parentheses represents \(\ln(1 + x)\) for \(-1 \lt x \leq 1.\)
+        So the limit is equivalent to 
+        \[\lim_{x \to -1^+} \ln(1 + x) = \boxed{-\infty}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Third-degree Maclaurin polynomial for \(\ln(1 + x) \sin x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\ln(1 + x)\) and \(\sin x\) are as follows:
+        \[
+        \ba 
+        \ln(1 + x) &amp;= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \cma \nl 
+        \sin x &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \pd
+        \ea    
+        \]
+        As we multiply, let's expand each series up to the third-degree term. 
+        (This strategy ensures that we catch any term whose degree is three or less.)
+        Doing so, we attain 
+        \[
+        \ba 
+        \ln(1 + x) \sin x 
+        &amp;= \par{x - \frac{x^2}{2} + \frac{x^3}{3} + \cdots} \par{x - \frac{x^3}{3!} + \cdots} \nl 
+        &amp;= \par{x^2 - \frac{x^4}{3!}} - \par{\frac{x^3}{2} - \frac{x^5}{2 \cdot 3!} }
+        + \par{\frac{x^4}{3} - \frac{x^6}{3 \cdot 3!}} \pd
+        \ea
+        \]
+        Collecting only the like terms up to \(x^3,\) we find the Maclaurin polynomial to be 
+        \[
+        T_3(x) = \boxed{x^2 - \frac{x^3}{2}} 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Fourth-degree Maclaurin polynomial for \(e^x \sin x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for the two functions are shown below:
+        \[
+        \ba 
+        e^x &amp;= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \cma \nl 
+        \sin x &amp;= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \pd
+        \ea 
+        \]
+        When we multiply power series, we consider only a few terms and multiply them like polynomials. 
+        In each series, let's consider all terms <i>up to the fourth-degree term</i>;
+        as we multiply, doing so ensures that we catch every term of degree four or lower. 
+        We see 
+        \[
+        \ba 
+        e^x \sin x &amp;= \par{1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} \cdots}
+        \par{x - \frac{x^3}{3!} + \cdots} \nl 
+        &amp;= \par{x - \frac{x^3}{3!} + \cdots} + \par{x^2 - \frac{x^4}{3!} + \cdots}
+        + \par{\frac{x^3}{2!} - \frac{x^5}{2! \cdot 3!} + \cdots} \nl
+        &amp;+ \par{\frac{x^4}{3!} - \frac{x^6}{(3!)^2} + \cdots} 
+        + \par{\frac{x^5}{4!} - \frac{x^7}{4! \cdot 3!} + \cdots} \pd
+        \ea 
+        \]
+        Collecting all like terms up to \(x^4,\) we find the fourth-degree Maclaurin polynomial to be
+        \[
+        \ba
+        T_4(x) &amp;= x + x^2 \par{1} + x^3 \par{-\frac{1}{3!} + \frac{1}{2!}}
+        + x^4 \par{-\frac{1}{3!} + \frac{1}{3!}} \nl 
+        &amp;= \boxed{x + x^2 + \frac{x^3}{3}} 
+        \ea 
+        \]
+        where the fourth-degree term has a coefficient of \(0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Fourth-degree Maclaurin polynomial for \(\ds \par{\atan 2x}^2\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\atan 2x\) is 
+        \[
+        \ba
+        \atan 2x &amp;= (2x) - \frac{(2x)^3}{3} + \frac{(2x)^5}{5} + \cdots \nl 
+        &amp;= 2x - \frac{8x^3}{3} + \frac{32x^5}{5} + \cdots \pd
+        \ea
+        \]
+        When we multiply \(\atan 2x\) by \(\atan 2x,\)
+        we want to write out terms up to the fourth-degree term. 
+        Doing so, we see 
+        \[
+        \ba 
+        \par{\atan 2x} \par{\atan 2x} 
+        &amp;= \par{2x - \frac{8x^3}{3} + \cdots} \par{2x - \frac{8x^3}{3} + \cdots} \nl 
+        &amp;= \par{4x^2 - \frac{16x^4}{3} + \cdots} - \par{\frac{16x^4}{3} - \frac{64x^6}{9} + \cdots} \pd
+        \ea     
+        \]
+        Collecting all like terms up to the fourth degree, 
+        we find the Maclaurin polynomial to be 
+        \[T_3(x) = \boxed{4x^2 - \frac{32x^4}{3}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Third-degree Maclaurin polynomial for \(\ds e^{-x} \atan 2x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for the two functions are shown below:
+        \[
+        \ba 
+        e^{-x} &amp;= 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots \cma \nl 
+        \atan 2x &amp;= (2x) - \frac{(2x)^3}{3} + \frac{(2x)^5}{5} + \cdots 
+        = 2x - \frac{8x^3}{3} + \frac{32x^5}{5} + \cdots \pd
+        \ea 
+        \]
+        When we multiply these series, 
+        let's expand each up to the third-degree term,
+        enabling us to capture any terms of degree three or lower. 
+        Doing so, we find
+        \[
+        \ba 
+        e^{-x} \atan 2x 
+        &amp;= \par{1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots} 
+        \par{2x - \frac{8x^3}{3} + \cdots} \nl 
+        &amp;= \par{2x - \frac{8x^3}{3} + \cdots} 
+        - \par{2x^2 - \frac{8x^4}{3} + \cdots} \nl
+        &amp;+ \par{\frac{2x^3}{2!} - \frac{8x^5}{2! \cdot 3} + \cdots} 
+        - \par{\frac{2x^4}{3!} - \frac{8x^6}{3! \cdot 3} + \cdots} \pd
+        \ea 
+        \]
+        Collecting all like terms up to \(x^3,\) we 
+        find the third-degree Maclaurin polynomial to be 
+        \[T_3(x) = 2x - 2x^2 + x^3 \par{-\frac{8}{3} + \frac{2}{2!}} = \boxed{2x - 2x^2 - \frac{5x^3}{3}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Fourth-degree Maclaurin polynomial for \(\sec x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\sec x = 1/\cos x,\) we divide \(1\) by the 
+        power series of \(\cos x.\)
+        We consider only a few terms of \(\cos x\)—up to the fourth-degree term. 
+        We have the following:
+        \[
+        \require{enclose}
+        \begin{array}{rll}
+            1 + \tfrac{1}{2} x^2 + \tfrac{5}{24} x^4 + \cdots \\[-2pt]
+            1 - \tfrac{1}{2} x^2 + \tfrac{1}{24} x^4 + \cdots
+            \enclose{longdiv}{1 \phantom{00000\,000000000000}}\kern-.2ex \\[-2pt]
+            \underline{1 - \tfrac{1}{2} x^2 + \tfrac{1}{24} x^4 + \cdots} \\[-2pt]
+            \tfrac{1}{2} x^2 - \tfrac{1}{24} x^4 + \cdots \\[-2pt]
+            \underline{\tfrac{1}{2} x^2 - \tfrac{1}{4} x^4 + \cdots} \\[-2pt]
+            \tfrac{5}{24} x^4 + \cdots \\[-2pt]
+        \end{array}
+        \]
+        Thus, the fourth-degree Maclaurin polynomial is  
+        \[T_4(x) = \boxed{1 + \tfrac{1}{2} x^2 + \tfrac{5}{24} x^4}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Third-degree Maclaurin polynomial for \(\ln(1 + x)/\cos x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for the two functions are shown below:
+        \[
+        \ba 
+        \ln(1 + x) &amp;= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \cma \nl 
+        \cos x &amp;= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots \pd 
+        \ea 
+        \]
+        Considering all terms up to the third degree, we attain the following:
+        \[
+        \require{enclose}
+        \begin{array}{rll}
+            x - \tfrac{1}{2} x^2 + \tfrac{2}{3} x^3 + \cdots \\[-2pt]
+            1 - \tfrac{1}{2} x^2 + \cdots
+            \enclose{longdiv}{x - \tfrac{1}{2} x^2 + \tfrac{1}{3} x^3 + \cdots}\kern-.2ex \\[-2pt]
+            \underline{x - \tfrac{1}{2} x^3 + \cdots} \\[-2pt]
+            -\tfrac{1}{2} x^2 + \tfrac{5}{6} x^3 + \cdots \\[-2pt]
+            \underline{-\tfrac{1}{2} x^2 + \tfrac{1}{4} x^4 + \cdots} \\[-2pt]
+            \tfrac{5}{6} x^3 + \cdots \\[-2pt]
+        \end{array}
+        \]
+        Thus, the third-degree Maclaurin polynomial is  
+        \[T_4(x) = \boxed{x - \tfrac{1}{2} x^2 + \tfrac{5}{6} x^3}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Fifth-degree Maclaurin polynomial for \(e^{-x^2} \sin 2x\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(e^{-x^2}\) is 
+        \[
+        \ba
+        e^{-x^2} &amp;= 1 + \par{-x^2} + \frac{\par{-x^2}^2}{2!} + \frac{\par{-x^2}^3}{3!} + \cdots \nl 
+        &amp;= 1 - x^2 + \frac{x^4}{2} - \frac{x^6}{6} + \cdots \pd
+        \ea
+        \]
+        The Maclaurin series for \(\sin 2x\) is 
+        \[
+        \ba
+        \sin 2x &amp;= (2x) - \frac{(2x)^3}{3!} + \frac{(2x)^5}{5!} + \cdots \nl 
+        &amp;= 2x - \frac{4x^3}{3} + \frac{4x^5}{15} + \cdots
+        \ea
+        \]
+        When we multiply the series, let's write out terms up to the fifth degree
+        (to capture all the terms of degree five or below):
+        \[
+        \ba 
+        e^{-x^2} \sin 2x &amp;= \par{1 - x^2 + \frac{x^4}{2} + \cdots} \par{2x - \frac{4x^3}{3} + \frac{4x^5}{15} + \cdots} \nl 
+        &amp;= \par{2x - \frac{4x^3}{3} + \frac{4x^5}{15} + \cdots} 
+        - \par{2x^3 - \frac{4x^5}{3} + \frac{4x^7}{15} + \cdots} \nl
+        &amp;+ \par{x^5 - \frac{2x^7}{3} + \frac{2x^9}{15} + \cdots} \pd
+        \ea 
+        \]
+        Harvesting like terms up to \(x^5,\) we get the polynomial 
+        \[
+        \ba
+        T_5(x) &amp;= 2x + x^3 \par{-\frac{4}{3} - 2} + x^5 \par{\frac{4}{15} + \frac{4}{3} + 1} \nl
+        &amp;= \boxed{2x -\frac{10x^3}{3}  + \frac{13x^5}{5}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        Fifth-degree Maclaurin polynomial for \(\ds (\cos 4x)/\par{1 - x^3}\)
+    </blockquote> multiply or divide power series to find the required Taylor or Maclaurin polynomial. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\cos 4x\) is
+        \[
+        \ba 
+        \cos 4x &amp;=
+        1 - \frac{(4x)^2}{2!} + \frac{(4x)^4}{4!} - \frac{(4x)^6}{6!} + \cdots \nl
+        &amp;= 1 - 8x^2 + \frac{32x^4}{3} - \frac{256x^6}{45} + \cdots \pd
+        \ea
+        \]
+        Let's divide the first few terms by \(\par{1 - x^3},\) as follows:
+        \[
+        \require{enclose}
+        \begin{array}{rll}
+            1 - 8x^2 + x^3 + \tfrac{32}{3} x^4 - 8x^5 + \cdots \\[-2pt]
+            1 - x^3
+            \enclose{longdiv}{1 - 8x^2 + \tfrac{32}{3} x^4 + \cdots \hspace{6em}}\kern-.2ex \\[-2pt]
+            \underline{1 - x^3 \hspace{12.42em}} \\[-2pt]
+            -8x^2 + x^3 + \tfrac{32}{3} x^4 + \cdots \\[-2pt]
+            \underline{-8x^2 + 8x^5 + \cdots \hspace{2.83em}} \\[-2pt]
+            x^3 + \tfrac{32}{3} x^4 - 8x^5 + \cdots \\[-2pt]
+            \underline{x^3 - x^6 + \cdots \hspace{3.83em}} \\[-2pt]
+            \tfrac{32}{3} x^4 - 8x^5 + \cdots \hspace{0.6em} \\[-2pt]
+            \underline{\tfrac{32}{3} x^4 - \tfrac{32}{3} x^7 + \cdots} \\[-2pt]
+            -8x^5 + \cdots \\[-2pt]
+        \end{array}
+        \]
+        So the fifth-degree Maclaurin polynomial is 
+        \[T_5(x) = \boxed{1 - 8x^2 + x^3 + \tfrac{32}{3} x^4 - 8x^5}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds {6 \choose 3}\]
+    </blockquote> compute the binomial coefficient. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        The binomial coefficient is 
+        \[
+        {6 \choose 3} = \frac{6 \cdot 5 \cdot 4}{3!} = \boxed{20}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds {7 \choose 2}\]
+    </blockquote> compute the binomial coefficient. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        The binomial coefficient is 
+        \[
+        {7 \choose 2} = \frac{7 \cdot 6}{2!} = \boxed{21}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds {9 \choose 2}\]
+    </blockquote> compute the binomial coefficient. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        The binomial coefficient is 
+        \[
+        {9 \choose 2} = \frac{9 \cdot 8}{2!} = \boxed{36}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds {{1/4} \choose {3}}\]
+    </blockquote> compute the binomial coefficient. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The binomial coefficient is 
+        \[{{1/4} \choose {3}} = \frac{\frac{1}{4} \par{\frac{1}{4} - 1} \par{\frac{1}{4} - 2}}{3!} 
+        = \boxed{\frac{7}{128}}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds {{-2/3} \choose {4}}\]
+    </blockquote> compute the binomial coefficient. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The binomial coefficient is 
+        \[
+        {{-2/3} \choose {4}} = \frac{\par{-\frac{2}{3}} \par{-\frac{2}{3} - 1} \par{-\frac{2}{3}- 2} \par{-\frac{2}{3} - 3}}{4!} 
+        = \boxed{\frac{110}{243}}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{1 + 4x}\]
+    </blockquote> determine the Maclaurin series for the function and find its radius of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function is equivalent to \((1 + 4x)^{1/2}.\)
+        The binomial series is 
+        \[(1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd\]
+        Using \(k = 1/2\) and replacing \(x\) with \(4x,\) we see 
+        \[
+        \ba 
+        \sqrt{1 + 4x} &amp;= 1 + \frac{1}{2} (4x) + \frac{\tfrac{1}{2} \par{\tfrac{1}{2} - 1}}{2!} (4x)^2 
+        + \frac{\tfrac{1}{2} \par{\tfrac{1}{2} - 1}\par{\tfrac{1}{2} - 2}}{3!} (4x)^3 + \cdots \nl 
+        &amp;= 1 + 2x - 2x^2 + 4x^3 + \cdots \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty {{1/2} \choose n} (4x)^n}
+        \ea
+        \]
+        The series converges when \(\abs{4x} \lt 1,\) or \(x \lt 1/4.\)
+        Hence, the radius of convergence is \(\boxed{R = 1/4}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{1}{\sqrt[4]{1 + x^2}}\]
+    </blockquote> determine the Maclaurin series for the function and find its radius of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function is equivalent to \(\par{1 + x^2}^{-1/4}.\)
+        The binomial series is 
+        \[(1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd\]
+        Using \(k = -1/4\) and replacing \(x\) with \(x^2,\) we see 
+        \[
+        \ba 
+        \frac{1}{\sqrt[4]{1 + x^2}} &amp;= 1 - \frac{1}{4} \par{x^2} 
+        + \frac{-\tfrac{1}{4} \par{-\tfrac{1}{4} - 1}}{2!} \par{x^2}^2 
+        + \frac{-\tfrac{1}{4} \par{-\tfrac{1}{4} - 1}\par{-\tfrac{1}{4} - 2}}{3!} \par{x^2}^3 + \cdots \nl 
+        &amp;= 1 - \frac{x^2}{4} + \frac{5 x^4}{32} - \frac{15 x^6}{128} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty {{-1/4} \choose n} \par{x^2}^n 
+        = \boxed{\sum_{n = 0}^\infty {{-1/4} \choose n} x^{2n}}
+        \ea
+        \]
+        The series converges when \(\abs{x^2} \lt 1,\) that is, when \(\abs x \lt 1.\)
+        So the radius of convergence is \(\boxed{R = 1}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{16 - 3x^3}\]
+    </blockquote> determine the Maclaurin series for the function and find its radius of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite the function as 
+        \[\sqrt{16} \sqrt{1 - \frac{3x^3}{16}} = 4 \parbr{1 + \par{-\frac{3x^3}{16}}}^{1/2} \pd\]
+        The binomial series is 
+        \[(1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd\]
+        Taking \(k = 1/2\) and replacing \(x\) with \(-3x^3/16,\) we get 
+        \[
+        \ba 
+        \sqrt{16 + 3x^3} 
+        &amp;= 4 \parbr{1 + \frac{1}{2} \par{-\frac{3x^3}{16}} + \frac{\tfrac{1}{2} \par{\tfrac{1}{2} - 1}}{2!} \par{-\frac{3x^3}{16}}^2 
+        + \cdots}\nl 
+        &amp;= 4 - \frac{3x^3}{8} - \frac{9 x^6}{512} + \cdots \nl 
+        &amp;= 4 \sum_{n = 0}^\infty {{1/2} \choose n} \par{-\frac{3x^3}{16}}^n \nl
+        &amp;= \boxed{4 \sum_{n = 0}^\infty {{1/2} \choose n} (-1)^n \frac{\par{3x^3}^n}{16^n}}
+        \ea 
+        \]
+        For convergence, we require \(\abs{-3x^3/16} \lt 1\)—that is, 
+        \[\abs{x^3} \lt \frac{16}{3} \iffArrow \abs x \lt \sqrt[3]{\frac{16}{3}} \pd\]
+        The radius of convergence is therefore \(\boxed{R = \sqrt[3]{16/3}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{1}{(2 + x)^4}\]
+    </blockquote> determine the Maclaurin series for the function and find its radius of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite the rational expression as 
+        \[\frac{1}{2^4 \par{1 + \frac{x}{2}}^4} = \frac{1}{16 \par{1 + \frac{x}{2}}^4} = \frac{1}{16} \par{1 + \frac{x}{2}}^{-4} \pd\]
+        The binomial series is 
+        \[(1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd\]
+        We use \(k = -4\) and replace \(x\) with \(x/2.\)
+        Doing so, we attain the following series representation:
+        \[
+        \ba 
+        \frac{1}{(2 + x)^4} &amp;= \frac{1}{16} \parbr{1 + (-4) \par{\frac{x}{2}} + \frac{(-4)(-5)}{2!} \par{\frac{x}{2}}^2 
+        + \frac{(-4)(-5)(-6)}{3!} \par{\frac{x}{2}}^3 + \cdots} \nl 
+        &amp;= \frac{1}{16} - \frac{x}{8} + \frac{5x^2}{32} - \frac{5x^3}{32} + \cdots \nl 
+        &amp;= \boxed{\frac{1}{16} \sum_{n = 0}^\infty {{-4} \choose n} \par{\frac{x}{2}}^n}
+        \ea 
+        \]
+        The series converges if \(\abs{x/2} \lt 1\)—that is, if \(\abs x \lt 2\)—so 
+        the radius of convergence is \(\boxed{R = 2}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{x^2}{\sqrt{4 + x^3}}\]
+    </blockquote> determine the Maclaurin series for the function and find its radius of convergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We rewrite the function as 
+        \[\frac{x^2}{2 \sqrt{1 + \dfrac{x^3}{4}}} = \frac{x^2}{2} \par{1 + \frac{x^3}{4}}^{-1/2} \pd\]
+        The binomial series is 
+        \[(1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd\]
+        Using \(k = -1/2,\) replacing \(x\) with \(x^3/4,\)
+        and multiplying the result by \(x^2/4,\) we attain the following series representation: 
+        \[
+        \ba 
+        \frac{x^2}{\sqrt{4 + x^3}} 
+        &amp;= \frac{x^2}{2} \parbr{1 - \frac{1}{2} \par{\frac{x^3}{4}} + \frac{\par{-\tfrac{1}{2}} \par{-\tfrac{1}{2} - 1}}{2!} \par{\frac{x^3}{4}}^2 
+        + \cdots} \nl 
+        &amp;=\frac{x^2}{2} - \frac{x^5}{16} + \frac{3 x^8}{256} - \frac{5x^{11}}{2048} + \cdots \nl 
+        &amp;= \frac{x^2}{4} \sum_{n = 0}^\infty {{-1/2} \choose n} \par{\frac{x^3}{4}}^n  
+        = \boxed{\sum_{n = 0}^\infty {{-1/2} \choose n} \frac{x^{3n + 2}}{4^{n + 1}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(n\) is a positive integer, then show that 
+        \[\derivOrder{}{x}{2n + 1} \par{\atan x} \intEval_{x = 0} = (-1)^n \, (2n)! \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-53"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(f(x) = \atan x\) is 
+        \[
+        \ba
+        \atan x &amp;= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \pd
+        \ea
+        \]
+        By the definition of a Maclaurin series, the <nobr>\((2n + 1)\)st</nobr>-degree term is 
+        \[\frac{f^{(2n + 1)}(0) \, x^{2n + 1}}{(2n + 1)!} \pd\] 
+        Equating this expression to the general term in the Maclaurin series, we see 
+        \[
+        \ba
+        \frac{f^{(2n + 1)}(0) \, x^{2n + 1}}{(2n + 1)!} &amp;= \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \nl
+        \implies f^{(2n + 1)}(0) &amp;= (-1)^n \frac{(2n + 1)!}{2n + 1} \nl 
+        &amp;= (-1)^n \frac{(2n + 1)(2n)!}{2n + 1} = (-1)^n \, (2n)! \cma
+        \ea
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-54"> 
+  <div class="box-solution__head">     EXERCISE 54 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(n\) is a positive integer, then show that 
+        \[\derivOrder{}{x}{2n + 1} \par{\frac{x}{1 - x^2}} \intEval_{x = 0} = (2n + 1)! \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-54"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(x/\par{1 - x^2}\) is given by
+        \[
+        \ba 
+        \frac{x}{1 - x^2} 
+        &amp;= x \parbr{1 + \par{x^2} + \par{x^2}^2 + \par{x^2}^3 + \cdots} \nl 
+        &amp;= \sum_{n = 0}^\infty x^{2n + 1} \pd
+        \ea 
+        \]
+        But by the definition of a Maclaurin series, 
+        the <nobr>\((2n + 1)\)st</nobr>-degree term is
+        \[\frac{f^{(2n + 1)}(0)}{(2n + 1)!} x^{2n + 1} \pd\]
+        So equating expressions, we have 
+        \[
+        \ba
+        \frac{f^{(2n + 1)}(0)}{(2n + 1)!} x^{2n + 1} &amp;= x^{2n + 1} \nl
+        \implies f^{(2n + 1)}(0) &amp;= (2n + 1)! \cma
+        \ea
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-55"> 
+  <div class="box-solution__head">     EXERCISE 55 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(f(x) = \par{1 + x^3}^{15},\)
+        then calculate \(f^{(12)}(0).\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-55"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the binomial series, we find that \(f\) has a Maclaurin series given by 
+        \[f(x) = \par{1 + x^3}^{15} = \sum_{n = 0}^\infty {{15} \choose n} x^{3n} \pd\]
+        The <nobr>\(12\)th</nobr>-degree term is modeled by \(n = 4.\)
+        Equating this term to the Maclaurin definition for the <nobr>\(12\)th</nobr>-degree term, we see 
+        \[
+        \ba 
+        \frac{f^{(12)}(0)}{12!} x^{12} &amp;= {{15} \choose 4} x^{12} \nl 
+        \frac{f^{(12)}(0)}{12!} &amp;= \frac{15!}{(15 - 4)! \cdot 4!} = \frac{15!}{11! \cdot 4!} \nl 
+        \implies f^{(12)}(0) &amp;= \frac{15! \cdot 12!}{11! \cdot 4!} = \boxed{\frac{15!}{2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-56"> 
+  <div class="box-solution__head">     EXERCISE 56 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Using the relationship 
+        \[\deriv{}{x} \par{\asin x} = \frac{1}{\sqrt{1 - x^2}} \cma\]
+        find the Maclaurin series for \(\asin x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-56"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Flipping the relationship, we have
+        \[\asin x = \int \frac{1}{\sqrt{1 - x^2}} \di x \pd\]
+        Let's rewrite the integrand as 
+        \[\frac{1}{\sqrt{1 - x^2}} = \par{1 - x^2}^{-1/2} \pd\]
+        By the binomial series, this function has a Maclaurin series given by 
+        \[
+        \ba
+        \frac{1}{\sqrt{1 - x^2}} 
+        &amp;= \sum_{n = 0}^\infty {{-1/2} \choose n} \par{-x^2}^n \nl
+        &amp;= \sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \, x^{2n} \pd
+        \ea
+        \]
+        Integrating, we have 
+        \[
+        \ba 
+        \asin x &amp;= \int \sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \, x^{2n} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \int x^{2n} \di x \nl 
+        &amp;= C + \sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \par{\frac{x^{2n + 1}}{2n + 1}}
+        \ea 
+        \]
+        for some constant \(C.\)
+        Since \(\asin 0 = 0,\) we substitute \(x = 0\) to find 
+        \[
+        \ba
+        \asin 0 = C + \sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \frac{(0)^{2n + 1}}{2n + 1} &amp;= 0 \nl 
+        \implies C &amp;= 0 \pd
+        \ea 
+        \]
+        The Maclaurin series is therefore 
+        \[
+        \asin x = \boxed{\sum_{n = 0}^\infty {{-1/2} \choose n} (-1)^n \frac{x^{2n + 1}}{2n + 1}} 
+        \]
+        for \(\abs x \lt 1.\) 
+        It turns out that we have convergence at the endpoints, 
+        so the interval of convergence is the entire domain of \(\asin x\)—namely, \(-1 \leq x \leq 1.\)
+        You may verify this fact by writing the binomial coefficient \({{-1/2} \choose n}\)
+        as the fraction of a polynomial divided by a factorial expression.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-57"> 
+  <div class="box-solution__head">     EXERCISE 57 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+<figure class="taylor-series-simple-pendulum" id="taylor-series-simple-pendulum">
+<img alt="Figure 4" src="../images/sectionImages/taylor-series-simple-pendulum.jpg"/>
+</figure>
+<style>
+            .taylor-series-simple-pendulum::before{
+                content:'FIGURE 4';
+            }
+          </style>
+          An object hanging from a string of length \(\ell\) is extended to point \(A,\)
+          at an angle \(\theta_0\) to the vertical. 
+          The object then swings to point \(B\) and then back to \(A,\) 
+          repeating this trajectory in a periodic motion.
+          (See <a href="#taylor-series-simple-pendulum">Figure 4</a>.)
+          Using Newton's Second Law in rotational form, 
+          the angle \(\theta\) from the vertical at any time \(t\) satisfies the second-order differential equation 
+          \[\derivOrder{\theta}{t}{2} + \frac{g}{\ell} \sin \theta = 0 \cma\]
+          where \(g\) is the acceleration due to gravity.
+          Because this differential equation cannot be solved using elementary functions, 
+          we use the <b>small-angle approximation</b> by replacing \(\sin \theta\) with its first-degree Maclaurin polynomial to get 
+          \[\derivOrder{\theta}{t}{2} + \frac{g}{\ell} \theta = 0 \pd\]
+          This equation holds when \(\theta_0\) is small.
+          <ol class="list-alpha">
+<li>
+                The object's trajectory should follow a sinusoidal function;
+                indeed, the particular solution to the simplified differential equation 
+                is \(\theta(t) = \theta_0 \cos \par{t\sqrt{g/\ell}}.\)
+                Verify this fact.
+            </li>
+<li>
+                Using a graphing utility, 
+                determine the interval of angles \(\theta\) (in degrees)
+                for which the approximation \(\sin \theta \approx \theta\) has an error of less than \(1\%.\)
+            </li>
+<li>
+                When \(\theta_0 = 45 \degree,\) calculate \(\textderivOrder{\theta}{t}{2}.\)
+                Then calculate \(\textderivOrder{\theta}{t}{2}\) using the small-angle approximation 
+                and determine its percent error.
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-57"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Differentiating \(\theta(t) = \theta_0 \cos \par{t\sqrt{g/\ell}},\) we see
+                \[\deriv{\theta}{t} = - \theta_0 \sqrt{\frac{g}{\ell}} \sin \par{t \sqrt{\frac{g}{\ell}}}
+                \and \derivOrder{\theta}{t}{2} = - \theta_0 \frac{g}{\ell} \cos \par{t \sqrt{\frac{g}{\ell}}} \pd
+                \]
+                So we see 
+                \[\underbrace{- \theta_0 \frac{g}{\ell} \cos \par{t \sqrt{\frac{g}{\ell}}}}_{\textderivOrder{\theta}{t}{2}}
+                + \underbrace{\frac{g}{\ell} \theta_0 \cos \par{t\sqrt{g/\ell}}}_{g \theta/\ell} \equalsCheck 0 \pd\]
+                In addition, the initial condition \(\theta(0) = \theta_0\) is satisfied: 
+                \[\theta(0) = \theta_0 \cos 0 \equalsCheck \theta_0 \pd\]
+                Hence, the function \(\theta(t) = \theta_0 \cos \par{t\sqrt{g/\ell}}\)
+                is a particular solution to the second-order differential equation.
+            </li>
+<hr/>
+<li>
+                The percent error is given by the ratio 
+                \[\abs{\frac{\text{estimate} - \text{actual}}{\text{actual}}} \times 100\% = 100 \abs{\frac{\sin \theta - \theta}{\sin \theta}} \pd\]
+                This function is less than \(1\) for \(-0.244 \leq \theta \leq 0.244,\)
+                or 
+                \[\boxed{-13.98 \degree \leq \theta \leq 13.98 \degree}\]
+                Hence, the small-angle approximation has an error of less than \(1\%\) for angles 
+                up to approximately \(14 \degree.\)
+            </li>
+<hr/>
+<li>
+                Without the small-angle approximation, we attain 
+                \[\derivOrder{\theta}{t}{2} = -\frac{g}{\ell} \sin 45 \degree \approx -0.707 \frac{g}{\ell} \pd\]
+                But with the small-angle approximation, noting that \(45 \degree = \pi/4,\) we have 
+                \[\derivOrder{\theta}{t}{2} = -\frac{g}{\ell} \par{\frac{\pi}{4}} \approx -0.785 \frac{g}{\ell} \pd\]
+                The percent error is
+                \[
+                \abs{\frac{-0.785 - (-0.707)}{-0.707}} \times 100\% \approx \boxed{11.033 \%}
+                \]
+                For large angles like \(\theta_0 = 45 \degree,\)
+                we see the failure of the small-angle approximation.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-58"> 
+  <div class="box-solution__head">     EXERCISE 58 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        At some instant, a car's speed is \(30\) feet per second and its acceleration 
+        is \(4\) feet per second squared. 
+        Using a second-degree Maclaurin polynomial, 
+        approximate how far the car travels within the next second.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-58"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(x\) is the car's distance (in feet) from its starting point
+        and \(t\) is time in seconds, 
+        then we are given \(\textderiv{x}{t} = 30 \undiv{ft}{sec}\) and \(\textderivOrder{x}{t}{2}\) \(= 4 \undiv{ft}{sec}^2.\)
+        Let's take \(x = 0\) when \(t = 0.\)
+        Thus, our Maclaurin polynomial is 
+        \[x(t) \approx 0 + 30t + \frac{4}{2} t^2 = 30t + 2t^2 \pd\]
+        Substituting \(t = 1\) shows that the car moves a distance of
+        \[x(1) \approx 30(1) + 2(1)^2 = \boxed{32 \un{ft}} \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-59"> 
+  <div class="box-solution__head">     EXERCISE 59 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<figure class="taylor-series-rlc-circuit" id="taylor-series-rlc-circuit">
+<img alt="Figure 5" src="../images/sectionImages/taylor-series-rlc-circuit.jpg"/>
+</figure>
+<style>
+            .taylor-series-rlc-circuit::before{
+                content:'FIGURE 5';
+            }
+        </style>
+        In a circuit with a battery, resistor, inductor, and capacitor, 
+        let \(I\) be current and \(Q\) be the charge on one plate of the capacitor
+        (<a href="#taylor-series-rlc-circuit">Figure 5</a>). 
+        The current is the time derivative of charge; that is, \(I = \textderiv{Q}{t}.\)
+        One second after the circuit is connected, the current is \(2\) amps
+        and is increasing at a rate of \(0.2\) amp per second, and
+        the charge on the capacitor is \(0.05\) coulomb. 
+        Use a Taylor series centered at \(t = 1\) to approximate the charge on the capacitor's plate 
+        \(1.1\) seconds after the circuit has been connected. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-59"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(I = \textderiv{Q}{t}\) and \(\textderiv{I}{t} = \textderivOrder{Q}{t}{2},\) 
+        the Taylor series for \(Q(t)\) centered at \(t = 1\) is 
+        \[
+        \ba 
+        Q(1) + (t - 1) \deriv{Q}{t} \intEval_{t = 1} + \tfrac{1}{2} (t - 1)^2 \derivOrder{Q}{t}{2} \intEval_{t = 1} 
+        &amp;= 0.05 + 2(t - 1) + \tfrac{1}{2} (t - 1)^2 (0.2) \nl
+        &amp;= 0.05 + 2(t - 1) + 0.1 (t - 1)^2 \pd
+        \ea 
+        \]
+        Plugging in \(t = 1.1,\) we approximate the charge to be 
+        \[Q(1.1) \approx 0.05 + 2(1.1 - 1) + 0.1(1.1 - 1)^2 = \boxed{0.251 \un C}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-60"> 
+  <div class="box-solution__head">     EXERCISE 60 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(\sigma_X\) and \(\sigma_Y\) be the standard deviations, respectively, of the random variables \(X\) and \(Y.\)
+        The standard deviation of the sum \(X + Y\) or difference \(X - Y\) is given by 
+        \[\sigma_{X \pm Y} = \sqrt{\sigma_X^2 + \sigma_Y^2} \pd\]
+        If \(\sigma_X \gt \sigma_Y,\) then find a Maclaurin series expansion for \(\sigma_{X \pm Y}.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-60"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite the function as 
+        \[\sigma_{X \pm Y} = \sigma_X \sqrt{1 + \frac{\sigma_Y^2}{\sigma_X^2}} = \sigma_X \par{1 + \frac{\sigma_Y^2}{\sigma_X^2}}^{1/2} \pd\]
+        (Note that we factor out the \(\sigma_X\) because
+        it is greater; we require \(\sigma_Y/\sigma_X \lt 1\) for convergence.)
+        By using the binomial series with \(k = 1/2,\) we find a Maclaurin series to be given by  
+        \[
+        \ba 
+        \sigma_{X \pm Y} &amp;= \sigma_X \parbr{1 + \frac{1}{2} \par{\frac{\sigma_Y^2}{\sigma_X^2}}
+        + \frac{\frac{1}{2} \par{\frac{1}{2} - 1}}{2!} \par{\frac{\sigma_Y^2}{\sigma_X^2}}^2 + \cdots} \nl 
+        &amp;= \sigma_X \sum_{n = 0}^\infty {{1/2} \choose n} \par{\frac{\sigma_Y^2}{\sigma_X^2}}^n \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty {{1/2} \choose n} \frac{\par{\sigma_Y}^{2n}}{\par{\sigma_X}^{2n - 1}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-61"> 
+  <div class="box-solution__head">     EXERCISE 61 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<figure class="taylor-series-std-normal" id="taylor-series-std-normal">
+<img alt="Figure 6" src="../images/sectionImages/taylor-series-std-normal.jpg"/>
+</figure>
+<style>
+            .taylor-series-std-normal::before{
+                content:'FIGURE 6';
+            }
+        </style>
+        By using a seventh-degree Maclaurin polynomial, calculate the area under the curve
+        \[y = \frac{1}{\sqrt{2 \pi}} e^{-x^2/2}\]
+        from \(x = 0\) to \(x = 2.\) 
+        (This area is the probability that a random variable falls between \(0\) and \(2\) standard deviations from the mean
+        of \(0.\)
+        See <a href="#taylor-series-std-normal">Figure 6</a>.)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-61"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(e^x\) is given by 
+        \[
+        \ba
+        e^x &amp;= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{x^n}{n!} \pd
+        \ea
+        \]
+        Replacing \(x\) with \(-x^2/2\) gives the following series:
+        \[
+        \ba
+        e^{-x^2/2} &amp;= 1 + \par{- \frac{x^2}{2}} + \frac{\par{-x^2/2}^2}{2!} + \frac{\par{-x^2/2}^3}{3!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{n! \, 2^n} \pd 
+        \ea
+        \]
+        The area under the curve is given by \(\int_0^2 y \di x,\) so we have
+        \[
+        \ba 
+        A &amp;= \frac{1}{\sqrt{2 \pi}} \int_0^2 \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{n! \, 2^n} \di x \nl 
+        &amp;= \frac{1}{\sqrt{2 \pi}} \sum_{n = 0}^\infty \frac{(-1)^n}{n! \, 2^n} \int_0^2 x^{2n} \di x \nl 
+        &amp;= \frac{1}{\sqrt{2 \pi}} \sum_{n = 0}^\infty \frac{(-1)^n}{n! \, 2^n} \par{\frac{x^{2n + 1}}{2n + 1}} \intEval_0^2 \nl 
+        &amp;= \frac{1}{\sqrt{2 \pi}} \sum_{n = 0}^\infty \frac{(-1)^n}{n! \, 2^n (2n + 1)} (2)^{2n + 1} \nl
+        &amp;\approx \frac{1}{\sqrt{2 \pi}} \parbr{2 - \frac{1}{6} (2)^3 + \frac{1}{40}(2)^5 - \frac{1}{336}(2)^7} \nl 
+        &amp;\approx \boxed{0.433}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-62"> 
+  <div class="box-solution__head">     EXERCISE 62 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<figure class="taylor-series-efield-plate" id="taylor-series-efield-plate">
+<img alt="Figure 7" src="../images/sectionImages/taylor-series-efield-plate.jpg"/>
+</figure>
+<style>
+            .taylor-series-efield-plate::before{
+                content:'FIGURE 7';
+            }
+          </style>
+          A uniformly charged disk has a radius of \(R\) and a surface charge density of \(\sigma.\)
+          Point \(P\) lies a distance \(d\) along the disk's perpendicular central axis.
+          (See <a href="#taylor-series-efield-plate">Figure 7</a>.)
+          The electric potential \(V\)—the electric field per unit charge—at \(P\) is given by 
+          \[V = 2 \pi k_C \sigma \par{\sqrt{d^2 + R^2} - d} \cma\]
+          where \(k_C\) is Coulomb's constant. 
+          For large \(d,\) show that 
+          \[V \approx \frac{\pi k_C \sigma R^2}{d} \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-62"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that 
+        \[\sqrt{d^2 + R^2} = d \sqrt{1 + \frac{R^2}{d^2}} = d \par{1 + \frac{R^2}{d^2}}^{1/2} \pd\]
+        Using the binomial series with \(k = 1/2,\) we see 
+        \[
+        \sqrt{d^2 + R^2}
+        = d \parbr{1 + \frac{1}{2} \par{\frac{R^2}{d^2}} 
+        + \frac{\frac{1}{2} \par{\frac{1}{2} - 1}}{2!} \par{\frac{R^2}{d^2}}^2 + \cdots} \pd
+        \] 
+        When \(d\) is large, \(R^2/d^2\) is small and \(\par{R^2/d^2}^2\) is even smaller.
+        We therefore neglect all terms after the second term, so we use 
+        \[\sqrt{d^2 + R^2} \approx d \par{1 + \frac{R^2}{2d^2}} = d + \frac{R^2}{2d} \pd\]
+        Accordingly, we see 
+        \[
+        \ba 
+        V &amp;\approx 2 \pi k_C \sigma \par{d + \frac{R^2}{2d} - d} \nl 
+        &amp;= \frac{2 \pi k_C \sigma R^2}{2d} = \frac{\pi k_C \sigma R^2}{d} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-63"> 
+  <div class="box-solution__head">     EXERCISE 63 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For the Taylor approximation \(T_N(x),\)
+        which statement is true about Taylor's Remainder Theorem?
+        <ol class="list-mcq">
+<li>
+                Taylor's Remainder Theorem allows us to calculate 
+                the exact error of \(T_N(x).\)
+            </li>
+<li>    
+                Taylor's Remainder Theorem bounds the remainder of \(T_N(x)\)
+                by the magnitude of the first omitted term of the Taylor approximation,
+                that is, the <nobr>\((N + 1)\)st</nobr> term.
+            </li>
+<li>
+                Taylor's Remainder Theorem gives a value greater than or equal to the true error in \(T_N(x).\)
+            </li>
+<li>
+                Taylor's Remainder Theorem is only applicable for non-alternating series.
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-63"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>Option (C)</b>. 
+        Taylor's Remainder Theorem is applicable to all series, not simply non-alternating series, 
+        and <i>does not give the exact remainder</i>. 
+        The theorem solely provides a bound for the remainder \(R_N(x) \col\)
+        \[\abs{R_N(x)} \leq \frac{M}{(N + 1)!} \abs{x - a}^{N + 1} \pd\]
+        In other words, we attain a number that is greater than or equal to \(\abs{R_N(x)}.\) 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-64"> 
+  <div class="box-solution__head">     EXERCISE 64 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+        Let \(f\) be a function that has derivatives of all orders and satisfies \(f(1) = 4.\) 
+        The given table provides values of \(f^{(n)}(1)\) for selected \(n.\)
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(n\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(f^{(n)}(1)\)
+                </td>
+<td>
+                    \(-2\)
+                </td>
+<td>
+                    \(16\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(-1\)
+                </td>
+</tr>
+</table>
+        It is known that \(\abs{f^{(5)}(x)} \leq 50\) for all \(1 \leq x \leq 1.2.\)
+        <ol class="list-alpha">
+<li>
+                Write a fourth-degree Taylor series for \(f(x)\) centered at \(x = 1,\)
+                and use it to estimate \(f(1.2).\)
+            </li>
+<li>
+                Use Taylor's Remainder Theorem to bound the error to your approximation in part (a).
+            </li>
+<li>
+                Construct an interval in which the value of \(f(1.2)\) must reside.
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-64"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                We have \(f(1) = 4,\) \(f'(1) = -2,\) \(f''(1) = 16,\)
+                \(f'''(1) = 3,\) and \(f^{(4)}(1) = -1.\)
+                Then the fourth-degree Taylor series to \(f(x)\) centered at \(x = 1\) is 
+                \[
+                \ba 
+                T_4(x) &amp;= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 + \frac{f'''(1)}{3!}(x - 1)^3 
+                + \frac{f^{(4)}(1)}{4!}(x - 1)^4 \nl
+                &amp;= 4 -2(x - 1) + 8(x - 1)^2 + \frac{1}{2}(x - 1)^3 -\frac{1}{24}(x - 1)^4 \period 
+                \ea 
+                \] 
+                Then we approximate \(f(1.2)\) to be  
+                \[ 
+                \ba 
+                f(1.2) \approx T_4(1.2) &amp;= 4 -2(1.2-1) + 8(1.2-1)^2 + \frac{1}{2}(1.2-1)^3 -\frac{1}{24}(1.2-1)^4 \nl
+                &amp;\approx \boxed{3.924}
+                \ea 
+                \] 
+            </li>
+<hr/>
+<li>
+                We bound the error to \(T_4(1.2)\) using Taylor's Remainder Theorem: 
+                \[\abs{f(1.2) - T_4(1.2)} \leq \frac{M}{(N + 1)!} \abs{x - a}^{N + 1} \pd \] 
+                The degree of our Taylor series is \(4,\) so \(N = 4.\) 
+                We then have \(x = 1.2;\) and the series is centered at \(1,\) so \(a = 1.\) 
+                Since \(\abs{f^{(5)}(x)} \leq 50 \) for all \(1 \leq x \leq 1.2,\) we let \(M = 50.\) 
+                Substituting these values gives 
+                \[
+                \abs{f(1.2) - T_4(1.2)} \leq \frac{50}{(4 + 1)!} (1.2 - 1)^{4 + 1} \approx \boxed{0.00013} 
+                \]
+                Our estimate to \(f(1.2)\) has an error whose magnitude is no more than \(0.000013.\) 
+            </li>
+<hr/>
+<li>
+                Our estimate, \(T_4(1.2),\) either overestimates or underestimates the value of \(f(1.2)\)
+                by no more than \(0.000013.\)
+                Therefore, a lower bound for \(f(1.2)\) is 
+                \[3.924 - 0.000013 = 3.923987 \comma \]
+                and an upper bound for \(f(1.2)\) is 
+                \[3.924 + 0.000013 = 3.924013 \period \]
+                The value of \(f(1.2)\) must lie between these numbers, so our interval is 
+                \[\boxed{3.923987 \leq f(1.2) \leq 3.924013}\]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-65"> 
+  <div class="box-solution__head">     EXERCISE 65 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+        The fourth-degree Maclaurin series for \(\cos x\) is 
+        \[T_4(x) = 1 - \frac{x^2}{2} + \frac{x^4}{4!} \pd\]
+        Using Taylor's Remainder Theorem, find a value \(K\) such that 
+        \(\abs{\cos 0.7 - T_4(0.7)} \leq K.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-65"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(K\) is an error bound to \(T_4(0.7).\)
+        Using Taylor's Remainder Theorem, we get  
+        \[K = \frac{M}{(N + 1)!} \abs{x}^{N + 1} \cma\]
+        where \(x = 0.7\) and \(N = 4.\)
+        The fifth derivative of \(\cos x\) is \(- \sin x.\)
+        The maximum value of \(\abs{- \sin x}\) over 
+        \(0 \leq x \leq 0.7\) is \(\sin 0.7.\)
+        Thus, we assign \(M = \sin 0.7.\)
+        Our error bound then becomes 
+        \[
+        \ba 
+        K &amp;= \frac{\sin 0.7}{(4 + 1)!} (0.7 - 0)^{4 + 1} \nl
+        &amp;= \frac{\sin 0.7}{5!}(0.7)^5 \nl
+        &amp;\approx \boxed{0.0009}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-66"> 
+  <div class="box-solution__head">     EXERCISE 66 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the Maclaurin series 
+        \[1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots + \frac{(-1)^n \, x^{2n}}{(2n)!} + \cdots\]
+        converges to \(\cos x\) for all \(x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-66"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series converges for all \(x.\)
+        But how do we show that it specifically converges to \(\cos x\) for all \(x \ques\)
+        We use Taylor's Inequality Theorem to show that the remainder \(R_N(x)\) of 
+        an <nobr>\(N\)th</nobr>-degree Maclaurin polynomial approaches \(0\) as \(N \to \infty.\)
+        By the theorem,
+        \[\abs{R_N(x)} \leq \frac{M}{(N + 1)!} \abs{x}^{N + 1} \pd\]
+        The derivatives of \(\cos x\) are always either \(\pm \sin x\) or \(\pm \cos x.\)
+        Since the maximum of \(\abs{\sin x}\) or \(\abs{\cos x}\) is \(1,\)
+        we take \(M = 1.\) 
+        So the inequality becomes 
+        \[\abs{R_N(x)} \leq \frac{1}{(N + 1)!} \abs{x}^{N + 1} \pd\]
+        Regardless of the value of \(x,\) 
+        the right side approaches \(0\) as \(N \to \infty.\)
+        (A factorial grows faster than an exponential function, thus pushing the fraction to <nobr>\(0.\))</nobr>
+        By the Squeeze Theorem, \(\lim_{N \to \infty} R_N(x) = 0.\)
+        Hence, the Maclaurin series represents \(\cos x\) for all \(x.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-67"> 
+  <div class="box-solution__head">     EXERCISE 67 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the Maclaurin series
+        \[x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots + \frac{(-1)^{n + 1} \, x^n}{n} + \cdots\]
+        converges to \(\ln(1 + x)\) for \(0 \leq x \leq 1.\)
+        (The full interval of convergence is \(-1 \lt x \leq 1,\)
+        but it is difficult to prove convergence for <nobr>\(-1 \lt x \leq 0.\))</nobr>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-67"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Taking derivatives of \(f(x) = \ln(1 + x),\) we see 
+        \[
+        \ba 
+        f'(x) &amp;= \frac{1}{1 + x} \cma \nl 
+        f''(x) &amp;= -\frac{1}{(1 + x)^2} \cma \nl 
+        f'''(x) &amp;= \frac{2}{(1 + x)^3} \cma \nl 
+        f^{(4)}(x) &amp;= -\frac{6}{(1 + x)^4} \cma \nl 
+        f^{(5)}(x) &amp;= \frac{24}{(1 + x)^5} \cma \nl 
+        &amp;\vdotss \nl 
+        f^{(N)}(x) &amp;= \frac{(-1)^{N + 1} (N - 1)!}{(1 + x)^N} \pd
+        \ea 
+        \]
+        So we see 
+        \[\abs{f^{(N + 1)}(x)} = \frac{N!}{(1 + x)^{N + 1}} \cma\]
+        whose maximum over \(0 \leq x \leq 1\) is \(M = N!\) (when <nobr>\(x = 0\)).</nobr>
+        Accordingly, Taylor's Inequality gives 
+        \[
+        \ba 
+        \abs{R_N(x)} &amp;\leq \frac{M}{(N + 1)!} \abs{x}^{N + 1} \nl 
+        &amp;= \frac{N!}{(N + 1)!} x^{N + 1} = \frac{N!}{(N + 1) N!} x^{N + 1} \nl 
+        &amp;= \frac{x^{N + 1}}{N + 1} \pd
+        \ea 
+        \]
+        For \(0 \leq x \leq 1,\) the factor \(x^{N + 1}\) <i>shrinks or remains constant</i> as \(N\) increases. 
+        Thus, \(x^{N + 1}/(N + 1) \to 0\) as \(N \to \infty;\)
+        from the Squeeze Theorem, \(R_N(x) \to 0\) as \(N \to \infty\) too. 
+        Because the remainder approaches \(0\) as \(N \to \infty,\)
+        the Maclaurin series represents \(\ln(1 + x)\) over \(0 \leq x \leq 1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-68"> 
+  <div class="box-solution__head">     EXERCISE 68 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove Taylor's Remainder Theorem for \(N = 2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-68"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(f\) be a function for which the <nobr>\(N\)th</nobr>-degree
+        Taylor polynomial centered at \(a\) is \(T_N(x).\)
+        Since the remainder is given by \(R_N(x) = \) \(f(x) - T_N(x),\)
+        we need to show that, for \(\abs{x - a} \leq r,\) 
+        \[\abs{R_N(x)} \leq \frac{M}{(N + 1)!} \abs{x - a}^{N + 1} \cma\]
+        where \(M\) is the maximum value of \(\abs{f^{(N + 1)}(x)}\) over \(\abs{x - a} \leq r.\)
+        For \(N = 2\) we assume \(\abs{f'''(x)} \leq M,\)
+        and our goal is to show 
+        \[\abs{R_2(x)} \leq \frac{M}{3!} \abs{x - a}^{3} \pd\]
+        Let's consider two cases, with the first case being \(f'''(x) \lt M.\)
+        Integrating both sides from \(a\) to \(x\) (and using a dummy variable \(t\) in place of <nobr>\(x\)),</nobr> we have 
+        \[
+        \ba 
+        \int_a^x f'''(t) \di t &amp;\leq \int_a^x M \di t \nl
+        f''(x) - f''(a) &amp; \leq M(x - a) \pd
+        \ea 
+        \] 
+        Integrating both sides twice with the same bounds,
+        we get 
+        \[
+        \ba 
+        f'(x) - f'(a) - f''(a) (x - a) &amp;\leq \frac{M (x - a)^2}{2} \nl 
+        f(x) - f(a) - f'(a) (x - a) - \frac{f''(a)}{2} (x - a)^2 &amp;\leq \frac{M(x - a)^3}{6} \pd
+        \ea
+        \]
+        But the second-degree Taylor series is \(T_2(x) = f(a) + f'(a)(x - a)\) \(+ f''(a) (x - a)^2/2,\) 
+        so the inequality becomes 
+        \[f(x) - T_2(x) = R_2(x) \leq \frac{M(x - a)^3}{6} \cma\]
+        as required. 
+        Now assuming \(f'''(x) \geq -M,\) we repeat the steps of integration to obtain 
+        \[
+        \ba 
+        f''(x) - f''(a) &amp;\geq -M(x - a) \nl 
+        f'(x) - f'(a) - f''(a) (x - a) &amp;\geq -\frac{M (x - a)^2}{2} \nl 
+        f(x) - f(a) - f'(a)(x - a) - \frac{f''(a)}{2} (x - a)^2 &amp;\geq -\frac{M(x - a)^3}{6} \nl 
+        R_2(x) &amp;\geq -\frac{M(x - a)^3}{6} \nl 
+        \implies \abs{R_2(x)} &amp;\leq \abs{\frac{M(x - a)^3}{6}} \pd
+        \ea 
+        \]
+        While this proof assumes \(x \gt a,\) it is easy to reverse the bounds of integration 
+        if we take \(x \lt a.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-69"> 
+  <div class="box-solution__head">     EXERCISE 69 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 \ln(1 + x) \di x\]
+    </blockquote> find a series whose value equals the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-69"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\ln(1 + x)\) is given by
+        \[
+        \ba
+        \ln(1 + x) &amp;= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \nl
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^{n + 1} \, x^n}{n} \pd
+        \ea
+        \]
+        We therefore find 
+        \[
+        \ba 
+        \int_0^1 \ln(1 + x) \di x 
+        &amp;= \int_0^1 \sum_{n = 1}^\infty \frac{(-1)^{n + 1} \, x^n}{n} \di x \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n} \int_0^1 x^n \di x \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n} \par{\frac{x^{n + 1}}{n + 1}} \intEval_0^1 \nl 
+        &amp;= \boxed{\sum_{n = 1}^\infty \frac{(-1)^{n + 1}}{n(n + 1)}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-70"> 
+  <div class="box-solution__head">     EXERCISE 70 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^2 \sin \par{x^3} \di x\]
+    </blockquote> find a series whose value equals the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-70"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\sin \par{x^3}\) is given by
+        \[
+        \ba
+        \sin \par{x^3} &amp;= \par{x^3} - \frac{\par{x^3}^3}{3!} + \frac{\par{x^3}^5}{5!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{6n + 3}}{(2n + 1)!} \pd
+        \ea
+        \]
+        Hence, we see 
+        \[
+        \ba 
+        \int_0^2 \sin \par{x^3} \di x &amp;= \int_0^2 \sum_{n = 0}^\infty \frac{(-1)^n \, x^{6n + 3}}{(2n + 1)!} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n + 1)!} \int_0^2 x^{6n + 3} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n + 1)!} \par{\frac{x^{6n + 4}}{6n + 4}} \intEval_0^2 \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, (2)^{6n + 4}}{(6n + 4)(2n + 1)!}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-71"> 
+  <div class="box-solution__head">     EXERCISE 71 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 \frac{\atan x}{x} \di x\]
+    </blockquote> find a series whose value equals the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-71"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\atan x\) is given by
+        \[
+        \ba
+        \atan x &amp;= x - \frac{x^3}{3} + \frac{x^5}{5} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \pd
+        \ea
+        \]
+        Therefore, 
+        \[
+        \ba 
+        \int_0^1 \frac{\atan x}{x} \di x
+        &amp;= \int_0^1 \frac{1}{x} \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{2n + 1} \int_0^1 x^{2n} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{2n + 1} \par{\frac{x^{2n + 1}}{2n + 1}} \intEval_0^1 \nl 
+        &amp;= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n}{(2n + 1)^2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-72"> 
+  <div class="box-solution__head">     EXERCISE 72 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 \frac{1}{1 + x^8} \di x \cmaa \abs{\text{error}} \leq 0.01\]
+    </blockquote> use a series to approximate the integral within the given error. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-72"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The power series for \(1/(1 - x)\) is given by
+        \[\frac{1}{1 - x} = 1 + x + x^2 + x^3 + \cdots \pd\]
+        Thus, replacing \(x\) with \(-x^8\) shows 
+        \[
+        \ba 
+        \frac{1}{1 + x^8} &amp;= 1 + \par{-x^8} + \par{-x^8}^2 + \par{-x^8}^3 + \cdots \nl 
+        &amp;= \sum_{n = 0}^\infty (-1)^n \, x^{8n} \pd
+        \ea 
+        \]
+        Accordingly, we see 
+        \[
+        \ba 
+        \int_0^1 \frac{1}{1 + x^8} \di x &amp;= \int_0^1 \sum_{n = 0}^\infty (-1)^n \, x^{8n} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty (-1)^n \int_0^1 x^{8n} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty (-1)^n \par{\frac{x^{8n + 1}}{8n + 1}} \intEval_0^1 \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{8n + 1} \pd 
+        \ea
+        \]
+        How many terms should we include to ensure the error is within \(0.01 \ques\)
+        In other words, when we approximate the integral using 
+        \[\int_0^1 \frac{1}{1 + x^8} \di x \approx \sum_{i = 0}^N \frac{(-1)^i}{8i + 1} \cma\]
+        how large must we make \(N \ques\)
+        Because the series is alternating, we use the Alternating Series Error Bound 
+        (from Section <a href="/Valculus/calculus/10.5-Alternating-Series.html">10.5</a>)
+        to assert that the partial sum has an error whose magnitude is no greater than
+        \[\abs{\frac{(-1)^{N + 1}}{8(N + 1) + 1}} = \frac{1}{8N + 9} \pd\]
+        Letting this expression be less than or equal to \(0.01,\) we see 
+        \[
+        \ba 
+        \frac{1}{8N + 9} &amp;\leq 0.01 \nl 
+        8N + 9 &amp;\geq 100 \nl 
+        \implies N&amp;\geq \frac{91}{8} \cma
+        \ea 
+        \]
+        which we round up to \(N \geq 12.\)
+        Hence, if we use the first \(12\) terms of the series, 
+        then we attain an error of no more than \(0.01.\)
+        We therefore find
+        \[\int_0^1 \frac{1}{1 + x^8} \di x \approx \boxed{\sum_{i = 0}^{12} \frac{(-1)^i}{8i + 1}} \approx 0.930 \pd \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-73"> 
+  <div class="box-solution__head">     EXERCISE 73 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^2 \cos \par{x^3} \di x \cma \abs{\text{error}} \leq 0.1\]
+    </blockquote> use a series to approximate the integral within the given error. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-73"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Maclaurin series for \(\cos \par{x^3}\) is given by
+        \[
+        \ba
+        \cos \par{x^3} &amp;= 1 - \frac{\par{x^3}^2}{2!} + \frac{\par{x^3}^4}{4!} + \cdots \nl
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{6n}}{(2n)!} \pd
+        \ea
+        \]
+        Next, we find 
+        \[
+        \ba 
+        \int_0^2 \cos \par{x^3} \di x 
+        &amp;= \int_0^2 \sum_{n = 0}^\infty \frac{(-1)^n \, x^{6n}}{(2n)!} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n)!} \int_0^2 x^{6n} \di x \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n)!} \par{\frac{x^{6n + 1}}{6n + 1}} \intEval_0^2 \nl 
+        &amp;= \sum_{n = 0}^\infty \frac{(-1)^n \, 2^{6n + 1}}{(2n)! \, (6n + 1)} \pd
+        \ea     
+        \]
+        Let's take 
+        \[\int_0^2 \cos \par{x^3} \di x \approx \sum_{i = 0}^N \frac{(-1)^i \, 2^{6i + 1}}{(2i)! \, (6i + 1)} \pd\]
+        Because the series is alternating, 
+        the Alternating Series Error Bound (from Section <a href="/Valculus/calculus/10.5-Alternating-Series.html">10.5</a>)
+        gives an error bound for the partial sum to be 
+        \[\abs{\frac{(-1)^{N + 1} \, 2^{6(N + 1) + 1}}{[2(N + 1)]! \parbr{6(N + 1) + 1}}}
+        = \frac{2^{6N + 7}}{(2N + 2)! \, (6N + 7)} \pd
+        \]
+        This expression becomes less than \(0.1\) when \(N \geq 9.\)
+        Accordingly, we use 
+        \[\int_0^2 \cos \par{x^3} \di x \approx 
+        \boxed{\sum_{i = 0}^9 \frac{(-1)^i \, 2^{6i + 1}}{(2i)! (6i + 1)}} 
+        \approx 0.842 \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

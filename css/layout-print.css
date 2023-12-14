@@ -1,12 +1,15 @@
 body{
     margin: 0;
     padding: 0;
+    color: black;
+    background-color: white;
+    width: 50%;
 }
 
 @page  
 { 
     size: auto;   
-    margin: 0in 1in 1in 1in; 
+    margin: 0in 1in -1in 1in; 
 } 
 
 h1{ /* section title */

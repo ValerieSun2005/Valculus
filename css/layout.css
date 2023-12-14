@@ -501,6 +501,14 @@ th{
     table-layout: fixed;
 }
 
+.table-long-left{
+    table-layout: unset;
+}
+
+.table-long-left td:nth-child(1){
+    width: 78%;
+}
+
 .table-full-width td{
     text-align: left;
     padding: 2px 2% 2px 2%
@@ -542,9 +550,9 @@ main tr{
     padding-bottom: 10px;
 } 
 
-.tall-row td{ /* make ENTIRE TABLE ROW tall */
-    padding-top: 10px;
-    padding-bottom: 10px;
+.tall-row td, .table-tall td{ /* make ENTIRE TABLE ROW tall */
+    padding-top: 11px;
+    padding-bottom: 11px;
 }
 
 td{
@@ -668,7 +676,7 @@ ol li{
 }
 
 .list-mcq > li:before {
-    content: "(" counter(list, upper-alpha) ") ";
+    content: "(" counter(list, upper-alpha) ")  ";
     counter-increment: list;
 }
 

@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.8: Taylor and Maclaurin Series</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>10.8 — Taylor and Maclaurin Series</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.8-Taylor-and-Maclaurin-Series-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="10.8-Taylor-and-Maclaurin-Series-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Maclaurin-and-Taylor-Series]]]--> 
+
+<p>
+  In Section <a href="/Valculus/calculus/10.7-Power-Series.html">10.7</a> we learned to represent functions as 
+  <i>power series</i> based on geometric series.
+  But how do we generalize this idea to beyond geometric series, 
+  and how can we prove that a function even has a power series representation?
+  In this section we answer these questions, and we learn to write <i>Taylor and Maclaurin series</i>, 
+  specific types of power series for functions involving their derivatives at a certain point. 
+  Doing so unlocks many possibilities, since polynomials are the simple functions to construct—both in math and programming.
+  In the Exercises section, you'll work through a diverse range of applications to these series. 
+  We discuss the following topics:
+  <ul>
+    <li>
+      <a href="#taylor-and-maclaurin-series" class="page-anchor">Taylor Series and Maclaurin Series</a>
+    </li>
+    <li>
+      <a href="#taylor-remainder-theorem" class="page-anchor">Taylor's Remainder Theorem</a>
+    </li>
+    <li>
+      <a href="#manipulating-taylor-series" class="page-anchor">Manipulating Taylor Series</a>
+    </li>
+    <li>
+      <a href="#binomial-series" class="page-anchor">Binomial Series</a>
+    </li>
+  </ul>
+</p>
+<h4 id="taylor-and-maclaurin-series">Taylor Series and Maclaurin Series</h4>
+
+<figure class="taylor-series-linear" id="taylor-series-linear">
+  <img src="../images/sectionImages/taylor-series-linear.jpg" alt="Figure 1">
+</figure>
+<style>
+  .taylor-series-linear::before{
+      content:'FIGURE 1';
+  }
+</style>
+
+<p>
+  In Section <a href="/Valculus/calculus/2.7-Linearization-and-Differentials.html">2.7</a>
+  we constructed a tangent line \(y = L(x)\) to the curve \(y = f(x)\) 
+  at some point \((a, f(a)).\)
+  (See <a href="#taylor-series-linear">Figure 1</a>.)
+  An equation for \(L(x)\) is 
+  \begin{equation} 
+  L(x) = f(a) + f'(a) (x - a) \pd \label{eq:L(x)}
+  \end{equation}
+  This model takes \(f(a) = L(a)\) and \(f'(a) = L'(a).\)
+  In doing so, we approximate the function \(f\) using a first-degree polynomial 
+  that intersects the curve at \(x = a\) and whose derivative at \(x = a\) is equal to \(f'(a).\)
+  But the polynomial would become an even better approximation of \(f\) if, at \(x = a,\)
+  its second, third, and fourth derivatives 
+  also equaled the derivatives of \(f\) at \(a.\)
+  (The polynomial better approximates \(f\) if the rates of change are the same.)
+  Continuing this pattern, let's suppose that \(P^{(n)}(a) = f^{(n)}(a)\)
+  for any integer \(n.\)
+  A general <nobr>\(N\)th</nobr>-degree polynomial for \(f\) centered at \(x = a\) is
+  \begin{equation} 
+  P(x) = c_0 + c_1 (x - a) + c_2 (x - a)^2 + c_3 (x - a)^3 + c_4 (x - a)^4 + \cdots + c_N (x - a)^N \pd \label{eq:P(x)}
+  \end{equation}
+  Let's try to express the coefficients \(c_1, c_2, \dots,\) \(c_N\) in terms of the derivatives of \(f\) at \(a.\)
+  Repeated differentiation of \(P\) shows 
+  \[
+  \ba 
+  P'(x) &= c_1 + 2 c_2 (x - a) + 3 c_3 (x - a)^2 + 4 c_4 (x - a)^3 + \cdots + N c_N (x - a)^{N - 1} \cma \nl 
+  P''(x) &= 2 c_2 + (3 \cdot 2) c_3 (x - a) + (4 \cdot 3) c_4 (x - a)^2 + \cdots + N (N - 1) c_N (x - a)^{N - 2} \cma \nl 
+  P''' (x) &= (3 \cdot 2) c_3 + (4 \cdot 3 \cdot 2) c_4 (x - a) + \cdots + N (N - 1) (N - 2) c_N (x - a)^{N - 3} \cma \nl 
+  &\vdotss \nl 
+  P^{(N)}(x) &= N(N - 1)(N - 2) \cdot \, \cdots \, \cdot 2 \cdot 1 a_n \pd
+  \ea 
+  \]
+  Letting \(x = a\) in the equations, we see that all the factors \((x - a)\) become \(0\) and so 
+  \[P(a) = c_0 \cmaa P'(a) = c_1 \cmaa P''(a) = (2 \cdot 1) c_2 \cmaa P'''(a) = (3 \cdot 2 \cdot 1) c_3 \cmaa 
+  P^{(N)}(a) = N! \, c_N \pd\]
+  We want \(P^{(n)}(a) = f^{(n)}(a),\) so we equate the expressions and solve for the coefficients:
+  \[c_0 = f(a) \cmaa c_1 = f'(a) \cmaa c_2 = \frac{f''(a)}{2!} \cmaa c_3 = \frac{f'''(a)}{3!} \cmaa 
+  c_N = \frac{f^{(N)}(a)}{N!} \pd\]
+  Substituting these expressions into \(\eqref{eq:P(x)}\) gives 
+  \begin{equation} 
+  P(x) = f(a) + f'(a) (x - a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f'''(a)}{3!} (x - a)^3 
+  + \cdots + \frac{f^{(N)}(a)}{N!} (x - a)^N \pd
+  \label{eq:taylor-poly-N}
+  \end{equation}
+  We call this function an <nobr>\(N\)th</nobr>-degree <span class="emph">Taylor polynomial</span>
+  for \(f\) centered at \(x = a.\)
+  In fact, the linearization in \(\eqref{eq:L(x)}\)
+  is a <i>first-degree</i> Taylor polynomial centered at \(x = a.\)
+  Let's suppose that adding higher-degree terms to the polynomial—that is, increasing \(N\)—increases 
+  the accuracy of the polynomial \(P\) in approximating \(f.\)
+  (See <a href="#taylor-series-animation">Animation 1</a>.)
+  If the polynomial contains infinitely many terms, then we attain a <span class="emph">Taylor series</span>:
+  \begin{equation} 
+  \ba
+  T(x) &= f(a) + f'(a) (x - a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f'''(a)}{3!} (x - a)^3 
+  + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n \pd
+  \ea
+  \label{eq:taylor-series}
+  \end{equation}
+  This expansion is a special power series whose coefficients involve the derivatives of \(f\) at \(a.\)
+  In \(\eqref{eq:taylor-series}\) if \(a = 0,\) then the series becomes a <span class="emph">Maclaurin series</span>,
+  the special name given to a Taylor series centered at \(a = 0.\)
+  We have
+  \begin{equation} 
+  \ba
+  T(x) &= f(0) + f'(0) x + \frac{f''(0)}{2!} x^2 + \frac{f'''(0)}{3!} x^3 
+  + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{f^{(n)}(0)}{n!} x^n \pd 
+  \ea
+  \label{eq:maclaurin-series}
+  \end{equation}
+  Similarly, a <span class="emph">Maclaurin polynomial</span> uses only a few terms of a Maclaurin <i>series</i>
+  to approximate a function \(f.\)
+</p>
+
+<figure class="taylor-series-animation figure-center-one" id="taylor-series-animation">
+  <img src="../images/sectionAnimations/taylor-series.gif" alt="ANIMATION 1">
+</figure>
+<style>
+  .taylor-series-animation::before{
+      content:'ANIMATION 1';
+  }
+</style>
+
+<div class="box-title">TAYLOR SERIES AND MACLAURIN SERIES</div>
+<div class="box">
+  If \(f\) has derivatives of all orders at \(a,\) 
+  then the <span class="emph">Taylor series</span> of \(f\) centered at \(a\) is 
+  \begin{equation} 
+  \ba
+  T(x) &= f(a) + f'(a) (x - a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f'''(a)}{3!} (x - a)^3 
+  + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n \pd
+  \ea
+  \eqlabel{eq:taylor-series}
+  \end{equation}
+  For \(a = 0,\) the <span class="emph">Maclaurin series</span> 
+  of \(f\) is
+  \begin{equation} 
+  \ba
+  T(x) &= f(0) + f'(0) x + \frac{f''(0)}{2!} x^2 + \frac{f'''(0)}{3!} x^3 
+  + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{f^{(n)}(0)}{n!} x^n \pd 
+  \ea
+  \eqlabel{eq:maclaurin-series}
+  \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+  <div class="example-problem">  
+      Find the fourth-degree Taylor polynomial for \(f(x) = \ln x\)
+      centered at \(a = 1.\)
+  </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+  <figure class="taylor-series-4-ln" id="taylor-series-4-ln">
+    <img src="../images/sectionImages/taylor-series-4-ln.jpg" alt="Figure 2">
+  </figure>
+  <style>
+    .taylor-series-4-ln::before{
+        content:'FIGURE 2';
+    }
+  </style>
+  We take \(N = 4\) derivatives of \(f(x) = \ln x\) at \(x = 1,\) as follows:
+  \[f'(x) = \frac{1}{x} \cmaa f''(x) = -\frac{1}{x^2} \cmaa f'''(x) = \frac{2}{x^3} \cmaa f^{(4)}(x) = -\frac{6}{x^4} \pd\]
+  We therefore see
+  \[
+  \ba
+  f(1) &= \ln 1 = 0 \cma \nl
+  f'(1) &= \frac{1}{1} = 1 \cma \nl 
+  f''(1) &= -\frac{1}{1^2} = -1 \cma \nl 
+  f'''(1) &= \frac{2}{1^3} = 2 \cma \nl 
+  f^{(4)}(1) &= -\frac{6}{1^4} = -6 \pd
+  \ea
+  \]
+  So the Taylor series is, following \(\eqref{eq:taylor-series}\) up to the fourth-degree term,
+  \[
+  \ba
+  T_4(x) &= 0 + 1(x - 1) + \frac{-1}{2!}(x - 1)^2 + \frac{2}{3!}(x - 1)^3 + \frac{-6}{4!}(x - 1)^4 \nl 
+  &= \boxed{(x - 1) - \frac{1}{2} (x - 1)^2 + \frac{1}{3} (x - 1)^3 - \frac{1}{4} (x - 1)^4}
+  \ea
+  \]
+  <a href="#taylor-series-4-ln">Figure 2</a> shows the graphs of \(y = \ln x\)
+  and the Taylor polynomial \(y = T_4(x).\)
+  These curves are nearly identical for \(x\) close to the center, \(a = 1.\)
+  Yet for \(x\) farther from \(1,\) the polynomial deviates from the curve \(y = \ln x.\)
+</div>
+
+<div class="example-title" id="ex-e^x"> EXAMPLE 2 </div>
+<div class="example">
+  <div class="example-problem">  
+      Determine the Maclaurin series for \(f(x) = e^x.\)
+      Find its interval of convergence and radius of convergence.
+  </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+  For all \(n\) we see \(f^{(n)}(x) = e^x,\) 
+  so \(f^{(n)}(0) = e^0 = 1.\) 
+  The Maclaurin series for \(e^x\) is, following \(\eqref{eq:maclaurin-series},\)
+  \[
+  \sum_{n = 0}^\infty \frac{f^{(n)}(0) x^n}{n!} = \sum_{n = 0}^\infty \frac{x^n}{n!} 
+  = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \pd
+  \]
+  To find the interval of convergence, we let \(a_n = x^n/n!\) and see 
+  \[
+  \ba
+  L &= \lim_{n \to \infty} \abs{\frac{a_{n + 1}}{a_n}} \nl 
+  &= \lim_{n \to \infty} \abs{\frac{x^{n + 1}}{(n + 1)!} \cdot \frac{n!}{x^n}} \nl 
+  &= \lim_{n \to \infty} \abs{\frac{x}{n + 1}} = 0 \pd
+  \ea
+  \]
+  (See Section <a href="/Valculus/calculus/10.7-Power-Series.html">10.7</a> to review 
+  finding the interval of convergence.)
+  Since \(L = 0,\) 
+  the Maclaurin series converges for all \(x.\)
+  Hence, the interval of convergence is \(\boxed{(-\infty, \infty)}\)
+  and the radius of convergence is \(\boxed{R = \infty}.\)
+</div>
+
+<h4 id="taylor-remainder-theorem">Taylor's Remainder Theorem</h4>
+<p>
+  Up to this point, we have assumed 
+  that a function \(f\) has a Taylor series expansion at \(x = a.\)
+  But for \(x\) in an interval \(I,\) a Taylor series may diverge;
+  or if it does converge in \(I,\) then it may not converge to \(f(x).\)  
+  How do we know whether the Taylor series expansion equals \(f(x)\) over \(I \ques\)
+  For example, in <a href="#ex-e^x">Example 2</a> we showed that \(\sum_{n = 0}^\infty x^n/n!\)
+  converges, but we don't know whether the series converges to \(e^x.\)
+  (The series could converge but represent a different function.)
+  So our question is as follows: if \(f\) has derivatives of all orders at \(a,\) then when does 
+  \[f(x) = \sum_{n = 0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n \ques\]
+  Let's define some quantity \(R_N(x)\) to be the <span class="emph">remainder</span>
+  of an <nobr>\(N\)th</nobr>-degree Taylor polynomial \(T_N(x).\)
+  This quantity, which can be positive or negative, is the amount by which our estimate \(T_N(x)\) 
+  differs from the true function \(f(x).\) 
+  We therefore assert that 
+  \[
+  f(x) = \underbrace{T_N(x)}_{\text{approximation}} + \underbrace{R_N(x)}_{\text{remainder}} \pd
+  \]
+  [As an example, if \(f(3) = 5\) but our Taylor polynomial estimates it to be \(T_N(3) = 4,\)
+  then the remainder is <nobr>\(R_N(3) = 1.\)]</nobr>
+  If \(R_N(x) \to 0\) as \(N \to \infty,\) 
+  then as we increase the degree \(N,\) 
+  the Taylor series eventually becomes <i>no different from</i> \(f(x)\) over the interval \(I.\) 
+  Hence, a function equals its Taylor series over \(I\) if and only if \(\lim_{N \to \infty} R_N(x) = 0.\)
+  We use <span class="emph">Taylor's Remainder Theorem</span>, given below, to attain a bound 
+  for the remainder \(R_N(x).\)
+  (The error bound is also called the <span class="emph">Lagrange Error Bound</span>.)
+</p>
+
+<div class="box-title">TAYLOR'S REMAINDER THEOREM</div>
+<div class="box">
+  Suppose that \(f\) has derivatives up to order \(N + 1.\)
+  If \(\abs{f^{(N + 1)}(x)} \leq M\) for \(\abs{x - a} \leq r,\)
+  then the remainder \(R_N(x)\) of the <nobr>\(N\)th</nobr>-degree Taylor polynomial satisfies
+  \[\abs{R_N(x)} \leq \frac{M}{(N + 1)!} \abs{x^{N + 1}} \cmaa \abs{x - a} \leq r \pd\]
+</div>
+
+<p>
+  <span class="proof">PROOF FOR \(N = 1\)</span>
+  We prove Taylor's Remainder Theorem for the case \(N = 1.\)
+  Given \(\abs{f^{(1 + 1)}(x)}\) \(= \abs{f''(x)} \leq M\) (from the theorem's conditions),
+  we begin by assuming that \(f''(x) \leq M.\)
+  So for \(\abs{x - a} \leq r,\) we have
+  \[\int_a^x f''(t) \di t \leq \int_a^x M \di t = M(x - a) \pd\]
+  Because an antiderivative of \(f''(t)\) is \(f'(t),\) the inequality becomes 
+  \[f'(x) - f'(a) \leq M(x - a) \pd \]
+  Replacing \(x\) with a dummy variable \(t\) and integrating both sides from \(a\) to \(x,\) we see
+  \[
+  \ba
+  \int_a^x \parbr{f'(t) - f'(a)} \di x &\leq \int_a^x M(t - a) \di t \nl
+  f(x) - f(a) - f'(a) (x - a) &\leq \frac{M(x - a)^2}{2} \pd 
+  \ea 
+  \] 
+  But since the first-degree Taylor polynomial is \(T_1(x) = f(a) + f'(a)(x - a),\)
+  and since \(f(x) - T_1(x)\) \(= R_1(x),\) we have 
+  \[
+  \ba 
+  f(x) - T_1(x) &\leq \frac{M(x - a)^2}{2} \nl 
+  R_1(x) &\leq \frac{M(x - a)^2}{2} \pd
+  \ea
+  \]
+  Alternatively, if \(f''(x) \geq -M,\) then for \(\abs{x - a} \leq r\) we get 
+  \[
+  \ba 
+  \int_a^x f''(t) \di t &\geq \int_a^x -M \di t = -M(x - a) \nl 
+  f'(x) - f'(a) &\geq -M(x - a) \nl 
+  \int_a^x \parbr{f'(t) - f'(a)} \di t &\geq -\int_a^x M(t - a) \di t \nl 
+  f(x) - f(a) - f'(a) (x - a) &\geq -\frac{M(x - a)^2}{2} \nl 
+  f(x) - T_1(x) &\geq -\frac{M(x - a)^2}{2} \nl 
+  R_1(x) &\geq -\frac{M(x - a)^2}{2} \nl
+  \implies \abs{R_1(x)} &\leq \frac{M(x - a)^2}{2} \pd
+  \ea 
+  \]
+  For \(N = 2,\) we take \(\abs{f'''(x)} \leq M\)
+  and integrate three times—with similar ending steps to this proof for \(N = 1.\)
+  (This case is left as an exercise in the Exercises section.)
+  And for \(N \geq 3,\) we integrate \(N + 1\) times, following this procedure.
+  We can take this case to any \(N,\) thus proving the theorem for any \(N.\)
+  \[\qedproof\]
+</p>
+
+<div class="example-title" id="ex-e^x-conv"> EXAMPLE 3 </div>
+<div class="example">
+  <div class="example-problem">  
+      Prove that \(f(x) = e^x\) converges to its Maclaurin series, \(\sum_{n = 0}^\infty x^n/n! \,.\)
+  </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+  For some constant \(r\) such that \(\abs x \leq r,\)
+  we know \(\abs{f^{(N + 1)}(x)} = e^x\) \(\leq e^r\) for any \(N.\)
+  Thus, using \(a = 0\) and \(M = e^r\) in Taylor's Remainder Theorem, we see
+  \[\abs{R_N(x)} \leq \frac{e^r}{(N + 1)!} \abs{x}^{N + 1} \cmaa \abs x \leq r \pd\]
+  As \(N \to \infty,\) the right side of the inequality approaches \(0.\)
+  (A factorial grows faster than an exponential function, thus pushing the fraction to <nobr>\(0.\))</nobr>
+  The Squeeze Theorem therefore asserts that \(\lim_{N \to \infty} R_N(x) = 0.\)
+  In words, as we add more terms to the Taylor polynomial for \(e^x\) (increasing <nobr>\(N\)),</nobr>
+  the amount by which the polynomial differs from \(e^x\) decreases to \(0.\)
+  Thus, the Taylor series equals \(e^x.\)
+</div>
+
+<p>
+  The proof in <a href="#ex-e^x-conv">Example 3</a> allows us to write
+  \begin{equation} 
+  \ba
+  e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{x^n}{n!} \cmaa -\infty \lt x \lt \infty \pd
+  \ea
+  \label{eq:e^x-series}
+  \end{equation}
+  If we substitute \(x = 1,\) then we obtain a cute series representation for the number \(e \col\)
+  \[e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots \pd\]
+  This technique allows \(e\) to be calculated precisely,
+  and it is easier than using the limit \(e = \lim_{n \to \infty} (1 + 1/n)^n.\)
+</p>
+
+<div class="example-title" id="ex-sin-series"> EXAMPLE 4 </div>
+<div class="example">
+  <div class="example-problem">  
+      Find the Maclaurin series for \(f(x) = \sin x\)
+      and prove that it converges to \(\sin x\) for all \(x.\)
+  </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+  <p>
+    Taking derivatives of \(f(x) = \sin x\) at \(x = 0,\) we see
+    \[
+    \ba 
+    f(0) &= \sin 0 = 0 \cma \nl 
+    f'(0) &= \cos 0 = 1 \cma \nl 
+    f''(0) &= -\sin 0 = 0 \cma \nl 
+    f'''(0) &= -\cos 0 = -1 \cma \nl 
+    f^{(4)}(0) &= \sin 0 = 0 \cma \nl 
+    f^{(5)}(0) &= \cos 0 = 1 \cma \nl
+    &\vdotss 
+    \ea
+    \]
+    Observe that the derivatives repeat in cycles of four. 
+    Following \(\eqref{eq:maclaurin-series},\) the Maclaurin series is therefore 
+    \[
+    \ba
+    T(x) &= 0 + 1x + \frac{0}{2!} x^2 + \frac{-1}{3!} x^3 + \frac{0}{4!} x^4 + \frac{1}{5!} x^5 + \cdots \nl  
+    &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \nl 
+    &= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!}}
+    \ea
+    \]
+    <a href="#maclaurin-sin-3">Figure 3A</a> displays the graph of the third-degree Maclaurin polynomial 
+    for \(\sin x.\) 
+    Likewise, <a href="#maclaurin-sin-5">Figure 3B</a>
+    shows a fifth-degree Maclaurin polynomial, which better represents the curve \(y = \sin x.\)
+    In each model, the curve is nearly identical to \(\sin x\) near \(x = 0\) but deviates for farther \(x.\) 
+  </p>
+  <div class="figure-center">
+    <figure class="maclaurin-sin-3" id="maclaurin-sin-3">
+        <img src="../images/sectionImages/maclaurin-sin-3.jpg" class="maclaurin-sin-3" alt="Figure 3A">
+    </figure>
+    <figure class="maclaurin-sin-5" id="maclaurin-sin-5">
+        <img src="../images/sectionImages/maclaurin-sin-5.jpg" class="maclaurin-sin-5" alt="Figure 3B">
+    </figure>
+  </div>
+
+  <style>
+      .maclaurin-sin-3::before{
+          content:'FIGURE 3A';
+      }
+
+      .maclaurin-sin-5::before{
+          content:'FIGURE 3B';
+      }
+  </style>
+  <p>
+    <span class="label-emph">Convergence to \(\sin x\)</span>
+    Now we prove that \(T(x) = \sin x\) for all \(x.\)
+    Since the derivatives of \(f(x) = \sin x\) are always either \(\pm \sin x\) or \(\pm \cos x,\)
+    we use \(\abs{f^{(N + 1)}(x)} \leq 1.\)
+    Thus, for any \(N\) Taylor's Remainder Theorem asserts that the remainder in 
+    the Maclaurin series satisfies
+    \[\abs{R_N(x)} \leq \frac{1}{(N + 1)!} \abs{x^{N + 1}} \pd\]
+    Because a factorial grows more rapidly than an exponential function,
+    the right side of the inequality approaches \(0\) if we take \(N \to \infty.\)
+    Hence, the Squeeze Theorem gives \(R_N(x) \to 0\) as \(N \to \infty.\)
+    In words, the amount by which the Maclaurin series differs from \(\sin x\) 
+    becomes nonexistent if we add more and more terms.  
+  </p>
+</div>
+
+<h4 id="manipulating-taylor-series">Manipulating Taylor Series</h4>
+<p>
+  In most cases, it is tedious to find a Taylor series 
+  by repeated differentiation.
+  But as we discussed in Section <a href="/Valculus/calculus/10.7-Power-Series.html">10.7</a>, 
+  we can manipulate power series by differentiation or integration. 
+  Likewise, we can obtain Taylor series for many functions by using the coefficients of a known Taylor series—for example, 
+  by replacing \(x\) with some other function.
+  For these reasons <a href="#ex-sin-series">Example 4</a>,
+  just as \(\eqref{eq:e^x-series}\) does, yields a landmark result that we'll reference 
+  many times:
+  \begin{equation} 
+  \ba
+  \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!} \cmaa -\infty \lt x \lt \infty \pd
+  \ea
+  \label{eq:sin-series}
+  \end{equation}
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+  <div class="example-problem">  
+      Find the Maclaurin series for \(e^{x^2}.\)
+  </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+  Replacing \(x\) with \(x^2\) in \(\eqref{eq:e^x-series}\) gives 
+  \[
+  \ba
+  e^{x^2} &= 1 + \par{x^2} + \frac{\par{x^2}^2}{2!} + \frac{\par{x^2}^3}{3!} + \cdots \nl 
+  &= 1 + x^2 + \frac{x^4}{2!} + \frac{x^6}{3!} + \cdots \nl 
+  &= \boxed{\sum_{n = 0}^\infty \frac{x^{2n}}{n!}}
+  \ea
+  \]
+  Compared to repeatedly taking derivatives of \(e^{x^2},\)
+  this substitution is easier and more gratifying.
+</div>
+
+<p>
+  <span class="label-emph">Maclaurin Series for \(\cos x\)</span>
+  To attain the Maclaurin series for \(\cos x,\) 
+  we could compute derivatives of \(f(x) = \cos x\) at \(x = 0,\) 
+  just as we did to attain the Maclaurin series for \(\sin x.\)
+  But since \(\textderiv{}{x} \par{\sin x} = \cos x,\)
+  a shortcut is to differentiate the series in \(\eqref{eq:sin-series} \col\)
+  \[
+  \ba
+  \deriv{}{x} (\sin x) &= \deriv{}{x} \par{x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots} \nl 
+  &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \pd
+  \ea
+  \]
+  We therefore announce that 
+  \begin{equation} 
+  \ba
+  \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \nl 
+  &= \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n)!} \cmaa -\infty \lt x \lt \infty \pd 
+  \ea
+  \label{eq:cos-series}
+  \end{equation}
+  (We know the interval of convergence is \(-\infty \lt x \lt \infty\) because 
+  the radius of convergence is preserved when we differentiate or integrate power series.)
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+  <div class="example-problem">  
+      Find the Maclaurin series for \(f(x) = x^3 \cos x.\)
+  </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+  It is too cumbersome to take derivatives of \(f(x) = x^3 \cos x.\)
+  Instead, we simply multiply the series in \(\eqref{eq:cos-series}\) by \(x^3 \col\)
+  \[
+  \ba 
+  x^3 \cos x &= x^3 \par{1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots} \nl 
+  &= x^3 - \frac{x^5}{2!} + \frac{x^7}{4!} - \frac{x^9}{6!} + \cdots \nl 
+  &= \boxed{\sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 3}}{(2n)!}}
+  \ea 
+  \]
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+  <div class="example-problem">  
+      Determine a series representation for the integral \(\int (\sin x/x) \di x.\)
+  </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+  A Taylor series proves useful for an integral with no elementary antiderivative.
+  Using the series in \(\eqref{eq:sin-series},\) we get
+  \[\frac{\sin x}{x} = \frac{1}{x} \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!} 
+  = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n + 1)!} \pd\]
+  Integrating the series (which we learned to do in Section <a href="/Valculus/calculus/10.7-Power-Series.html">10.7</a>), 
+  we see 
+  \[
+  \ba
+  \int \frac{\sin x}{x} \di x &= \int \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n + 1)!} \di x \nl 
+  &= \sum_{n = 0}^\infty \frac{(-1)^n}{(2n + 1)!} \int x^{2n} \di x \nl 
+  &= \boxed{C + \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)(2n + 1)!}} \nl 
+  \ea
+  \]
+  for some constant \(C.\)
+</div>
+
+<p>
+  In the next examples, we'll multiply and divide power series.
+  The best way to perform these operations is to take a few terms of each series,
+  and multiply and divide them like polynomials. 
+  We then find the first few terms of the product or quotient, 
+  attempting to uncover a pattern.
+</p>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+  <div class="example-problem">  
+      Write the fourth-degree Maclaurin polynomial for \(e^x \cos x.\)
+  </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+  The product \(e^x \cos x\) is, by \(\eqref{eq:e^x-series}\) and \(\eqref{eq:cos-series},\)
+  represented by the expansion
+  \[
+  \ba
+  e^x \cos x &= \par{\sum_{n = 0}^\infty \frac{x^n}{n!}} \par{\sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n)!}} \nl 
+  &= \par{1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots} 
+  \par{1 - \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots} \pd
+  \ea
+  \]
+  Observe that in each set of parentheses, we expand the series <i>up to the fourth-degree term</i>. 
+  This strategy ensures that as we multiply, we catch every term whose degree is four or lower.
+  Multiplying these polynomials, we see
+  \[
+  \ba 
+  e^x \cos x &= \par{1 - \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots} + \par{x - \frac{x^3}{2!} + \frac{x^5}{4!} + \cdots}
+  + \par{\frac{x^2}{2!} - \frac{x^4}{(2!)^2} + \frac{x^6}{2! \cdot 4!} + \cdots} \nl 
+  &+ \par{\frac{x^3}{3!} - \frac{x^5}{3! \cdot 2!} + \frac{x^7}{3! \cdot 4!} + \cdots} 
+  + \par{\frac{x^4}{4!} - \frac{x^6}{4! \cdot 2!} + \frac{x^8}{(4!)^2} + \cdots} \pd
+  \ea 
+  \]
+  Because we need the fourth-degree Maclaurin polynomial, 
+  let's collect only the like terms up to \(x^4.\)
+  Omitting any higher-order terms, we find the polynomial to be
+  \[
+  \ba
+  T_4(x) &= 1 + x + x^2 \par{-\frac{1}{2} + \frac{1}{2}} + x^3 \par{-\frac{1}{2!} + \frac{1}{3!}} 
+  + x^4 \par{\frac{1}{4!} - \frac{1}{(2!)^2} + \frac{1}{4!}} \nl 
+  &= \boxed{1 + x - \frac{x^3}{3} - \frac{x^4}{6}}
+  \ea 
+  \]
+  Beware of notation:
+  Since we omitted all terms past \(x^4,\) we <span class="warning">cannot say</span>
+  the polynomial equals \(e^x \cos x.\)
+  We can only write the equals sign if we consider the infinite series.
+  But we <span class="good">can</span> say \(T_4(x) \approx e^x \cos x.\)
+</div>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+  <div class="example-problem">  
+      By dividing series, determine the Maclaurin series for \(\tan x.\)
+  </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+  Since \(\tan x\) \(= (\sin x)/(\cos x),\)
+  the Maclaurin series for \(\tan x\) is given by 
+  \[
+  \frac{\ds \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!}}{\ds \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n)!}}
+  = \frac{x - \tfrac{1}{6} x^3 + \tfrac{1}{120} x^5 + \cdots}{1 - \tfrac{1}{2} x^2 + \tfrac{1}{24} x^4 + \cdots} \pd
+  \]
+  Considering only a few terms in each series, we use long division to divide the polynomials:
+  \[
+  \require{enclose}
+  \begin{array}{rll}
+    x + \tfrac{1}{3} x^3 + \tfrac{2}{15} x^5 + \cdots \\[-3pt]
+    1 - \tfrac{1}{2} x^2 + \tfrac{1}{24} x^4 + \cdots
+    \enclose{longdiv}{x - \tfrac{1}{6} x^3 + \tfrac{1}{120} x^5 + \cdots}\kern-.2ex \\[-3pt]
+      \underline{x - \, \tfrac{1}{2} x^3 + \tfrac{1}{24} x^5 + \cdots} \\[-3pt]
+      \tfrac{1}{3} x^3 - \tfrac{1}{30} x^5 + \cdots \\[-3pt]
+      \underline{\tfrac{1}{3} x^3 - \; \tfrac{1}{6} x^5 + \cdots } \\[-3pt]
+      \tfrac{2}{15} x^5 + \cdots \\[-3pt]
+  \end{array}
+  \]
+  Thus, 
+  \[\tan x = \boxed{x + \tfrac{1}{3} x^3 + \tfrac{2}{15} x^5 + \cdots}\]
+</div>
+
+<h4 id="binomial-series">Binomial Series</h4>
+<p>
+  Whereas the <i>Binomial Theorem</i> enables us to expand \((a + b)^n\)
+  for positive integers \(n,\) 
+  what if we want to expand \(f(x) = (1 + x)^k\)
+  for <i>any</i> number \(k \ques\)
+  Let's derive the Maclaurin series for \(f\) by taking derivatives:
+  \[
+  \baat{2}
+  &f(x) = (1 + x)^k \cma \lspace &&f(0) = 1 \cma \nl 
+  &f'(x) = k (1 + x)^{k - 1} \cma \lspace &&f'(0) = k \cma \nl 
+  &f''(x) = k(k - 1) (1 + x)^{k - 2} \cma \lspace &&f''(0) = k (k - 1) \cma \nl 
+  &f'''(x) = k(k - 1)(k - 2) (1 + k)^{k - 3} \cma \lspace &&f'''(0) = k(k - 1)(k - 2) \cma \nl 
+  &\vdotss \lspace &&\vdotss
+  \eaat
+  \]
+  Following \(\eqref{eq:maclaurin-series},\) the Maclaurin series is therefore 
+  \[
+  (1 + x)^k = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \pd
+  \]
+  This expansion is called the <span class="emph">binomial series</span>, a special Maclaurin series
+  for a binomial raised to any power.
+  To write the general form, let's define <span class="emph">binomial coefficients</span>: 
+  We use the notation 
+  \[{k \choose n} = \frac{k(k - 1)(k - 2) \cdot \, \cdots \, \cdot (k - n + 1)}{n!} \cma\]
+  where \({k \choose n}\) is read as <q>\(k\) choose \(n.\)</q>
+  It turns out that these coefficients show up in many applications of probability with selections.
+  To attain the binomial series' interval of convergence, we use the Ratio Test with \(a_n\) as the <nobr>\(n\)th</nobr> term. 
+  We first take the limit
+  \[
+  \ba
+  L &= 
+  \lim_{n \to \infty} \abs{\frac{k(k - 1) \cdot \, \cdots \, \cdot (k - n + 1)(k - n) x^{n + 1}}{(n + 1)!} 
+  \cdot \frac{n!}{k(k - 1) \cdot \, \cdots \, \cdot (k - n + 1) x^n} } \nl 
+  &= \lim_{n \to \infty} \abs{\frac{k - n}{n + 1} x} = \abs x \pd
+  \ea
+  \]
+  Because the series converges when \(L \lt 1,\) we need \(\abs x \lt 1,\)
+  or \(-1 \lt x \lt 1.\)
+  The series' convergence at the endpoints, \(x = \pm 1,\) cannot be generalized 
+  since it depends on the value of \(k.\)
+  The binomial series indeed converges to \((1 + x)^k\) because \(R_N(x) \to 0\) as \(N \to \infty;\)
+  unfortunately, proving this limit is difficult and beyond the scope of this text.
+</p>
+
+<div class="box-title">BINOMIAL SERIES</div>
+<div class="box">
+  If \(k\) is any real number and \(\abs x \lt 1,\) then \((1 + x)^k\)
+  has a <span class="emph">binomial series</span> expansion given by
+  \begin{equation} 
+  \ba
+  (1 + x)^k &= 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \nl 
+  &= \sum_{n = 0}^\infty {k \choose n} x^n \cma
+  \ea
+  \label{eq:binomial-series}
+  \end{equation}
+  where the <span class="emph">binomial coefficient</span> is
+  \[{k \choose n} = \frac{k(k - 1)(k - 2) \cdot \, \cdots \, \cdot (k - n + 1)}{n!} \pd\]
+</div>
+
+<div class="example-title"> EXAMPLE 10 </div>
+<div class="example">
+  <div class="example-problem">  
+      Find the Maclaurin series for \(f(x) = \sqrt[3]{4x + 8}\)
+      and its radius of convergence.
+  </div>
+</div>
+<button onclick="toggle10()" class="solution-button"></button>
+<div id="solution10" class="solution">
+  Let's first rearrange the function to match the form \((1 + x)^k \col\)
+  \[f(x) = \sqrt[3]{8} \cdot \sqrt[3]{\frac{x}{2} + 1} = 2 \par{1 + \frac{x}{2}}^{1/3} \pd\]
+  Taking \(k = 1/3,\) we use the binomial series in \(\eqref{eq:binomial-series}\) by replacing \(x\) with \(x/2 \col\)
+  \[
+  \ba 
+  f(x) &= 
+  2 \parbr{1 + \frac{1}{3} \par{\frac{x}{2}} + \frac{\tfrac{1}{3} \par{\tfrac{1}{3} - 1}}{2} \par{\frac{x}{2}}^2 
+  + \frac{\tfrac{1}{3} \par{\tfrac{1}{3} - 1} \par{\tfrac{1}{3} - 2}}{6} \par{\frac{x}{2}}^3 + \cdots} \nl
+  &= \boxed{2 + \frac{x}{3} - \frac{x^2}{18} + \frac{5x^3}{324} + \cdots}
+  \ea   
+  \]
+  The series converges when \(\abs{x/2} \lt 1\)—that is, when \(\abs x \lt 2\)—so the radius of convergence 
+  is \(\boxed{R = 2}.\)
+</div>
+
+<p>
+  Let's now summarize the important Maclaurin series. 
+  It is imperative to memorize these series because they appear in many situations.
+  The following tips may help with this process:
+  <ol class="list-num">
+    <li>
+      The Maclaurin series for \(e^x,\) \(1/(1 - x),\) and \((1 + x)^k\)
+      all have positive terms.
+      All other series in the table are alternating.
+    </li>
+    <li>
+      In the table, only the Maclaurin series for \(e^x,\) \(\sin x,\) and \(\cos x\)
+      converge for all \(x.\)
+      Because we are delighted by convergence, the denominator in each series contains a factorial 
+      to represent our joy!
+    </li>
+    <li>
+      Since \(\textderiv{}{x} (\sin x) = \cos x,\)
+      differentiating the terms of the Maclaurin series for \(\sin x\) 
+      gives the terms of the Maclaurin series for \(\cos x.\)
+    </li>
+    <li>
+      The Maclaurin series for \(\sin x\) and \(\atan x\) are similar, 
+      but \(\atan x\) has no factorials in its terms.
+    </li>
+  </ol>
+</p>
+<div class="box-title" id="table-series">IMPORTANT MACLAURIN SERIES</div>
+<div class="box">
+  <table class="table-full-width table-long-left table-tall">
+    <thead>
+        <tr>
+            <th>Series</th>
+            <th>Convergence</th>
+        </tr>
+    </thead>
+    
+    <!-- 1/(1 - x) -->
+    <tr>
+        <td>
+            \(\ds \frac{1}{1 - x} = \sum_{n = 0}^\infty x^n = 1 + x + x^2 + x^3 + \cdots\)
+        </td>
+        <td>
+            \(-1 \lt x \lt 1\)
+        </td>
+    </tr>
+
+    <!-- e^x -->
+    <tr>
+        <td>
+            \(\ds e^x = \sum_{n = 0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots\)
+        </td>
+        <td>
+            \(-\infty \lt x \lt \infty\)
+        </td>
+    </tr>
+
+    <!-- sin x -->
+    <tr>
+      <td>
+          \(\ds \sin x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!} 
+          = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\)
+      </td>
+      <td>
+          \(-\infty \lt x \lt \infty\)
+      </td>
+    </tr>
+
+    <!-- cos x -->
+    <tr>
+      <td>
+          \(\ds \cos x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n)!} 
+          = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots\)
+      </td>
+      <td>
+          \(-\infty \lt x \lt \infty\)
+      </td>
+    </tr>
+
+    <!-- ln(1 + x) -->
+    <tr>
+      <td>
+        \(\ds \ln(1 + x) = \sum_{n = 1}^\infty (-1)^{n + 1} \frac{x^n}{n} 
+        = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots\)
+      </td>
+      <td>
+        \(-1 \lt x \leq 1\)
+      </td>
+    </tr>
+
+    <!-- arctan x -->
+    <tr>
+      <td>
+        \(\ds \atan x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} 
+        = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots\)
+      </td>
+      <td>
+        \(-1 \leq x \leq 1\)
+      </td>
+    </tr>
+
+    <!-- (1 + x)^k -->
+    <tr>
+      <td>
+        \(\ds (1 + x)^k = \sum_{n = 0}^\infty {k \choose n} x^n
+        = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots\)
+      </td>
+      <td>
+        \(-1 \lt x \lt 1\)*
+      </td>
+    </tr>
+</table>
+*<i>The convergence at the endpoints \(x = \pm 1\) depends on the value of \(k.\)</i>
+</div>
+
+<div class="example-title"> EXAMPLE 11 </div>
+<div class="example">
+  <div class="example-problem">  
+      Use a power series to approximate \(\int_0^1 e^{-x^2} \di x\)
+      with an error of less than \(0.01.\)
+  </div>
+</div>
+<button onclick="toggle11()" class="solution-button"></button>
+<div id="solution11" class="solution">
+  In \(\eqref{eq:e^x-series}\) we replace \(x\) with \(-x^2\) to attain a Maclaurin series for \(e^{-x^2}\col\)
+  \[
+  \ba 
+  e^{-x^2} &= 1 + \par{-x^2} + \frac{\par{-x^2}^2}{2!} + \frac{\par{-x^2}^3}{3!} + \cdots \nl 
+  &= 1 - x^2 + \frac{x^4}{2!} - \frac{x^6}{3!} + \cdots = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{n!} \pd 
+  \ea 
+  \]
+  Integrating this function from \(0\) to \(1,\) we see 
+  \[
+  \ba
+  \int_0^1 e^{-x^2} \di x &= \int_0^1 \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{n!} \di x \nl 
+  &= \sum_{n = 0}^\infty \frac{(-1)^n}{n!} \int_0^1 x^{2n} \di x 
+  = \sum_{n = 0}^\infty \frac{(-1)^n}{n!} \par{\frac{x^{2n + 1}}{2n + 1}} \intEval_0^1 \nl 
+  &= \sum_{n = 0}^\infty \frac{(-1)^n}{n!} \par{\frac{(1)^{2n + 1}}{2n + 1}} 
+  - \sum_{n = 0}^\infty \frac{(-1)^n}{n!} \par{\frac{(0)^{2n + 1}}{2n + 1}} \nl
+  &= \sum_{n = 0}^\infty \frac{(-1)^n}{n! (2n + 1)} \nl
+  &= 1 - \frac{1}{3} + \frac{1}{10} - \frac{1}{42} + \frac{1}{216} + \cdots \pd
+  \ea
+  \]
+  Applying the Alternating Series Error Bound, we seek the first term whose magnitude is less than \(0.01.\)
+  Observe that \(1/216 \lt 0.01,\) so we include all the terms before it—that is, the first four terms: 
+  \[\int_0^1 e^{-x^2} \di x \approx 1 - \frac{1}{3} + \frac{1}{10} - \frac{1}{42} \approx \boxed{0.743}\]
+  which has an error of less than \(1/216 \approx 0.005.\)
+</div>
+
+<div class="example-title"> EXAMPLE 12 </div>
+<div class="example">
+  <div class="example-problem">  
+      For \(f(x) = \atan x,\) determine \(f^{(7)}(0).\)
+      Then show that \(f^{(2N)}(0) = 0\) for any positive integer \(N.\)
+  </div>
+</div>
+<button onclick="toggle12()" class="solution-button"></button>
+<div id="solution12" class="solution">
+  From the table <q><a href="#table-series">Important Maclaurin Series</a>,</q>
+  the Maclaurin series for \(f(x) = \atan x\) is 
+  \[f(x) = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} \pd\]
+  Equating the seventh-degree term, \(-x^7/7,\) to the Maclaurin definition in \(\eqref{eq:maclaurin-series},\) 
+  we see 
+  \[
+  \ba
+  \frac{f^{(7)}(0)}{7!} x^7 &= -\frac{x^7}{7} \nl
+  \implies f^{(7)}(0) &= -\frac{7!}{7} = -6! = \boxed{-720}
+  \ea
+  \]
+  By similar logic, the Maclaurin series has a coefficient of \(0\) for each even-degree term.
+  (For this reason \(x^2,\) \(x^4,\) \(x^6, \dots\) do not appear in our summation.) 
+  Accordingly, equating the Maclaurin definition to \(0\) shows, for any positive integer \(N,\)
+  \[
+  \frac{f^{(2N)}(0)}{(2N)!} x^{2N} = 0 \implies f^{(2N)}(0) = 0 \pd
+  \] 
+</div>
+
+<div class="example-title"> EXAMPLE 13 </div>
+<div class="example">
+  <div class="example-problem">  
+      The third-degree Maclaurin polynomial for \(f(x) = \ln(1 + x)\) is used to approximate \(\ln \tfrac{1}{2}.\)
+      Using Taylor's Remainder Theorem, determine an interval in which the true value of \(\ln \tfrac{1}{2}\)
+      must reside.
+  </div>
+</div>
+<button onclick="toggle13()" class="solution-button"></button>
+<div id="solution13" class="solution">
+  The third-degree Maclaurin polynomial for \(f(x) = \ln(1 + x),\) 
+  following the table <q><a href="#table-series">Important Maclaurin Series</a>,</q> is
+  \[T_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3} \pd\]
+  This polynomial approximates \(\ln \tfrac{1}{2}\) if we use \(x = -1/2.\)
+  Substituting this value, we see
+  \[
+  \ba
+  \ln \frac{1}{2} \approx T_3 \par{-\frac{1}{2}} &= -\frac{1}{2} - \frac{(-1/2)^2}{2} + \frac{(-1/2)^3}{3} \nl 
+  &= -\frac{1}{2} - \frac{1}{8} - \frac{1}{24} \nl 
+  &= -\frac{2}{3} \approx -0.667 \pd
+  \ea
+  \]
+  Because the series isn't alternating, we <span class="warning">cannot</span> use the Alternating Series Error Bound.
+  Instead, we use Taylor's Remainder Theorem: 
+  The <i>maximum value</i> of \(\abs{f^{(4)}(x)}\) \(= 6/(x + 1)^4\) 
+  over \(\parbr{-\tfrac{1}{2}, 0}\) is
+  \[M = \frac{6}{\par{-\tfrac{1}{2} + 1}^4} = 96 \pd\]
+  Hence, the error is bounded by
+  \[\abs{R_3 \par{-\frac{1}{2}}} \leq \frac{96}{4!} \abs{-\frac{1}{2}}^4 = \frac{1}{4} \pd\]
+  In words, our approximation \(T_3\par{-\frac{1}{2}}\) can differ from the true value of \(\ln \tfrac{1}{2}\)
+  by <i>no more than</i> \(1/4.\)
+  The interval in which \(\ln \tfrac{1}{2}\) must lie is therefore 
+  \[
+  \baat{2}
+  -\frac{2}{3} - \frac{1}{4} &\leq \ln \frac{1}{2} &&\leq -\frac{2}{3} + \frac{1}{4} \nl 
+  \underbrace{-\frac{11}{12}}_{\approx -0.917} &\leq \ln \frac{1}{2} &&\leq \underbrace{-\frac{5}{12}}_{\approx -0.417} \pd
+  \eaat 
+  \]
+</div>
+</p>
+
+<div class="section-summary">
+  <p>
+    <a href="#taylor-and-maclaurin-series" class="summary-anchor">Taylor Series and Maclaurin Series</a>
+    <span class="emph">Taylor series</span> and <span class="emph">Maclaurin series</span> are 
+    types of power series whose coefficients use a function's derivatives at a point.
+    If \(f\) has derivatives of all orders at \(a,\) 
+    then the Taylor series of \(f\) centered at \(a\) is 
+    \begin{equation} 
+    \ba
+    T(x) &= f(a) + f'(a) (x - a) + \frac{f''(a)}{2!} (x - a)^2 + \frac{f'''(a)}{3!} (x - a)^3 
+    + \cdots \nl 
+    &= \sum_{n = 0}^\infty \frac{f^{(n)}(a)}{n!} (x - a)^n \pd
+    \ea
+    \eqlabel{eq:taylor-series}
+    \end{equation}
+    For \(a = 0,\) the Maclaurin series of \(f\) is
+    \begin{equation} 
+    \ba
+    T(x) &= f(0) + f'(0) x + \frac{f''(0)}{2!} x^2 + \frac{f'''(0)}{3!} x^3 
+    + \cdots \nl 
+    &= \sum_{n = 0}^\infty \frac{f^{(n)}(0)}{n!} x^n \pd 
+    \ea
+    \eqlabel{eq:maclaurin-series}
+    \end{equation}
+    A <span class="emph">Taylor polynomial</span> includes only a few terms of a Taylor <i>series</i>,
+    and a <span class="emph">Maclaurin polynomial</span> uses only a few terms of a Maclaurin <i>series</i>.
+  </p>
+  <p>
+    <a href="#taylor-remainder-theorem" class="summary-anchor">Taylor's Remainder Theorem</a>
+    Suppose that \(f\) has derivatives up to order \(N + 1.\)
+    If \(\abs{f^{(N + 1)}(x)} \leq M\) for \(\abs{x - a} \leq r,\)
+    then by <span class="emph">Taylor's Remainder Theorem</span>,
+    the remainder \(R_N(x)\) of the <nobr>\(N\)th</nobr>-degree Taylor polynomial satisfies
+    \[\abs{R_N(x)} \leq \frac{M}{(N + 1)!} \abs{x^{N + 1}} \cmaa \abs{x - a} \leq r \pd\]
+    (The error bound is also called the <span class="emph">Lagrange Error Bound</span>.)
+    A function equals its Taylor series over some interval \(I\) if and only if \(\lim_{N \to \infty} R_N(x) = 0.\)
+  </p>
+  <p>
+    <a href="#manipulating-taylor-series" class="summary-anchor">Manipulating Taylor Series</a>
+    It is tedious to obtain Taylor series by repeated differentiation. 
+    But we can differentiate and integrate the Taylor series of a known function 
+    to attain the Taylor series of a new function. 
+    In addition, we can replace \(x\) with another expression—for example, replacing \(x\) with \(x^2\)—to
+    easily determine the Taylor series of a family of functions.
+    When we multiply or divide power series, 
+    it is a good idea to consider only a few terms in each series 
+    and multiply them like polynomials. 
+    Attempt to discover the pattern after inspecting the first few terms of the series for the product or quotient.
+  </p>
+  <p>
+    <a href="#binomial-series" class="summary-anchor">Binomial Series</a>
+    If \(k\) is any real number and \(\abs x \lt 1,\) then \((1 + x)^k\)
+    has a special Maclaurin series called the <span class="emph">binomial series</span>:
+    \begin{equation} 
+    \ba
+    (1 + x)^k &= 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots \nl 
+    &= \sum_{n = 0}^\infty {k \choose n} x^n \cma
+    \ea
+    \eqlabel{eq:binomial-series}
+    \end{equation}
+    where the <span class="emph">binomial coefficient</span> is
+    \[{k \choose n} = \frac{k(k - 1)(k - 2) \cdot \, \cdots \, \cdot (k - n + 1)}{n!} \pd\]
+    The following table shows important Maclaurin series and their intervals of convergence.
+    <table class="table-full-width table-long-left table-tall">
+      <thead>
+          <tr>
+              <th>Series</th>
+              <th>Convergence</th>
+          </tr>
+      </thead>
+      
+      <!-- 1/(1 - x) -->
+      <tr>
+          <td>
+              \(\ds \frac{1}{1 - x} = \sum_{n = 0}^\infty x^n = 1 + x + x^2 + x^3 + \cdots\)
+          </td>
+          <td>
+              \(-1 \lt x \lt 1\)
+          </td>
+      </tr>
+  
+      <!-- e^x -->
+      <tr>
+          <td>
+              \(\ds e^x = \sum_{n = 0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots\)
+          </td>
+          <td>
+              \(-\infty \lt x \lt \infty\)
+          </td>
+      </tr>
+  
+      <!-- sin x -->
+      <tr>
+        <td>
+            \(\ds \sin x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{(2n + 1)!} 
+            = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\)
+        </td>
+        <td>
+            \(-\infty \lt x \lt \infty\)
+        </td>
+      </tr>
+  
+      <!-- cos x -->
+      <tr>
+        <td>
+            \(\ds \cos x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n}}{(2n)!} 
+            = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots\)
+        </td>
+        <td>
+            \(-\infty \lt x \lt \infty\)
+        </td>
+      </tr>
+  
+      <!-- ln(1 + x) -->
+      <tr>
+        <td>
+          \(\ds \ln(1 + x) = \sum_{n = 1}^\infty (-1)^{n + 1} \frac{x^n}{n} 
+          = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots\)
+        </td>
+        <td>
+          \(-1 \lt x \leq 1\)
+        </td>
+      </tr>
+  
+      <!-- arctan x -->
+      <tr>
+        <td>
+          \(\ds \atan x = \sum_{n = 0}^\infty \frac{(-1)^n \, x^{2n + 1}}{2n + 1} 
+          = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots\)
+        </td>
+        <td>
+          \(-1 \leq x \leq 1\)
+        </td>
+      </tr>
+  
+      <!-- (1 + x)^k -->
+      <tr>
+        <td>
+          \(\ds (1 + x)^k = \sum_{n = 0}^\infty {k \choose n} x^n
+          = 1 + kx + \frac{k(k - 1)}{2!} x^2 + \frac{k(k - 1)(k - 2)}{3!} x^3 + \cdots\)
+        </td>
+        <td>
+          \(-1 \lt x \lt 1\)*
+        </td>
+      </tr>
+  </table>
+  </p>
+  <p class="p-no-indent">
+    *<i>The convergence at the endpoints \(x = \pm 1\) depends on the value of \(k.\)</i> <br>
+    The following tips may help you memorize these series:
+    <ol class="list-num">
+      <li>
+        The Maclaurin series for \(e^x,\) \(1/(1 - x),\) and \((1 + x)^k\)
+        all have positive terms.
+        All other series in the table are alternating.
+      </li>
+      <li>
+        In the table, only the Maclaurin series for \(e^x,\) \(\sin x,\) and \(\cos x\)
+        converge for all \(x.\)
+        Because we are delighted by convergence, the denominator in each series contains a factorial 
+        to represent our joy!
+      </li>
+      <li>
+        Since \(\textderiv{}{x} (\sin x) = \cos x,\)
+        differentiating the terms of the Maclaurin series for \(\sin x\) 
+        gives the terms of the Maclaurin series for \(\cos x.\)
+      </li>
+      <li>
+        The Maclaurin series for \(\sin x\) and \(\atan x\) are similar, 
+        but \(\atan x\) has no factorials in its terms.
+      </li>
+    </ol>
+  </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>
