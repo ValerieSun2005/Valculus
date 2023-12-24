@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.2 Exercise Solutions: Evaluating Limits Analytically</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.2 Exercise Solutions — Evaluating Limits Analytically</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="1.2-Evaluating-Limits-Analytically.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.2-Evaluating-Limits-Analytically-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Define <b>Direct Substitution</b>.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>Direct Substitution</b> allows us to evaluate the limit of a function 
+        by simply evaluating the function at the number the input is approaching. 
+        Mathematically, this property gives
+        \[\lim_{x \to a} f(x) = f(a) \pd\]
+        In this section we use Direct Substitution for polynomial and rational functions \(f\) if \(a\)
+        is within the domain of \(f.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Define the <b>indeterminate form <nobr>\(\bf \indZero\)</nobr></b>.
+        What does this form imply (or not imply) about a limit? 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A limit
+        \[L = \lim_{x \to a} \frac{f(x)}{g(x)} \cmaa g(x) \ne 0\]
+        is of the <b>indeterminate form \(\bf \indZero\)</b>
+        if \(\lim_{x \to a} f(x) = 0\) and \(\lim_{x \to a} g(x) = 0.\)
+        A limit in this form cannot initially be evaluated by Direct Substitution,
+        which would yield the undefined expression \(\indZero.\)
+        This form simply means that further analysis is required to evaluate the limit; 
+        <span class="warning">it does not immediately imply the limit fails to exist</span>.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f\) and \(g\) be functions that satisfy 
+        \[\lim_{x \to 7} f(x) = 5 \and \lim_{x \to 7} g(x) = -4 \pd\]
+        Calculate the following limits.
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \lim_{x \to 7} \parbr{f(x) + g(x)}\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 7} \parbr{2 f(x) - 3 g(x)}\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 7} \parbr{\tfrac{1}{2} f(x) g(x)}\)</span>
+</li>
+<li>
+<span>\(\ds \lim_{x \to 7} \parbr{\frac{2 f(x) - 3 g(x)}{4 f(x) + 4g(x)}}\)</span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Using the Sum Law, we get 
+                \[
+                \ba 
+                \lim_{x \to 7} \parbr{f(x) + g(x)} 
+                &amp;= \lim_{x \to 7} f(x) + \lim_{x \to 7} g(x) \nl 
+                &amp;= 5 + (-4) = \boxed 1
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Combining the Difference Law with the Constant Multiple Law, we see 
+                \[
+                \ba 
+                \lim_{x \to 7} \parbr{2 f(x) - 3 g(x)} 
+                &amp;= \lim_{x \to 7} \parbr{2 f(x)} - \lim_{x \to 7} \parbr{3 g(x)} \nl 
+                &amp;= 2 \lim_{x \to 7} f(x) - 3 \lim_{x \to 7} g(x) \nl 
+                &amp;= 2(5) - 3(-4) = \boxed{22}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Using the Constant Multiple Law in conjunction with the Product Law, we get 
+                \[
+                \ba 
+                \lim_{x \to 7} \parbr{\tfrac{1}{2} f(x) g(x)}
+                &amp;= \tfrac{1}{2} \lim_{x \to 7} \parbr{f(x) g(x)} \nl 
+                &amp;= \tfrac{1}{2} \lim_{x \to 7} f(x) \cdot \lim_{x \to 7} g(x) \nl 
+                &amp;= \tfrac{1}{2} \par{5 \cdot -4} = \boxed{-10}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Let's analyze this limit one step at a time, as follows:
+                \[
+                \baat{2}
+                \lim_{x \to 7} \parbr{\frac{2 f(x) - 3 g(x)}{4 f(x) + 4g(x)}} 
+                &amp;= \frac{\ds \lim_{x \to 7} \parbr{2 f(x) - 3 g(x)}}{\ds \lim_{x \to 7} \parbr{4 f(x) + 4g(x)}}
+                \comment{\text{by Quotient Law}} \nl 
+                &amp;= \frac{22}{\ds \lim_{x \to 7} \parbr{4 f(x) + 4g(x)}} 
+                \comment{\text{from part (b)}} \nl 
+                &amp;= \frac{22}{\ds 4 \lim_{x \to 7} \parbr{f(x) + g(x)}} 
+                \comment{\text{by Constant Multiple Law}} \nl 
+                &amp;= \frac{22}{4 (1)} 
+                \comment{\text{from part (a)}} \nl 
+                &amp;= \boxed{\frac{11}{2}}
+                \eaat
+                \]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Suppose that functions \(f\) and \(g\) satisfy 
+        \[
+        \baat{4} 
+        &amp;\lim_{x \to a^-} f(x) &amp;&amp;= 6 &amp;\and &amp;\lim_{x \to a^+} f(x) &amp;&amp;= -4 \cma \nl
+        &amp;\lim_{x \to a^-} g(x) &amp;&amp;= -2 &amp;\and &amp;\lim_{x \to a^+} g(x) &amp;&amp;= 8 \pd
+        \eaat
+        \]
+        <ol class="list-alpha">
+<li>
+                Explain why \(\lim_{x \to a} f(x)\) and \(\lim_{x \to a} g(x)\)
+                both do not exist.
+            </li>
+<li>
+                Calculate \(\lim_{x \to a} \parbr{f(x) + g(x)}\) 
+                or justify why it does not exist.
+            </li>
+<li>
+                Let \(h(x) = f(x)/g(x).\)
+                Find \(\lim_{x \to a} h(x)\) or show that it does not exist.
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                First, \(\lim_{x \to a} f(x)\) does not exist because 
+                \[\underbrace{\lim_{x \to a^-} f(x)}_{6} \ne \underbrace{\lim_{x \to a^+} f(x)}_{-4} \pd\]
+                Second, \(\lim_{x \to a} g(x)\) does not exist since 
+                \[\underbrace{\lim_{x \to a^-} g(x)}_{-2} \ne \underbrace{\lim_{x \to a^+} g(x)}_{8} \pd\]
+            </li>
+<hr/>
+<aside class="box-caution">
+                You cannot argue that a limit fails to exist 
+                simply because you cannot use a limit law. 
+                (This is a baseless guess.)
+                Instead, try applying the limit laws to the one-sided limits.
+            </aside>
+<li>
+                We can't use the Sum Law for \(\lim_{x \to a} \parbr{f(x) + g(x)}.\)
+                (This does not, however, allow us to say the limit fails to exist.)
+                But since the one-sided limits exist, 
+                we <i>can</i> say 
+                \[
+                \ba 
+                \lim_{x \to a^-} \parbr{f(x) + g(x)}
+                &amp;= \lim_{x \to a^-} f(x) + \lim_{x \to a^-} g(x) \nl 
+                &amp;= 6 + (-2) = 4 \pd
+                \ea  
+                \]  
+                Likewise, we see 
+                \[
+                \ba 
+                \lim_{x \to a^+} \parbr{f(x) + g(x)}
+                &amp;= \lim_{x \to a^+} f(x) + \lim_{x \to a^+} g(x) \nl 
+                &amp;= (-4) + 8 = 4 \pd
+                \ea  
+                \]  
+                Since these one-sided limits are equal, we conclude 
+                \[\lim_{x \to a} \parbr{f(x) + g(x)} = \boxed 4\]
+            </li>
+<hr/>
+<li>
+                We can't use the Quotient Law as
+                \[\wrongMath{\lim_{x \to a} h(x) = \frac{\ds \lim_{x \to a} f(x)}{\ds \lim_{x \to a} g(x)}}\]
+                because neither \(\lim_{x \to a} f(x)\) nor \(\lim_{x \to a} g(x)\) exists.
+                But the one-sided limits exist, so we <i>can</i> say
+                \[
+                \ba 
+                \lim_{x \to a^-} h(x) &amp;= \frac{\ds \lim_{x \to a^-} f(x)}{\ds \lim_{x \to a^-} g(x)} \nl 
+                &amp;= \frac{6}{-2} = -3 \pd
+                \ea 
+                \]
+                Similarly, we have 
+                \[
+                \ba 
+                \lim_{x \to a^+} h(x) &amp;= \frac{\ds \lim_{x \to a^+} f(x)}{\ds \lim_{x \to a^+} g(x)} \nl 
+                &amp;= \frac{-4}{8} = -\frac{1}{2} \pd
+                \ea 
+                \]
+                Because \(-3 \ne -1/2,\) 
+                we conclude that 
+                \(\lim_{x \to a} h(x)\) <b>does not exist</b>.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<figure class="limit-properties-combination-ex-1" id="limit-properties-combination-ex-1">
+<img alt="Figure 5" src="../images/sectionImages/limit-properties-combination-ex-1.jpg"/>
+</figure>
+<style>
+            .limit-properties-combination-ex-1::before{
+                content:'FIGURE 5';
+            }
+        </style>
+        For the graphs of \(y = f(x)\) and \(y = g(x)\) in <a href="#limit-properties-combination-ex-1">Figure 5</a>,
+        calculate the following limits if they exist.
+        <ol class="list-alpha">
+<li>
+<span>
+                    \(\ds \lim_{x \to -2} \parbr{g(x) - f(x)}\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds \lim_{x \to 4^-} \parbr{2 g(x) - 7 f(x)}\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds \lim_{x \to 0} \parbr{f(x) g(x)}\)
+                </span>
+</li>
+<li>
+<span>
+                    \(\ds \lim_{x \to 0} \parbr{f(x) + g(x)}\)
+                </span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                The graph shows 
+                \[\lim_{x \to -2} g(x) = 0 \and \lim_{x \to -2} f(x) = -2 \pd\]
+                By the Difference Law, we therefore see
+                \[
+                \ba
+                \lim_{x \to -2} \parbr{g(x) - f(x)} 
+                &amp;= \lim_{x \to -2} g(x) - \lim_{x \to -2} f(x) \nl 
+                &amp;= 0 - (-2) = \boxed 2
+                \ea
+                \]
+            </li>
+<hr/>
+<li>
+                From the graph, we see 
+                \[\lim_{x \to 4^-} g(x) = 4 \and \lim_{x \to 4^-} f(x) = -1 \pd\]
+                Hence, by combining the Difference and Constant Multiple Laws, we find 
+                \[
+                \ba 
+                \lim_{x \to 4^-} \parbr{2 g(x) - 7 f(x)}
+                &amp;= \lim_{x \to 4^-} \parbr{2 g(x)} - \lim_{x \to 4^-} \parbr{7 f(x)} \nl 
+                &amp;= 2 \lim_{x \to 4^-} g(x) - 7 \lim_{x \to 4^-} f(x) \nl 
+                &amp;= 2(4) - 7(-1) = \boxed{15}
+                \ea
+                \]
+            </li>
+<hr/>
+<aside class="box-caution">
+                You cannot argue that a limit fails to exist 
+                simply because you cannot use a limit law. 
+                (This is a baseless guess.)
+                Instead, try applying the limit laws to the one-sided limits.
+            </aside>
+<li>
+                Observe that 
+                \[\lim_{x \to 0} f(x) \and \lim_{x \to 0} g(x)\]
+                both fail to exist.
+                So we cannot use the Product Law for \(\lim_{x \to 0} \parbr{f(x) g(x)},\)
+                but we also cannot immediately conclude that the limit does not exist. 
+                Let's use the Product Law for the one-sided limits:
+                We see 
+                \[
+                \baat{3}
+                \lim_{x \to 0^-} f(x) &amp;= -3 &amp;&amp;\and &amp;\lim_{x \to 0^-} g(x) &amp;= 2 \cma \nl 
+                \lim_{x \to 0^+} f(x) &amp;= 3 &amp;&amp;\and &amp;\lim_{x \to 0^+} g(x) &amp;= -2 \pd
+                \eaat 
+                \] 
+                Accordingly, we get 
+                \[
+                \ba 
+                \lim_{x \to 0^-} \parbr{f(x) g(x)}
+                &amp;= \lim_{x \to 0^-} f(x) \cdot \lim_{x \to 0^-} g(x) \nl
+                &amp;= (-3)(2) = -6 \cma \nl
+                \lim_{x \to 0^+} \parbr{f(x) g(x)} 
+                &amp;= \lim_{x \to 0^+} f(x) \cdot \lim_{x \to 0^+} g(x) \nl 
+                &amp;= (3)(-2) = -6 \pd
+                \ea 
+                \]
+                Since the one-sided limits of the product \(f(x) g(x)\) equal each other, 
+                we conclude that 
+                \[\lim_{x \to 0} \parbr{f(x) g(x)} = \boxed{-6}\]
+            </li>
+<hr/>
+<li>
+                Both limits
+                \[\lim_{x \to 0} f(x) \and \lim_{x \to 0} g(x)\]
+                fail to exist.
+                We therefore cannot use the Sum Law for \(\lim_{x \to 0} \parbr{f(x) + g(x)}.\)
+                But we also cannot immediately guess that the limit does not exist.
+                Using the appropriate one-sided limits found in part (c), we see 
+                \[
+                \ba 
+                \lim_{x \to 0^-} \parbr{f(x) + g(x)} 
+                &amp;= \lim_{x \to 0^-} f(x) + \lim_{x \to 0^-} g(x) \nl 
+                &amp;= -3 + 2 = -1 \cma \nl
+                \lim_{x \to 0^+} \parbr{f(x) + g(x)} 
+                &amp;= \lim_{x \to 0^+} f(x) + \lim_{x \to 0^+} g(x) \nl
+                &amp;= 3 + (-2) = 1 \pd
+                \ea 
+                \]
+                Because these one-sided limits don't agree with each other, we conclude that 
+                \(\lim_{x \to 0} \parbr{f(x) + g(x)}\) <b>does not exist</b>.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 4} 7\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit of a constant is simply the constant. 
+        So 
+        \[\lim_{x \to 4} 7 = \boxed 7\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 9999} (-4)\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit of a constant is simply the constant. 
+        So 
+        \[\lim_{x \to 9999} (-4) = \boxed{-4}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{u \to -13} u\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit of \(u\) is simply the value it is approaching:
+        \[\lim_{u \to -13} u = \boxed{-13}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 3} \par{x - 4}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \((x - 4)\) is a polynomial, 
+        we use Direct Substitution by evaluating \((x - 4)\) at \(x = 3 \col\)
+        \[
+        \lim_{x \to 3} (x - 4) = 3 - 4 = \boxed{-1}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1} \par{4x^2 + 1}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\par{4x^2 + 1}\) is a polynomial, 
+        we use Direct Substitution by evaluating \(\par{4x^2 + 1}\) at \(x = 1 \col\)
+        \[
+        \lim_{x \to 1} \par{4x^2 + 1} = 4(1)^2 + 1 = \boxed{5}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{y \to -1} \par{3y^2 + 5y - 7}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\par{3y^2 + 5y - 7}\) is a polynomial, 
+        we use Direct Substitution by evaluating \(\par{3y^2 + 5y - 7}\) at \(y = -1 \col\)
+        \[
+        \lim_{y \to -1} \par{3y^2 + 5y - 7} = 3(-1)^2 + 5(-1) - 7 = \boxed{-9}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 5} \frac{x + 6}{3x - 3}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Direct Substitution enables us to evaluate this limit 
+        by evaluating the rational expression at \(5.\)
+        Doing so shows 
+        \[\lim_{x \to 5} \frac{x + 6}{3x - 3} = \frac{5 + 6}{3(5) - 3} = \boxed{\frac{11}{12}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to -3} \frac{2t + 9}{7 - t}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Direct Substitution enables us to evaluate this limit 
+        by evaluating the rational expression at \(-3.\)
+        Doing so shows 
+        \[\lim_{t \to -3} \frac{2t + 9}{7 - t} = \frac{2(-3) + 9}{7 - (-3)} = \boxed{\frac{3}{10}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 16} \sqrt x\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit is simply 
+        \[\sqrt{16} = \boxed 4\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to 1000} \sqrt[3] t \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit is simply 
+        \[\sqrt[3]{1000} = \boxed{10}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 6} \frac{1}{x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(1/x\) is a rational expression, 
+        the Direct Substitution Property shows 
+        \[
+        \lim_{x \to 6} \frac{1}{x} = \boxed{\frac{1}{6}}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 8} \sqrt[3]{16 + 6x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the Root Law and then Direct Substitution, we have 
+        \[
+        \ba 
+        \lim_{x \to 8} \sqrt[3]{16 + 6x} 
+        &amp;= \sqrt[3]{\lim_{x \to 8}(16 + 6x)} \nl 
+        &amp;= \sqrt[3]{16 + 6(8)} = \sqrt[3]{64} \nl 
+        &amp;= \boxed 4
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 6} \par{x - 4}^5 \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the Power Law followed by Direct Substitution, we see  
+        \[
+        \ba 
+        \lim_{x \to 6} \par{x - 4}^5
+        &amp;= \parbr{\lim_{x \to 6} (x - 4)}^5 \nl 
+        &amp;= (6 - 4)^5 = 2^5 \nl 
+        &amp;= \boxed{32}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to -4} \par{7 + t}^4 \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the Power Law followed by Direct Substitution, we see  
+        \[
+        \ba 
+        \lim_{t \to -4} \par{7 + t}^4
+        &amp;= \parbr{\lim_{t \to -4} \par{7 + t}}^4 \nl 
+        &amp;= (7 - 4)^4 = 3^4 \nl
+        &amp;= \boxed{81}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 5} \frac{3}{\sqrt{7x + 1}}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's evaluate this limit one step at a time, as follows: 
+        \[
+        \baat{2} 
+        \lim_{x \to 5} \frac{3}{\sqrt{7x + 1}}
+        &amp;= \frac{\ds \lim_{x \to 5} 3}{\ds \lim_{x \to 5} \sqrt{7x + 1}} 
+        \comment{\text{by Quotient Law}} \nl 
+        &amp;= \frac{3}{\ds \lim_{x \to 5} \sqrt{7x + 1}} 
+        \comment{\lim_{x \to 5} 3 = 3} \nl 
+        &amp;= \frac{3}{\ds \sqrt{\lim_{x \to 5} (7x + 1)}} 
+        \comment{\text{by Root Law}} \nl 
+        &amp;= \frac{3}{\sqrt{7(5) + 1}} = \frac{3}{\sqrt{36}} 
+        \comment{\text{by Direct Substitution}} \nl 
+        &amp;= \boxed{\frac{1}{2}}
+        \eaat 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 5} \frac{\sqrt[3]{22 + x}}{x^2}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's evaluate this limit one step at a time, as follows: 
+        \[
+        \baat{2} 
+        \lim_{x \to 5} \frac{\sqrt[3]{22 + x}}{x^2}
+        &amp;= \frac{\ds \lim_{x \to 5} \sqrt[3]{22 + x}}{\ds \lim_{x \to 5} x^2}
+        \comment{\text{by Quotient Law}} \nl 
+        &amp;= \frac{\ds \lim_{x \to 5} \sqrt[3]{22 + x}}{25}
+        \comment{\lim_{x \to a} x^n = a^n} \nl 
+        &amp;= \frac{\ds \sqrt[3]{\lim_{x \to 5}(22 + x)}}{25} 
+        \comment{\text{by Root Law}} \nl 
+        &amp;= \frac{\sqrt[3]{27}}{25}
+        \comment{\text{by Direct Substitution}} \nl 
+        &amp;= \boxed{\frac{3}{25}}
+        \eaat 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find \(\lim_{x \to 5} f(x)\) if 
+        \[
+        f(x) = 
+        \bc
+        \dfrac{6}{x - 4} &amp;x \lt 5 \nl 
+        x^2 - 19 &amp;x \gt 5 \pd
+        \ec
+        \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit \(\lim_{x \to 5} f(x)\) exists if and only if 
+        \[\lim_{x \to 5^-} f(x) \and \lim_{x \to 5^+} f(x)\]
+        exist and equal each other.
+        [But \(f\) does not need to be <i>defined</i> at \(5\)
+        in order for \(\lim_{x \to 5} f(x)\) to exist.]
+        Because \(f(x) = 6/(x - 4)\) for \(x \lt 5,\) 
+        we take the limit of the left-hand piecewise definition as follows:
+        \[
+        \ba 
+        \lim_{x \to 5^-} f(x)
+        &amp;= \lim_{x \to 5^-} \frac{6}{x - 4} \nl 
+        &amp;= \frac{6}{5 - 4} = 6 \pd
+        \ea 
+        \]
+        Similarly, \(f(x) = x^2 - 19\) for \(x \gt 5,\)
+        so the limit of the right-hand piecewise definition is 
+        \[
+        \ba 
+        \lim_{x \to 5^+} f(x)
+        &amp;= \lim_{x \to 5^+} \par{x^2 - 19} \nl 
+        &amp;= 5^2 - 19 = 6 \pd
+        \ea 
+        \]
+        Hence, \(\lim_{x \to 5} f(x) = \boxed{6}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let 
+        \[
+        f(x) 
+        = 
+        \bc 
+        x + 3 &amp;x \lt a \nl 
+        \sqrt{x^2 + 6} &amp;x \gt a \pd
+        \ec
+        \]
+        For what value of \(a\) does \(\lim_{x \to a} f(x)\) exist?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit \(\lim_{x \to a} f(x)\) exists 
+        if and only if the one-sided limits 
+        \[\lim_{x \to a^-} f(x) \and \lim_{x \to a^+} f(x)\]
+        equal each other. 
+        Let's compute each limit. 
+        Since \(f(x) = x + 3\) for \(x \lt a,\) Direct Substitution gives 
+        \[\lim_{x \to a^-} f(x) = a + 3 \pd\]
+        Similarly, because \(f(x) = \sqrt{x^2 + 6}\) for \(x \gt a,\)
+        we use the Root Law and Direct Substitution to attain
+        \[\lim_{x \to a^+} f(x) = \lim_{x \to a^+} \sqrt{x^2 + 6} = \sqrt{a^2 + 6} \pd\]
+        These expressions must equal each other, 
+        so we solve for \(a,\) as follows:
+        \[
+        \ba 
+        a + 3 &amp;= \sqrt{a^2 + 6} \nl 
+        (a + 3)^2 &amp;= a^2 + 6 \nl 
+        a^2 + 6a + 9 &amp;= a^2 + 6 \nl 
+        6a &amp;= -3 \nl
+        a &amp;= \boxed{-\tfrac{1}{2}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Calculate \(k\) so that \(\lim_{x \to 3} f(x)\) exists, 
+        where 
+        \[
+        f(x) 
+        = 
+        \bc 
+        kx^2 - 2 &amp;x \lt 3 \nl 
+        6x - k &amp;x \gt 3 \pd
+        \ec 
+        \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit \(\lim_{x \to 3} f(x)\) exists if and only if 
+        \[\lim_{x \to 3^-} f(x) \and \lim_{x \to 3^+} f(x)\]
+        both exist and equal each other. 
+        Since \(f(x) = kx^2 - 2\) for \(x \lt 3,\)
+        we see
+        \[
+        \ba
+        \lim_{x \to 3^-} f(x) 
+        &amp;= \lim_{x \to 3^-} \par{kx^2 - 2} \nl 
+        &amp;= 9k - 2 \pd
+        \ea
+        \]
+        Likewise, the right-hand limit is given by 
+        \[
+        \ba 
+        \lim_{x \to 3^+} f(x) 
+        &amp;= \lim_{x \to 3^+} (6x - k) \nl 
+        &amp;= 18 - k \pd
+        \ea 
+        \]
+        Equating these expressions shows 
+        \[9k - 2 = 18 - k \implies \boxed{k = 2}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to -2} \frac{x^2 - 4}{x + 2} \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-recall">
+            As we evaluate the limit, it is irrelevant that \(\par{x^2 - 4}/(x + 2)\) is undefined at \(x = -2.\)
+            We only concern ourselves with this function's behavior <i>near</i> \(-2.\)
+        </aside>
+        Trying Direct Substitution immediately gives the indeterminate form \(\indZero,\) 
+        so we instead try to find any common factors. 
+        The numerator is a difference of squares, \(x^2 - 2^2;\) 
+        observe that
+        \[x^2 - 4 = (x + 2)(x - 2) \pd\]
+        Reexpressing the numerator and canceling the common factor \((x + 2)\) 
+        give
+        \[
+        \ba 
+        \lim_{x \to -2} \frac{\cancel{(x + 2)}(x - 2)}{\cancel{x + 2}} 
+        &amp;= \lim_{x \to -2} (x - 2) \nl 
+        &amp;= \boxed{-4} 
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0} \frac{x^2}{x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-recall">
+            As we evaluate the limit, it is irrelevant that \(x^2/x\) is undefined at \(x = 0.\)
+            We only concern ourselves with this function's behavior <i>near</i> \(0.\)
+        </aside>
+        As \(x \to 0,\) both \(x^2\) and \(x\) approach \(0.\)
+        Direct Substitution gives the meaningless expression \(\indZero,\)
+        so the limit is in the indeterminate form \(\indZero.\)
+        Observe that \(x^2/x = x\) for \(x \ne 0.\)
+        So the limit becomes 
+        \[\lim_{x \to 0} x = \boxed 0\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to 9} \frac{t^2 - 81}{t - 9}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Both the numerator and denominator approach \(0\) as \(t \to 9,\)
+        so this limit is of the indeterminate form \(\indZero.\)
+        The numerator is a difference of squares:
+        \[t^2 - 81 = (t + 9)(t - 9) \pd\]
+        Thus, the limit becomes
+        \[
+        \ba 
+        \lim_{t \to 9} \frac{(t + 9)\cancel{(t - 9)}}{\cancel{t - 9}} &amp;= \lim_{t \to 9} \par{t + 9} \nl 
+        &amp;= \boxed{18}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1} \frac{x^2 + 2x - 3}{x - 1}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We factor the numerator as 
+        \[x^2 + 2x - 3 = (x + 3)(x - 1) \pd\]
+        The limit then becomes 
+        \[
+        \ba 
+        \lim_{x \to 1} \frac{(x + 3)\cancel{(x - 1)}}{\cancel{x - 1}} &amp;= \lim_{x \to 1} \par{x + 3} \nl 
+        &amp;= \boxed{4}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to 0} \frac{0}{4t^2 + 7t}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Do not overthink this limit. 
+        The numerator is <i>static</i>; it does not change with \(t.\)
+        We are therefore dividing \(0\) by some number \(\par{4t^2 + 7t};\)
+        of course, dividing \(0\) by any nonzero number gives \(0.\)
+        Hence, 
+        \[\frac{0}{4t^2 + 7t} = 0 \cmaa t \ne 0 \pd\]
+        (The domain restriction of \(t \ne 0\) is irrelevant to the limit.)
+        Thus,
+        \[\lim_{t \to 0} \frac{0}{4t^2 + 7t} = \lim_{t \to 0} 0 = \boxed 0\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to -3} \frac{x^3 + 27}{x + 3} \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since the limit is in the indeterminate form \(\indZero,\)
+        our goal is to expose any common factors.
+        The numerator is a sum of cubes; we have
+        \[x^3 + 27 = (x + 3)(x^2 - 3x + 9) \pd \]
+        The limit then becomes 
+        \[
+        \ba 
+        \lim_{x \to -3} \frac{\cancel{(x + 3)}\par{x^2 - 3x + 9}}{\cancel{x + 3}}
+        &amp;= \lim_{x \to -3} \par{x^2 - 3x + 9} \nl 
+        &amp;= \boxed{27}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 4} \frac{\ds \frac{1}{x} - \frac{1}{4}}{x - 4}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        Let's merge the fractions in the numerator of the limit. 
+        Doing so shows
+        \[\frac{1}{x} - \frac{1}{4} = \frac{4}{4x} - \frac{x}{4x} = \frac{4 - x}{4x} \pd\]
+        As a result, our limit becomes 
+        \[
+        \ba 
+        \lim_{x \to 4} \frac{\dfrac{4 - x}{4x}}{x - 4} 
+        &amp;= \lim_{x \to 4} \frac{-\cancel{(x - 4)}}{(4x)\cancel{(x - 4)}} \nl
+        &amp;= \lim_{x \to 4} \frac{-1}{4x} \nl
+        &amp;= \boxed{-\frac{1}{16}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0} \frac{\dfrac{2}{x - 2} + 1}{x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        Condensing the numerator, we see
+        \[
+        \ba
+        \frac{2}{x - 2} + 1 
+        &amp;= \frac{2}{x - 2} + \frac{x - 2}{x - 2} \nl
+        &amp;= \frac{2 + (x - 2)}{x - 2} \nl 
+        &amp;= \frac{x}{x - 2} \pd
+        \ea
+        \]
+        Therefore, the limit becomes
+        \[
+        \ba 
+        \lim_{x \to 0} \frac{\dfrac{x}{x - 2}}{x} 
+        &amp;= \lim_{x \to 0} \frac{\cancel{x}}{(x - 2) \cancel x} \nl
+        &amp;= \lim_{x \to 0} \frac{1}{x - 2} \nl
+        &amp;= \boxed{-\frac{1}{2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to 1} \frac{t - 1}{1 - \sqrt t} \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        The numerator is a difference of squares—namely,
+        \[t - 1 = (\sqrt t + 1) (\sqrt t - 1) \pd\]
+        So the limit becomes
+        \[
+        \ba 
+        \lim_{t \to 1} \frac{(\sqrt t + 1) (\sqrt t - 1)}{1 - \sqrt t} 
+        &amp;= \lim_{t \to 1} \frac{(\sqrt t + 1) \cancel{(\sqrt t - 1)}}{-\cancel{(\sqrt t - 1)}} \nl
+        &amp;= \lim_{t \to 1} \parbr{-(\sqrt t + 1)} \nl
+        &amp;= \boxed{-2}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 9} \frac{9x - x^2}{3 - \sqrt x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        By factoring the numerator and denominator, we find 
+        \[
+        \ba 
+        \lim_{x \to 9} \frac{9x - x^2}{3 - \sqrt x}
+        &amp;= \lim_{x \to 9} \frac{x \par{9 - x}}{3 - \sqrt x} \nl 
+        &amp;= \lim_{x \to 9} \frac{x \par{3 + \sqrt x} \cancel{(3 - \sqrt x)}}{\cancel{3 - \sqrt x}} \nl
+        &amp;= \lim_{x \to 9} \parbr{x \par{3 + \sqrt x}} \nl 
+        &amp;= 9 \par{3 + \sqrt 9} = \boxed{54}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 7} \frac{7 - x}{2 - \sqrt{11 - x}}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero,\)
+        yet we identify no common factors. 
+        But we have a radical in the denominator, so let's try to eliminate it. 
+        We'll rationalize the denominator by multiplying 
+        the numerator and denominator each by the denominator's conjugate, \((2 + \sqrt{11 - x}).\)
+        Doing so gives
+        \[
+        \ba 
+        \lim_{x \to 7} \frac{7 - x}{2 - \sqrt{11 - x}} \cdot \frac{2 + \sqrt{11 - x}}{2 + \sqrt{11 - x}} 
+        &amp;= \lim_{x \to 7} \frac{(7 - x)(2 + \sqrt{11 - x} \, )}{4 - (11 - x)} \nl
+        &amp;= \lim_{x \to 7} \frac{-\cancel{(x - 7)}(2 + \sqrt{11 - x} \, )}{\cancel{x - 7}} \nl
+        &amp;= \lim_{x \to 7} \parbr{-(2 + \sqrt{11 - x} \, )} \nl
+        &amp;= \boxed{-4}
+        \ea 
+        \]
+        The purpose of rationalization is to expose a common factor—in this case,
+        \((x - 7).\)
+        By keeping the numerator in factored form (instead of expanding it), 
+        we identify the common factor more easily.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{u \to 3} \frac{\sqrt{u - 2} - 1}{2u - 6}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        We have no immediate simplifications of the fraction. 
+        But the numerator has a radical, so we attempt to rationalize the numerator 
+        by multiplying the numerator and denominator each by the numerator's conjugate, \((\sqrt{u - 2} + 1).\) 
+        We get 
+        \[
+        \ba 
+        \lim_{u \to 3} \frac{\sqrt{u - 2} - 1}{2u - 6} 
+        &amp;= \lim_{u \to 3} \frac{\sqrt{u - 2} - 1}{2u - 6} \cdot \frac{\sqrt{u - 2} + 1}{\sqrt{u - 2} + 1} \nl
+        &amp;= \lim_{u \to 3} \frac{(u - 2) - 1^2}{(2u - 6)(\sqrt{u - 2} + 1)} \nl
+        &amp;= \lim_{u \to 3} \frac{\cancel{u - 3}}{2\cancel{(u - 3)}(\sqrt{u - 2} + 1)} \nl
+        &amp;= \lim_{u \to 3} \frac{1}{2(\sqrt{u - 2} + 1)} \nl
+        &amp;= \boxed{\frac{1}{4}}
+        \ea 
+        \]
+        This problem shows that rationalizing may yield a common factor to cancel—exactly what we want!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{h \to 0} \frac{\sqrt{4 + h} - 2}{h}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        The numerator has a radical, so we attempt to rationalize the numerator. 
+        Since the numerator's conjugate is \((\sqrt{4 + h} + 2),\)
+        multiplying across shows 
+        \[
+        \ba 
+        \lim_{h \to 0} \frac{\sqrt{4 + h} - 2}{h} 
+        &amp;= \lim_{h \to 0} \frac{\sqrt{4 + h} - 2}{h} \cdot \frac{\sqrt{4 + h} + 2}{\sqrt{4 + h} + 2} \nl 
+        &amp;= \lim_{h \to 0} \frac{(4 + h) - 4}{h (\sqrt{4 + h} + 2)} \nl 
+        &amp;= \lim_{h \to 0} \frac{\cancel{h}}{\cancel{h} (\sqrt{4 + h} + 2)} \nl 
+        &amp;= \lim_{h \to 0} \frac{1}{\sqrt{4 + h} + 2} \nl 
+        &amp;= \frac{1}{\sqrt{4 + 0} + 2} = \boxed{\frac{1}{4}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 9/4} \frac{\sqrt{4x - 5} - 2}{16x - 36} \]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        The numerator has a radical, so we attempt to rationalize the numerator. 
+        We do so multiplying the numerator and denominator by the conjugate \((\sqrt{4x - 5} + 2),\)
+        obtaining  
+        \[
+        \ba 
+        \lim_{x \to 9/4} \frac{\sqrt{4x - 5} - 2}{16x - 36} \cdot \frac{\sqrt{4x - 5} + 2}{\sqrt{4x - 5} + 2} 
+        &amp;= \lim_{x \to 9/4} \frac{(4x - 5) - 4}{(16x - 36)(\sqrt{4x - 5} + 2) } \nl
+        &amp;= \lim_{x \to 9/4} \frac{\cancel{4x - 9}}{4\cancel{(4x - 9)}(\sqrt{4x - 5} + 2)} \nl
+        &amp;= \lim_{x \to 9/4} \frac{1}{4(\sqrt{4x - 5} + 2)} \nl
+        &amp;= \boxed{\frac{1}{16}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{y \to a} \frac{y^4 - a^4}{y^2 - a^2}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        The numerator is a <q>difference of squares</q>; we reexpress it as follows:
+        \[y^4 - a^4 = \par{y^2 + a^2} \par{y^2 - a^2} \pd\]
+        So we see 
+        \[
+        \ba 
+        \lim_{y \to a} \frac{y^4 - a^4}{y^2 - a^2}
+        &amp;= \lim_{y \to a} \frac{\par{y^2 + a^2} \cancel{\par{y^2 - a^2}}}{\cancel{y^2 - a^2}} \nl 
+        &amp;= \lim_{y \to a} \par{y^2 + a^2} \nl 
+        &amp;= \boxed{2a^2}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 4} \frac{\sqrt{13 - x} - 3}{\sqrt{x} - 2}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This limit is in the indeterminate form \(\indZero.\)
+        The fraction has radicals on the numerator and denominator.
+        Let's rationalize the numerator by multiplying the numerator and denominator each by 
+        \((\sqrt{13 - x} + 3).\)
+        Doing so, we see 
+        \[
+        \ba 
+        \lim_{x \to 4} \frac{\sqrt{13 - x} - 3}{\sqrt x - 2} 
+        &amp;= \lim_{x \to 4} \frac{\sqrt{13 - x} - 3}{\sqrt x - 2} \cdot \frac{\sqrt{13 - x} + 3}{\sqrt{13 - x} + 3} \nl 
+        &amp;= \lim_{x \to 4} \frac{(13 - x) - 9}{(\sqrt x - 2)(\sqrt{13 - x} + 3)} \nl 
+        &amp;= \lim_{x \to 4} \frac{4 - x}{(\sqrt x - 2)(\sqrt{13 - x} + 3)} \nl 
+        &amp;= \lim_{x \to 4} \frac{(2 + \sqrt x)\cancel{(2 - \sqrt x)}}{-\cancel{(2 - \sqrt x)}(\sqrt{13 - x} + 3)} \nl 
+        &amp;= \lim_{x \to 4} \frac{2 + \sqrt x}{-(\sqrt{13 - x} + 3)} \nl 
+        &amp;= \frac{2 + \sqrt 4}{-(\sqrt{13 - 4} + 3)} \nl
+        &amp;= \boxed{-\frac{2}{3}}
+        \ea 
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 10} \frac{\sqrt{26 - x} - 4}{\sqrt{19 - x} - 3}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's start by rationalizing the numerator, 
+        although we could also begin by rationalizing the denominator.
+        We multiply the numerator and denominator each by \((\sqrt{26 - x} + 4),\) yielding 
+        \[
+        \ba 
+        \lim_{x \to 10} \frac{\sqrt{26 - x} - 4}{\sqrt{19 - x} - 3} \cdot \frac{\sqrt{26 - x} + 4}{\sqrt{26 - x} + 4} 
+        &amp;= \lim_{x \to 10} \frac{10 - x}{(\sqrt{19 - x} - 3)(\sqrt{26 - x} + 4)} \pd \nl 
+        \ea 
+        \]
+        We can't factor this expression any further.
+        Now we multiply the numerator and denominator each by \((\sqrt{19 - x} + 3),\) 
+        from which the limit becomes
+        \[
+        \ba 
+        \lim_{x \to 10} \frac{10 - x}{(\sqrt{19 - x} - 3)(\sqrt{26 - x} + 4)} \cdot \frac{\sqrt{19 - x} + 3}{\sqrt{19 - x} + 3} 
+        &amp;= \lim_{x \to 10} \frac{\cancel{(10 - x)}(\sqrt{19 - x} + 3)}{\cancel{(10 - x)}(\sqrt{26 - x} + 4)} \nl
+        &amp;= \lim_{x \to 10} \frac{\sqrt{19 - x} + 3}{\sqrt{26 - x} + 4} \nl 
+        &amp;= \frac{\sqrt{19 - 10} + 3}{\sqrt{26 - 10} + 4} \nl
+        &amp;= \boxed{\frac{3}{4}}
+        \ea 
+        \]
+        In general, if you have radicals on the numerator and denominator, 
+        then you should rationalize both if no other resources are available.
+        The order of rationalization does not matter.
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

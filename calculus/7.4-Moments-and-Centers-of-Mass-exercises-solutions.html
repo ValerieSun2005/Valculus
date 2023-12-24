@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.4 Exercise Solutions: Moments and Centers of Mass</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.4 Exercise Solutions — Moments and Centers of Mass</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a href="7.4-Moments-and-Centers-of-Mass.html">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.4-Moments-and-Centers-of-Mass-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        What is the <b>moment</b> of a point mass?
+        What is the <b>center of mass</b> for a system of point masses? 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A <b>moment</b> measures tendency for rotation. 
+        For a particle of mass \(m\) located a distance \(x\)
+        away from some reference point (usually the origin), 
+        the moment is \(mx.\)
+        Heavier objects produce larger moments, just as objects far from the reference point do. 
+        The <b>center of mass</b> is given by 
+        \[
+        \overline x = \frac{\ds \sum_{i = 1}^n m_i x_i}{\ds \sum_{i = 1}^n m_i} \cma 
+        \]
+        that is, the moment of the system divided by the system's total mass. 
+        All \(n\) particles produce a combined moment equivalent to the moment of a single particle of mass \(\sum_{i = 1}^n m_i\)
+        located at \(x = \overline x.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        What is a <b>lamina</b>? 
+        What is a <b>centroid</b>, 
+        and how do we find one?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A <b>lamina</b> is a flat plate,
+        whose shape we model using graphs in the \(xy\)-plane.
+        The center of mass of a lamina is called the <b>centroid</b>;
+        it is the point at which the lamina balances.
+        If a lamina is the region bounded by the curve \(y = f(x)\) and the \(x\)-axis from \(x = a\) to \(x = b,\)
+        then the centroid is located at 
+        \begin{equation*} 
+        \overline x = \frac{1}{A} \int_a^b x f(x) \di x 
+        \lspace
+        \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \cma
+        \end{equation*}
+        where \(A\) is the lamina's area.
+        If the lamina is bounded by two curves \(y = f(x)\) and \(y = g(x)\)
+        from \(x = a\) to \(x = b,\) with \(f(x) \geq g(x)\) on \(a \leq x \leq b,\)
+        then the centroid is at 
+        \begin{equation*} 
+        \overline x = \frac{1}{A} \int_a^b x [f(x) - g(x)] \di x 
+        \lspace
+        \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \pd
+        \end{equation*}
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Point masses with the specified masses lie on the \(x\)-axis in
+        <a href="#moments-1d-particle-ex">Figure 15</a>.
+        Calculate the moment \(M\) and center of mass \(\overline x\) of the system of particles.
+        <figure class="moments-1d-particle-ex figure-wide" id="moments-1d-particle-ex">
+<img alt="Figure 15" src="../images/sectionImages/moments-1d-particle-ex.jpg"/>
+</figure>
+<style>
+            .moments-1d-particle-ex::before{
+                content:'FIGURE 15';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-remark">
+            Moments and the coordinates centers of mass can be negative.
+            But mass can never be negative.
+        </aside>
+        Each particle's moment is given by the sum \(m_i x_i.\)
+        So the moment of the entire system of particles is 
+        \[
+        \ba
+        M &amp;= \sum_{i = 1}^4 m_i x_i \nl 
+        &amp;= (2 \cdot -3) + (6 \cdot -1) + (1 \cdot 0) + (4 \cdot 1) \nl 
+        &amp;= -8 \pd
+        \ea
+        \]
+        Also, the mass of the entire system is 
+        \[
+        \ba 
+        m &amp;= \sum_{i = 1}^4 m_i \nl 
+        &amp;= 2 + 6 + 1 + 4 \nl 
+        &amp;= 13 \pd
+        \ea 
+        \]
+        So the center of mass is \(x = \overline x\) where 
+        \[
+        \ba 
+        \overline x &amp;= \frac{M}{m} = \boxed{-\frac{8}{13}}
+        \ea     
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The following table shows objects with masses \(m_i\) resting on the \(x\)-axis at the given positions \(x_i.\)
+        Find the moment \(M\) and center of mass \(\overline x\) of the system of particles. 
+        <table class="table-vertical">
+<tr>
+<td class="label-cell">
+                    \(x_i\)
+                </td>
+<td class="label-cell">
+                    \(m_i\)
+                </td>
+</tr>
+<tr>
+<td>\(3\)</td>
+<td>\(11\)</td>
+</tr>
+<tr>
+<td>\(-7\)</td>
+<td>\(9\)</td>
+</tr>
+<tr>
+<td>\(1\)</td>
+<td>\(5\)</td>
+</tr>
+<tr>
+<td>\(-6\)</td>
+<td>\(2\)</td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-remark">
+            Moments and the coordinates centers of mass can be negative.
+            But mass can never be negative.
+        </aside>
+        The moment of each particle is \(m_i x_i.\)
+        The entire system's moment is 
+        \[
+        \ba 
+        M &amp;= \sum_{i = 1}^4 m_i x_i \nl 
+        &amp;= (11 \cdot 3) + (9 \cdot -7) + (5 \cdot 1) + (2 \cdot -6) \nl 
+        &amp;= -37 \pd
+        \ea 
+        \]
+        Also, the system's mass is 
+        \[m = \sum_{i = 1}^4 m_i = 11 + 9 + 5 + 2 = 27 \pd\]
+        The center of mass is therefore \(x = \overline x\) where 
+        \[
+        \ba 
+        \overline x &amp;= \frac{M}{m} = \boxed{-\frac{37}{27}}
+        \ea     
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        On the \(y\)-axis, objects with masses \(m_i\) rest at the positions \(y_i\) as given by the following table.
+        Find the moment \(M\) and center of mass \(\overline y\) of the system of particles. 
+        <table class="table-vertical">
+<tr>
+<td class="label-cell">
+                    \(y_i\)
+                </td>
+<td class="label-cell">
+                    \(m_i\)
+                </td>
+</tr>
+<tr>
+<td>\(1\)</td>
+<td>\(3\)</td>
+</tr>
+<tr>
+<td>\(3\)</td>
+<td>\(0\)</td>
+</tr>
+<tr>
+<td>\(-4\)</td>
+<td>\(7\)</td>
+</tr>
+<tr>
+<td>\(9\)</td>
+<td>\(12\)</td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-remark">
+            Moments and the coordinates centers of mass can be negative.
+            But mass can never be negative.
+        </aside>
+        The moment of each particle is \(m_i y_i.\)
+        The entire system's moment is 
+        \[
+        \ba 
+        M &amp;= \sum_{i = 1}^4 m_i y_i \nl 
+        &amp;= (3 \cdot 1) + (0 \cdot 3) + (7 \cdot -4) + (12 \cdot 9) \nl 
+        &amp;= 83 \pd
+        \ea 
+        \]
+        Also, the system's mass is 
+        \[m = \sum_{i = 1}^4 m_i = 3 + 0 + 7 + 12 = 22 \pd\]
+        The center of mass is therefore \(y = \overline y\) where 
+        \[
+        \ba 
+        \overline y &amp;= \frac{M}{m} = \boxed{\frac{83}{22}}
+        \ea     
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        An object of unknown mass \(m\) is placed at \(x = 0.8\) meter,
+        and a \(90\)-kilogram object is placed at \(x = 3\) meters.
+        They both sit on a balanced plank that pivots at \(x = 2\) meters. 
+        (See <a href="#moments-plank-m-ex">Figure 16</a>.)
+        Calculate \(m.\)
+        <figure class="moments-plank-m-ex figure-wide" id="moments-plank-m-ex">
+<img alt="Figure 16" src="../images/sectionImages/moments-plank-m-ex.jpg"/>
+</figure>
+<style>
+            .moments-plank-m-ex::before{
+                content:'FIGURE 16';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        At the pivot point, the two masses must exert equal and opposite moments.
+        This fact is summarized by the Law of the Lever, 
+        which gives
+        \[
+        \ba
+        m(2 - 0.8) &amp;= 90(3 - 2) \nl 
+        1.2 m &amp;= 90 \nl
+        \implies m &amp;= \boxed{75 \un{kg}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/moments-ex-particle-1.jpg
+    " alt="moments-ex-particle-1.jpg
+    ">
+</figure>
+</blockquote> find the 
+        moment about the \(x\)-axis, moment about the \(y\)-axis,
+        and center of mass of the two-dimensional system of particles. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The moment about the \(x\)-axis is 
+        \[
+        \ba 
+        M_x &amp;= \sum_{i = 1}^4 m_i y_i \nl 
+        &amp;= (7 \cdot 3) + (4 \cdot -2) + (2 \cdot 2) + (1 \cdot -3) \nl 
+        &amp;= 14 \pd
+        \ea 
+        \]
+        Likewise, the moment about the \(y\)-axis is 
+        \[
+        \ba 
+        M_y &amp;= \sum_{i = 1}^4 m_i x_i \nl 
+        &amp;= (7 \cdot 4) + (4 \cdot 2) + (2 \cdot -3) + (1 \cdot -4) \nl
+        &amp;= 26 \pd
+        \ea
+        \]
+        The system's total mass is 
+        \[m = \sum_{i = 1}^4 m_i = 7 + 4 + 2 + 1 = 14 \pd\]
+        Hence, the coordinates of the center of mass are 
+        \[
+        \baat{2}
+        \overline x &amp;= \frac{M_y}{m} &amp;&amp;= \frac{26}{14} = \frac{13}{7} \cma \nl 
+        \overline y &amp;= \frac{M_x}{m} &amp;&amp;= \frac{14}{14} = 1 \pd
+        \eaat
+        \]
+        So \(\boxed{\par{\tfrac{13}{7}, 1}}\) is the center of mass.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/moments-ex-particle-2.jpg
+    " alt="moments-ex-particle-2.jpg
+    ">
+</figure>
+</blockquote> find the 
+        moment about the \(x\)-axis, moment about the \(y\)-axis,
+        and center of mass of the two-dimensional system of particles. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The moment about the \(x\)-axis is 
+        \[
+        \ba 
+        M_x &amp;= \sum_{i = 1}^3 m_i y_i \nl 
+        &amp;= (3 \cdot 3) + (9 \cdot 2) + (1 \cdot 0) \nl 
+        &amp;= 27 \pd
+        \ea 
+        \]
+        Likewise, the moment about the \(y\)-axis is 
+        \[
+        \ba 
+        M_y &amp;= \sum_{i = 1}^3 m_i x_i \nl 
+        &amp;= (3 \cdot -2) + (9 \cdot 2) + (1 \cdot -1) \nl
+        &amp;= 11 \pd
+        \ea
+        \]
+        The system's total mass is 
+        \[m = \sum_{i = 1}^3 m_i = 3 + 9 + 1 = 13 \pd\]
+        Hence, the coordinates of the center of mass are 
+        \[
+        \baat{2}
+        \overline x &amp;= \frac{M_y}{m} &amp;&amp;= \frac{11}{13} \cma \nl 
+        \overline y &amp;= \frac{M_x}{m} &amp;&amp;= \frac{27}{13} \pd
+        \eaat
+        \]
+        So \(\boxed{\par{\tfrac{11}{13}, \tfrac{27}{13}}}\) is the center of mass.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/moments-ex-particle-3.jpg
+    " alt="moments-ex-particle-3.jpg
+    ">
+</figure>
+</blockquote> find the 
+        moment about the \(x\)-axis, moment about the \(y\)-axis,
+        and center of mass of the two-dimensional system of particles. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The moment about the \(x\)-axis is 
+        \[
+        \ba 
+        M_x &amp;= \sum_{i = 1}^4 m_i y_i \nl 
+        &amp;= (8 \cdot 3) + (5 \cdot 3) + (12 \cdot 0) + (6 \cdot -2) \nl 
+        &amp;= 27 \pd
+        \ea 
+        \]
+        Likewise, the moment about the \(y\)-axis is 
+        \[
+        \ba 
+        M_y &amp;= \sum_{i = 1}^4 m_i x_i \nl 
+        &amp;= (8 \cdot 0) + (5 \cdot -3) + (12 \cdot 0) + (6 \cdot -3) \nl
+        &amp;= -33 \pd
+        \ea
+        \]
+        The system's total mass is 
+        \[m = \sum_{i = 1}^4 m_i = 8 + 5 + 12 + 6 = 31 \pd\]
+        Hence, the coordinates of the center of mass are 
+        \[
+        \baat{2}
+        \overline x &amp;= \frac{M_y}{m} &amp;&amp;= \frac{-33}{31} \cma \nl 
+        \overline y &amp;= \frac{M_x}{m} &amp;&amp;= \frac{27}{31} \pd
+        \eaat
+        \]
+        So \(\boxed{\par{-\tfrac{33}{31}, \tfrac{27}{31}}}\) is the center of mass.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = 4x \cma y = 0 \cma x = 1 \cma x = 5\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The area of the region is 
+        \[
+        \ba 
+        A &amp;= \int_1^5 4x \di x \nl 
+        &amp;= 2x^2 \intEval_1^5 
+        = 48 \pd
+        \ea 
+        \]
+        The \(x\)-coordinate of the centroid is therefore 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_1^5 x (4x) \di x \nl 
+        &amp;= \tfrac{1}{48} \int_1^5 4x^2 \di x \nl 
+        &amp;= \tfrac{1}{12} \int_1^5 x^2 \di x \nl 
+        &amp;= \tfrac{1}{36} x^3 \intEval_1^5 \nl 
+        &amp;= \tfrac{124}{36} = \tfrac{31}{9} \pd
+        \ea 
+        \]
+        We attain the \(y\)-coordinate of the centroid as follows:
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_1^5 \tfrac{1}{2} (4x)^2 \di x \nl 
+        &amp;= \tfrac{1}{48} \int_1^5 8x^2 \di x \nl 
+        &amp;= \tfrac{1}{6} \int_1^5 x^2 \di x \nl 
+        &amp;= \tfrac{1}{18} x^3 \intEval_1^5 
+        = \tfrac{62}{9} \pd
+        \ea 
+        \]
+        So \(\boxed{\par{\tfrac{31}{9}, \tfrac{62}{9}}}\) is the region's centroid.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = 9 - x^2 \cma y = 0\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The parabola \(y = 9 - x^2\) intersects the \(y\)-axis (the line <nobr>\(x = 0\))</nobr>
+        when \(x = -3\) and \(x = 3.\)
+        The region's area is therefore 
+        \[
+        \ba 
+        A &amp;= \int_{-3}^3 \par{9 - x^2} \di x \nl 
+        &amp;= 2 \int_0^3 \par{9 - x^2} \di x \nl 
+        &amp;= 2 \par{9x - \tfrac{1}{3} x^3} \intEval_0^3 \nl 
+        &amp;= 36 \pd
+        \ea 
+        \]
+        By symmetry, the \(x\)-coordinate of the centroid is \(\overline x = 0.\)
+        (The region must balance at some point on the \(y\)-axis.)
+        We attain the \(y\)-coordinate of the centroid as follows:
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_{-3}^3 \tfrac{1}{2} \par{9 - x^2}^2 \di x \nl 
+        &amp;= \tfrac{1}{72} \int_{-3}^3 \par{9 - x^2}^2 \di x \nl 
+        &amp;= \tfrac{1}{36} \int_0^3 \par{9 - x^2}^2 \di x \nl 
+        &amp;= \tfrac{1}{36} \int_0^3 \par{x^4 - 18 x^2 + 81} \di x \nl 
+        &amp;= \tfrac{1}{36} \par{\tfrac{1}{5} x^5 - 6x^3 + 81x} \intEval_0^3 \nl 
+        &amp;= \tfrac{18}{5} \pd
+        \ea
+        \] 
+        Thus, \(\boxed{\par{0, \tfrac{18}{5}}}\) is the region's centroid.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(y = x^3 \cma y = 0 \cma x = 2\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The region's area is 
+        \[
+        \ba 
+        A &amp;= \int_0^2 x^3 \di x \nl 
+        &amp;= \tfrac{1}{4} x^4 \intEval_0^2 = 4 \pd
+        \ea 
+        \]
+        The \(x\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^2 x \par{x^3} \di x \nl 
+        &amp;= \tfrac{1}{4} \int_0^2 x^4 \di x \nl 
+        &amp;= \tfrac{1}{20} x^5 \intEval_0^2 = \tfrac{8}{5} \pd
+        \ea 
+        \]
+        The \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_0^2 \tfrac{1}{2} \par{x^3}^2 \di x \nl 
+        &amp;= \tfrac{1}{8} \int_0^2 x^6 \di x \nl 
+        &amp;= \tfrac{1}{56} x^7 \intEval_0^2 
+        = \tfrac{16}{7} \pd
+        \ea 
+        \]
+        Hence, \(\boxed{\par{\tfrac{8}{5}, \tfrac{16}{7}}}\) is the region's centroid.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = x + 6 \cma y = -2x \cma x = 0\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This region is bounded above by the line \(y = x + 6\)
+        and below by the line \(y = -2x.\) 
+        It is a triangle in the second quadrant, 
+        so we expect the centroid's \(x\)-coordinate to be negative
+        and its \(y\)-coordinate to be positive.
+        Both lines intersect when \(x + 6 = -2x,\)
+        which occurs when \(x = -2.\) 
+        The triangle's height is \(6\)
+        and its width is \(2,\) so its area is 
+        \[A = \tfrac{1}{2} (2)(6) = 6 \pd\]
+        So the \(x\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_{-2}^0 x \parbr{(x + 6) - (-2x)} \di x \nl 
+        &amp;= \tfrac{1}{6} \int_{-2}^0 \par{3x^2 + 6x} \di x \nl 
+        &amp;= \tfrac{1}{6} \par{x^3 + 3x^2} \intEval_{-2}^0 \nl 
+        &amp;= -\tfrac{2}{3} \pd
+        \ea 
+        \]
+        The \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_{-2}^0 \parbr{\tfrac{1}{2} (x + 6)^2 - \tfrac{1}{2} (-2x)^2} \di x \nl 
+        &amp;= \tfrac{1}{12} \int_{-2}^0 \par{-3x^2 + 12x + 36} \di x \nl 
+        &amp;= \tfrac{1}{12} \par{-x^3 + 6x^2 + 36x} \intEval_{-2}^0 \nl 
+        &amp;= \tfrac{10}{3} \pd
+        \ea
+        \]
+        So the centroid is 
+        \(\boxed{\par{-\tfrac{2}{3}, \tfrac{10}{3}}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(y = e^{2x} \cma y = 0 \cma x = 1 \cma x = 3\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The region's area is 
+        \[
+        \ba 
+        A &amp;= \int_1^3 e^{2x} \di x \nl 
+        &amp;= \tfrac{1}{2} e^{2x} \intEval_1^3 \nl
+        &amp;= \tfrac{1}{2} \par{e^6 - e^2} \pd
+        \ea 
+        \]
+        The \(x\)-coordinate of the centroid is given by 
+        \[
+        \ba
+        \overline x &amp;= \frac{1}{\tfrac{1}{2} \par{e^6 - e^2}} \int_1^3 x e^{2x} \di x \nl 
+        &amp;= \frac{2}{e^6 - e^2} \int_1^3 x e^{2x} \di x \pd
+        \ea
+        \]
+        To antidifferentiate \(x e^{2x},\)
+        we use Integration by parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{2x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= \tfrac{1}{2} e^{2x} \pd
+        \eaat
+        \]
+        Then we see 
+        \[
+        \ba 
+        \int x e^{2x} \di x &amp;= \tfrac{1}{2} x e^{2x} - \int \tfrac{1}{2} e^{2x} \di x \nl 
+        &amp;= \tfrac{1}{2} x e^{2x} - \tfrac{1}{4} e^{2x} + C \pd
+        \ea 
+        \]
+        We therefore get 
+        \[
+        \ba 
+        \overline x &amp;= \frac{2}{e^6 - e^2} \par{\tfrac{1}{2} x e^{2x} - \tfrac{1}{4} e^{2x}} \intEval_1^3 \nl 
+        &amp;= \frac{e^2 \par{5e^4 - 1}}{2 \par{e^6 - e^2}} 
+        = \frac{5e^4 - 1}{2 \par{e^4 - 1}} \pd
+        \ea 
+        \]
+        The \(y\)-coordinate of the centroid is 
+        \[
+        \ba
+        \overline y &amp;= \frac{1}{\tfrac{1}{2} \par{e^6 - e^2}} \int_1^3 \tfrac{1}{2} \par{e^{2x}}^2 \di x \nl 
+        &amp;= \frac{1}{e^6 - e^2} \int_1^3 e^{4x} \di x \nl 
+        &amp;= \frac{1}{e^6 - e^2} \par{\tfrac{1}{4} e^{4x}} \intEval_1^3 \nl 
+        &amp;= \frac{e^{12} - e^4}{4 \par{e^6 - e^2}} 
+        = \frac{\par{e^6 + e^2}\par{e^6 - e^2}}{4 \par{e^6 - e^2}} \nl 
+        &amp;= \frac{e^6 + e^2}{4} \pd
+        \ea
+        \]
+        Hence, the centroid is 
+        \[
+        \boxed{\par{\frac{5e^4 - 1}{2 \par{e^4 - 1}} \cma \frac{e^6 + e^2}{4}}} 
+        \approx \par{2.537, 102.704} \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = \sin x \cma y = 0 \cma x = 0 \cma x = \pi\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The area of the region is 
+        \[
+        \ba 
+        A &amp;= \int_0^\pi \sin x \di x \nl 
+        &amp;= - \cos x \intEval_0^\pi = 2 \pd
+        \ea 
+        \]
+        The \(x\)-coordinate of the centroid is given by 
+        \[
+        \overline x = \tfrac{1}{2} \int_0^\pi x \sin x \di x \pd
+        \]
+        We evaluate this integral by using Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= \sin x \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= - \cos x \pd
+        \eaat
+        \]
+        So we have 
+        \[
+        \ba 
+        \int x \sin x \di x &amp;= - x \cos x - \int (-\cos x) \di x \nl 
+        &amp;= - x \cos x + \int \cos x \di x \nl 
+        &amp;= - x \cos x + \sin x + C \pd
+        \ea 
+        \]
+        We therefore see
+        \[
+        \overline x = \tfrac{1}{2} \par{- x \cos x + \sin x} \intEval_0^\pi 
+        = \frac{\pi}{2} \pd
+        \]
+        Likewise, the \(y\)-coordinate of the centroid is given by 
+        \[
+        \baat{2}
+        \overline y &amp;= \tfrac{1}{2} \int_0^\pi \tfrac{1}{2} \par{\sin x}^2 \di x \nl 
+        &amp;= \tfrac{1}{4} \int_0^\pi \sin^2 x \di x \nl 
+        &amp;= \tfrac{1}{8} \int_0^\pi \par{1 - \cos 2x} \di x &amp;\comment{\sin^2 x = \tfrac{1}{2} (1 - \cos 2x)} \nl 
+        &amp;= \tfrac{1}{8} \par{x - \tfrac{1}{2} \sin 2x} \intEval_0^\pi 
+        = \frac{\pi}{8} \pd
+        \eaat 
+        \]
+        So the centroid is 
+        \[
+        \boxed{\par{\frac{\pi}{2} \cma \frac{\pi}{8}}} \approx \par{1.571, 0.393} \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = x^2 \cma y = 1\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The parabola \(y = x^2\) intersects the line \(y = 1\) when \(x = -1\)
+        and \(x = 1.\)
+        The region's area is 
+        \[
+        \ba 
+        A &amp;= \int_{-1}^1 \par{1 - x^2} \di x \nl 
+        &amp;= 2 \int_0^1 \par{1 - x^2} \di x \nl 
+        &amp;= 2 \par{x - \tfrac{1}{3} x^3} \intEval_0^1 \nl 
+        &amp;= \tfrac{4}{3} \pd
+        \ea
+        \]
+        By inspection, the \(x\)-coordinate of the centroid is \(\overline x = 0\)
+        because the parabola is symmetric about the \(y\)-axis. 
+        The \(y\)-coordinate of the centroid, in contrast, is given by 
+        \[
+        \ba 
+        \overline y 
+        &amp;= \frac{1}{4/3} \int_{-1}^1 \tfrac{1}{2} \parbr{(1)^2 - \par{x^2}^2} \di x \nl 
+        &amp;= \tfrac{3}{8} \int_{-1}^1 \par{1 - x^4} \di x \nl 
+        &amp;= \tfrac{3}{4} \int_0^1 \par{1 - x^4} \di x \nl 
+        &amp;= \tfrac{3}{4} \par{x - \tfrac{1}{5} x^5} \intEval_0^1 \nl 
+        &amp;= \tfrac{3}{5} \pd
+        \ea 
+        \]
+        Hence, the centroid is \(\boxed{\par{0, \tfrac{3}{5}}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = x \cma y = \sqrt x \cma x = 0\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        These functions intersect when \(x = 0\) and \(x = 1.\)
+        In <a href="/Valculus/calculus/5.1-Areas-between-Curves.html#ex-x-sqrt"target = "_blank">Example 5.1-2</a>, 
+        we found that the region has an area of \(A = 1/6.\)
+        The \(x\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{1/6} \int_0^1 x \par{\sqrt x - x} \di x \nl 
+        &amp;= 6 \int_0^1 \par{x^{3/2} - x^2} \di x \nl 
+        &amp;= 6 \par{\tfrac{2}{5} x^{5/2} - \tfrac{1}{3} x^3} \intEval_0^1 \nl 
+        &amp;= \tfrac{2}{5} \pd
+        \ea
+        \]
+        Likewise, the \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{1/6} \int_0^1 \tfrac{1}{2} \parbr{\par{\sqrt x}^2 - (x)^2} \di x \nl 
+        &amp;= 3 \int_0^1 \par{x - x^2} \di x \nl 
+        &amp;= 3 \par{\tfrac{1}{2} x^2 - \tfrac{1}{3} x^3} \intEval_0^1 \nl 
+        &amp;= \tfrac{1}{2} \pd
+        \ea 
+        \]
+        The centroid is therefore \(\boxed{\par{\tfrac{2}{5}, \tfrac{1}{2}}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = 2 \sqrt x \cma y = 4 \cma x = 0\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The region is bounded above by \(y = 4\)
+        and below by \(y = 2 \sqrt x.\)
+        Both functions intersect when \(2 \sqrt x = 4,\)
+        which occurs when \(x = 4.\)
+        The region's area is therefore 
+        \[
+        \ba
+        A &amp;= \int_0^4 \par{4 - 2 \sqrt x} \di x \nl 
+        &amp;= \par{4x - \tfrac{4}{3} x^{3/2}} \intEval_0^4 \nl 
+        &amp;= \tfrac{16}{3} \pd
+        \ea
+        \]
+        The centroid's \(x\)-coordinate is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{16/3} \int_0^4 x \par{4 - 2 \sqrt x} \di x \nl 
+        &amp;= \tfrac{3}{16} \int_0^4 \par{4x - 2x^{3/2}} \di x \nl
+        &amp;= \tfrac{3}{16} \par{2x^2 - \tfrac{4}{5} x^{5/2}} \intEval_0^4 \nl 
+        &amp;= \tfrac{6}{5} \pd
+        \ea
+        \]
+        Similarly, the centroid's \(y\)-coordinate is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{16/3} \int_0^4 \tfrac{1}{2} \parbr{\par{4}^2 - \par{2 \sqrt x}^2} \di x \nl 
+        &amp;= \tfrac{3}{32} \int_0^4 \par{16 - 4x} \di x \nl 
+        &amp;= \tfrac{3}{32} \par{16x - 2x^2} \intEval_0^4 \nl 
+        &amp;= 3 \pd
+        \ea 
+        \]
+        The centroid is therefore \(\boxed{\par{\tfrac{6}{5}, 3}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = x^3 + 2 \cma 2x + y = 5 \cma x = 0\)
+        (<i>Hint</i>: The graphs intersect when <nobr>\(x = 1.\))</nobr>
+</blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite \(2x + y = 5\) as \(y = 5 - 2x.\)
+        The region is bounded above by this line 
+        and below by \(y = x^3 + 2\) from \(x = 0\) to \(x = 1.\)
+        So its area is 
+        \[
+        \ba 
+        A &amp;= \int_0^1 \parbr{(5 - 2x) - \par{x^3 + 2}} \di x \nl 
+        &amp;= \int_0^1 \par{-x^3 - 2x + 3} \di x \nl 
+        &amp;= \par{-\tfrac{1}{4} x^4 - x^2 + 3x} \intEval_0^1 \nl 
+        &amp;= \tfrac{7}{4} \pd
+        \ea 
+        \]
+        The \(x\)-coordinate of the centroid is therefore
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^1 x \parbr{(5 - 2x) - \par{x^3 + 2}} \di x \nl 
+        &amp;= \tfrac{4}{7} \int_0^1 \par{-x^4 - 2x^2 + 3x} \di x \nl 
+        &amp;= \tfrac{4}{7} \par{-\tfrac{1}{5} x^5 - \tfrac{2}{3} x^3 + \tfrac{3}{2} x^2} \intEval_0^1 \nl 
+        &amp;= \tfrac{38}{105} \pd
+        \ea 
+        \]
+        The \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_0^1 \parbr{\tfrac{1}{2} (5 - 2x)^2 - \tfrac{1}{2} \par{x^3 + 2}^2} \di x \nl 
+        &amp;= \tfrac{2}{7} \int_0^1 \par{-x^6 - 4x^3 + 4x^2 - 20 x + 21} \di x \nl 
+        &amp;= \tfrac{2}{7} \par{-\tfrac{1}{7} x^7 - x^4 + \tfrac{4}{3} x^3 - 10x^2 + 21x} \intEval_0^1 \nl 
+        &amp;= \tfrac{470}{147} \pd
+        \ea 
+        \]
+        So the centroid is \(\boxed{\par{\tfrac{38}{105}, \tfrac{470}{147}}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(x = y^2 \cma x = 4\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's reexpress \(x = y^2\) using the functions 
+        \(y = \sqrt x\) and \(y = -\sqrt x.\)
+        The region is therefore bounded above by \(y = \sqrt x,\)
+        below by \(y = -\sqrt x,\) and on the right by \(x = 4.\)
+        So its area is 
+        \[
+        \ba 
+        A &amp;= \int_0^4 \parbr{\sqrt x - \par{-\sqrt x}} \di x \nl 
+        &amp;= 2 \int_0^4 \sqrt x \di x \nl 
+        &amp;= \tfrac{4}{3} x^{3/2} \intEval_0^4 
+        = \tfrac{32}{3} \pd 
+        \ea 
+        \]
+        Because the region is symmetric about the \(x\)-axis, 
+        it must balance at some point on the line \(y = 0.\)
+        The \(y\)-coordinate of the centroid is therefore \(\overline y = 0.\)
+        Conversely, the \(x\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^4 x \parbr{\par{\sqrt x} - \par{-\sqrt x}} \di x \nl 
+        &amp;= \tfrac{3}{32} \int_0^4 x \par{2 \sqrt x} \di x \nl 
+        &amp;= \tfrac{3}{16} \int_0^4 x^{3/2} \di x \nl 
+        &amp;= \tfrac{3}{40} x^{5/2} \intEval_0^4 = \tfrac{12}{5} \pd
+        \ea 
+        \]
+        So the centroid is \(\boxed{\par{\tfrac{12}{5} \cma 0}}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = e^{-x} - 3 \cma y = 0 \cma x = 0\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The region is bounded in the third quadrant;
+        we therefore expect both the centroid's <nobr>\(x\)-</nobr> and \(y\)-coordinates to be negative. 
+        The curve intersects the \(x\)-axis when 
+        \[
+        \ba
+        e^{-x} - 3 &amp;= 0 \nl 
+        e^{-x} &amp;= 3 \nl
+        \implies x &amp;= -\ln 3 \pd
+        \ea
+        \]
+        The region is therefore bounded from \(x = -\ln 3\) to \(x = 0.\)
+        So the area is 
+        \[
+        \ba 
+        A &amp;= \int_{-\ln 3}^0 -\par{e^{-x} - 3} \di x \nl 
+        &amp;= \int_0^{-\ln 3} \par{e^{-x} - 3} \di x \nl 
+        &amp;= \par{-e^{-x} - 3x} \intEval_0^{-\ln 3} \nl 
+        &amp;= 3 \ln 3 - 2 \pd
+        \ea 
+        \]
+        The region has an upper-boundary function of \(f(x) = 0\)
+        and a lower-boundary function of \(g(x) = e^{-x} - 3.\)
+        The \(x\)-coordinate of the centroid is then
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_{-\ln 3}^0 x \parbr{0 - \par{e^{-x} - 3}} \di x \nl 
+        &amp;= \frac{1}{3 \ln 3 - 2} \int_{-\ln 3}^0 \par{3x - x e^{-x}} \di x \pd
+        \ea 
+        \]
+        To antidifferentiate \(x e^{-x},\) we use Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= - e^{-x} \pd
+        \eaat
+        \]
+        Doing so shows 
+        \[
+        \ba 
+        \int x e^{-x} \di x &amp;= - x e^{-x} - \int -e^{-x} \di x \nl 
+        &amp;= -x e^{-x} - e^{-x} + C \pd
+        \ea 
+        \]
+        So we see 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{3 \ln 3 - 2} \par{\tfrac{3}{2} x^2 + x e^{-x} + e^{-x}} \intEval_{-\ln 3}^0 \nl 
+        &amp;= \frac{-2 - \tfrac{3}{2} (\ln 3)^2 + 3 \ln 3}{3 \ln 3 - 2} \pd
+        \ea 
+        \]
+        Likewise, the \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_{-\ln 3}^0 \parbr{\tfrac{1}{2} (0)^2 - \tfrac{1}{2} \par{e^{-x} - 3}^2} \di x \nl 
+        &amp;= \frac{1}{6 \ln 3 - 4} \int_{-\ln 3}^0 -\par{e^{-2x} - 6 e^{-x} + 9} \di x \nl 
+        &amp;= \frac{1}{4 - 6 \ln 3} \par{-\tfrac{1}{2} e^{-2x} + 6 e^{-x} + 9x} \intEval_{-\ln 3}^0 \nl 
+        &amp;= \frac{9 \ln 3 - 8}{4 - 6 \ln 3} \pd
+        \ea 
+        \]
+        So the centroid is 
+        \[
+        \boxed{\par{\frac{-2 - \tfrac{3}{2} (\ln 3)^2 + 3 \ln 3}{3 \ln 3 - 2} \cma \frac{9 \ln 3 - 8}{4 - 6 \ln 3}}}
+        \approx \par{-0.397, -0.728} \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = - \cos x \cma y = 1 + \cos x \cma x = 0 \cma x = \pi/4\)
+    </blockquote> find the centroid of the region bounded by the given graphs. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The region is bounded above by \(y = 1 + \cos x\) and below by \(y = -\cos x.\)
+        Its area is therefore 
+        \[
+        \ba 
+        A &amp;= \int_0^{\pi/4} \parbr{(1 + \cos x) - (-\cos x)} \di x \nl 
+        &amp;= \int_0^{\pi/4} \par{1 + 2 \cos x} \di x \nl
+        &amp;= \par{x + 2 \sin x} \intEval_0^{\pi/4} \nl 
+        &amp;= \frac{\pi}{4} + \sqrt 2 \pd
+        \ea 
+        \]
+        The region is symmetric about the line \(y = 1/2.\)
+        Hence, the region must balance somewhere on this line
+        and so the \(y\)-coordinate of the centroid is \(\overline y = 1/2.\)
+        The \(x\)-coordinate of the centroid is given by
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^{\pi/4} x \parbr{(1 + \cos x) - (-\cos x)} \di x \nl 
+        &amp;= \frac{1}{\frac{\pi}{4} + \sqrt 2} \int_0^{\pi/4} \par{x + 2 x \cos x} \di x \pd
+        \ea 
+        \]
+        To antidifferentiate \(x \cos x,\) we use Integration by Parts with
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= \cos x \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= \sin x \pd
+        \eaat
+        \]
+        We then see 
+        \[
+        \ba 
+        \int x \cos x \di x &amp;= x \sin x - \int \sin x \di x \nl 
+        &amp;= x \sin x + \cos x + C \pd
+        \ea 
+        \]
+        So we find 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{\frac{\pi}{4} + \sqrt 2} \par{\tfrac{1}{2} x^2 + 2 x \sin x + 2 \cos x} \intEval_0^{\pi/4} \nl 
+        &amp;= 
+        \frac{1}{\frac{\pi}{4} + \sqrt 2} \par{\frac{\pi^2}{32} + \frac{\pi \sqrt 2}{4} + \sqrt 2 - 2} \pd
+        \ea 
+        \]
+        In summary, the centroid is 
+        \[
+        \boxed{\par{\frac{\ds \frac{\pi^2}{32} + \frac{\pi \sqrt 2}{4} + \sqrt 2 - 2}{\dfrac{\pi}{4} + \sqrt 2} \cma \frac{1}{2}}} 
+        \approx (0.379, 0.5) \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Concrete, whose density is \(2400\) kilograms per cubic meter, is laid to create a foundation 
+        in the shape of the region bounded by \(y = \ln x,\)
+        the \(x\)-axis, and the line \(x = e.\)
+        If \(x\) and \(y\) are measured in meters, 
+        then calculate the foundation's moment about the \(y\)-axis.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The graph of \(y = \ln x\) intersects the \(x\)-axis when \(x = 1.\)
+        So the region is bounded between \(x = 1\) and \(x = e.\)
+        The moment about the \(y\)-axis is therefore 
+        \[
+        M_y = 2400 \int_1^e x \ln x \di x \pd
+        \]
+        Let's perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= \ln x \lspace &amp;\dd v &amp;= x \di x \nl 
+        \dd u &amp;= \frac{1}{x} \di x \lspace &amp;v &amp;= \frac{x^2}{2} \pd
+        \eaat
+        \]
+        Doing so shows 
+        \[
+        \ba 
+        \int x \ln x \di x &amp;= (\ln x) \par{\frac{x^2}{2}} - \int \par{\frac{x^2}{2}} \par{\frac{1}{x}} \di x \nl 
+        &amp;= \tfrac{1}{2} x^2 \ln x - \tfrac{1}{2} \int x \di x \nl 
+        &amp;= \tfrac{1}{2} x^2 \ln x - \tfrac{1}{4} x^2 + C \pd
+        \ea 
+        \]
+        Hence, we find
+        \[
+        \ba 
+        M_y &amp;= 2400 \par{\tfrac{1}{2} x^2 \ln x - \tfrac{1}{4} x^2} \intEval_1^e \nl 
+        &amp;= \boxed{600 \par{e^2 + 1}} 
+        \approx 5033.434 \un{kg-m} \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The region bounded by \(y = e^x,\) \(y = e^{x} + 1,\)
+        the \(y\)-axis, and the line \(x = 1,\)
+        where \(x\) and \(y\) are measured in meters, 
+        is the shape of a thin iron plate.
+        Iron has a density of \(7860\) kilograms per cubic meter.
+        Calculate the moment about the \(x\)-axis. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The moment about the \(x\)-axis is
+        \[
+        \ba 
+        M_x &amp;= 7860 \int_0^1 \tfrac{1}{2} \parbr{\par{e^x + 1}^2 - \par{e^x}^2} \di x \nl
+        &amp;= 3930 \int_0^1 \par{e^{2x} + 2e^x + 1 - e^{2x}} \di x \nl 
+        &amp;= 3930 \int_0^1 \par{2e^x + 1} \di x \nl 
+        &amp;= 3930 \par{2e^x + x} \intEval_0^1 \nl 
+        &amp;= \boxed{3930 \par{2e - 1}} \approx 17435.695 \un{kg-m} \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        An aluminum lamina, whose density is \(2700\) kilograms per cubic meter, 
+        is the shape of the region bounded by \(y = \cos x\) and the \(x\)-axis for \(-\pi/2 \leq x \leq \pi/2.\)
+        Find the lamina's moments about the \(x\)-axis and about the \(y\)-axis.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The lamina is symmetric about the \(y\)-axis. 
+        Hence, it must balance at some point on the \(y\)-axis;
+        it has no tendency to rotate about the \(y\)-axis. 
+        So \(\boxed{M_y = 0}.\)
+        Conversely, the moment about the \(x\)-axis is
+        \[
+        \baat{2}
+        M_x &amp;= 2700 \int_{-\pi/2}^{\pi/2} \tfrac{1}{2} (\cos x)^2 \di x \nl
+        &amp;= 1350 \int_{-\pi/2}^{\pi/2} \cos^2 x \di x \nl 
+        &amp;= 2700 \int_0^{\pi/2} \cos^2 x \di x \comment{\cos^2 x \text{ is even}} \nl 
+        &amp;= 1350 \int_0^{\pi/2} (1 + \cos 2x) \di x \comment{\cos^2 x = \tfrac{1}{2} (1 + \cos 2x)} \nl 
+        &amp;= 1350 \par{x + \tfrac{1}{2} \sin 2x} \intEval_0^{\pi/2} \nl 
+        &amp;= 1350 \par{\frac{\pi}{2}} \nl 
+        &amp;= \boxed{675 \pi} \approx 2120.575 \un{kg-m} \pd
+        \eaat 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For the right triangle of base \(b\) and height \(h\) in <a href="#centroid-right-tri">Figure 17</a>,
+        prove that the centroid is located 
+        \(h/3\) units above and \(b/3\) units right of the vertex with the right angle.
+        <figure class="centroid-right-tri figure-center-one" id="centroid-right-tri">
+<img alt="Figure 17" src="../images/sectionImages/centroid-right-tri.jpg"/>
+</figure>
+<style>
+            .centroid-right-tri::before{
+                content:'FIGURE 17';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's impose an axis system such that 
+        \((0, 0)\) is the vertex with the right angle
+        (that is, the bottom-left corner).
+        We then model the hypotenuse using the line 
+        \[y = h - \frac{h}{b} x \pd\]
+        The triangle's area is 
+        \[A = \tfrac{1}{2} bh \cma\]
+        and the region is bounded from \(x = 0\) to \(x = b.\)
+        The \(x\)-coordinate of the centroid is then 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^b x \par{h - \frac{h}{b} x} \di x \nl 
+        &amp;= \frac{2}{bh} \int_0^b \par{hx - \frac{h}{b} x^2} \di x \nl 
+        &amp;= \frac{2}{bh} \par{\frac{hx^2}{2} - \frac{hx^3}{3b}} \intEval_0^b \nl 
+        &amp;= \frac{2}{bh} \par{\frac{hb^2}{2} - \frac{hb^3}{3b}} \nl 
+        &amp;= \frac{2}{bh} \par{\frac{hb^2}{6}} = \frac{b}{3} \cma
+        \ea 
+        \]
+        as shown by the figure. 
+        Similarly, the \(y\)-coordinate of the centroid is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_0^b \tfrac{1}{2} \par{h - \frac{h}{b} x}^2 \di x \nl 
+        &amp;= \frac{1}{bh} \int_0^b \par{h^2 - \frac{2h^2x}{b} + \frac{h^2}{b^2} x^2} \di x \nl 
+        &amp;= \frac{1}{bh} \par{h^2 x - \frac{h^2 x^2}{b} + \frac{h^2 x^3}{3 b^2}} \intEval_0^b \nl 
+        &amp;= \frac{1}{bh} \par{h^2 b - h^2 b + \frac{h^2 b}{3}} \nl 
+        &amp;= \frac{h}{3} \cma
+        \ea 
+        \]
+        as expected.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If the triangle in <a href="#centroid-right-tri">Figure 17</a> 
+        is a lamina of density \(\rho = 20,\)
+        then express its moment about the \(x\)-axis and moment about the \(y\)-axis
+        in terms of \(b\) and \(h.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(M_x\) is the moment about the \(x\)-axis, \(M_y\) is the moment about the \(y\)-axis,
+        and \(m\) is the lamina's mass, then recall that
+        \[
+        \ba 
+        \overline x = \frac{M_y}{m} \lspace \overline y = \frac{M_x}{m} \pd
+        \ea 
+        \]
+        The triangle's area is \(A = \tfrac{1}{2} bh,\) so its mass is 
+        \[m = \rho A = (20) \par{\tfrac{1}{2} bh} = 10 bh \pd\]
+        Using \(\overline x = b/3\) and \(\overline y = h/3,\) we see 
+        \[
+        \baat{3}
+        \frac{b}{3} &amp;= \frac{M_y}{10 bh} &amp;&amp;\implies \boxed{M_y = \frac{10 b^2 h}{3}} \nl 
+        \frac{h}{3} &amp;= \frac{M_x}{10 bh} &amp;&amp;\implies \boxed{M_x = \frac{10 bh^2}{3}}
+        \eaat 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Calculate the volume of the solid generated by 
+        rotating the lamina in 
+        <a href="/Valculus/calculus/7.4-Moments-and-Centers-of-Mass.html#ex-centroid-sqrt" target="_blank">Example 2</a>
+        about the \(x\)-axis. 
+        Then find the volume of the solid generated by rotating it about the \(y\)-axis.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="centroid-sqrtx" id="centroid-sqrtx">
+<img alt="centroid-sqrtx.jpg" src="../images/sectionImages/centroid-sqrtx.jpg"/>
+</figure>
+        In <a href="/Valculus/calculus/7.4-Moments-and-Centers-of-Mass.html#ex-centroid-sqrt" target="_blank">Example 2</a>,
+        we found the region's area to be \(A = 16/3\)
+        and the centroid to be \(\par{\overline x, \overline y}\) \(= \par{\tfrac{12}{5}, \tfrac{3}{4}}.\)
+        Now we use the Theorem of Pappus:
+        Rotating the region about the \(x\)-axis, 
+        we find the volume to be 
+        \[
+        \ba 
+        V &amp;= 2 \pi A \overline y \nl 
+        &amp;= 2 \pi \par{\tfrac{16}{3}} \par{\tfrac{3}{4}} \nl 
+        &amp;= \boxed{8 \pi} \approx 25.133 \pd
+        \ea 
+        \]
+        Similarly, rotating the region about the \(y\)-axis produces a solid of volume 
+        \[
+        \ba 
+        V &amp;= 2 \pi A \overline x \nl
+        &amp;= 2 \pi \par{\tfrac{16}{3}} \par{\tfrac{12}{5}} \nl 
+        &amp;= \boxed{\frac{128 \pi}{5}} \approx 80.425 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the result of 
+        <a href="/Valculus/calculus/7.4-Moments-and-Centers-of-Mass.html#ex-centroid-semicircle" target="_blank">Example 3</a>
+        to verify that a sphere of radius \(r\) has a volume of 
+        \(V = \tfrac{4}{3} \pi r^3.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="centroid-semicircle" id="centroid-semicircle">
+<img alt="centroid-semicircle.jpg" src="../images/sectionImages/centroid-semicircle.jpg"/>
+</figure>
+        If we rotate the region bounded by the semicircle \(y = \sqrt{r^2 - x^2}\) about the \(x\)-axis, 
+        then we attain a sphere of radius \(r.\)
+        We could use the Disk Method to find its volume, 
+        but it is easier to use the Theorem of Pappus:
+        The semicircle's area is \(A = \tfrac{1}{2} \pi r^2,\)
+        and the \(y\)-coordinate of the centroid is \(\overline y = 4r/3\pi.\)
+        Hence, the volume of the sphere is 
+        \[
+        \ba 
+        V &amp;= 2 \pi A \overline y \nl 
+        &amp;= 2 \pi \par{\tfrac{1}{2} \pi r^2} \par{\frac{4r}{3 \pi}} \nl 
+        &amp;= \tfrac{4}{3} \pi r^3 \cma
+        \ea 
+        \]
+        as expected.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The concept of <i>weighted means</i> is central to many contexts beyond 
+        calculating center of mass. 
+        A weighted mean is given by 
+        \[\overline x = \frac{\ds \sum_{i = 1}^n w_i x_i}{\ds \sum_{i = 1}^n w_i} \cma\]
+        where \(w_1, w_2,\) \(\dots, w_n\) are the weights of the measurements \(x_1, x_2,\) \(\dots, x_n.\)
+        (In calculating center of mass, the weight \(w_i\) is the mass of each particle.)
+        Solve the following problems, which involve weighted means.
+        <ol class="list-alpha">
+<li>
+                Your grade in a calculus class
+                is determined by your performance on midterm exams, a final exam, and homework. 
+                These respective items are worth \(50\%,\) \(40\%,\) and \(10\%\)
+                of your grade. 
+                Suppose that your mean grade on the midterm exams is \(70\%,\) 
+                you score an \(80\%\) on the final exam,
+                and your homework grade is \(95\%.\)
+                What is your final grade in the class?
+            </li>
+<li>
+                A grade-point average (GPA) is weighted by a course's number of credit hours.
+                An A gives \(4\) grade points, 
+                a B gives \(3\) grade points, 
+                a C gives \(2\) grade points,
+                and a D gives \(1\) grade point. 
+                The following table shows a student's grades 
+                in classes with varying credit hours.
+                What is the student's GPA?
+                <table class="table-vertical">
+<tr>
+<td class="label-cell">
+                            Class 
+                        </td>
+<td class="label-cell">
+                            Grade
+                        </td>
+<td class="label-cell">
+                            Credit Hours
+                        </td>
+</tr>
+<tr>
+<td>
+                            English
+                        </td>
+<td>
+                            C
+                        </td>
+<td>
+                            \(3\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Physics
+                        </td>
+<td>
+                            C
+                        </td>
+<td>
+                            \(4\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            History
+                        </td>
+<td>
+                            B
+                        </td>
+<td>
+                            \(2\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Calculus
+                        </td>
+<td>
+                            A
+                        </td>
+<td>
+                            \(4\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Economics
+                        </td>
+<td>
+                            D
+                        </td>
+<td>
+                            \(3\)
+                        </td>
+</tr>
+</table>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                The weights are the percentages that the midterms, final, and homework are worth of the final grade,
+                as shown by the following table.
+                <table class="table-vertical">
+<tr>
+<td class="label-cell">
+                            Item 
+                        </td>
+<td class="label-cell">
+                            Your Score, \(x_i\)
+                        </td>
+<td class="label-cell">
+                            Percentage of Final Grade, \(w_i\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Midterm Exams
+                        </td>
+<td>
+                            \(70\%\)
+                        </td>
+<td>
+                            \(50\%\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Final Exam
+                        </td>
+<td>
+                            \(80\%\)
+                        </td>
+<td>
+                            \(40\%\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Homework
+                        </td>
+<td>
+                            \(95\%\)
+                        </td>
+<td>
+                            \(10\%\)
+                        </td>
+</tr>
+</table>
+                We find the weighted mean, your final grade in the class, to be
+                \[
+                \ba 
+                \overline x &amp;= \frac{\ds \sum_{i = 1}^3 x_i w_i}{\ds \sum_{i = 1}^3 w_i} \nl
+                &amp;= \frac{(70 \cdot 50) + (80 \cdot 40) + (95 \cdot 10)}{50 + 40 + 10} \nl 
+                &amp;= \boxed{76.5 \%}
+                \ea 
+                \]
+                Since the midterms hold the most weight, a low overall score on the midterms
+                is detrimental to your overall grade. 
+                Using the same logic, the high homework grade of \(95\%\) has a small effect 
+                in raising your grade due to the small weight of \(10\%.\)
+            </li>
+<hr/>
+<li>
+                The weights are the credit hours of each course. 
+                The following table translates each grade into grade points.
+                <table class="table-vertical">
+<tr>
+<td class="label-cell">
+                            Class 
+                        </td>
+<td class="label-cell">
+                            Grade Points, \(x_i\)
+                        </td>
+<td class="label-cell">
+                            Credit Hours, \(w_i\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            English
+                        </td>
+<td>
+                            \(2\)
+                        </td>
+<td>
+                            \(3\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Physics
+                        </td>
+<td>
+                            \(2\)
+                        </td>
+<td>
+                            \(4\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            History
+                        </td>
+<td>
+                            \(3\)
+                        </td>
+<td>
+                            \(2\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Calculus
+                        </td>
+<td>
+                            \(4\)
+                        </td>
+<td>
+                            \(4\)
+                        </td>
+</tr>
+<tr>
+<td>
+                            Economics
+                        </td>
+<td>
+                            \(1\)
+                        </td>
+<td>
+                            \(3\)
+                        </td>
+</tr>
+</table>
+                So the student's GPA, the weighted mean of the grade points, is 
+                \[
+                \ba 
+                \overline x &amp;= \frac{\ds \sum_{i = 1}^5 x_i w_i}{\ds \sum_{i = 1}^5 w_i} \nl
+                &amp;= \frac{(2 \cdot 3) + (2 \cdot 4) + (3 \cdot 2) + (4 \cdot 4) + (1 \cdot 3)}{3 + 4 + 2 + 4 + 3} \nl 
+                &amp;= \boxed{2.4375}
+                \ea 
+                \]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[HARD]]] -->
+        A lamina with density \(\rho = 50\) is the shape of the infinite region bounded by \(f(x) = e^{-x}\) 
+        in the first quadrant.
+        Determine its moment about the \(y\)-axis.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The moment about the \(y\)-axis is given by 
+        \[M_y = \rho \int_0^\infty x f(x) \di x = 50 \int_0^\infty x e^{-x} \di x \pd\]
+        Using Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= x \lspace &amp;\dd v &amp;= e^{-x} \di x \nl 
+        \dd u &amp;= \dd x \lspace &amp;v &amp;= -e^{-x} \cma
+        \eaat
+        \]
+        we get  
+        \[
+        \ba 
+        \int xe^{-x} \di x &amp;= - x e^{-x} - \int -e^{-x} \di x \nl 
+        &amp;= -x e^{-x} - e^{-x} + C \pd
+        \ea 
+        \]
+        Accordingly, we find 
+        \[
+        \ba 
+        M_y &amp;= 50 \par{-x e^{-x} - e^{-x}} \intEval_0^\infty \nl 
+        &amp;= 50 \lim_{k \to \infty}  \par{-x e^{-x} - e^{-x}} \intEval_0^k \nl 
+        &amp;= 50 \lim_{k \to \infty} \par{-k e^{-k}} - 50 \lim_{k \to \infty} e^{-k} + 50 \nl 
+        &amp;= 50 - 50 \lim_{k \to \infty} \par{k e^{-k}} \pd
+        \ea 
+        \] 
+        (See Section <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>
+        to review solving improper integrals.)
+        The limit \(\lim_{k \to \infty} k e^{-k}\) is in the indeterminate form \(0 \times \infty.\)
+        We force the limit into the indeterminate form \(\indInfty\) by rewriting the function as \(k/e^k.\)
+        Then by L'Hôpital's Rule
+        (from Section <a href="/Valculus/calculus/3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.5</a>),
+        we find
+        \[\lim_{k \to \infty} \frac{k}{e^k} = \lim_{k \to \infty} \frac{1}{e^k} = 0 \pd\]
+        Hence, the moment is
+        \[M_y = 50 - 50(0) = \boxed{50}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

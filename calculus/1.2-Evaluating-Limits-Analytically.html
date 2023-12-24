@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.2: Evaluating Limits Analytically</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.2 — Evaluating Limits Analytically</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.2-Evaluating-Limits-Analytically-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.2-Evaluating-Limits-Analytically-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Evaluating-Limits-Analytically]]]--> 
+<p>
+    In Section <a href="/Valculus/calculus/1.1-Defining-a-Limit.html">1.1</a>
+    we guessed limits' values by using a calculator. 
+    But these methods don't allow us to be confident in our answers. 
+    So in this section, we use limit properties to analytically evaluate limits.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#limit-laws" class="page-anchor">Limit Laws</a>
+        </li>
+        <li>
+            <a href="#direct-substitution-poly-rat" class="page-anchor">Direct Substitution for Polynomials and Rational Functions</a>
+        </li>
+        <li>
+            <a href="#ind-form-0/0" class="page-anchor">The Indeterminate Form \(\indZero\)</a>
+        </li>
+    </ul>
+</p>
+<h4 id="limit-laws">Limit Laws</h4>
+
+<p>
+    We begin this discussion by introducing basic properties of limits. 
+    These laws enable us to work with constants in limits as well as 
+    limits of sums, differences, products, and quotients of functions.
+    Remember that these rules also apply to one-sided limits.
+</p>
+
+<div class="box-title">LIMITS WITH CONSTANTS</div>
+<div class="box">
+    If \(a\) and \(c\) are constants, then 
+    \begin{align} 
+    \lim_{x \to a} c &= c \cma \label{eq:lim-c} \nl 
+    \lim_{x \to a} x &= a \pd \label{eq:lim-x-a} \nl 
+    \end{align}
+</div>
+
+<div class="box-title"> LIMITS OF SUMS, DIFFERENCES, PRODUCTS, AND QUOTIENTS </div>
+<div class="box">
+    If \(\lim_{x \to a} f(x)\) and \(\lim_{x \to a} g(x)\)
+    both exist, and \(c\) is a constant, then
+    \begin{alignat}{2}
+        \lim_{x \to a} \parbr{f(x) + g(x)} &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \cma \comment{\text{Sum Law}} \label{eq:lim-sum} \nl
+        \lim_{x \to a} \parbr{f(x) - g(x)} &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \cma \comment{\text{Difference Law}} \label{eq:lim-diff} \nl
+        \lim_{x \to a} \parbr{f(x) \cdot g(x)} &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \cma \comment{\text{Product Law}} \label{eq:lim-prod} \nl
+        \lim_{x \to a} \parbr{\frac{f(x)}{g(x)}} &= 
+        \frac{\ds \lim_{x \to a} f(x)}{\ds \lim_{x \to a} g(x)} 
+        \cmaa \lim_{x \to a} g(x) \ne 0 \cma \comment{\text{Quotient Law}} \label{eq:lim-quot} \nl 
+        \lim_{x \to a} \parbr{cf(x)} &= c \lim_{x \to a} f(x) \pd \comment{\text{Constant Multiple Law}} \label{eq:lim-multiple}
+    \end{alignat}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let 
+        \(\lim_{x \to 2} f(x) = 4\) and \(\lim_{x \to 2} g(x) = -2.\)
+        Calculate the following limits.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \lim_{x \to 2}[f(x) + g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 2} [f(x) - 3 g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 2} [f(x) g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 2} [5f(x)/3g(x)]\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The limits \(\lim_{x \to 2} f(x)\) and \(\lim_{x \to 2} g(x)\) both exist, 
+            so we use \(\eqref{eq:lim-sum}\) to obtain
+            \[
+            \ba 
+            \lim_{x \to 2}[f(x) + g(x)] &= \lim_{x \to 2} f(x) + \lim_{x \to 2} g(x) \nl 
+            &= 4 + (-2) = \boxed{2}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We combine \(\eqref{eq:lim-diff}\) with \(\eqref{eq:lim-multiple}\) to find 
+            \[
+            \ba 
+            \lim_{x \to 2}[f(x) - 3 g(x)] &= \lim_{x \to 2} f(x) - \lim_{x \to 2} [3g(x)] \nl
+            &= \lim_{x \to 2} f(x) - 3 \lim_{x \to 2} g(x) \nl 
+            &= 4 - 3 (-2) = \boxed{10}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            Using \(\eqref{eq:lim-prod}\) gives 
+            \[
+            \ba 
+            \lim_{x \to 2}[f(x) g(x)] &= \lim_{x \to 2} f(x) \cdot \lim_{x \to 2} g(x) \nl 
+            &= 4 \cdot (-2) = \boxed{-8}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We apply \(\eqref{eq:lim-quot}\) in conjunction with \(\eqref{eq:lim-multiple},\) finding
+            \[
+            \ba 
+            \lim_{x \to 2} \frac{5 f(x)}{3 g(x)} &= \frac{\ds 5 \lim_{x \to 2} f(x)}{\ds 3 \lim_{x \to 2} g(x)} \nl
+            &= \frac{5(4)}{3(-2)} = \boxed{-\frac{10}{3}}
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="limit-properties-ex-combination" id="limit-properties-ex-combination">
+            <img src="../images/sectionImages/limit-properties-ex-combination.jpg" alt="Figure 1">
+        </figure>
+        <style>
+            .limit-properties-ex-combination::before{
+                content:'FIGURE 1';
+            }
+        </style>
+        The graphs of \(y = f(x)\) and \(y = g(x)\) are shown by <a href="#limit-properties-ex-combination">Figure 1</a>.
+        Determine the following limits if they exist.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \lim_{x \to 0^+} [f(x)/g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to -1} [2f(x) + g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to \, 0 \;} [f(x) - g(x)]\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to \, 0 \;} [f(x) + g(x)]\)</span>
+            </li>
+        </ol>
+        <p></p>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <aside class="box-recall">
+        A limit fails to exist if the one-sided limits don't equal each other.
+    </aside>
+    <ol class="list-alpha">
+        <li>
+            Inspecting the graph, we attain 
+            \[\lim_{x \to 0^+} f(x) = 4 \and \lim_{x \to 0^+} g(x) = 3 \pd \]
+            Because the latter limit doesn't equal \(0,\)
+            we use the Quotient Law, as in \(\eqref{eq:lim-quot},\) to find 
+            \[
+            \ba 
+            \lim_{x \to 0^+} \frac{f(x)}{g(x)} &= \frac{\ds \lim_{x \to 0^+} f(x)}{\ds \lim_{x \to 0^+} g(x)} \nl
+            &= \boxed{\frac{4}{3}}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            From the graphs, we see 
+            \[\lim_{x \to -1} f(x) = 1 
+            \and \lim_{x \to -1} g(x) = 2 \pd \]
+            We therefore have 
+            \[
+            \baat{2} 
+            \lim_{x \to -1} [2f(x) + g(x)]
+            &= \lim_{x \to -1} [2f(x)] + \lim_{x \to -1} g(x) 
+            \comment{\text{by } \eqref{eq:lim-sum}} \nl 
+            &= 2 \lim_{x \to -1} f(x) + \lim_{x \to -1} g(x) 
+            \comment{\text{by } \eqref{eq:lim-multiple}} \nl
+            &= 2(1) + 2 = \boxed 4
+            \eaat
+            \]
+        </li>
+        <hr>
+        <li>
+            The limits 
+            \[\lim_{x \to 0} f(x) \and \lim_{x \to 0} g(x)\] 
+            both do not exist, so we cannot apply \(\eqRef{eq:lim-diff}.\)
+            We instead consider the one-sided limits of \(\lim_{x \to 0} [f(x) - g(x)] \col\)
+            Since \(\lim_{x \to 0^-} f(x)\) and \(\lim_{x \to 0^-} g(x)\) both exist, 
+            we <i>can</i> use \(\eqRef{eq:lim-diff}\) as follows:
+            \[
+            \ba 
+            \lim_{x \to 0^-} [f(x) - g(x)] &= \lim_{x \to 0^-} f(x) - \lim_{x \to 0^-} g(x) \nl
+            &= 3 - 2 = 1 \pd \nl
+            \ea 
+            \] 
+            Likewise, the right-hand limit is 
+            \[
+            \ba 
+            \lim_{x \to 0^+} [f(x) - g(x)] &= \lim_{x \to 0^+} f(x) - \lim_{x \to 0^+} g(x) \nl
+            &= 4 - 3 = 1 \pd
+            \ea 
+            \]
+            Since these one-sided limits are equal, 
+            we conclude 
+            \[\lim_{x \to 0} [f(x) - g(x)] = \boxed{1}\]
+        </li>
+        <hr>
+        <li>
+            Neither \(\lim_{x \to 0} f(x)\) nor \(\lim_{x \to 0} g(x)\) exists,
+            so we can't apply \(\eqref{eq:lim-sum}\) to \(\lim_{x \to 0} [f(x) + g(x)].\)
+            But we <i>can</i> apply \(\eqref{eq:lim-sum}\) to the one-sided limits:
+            \[
+            \ba 
+            \lim_{x \to 0^-} [f(x) + g(x)] &= \lim_{x \to 0^-} f(x) + \lim_{x \to 0^-} g(x) = 3 + 2 = 5 \cma \nl 
+            \lim_{x \to 0^+} [f(x) + g(x)] &= \lim_{x \to 0^+} f(x) + \lim_{x \to 0^+} g(x) = 4 + 3 = 7 \pd
+            \ea  
+            \]
+            These values aren't equivalent, so we conclude that \(\lim_{x \to 0} [f(x) + g(x)]\) 
+            <span class="emph">does not exist</span>.
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="label-emph">Limits with Powers</span>
+    If we use \(\eqref{eq:lim-prod}\) repeatedly with \(g(x) = f(x),\)
+    then for any positive integer \(n\) we see
+    \begin{align} 
+    \lim_{x \to a} \parbr{f(x)}^n 
+    &= \underbrace{\lim_{x \to a} f(x) \cdot \lim_{x \to a} f(x) \cdot \, \cdots \, \cdot \lim_{x \to a} f(x)}_{n \text{ times}} \nonum \nl 
+    &= \parbr{\lim_{x \to a} f(x)}^n \pd \label{eq:lim-power-law}
+    \end{align}
+    We call this property the <span class="emph">Power Law</span>.
+    Now we demonstrate a special case of this law:
+    Letting \(f(x) = x\) and using \(\eqref{eq:lim-x-a}\) show 
+    \begin{align} 
+    \lim_{x \to a} x^n &= \par{\lim_{x \to a} x}^n \nonum \nl
+    &= a^n \pd \label{eq:lim-x^n}
+    \end{align}
+    The Power Law happens to work for <i>all</i> positive numbers \(n\)
+    (not just integers).
+    Using this fact, 
+    we can take \(f(x) = x,\) replace \(n\) with \(1/n\) in \(\eqref{eq:lim-power-law},\) and use \(\eqref{eq:lim-x-a}\) to see 
+    \begin{align}
+    \lim_{x \to a} \sqrt[n]{x} &= \lim_{x \to a} \par{x^{1/n}} \nonum \nl
+    &= \par{\lim_{x \to a} x}^{1/n} \nonum \nl 
+    &= \sqrt[n]{\lim_{x \to a} x} \nonum \nl
+    &= \sqrt[n]{a} \pd \label{eq:lim-sqrt-n} 
+    \end{align}
+    (We assume \(a \gt 0\) if \(n\) is even.)
+    More generally, it turns out that
+    \begin{equation} 
+    \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)} \pd \label{eq:lim-root-law}
+    \end{equation}  
+    This formula is called the <span class="emph">Root Law</span>.
+    [We assume \(\lim_{x \to a} f(x) \gt 0\) if \(n\) is even.]
+</p>
+
+<div class="box-title">LIMITS WITH POWERS</div>
+<div class="box">
+    If \(n\) is a positive constant, then 
+    \begin{alignat}{2} 
+    \lim_{x \to a} \parbr{f(x)}^n &= \parbr{\lim_{x \to a} f(x)}^n \cma \comment{\text{Power Law}} \eqlabel{eq:lim-power-law} \nl 
+    \lim_{x \to a} \sqrt[n]{f(x)} &= \sqrt[n]{\lim_{x \to a} f(x)} \pd \comment{\text{Root Law}} \eqlabel{eq:lim-root-law}
+    \end{alignat}
+    Special cases of these laws are as follows:
+    \begin{align} 
+    \lim_{x \to a} x^n &= a^n \cma \eqlabel{eq:lim-x^n} \nl 
+    \lim_{x \to a} \sqrt[n]{x} &= \sqrt[n]{a} \pd \eqlabel{eq:lim-sqrt-n}
+    \end{align}
+</div>
+
+<div class="example-title" id="ex-limit-laws-polynomial"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        By using the appropriate limit properties, find 
+        \[\lim_{x \to 3} \par{x^2 + 4x - 6} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    We use limit properties as follows:
+    \[
+    \baat{2}
+    \lim_{x \to 3} \par{x^2 + 4x - 6} &= \lim_{x \to 3} \par{x^2} + \lim_{x \to 3} (4x) - \lim_{x \to 3}(6) 
+    \comment{\text{by } \eqref{eq:lim-sum} \text{ and } \eqref{eq:lim-diff}} \nl 
+    &= \lim_{x \to 3} \par{x^2} + 4 \lim_{x \to 3} (x) - \lim_{x \to 3}(6) \comment{\text{by } \eqref{eq:lim-multiple}} \nl 
+    &= 3^2 + 4(3) - 6 
+    \comment{\text{by } \eqref{eq:lim-x^n}, \eqref{eq:lim-x-a}, \text{and } \eqref{eq:lim-c}} \nl
+    &= \boxed{15}
+    \eaat
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use the appropriate limit properties to evaluate
+        \[\lim_{x \to 3} \par{\sqrt{x^2 + 4x - 6} - x^3} \pd\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    We see
+    \[
+    \baat{2}
+    \lim_{x \to 3} \par{\sqrt{x^2 + 4x - 6} - x^3} 
+    &= \lim_{x \to 3} \par{\sqrt{x^2 + 4x - 6}} - \lim_{x \to 3} \par{x^3} 
+    \comment{\text{by } \eqref{eq:lim-diff}} \nl 
+    &= \lim_{x \to 3} \par{\sqrt{x^2 + 4x - 6}} - 27
+    \comment{\text{by } \eqref{eq:lim-x^n}} \nl 
+    &= \sqrt{\lim_{x \to 3} \par{x^2 + 4x - 6}} - 27 \pd
+    \comment{\text{by } \eqref{eq:lim-root-law}}
+    \eaat
+    \]
+    By the result of <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html#ex-limit-laws-polynomial">Example 3</a>, the limit becomes
+    \[
+    \boxed{\sqrt{15} - 8}
+    \]
+</div>
+
+<h4 id="direct-substitution-poly-rat">Direct Substitution for Polynomials and Rational Functions</h4>
+<p>
+    In <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html#ex-limit-laws-polynomial">Example 3</a>
+    we see that \(f(3) = \lim_{x \to 3} f(x) = 15.\)
+    In words, the limit of \(f(x)\) as \(x \to 3\) happens to equal \(f\) evaluated at \(3.\)
+    This pattern is true for all polynomial and rational functions
+    due to the <span class="emph">Direct Substitution Property</span>,
+    described as follows. 
+</p>
+
+<div class="box-title">DIRECT SUBSTITUTION PROPERTY (POLYNOMIALS AND RATIONAL FUNCTIONS)</div>
+<div class="box">
+    If \(f\) is a polynomial or rational function and \(a\) is in the domain of \(f,\)
+    then 
+    \[\lim_{x \to a} f(x) = f(a) \pd\]
+</div>
+<aside class="box-recall">
+    A polynomial's domain is all real numbers,
+    and a rational function's domain is all real numbers for which the denominator doesn't equal \(0.\)
+</aside>
+<p>
+    As we make \(x\) arbitrarily close to \(a,\)
+    it's intuitive that \(f\) gets closer and closer to \(f(a),\) its output at \(a.\)
+    These well-behaved functions are called <i>continuous</i>; 
+    in Section <a href="/Valculus/calculus/1.3-Determining-Continuity.html">1.3</a>
+    we formally discuss continuity and extend the Direct Substitution Property to all functions.
+    Direct Substitution is very powerful—it is the main tool we use to evaluate limits analytically.
+    Verbally, this property instructs us to evaluate \(f\) at \(a;\) 
+    the result is the value of \(\lim_{x \to a} f(x)\)
+    if \(f\) is continuous at \(a.\)
+    Let's prove the Direct Substitution Property for polynomial and rational functions.
+</p>
+<p>
+    <span class="proof">PROOF</span>
+    If \(f\) is an <nobr>\(n\)th</nobr> polynomial, then it can be written as
+    \[
+    f(x) = c_n x^n + c_{n - 1} x^{n - 1} + \cdots + c_1 x + c_0
+    \]
+    for constants \(c_0, c_1,\) \(\dots, c_n.\)  
+    Observe that the value of \(f\) at \(a\) is  
+    \[
+    f(a) = c_n a^n + c_{n - 1} a^{n - 1} + \cdots + c_1 a + c_0 \pd
+    \]
+    Using limit properties, we see 
+    \[
+    \baat{2}
+    \lim_{x \to a} f(x) 
+    &= \lim_{x \to a} \par{c_n x^n} + \lim_{x \to a} \par{c_{n - 1} x^{n - 1}} 
+    + \cdots + \lim_{x \to a} \par{c_1 x} + \lim_{x \to a} c_0 
+    \comment{\text{by } \eqref{eq:lim-sum}} \nl 
+    &= c_n \lim_{x \to a} x^n + c_{n - 1} \lim_{x \to a} x^{n - 1} 
+    + \cdots + c_1 \lim_{x \to a} x + c_0 
+    \comment{\text{by } \eqref{eq:lim-multiple} \text{ and } \eqref{eq:lim-c}} \nl 
+    &= c_n \par{a^n} + c_{n - 1} \par{a^{n - 1}} + \cdots + c_1 (a) + c_0 
+    \comment{\text{by } \eqref{eq:lim-x^n}} \nl 
+    &= f(a) \pd
+    \eaat 
+    \]
+    Now suppose that \(f\) is a rational function;
+    it can be written as \(f(x) = P(x)/Q(x),\) where \(P\) and \(Q\) are polynomials. 
+    Note that \(f(a) = P(a)/Q(a)\) if \(Q(a) \ne 0.\)
+    We use the Quotient Law, as in \(\eqref{eq:lim-diff},\) to see
+    \[
+    \ba
+    \lim_{x \to a} f(x) &= \frac{\ds \lim_{x \to a} P(x)}{\ds \lim_{x \to a} Q(x)} \nl 
+    &= \frac{P(a)}{Q(a)} \nl 
+    &= f(a) \pd
+    \ea
+    \]
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following limits by Direct Substitution.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \lim_{x \to 2} \par{x^2 - 5x + 7}\)</span>
+            </li>
+            <li>
+                <span>\(\ds \lim_{x \to 1} \frac{x^3 + 3x - 2}{8x + 6}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The limit is simply given by evaluating the polynomial at \(x = 2 \col\)
+            \[
+            \ba 
+            \lim_{x \to 2} \par{x^2 - 5x + 7}
+            &= (2)^2 - 5(2) + 7 \nl 
+            &= \boxed 1
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            Replacing \(x\) with \(1\) in the rational function shows 
+            \[
+            \ba 
+            \lim_{x \to 1} \frac{x^3 + 3x - 2}{8x + 6} 
+            &= \frac{(1)^3 + 3(1) - 2}{8(1) + 6} \nl 
+            &= \frac{2}{14} = \boxed{\frac{1}{7}}
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\lim_{x \to 2} g(x)\) if
+        \[
+        g(x) = 
+        \bc
+        \tfrac{4}{3} \sqrt{x + 7} &x \lt 2 \nl 
+        8 - x^2 &x \gt 2 \pd
+        \ec
+        \]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <figure class="limit-direct-sub-piecewise-ex" id="limit-direct-sub-piecewise-ex">
+        <img src="../images/sectionImages/limit-direct-sub-piecewise-ex.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .limit-direct-sub-piecewise-ex::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The limit \(\lim_{x \to 2} g(x)\) exists if and only if 
+    \[\lim_{x \to 2^-} g(x) \and \lim_{x \to 2^+} g(x)\]
+    exist and equal each other.
+    [But \(g\) does not need to be <i>defined</i> at \(2\)
+    in order for \(\lim_{x \to 2} g(x)\) to exist.]
+    Because \(g(x) = \tfrac{4}{3} \sqrt{x + 7}\) for \(x \lt 2,\) 
+    we take the limit of the left-hand piecewise definition as follows:
+    \[
+    \baat{2}
+    \lim_{x \to 2^-} g(x) &= \lim_{x \to 2^-} \tfrac{4}{3} \sqrt{x + 7} \nl 
+    &= \tfrac{4}{3} \lim_{x \to 2^-} \sqrt{x + 7} \comment{\text{by } \eqref{eq:lim-multiple}} \nl 
+    &= \tfrac{4}{3} \sqrt{\lim_{x \to 2^-} (x + 7)} \comment{\text{by } \eqref{eq:lim-root-law}} \nl
+    &= \tfrac{4}{3} \sqrt{2 + 7} = 4 \pd 
+    \eaat
+    \]
+    And since \(g(x) = 8 - x^2\) for \(x \gt 2,\) we have 
+    \[
+    \ba 
+    \lim_{x \to 2^+} g(x) &= \lim_{x \to 2^+} \par{8 - x^2} \nl 
+    &= 8 - (2)^2 = 4 \pd
+    \ea 
+    \]
+    Since both one-sided limits equal each other, we conclude that 
+    \(\lim_{x \to 2} g(x) = \boxed{4}\)
+    (<a href="#limit-direct-sub-piecewise-ex">Figure 2</a>).
+</div>
+
+<h4 id="ind-form-0/0">The Indeterminate Form \(\indZero\)</h4>
+<p>
+    Not all rational functions can be evaluated by Direct Substitution.
+    A limit of an <span class="emph">indeterminate form</span>
+    cannot initially be evaluated by Direct Substitution because the result is inconclusive.
+    Consider the limit
+    \begin{equation} 
+    L = \lim_{x \to a} \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \pd \label{eq:family-of-limits}
+    \end{equation}
+    If both \(f(x)\) and \(g(x)\) approach \(0\) as \(x \to a,\) 
+    then \(\lim_{x \to a} [f(x)/g(x)]\) is 
+    of the <span class="emph">indeterminate form \({\bf \indZero}.\)</span>
+    The numerical expression \(\indZero\) is <i>undefined</i>.
+    So the quotient \(f(x)/g(x),\) where both functions approach \(0\)
+    as \(x \to a,\) settles to an unclear number as \(x \to a\)
+    (if the ratio even approaches a final number).
+    A limit in an indeterminate form requires further analysis to be evaluated 
+    since it is unclear what the limit is expected to equal.
+    But <span class="warning">an indeterminate form does not mean the limit cannot exist.</span>
+    The Quotient Law doesn't apply to \(\eqref{eq:family-of-limits}\)
+    since \(\lim_{x \to a} g(x) = 0.\)
+    (It is also <span class="warning">wrong</span>
+    to conclude that a limit doesn't exist simply because we can't apply limit laws.)
+</p>
+
+<!-- table for indeterminate form 0/0-->
+<div class="box-title"> INDETERMINATE FORM \(\indZero\) </div>
+<div class="box">
+    The limit 
+    \begin{equation} 
+    L = \lim_{x \to a} \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \eqlabel{eq:family-of-limits}
+    \end{equation}
+    is of the <span class="emph">indeterminate form \(\bf \indZero\)</span>
+    if \(\lim_{x \to a} f(x) = 0\) and \(\lim_{x \to a} g(x) = 0.\)
+</div>
+
+<p>
+    To solve limits of the indeterminate form \(\indZero,\)
+    we use the following fact:
+    If \(f(x) = g(x)\) when \(x \ne a,\) then 
+    \(\lim_{x \to a} f(x)\) \(= \lim_{x \to a} g(x)\) 
+    if both limits exist.
+    The simplest method to resolve these limits is to cancel common factors.
+    In rational functions
+    we often encounter differences of squares, differences of cubes, and sums of cubes, 
+    which we factor as, respectively, 
+    \begin{align} 
+    a^2 - b^2 &= (a + b)(a - b) \cma \label{eq:diff-of-squares} \nl 
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2) \cma \label{eq:diff-of-cubes} \nl 
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \pd \label{eq:sum-of-cubes}
+    \end{align}
+</p>
+
+<div class="example-title" id="ex-lim-factor-5"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to -5} \frac{x^2 - 25}{x + 5}\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <p>
+        Both \(\par{x^2 - 25}\) and \((x + 5)\) approach \(0\)
+        as \(x \to -5;\) 
+        that is, Direct Substitution yields the meaningless expression \(\indZero.\)
+        This limit is therefore of the indeterminate form \(\indZero,\)
+        and we can't use the Quotient Law because \(\lim_{x \to -5} (x + 5) = 0.\)
+        But since the numerator is a difference of squares, \(x^2 - 5^2,\)
+        let's try to factor and cancel a common factor. 
+        Using \(\eqref{eq:diff-of-squares},\) we see
+        \[
+        \ba 
+        \lim_{x \to -5} \frac{x^2 - 25}{x + 5} 
+        &= \lim_{x \to -5} \frac{\cancel{(x + 5)}(x - 5)}{\cancel{x + 5}} \nl 
+        &= \lim_{x \to -5} (x - 5) \nl
+        &= \boxed{-10}
+        \ea 
+        \]
+    </p>
+
+    <figure class="factoring-discontinuity" id="factoring-discontinuity">
+        <img src="../images/sectionImages/factoring-discontinuity.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .factoring-discontinuity::before{
+            content:'FIGURE 3';
+        }
+    </style>
+
+    <p>
+        <span class="label-emph">Justification</span>
+        The function
+        \[f(x) = \frac{x^2 - 25}{x + 5}\]
+        is defined all \(x\) 
+        except \(-5,\) where its graph has a <i>removable discontinuity</i> (a <i>hole</i>),
+        as shown by <a href="#factoring-discontinuity">Figure 3</a>.
+        When we cancel the common factor \((x + 5),\)
+        we transform \(f(x)\) into the function \(g(x) = x - 5.\)
+        By the Direct Substitution Property, \(\lim_{x \to -5} g(x) = g(-5)\) \(= -10.\)
+        Since \(g(x) = f(x)\) when \(x \ne -5,\)
+        \[\lim_{x \to -5} f(x) = \lim_{x \to -5} g(x) = -10 \pd\]
+    </p>
+</div>
+
+<div class="example-title" id="ex-lim-factor-cubes"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 4} \frac{x^3 - 64}{x - 4}\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <figure class="limit-factoring-diff-cubes-ex" id="limit-factoring-diff-cubes-ex">
+        <img src="../images/sectionImages/limit-factoring-diff-cubes-ex.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .limit-factoring-diff-cubes-ex::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    Because both the numerator and denominator approach \(0\) as \(x \to 4,\)
+    we cannot use Direct Substitution (since it would yield the undefined expression <nobr>\(\indZero\)).</nobr>
+    Let's try to cancel a common factor:
+    since the numerator is a difference of cubes, \(x^3 - 4^3,\)
+    we use \(\eqref{eq:diff-of-cubes}\) to get
+    \[
+    \ba 
+    \lim_{x \to 4} \frac{x^3 - 64}{x - 4} 
+    &= \lim_{x \to 4} \frac{\cancel{(x - 4)} \par{x^2 + 4x + 16}}{\cancel{(x - 4)}} \nl 
+    &= \lim_{x \to 4} \par{x^2 + 4x + 16} \nl 
+    &= \boxed{48} 
+    \ea 
+    \] 
+    (See <a href="#limit-factoring-diff-cubes-ex">Figure 4</a>.)
+</div>
+
+<p>
+    In <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html#ex-lim-factor-5">Example 7</a>
+    a limit of the indeterminate form \(\indZero\) equaled \(-10.\)
+    But in <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html#ex-lim-factor-cubes">Example 8</a>
+    another limit of the indeterminate form \(\indZero\) equaled \(48.\)
+    This contrast reveals that limits for which Direct Substitution gives \(\indZero\)
+    can evaluate to totally different results.
+    In fact, some limits of the indeterminate form \(\indZero\)
+    fail to exist; others equal \(0\) or are infinite.
+</p>
+
+<p>
+    <span class="label-emph">Rationalization</span>
+    In some fractions, no common factors are present in the numerator and denominator.
+    But if either the numerator or denominator contains a radical, 
+    then we can try <i>rationalization</i> by multiplying across by the <i>conjugate</i>. 
+    [For example, the conjugate of \((4 - \sqrt x)\) is \((4 + \sqrt x);\) 
+    we simply swap the sign in the middle.]
+    This technique is shown by the following example. 
+</p>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 9} \frac{3x - 27}{\sqrt{x - 8} - 1}\]
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    <aside class="box-tip">
+        We expand 
+        \[\par{\sqrt{x - 8} - 1} \par{\sqrt{x - 8} + 1} \cma \]
+        but don't expand the numerator! 
+        (The entire premise of this trick is to uncover a common factor to cancel, 
+        so leave the numerator in factored form.)
+    </aside>
+    The limit is in the indeterminate form \(\indZero,\)
+    yet we identify no common factors to cancel.
+    But the denominator has a radical, so we try to rationalize the denominator
+    and expose a common factor.
+    The conjugate of the denominator is \((\sqrt{x - 8} + 1);\) 
+    multiplying the numerator and denominator each by this factor shows
+    \[
+    \ba 
+    \lim_{x \to 9} \frac{3x - 27}{\sqrt{x - 8} - 1}
+    &= \lim_{x \to 9} \frac{3x - 27}{\sqrt{x - 8} - 1} \cdot \frac{\sqrt{x - 8} + 1}{\sqrt{x - 8} + 1} \nl
+    &= \lim_{x \to 9} \frac{(3x - 27) (\sqrt{x - 8} + 1)}{(x - 8) - 1^2} \nl
+    &= \lim_{x \to 9} \frac{3 \cancel{(x - 9)} (\sqrt{x - 8} + 1)}{\cancel{(x - 9)}} \nl
+    &= \lim_{x \to 9} 3 \par{\sqrt{x - 8} + 1} \nl
+    &= \boxed{6}
+    \ea 
+    \]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#limit-laws" class="summary-anchor">Limit Laws</a>
+        Limit laws enable us to calculate limits of sums, differences, products, quotients, and constants.
+        If \(a\) and \(c\) are constants, then 
+        \begin{align} 
+        \lim_{x \to a} c &= c \cma \eqlabel{eq:lim-c} \nl 
+        \lim_{x \to a} x &= a \pd \eqlabel{eq:lim-x-a} \nl 
+        \end{align}
+        Suppose that \(\lim_{x \to a} f(x)\) and \(\lim_{x \to a} g(x)\)
+        both exist and that \(c\) is a constant. 
+        We then have the following properties:
+        \begin{alignat}{2}
+        \lim_{x \to a} \parbr{f(x) + g(x)} &= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \cma \comment{\text{Sum Law}} \eqlabel{eq:lim-sum} \nl
+        \lim_{x \to a} \parbr{f(x) - g(x)} &= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \cma \comment{\text{Difference Law}} \eqlabel{eq:lim-diff} \nl
+        \lim_{x \to a} \parbr{f(x) \cdot g(x)} &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \cma \comment{\text{Product Law}} \eqlabel{eq:lim-prod} \nl
+        \lim_{x \to a} \parbr{\frac{f(x)}{g(x)}} &= 
+        \frac{\ds \lim_{x \to a} f(x)}{\ds \lim_{x \to a} g(x)} 
+        \cmaa \lim_{x \to a} g(x) \ne 0 \cma \comment{\text{Quotient Law}} \eqlabel{eq:lim-quot} \nl 
+        \lim_{x \to a} \parbr{cf(x)} &= c \lim_{x \to a} f(x) \pd \comment{\text{Constant Multiple Law}} \eqlabel{eq:lim-multiple}
+        \end{alignat}
+        All these properties also apply to one-sided limits.
+        For limits with powers, let \(n\) be a positive constant; then
+        \begin{alignat}{2} 
+        \lim_{x \to a} \parbr{f(x)}^n &= \parbr{\lim_{x \to a} f(x)}^n \cma \comment{\text{Power Law}} \eqlabel{eq:lim-power-law} \nl 
+        \lim_{x \to a} \sqrt[n]{f(x)} &= \sqrt[n]{\lim_{x \to a} f(x)} \pd \comment{\text{Root Law}} \eqlabel{eq:lim-root-law}
+        \end{alignat}
+        In the Root Law, we assume \(\lim_{x \to a} f(x) \gt 0\) if \(n\) is even.
+        Special cases of these laws are as follows:
+        \begin{align} 
+        \lim_{x \to a} x^n &= a^n \cma \eqlabel{eq:lim-x^n} \nl 
+        \lim_{x \to a} \sqrt[n]{x} &= \sqrt[n]{a} \pd \eqlabel{eq:lim-sqrt-n}
+        \end{align}
+        (We assume \(a \gt 0\) if \(n\) is even on the root.)
+    </p>
+    <p>
+        <a href="#direct-substitution-poly-rat" class="summary-anchor">Direct Substitution for Polynomials and Rational Functions</a>
+        If \(f\) is a polynomial or rational function and \(a\) is in the domain of \(f,\)
+        then 
+        \[\lim_{x \to a} f(x) = f(a) \pd\]
+        This powerful theorem is our primary tool to evaluate many limits.  
+        Simply put, evaluate \(f\) at \(a;\) the result is \(\lim_{x \to a} f(x).\)
+    </p>
+    <p>
+        <a href="#ind-form-0/0" class="summary-anchor">The Indeterminate Form \(\indZero\)</a>
+        While Direct Substitution is powerful,
+        not all rational functions can be initially evaluated by Direct Substitution.
+        The limit 
+        \begin{equation} 
+        L = \lim_{x \to a} \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \eqlabel{eq:family-of-limits}
+        \end{equation}
+        is of the <span class="emph">indeterminate form \(\bf \indZero\)</span>
+        if \(\lim_{x \to a} f(x) = 0\) and \(\lim_{x \to a} g(x) = 0.\)
+        Limits in this form require further analysis to be evaluated.
+        (<span class="warning">An indeterminate form does not mean the limit cannot exist.</span>)
+        To resolve these limits, 
+        our primary tool is to cancel a common factor in the numerator and denominator.
+        We use the following formulas to help expose common factors:
+        \begin{align} 
+        a^2 - b^2 &= (a + b)(a - b) \cma \eqlabel{eq:diff-of-squares} \nl 
+        a^3 - b^3 &= (a - b)(a^2 + ab + b^2) \cma \eqlabel{eq:diff-of-cubes} \nl 
+        a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \pd \eqlabel{eq:sum-of-cubes}
+        \end{align}
+        Alternatively, if the numerator or denominator contains a radical, then try <i>rationalization</i> 
+        by multiplying across by the conjugate. 
+        This process helps expose common factors to cancel.
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

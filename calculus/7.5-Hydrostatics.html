@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.5: Hydrostatics</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.5 — Hydrostatics</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.5-Hydrostatics-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.5-Hydrostatics-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Hydrostatics]]]-->
+<figure class="hydrostatics-object-A" id="hydrostatics-object-A">
+    <img src="../images/sectionImages/hydrostatics-object-A.jpg" class="hydrostatics-object-A" alt="Figure 1">
+</figure>
+
+<style>
+    .hydrostatics-object-A::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    If you dive deeper into a body of water, then you feel more pressure 
+    on your body due to the increased weight of the water above you. 
+    <i>Hydrostatics</i> is the study of water's behavior on 
+    a stationary, submerged object. 
+    It enables us to test whether 
+    a submarine will be crushed in the deep water, 
+    or whether a shark can survive at a certain depth.
+    Let's now generalize these ideas.
+    Suppose that a thin, stationary object with area \(A\) 
+    is submerged in a body of fluid of density \(\rho\)
+    at a distance of \(h\) below the surface
+    (<a href="#hydrostatics-object-A">Figure 1</a>).
+    The <span class="emph">hydrostatic force</span> that acts on this body 
+    equals the weight of the water above it. 
+    The volume of the water above the object is 
+    \(Ah,\) and its mass equals density multiplied by volume—namely, \(\rho Ah.\)
+    Because weight is the product of mass and the acceleration 
+    due to gravity, \(g = 9.8 \undiv{m}{sec}^2\) \(= 32 \undiv{ft}{sec}^2,\)
+    the hydrostatic force acting on the object is 
+    \begin{equation}
+    F = \rho A g h \pd \label{eq:h-force}
+    \end{equation}
+    <span class="emph">Pressure</span> is defined by the force 
+    exerted on an object divided by its area. 
+    (A sharp knife exerts high pressure because its edge is so thin.)
+    So the <span class="emph">hydrostatic pressure</span> that acts upon the submerged object is 
+    \(P = F/A,\) or 
+    \begin{equation}
+    P = \rho g h \pd \label{eq:h-pressure}
+    \end{equation}
+    We use \(\eqref{eq:h-force}\) and \(\eqref{eq:h-pressure}\)
+    for a thin object whose depth is uniform.
+    But what if we submerge a bigger body whose depth can't be taken as uniform? 
+</p>
+
+<figure class="hydrostatic-body" id="hydrostatic-body">
+    <img src="../images/sectionImages/hydrostatic-body.jpg" class="hydrostatic-body" alt="Figure 2">
+</figure>
+
+<style>
+    .hydrostatic-body::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    Let's generalize how to calculate the hydrostatic force of a vertical body,
+    as in <a href="#hydrostatic-body">Figure 2</a>.
+    The first step is to define an axis system.
+    We concern ourselves primarily with the vertical direction, 
+    so we perform integration with respect to \(y.\) 
+    Suppose that the body is bounded between the lines \(y = a\) and \(y = b.\)
+    We cut the body into \(n\) horizontal rectangles 
+    of endpoints \(y_1, y_2,\) \(\dots, y_{n - 1},\) \(y_n\) 
+    and equal height \(\Delta y.\)
+    In the general subinterval \(\parbr{y_{i - 1}, y_i},\) 
+    we pick \(y_i^*\) to be a sample point. 
+    If \(w(y)\) is the approximating rectangle's width at \(y,\) then its area is 
+    \[A_i = w(y_i^*) \Delta y \pd\]
+    Let \(h(y)\) be the rectangle's depth beneath the water's surface at some \(y.\)
+    If each of the \(n\) rectangles is thin, 
+    then the hydrostatic <i>pressure</i> acting on an approximating rectangle
+    is, by \(\eqref{eq:h-pressure},\) roughly
+    \[P_i \approx \rho g h(y_i^*) \pd\]
+    (We assume that the rectangle's depth is uniform.)
+    And by \(\eqref{eq:h-force},\) the hydrostatic <i>force</i> acting on the rectangle is 
+    approximated by 
+    \[F_i = P_i A_i \approx \rho g h(y_i^*) w(y_i^*) \Delta y \pd\]
+    Summing the hydrostatic forces of all \(n\) rectangles gives a 
+    total hydrostatic force of approximately 
+    \[F \approx \sum_{i = 1}^n F_i = \sum_{i = 1}^n \rho g h(y_i^*) w(y_i^*) \Delta y \pd\]
+    If we make \(n\) larger and larger, then the rectangles become thinner
+    and so better model the vertical body. 
+    Thus, by increasing \(n\) our calculation of the total hydrostatic force increases in accuracy.
+    So \(F\) is the <i>limiting value</i> of the sum as \(n \to \infty \col\)
+    \[F = \lim_{n \to \infty} \sum_{i = 1}^n \rho g h(y_i^*) w(y_i^*) \Delta y \pd\]
+    This is a Riemann sum for the function \(\rho g h(y) w(y)\) from \(y = a\) to \(y = b,\)
+    so we attain 
+    \begin{equation}
+    F = \rho g \int_a^b h(y) w(y) \di y \pd \label{eq:force-h-body-constants}
+    \end{equation}
+</p>
+<p>
+    <span class="label-emph">Units</span>
+    The <span class="emph">International System of Units (SI)</span> 
+    is the international standard for measurement. 
+    The SI unit for force is the <span class="emph">newton</span>,
+    whose symbol is \(\un N.\)
+    One newton is equivalent to a kilogram-meter per second squared; 
+    that is, 
+    \(1 \un N\) \(= 1 \undiv{kg m}{sec}^2.\)
+    Water has a density of \(\rho =\) \(1000 \undiv{kg}{m}^3\)
+    \(= 62.5 \undiv{lb}{ft}^3.\)
+    The SI unit for pressure is the <span class="emph">pascal</span>, 
+    whose symbol is \(\un{Pa}.\) 
+    Then \(1 \un{Pa} =\) \(1 \undiv{N}{m}^2.\)
+    To simplify \(\eqref{eq:force-h-body-constants},\)
+    let's write \(\rho g\) as one number \(\delta\) (<i>delta</i>).
+    In the SI system, \(\delta = 9.8 \times 1000\) \(= 98000.\)
+    Yet in the imperial system, force is measured in pounds; 
+    we therefore <i>neglect</i> the acceleration due to gravity, \(g.\)
+    So if we perform calculations in the imperial system, 
+    then we use \(\delta = 62.5.\)
+    Hence, we present only a single formula for the hydrostatic force:
+    \begin{equation}
+    F = \delta \int_a^b h(y) w(y) \di y \cma \label{eq:force-h-body}
+    \end{equation}
+    where \(\delta = 98000\) in SI units and \(\delta = 62.5\) 
+    in imperial units.
+</p>
+
+<div class="box-title">HYDROSTATIC FORCE ON BODY</div>
+<div class="box">
+    Suppose that a stationary body lies in water between the horizontal lines \(y = a\) and \(y = b.\)
+    At some \(y,\) if \(w(y)\) is the body's width and \(h(y)\) is its depth 
+    beneath the surface, then the <span class="emph">hydrostatic force</span> acting on the body is 
+    \begin{equation}
+    F = \delta \int_a^b h(y) w(y) \di y \cma \eqlabel{eq:force-h-body}
+    \end{equation}
+    where \(\delta = 98000\) in SI units and \(\delta = 62.5\) 
+    in imperial units.
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="hydrostatics-reservoir" id="hydrostatics-reservoir">
+            <img src="../images/sectionImages/hydrostatics-reservoir.jpg" class="hydrostatics-reservoir" alt="Figure 3">
+        </figure>
+        
+        <style>
+            .hydrostatics-reservoir::before{
+                content:'FIGURE 3';
+            }
+        </style>
+        A reservoir of water is the shape of an isosceles triangle 
+        whose diagonal lengths are \(5\) feet and horizontal length is 
+        \(8\) feet (<a href="#hydrostatics-reservoir">Figure 3</a>).
+        Calculate the hydrostatic force at the bottom of the reservoir 
+        when the water level is \(2\) feet.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="hydrostatics-reservoir-rect figure-wide" id="hydrostatics-reservoir-rect">
+        <img src="../images/sectionImages/hydrostatics-reservoir-rect.jpg" class="hydrostatics-reservoir-rect" 
+        alt="Figure 4">
+    </figure>
+    
+    <style>
+        .hydrostatics-reservoir-rect::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    Taking the downward direction to be the positive \(y\)-axis, 
+    let the water height to be \(y = 0.\)
+    The reservoir's bottom is therefore \(y = 2.\)
+    At some level \(y\) a thin, horizontal approximating rectangle of height \(\Delta y\) 
+    is a depth of \(h(y) = y\) beneath the water's surface. Its area is  
+    \(A = w(y) \Delta y.\)
+    (See <a href="#hydrostatics-reservoir-rect">Figure 4</a>.)
+    The reservoir's height is \(\sqrt{5^2 - (8/2)^2}\) \(= 3 \un{ft}.\)
+    By similar triangles, we see
+    \[\frac{3}{8} = \frac{2 - y}{w \par{y}} \implies 
+    w(y) = \frac{8}{3} \par{2 - y} = \frac{16}{3} - \frac{8}{3} y \pd\]
+    We therefore find the hydrostatic force on the reservoir to be 
+    \[
+    \ba 
+    F &= 62.5 \int_0^2 y \par{\frac{16}{3} - \frac{8}{3} y} \di y \nl
+    &= 62.5 \par{\frac{8}{3} y^2 - \frac{8}{9} y^3} \intEval_0^2 \nl 
+    &= \boxed{\frac{2000}{9} \un{lb}} \approx 222.222 \un{lb} \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="hydrostatics-dam" id="hydrostatics-dam">
+            <img src="../images/sectionImages/hydrostatics-dam.jpg" class="hydrostatics-dam" alt="Figure 5">
+        </figure>
+        
+        <style>
+            .hydrostatics-dam::before{
+                content:'FIGURE 5';
+            }
+        </style>
+        A dam is constructed in a shape of a trapezoid 
+        that is \(10\) meters tall, \(20\) meters long on the bottom, 
+        and \(30\) meters long on the top,
+        as shown by <a href="#hydrostatics-dam">Figure 5</a>.
+        Calculate the force on the dam due to the water when the water height is \(8\) 
+        meters. 
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="hydrostatics-dam-rect figure-wide" id="hydrostatics-dam-rect">
+        <img src="../images/sectionImages/hydrostatics-dam-rect.jpg" class="hydrostatics-dam-rect" 
+        alt="Figure 6">
+    </figure>
+    
+    <style>
+        .hydrostatics-dam-rect::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    Let's consider horizontal strips of water (whose heights are uniform) and 
+    sum their hydrostatic forces. 
+    If we take the downward direction to be the positive \(y\)-axis, 
+    then it's most convenient to let the surface level be \(y = 0\) 
+    and the dam's bottom be \(y = 8.\)
+    See <a href="#hydrostatics-dam-rect">Figure 6</a>.]
+    A thin, horizontal approximating rectangle 
+    has width \(w(y) = 2(10 + a)\) \(= 20 + 2a.\)
+    Its depth below the surface is \(h(y) = y.\) 
+    By similar triangles, we see 
+    \[\frac{a}{8 - y} = \frac{5}{10} \or a = \frac{5}{10} \par{8 - y} = 4 - \frac{1}{2} y \pd\]
+    Thus, the approximating rectangle has area 
+    \[A_i = w(y) \Delta y = \parbr{20 + 2 \par{4 - \frac{1}{2} y}} \Delta y
+    = (28 - y) \Delta y \pd\]
+    Hence, the force on the dam is, following \(\eqref{eq:force-h-body}\)
+    with \(\delta = 98000,\)
+    \[
+    \ba 
+    F  &= 98000 \int_0^8 y (28 - y) \di y \nl 
+    &= 98000 \par{14y^2 - \frac{y^3}{3}} \intEval_0^8 \approx \boxed{7.108 \times 10^7 \un N}
+    \ea    
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="hydrostatic-right-triangle" id="hydrostatic-right-triangle">
+            <img src="../images/sectionImages/hydrostatic-right-triangle.jpg" class="hydrostatic-right-triangle" alt="Figure 7">
+        </figure>
+        
+        <style>
+            .hydrostatic-right-triangle::before{
+                content:'FIGURE 7';
+            }
+        </style>
+        A right triangle has a horizontal length of \(2\) feet 
+        and a vertical length of \(3\) feet. 
+        Calculate the hydrostatic force on the triangle 
+        if its top vertex is \(1\) foot beneath the water's surface
+        (<a href="#hydrostatic-right-triangle">Figure 7</a>). 
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="hydrostatic-right-triangle-rectangle figure-wide" id="hydrostatic-right-triangle-rectangle">
+        <img src="../images/sectionImages/hydrostatic-right-triangle-rectangle.jpg" class="hydrostatic-right-triangle-rectangle" 
+        alt="Figure 8">
+    </figure>
+    
+    <style>
+        .hydrostatic-right-triangle-rectangle::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    At any \(y,\) an approximating rectangle of height \(\Delta y\)
+    is a depth of \(h(y) = y\) below the water's surface.
+    (See <a href="#hydrostatic-right-triangle-rectangle">Figure 8</a>.)
+    By similar triangles, we see 
+    \[\frac{2}{3} = \frac{w(y)}{y - 1} \implies w(y) = \frac{2}{3} (y - 1) \pd\]
+    The triangle is between the horizontal lines \(y = 1\) and \(y = 4.\)
+    We use \(\eqref{eq:force-h-body}\) with \(\delta = 62.5\)
+    to find the hydrostatic force to be 
+    \[
+    \ba 
+    F &= 62.5 \int_1^4 y \cdot \frac{2}{3} (y - 1) \di y \nl
+    &= \frac{2}{3} (62.5) \par{\frac{y^3}{3} - \frac{y^2}{2}} \intEval_1^4 \nl
+    &= \boxed{562.5 \un{lb}} 
+    \ea 
+    \] 
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="hydrostatics-circle" id="hydrostatics-circle">
+            <img src="../images/sectionImages/hydrostatics-circle.jpg" class="hydrostatics-circle" 
+            alt="Figure 9">
+        </figure>
+        
+        <style>
+            .hydrostatics-circle::before{
+                content:'FIGURE 9';
+            }
+        </style>
+        A circular disk of radius \(4\) meters is submerged in a body of water 
+        such that the disk's top is located \(5\) meters below the surface
+        (<a href="#hydrostatics-circle">Figure 9</a>). 
+        Calculate the hydrostatic force on the disk.
+        <span class="white-space"></span>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="hydrostatics-circle-rect" id="hydrostatics-circle-rect">
+        <img src="../images/sectionImages/hydrostatics-circle-rect.jpg" class="hydrostatics-circle-rect" 
+        alt="Figure 10">
+    </figure>
+    
+    <style>
+        .hydrostatics-circle-rect::before{
+            content:'FIGURE 10';
+        }
+    </style> 
+    The water's surface is the line \(y = 9.\) 
+    Let's consider some approximating rectangle to this disk. 
+    Since the rectangle is a distance of \(y\) above the \(x\)-axis, 
+    its depth is \(h(y) = 9 - y\) below the water's surface
+    (<a href="#hydrostatics-circle-rect">Figure 10</a>).
+    An equation for the circle is \(x^2 + y^2 = 16,\) 
+    so the rectangle's width is 
+    \[w(y) = 2x = 2 \sqrt{16 - y^2} \pd\]
+    Because the body is bounded between \(y = -4\) and \(y = 4,\) 
+    using \(\eqref{eq:force-h-body}\) with \(\delta = 98000\)
+    gives the hydrostatic force to be 
+    \[
+    \ba 
+    F &= 98000 \int_{-4}^4 2 \sqrt{16 - y^2} \par{9 - y} \di y \nl 
+    &= 196000 \cdot 9 \int_{-4}^4 \sqrt{16 - y^2} \di y 
+    - 196000 \int_{-4}^4 y \sqrt{16 - y^2} \di y \pd
+    \ea
+    \]
+    Since \(y \sqrt{16 - y^2}\) is an odd function, the second integral is \(0.\)
+    The first integral represents the area of a semicircle of radius \(4.\)
+    (We could also use a trigonometric substitution, 
+    but possessing geometric intuition is far easier.)
+    We therefore have 
+    \[
+    \ba 
+    F &= 196000 \cdot 9 \par{\frac{\pi}{2} \cdot 4^2} + 0 
+    \approx \boxed{4.433 \times 10^7 \un{N}}
+    \ea 
+    \]
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        Consider a stationary thin object of area \(A\) 
+        that lies a distance \(h\) below the water's surface. 
+        Then the <span class="emph">hydrostatic force</span> acting on the object is 
+        \begin{equation}
+        F = \rho A g h \cma \eqlabel{eq:h-force}
+        \end{equation}
+        and the <span class="emph">hydrostatic pressure</span> is 
+        \begin{equation}
+        P = \rho g h \pd \eqlabel{eq:h-pressure}
+        \end{equation}
+        Suppose that a stationary body (whose height 
+        cannot be considered uniform) lies in water between the horizontal lines \(y = a\) and \(y = b.\)
+        At some \(y,\) if \(w(y)\) is the body's width and \(h(y)\) is its depth 
+        beneath the surface, then the hydrostatic force acting on the body is 
+        \begin{equation}
+        F = \delta \int_a^b h(y) w(y) \di y \cma \eqlabel{eq:force-h-body}
+        \end{equation}
+        where \(\delta = 98000\) in SI units and \(\delta = 62.5\) 
+        in imperial units.
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

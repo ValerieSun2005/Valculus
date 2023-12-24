@@ -47,7 +47,7 @@
       <hr id="mainBodyBegin">
       <!--[[[crefId.Areas-between-Curves]]]--> 
 <p>
-    In Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>, 
+    In Section <a href="/Valculus/calculus/4.2-Definite-Integrals.html">4.2</a>
     we calculated areas of regions bounded between a function and the \(x\)-axis.
     But we now compute areas of regions bounded between two or more functions. 
     In doing so, we discuss the following:
@@ -246,7 +246,8 @@
     \[A = \int_a^b \abs{f(x) - g(x)} \di x \pd\]
     We evaluate this integral by splitting the region \(R\) into 
     subregions; in each, one function is greater than the other. 
-    Summing the areas of these subregions ensures that the total area \(A\) is a positive quantity.
+    Summing the areas of these subregions ensures that the total area \(A\) is a positive quantity,
+    as shown by the following example.
 </p>
 
 <div class="example-title" id="ex-x-x^2"> EXAMPLE 3 </div>
@@ -268,8 +269,9 @@
 <button onclick="toggle3()" class="solution-button">  </button>
 <div id="solution3" class="solution">
     <aside class="box-caution">
-        Because \(\int_{\pi/4}^{\pi/2} \cos x - \sin x \di x\) is negative,
-        using \(A = \int_{0}^{\pi/2} \cos x - \sin x \di x\)
+        Because the integral \(\int_{\pi/4}^{\pi/2} (\cos x - \sin x) \di x\) is negative,
+        using 
+        \[A = \int_{0}^{\pi/2} (\cos x - \sin x) \di x \]
         would give \(0.\)
         This is the <i>difference</i>, not the sum, of the two areas!
     </aside>
@@ -298,6 +300,17 @@
     \]
     So the total area is 
     \[A = A_1 + A_2 = \boxed{2 \sqrt{2} - 2}\]
+    <p>
+        <span class="text-remark">REMARK</span>
+        Mathematically, this procedure works because 
+        \[
+        \ba 
+        \int_{0}^{\pi/2} \abs{\cos x - \sin x} \di x 
+        &= \int_0^{\pi/4} \par{\cos x - \sin x} \di x + \int_{\pi/4}^{\pi/2} \par{\sin x - \cos x} \di x \nl 
+        &= A_1 + A_2 \pd
+        \ea 
+        \]
+    </p>
 </div>
 
 <h4 id="areas-y">Areas with \(y\)</h4>
@@ -591,8 +604,8 @@
     </p>
     <p>
         <a href="#tips" class="summary-anchor">Problem-Solving Tips</a>
-        In calculating areas between curves, be flexible and select a method of integration.
-        Consider the following tips:
+        In calculating the area between curves, be flexible and select a method of integration.
+        Use the following tips:
         <ol class="list-num">
             <li>
                 Sketch the graphs and the region they enclose.

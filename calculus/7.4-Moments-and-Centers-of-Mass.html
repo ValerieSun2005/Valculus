@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7.4: Moments and Centers of Mass</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>7.4 — Moments and Centers of Mass</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.4-Moments-and-Centers-of-Mass-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="7.4-Moments-and-Centers-of-Mass-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Moments-and-Centers-of-Mass]]]-->
+<p>
+    Two children can balance each other on a seesaw 
+    if they each supply equal and opposing <i>tendencies to rotate</i> the beam.
+    A heavier child makes the seesaw more likely to rotate
+    than a lighter child does;
+    to counter this, the lighter child can sit farther from the center.
+    On a different note, to balance a pencil on your finger,
+    you must hold it near the center—at its <i>center of mass</i>. 
+    How do centers of mass relate to the degree to which a body balances and rotates?
+    In this section we answer this question by using <i>moments</i>,
+    and we learn to calculate the centers of mass of particle systems and solid plates.
+    Then we unlock a paradoxical relationship between these ideas and volumes of solids.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#particles-mom-com" class="page-anchor">Moments and Centers of Mass for Particles</a>
+        </li>
+        <li>
+            <a href="#laminae-mom-com" class="page-anchor">Moments and Centroids of Laminae</a>
+        </li>
+        <li>
+            <a href="#pappus-theorem" class="page-anchor">Theorem of Pappus</a>
+        </li>
+    </ul>
+</p>
+<h4 id="particles-mom-com">Moments and Centers of Mass for Particles</h4>
+<figure class="moments-balance" id="moments-balance">
+    <img src="../images/sectionImages/moments-balance.jpg" alt="Figure 1">
+</figure>
+<style>
+    .moments-balance::before{
+        content:'FIGURE 1';
+    }
+</style> 
+<p>
+    Imagine that two objects are placed on either end of a plank
+    that pivots at some point (called the <i>fulcrum</i>).
+    Let one object have mass \(m_1\) and be a distance \(d_1\)
+    left of the fulcrum,
+    and let the second object have mass \(m_2\) and sit a distance \(d_2\)
+    right of the fulcrum. 
+    (See <a href="#moments-balance">Figure 1</a>.)
+    The plank is balanced if 
+    \begin{equation} 
+    m_1 d_1 = m_2 d_2 \pd \label{eq:law-lever}
+    \end{equation}
+    (This fact is called the Law of the Lever.)
+    Hence, a lighter object can balance a heavier object 
+    if the heavier object is placed closer to the fulcrum.
+    Now let's use mathematics to model this balancing: 
+    Let's define a horizontal \(x\)-axis 
+    such that the \(m_1\) mass is located at \(x = x_1\)
+    and the \(m_2\) mass is located at \(x = x_2.\)
+    (See <a href="#moments-balance-axis">Figure 2</a>.)
+    If the fulcrum is located at \(x = \overline x,\)
+    then we see 
+    \[d_1 = \overline x - x_1 \and d_2 = x_2 - \overline x \pd\]
+    Substituting these expressions in \(\eqref{eq:law-lever},\) we find 
+    \begin{align} 
+    m_1 \par{\overline x - x_1} &= m_2 \par{x_2 - \overline x} \nonum \nl 
+    m_1 \overline x + m_2 \overline x &= m_1 x_1 + m_2 x_2 \nonum \nl 
+    \implies \overline x &= \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2} \pd \label{eq:com-2}
+    \end{align}
+</p>
+
+<figure class="moments-balance-axis figure-wide" id="moments-balance-axis">
+    <img src="../images/sectionImages/moments-balance-axis.jpg" alt="Figure 2">
+</figure>
+<style>
+    .moments-balance-axis::before{
+        content:'FIGURE 2';
+    }
+</style> 
+
+<p>
+    More generally, if we have \(n\) objects 
+    of masses \(m_1, m_2, \dots,\) \(m_n\)
+    located at positions \(x_1, x_2, \dots,\) \(x_n,\)
+    then \(\eqref{eq:com-2}\) extends to 
+    \begin{equation} 
+    \overline x = \frac{\ds \sum_{i = 1}^n m_i x_i}{\ds \sum_{i = 1}^n m_i} \pd \label{eq:com} 
+    \end{equation}
+    This ratio gives the <span class="emph">center of mass</span>
+    of a system of particles along a line—that is, the point at which the system is balanced. 
+    We call the product \(m_i x_i\) a <span class="emph">moment</span>; 
+    it measures the tendency for a particle to cause the system to rotate.
+    A heavy object helps a system rotate more than a light object does,
+    so the heavy object produces a greater moment than the light object does.
+    Likewise, moving an object away from the center of mass 
+    increases the moment exerted because the tendency to rotate grows.
+    In words, \(\eqref{eq:com}\) 
+    says:
+    <blockquote>
+        The center of mass of a system of particles is given by 
+        the sum of the moments divided by the system's total mass.
+    </blockquote>
+    Therefore, a single particle of mass \(\sum_{i = 1}^n m_i\) 
+    located at \(x = \overline x\)
+    would <i>produce the same moment</i> as do all \(n\) particles
+    scattered across the \(x\)-axis.
+</p>
+
+<figure class="moments-particles-2d" id="moments-particles-2d">
+    <img src="../images/sectionImages/moments-particles-2d.jpg" alt="Figure 3">
+</figure>
+<style>
+    .moments-particles-2d::before{
+        content:'FIGURE 3';
+    }
+</style> 
+
+<p>
+    <span class="label-emph">Moments in Two Dimensions</span>
+    In the \(xy\)-plane, consider a system of particles with masses 
+    \(m_1, m_2, \dots, m_n\) located at \(\par{x_1, y_1},\) \(\par{x_2, y_2}, \dots,\)
+    \(\par{x_n, y_n}.\)
+    (See <a href="#moments-particles-2d">Figure 3</a>.)
+    We define the <span class="emph">system's moment about the \(\bf y\)-axis</span> to be 
+    \begin{equation} 
+    M_y = \sum_{i = 1}^n m_i x_i \pd \label{eq:M-y}
+    \end{equation}
+    This sum measures the system's tendency to rotate about the \(y\)-axis. 
+    For the special case in <a href="#moments-balance">Figure 1</a>, 
+    the masses create tendencies for rotation about the <i>vertical pivot</i>.
+    But placing a mass at the fulcrum causes no rotation;
+    more generally, particles that lie on the \(y\)-axis do not help rotate the system about the \(y\)-axis.
+    Mathematically, because \(x_i = 0,\) these particles have moments of \(0\) about the \(y\)-axis.
+    Similarly, we define the <span class="emph">system's moment about the \(\bf x\)-axis</span> to be
+    \begin{equation} 
+    M_x = \sum_{i = 1}^n m_i y_i \cma \label{eq:M-x}
+    \end{equation}
+    which measures the system's tendency to rotate about the \(x\)-axis.   
+    Particles that lie on the \(x\)-axis do not help rotate the system about the \(x\)-axis; 
+    since \(y_i = 0,\) their moments about the \(x\)-axis are \(0.\)
+</p>
+<p>
+    <span class="label-emph">Centers of Mass in Two Dimensions</span>
+    Similar to the one-dimensional case,
+    the center of mass for a system of particles in the \(xy\)-plane is given by
+    \[
+    \overline x = \frac{\ds \sum_{i = 1}^n m_i x_i}{\ds \sum_{i = 1}^n m_i} 
+    \lspace 
+    \overline y = \frac{\ds \sum_{i = 1}^n m_i y_i}{\ds \sum_{i = 1}^n m_i} \pd
+    \]
+    Let's condense these formulas as follows:
+    \begin{equation} 
+    \overline x = \frac{M_y}{m} \lspace \overline y = \frac{M_x}{m} \cma \label{eq:com-2d-particle}
+    \end{equation}
+    where \(m = \sum_{i = 1}^n m_i\) is the system's total mass.
+</p>
+
+<div class="box-title">MOMENTS AND CENTERS OF MASS FOR PARTICLES</div>
+<div class="box">
+    If the \(xy\)-plane contains particles of masses \(m_1,\) \(m_2, \dots, m_n\)
+    located at \(\par{x_1, y_1},\) \(\par{x_2, y_2}, \dots,\)
+    \(\par{x_n, y_n},\) then the 
+    <span class="emph">system's moment about the \(\bf y\)-axis</span> is 
+    \begin{equation} 
+    M_y = \sum_{i = 1}^n m_i x_i \cma \eqlabel{eq:M-y}
+    \end{equation}
+    and the <span class="emph">system's moment about the \(\bf x\)-axis</span> is 
+    \begin{equation} 
+    M_x = \sum_{i = 1}^n m_i y_i \pd \eqlabel{eq:M-x}
+    \end{equation}
+    The system's center of mass is 
+    \begin{equation} 
+    \overline x = \frac{M_y}{m} \lspace \overline y = \frac{M_x}{m} \cma \eqlabel{eq:com-2d-particle}
+    \end{equation}
+    where \(m = \sum_{i = 1}^n m_i\) is the system's total mass.
+</div>
+
+<div class="example-title" id="ex-particles-mom"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="moments-2d-example figure-center-one" id="moments-2d-example">
+            <img src="../images/sectionImages/moments-2d-example.jpg" alt="Figure 4">
+        </figure>
+        <style>
+            .moments-2d-example::before{
+                content:'FIGURE 4';
+            }
+        </style> 
+        For the system of particles in <a href="#moments-2d-example">Figure 4</a>,
+        calculate the system's moment about the \(x\)-axis,
+        moment about the \(y\)-axis, and center of mass.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    The system's moment about the \(x\)-axis is, following \(\eqref{eq:M-x},\)
+    \[M_x = 5(3) + 2(-3) + 7(1) = \boxed{16}\]
+    Likewise, its moment about the \(y\)-axis is, following \(\eqref{eq:M-y},\)
+    \[M_y = 5(-1) + 2(-2) + 7(2) = \boxed 5\]
+    The system's total mass is 
+    \[m = 5 + 2 + 7 = 14 \pd\]
+    Accordingly, the coordinates of the center of mass are, by \(\eqref{eq:com-2d-particle},\)
+    \[
+    \ba 
+    \overline x &= \frac{M_y}{m} = \frac{5}{14} \cma \nl
+    \overline y &= \frac{M_x}{m} = \frac{16}{14} = \frac{8}{7} \pd
+    \ea
+    \]
+    Therefore, \(\boxed{\par{\tfrac{5}{14}, \tfrac{8}{7}}}\) is the center of mass. 
+    Physically, the system of particles balances at this point. 
+    Imagine that the \(xy\)-plane is a top-down view of these masses; 
+    placing a support beam at \(\par{\tfrac{5}{14}, \tfrac{8}{7}}\) would balance these particles.
+</div>
+
+<p>
+    <span class="text-remark">REMARK</span>
+    In <a href="/Valculus/calculus/7.4-Moments-and-Centers-of-Mass.html#ex-particles-mom">Example 1</a>,
+    observe that
+    \[
+    \baat{2}
+    \overline x &\ne -1 - 2 + 2 &&= -1 \cma \nl 
+    \overline y &\ne 3 - 3 + 1 &&= 1 \pd
+    \eaat 
+    \]
+    In words, the center of mass <span class="warning">is not found by summing each mass's \(x\)- and \(y\)-coordinates</span>. 
+    (This would be true if the particles had equal masses.)
+    \(\eqReferTwo{eq:M-y}{eq:M-x}\) use the concept of <i>weighted means</i>;
+    namely, a massive particle holds a large <q>weight</q> by significantly affecting the location of the center of mass.
+    Weighted means have other applications in probability, and they are used to compute academic grades. 
+</p>
+
+<h4 id="laminae-mom-com">Moments and Centroids of Laminae</h4>
+
+<div class="figure-center">
+    <figure class="centroid-f" id="centroid-f">
+        <img src="../images/sectionImages/centroid-f.jpg" class="centroid-f" alt="Figure 5A">
+    </figure>
+    <figure class="centroid-f-balance" id="centroid-f-balance">
+        <img src="../images/sectionImages/centroid-f-balance.jpg" class="centroid-f-balance" alt="Figure 5B">
+    </figure>
+</div>
+
+<style>
+    .centroid-f::before{
+        content:'FIGURE 5A';
+    }
+
+    .centroid-f-balance::before{
+        content:'FIGURE 5B';
+    }
+</style>
+
+<p>
+    Next we focus on a flat plate of uniform density \(\rho;\) 
+    this body is called a <span class="emph">lamina</span> (plural, <i>laminae</i>). 
+    Its center of mass is called the <span class="emph">centroid</span>.
+    In <a href="#centroid-f">Figure 5A</a>, a lamina's shape is the region \(R\) bounded 
+    between the curve \(y = f(x)\) and the \(x\)-axis
+    from \(x = a\) to \(x = b;\)
+    <a href="#centroid-f-balance">Figure 5B</a> shows this lamina balanced at the centroid.
+    Our goal is to find this lamina's centroid and its moments about the \(x\)- and \(y\)-axes. 
+    (We cannot treat this lamina as a particle.)
+    Let's cut the lamina into \(n\) rectangles of endpoints \(x_0, x_1,\) \(\dots, x_n\)
+    and equal width \(\Delta x,\)
+    as in <a href="#centroid-f-riemann">Figure 6</a>.
+</p>
+
+<figure class="centroid-f-riemann" id="centroid-f-riemann">
+    <img src="../images/sectionImages/centroid-f-riemann.jpg" alt="Figure 6">
+</figure>
+<style>
+    .centroid-f-riemann::before{
+        content:'FIGURE 6';
+    }
+</style> 
+
+<p>
+    <span class="label-emph">Lamina's Moment about the \(y\)-Axis</span>
+    We calculate each rectangle's moment about the \(y\)-axis and sum these values.
+    In the general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    the rectangle's centroid is at its center—the point \(\par{\overline{x}_i, \tfrac{1}{2} f(\overline{x}_i)}.\)
+    (By symmetry, the rectangle <i>must balance at this point</i>.)
+    The rectangle's mass equals its density \(\rho\) multiplied by its area \(f(\overline{x}_i) \Delta x\)—namely,
+    \[m_i = \rho f(\overline{x}_i) \Delta x \pd\]
+    Thus, this rectangle's moment about the \(y\)-axis 
+    is <i>equivalent to</i> the moment about the \(y\)-axis of a particle with mass \(m_i\)
+    placed at \(\par{\overline{x}_i, \tfrac{1}{2} f(\overline{x}_i)}.\)
+    And this moment equals
+    \[m_i \overline{x}_i = \rho \overline{x}_i f(\overline{x}_i) \Delta x \pd\]
+    So if we sum the moments about the \(y\)-axis of all \(n\) rectangles, then we get 
+    \[M_y \approx \sum_{i = 1}^n \rho \overline{x}_i f(\overline{x}_i) \Delta x \pd\]
+    This summation is a Riemann sum with the function \(\rho x f(x).\)
+    Letting \(n \to \infty,\) this approximation becomes the definite integral 
+    \begin{equation} 
+    M_y = \rho \int_a^b x f(x) \di x \pd \label{eq:lamina-My} 
+    \end{equation}
+</p>
+<p>
+    <span class="label-emph">Lamina's Moment about the \(x\)-Axis</span>
+    Similarly, let's find each rectangle's moment about the \(x\)-axis 
+    and add these numbers. 
+    Doing so estimates \(M_x,\) the lamina's moment about the \(x\)-axis. 
+    In the general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    the rectangle's centroid is a vertical distance of \(\tfrac{1}{2} f(\overline{x}_i)\)
+    above the \(x\)-axis. 
+    With a mass of \(m_i = \rho f(\overline{x}_i) \Delta x,\)
+    this rectangle produces a moment about the \(x\)-axis of 
+    \[m_i \par{\tfrac{1}{2} f(\overline{x}_i)} = \tfrac{1}{2} \rho [f(\overline{x}_i)]^2 \Delta x \pd\]
+    Summing the moments about the \(x\)-axis of all \(n\) rectangles, we get 
+    \[M_x \approx \sum_{i = 1}^n \tfrac{1}{2} \rho [f(\overline{x}_i)]^2 \Delta x \pd\]
+    As \(n \to \infty,\) we attain 
+    \begin{equation} 
+    M_x = \rho \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \pd \label{eq:lamina-Mx}
+    \end{equation}
+</p>
+<p>
+    <span class="label-emph">Lamina's Centroid</span>
+    If the lamina's area is \(A,\)
+    then its mass is \(m = \rho A.\)
+    The lamina's centroid is therefore located at 
+    \[
+    \baat{3}
+    \overline x &= \frac{M_y}{m} &&= \frac{\ds \rho \int_a^b x f(x) \di x}{\ds \rho A}
+    &&= \frac{\ds \int_a^b x f(x) \di x}{\ds A} \cma \nl 
+    \overline y &= \frac{M_x}{m} &&= \frac{\ds \rho \int_a^b \tfrac{1}{2} [f(x)]^2 \di x}{\ds \rho A} 
+    &&= \frac{\ds \int_a^b \tfrac{1}{2} [f(x)]^2 \di x}{\ds A} \pd 
+    \eaat
+    \]
+    Observe that the \(\rho\) terms cancel. 
+    Hence, the location of a centroid <i>is independent of the lamina's density</i>
+    (assuming it is constant). 
+    In summary, the region bounded by the curve \(f(x)\) and the \(x\)-axis from \(x = a\) to \(x = b\)
+    has its centroid at
+    \begin{equation} 
+    \overline x = \frac{1}{A} \int_a^b x f(x) \di x 
+    \lspace
+    \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \pd
+    \label{eq:centroid}
+    \end{equation}
+</p>
+
+<div class="box-title">MOMENTS AND CENTROIDS OF LAMINAE</div>
+<div class="box">
+    If a lamina of density \(\rho\) is the region bounded by the curve \(y = f(x)\) and the \(x\)-axis from \(x = a\) to \(x = b,\)
+    then the moment about the \(x\)-axis is 
+    \begin{equation} 
+    M_x = \rho \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \cma \eqlabel{eq:lamina-Mx}
+    \end{equation}
+    the moment about the \(y\)-axis is 
+    \begin{equation} 
+    M_y = \rho \int_a^b x f(x) \di x \cma \eqlabel{eq:lamina-My} 
+    \end{equation}
+    and the centroid is located at 
+    \begin{equation} 
+    \overline x = \frac{1}{A} \int_a^b x f(x) \di x 
+    \lspace
+    \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \cma
+    \eqlabel{eq:centroid}
+    \end{equation}
+    where \(A\) is the lamina's area.
+</div>
+
+<div class="example-title" id="ex-centroid-sqrt"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the centroid of the region bounded by \(y = \sqrt x,\)
+        the \(x\)-axis, and the line \(x = 4.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="centroid-sqrtx" id="centroid-sqrtx">
+        <img src="../images/sectionImages/centroid-sqrtx.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .centroid-sqrtx::before{
+            content:'FIGURE 7';
+        }
+    </style> 
+    The region's area is
+    \[A = \int_0^4 \sqrt x \di x = \tfrac{2}{3} x^{3/2} \intEval_0^4 = \tfrac{16}{3} \pd\]
+    So by \(\eqref{eq:centroid},\) the \(x\)-coordinate of the centroid is 
+    \[
+    \ba 
+    \overline x &= \frac{1}{16/3} \int_0^4 x \sqrt x \di x \nl 
+    &= \tfrac{3}{16} \int_0^4 x^{3/2} \di x \nl 
+    &= \tfrac{3}{40} x^{5/2} \intEval_0^4 = \tfrac{12}{5} \pd
+    \ea 
+    \] 
+    Likewise, the \(y\)-coordinate of the centroid is 
+    \[
+    \ba 
+    \overline y &= \frac{1}{16/3} \int_0^4 \tfrac{1}{2} \par{\sqrt x}^2 \di x \nl 
+    &= \tfrac{3}{32} \int_0^4 x \di x \nl 
+    &= \tfrac{3}{64} x^2 \intEval_0^4 
+    = \tfrac{3}{4} \pd
+    \ea 
+    \]
+    So the centroid is \(\boxed{\par{\tfrac{12}{5}, \tfrac{3}{4}}}\) (<a href="#centroid-sqrtx">Figure 7</a>).
+</div>
+
+<div class="example-title" id="ex-centroid-semicircle"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Show that the centroid of a semicircle of radius \(r\) is located
+        on its axis of symmetry and \(4r/3\pi\)
+        units from the baseline.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="centroid-semicircle" id="centroid-semicircle">
+        <img src="../images/sectionImages/centroid-semicircle.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .centroid-semicircle::before{
+            content:'FIGURE 8';
+        }
+    </style> 
+    <a href="#centroid-semicircle">Figure 8</a> marks the centroid 
+    of the region bounded by \(y = \sqrt{r^2 - x^2}.\)
+    This region's area is 
+    \[A = \tfrac{1}{2} \pi r^2 \pd\]
+    By symmetry, the \(x\)-coordinate of the centroid is \(\overline x = 0.\)
+    (The semicircle must balance at some point on the \(y\)-axis.)
+    Using \(\eqref{eq:centroid}\) gives the \(y\)-coordinate of the centroid to be 
+    \[
+    \baat{2}
+    \overline y &= \frac{1}{A} \int_{-r}^r \tfrac{1}{2} \par{\sqrt{r^2 - x^2}}^2 \di x \nl 
+    &= \frac{1}{\pi r^2} \int_{-r}^r \par{r^2 - x^2} \di x \comment{\text{using } A = \tfrac{1}{2} \pi r^2} \nl 
+    &= \frac{2}{\pi r^2} \int_0^r \par{r^2 - x^2} \di x \comment{\text{because } r^2 - x^2 \text{ is even}} \nl 
+    &= \frac{2}{\pi r^2} \par{r^2 x - \frac{x^3}{3}} \intEval_0^r \nl 
+    &= \frac{2}{\pi r^2} \par{r^3 - \frac{r^3}{3}} = \frac{4 r}{3 \pi} \pd
+    \eaat 
+    \]
+    Hence, the centroid lies on the semicircle's axis of symmetry and \(4 r/3\pi\) units from the baseline.
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by 
+        the curve \(y = e^x,\) the \(x\)-axis, and the lines \(x = -1\) and \(x = 1,\)
+        where \(x\) and \(y\) are measured in meters, 
+        is the shape of a thin steel plate whose density is \(8000\) kilograms per cubic meter.
+        Calculate the plate's moments about the \(x\)-axis and about the \(y\)-axis.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="centroid-exp" id="centroid-exp">
+        <img src="../images/sectionImages/centroid-exp.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .centroid-exp::before{
+            content:'FIGURE 9';
+        }
+    </style> 
+    The bounded region is shown by <a href="#centroid-exp">Figure 9</a>. 
+    The moment about the \(x\)-axis, by using \(\eqref{eq:lamina-Mx}\)
+    with \(f(x) = e^x\) and \(\rho = 8000,\) is
+    \[
+    \ba
+    M_x &= 8000 \int_{-1}^1 \tfrac{1}{2} \par{e^x}^2 \di x \nl 
+    &= 4000 \int_{-1}^1 e^{2x} \di x \nl 
+    &= 2000 e^{2x} \intEval_{-1}^1 \nl 
+    &= \boxed{2000 \par{e^2 - e^{-2}}} \approx 14507.442 \un{kg-m} \pd
+    \ea
+    \]
+    By \(\eqref{eq:lamina-My},\) the moment about the \(y\)-axis is given by
+    \[
+    M_y = 8000 \int_{-1}^1 x e^x \di x \pd
+    \]  
+    From <a href="/Valculus/calculus/6.1-Integration-by-Parts.html#ex-e"target = "_blank">Example 6.1-1</a>, we get 
+    \[
+    \ba 
+    M_y &= 8000 \par{x e^x - e^x} \intEval_{-1}^1 \nl 
+    &= \boxed{\frac{16000}{e}} \approx 5886.071 \un{kg-m} \pd
+    \ea 
+    \]
+</div>
+
+<div class="figure-center">
+    <figure class="centroid-2-curves" id="centroid-2-curves">
+        <img src="../images/sectionImages/centroid-2-curves.jpg" class="centroid-2-curves" alt="Figure 10A">
+    </figure>
+    <figure class="centroid-2-curves-rect" id="centroid-2-curves-rect">
+        <img src="../images/sectionImages/centroid-2-curves-rect.jpg" class="centroid-2-curves-rect" alt="Figure 10B">
+    </figure>
+</div>
+
+<style>
+    .centroid-2-curves::before{
+        content:'FIGURE 10A';
+    }
+
+    .centroid-2-curves-rect::before{
+        content:'FIGURE 10B';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Laminae Bounded between Two Curves</span>
+    Suppose that a lamina of density \(\rho\) is bounded between the curves \(y = f(x)\) and \(y = g(x)\) 
+    from \(x = a\) to \(x = b,\) where \(f(x) \geq g(x)\)
+    (<a href="#centroid-2-curves">Figure 10A</a>). 
+    We draw \(n\) approximating rectangles, just as we did to analyze the lamina bounded by one curve. 
+    (See <a href="#centroid-2-curves-rect">Figure 10B</a>.)
+    In the general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    the approximating rectangle's area is \([f(\overline{x}_i) - g(\overline{x}_i)] \Delta x,\)
+    so its mass is  
+    \[m_i = \rho [f(\overline{x}_i) - g(\overline{x}_i)] \Delta x \pd\]
+    Since the rectangle's centroid is located a distance \(\overline{x}_i\) away from the \(y\)-axis, 
+    it produces a moment about the \(y\)-axis of 
+    \[m_i \overline{x}_i = \rho \overline{x}_i [f(\overline{x}_i) - g(\overline{x}_i)] \Delta x \pd\]
+    If we sum the moments about the \(y\)-axis of all \(n\) rectangles and take \(n \to \infty,\)
+    then we get 
+    \begin{align} 
+    M_y &= \lim_{n \to \infty} \sum_{i = 1}^n \rho \overline{x}_i [f(\overline{x}_i) - g(\overline{x}_i)] \Delta x \nonum \nl
+    &= \rho \int_a^b x [f(x) - g(x)] \di x \pd \label{eq:lamina-My-2}
+    \end{align}
+    Now observe that the approximating rectangle's centroid is above the \(x\)-axis by a distance of 
+    \[g(\overline{x}_i) + \tfrac{1}{2} [f(\overline{x}_i) - g(\overline{x}_i)] = \tfrac{1}{2} f(\overline{x}_i) + \tfrac{1}{2} g(\overline{x}_i) \pd\]
+    Hence, this rectangle produces a moment about the \(x\)-axis of 
+    \[
+    \ba
+    m_i \parbr{\tfrac{1}{2} f(\overline{x}_i) + \tfrac{1}{2} g(\overline{x}_i)} 
+    &= \rho [f(\overline{x}_i) - g(\overline{x}_i)] \parbr{\tfrac{1}{2} f(\overline{x}_i) + \tfrac{1}{2} g(\overline{x}_i)} \Delta x \nl
+    &= \tfrac{1}{2} \rho \par{[f(\overline{x}_i)]^2 - [g(\overline{x}_i)]^2} \Delta x \pd
+    \ea
+    \]
+    Summing the moments about the \(x\)-axis of all \(n\) rectangles and letting \(n \to \infty,\) we get 
+    \begin{align} 
+    M_x &= \lim_{n \to \infty} \sum_{i = 1}^n \tfrac{1}{2} \rho \par{[f(\overline{x}_i)]^2 - [g(\overline{x}_i)]^2} \Delta x \nonum \nl 
+    &= \rho \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \pd \label{eq:lamina-Mx-2}
+    \end{align}
+    The lamina's centroid is therefore located at
+    \begin{equation} 
+    \overline x = \frac{1}{A} \int_a^b x [f(x) - g(x)] \di x 
+    \lspace
+    \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \cma
+    \label{eq:centroid-2}
+    \end{equation}
+    where \(A\) is the region's area, given by \(A = \int_a^b [f(x) - g(x)] \di x.\)
+</p>
+
+<div class="box-title">MOMENTS AND CENTROIDS OF LAMINAE BOUNDED BY TWO CURVES</div>
+<div class="box">
+    If a lamina of density \(\rho\) is the region bounded by the curves \(y = f(x)\) and \(y = g(x)\) from \(x = a\) to \(x = b,\)
+    where \(f(x) \geq g(x)\) on \(a \leq x \leq b,\)
+    then the moment about the \(x\)-axis is 
+    \begin{equation} 
+    M_x = \rho \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \cma \eqlabel{eq:lamina-Mx-2}
+    \end{equation}
+    the moment about the \(y\)-axis is 
+    \begin{equation} 
+    M_y = \rho \int_a^b x [f(x) - g(x)] \di x \cma \eqlabel{eq:lamina-My-2} 
+    \end{equation}
+    and the centroid is located at 
+    \begin{equation} 
+    \overline x = \frac{1}{A} \int_a^b x [f(x) - g(x)] \di x 
+    \lspace
+    \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \cma
+    \eqlabel{eq:centroid-2}
+    \end{equation}
+    where \(A\) is the lamina's area.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the centroid of the region bounded by
+        the line \(y = x + 2\) and the parabola \(y = x^2.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <figure class="centroid-2-line-parabola" id="centroid-2-line-parabola">
+        <img src="../images/sectionImages/centroid-2-line-parabola.jpg" alt="Figure 11">
+    </figure>
+    <style>
+        .centroid-2-line-parabola::before{
+            content:'FIGURE 11';
+        }
+    </style> 
+    The region is bounded above by the line \(y = x + 2\) and below by the parabola \(y = x^2.\)
+    These functions intersect when 
+    \[
+    \ba
+    x + 2 &= x^2 \nl 
+    x^2 - x - 2 &= 0 \nl 
+    (x - 2)(x + 1) &= 0 \nl 
+    \implies x &= -1 \cma 2 \pd
+    \ea
+    \]
+    Hence, the region's area is 
+    \[
+    \ba 
+    A &= \int_{-1}^2 \parbr{(x + 2) - x^2} \di x \nl 
+    &= \par{-\tfrac{1}{3} x^3 + \tfrac{1}{2} x^2 + 2x} \intEval_{-1}^2 \nl 
+    &= \tfrac{9}{2} \pd
+    \ea 
+    \]
+    By \(\eqref{eq:centroid-2},\) the \(x\)-coordinate of the centroid is 
+    \[
+    \ba 
+    \overline x &= \frac{1}{9/2} \int_{-1}^2 x \parbr{(x + 2) - x^2} \di x \nl 
+    &= \tfrac{2}{9} \int_{-1}^2 \par{-x^3 + x^2 + 2x} \di x \nl 
+    &= \tfrac{2}{9} \par{-\tfrac{1}{4} x^4 + \tfrac{1}{3} x^3 + x^2} \intEval_{-1}^2 \nl 
+    &= \tfrac{1}{2} \pd
+    \ea 
+    \]
+    Likewise, the \(y\)-coordinate of the centroid is 
+    \[
+    \ba 
+    \overline y &= \frac{1}{9/2} \int_{-1}^2 \tfrac{1}{2} \parbr{(x + 2)^2 - \par{x^2}^2} \di x \nl 
+    &= \tfrac{1}{9} \int_{-1}^2 \par{x^2 + 4x + 4 - x^4} \di x \nl 
+    &= \tfrac{1}{9} \par{-\tfrac{1}{5} x^5 + \tfrac{1}{3} x^3 + 2x^2 + 4x} \intEval_{-1}^2 \nl 
+    &= \tfrac{8}{5} \pd
+    \ea 
+    \]
+    So the lamina's centroid is \(\boxed{\par{\tfrac{1}{2} \cma \tfrac{8}{5}}}\)
+    (<a href="#centroid-2-line-parabola">Figure 11</a>).
+</div>
+
+<h4 id="pappus-theorem">Theorem of Pappus</h4>
+
+<p>
+    A surprising connection exists between centroids and solids of revolution.
+    The <span class="emph">Theorem of Pappus</span> relates a region's centroid and area to 
+    the volume of the solid generated by rotating the region about an axis.
+    This theorem, given as follows, is an alternative to the methods we developed in Chapter 5.
+</p>
+
+<div class="box-title">THEOREM OF PAPPUS</div>
+<div class="box">
+    If a region's area is \(A\) and its centroid is \(\par{\overline x, \overline y},\)
+    then the volume of the solid generated by rotating this region 
+    about the \(x\)-axis is 
+    \begin{equation} 
+    V = 2 \pi A \overline y \pd \label{eq:pappus-x}
+    \end{equation}
+    Likewise, the volume of the solid generated by rotating this region
+    about the \(y\)-axis is 
+    \begin{equation} 
+    V = 2 \pi A \overline x \pd \label{eq:pappus-y}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(R\) be the region bounded by the parabola \(y = -3x^2 + 6x\)
+        and the \(x\)-axis.
+        <ol class="list-alpha">
+            <li>
+                Find the centroid of \(R.\)
+            </li>
+            <li>
+                Calculate the volume of the solid produced by revolving \(R\)
+                around the \(x\)-axis. 
+            </li>
+            <li>
+                Calculate the volume of the solid produced by revolving \(R\)
+                around the \(y\)-axis. 
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <figure class="pappus-ex-region" id="pappus-ex-region">
+        <img src="../images/sectionImages/pappus-ex-region.jpg" alt="Figure 12">
+    </figure>
+    <style>
+        .pappus-ex-region::before{
+            content:'FIGURE 12';
+        }
+    </style> 
+    <ol class="list-alpha">
+        <li>
+            The parabola intersects the \(x\)-axis at \(x = 0\) and \(x = 2.\)
+            The area of \(R\) is therefore 
+            \[
+            \ba
+            A &= \int_0^2 \par{-3x^2 + 6x} \di x \nl 
+            &= \par{-x^3 + 3x^2} \intEval_0^2 \nl 
+            &= 4 \pd
+            \ea
+            \]
+            Because \(R\) is symmetric about \(x = 1,\)
+            it must balance at some point on this line. 
+            We therefore argue that the \(x\)-coordinate of the centroid is \(\overline x = 1.\)
+            By \(\eqref{eq:centroid}\) we find the \(y\)-coordinate of the centroid to be 
+            \[
+            \ba 
+            \overline y &= \tfrac{1}{4} \int_0^2 \tfrac{1}{2} \par{-3x^2 + 6x}^2 \di x \nl 
+            &= \tfrac{1}{8} \int_0^2 \par{9x^4 - 36x^3 + 36x^2} \di x \nl 
+            &= \tfrac{1}{8} \par{\tfrac{9}{5} x^5 - 9x^4 + 12x^3} \intEval_0^2 \nl 
+            &= \tfrac{6}{5} \pd
+            \ea 
+            \]
+            The centroid is therefore \(\boxed{\par{1, \tfrac{6}{5}}}\) (<a href="#pappus-ex-region">Figure 12</a>).
+        </li>
+        <hr>
+        <li>
+            Using the Theorem of Pappus as in \(\eqref{eq:pappus-x},\) 
+            we find the volume to be 
+            \[
+            \ba 
+            V &= 2 \pi A \overline y \nl 
+            &= 2 \pi (4) \par{\tfrac{6}{5}} \nl 
+            &= \boxed{\frac{48 \pi}{5}} \approx 30.159 \pd
+            \ea 
+            \]
+            This method is an alternative to the Disk Method 
+            (from Section <a href="/Valculus/calculus/5.3-Solids-of-Revolution.html">5.3</a>).
+        </li>
+        <hr>
+        <li>
+            By the Theorem of Pappus with \(\eqref{eq:pappus-y},\)
+            the volume is 
+            \[
+            \ba 
+            V &= 2 \pi A \overline x \nl
+            &= 2 \pi (4) (1) \nl 
+            &= \boxed{8 \pi} \approx 25.133 \pd
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-V-torus"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        <figure class="torus-ex figure-center-one" id="torus-ex">
+            <img src="../images/sectionImages/torus-ex.jpg" alt="Figure 13">
+        </figure>
+        <style>
+            .torus-ex::before{
+                content:'FIGURE 13';
+            }
+        </style> 
+        A <span class="emph">torus</span> is a solid produced 
+        by rotating a circle about an axis that does not intersect the circle.   
+        Calculate the volume of the torus in <a href="#torus-ex">Figure 13</a>.
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <figure class="torus-ex-circle" id="torus-ex-circle">
+        <img src="../images/sectionImages/torus-ex-circle.jpg" alt="Figure 14">
+    </figure>
+    <style>
+        .torus-ex-circle::before{
+            content:'FIGURE 14';
+        }
+    </style> 
+    Let's consider a circle of radius \(r\) whose center lies a distance \(R\) away from the \(y\)-axis
+    (<a href="#torus-ex-circle">Figure 14</a>).
+    Then its area is \(A = \pi r^2,\)
+    and rotating this circle about the \(y\)-axis produces the torus in <a href="#torus-ex">Figure 13</a>.
+    The circle balances about its center, meaning its centroid must be 
+    \((R, 0).\)
+    Using the Theorem of Pappus with \(\eqref{eq:pappus-y},\)
+    the solid generated by rotating this region about the \(y\)-axis has a volume of 
+    \[
+    \ba 
+    V &= 2 \pi A \overline x \nl
+    &= 2 \pi \par{\pi r^2} (R) \nl 
+    &= \boxed{2 \pi^2 R r^2 }
+    \ea 
+    \]
+    This calculation is very quick!
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#particles-mom-com" class="summary-anchor">Moments and Centers of Mass for Particles</a>
+        A <span class="emph">moment</span> measures tendency for rotation. 
+        If \(n\) particles with masses \(m_1, m_2,\) \(\dots, m_n\)
+        lie along the \(x\)-axis at positions \(x_1, x_2,\) \(\dots, x_n,\)
+        then the <nobr>\(i\)th</nobr> particle supplies a moment given by the product \(m_i x_i.\)
+        The <span class="emph">center of mass</span> of this system of particles is 
+        \begin{equation} 
+        \overline x = \frac{\ds \sum_{i = 1}^n m_i x_i}{\ds \sum_{i = 1}^n m_i} \cma \eqlabel{eq:com} 
+        \end{equation}
+        which gives the coordinate at which the particles are balanced. 
+        It is a <i>weighted mean</i>, in which heavier particles 
+        have a greater effect on the position of the center of mass.
+        If we replace all \(n\) particles with a single particle of mass \(\sum_{i = 1}^n m_i\)
+        at \(x = \overline x,\) then the overall moment of the system remains the same.
+        Conversely, in the \(xy\)-plane, if particles of masses \(m_1,\) \(m_2, \dots, m_n\)
+        are located at \(\par{x_1, y_1},\) \(\par{x_2, y_2}, \dots,\)
+        \(\par{x_n, y_n},\) then the 
+        <span class="emph">system's moment about the \(\bf y\)-axis</span> is 
+        \begin{equation} 
+        M_y = \sum_{i = 1}^n m_i x_i \pd \eqlabel{eq:M-y}
+        \end{equation}
+        Similarly, the <span class="emph">system's moment about the \(\bf x\)-axis</span> is 
+        \begin{equation} 
+        M_x = \sum_{i = 1}^n m_i y_i \pd \eqlabel{eq:M-x}
+        \end{equation}
+        The system's center of mass is 
+        \begin{equation} 
+        \overline x = \frac{M_y}{m} \lspace \overline y = \frac{M_x}{m} \cma \eqlabel{eq:com-2d-particle}
+        \end{equation}
+        where \(m = \sum_{i = 1}^n m_i\) is the system's total mass.
+        Think of the two-dimensional plane as a top-down view of the \(n\) particles; 
+        placing a pivot at \(\par{\overline x, \overline y}\) balances these objects.
+    </p>
+    <p>
+        <a href="#laminae-mom-com" class="summary-anchor">Moments and Centroids of Laminae</a>
+        For a thin plate (called a <span class="emph">lamina</span>) with uniform density \(\rho,\)
+        the center of mass is given the special name of the <span class="emph">centroid</span>. 
+        We cannot treat this plate as a particle; 
+        we instead model it as a region bounded in the \(xy\)-plane.
+        If a lamina of density \(\rho\) is the region bounded by the curve \(y = f(x)\) and the \(x\)-axis from \(x = a\) to \(x = b,\)
+        then the moment about the \(x\)-axis is 
+        \begin{equation} 
+        M_x = \rho \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \cma \eqlabel{eq:lamina-Mx}
+        \end{equation}
+        the moment about the \(y\)-axis is 
+        \begin{equation} 
+        M_y = \rho \int_a^b x f(x) \di x \cma \eqlabel{eq:lamina-My} 
+        \end{equation}
+        and the centroid is located at 
+        \begin{equation} 
+        \overline x = \frac{1}{A} \int_a^b x f(x) \di x 
+        \lspace
+        \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} [f(x)]^2 \di x \cma
+        \eqlabel{eq:centroid}
+        \end{equation}
+        where \(A\) is the lamina's area.
+        But now suppose that a lamina is bounded by two curves \(y = f(x)\) and \(y = g(x)\)
+        from \(x = a\) to \(x = b,\) with \(f(x) \geq g(x)\) on \(a \leq x \leq b.\)
+        Then the moment about the \(x\)-axis is 
+        \begin{equation} 
+        M_x = \rho \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \cma \eqlabel{eq:lamina-Mx-2}
+        \end{equation}
+        the moment about the \(y\)-axis is 
+        \begin{equation} 
+        M_y = \rho \int_a^b x [f(x) - g(x)] \di x \cma \eqlabel{eq:lamina-My-2} 
+        \end{equation}
+        and the centroid is located at 
+        \begin{equation} 
+        \overline x = \frac{1}{A} \int_a^b x [f(x) - g(x)] \di x 
+        \lspace
+        \overline y = \frac{1}{A} \int_a^b \tfrac{1}{2} \par{[f(x)]^2 - [g(x)]^2} \di x \pd
+        \eqlabel{eq:centroid-2}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#pappus-theorem" class="summary-anchor">Theorem of Pappus</a>
+        If a region's area is \(A\) and its centroid is \(\par{\overline x, \overline y},\)
+        then the volume of the solid generated by rotating this region 
+        about the \(x\)-axis is 
+        \begin{equation} 
+        V = 2 \pi A \overline y \pd \eqlabel{eq:pappus-x}
+        \end{equation}
+        Likewise, the volume of the solid generated by rotating this region
+        about the \(y\)-axis is 
+        \begin{equation} 
+        V = 2 \pi A \overline x \pd \eqlabel{eq:pappus-y}
+        \end{equation}
+        These formulas allow us to quickly compute volumes of solids of revolution
+        if we know a region's centroid and area.
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>

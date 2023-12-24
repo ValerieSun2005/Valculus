@@ -465,7 +465,7 @@
     \ea 
     \]
     Because \(e^x\) doesn't depend on \(h,\) the Constant Multiple Law for Limits 
-    (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>) enables us to pull out the term \(e^x;\) we attain 
+    (from Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>) enables us to pull out the term \(e^x;\) we attain 
     \begin{equation} 
     \deriv{}{x} \par{e^x} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} \pd \label{eq:deriv-lim}
     \end{equation}
@@ -479,7 +479,7 @@
     \[1 = \ln \parbr{\lim_{n \to \infty} \par{1 + \frac{1}{n}}^n} \pd\]
     Because the natural logarithm is continuous for all positive inputs, the last step is equivalent to 
     \[1 = \lim_{n \to \infty} \parbr{\ln \par{1 + \frac{1}{n}}^n}\]
-    by the arguments of Section <a href="/Valculus/calculus/1.4-Determining-Continuity.html">1.4</a>.
+    by the arguments of Section <a href="/Valculus/calculus/1.3-Determining-Continuity.html">1.3</a>.
     Using the logarithmic property \(\ln x^n = n \ln x,\) we attain 
     \[1 = \lim_{n \to \infty} \parbr{n \ln \par{1 + \frac{1}{n}}} \pd\]
     We now perform a clever substitution: Let \(1/n = e^h - 1.\)
@@ -581,7 +581,7 @@
     We now interpret this relationship geometrically:
     In the interval \([-2 \pi, 2\pi],\)
     the graph of \(\sin x\) has horizontal tangents when 
-    \(x = -3 \pi/2,\) \(-\pi/2,\) \(\pi/2,\) and \(3 \pi/2.\)
+    \(x = -3 \pi/2,\) \(x = -\pi/2,\) \(x = \pi/2,\) and \(x = 3 \pi/2.\)
     Thus, at these values the derivative of \(\sin x\) must be \(0;\)
     indeed, \(\cos x = 0\) at these values. 
     Since \(\cos 0 = 1,\) the graph of \(\sin x\) has slope \(1\) when \(x = 0.\)
@@ -616,7 +616,7 @@
     &= \lim_{h \to 0} \frac{(\sin x) (\cos h - 1) + \cos x \sin h}{h} \pd 
     \ea 
     \]
-    The Sum Law for Limits (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>) enables us to write  
+    The Sum Law for Limits (from Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>) enables us to write  
     \[
     \deriv{}{x} \par{\sin x} = \lim_{h \to 0} \frac{\sin x(\cos h - 1)}{h} + \lim_{h \to 0} \frac{\cos x \sin h}{h} \pd
     \]
@@ -626,7 +626,7 @@
     \begin{equation} 
     \deriv{}{x} \par{\sin x} = (\sin x) \lim_{h \to 0} \frac{\cos h - 1}{h} + (\cos x) \lim_{h \to 0} \frac{\sin h}{h} \pd \label{eq:sin-deriv-lim}
     \end{equation}
-    In Section <a href="/Valculus/calculus/1.3-Evaluating-Limits-Algebraically.html">1.3</a> we proved that 
+    In Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a> we proved that 
     \begin{equation} 
     \lim_{h \to 0} \frac{\sin h}{h} = 1 \and \lim_{h \to 0} \frac{1 - \cos h}{h} = 0 \pd \label{eq:important-limits}
     \end{equation}
@@ -658,7 +658,7 @@
     &= \lim_{h \to 0} \frac{(\cos x) (\cos h - 1) - \sin x \sin h}{h} \pd 
     \ea 
     \]
-    By the Difference Law for Limits (from Section <a href="/Valculus/calculus/1.2-Limit-Properties.html">1.2</a>), we observe  
+    By the Difference Law for Limits (from Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>), we observe  
     \[\deriv{}{x} \par{\cos x} = \lim_{h \to 0} \frac{(\cos x) (\cos h - 1)}{h} - \lim_{h \to 0} \frac{\sin x \sin h}{h} \pd\]
     The factors \(\cos x\) and \(\sin x\) can be factored out of each limit by the Constant Multiple Law for Limits;
     doing so shows 
@@ -675,7 +675,7 @@
 
 <p>
     These proofs are elegant because they connect several key concepts: 
-    In Section <a href="/Valculus/calculus/1.3-Evaluating-Limits-Algebraically.html">1.3</a> 
+    In Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a> 
     we introduced the Squeeze Theorem and used it to prove the limits in \(\eqref{eq:important-limits}.\)
     They immediately proved useful as we calculated indeterminate limits involving trigonometric functions. 
     But in this section, we discovered more hidden applications of these limits. 

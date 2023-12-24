@@ -138,6 +138,8 @@ window.MathJax = {
             convBoxed: "\\; \\; \\boxed{\\text{converges}}",
             min: ["\\text{min} \\left\\{#1, #2\\right\\}", 2],
             max: ["\\text{max} \\left\\{#1, #2\\right\\}", 2],
+            comment: ["&&\\hspace{3em} \\parbr{#1}", 1], // use in \baat environment for comments like "[Because f(x) is even]"
+            wrongMath: ["{\\color{BrickRed} \\xcancel{\\color{white} #1}}", 1]
         }
     },
 };
