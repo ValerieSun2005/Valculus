@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.3: Squeeze Theorem and Trigonometric Limits</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+</a>
+    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
+    <h1>1.3 — Squeeze Theorem and Trigonometric Limits</h1>
+    <main>
+      <div class="pdf-panel">
+        <div class="pdf-panel-left">
+          <ul>
+            <li>
+              <button>
+                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.3-Squeeze-Theorem-and-Trigonometric-Limits-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="1.3-Squeeze-Theorem-and-Trigonometric-Limits-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--BEGIN BODY-->
+      <hr id="mainBodyBegin">
+      <!--[[[crefId.Squeeze-Theorem-and-Trigonometric-Limits]]]-->
+
+<p>
+    In Section 
+    <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>
+    we learned techniques to find limits analytically.
+    In this section we extend these ideas as we evaluate limits 
+    of trigonometric functions and composite functions.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#squeeze-theorem" class="page-anchor">Squeeze Theorem</a>
+        </li>
+        <li>
+            <a href="#trig-limits" class="page-anchor">Trigonometric Limits</a>
+        </li>
+        <li>
+            <a href="#lim-change-variable" class="page-anchor">Limits by Change of Variable</a>
+        </li>
+    </ul>
+</p>
+
+<figure class="squeeze-thm-graphs" id="squeeze-thm-graphs">
+    <img src="../images/sectionImages/squeeze-thm-graphs.jpg" alt="Figure 1">
+</figure>
+<style>
+    .squeeze-thm-graphs::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<h4 id="squeeze-theorem">Squeeze Theorem</h4>
+<p>
+    Suppose that a function \(f\) is bounded between two 
+    other functions \(g\) and \(h.\)
+    Mathematically, on some interval that contains the number 
+    \(a,\) let \(g(x) \leq f(x) \leq h(x)\)
+    (except possibly at \(a\) itself). 
+    If \(\lim_{x \to a} g(x)\) and \(\lim_{x \to a} h(x)\)
+    both equal \(L,\)
+    then the <span class="emph">Squeeze Theorem</span>
+    asserts that \(\lim_{x \to a} f(x) = L\) too.
+    (The Squeeze Theorem is also called the <span class="emph">Sandwich Theorem</span>
+    or <span class="emph">Pinching Theorem</span>.)
+    As shown by <a href="#squeeze-thm-graphs">Figure 1</a>, 
+    as \(x\) is made closer and closer to \(a,\)
+    the graphs of \(g\) and \(h\)
+    trap the graph of \(f,\)
+    thus causing the value of \(f(x)\) to be <i>pinched</i>
+    toward \(L.\)
+</p>
+
+<div class="box-title">SQUEEZE THEOREM</div>
+<div class="box">
+    On an interval that contains \(a,\)
+    let \(g(x) \leq f(x) \leq h(x)\)
+    (except possibly at \(a\) itself) and 
+    \[\lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L \pd\]
+    By the 
+    <span class="emph">Squeeze Theorem</span>,
+    \(\lim_{x \to a} f(x) = L\) too.
+</div>
+
+<div class="example-title" id="ex-x^2-sin"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} x^2 \sin \frac{1}{x} \]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="squeeze-thm-x2-ex" id="squeeze-thm-x2-ex">
+        <img src="../images/sectionImages/squeeze-thm-x2-ex.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .squeeze-thm-x2-ex::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    It's <span class="warning">wrong</span> to say 
+    \[\lim_{x \to 0} x^2 \sin \frac{1}{x} 
+    = \par{\lim_{x \to 0} x^2} \par{\lim_{x \to 0} \sin \frac{1}{x}}\]
+    because \(\lim_{x \to 0} \sin(1/x)\) does not exist 
+    (<a href="/Valculus/calculus/1.1-Defining-a-Limit.html#ex-sin(1/x)"target = "_blank">Example 1.1-5</a>). 
+    The Product Law is only applicable if both limits exist. 
+    Instead, let's bound \(x^2 \sin(1/x)\) between two functions 
+    that have the same limit as \(x \to 0.\)
+    Since the range of sine is \([-1, 1],\) we have 
+    \[-1 \leq \sin \frac{1}{x} \leq 1 \pd\]
+    Multiplying every term by \(x^2\) shows 
+    \[
+    -x^2 \leq x^2 \sin \frac{1}{x} \leq x^2 \pd
+    \]
+    Observe that 
+    \[\lim_{x \to 0} \par{-x^2} = \lim_{x \to 0} \par{x^2} = 0 \pd\]
+    Hence, the Squeeze Theorem gives 
+    \[\lim_{x \to 0} x^2 \sin \frac{1}{x} = \boxed 0\]
+    (See <a href="#squeeze-thm-x2-ex">Figure 2</a>.)
+</div>
+
+<h4 id="trig-limits">Trigonometric Limits</h4>
+
+<p>
+    Just as with limits of polynomials and rational expressions, 
+    limits of trigonometric functions can be evaluated by Direct Substitution. 
+    We therefore attain the following limits.
+</p>
+
+<div class="box-title">LIMITS OF TRIGONOMETRIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \lim_{x \to a} \sin x = \sin a\)
+                </td>
+                <td>
+                    \(\ds \lim_{x \to a} \cos x = \cos a\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \lim_{x \to a} \tan x = \tan a\)
+                </td>
+                <td>
+                    \(\ds \lim_{x \to a} \cot x = \cot a\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \lim_{x \to a} \sec x = \sec a\)
+                </td>
+                <td>
+                    \(\ds \lim_{x \to a} \csc x = \csc a\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    In addition to these rules, 
+    trigonometric identities help us evaluate limits of trigonometric functions.
+    The most important one is the Pythagorean identity:
+    \begin{equation} 
+    \sin^2 x + \cos^2 x = 1 \pd \label{eq:pythag-identity}
+    \end{equation}
+    We also use the double-angle identities for sine and cosine,
+    given as follows:
+    \begin{align} 
+    \sin 2x &= 2 \sin x \cos x \label{eq:sin-double-angle} \cma \nl 
+    \cos 2x &= \cos^2 x - \sin^2 x \label{eq:cos-double-angle} \pd  
+    \end{align}
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{\theta \to \pi/4} \frac{\cos 2\theta}{\cos \theta - \sin \theta}\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    As \(\theta \to \pi/4,\) both the numerator and denominator
+    approach \(0.\)
+    Hence, this limit is in the indeterminate form \(\indZero.\)
+    Recall, from Section 
+    <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>,
+    that we can resolve these limits by canceling common factors. 
+    By \(\eqref{eq:cos-double-angle},\)
+    the limit becomes 
+    \[
+    \ba 
+    \lim_{\theta \to \pi/4} \frac{\cos^2 \theta - \sin^2 \theta}{\cos \theta - \sin \theta} 
+    &= \lim_{\theta \to \pi/4} \frac{(\cos \theta + \sin \theta) \cancel{(\cos \theta - \sin \theta)}}{\cancel{\cos \theta - \sin \theta}} \nl
+    &= \lim_{\theta \to \pi/4} \par{\cos \theta + \sin \theta} \nl 
+    &= \cos \frac{\pi}{4} + \sin \frac{\pi}{4} \nl 
+    &= \frac{\sqrt 2}{2} + \frac{\sqrt 2}{2} = \boxed{\sqrt{2}}
+    \ea 
+    \]
+</div>
+
+<figure class="sin-limit-1-geometry" id="sin-limit-1-geometry">
+    <img src="../images/sectionImages/sin-limit-1-geometry.jpg" alt="Figure 3">
+</figure>
+<style>
+    .sin-limit-1-geometry::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    <span class="label-emph">A Special Limit</span>
+    An important limit for working with trigonometric functions is
+    \begin{equation} 
+    \lim_{x \to 0} \frac{\sin x}{x} = 1 \pd \label{eq:sin-lim-1}
+    \end{equation}
+    To prove it, we present a geometric argument 
+    that concludes with the Squeeze Theorem. 
+    Let's begin by drawing a unit circle 
+    and noting the central angle \(\theta,\)
+    as shown by <a href="#sin-limit-1-geometry">Figure 3</a>.
+    The inscribed triangle \(\Delta OPQ\) 
+    has width \(1\) and height \(\sin \theta;\)
+    its area is therefore \(\tfrac{1}{2} \sin \theta.\)
+    Similarly, triangle \(\Delta ORQ\) has width \(1\) and height \(\length{RQ} = \tan \theta\)
+    (since <nobr>\(\tan \theta = \length{RQ}/1\)),</nobr>
+    so its area is \(\tfrac{1}{2} \tan \theta.\)
+    Conversely, the circular sector with arc \(\arcHat{PQ}\) has area 
+    \(\tfrac{1}{2} (1)^2 \theta\) \(= \tfrac{1}{2} \theta.\)
+    By comparing the overlapping areas, 
+    we see 
+    \[
+    \underbrace{\tfrac{1}{2} \tan \theta}_{\text{area of } \Delta ORQ} 
+    \geq \underbrace{\tfrac{1}{2} \theta}_{\substack{\text{area of sector} \\ \text{with arc } \arcHat{PQ}}} 
+    \geq \underbrace{\tfrac{1}{2} \sin \theta}_{\text{area of } \Delta OPQ} \pd
+    \]
+    Let's multiply each expression by \(2/\sin \theta;\)
+    doing so gives 
+    \[
+    \frac{1}{\cos \theta} \geq \frac{\theta}{\sin \theta} \geq 1 \pd
+    \]
+    We now take the reciprocal of each fraction; 
+    in doing so, we must also flip the directions of the inequality signs. 
+    (For example, \(3 \gt 2 \iffArrow\) <nobr>\(\tfrac{1}{3} \lt \tfrac{1}{2}.\))</nobr>
+    Doing so gives
+    \begin{equation} 
+    \cos \theta \leq \frac{\sin \theta}{\theta} \leq 1 \pd \label{eq:sin-lim-inequality}
+    \end{equation}
+    Because cosine is an even function,
+    we have \(\cos \theta = \cos(-\theta).\)
+    Likewise, since sine is an odd function, we get \((\sin \theta)/\theta\)
+    \(= [-\sin(-\theta)]/(-\theta).\)
+    Accordingly, the inequality in \(\eqref{eq:sin-lim-inequality}\)
+    is valid for all nonzero \(\theta\) in \((-\pi/2, \pi/2).\) 
+    Note that 
+    \[\underbrace{\lim_{\theta \to 0} \cos \theta}_{\cos 0} = \lim_{\theta \to 0} 1 = 1 \pd\]
+    Hence, the Squeeze Theorem gives 
+    \[\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1 \cma\]
+    thus proving \(\eqref{eq:sin-lim-1}.\)
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that
+        \begin{equation} 
+        \lim_{x \to 0} \frac{1 - \cos x}{x} = 0 \pd 
+        \label{eq:cos-lim-0}
+        \end{equation}
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    Multiplying the numerator and denominator each by \((1 + \cos x),\) 
+    we get 
+    \[
+    \baat{2}
+    \lim_{x \to 0} \frac{1 - \cos x}{x} \cdot \frac{1 + \cos x}{1 + \cos x} 
+    &= \lim_{x \to 0} \frac{1 - \cos^2 x}{x \par{1 + \cos x}} \nl 
+    &= \lim_{x \to 0} \frac{\sin^2 x}{x \par{1 + \cos x}}
+    \comment{\text{by } \eqref{eq:pythag-identity}} \nl 
+    &= \par{\lim_{x \to 0} \frac{\sin x}{x}} \par{\lim_{x \to 0} \frac{\sin x}{1 + \cos x}} 
+    \comment{\text{by Product Law}} \nl 
+    &= (1) \lim_{x \to 0} \frac{\sin x}{1 + \cos x} 
+    \comment{\text{by } \eqref{eq:sin-lim-1}} \nl 
+    &= (1) \par{\frac{\sin 0}{1 + \cos 0}} 
+    \comment{\text{by Direct Substitution}} \nl
+    &= \boxed 0
+    \eaat 
+    \]
+</div>
+
+<p>
+    Let's summarize these special trigonometric limits
+    for easy reference. 
+    We use these limits to resolve many indeterminate limits that contain trigonometric functions.
+    Thus, it is important to have them memorized.
+    (We will then apply these limits in Section 
+    <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+    as we discuss derivatives.)
+</p>
+
+<div class="box-title">SPECIAL TRIGONOMETRIC LIMITS</div>
+<div class="box">
+    \begin{align}
+    &\lim_{x \to 0} \frac{\sin x}{x} = 1 \eqlabel{eq:sin-lim-1} \nl
+    &\lim_{x \to 0} \frac{1 - \cos x}{x} = 0 
+    \eqlabel{eq:cos-lim-0}
+    \end{align}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \frac{\tan x}{x}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    This limit is in the indeterminate form \(\indZero,\)
+    so we cannot immediately perform Direct Substitution.
+    Instead, since \(\tan x = (\sin x)/(\cos x),\)
+    we see
+    \[
+    \baat{2}
+    \lim_{x \to 0} \frac{\tan x}{x} 
+    &= \lim_{x \to 0} \frac{\sin x}{x \cos x} \nl
+    &= \par{\lim_{x \to 0} \frac{\sin x}{x}} 
+    \par{\lim_{x \to 0} \frac{1}{\cos x}}
+    \comment{\text{by Product Law}} \nl 
+    &= \par{\lim_{x \to 0} \frac{\sin x}{x}} \par{\frac{1}{\cos 0}}
+    \comment{\text{by Direct Substitution}} \nl 
+    &= (1) \par{\frac{1}{1}}
+    \comment{\text{by } \eqref{eq:sin-lim-1}} \nl 
+    &= \boxed 1
+    \eaat
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \frac{(4 - 4 \cos x)^2}{x^2}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    Because this limit is in the indeterminate form \(\indZero,\)
+    we cannot immediately perform Direct Substitution. 
+    Let's analyze this limit one step at a time, as follows:
+    \[
+    \baat{2} 
+    \lim_{x \to 0} \frac{(4 - 4 \cos x)^2}{x^2}
+    &= \lim_{x \to 0} \frac{16(1 - \cos x)^2}{x^2} \nl 
+    &= 16 \lim_{x \to 0} \frac{(1 - \cos x)^2}{x^2}
+    \comment{\text{by Constant Multiple Law}} \nl 
+    &= 16 \lim_{x \to 0} \par{\frac{1 - \cos x}{x}}^2 \nl 
+    &= 16 \par{\lim_{x \to 0} \frac{1 - \cos x}{x}}^2 
+    \comment{\text{by Power Law}} \nl
+    &= 16 (0)^2 
+    \comment{\text{by } \eqref{eq:cos-lim-0}} \nl 
+    &= \boxed 0
+    \eaat
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to 0} \frac{2x}{3 \sin x}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    Let's try to rewrite the limit so that we can use \(\eqref{eq:sin-lim-1}.\)
+    We see
+    \[
+    \baat{2} 
+    \lim_{x \to 0} \frac{2x}{3 \sin x}
+    &= \frac{2}{3} \lim_{x \to 0} \frac{x}{\sin x} 
+    \comment{\text{by Constant Multiple Law}} \nl 
+    &= \frac{2}{3} \lim_{x \to 0} \frac{1}{(\sin x)/x} \nl
+    &= \frac{2}{3} \par{\frac{\ds \lim_{x \to 0} 1}{\ds \lim_{x \to 0} \parbr{(\sin x)/x}}}
+    \comment{\text{by Quotient Law}} \nl 
+    &= \frac{2}{3} \par{\frac{1}{\ds \lim_{x \to 0} \parbr{(\sin x)/x}}}
+    \comment{\lim_{x \to 0} 1 = 1} \nl 
+    &= \frac{2}{3} \par{\frac{1}{1}}
+    \comment{\text{by } \eqref{eq:sin-lim-1}} \nl 
+    &= \boxed{\frac{2}{3}}
+    \eaat
+    \]
+</div>
+
+<h4 id="lim-change-variable">Limits by Change of Variable</h4>
+<p>
+    When we have the limit of a complicated function, 
+    it may be useful to perform a change of variable to 
+    attain a simpler function. 
+    Changing the variable is particularly useful 
+    when we compute the limit of a composite function. 
+    Mathematically, we use the following fact.
+</p>
+
+<div class="box-title">LIMITS BY CHANGE OF VARIABLE</div>
+<div class="box">
+    If \(t = g(x)\) and \(\lim_{x \to a} g(x) = L,\) then 
+    \[\lim_{x \to a} f(g(x)) = \lim_{t \to L} f(t) \pd\]
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following limits.
+        <ol class="list-alpha">
+            <li>
+                <span>
+                    \(\ds \lim_{x \to 0} \frac{\sin 5x}{x}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \lim_{x \to 4} \frac{\sin(x - 4)}{2x - 8}\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <ol class="list-alpha">
+        <li>
+            Letting \(t = 5x,\)
+            we see \(t \to 0\) as \(x \to 0.\)
+            So the limit becomes 
+            \[\lim_{t \to 0} \frac{\sin t}{t/5} = 5 \lim_{t \to 0} \frac{\sin t}{t} = \boxed 5\]
+        </li>
+        <hr>
+        <li>
+            If we let \(t = x - 4,\) then \(t \to 0\) as \(x \to 4.\)
+            The limit therefore becomes 
+            \[\lim_{t \to 0} \frac{\sin t}{2t} = \tfrac{1}{2} \lim_{t \to 0} \frac{\sin t}{t} = \boxed{\tfrac{1}{2}}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-x-sin-inf"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{x \to \infty} x \sin \frac{1}{x}\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <aside class="box-caution">
+        We cannot say
+        \[\lim_{x \to \infty} x \sin \frac{1}{x}
+        = \par{\lim_{x \to \infty} x} \par{\lim_{x \to \infty} \sin \frac{1}{x}}
+        \]
+        because neither limit on the right side exists.
+    </aside>
+    Let's rewrite the limit as 
+    \[\lim_{x \to \infty} \frac{\sin \frac{1}{x}}{1/x} \pd\]
+    Letting \(t = 1/x,\) we observe that \(t \to 0\) as \(x \to \infty.\)
+    So this limit is just 
+    \[\lim_{t \to 0} \frac{\sin t}{t} = \boxed 1\]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#squeeze-theorem" class="summary-anchor">Squeeze Theorem</a>
+        On an interval that contains \(a,\)
+        let \(g(x) \leq f(x) \leq h(x)\)
+        (except possibly at \(a\) itself) and 
+        \[\lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L \pd\]
+        By the 
+        <span class="emph">Squeeze Theorem</span>,
+        \(\lim_{x \to a} f(x) = L\) too.
+        This theorem enables us to find the limit 
+        of a function \(f\) if we can bound \(f\)
+        between two functions \(g\) and \(h\)
+        that both have the same limit as \(x \to a.\) 
+    </p>
+    <p>
+        <a href="#trig-limits" class="summary-anchor">Trigonometric Limits</a>
+        Limits of trigonometric functions 
+        can be evaluated by using Direct Substitution. 
+        We therefore get the following limits:
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \lim_{x \to a} \sin x = \sin a\)
+                    </td>
+                    <td>
+                        \(\ds \lim_{x \to a} \cos x = \cos a\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \lim_{x \to a} \tan x = \tan a\)
+                    </td>
+                    <td>
+                        \(\ds \lim_{x \to a} \cot x = \cot a\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \lim_{x \to a} \sec x = \sec a\)
+                    </td>
+                    <td>
+                        \(\ds \lim_{x \to a} \csc x = \csc a\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        Trigonometric identities help us resolve limits of trigonometric functions. 
+        The Pythagorean identity is
+        \begin{equation} 
+        \sin^2 x + \cos^2 x = 1 \pd \eqlabel{eq:pythag-identity}
+        \end{equation}
+        The double-angle identities for sine and cosine are, respectively,
+        \begin{align} 
+        \sin 2x &= 2 \sin x \cos x \eqlabel{eq:sin-double-angle} \cma \nl 
+        \cos 2x &= \cos^2 x - \sin^2 x \eqlabel{eq:cos-double-angle} \pd  
+        \end{align}
+        For example, these identities are especially useful when the limit of a trigonometric ratio is 
+        in the indeterminate form \(\indZero.\)
+        The following special limits are imperative to have memorized:
+        \begin{align}
+        &\lim_{x \to 0} \frac{\sin x}{x} = 1 \cma \eqlabel{eq:sin-lim-1} \nl
+        &\lim_{x \to 0} \frac{1 - \cos x}{x} = 0 \pd
+        \eqlabel{eq:cos-lim-0}
+        \end{align}
+    </p>
+    <p>
+        <a href="#lim-change-variable" class="summary-anchor">Limits by Change of Variable</a>
+        If \(t = g(x)\) and \(\lim_{x \to a} g(x) = L,\) then 
+        \[\lim_{x \to a} f(g(x)) = \lim_{t \to L} f(t) \pd\]
+        This fact enables us to compute limits of composite functions.
+    </p>
+</div>
+    </main>
+    <!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="../about.html">About</a> 
+                </li>
+                <li>
+                    <a href="../faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Contact</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Discord</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Supplemental Resources</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="../index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="../faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="../index.html">Report a Problem</a> 
+                </li>
+                <li>
+                    <a href="../about.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="../faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="../contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-disclaimer">  
+        <p class="ap-notice">
+            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+        </p>
+    </div>
+</footer> -->
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+  </body>
+</html>
