@@ -20,6 +20,38 @@ body{
     margin-bottom: 0%;
 }
 
+main p{
+    text-indent: 5vmin;
+    margin-top: 2%;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+h4{
+    font-variant: small-caps;
+    margin-bottom: -4%;
+    font-size: 25px;
+    margin-bottom: 2%;
+    color: rgb(83, 198, 198);
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+.no-par-indent p{ /* use <section> tag so that p's aren't indented */
+    text-indent: 0; 
+    margin-top: 0;
+}
+
+.hanging-par-indent p{ /* use <section> tag so that p's have HANGING indent */
+    padding-left: 5vmin;
+    text-indent: -5vmin;
+}
+
+.link-space{  /* space after an <a> tag */
+    margin-right: 1%;
+}
+
 footer{
     margin-top: 5%;
     background-color: rgb(24, 22, 22);
@@ -31,6 +63,7 @@ main{
 
 h1, main, .footer-body, .tab div, .footer-disclaimer{
     width: 970px;
+    /* width: 54vw; */
     margin-left: 19%;
     margin-right: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -51,13 +84,15 @@ h1{ /* section title */
     padding-top: 3%;
     font-weight: bold;
     line-height: 1.2;
+    font-family: 'Oswald'; 
+    font-weight:500;
 }
 
 main figure, aside{
     margin-left: -480px;
+    left: 480px;
     height: auto;
     float: right;
-    left: 480px;
     position: relative;
 }
 
@@ -84,6 +119,7 @@ main img, aside{
 
 main figure, main img, main figure video, aside{
     width: 400px;
+    /* width: 30vw; */
 }
 
 aside{
@@ -566,10 +602,18 @@ td{
     text-align: center;
 }
 
+footer h3{
+    font-family: 'Oswald'; 
+    font-weight:500;
+}
 
 .footer-body{
     display: flex;
+    font-family: 'Oswald'; 
+    font-weight:350;
+    font-size: 12px;
     height: auto;
+    padding-bottom: 5%;
     margin-bottom: -10%;
 }
 
@@ -750,8 +794,10 @@ ol li{
 
 .true-or-false::before{
     content: 'True or False?';
+    font-family: Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
     margin-right: 1%;
-    font-style: italic;
+    /* font-style: italic; */
     color: rgb(123, 156, 173);
 }
 
@@ -782,36 +828,39 @@ ol li{
 
 @media screen and (max-width: 1570px) {
     h1, main, .footer-body, .tab div, .footer-disclaimer{
-        margin-left: 10%;
-        width: 62vw;
+        margin-left: 15%;
+        width: 54vw;
     }
     
-    main figure, main img, main figure video, aside{
-        width: 20vw
+    main, footer{
+        font-size: 17px;
     }
 
-    /* aside{
-        left: 25vw
-    } */
+    h1{
+        font-size: 25px;
+    }
+    h4{
+        font-size: 18px;
+    }
+
+    main figure, main img, main figure video, aside{
+        width: 23vw
+    }
+
 
     main figure, aside{
-        left: 25vw;
+        left: 30vw;
         margin-left: -28vw;
     }
 
-    .logo-image{
+    /* .logo-image{
         position: static;
         margin-left: 3%;
         left: 0;
         right: 0;
         display: block;
-    }
-
-    /* .section-unit{
-        width: 72vw;
-        margin-left: auto;
     } */
-    
+
     .figure-wide{
         width: 90%;
         position: relative;
@@ -822,7 +871,6 @@ ol li{
         width: 100%;
         float: none;
     }
-
 }
 
 @media screen and (max-width: 1300px){
@@ -835,11 +883,19 @@ ol li{
     }
 
     main{ /* background body */
-        font-size: 17px;
+        font-size: 16px;
     }
     
     .table-full-width, .figure-wide{
         width: 100%;
+    }
+
+    .logo-image{
+        position: static;
+        margin-left: 3%;
+        left: 0;
+        right: 0;
+        display: block;
     }
 }
 

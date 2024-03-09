@@ -6,45 +6,43 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
-</a>
-    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>3.5 Exercise Solutions — Indeterminate Forms and L'Hopital's Rule</h1>
-    <main>
-      <div class="pdf-panel">
-        <div class="pdf-panel-left">
-          <ul>
-            <li>
-              <button>
-                <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">Section <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--BEGIN BODY-->
-      <hr id="mainBodyBegin">
-      <div id="exercise-1"> 
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>3.5 Exercise Solutions: Indeterminate Forms and L'Hopital's Rule</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
   <div class="box-solution__head">     EXERCISE 1 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
@@ -212,7 +210,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \lim_{x \to 0} x^3 \csc x\]
+        \[\ds \lim_{t \to 0} t^3 \csc t\]
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
@@ -221,11 +219,11 @@
             
         We rewrite the limit as 
         \[
-        \lim_{x \to 0} \frac{x^3}{\sin x} \cma 
+        \lim_{t \to 0} \frac{t^3}{\sin t} \cma 
         \]
         which is in the indeterminate form \(\indZero.\)
         Therefore, applying L'Hôpital's Rule gives 
-        \[\lim_{x \to 0} \frac{3x^2}{\cos x} = \boxed{0} \]
+        \[\lim_{t \to 0} \frac{3t^2}{\cos t} = \frac{3(0)^2}{\cos 0} = \boxed{0} \]
      
         </div> 
        </div>  
@@ -331,22 +329,22 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \lim_{x \to \infty} \par{x^2 - e^x} \]
+        \[\ds \lim_{y \to \infty} \par{y^2 - e^y} \]
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
             
-        As \(x \to \infty,\) \(x^2 \to \infty \) and \(e^x \to \infty.\) 
+        As \(y \to \infty,\) \(y^2 \to \infty \) and \(e^y \to \infty.\) 
         Thus, the limit is in the indeterminate form \(\infty - \infty.\) 
-        We then factor out the term \(x^2\) to get  
-        \[ \lim_{x \to \infty} x^2 \left(1 - \frac{e^x}{x^2}\right) \pd \]
-        As \(x \to \infty,\) \(e^x/x^2 \to \infty\) (L'Hôpital's Rule verifies this). 
-        Thus, as \(x \to \infty,\) 
-        \[x^2 \to \infty \and \par{1 - e^x/x^2} \to -\infty \pd\] 
+        We then factor out the term \(y^2\) to get  
+        \[ \lim_{y \to \infty} y^2 \left(1 - \frac{e^y}{y^2}\right) \pd \]
+        As \(y \to \infty,\) \(e^y/y^2 \to \infty\) (L'Hôpital's Rule verifies this). 
+        Thus, as \(y \to \infty,\) 
+        \[y^2 \to \infty \and \par{1 - e^y/y^2} \to -\infty \pd\] 
         The product of \(+\infty\) and \(-\infty\) is \(-\infty,\) so 
-        \[\lim_{x \to \infty} \Big(x^2 - e^x \Big) = \boxed{-\infty}\]
+        \[\lim_{y \to \infty} \Big(y^2 - e^y \Big) = \boxed{-\infty}\]
      
         </div> 
        </div>  
@@ -545,36 +543,36 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \lim_{x \to 1^+} \left(1 + \ln x \right)^{2/(x - 1)}\]
+        \[\ds \lim_{t \to 1^+} \left(1 + \ln t \right)^{2/(t - 1)}\]
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
             
-        As \(x \to 1^+,\) 
-        \[(1 + \ln x) \to 1 \and \frac{2}{x - 1} \to \infty \pd \] 
+        As \(t \to 1^+,\) 
+        \[(1 + \ln t) \to 1 \and \frac{2}{t - 1} \to \infty \pd \] 
         Thus, this limit is in the indeterminate form \(1^\infty.\) 
         We let 
-        \[y = (1 + \ln x)^{2/(x - 1)}\] 
+        \[y = (1 + \ln t)^{2/(t - 1)}\] 
         because then 
         \[
         \ba 
-        \ln y &amp;= \frac{2}{x - 1} \ln(1 + \ln x) \nl 
-        \lim_{x \to 1^+} \ln y &amp;= \lim_{x \to 1^+} \frac{2 \ln(1 + \ln x)}{x - 1} \cma 
+        \ln y &amp;= \frac{2}{t - 1} \ln(1 + \ln t) \nl 
+        \lim_{t \to 1^+} \ln y &amp;= \lim_{t \to 1^+} \frac{2 \ln(1 + \ln t)}{t - 1} \cma 
         \ea 
         \]
         which is in the indeterminate form \(\indZero.\) 
         We then use L'Hôpital's Rule to get 
         \[
         \ba 
-        \lim_{x \to 1^+} \ln y &amp;= \lim_{x \to 1^+} \frac{2/(x(1 + \ln x))}{1} \nl
+        \lim_{t \to 1^+} \ln y &amp;= \lim_{t \to 1^+} \frac{2/(t(1 + \ln t))}{1} \nl
         &amp;= \frac{2}{1(1 + 0)} \nl 
         &amp;= 2 \pd 
         \ea 
         \]
         Therefore,
-        \[\lim_{x \to 1^+} y = \boxed{e^2} \]
+        \[\lim_{t \to 1^+} y = \boxed{e^2} \]
      
         </div> 
        </div>  
@@ -833,6 +831,50 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{t \to \infty} \par{3e^t + t^2}^{5/t}\]
+    </blockquote> evaluate the limit if it exists. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The limit is in the indeterminate form \(\infty^0\) 
+        since as \(t \to \infty,\) 
+        \[\par{3e^t + t^2} \to \infty \and \frac{5}{t} \to 0 \pd \]
+        Letting 
+        \[y = \par{3e^t + t^2}^{5/t} \cma\]
+        we see 
+        \[
+        \ba 
+        \ln y &amp;= \ln \parbr{\par{3e^t + t^2}^{5/t}} \nl
+        &amp;= \frac{5}{t} \ln \par{3e^t + t^2} \nl 
+        &amp;= \frac{5 \ln \par{3e^t + t^2}}{t} \pd
+        \ea 
+        \]
+        The limit \(\lim_{t \to \infty} \ln y\) is in the indeterminate form \(\indZero,\)
+        so applying L'Hôpital's Rule multiple times shows 
+        \[
+        \ba 
+        \lim_{t \to \infty} \ln y 
+        &amp;= \lim_{t \to \infty} \frac{\dfrac{5 \par{3e^t + 2t}}{3e^t + t^2}}{1} \nl 
+        &amp;= \lim_{t \to \infty} \frac{5 \par{3e^t + 2}}{3e^t + 2t} \nl 
+        &amp;= \lim_{t \to \infty} \frac{15 e^t}{3e^t + 2} \nl 
+        &amp;= \lim_{t \to \infty} \frac{15 e^t}{3e^t} \nl 
+        &amp;= \lim_{t \to \infty} 5 = 5 \pd
+        \ea 
+        \]
+        Hence, 
+        \[\lim_{t \to \infty} y = \boxed{e^5}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
             
         Let \(g\) be a twice-differentiable function. 
         It is known that \(g(4) = 2\) and \(g'(4) = 6.\)
@@ -841,7 +883,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
         Because \(g\) is differentiable, \(g\) is continuous 
@@ -862,8 +904,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -881,7 +923,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         We rewrite the limit as 
@@ -902,8 +944,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -918,7 +960,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0,\) 
@@ -937,8 +979,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-27"> 
-  <div class="box-solution__head">     EXERCISE 27 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -952,7 +994,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
         To apply L'Hôpital's Rule, 
@@ -995,8 +1037,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1014,7 +1056,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
@@ -1048,8 +1090,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1058,7 +1100,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
         We analyze the quotient of \(f\) and \(g\) as \(x\) approaches infinity; 
@@ -1086,8 +1128,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1096,7 +1138,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         We analyze either 
@@ -1115,8 +1157,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1125,7 +1167,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         Let us consider the ratio \(r(x) = x^n/\ln x.\) 
@@ -1146,8 +1188,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1162,7 +1204,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0,\) both the numerator and denominator approach \(0.\)
@@ -1197,43 +1239,35 @@
        </div>  
    </div> 
 </div>
-    </main>
-    <!-- <footer>
+</main>
+<!-- </main>
+<footer>
     <div class="footer-body">
         <div class="footer-nav-column">
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="../about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="../contact.html">Contact</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Discord</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
         <div class="footer-nav-column">
-            <h3>Supplemental Resources</h3>
+            <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -1241,16 +1275,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -1258,31 +1292,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="../about.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">Privacy Policy</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
-    <div class="footer-disclaimer">  
-        <p class="ap-notice">
-            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
-        </p>
-    </div>
-</footer> -->
-    <script src="/Valculus/js/mathjax-config.js"></script>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
-  </body>
-</html>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

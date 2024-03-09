@@ -53,6 +53,7 @@ window.MathJax = {
             celcius: "\\degree \\text{C}",
             length: ["\\abs{#1}", 1], // measure of line segment — e.g., the number |AB|
             segment: ["\\overline{#1}", 1], // line segment itself (NOT measure) — e.g., the line segment AB 
+            angleM: ["\\text{m} \\angle #1", 1], // angle measure — e.g., m<A
             andThree: ["#1  \\cmaa  #2 \\; \\cmaa \\text{and} \\; \\; #3", 3],
             andFour: ["#1  \\comma  #2 \\; \\comma #3 \\; \\comma \\text{and} \\; #4", 4],
             and: "\\qquad \\text{and} \\qquad",
@@ -89,6 +90,7 @@ window.MathJax = {
             abs: ["\\left \\lvert #1 \\right \\rvert", 1],
             par: ["\\left ( #1 \\right )", 1],
             parbr: ["\\left [ #1 \\right ]", 1],
+            parbrace: ["\\left \\{#1 \\right\\}", 1],
             parBig: ["\\Big(#1 \\Big)", 1],
             parbrBig: ["\\Big[#1 \\Big]", 1],
             di: "\\, \\dd",
@@ -104,7 +106,7 @@ window.MathJax = {
             indZero: "\\frac{0}{0}",
             indInfty: "\\infty/\\infty",
             out: ["#1_{\\text{out}}", 1], // r_out
-            in: ["#1_{\\text{in}}", 1], // r_in
+            inn: ["#1_{\\text{in}}", 1], // r_in
             qed: "\\tag*{$\\blacksquare$}",
             muUnit: ["\\un{µ#1}", 1],
             un: ["\\, \\textrm{#1} ", 1],
@@ -130,6 +132,7 @@ window.MathJax = {
             maxSub: ["#1_{\\text{max}}", 1],
             arc: ["\\text{arc} \\, #1", 1],
             arcHat: ["\\overset{\\LARGE\\frown}{#1}",1],
+            floor: ["\\lfloor #1 \\rfloor", 1],
             sinLim: ["\\lim_{#1 \\to 0} (\\sin #1)/#1", 1], 
             cosLim: ["\\lim_{#1 \\to 0} (1 - \\cos #1)/#1", 1], 
             clockTime: ["{#1}\\hspace{-0.2em}:\\hspace{-0.2em}{#2}", 2],

@@ -6,46 +6,44 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
-</a>
-    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>1.6 — Limits with Infinity</h1>
-    <main>
-      <div class="pdf-panel">
-        <div class="pdf-panel-left">
-          <ul>
-            <li>
-              <button>
-                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="1.6-Limits-with-Infinity-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="1.6-Limits-with-Infinity-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--BEGIN BODY-->
-      <hr id="mainBodyBegin">
-      <!--[[[crefId.Limits-with-Infinity]]]-->
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>1.6: Limits with Infinity</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="1.6-Limits-with-Infinity-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="1.6-Limits-with-Infinity-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Limits-with-Infinity]]]-->
 <p>
     This section expands our abilities with limits: 
     We see what happens to a function as we let its input go toward \(\infty\)
@@ -135,9 +133,9 @@
     To find \(\lim_{x \to \infty} f(x),\) 
     we cannot replace \(x\) with \(\infty\) and obtain a conclusive result.
     Instead, let's divide the numerator and denominator by the 
-    highest-degree term of \(f(x)\)—namely, 
-    \(x^3,\) found in the denominator. 
-    We then get 
+    highest-degree term in the denominator—namely, 
+    \(x^3.\) 
+    Doing so shows 
     \[
     \ba 
     \lim_{x \to \infty} \frac{x^2 - 4x + 9}{x^3 - 2} 
@@ -185,7 +183,8 @@
 <div class="steps">
     To determine the limit of a rational expression, 
     take the limit of only the highest-degree terms in the numerator and denominator. 
-    Alternatively, dividing each term by the highest-degree term of the rational expression and taking the limit yield the same result.
+    Alternatively, dividing every term by the highest-degree term in the denominator
+    yields the same result.
 </div>
 
 <p>
@@ -606,6 +605,21 @@
     <i>arbitrarily close to the limit \(L\)</i> for \(x \gt N.\)
 </p>
 
+<div class="box-title">PRECISE DEFINITIONS OF FINITE LIMITS AT INFINITY</div>
+<div class="box">
+    Let \(\varepsilon\) be any positive number.
+    <ol class="list-alpha">
+        <li>
+            \(\lim_{x \to \infty} f(x) = L\) if and only if there exists a number \(N\) such that
+            \[\abs{f(x) - L} \lt \varepsilon \for x \gt N \pd\] 
+        </li>
+        <li>
+            \(\lim_{x \to -\infty} f(x) = L\) if and only if there exists a number \(N\) such that
+            \[\abs{f(x) - L} \lt \varepsilon \for x \lt N \pd\] 
+        </li>
+    </ol>
+</div>
+
 <figure class="inf-limit-inf" id="inf-limit-inf">
     <img src="../images/sectionImages/inf-limit-inf.jpg" alt="Figure 7">
 </figure>
@@ -634,22 +648,6 @@
     The number \(N\) is an <i>upper</i> bound for \(x\) such that 
     \(f(x) \gt M.\)
 </p>
-
-
-<div class="box-title">PRECISE DEFINITIONS OF FINITE LIMITS AT INFINITY</div>
-<div class="box">
-    Let \(\varepsilon\) be any positive number.
-    <ol class="list-alpha">
-        <li>
-            \(\lim_{x \to \infty} f(x) = L\) if and only if there exists a number \(N\) such that
-            \[\abs{f(x) - L} \lt \varepsilon \for x \gt N \pd\] 
-        </li>
-        <li>
-            \(\lim_{x \to -\infty} f(x) = L\) if and only if there exists a number \(N\) such that
-            \[\abs{f(x) - L} \lt \varepsilon \for x \lt N \pd\] 
-        </li>
-    </ol>
-</div>
 
 <div class="box-title">PRECISE DEFINITIONS OF INFINITE LIMITS AT INFINITY</div>
 <div class="box">
@@ -729,7 +727,7 @@
         Limits of rational functions as \(x \to \infty\) are very commonly in the indeterminate form \(\indInfty.\)
         To evaluate these limits, take the limit of <i>only</i> the highest-degree terms
         in the numerator and denominator; the lower-degree terms are negligible. 
-        Alternatively, you may divide each term by the highest-degree term in the rational expression
+        Alternatively, you may divide every term by the highest-degree term in the denominator
         and then take the limit; 
         doing so yields the same result.
         We can generalize limits of rational functions depending on the degrees of the numerator and denominator:
@@ -816,43 +814,35 @@
     </p>
 </div>
 
-    </main>
-    <!-- <footer>
+</main>
+<!-- </main>
+<footer>
     <div class="footer-body">
         <div class="footer-nav-column">
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="../about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="../contact.html">Contact</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Discord</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
         <div class="footer-nav-column">
-            <h3>Supplemental Resources</h3>
+            <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -860,16 +850,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -877,31 +867,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="../about.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">Privacy Policy</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
-    <div class="footer-disclaimer">  
-        <p class="ap-notice">
-            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
-        </p>
-    </div>
-</footer> -->
-    <script src="/Valculus/js/mathjax-config.js"></script>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
-  </body>
-</html>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

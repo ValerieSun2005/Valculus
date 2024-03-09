@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.1: Sequences</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>10.1: Sequences</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="10.1-Sequences-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="10.1-Sequences-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Sequences]]]-->
+<p>
+    In many everyday applications, we write numbers in a definite order;
+    for example, we can record the number of natural disasters that occurred every year after 2000.
+    Patterns of numbers are also central to many mathematical contexts;
+    using calculus, we can extend patterns to infinity and analyze their properties.
+    We discuss the following topics:  
+    <ul>
+        <li>
+            <a href="#defining-a-sequence" class="page-anchor">Defining a Sequence</a>
+        </li>
+        <li>
+            <a href="#limits-of-sequences" class="page-anchor">Limits of Sequences</a>
+        </li>
+        <li>
+            <a href="#describing-sequences" class="page-anchor">Describing Sequences</a>
+        </li>
+    </ul>
+</p>
+<h4 id="defining-a-sequence">Defining a Sequence</h4>
+<p>
+    A <span class="emph">sequence</span> is a list of numbers written in a definite order:  
+    \[\{a_1, a_2, a_3, \dots, a_N\} \pd\]
+    We call \(a_1\) the <i>first term</i>, \(a_2\) the <i>second term</i>, 
+    and \(a_N\) the <i><nobr>\(N\)th</nobr> term</i>. 
+    A condensed notation for the sequence is \(\{a_n\}\subsuper{1}{N}.\)
+    In calculus, we work with <span class="emph">infinite sequences</span>, which take the form 
+    \(\{a_n\}\subsuper{1}{\infty}.\)
+    But \(n\) doesn't have to begin at \(1;\)
+    this is only a generalized case.
+    Given that each \(n\) maps onto another number \(a_n,\) 
+    we can think of a sequence as a function whose domain is nonnegative integers.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Write several terms of the sequence 
+        \(\{2 + 3n\} \subsuper{0}{\infty}.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    Let \(a_n = 2 + 3n.\)
+    For a few choices of \(n\) starting at \(0,\) we have
+    \[
+    \baat{2}
+    a_0 &= 2 + 3(0) = 2 &\lspace a_1 &= 2 + 3(1) = 5 \nl 
+    a_2 &= 8 &\lspace a_3 &= 11 \pd
+    \eaat
+    \]
+    The sequence is therefore 
+    \[\boxed{\{2, 5, 8, 11, \dots\}}\]
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find a formula for the general term \(a_n\) of 
+        the sequence 
+        \[\parbrace{\frac{2}{3}, -\frac{4}{7}, \frac{6}{11}, -\frac{8}{13}, \dots} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    In each subsequent term the numerator is increased by \(2,\)
+    the denominator is increased by \(4,\)
+    and the sign alternates.
+    Starting at \(n = 0,\) we have 
+    \[a_n = \boxed{(-1)^n \frac{2 + 2n}{3 + 4n}}\]
+    Alternatively, we could define \(a_n\) to begin at \(n = 1\)
+    by writing 
+    \[a_n = (-1)^{n + 1} \frac{2n}{4n - 1} \pd\]
+    Both forms are correct.
+</div>
+
+<h4 id="limits-of-sequences">Limits of Sequences</h4>
+
+<p>
+    In calculus we study functions of a real variable,
+    whereas sequences are defined by the discrete integer \(n.\)
+    But it turns out that sequences have a deep connection to functions 
+    of a real variable.
+    As we increase \(n,\) the terms of the sequence \(\{a_n\}\)
+    could approach some number \(L,\)
+    but they could also fail to settle to any final value. 
+    We communicate this idea by taking the limit of \(a_n\) as \(n \to \infty.\)
+    But how do we find the limit of an expression that's defined by nonnegative integers? 
+    Let \(f\) be a function of a real variable such that \(f(n) = a_n\) for every nonnegative integer \(n.\)
+    If \(\lim_{x \to \infty} f(x) = L,\) then it turns out that
+    \[\lim_{n \to \infty} a_n = L \pd\]
+    Simply put, we find the limit of a sequence 
+    similarly to how we find the limit of a function.
+    A sequence \(\{a_n\}\) <span class="emph">converges</span>
+    to \(L\) if \(\lim_{n \to \infty} a_n = L.\)
+    Then we can make the terms of \(\{a_n\}\) as close to \(L\)
+    as we please by making \(n\) sufficiently large 
+    (<a href="#sequence-converge">Figure 1A</a>).
+    Conversely, if \(\lim_{n \to \infty} a_n\) does not exist,
+    then \(\{a_n\}\) <span class="emph">diverges</span>—meaning 
+    the terms of \(\{a_n\}\) do not approach any final value as \(n \to \infty\)
+    (<a href="#sequence-diverge">Figure 1B</a>). 
+</p>
+
+<div class="figure-center">
+    <figure class="sequence-converge" id="sequence-converge">
+        <img src="../images/sectionImages/sequence-converge.jpg" class="sequence-converge" alt="Figure 1A">
+    </figure>
+    <figure class="sequence-diverge" id="sequence-diverge">
+        <img src="../images/sectionImages/sequence-diverge.jpg" class="sequence-diverge" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .sequence-converge::before{
+        content:'FIGURE 1A';
+    }
+
+    .sequence-diverge::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<p>
+    For example, the sequence defined by \(a_n = 1/n\)
+    converges to \(0\) because 
+    \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{1}{n} = 0 \pd\]
+    For \(n \geq 1,\) the terms of \(\{a_n\}\) are 
+    \[\left\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \dots \right\} \cma\]
+    and we observe that each term gets closer \(0\) as \(n \to \infty.\)
+</p>
+<p>
+    Formally, a sequence \(\{a_n\}\) converges to \(L\) 
+    if and only if, for every \(\varepsilon \gt 0,\) a nonnegative integer \(N\) exists such that 
+    \[\abs{a_n - L} \lt \varepsilon \for n \gt N \pd\]
+    This statement asserts that for \(n \gt N,\) 
+    \(a_n\) must not differ from \(L\) 
+    by more than \(\varepsilon.\) 
+    The value of \(\varepsilon\) can be made smaller as \(N\) is increased.
+    <a href="#sequences-epsilon">Figure 2</a> depicts a graphical relationship:
+    the distance between \(L\) and \(a_n\) is \(\abs{a_n - L},\)
+    which is bounded by \(\varepsilon\) and shrinks as \(n \to \infty.\)
+</p>
+
+
+<figure class="sequences-epsilon" id="sequences-epsilon">
+    <img src="../images/sectionImages/sequences-epsilon.jpg" 
+    class="sequences-epsilon" alt="Figure 2">
+</figure>
+<style>
+    .sequences-epsilon::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<div class="box-title">LIMITS WITH SEQUENCES</div>
+<div class="box">
+    Let \(L\) be a real number, 
+    and let \(f\) be a function such that
+    \[\lim_{x \to \infty} f(x) = L \pd\]
+    Then the sequence \(\{a_n\},\) where \(f(n) = a_n\) for all nonnegative integers \(n,\) satisfies
+    \[\lim_{n \to \infty} a_n = L \pd\]
+    If this limit exists, then 
+    \(\{a_n\}\) is <span class="emph">convergent</span>; 
+    otherwise, \(\{a_n\}\) is <span class="emph">divergent</span>.
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Does the sequence \(\{n/e^n\}\) converge or diverge?
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The sequence \(\{n/e^n\}\) converges
+    if and only if \(\lim_{n \to \infty} (n/e^n)\) exists.
+    This limit is equivalent to 
+    the limit of the real-valued function \(x/e^x\) as \(x \to \infty,\) namely, 
+    \[\lim_{x \to \infty} \frac{x}{e^x} \pd\]
+    Both the numerator and denominator approach \(\infty,\)
+    so this limit is in the indeterminate form \(\indInfty.\)
+    By L'Hôpital's Rule
+    (see Section <a href="/ValCalc/ValCalc/calculus/3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.5</a>),
+    we differentiate the numerator and denominator and retake the limit;
+    doing so asserts that
+    \[\lim_{x \to \infty} \frac{x}{e^x} = \lim_{x \to \infty} \frac{1}{e^x} = 0 \pd\]
+    It therefore follows that
+    \[\lim_{n \to \infty} \frac{n}{e^n} = 0 \pd\]
+    Thus, the sequence \(\{n/e^n\}\) <b>converges</b>,
+    and its limit is \(0.\)
+</div>
+
+<div class="example-title" id="ex-sequence-alt"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Is the sequence \(a_n = (-1)^n\) convergent or divergent?
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Let's write out some terms of the sequence, as follows:
+    \[\{-1, 1, -1, 1, -1, 1, -1, 1, \dots\} \pd\]
+    The terms continually oscillate from \(-1\) to \(1,\) 
+    never settling to a final value. 
+    In fact, \(\lim_{n \to \infty} (-1)^n\) does not exist. 
+    Hence, the sequence <b>diverges</b>.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Does the sequence \(\ds \parbrace{\frac{n^3 + 4n + 2}{\sqrt{n^4 + n}}}\) converge or diverge?
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <aside class="box-recall">
+        A limit that equals \(\infty\) or \(-\infty\)
+        does not exist.
+    </aside>
+    Our goal is to find the limit 
+    \[\lim_{n \to \infty} \frac{n^3 + 4n + 2}{\sqrt{n^4 + n}} \pd\]
+    As we discussed in Section <a href="/ValCalc/ValCalc/calculus/1.6-Limits-with-Infinity.html">1.6</a>,
+    we can evaluate this limit by considering only the highest-degree terms 
+    in the numerator and denominator:
+    \[
+    \ba
+    \lim_{n \to \infty} \frac{n^3 + 4n + 2}{\sqrt{n^4 + n}} 
+    &= \lim_{n \to \infty} \frac{n^3}{\sqrt{n^4}} \nl 
+    &= \lim_{n \to \infty} \frac{n^3}{\abs{n^2}} \nl 
+    &= \lim_{n \to \infty} n = \infty \pd
+    \ea
+    \]
+    (This method is a shortcut to dividing every term by the 
+    highest-degree term in the denominator, \(\sqrt{n^4}\) <nobr>\(= \abs{n^2}.\))</nobr>
+    Because this limit does not exist, 
+    the sequence <b>diverges</b>.
+</div>
+
+<p>
+    <span class="label-emph">Fibonacci Sequence</span>
+    In the 13th century, the Italian mathematician Fibonacci
+    developed a sequence to model an ideal breeding pattern in rabbits:
+    Suppose that two rabbits are left in a field; 
+    each rabbit pair mates 
+    at the end of the first month 
+    and gives birth to another rabbit pair at the end of the second month.
+    Assume that all the rabbits are reproductive and never die.
+    At the end of the first month, the first pair mates
+    but remains in gestation,
+    so the number of rabbit pairs remains at \(1.\)
+    But at the end of the second month, the first pair finally gives birth to 
+    another pair of rabbits—giving us \(2\) rabbit pairs.
+    Likewise, at the end of the third month, the original pair produces another 
+    pair, but the second pair remains in its gestation period;
+    we therefore have \(3\) rabbit pairs. 
+    And at the end of the fourth month, the first and second rabbit pair have each 
+    given birth to a new rabbit pair, but the third rabbit pair has not yet finished gestation—leaving 
+    us with \(5\) rabbit pairs. 
+    So the number of rabbit pairs after \(n\) months is, starting from \(n = 0,\) 
+    modeled by the sequence
+    \[\{1, 1, 2, 3, 5, 8, 13, 21, \dots\} \pd\]
+    Remarkably, each term is the sum of the previous two terms.
+    This surprising pattern is called the <span class="emph">Fibonacci Sequence</span>,
+    which we can write recursively as
+    \begin{equation}
+    f_1 = 1 \cmaa f_2 = 1 \cmaa f_n = f_{n - 1} + f_{n - 2} \cmaa n \geq 3 \pd \label{eq:fib-sequence}
+    \end{equation}
+    The Fibonacci sequence is divergent because \(f_n \to \infty\) as \(n \to \infty.\)
+    This result is expected;
+    the number of rabbit pairs should increase indefinitely
+    as increasingly many rabbits reproduce.
+</p>
+
+<div class="box-title">FIBONACCI SEQUENCE</div>
+<div class="box">
+    The <span class="emph">Fibonacci Sequence</span> is 
+    a sequence in which each term is the sum of the two preceding terms,
+    as defined recursively by 
+    \begin{equation}
+    f_1 = 1 \cmaa f_2 = 1 \cmaa f_n = f_{n - 1} + f_{n - 2} \cmaa n \geq 3 \pd \eqlabel{eq:fib-sequence}
+    \end{equation}
+    When expanded, the sequence is
+    \[\{1, 1, 2, 3, 5, 8, 13, 21, \dots\} \pd\]
+</div>
+
+<p>
+    The Limit Laws can be applied to the limits of sequences as \(n \to \infty.\)
+    We can also use the <span class="emph">Squeeze Theorem for Sequences</span> 
+    to prove the convergence of a sequence 
+    that is bounded by two other convergent sequences, each of which has the same limit.
+</p>
+
+<div class="box-title">COMBINATIONS OF SEQUENCES</div>
+<div class="box">
+    If \(\{a_n\}\) and \(\{b_n\}\) are convergent sequences 
+    and \(c\) is a constant, then 
+    the following properties are true:
+    \[
+    \ba 
+    \lim_{n \to \infty} \par{a_n + b_n} &= \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n \cma \nl 
+    \lim_{n \to \infty} \par{a_n - b_n} &= \lim_{n \to \infty} a_n - \lim_{n \to \infty} b_n \cma \nl
+    \lim_{n \to \infty} \par{a_n b_n} &= \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n \cma \nl 
+    \lim_{n \to \infty} \frac{a_n}{b_n} 
+    &= \frac{\ds \lim_{n \to \infty} a_n}{\ds \lim_{n \to \infty} b_n} \cmaa \lim_{n \to \infty} b_n \ne 0 \cma \nl 
+    \lim_{n \to \infty} \par{c a_n} &= c \lim_{n \to \infty} a_n \pd
+    \ea 
+    \]
+</div>
+
+<div class="box-title">SQUEEZE THEOREM FOR SEQUENCES</div>
+<div class="box">
+    If \(b_n \leq a_n \leq c_n\) for \(n \geq N\) (where \(N\) is any nonnegative integer)
+    and 
+    \[\lim_{n \to \infty} b_n = \lim_{n \to \infty} c_n = L \cma\]
+    then \(\lim_{n \to \infty} a_n = L.\)
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Test the following sequence for convergence or divergence:
+        \[a_n = \frac{1}{\sqrt n} \sin \pi n\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    To test a sequence for convergence or divergence, 
+    we find \(\lim_{n \to \infty} a_n.\)
+    The range of sine is \([-1, 1];\) 
+    we therefore have \(-1 \leq \sin \pi n \leq 1\) and so
+    \[-\frac{1}{\sqrt n} \leq \frac{1}{\sqrt n} \sin \pi n \leq \frac{1}{\sqrt n} \pd\]
+    Observe that 
+    \[\lim_{n \to \infty} \par{-\frac{1}{\sqrt n}} = \lim_{n \to \infty} \par{\frac{1}{\sqrt n}} = 0 \pd\]
+    By the Squeeze Theorem for Sequences, 
+    \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{1}{\sqrt n} \sin \pi n = 0 \pd\]
+    Hence, the sequence \(\{a_n\}\) <b>converges</b>; 
+    specifically, it converges to \(0.\)
+</div>
+
+<h4 id="describing-sequences">Describing Sequences</h4>
+<p>
+    Let's define a set of descriptions to communicate the characteristics of sequences. 
+    In general, we can describe a sequence using three properties—boundedness, 
+    increasing or decreasing, and monotonicity.
+</p>
+
+<aside class="box-tip">
+    Every increasing or decreasing sequence is monotonic.
+    But not every monotonic sequence is increasing or decreasing.
+</aside>
+
+<div class="box-title">INCREASING OR DECREASING SEQUENCES</div>
+<div class="box">
+    Let \(N\) be any nonnegative integer.
+    A sequence \(\{a_n\}\) is 
+    <span class="emph">increasing</span> 
+    if \(a_n \lt a_{n + 1}\) for all \(n \geq N.\)
+    It is <span class="emph">decreasing</span>
+    if \(a_n \gt a_{n + 1}\) for all \(n \geq N.\)
+    The sequence is <span class="emph">monotonic</span>
+    if its terms are nondecreasing or nonincreasing—that is, 
+    if \(a_n \leq a_{n + 1}\) or \(a_n \geq a_{n + 1}\) for all \(n \geq N.\)
+</div>
+
+<p>
+    For example, the sequence 
+    \[\{2n + 1\} \subsuper{0}{\infty} = \{1, 3, 5, 7, 9, \dots\}\] 
+    is increasing, and therefore monotonic, for \(n \geq 0.\)
+    Conversely, the sequence 
+    \(\{0, 0, 0, 0, 0, \dots\}\)
+    is monotonic but is neither increasing nor decreasing. 
+    Lastly, the sequence 
+    \[\parbrace{(-1)^n + 5} \subsuper{1}{\infty} = \{4, 6, 4, 6, 4, \dots\}\]
+    isn't monotonic because its terms alternate between \(4\) and \(6,\)
+    and the sequence is neither increasing nor decreasing. 
+    The former two sequences are examples of <i>bounded sequences</i>, 
+    which we define as follows.
+</p>
+
+<div class="box-title">BOUNDED SEQUENCES</div>
+<div class="box">
+    For all \(n \geq N\) (where \(N\) is any nonnegative integer), the sequence \(\{a_n\}\) is
+    <ol class="list-alpha">
+        <li>
+            <span class="emph">bounded above</span>
+            if a number \(M\) exists such that \(a_n \leq M.\)
+        </li>
+        <li>
+            <span class="emph">bounded below</span>
+            if a number \(m\) exists such that \(m \leq a_n.\)
+        </li>
+        <li>
+            <span class="emph">bounded</span>
+            if numbers \(m\) and \(M\) exist such that
+            \(m \leq a_n \leq M.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-sequence-0-1"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Describe the sequence \(\ds \parbrace{\frac{n}{n + 1}}\) for \(n \geq 1.\)
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <figure class="sequence-bounded-monotonic-ex" id="sequence-bounded-monotonic-ex">
+        <img src="../images/sectionImages/sequence-bounded-monotonic-ex.jpg" 
+        class="sequence-bounded-monotonic-ex" alt="Figure 3">
+    </figure>
+    <style>
+        .sequence-bounded-monotonic-ex::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    Writing out some terms of the sequence shows 
+    \[\parbrace{\frac{n}{n + 1}} \subsuper{1}{\infty} 
+    = \parbrace{\frac{1}{2} \cma \frac{2}{3} \cma \frac{3}{4} \cma \frac{4}{5} \cma \frac{5}{6} \cma \frac{6}{7} \cma} \pd\]
+    The sequence is <b>increasing</b>, and therefore <b>monotonic</b>, because each subsequent term is greater than the previous term. 
+    Since \(0 \lt n/(n + 1) \lt 1,\)
+    the sequence is <b>bounded</b>—specifically, bounded between \(0\) and \(1.\)
+    <a href="#sequence-bounded-monotonic-ex">Figure 3</a> shows the graph of this sequence;
+    observe that each term incrementally creeps closer to \(1.\)
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that the sequence \(\ds \parbrace{\frac{3n}{1 + 4n}}\)
+        is increasing.
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <p>
+        We can solve this problem using two methods—one by 
+        manipulating inequalities and the other by comparing the sequence to a function.
+    </p>
+    <p>
+        <span class="label-emph">Method 1</span>
+        The sequence is increasing if and only if, for all nonnegative \(n,\)
+        \[
+        \ba 
+        \frac{3(n + 1)}{1 + 4(n + 1)} \gt \frac{3n}{1 + 4n} \pd
+        \ea 
+        \]
+        Manipulating the inequality, we see 
+        \[
+        \ba 
+        \frac{3n + 3}{4n + 5} &\gt \frac{3n}{1 + 4n} \nl
+        (3n + 3)(1 + 4n) &\gt 3n (4n + 5) \nl 
+        12n^2 + 15n + 3 &\gt 12n^2 + 15n \nl 
+        3 &\gt 0 \pd
+        \ea     
+        \]
+        So this inequality is satisfied for all \(n.\)
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>
+        Let's compare the sequence to the function \(f(x) = 3x/(1 + 4x).\)
+        The sequence and the function \(f\) increase together; 
+        we therefore show \(f'(x) \gt 0.\)
+        Differentiating gives 
+        \[f'(x) = \frac{3(1 + 4x) - 3x (4)}{(1 + 4x)^2} = \frac{3}{(1 + 4x)^2} \cma\]
+        which is positive for all \(x.\)
+        Hence, the sequence is also increasing for all nonnegative \(n.\)
+    </p>
+</div>
+
+<p>
+    As shown by <a href="/ValCalc/ValCalc/calculus/10.1-Sequences.html#ex-sequence-0-1">Example 7</a>,
+    the terms of \(n/(n + 1)\) 
+    continually grow toward \(1,\) a number that bounds the sequence,
+    so \(\{n/(n + 1)\}\) converges.
+    Yet in <a href="/ValCalc/ValCalc/calculus/10.1-Sequences.html#ex-sequence-alt">Example 4</a>
+    the divergent sequence \(\{(-1)^n\}\) is bounded (between \(-1\) and <nobr>\(1\))</nobr>
+    but is not monotonic.
+    Thus, not all bounded sequences are convergent.
+    But it seems that <i>any sequence that is bounded and monotonic is convergent</i>;
+    intuitively, a convergent sequence's terms should edge toward a bounding value.
+    This conclusion happens to be true,
+    as stated by the <span class="emph">Monotonic Sequence Theorem</span>.
+</p>
+
+<div class="box-title">MONOTONIC SEQUENCE THEOREM</div>
+<div class="box">
+    Any sequence that is bounded and monotonic is convergent.
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let's first prove the Monotonic Sequence Theorem 
+    for a nondecreasing sequence \(\{a_n\}.\)
+    Since the sequence is bounded, an upper bound \(M\) exists such that
+    \[a_1 \leq a_2 \leq a_3 \leq \dots \leq a_n \leq M \pd\]
+    By the Completeness Axiom, any nonempty set of real numbers 
+    that is bounded above has a <i>least upper bound</i> \(L.\)
+    So we see 
+    \[a_1 \leq a_2 \leq a_3 \leq \dots \leq a_n \leq L \pd\]
+    For \(\varepsilon \gt 0,\) we have \(L - \varepsilon \lt L.\)
+    But since \(L\) is the least upper bound to \(\{a_n\},\)
+    the expression \(L - \varepsilon\) is <i>not</i> an upper bound to the sequence. 
+    Mathematically, \(a_N \gt L - \varepsilon\) for any nonnegative integer \(N.\) 
+    Because the terms are nondecreasing, we have \(a_N \leq a_n\) for \(n \gt N.\)
+    We therefore conclude, for all \(n \gt N,\)
+    \[
+    L - \varepsilon \lt a_N \leq a_n \leq L \lt L + \varepsilon \pd 
+    \]
+    So we see
+    \[L - \varepsilon \lt a_n \lt L + \varepsilon
+    \iffArrow \abs{a_n - L} \lt \varepsilon \pd
+    \]
+    By the definition of a convergent sequence, \(\{a_n\}\) converges.
+    The proof for a nonincreasing sequence is similar.
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that the sequence \(a_n\) defined recursively by
+        \[a_1 = 2 \cmaa a_{n + 1} = \tfrac{1}{2} a_n + 4 \cma\]
+        is convergent and find its limit.
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    <p>
+        It is a good idea to write out a few terms to observe the sequence's behavior, as follows:
+        \[
+        \baat{2}
+        a_2 &= \tfrac{1}{2} a_1 + 4 = 5 &\lspace a_3 &= \tfrac{1}{2} a_2 + 4 = 6.5 \nl 
+        a_4 &= 7.25 &\lspace a_5 &= 7.625 \nl 
+        a_6 &= 7.8125 &\lspace a_7 &= 7.90625 \nl 
+        a_8 &= 7.953125 &\lspace a_9 &= 7.9765625 \pd
+        \eaat
+        \]
+        It appears that the sequence is increasing and bounded above by \(8.\)
+        Now let's verify this guess.
+    </p>
+    <p>
+        <span class="label-emph">Monotonicity and Boundedness</span>
+        Let's prove mathematically that the sequence is increasing.
+        We use a Proof by Induction to prove that \(a_{n + 1} \gt a_n\)
+        for all \(n \geq 1.\)
+        First observe that \(a_2 \gt a_1,\)
+        so the inequality is true for \(n = 1.\)
+        Assuming that \(a_{n + 1} \gt a_n\) is true for \(n = k,\) where \(k \gt 1,\) we have
+        \[
+        \ba
+        a_{k + 1} &\gt a_k \nl 
+        \tfrac{1}{2} a_{k + 1} &\gt \tfrac{1}{2} a_k \nl 
+        \tfrac{1}{2} a_{k + 1} + 4 &\gt \tfrac{1}{2} a_k + 4 \nl
+        a_{k + 2} &\gt a_{k + 1} \pd
+        \ea
+        \]
+        Hence, \(a_{n + 1} \gt a_n\) is true for \(n = k + 1.\)
+        Thus, by mathematical induction, the sequence \(a_n\) is increasing for all \(n \geq 1.\)
+        Let's now show that the sequence is bounded:
+        Since the sequence is increasing for \(n \geq 1,\) it has a lower bound of \(m = a_1 = 2.\)
+        We know \(a_1 \lt 8,\) so let's prove that \(a_n \lt 8\) for all \(n.\)
+        Assuming that \(a_n \lt 8\) is true for \(n = k\) (where <nobr> \(k \gt 1\)),</nobr> we see 
+        \[
+        \ba
+        a_k &\lt 8 \nl 
+        \tfrac{1}{2} a_k &\lt \tfrac{1}{2} (8) = 4 \nl 
+        \tfrac{1}{2} a_k + 4 &\lt 4 + 4 = 8 \nl
+        a_{k + 1} &\lt 8 \pd 
+        \ea
+        \]
+        By mathematical induction, \(a_n \lt 8\) for all \(n \geq 1.\)
+        So \(2 \leq a_n \lt 8\) for all \(n \geq 1,\)
+        meaning the sequence is bounded. 
+        Since the sequence is increasing, it is monotonic. 
+        Because \(\{a_n\}\) is bounded and monotonic, it <b>converges</b> by the Monotonic Sequence Theorem.
+    </p>
+    <p>
+        <span class="label-emph">Limit of the Sequence</span>
+        Given that the sequence converges, both \(a_{n + 1}\) and \(a_n\) 
+        approach the same value \(L\) as \(n \to \infty.\)
+        Our analysis has proved that \(\lim_{n \to \infty} a_n\) exists,
+        but we don't know what it equals. 
+        Using the recursive relationship, we see 
+        \[
+        \ba
+        \lim_{n \to \infty} a_{n + 1} &= \lim_{n \to \infty} \par{\tfrac{1}{2} a_n + 4} \nl 
+        L &= \tfrac{1}{2} L + 4 \nl 
+        L &= 8 \pd
+        \ea
+        \]
+        So the limit of the sequence is \(\boxed{8},\) as we expect.
+    </p>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-a-sequence" class="summary-anchor">Defining a Sequence</a>
+        A <span class="emph">sequence</span> is a set of numbers written in a definite order:
+        \[\{a_1, a_2, a_3, \dots, a_N\} \pd\]
+        We call \(a_1\) the <i>first term</i>, \(a_2\) the <i>second term</i>, 
+        and \(a_N\) the <i><nobr>\(N\)th</nobr> term</i>. 
+        A condensed notation for the sequence is \(\{a_n\}\subsuper{1}{N}.\)
+        Sequences have many applications in ordering values in a particular order. 
+        In calculus, we work with <span class="emph">infinite sequences</span>, which take the form 
+        \(\{a_n\}\subsuper{1}{\infty}.\)
+        The generalized case has a starting index of \(n = 1,\)
+        but we can adjust this index to be any nonnegative integer.
+        Each \(n\) corresponds to another number \(a_n,\) 
+        so a sequence is a function whose domain is nonnegative integers.
+    </p>
+    <p>
+        <a href="#limits-of-sequences" class="summary-anchor">Limits of Sequences</a>
+        As \(n \to \infty,\) the terms of \(a_n\) may tend to some fixed value \(L\)—that is, 
+        \(\lim_{n \to \infty} a_n = L.\)
+        If so, then the sequence \(\{a_n\}\) is said to <span class="emph">converge</span> and have 
+        a limit of \(L.\) 
+        Otherwise, the sequence \(\{a_n\}\) is said to <span class="emph">diverge</span>.
+        A famous example of a divergent sequence is the <span class="emph">Fibonacci Sequence</span>, 
+        in which each term is the sum of the two preceding terms,
+        as defined recursively by 
+        \begin{equation}
+        f_1 = 1 \cmaa f_2 = 1 \cmaa f_n = f_{n - 1} + f_{n - 2} \cmaa n \geq 3 \pd \eqlabel{eq:fib-sequence}
+        \end{equation}
+        When expanded, the sequence is
+        \[\{1, 1, 2, 3, 5, 8, 13, 21, \dots\} \pd\]
+        Formally, a sequence \(\{a_n\}\) converges to \(L\) 
+        if and only if, for every \(\varepsilon \gt 0,\) a nonnegative integer \(N\) exists such that 
+        \[\abs{a_n - L} \lt \varepsilon \for n \gt N \pd\]
+        We compute the limit of a sequence similarly to how we compute the limit of a function 
+        of a real variable:
+        If \(f(x)\) is a function (of a real variable <nobr>\(x\))</nobr> 
+        such that \(f(n) = a_n\) for all nonnegative integers \(n,\)
+        then 
+        \[\lim_{n \to \infty} a_n = \lim_{x \to \infty} f(x) \pd\]
+        We take the limits of combinations of sequences by using Limit Laws.
+        If \(\{a_n\}\) and \(\{b_n\}\) are convergent sequences 
+        and \(c\) is a constant, then 
+        the following properties are true:
+        \[
+        \ba 
+        \lim_{n \to \infty} \par{a_n + b_n} &= \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n \cma \nl 
+        \lim_{n \to \infty} \par{a_n - b_n} &= \lim_{n \to \infty} a_n - \lim_{n \to \infty} b_n \cma \nl
+        \lim_{n \to \infty} \par{a_n b_n} &= \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n \cma \nl 
+        \lim_{n \to \infty} \frac{a_n}{b_n} 
+        &= \frac{\ds \lim_{n \to \infty} a_n}{\ds \lim_{n \to \infty} b_n} \cmaa \lim_{n \to \infty} b_n \ne 0 \cma \nl 
+        \lim_{n \to \infty} \par{c a_n} &= c \lim_{n \to \infty} a_n \pd
+        \ea 
+        \]
+        The Squeeze Theorem can be applied to sequences as follows:
+        if \(b_n \leq a_n \leq c_n\) for \(n \geq N\) (where \(N\) is any nonnegative integer)
+        and 
+        \[\lim_{n \to \infty} b_n = \lim_{n \to \infty} c_n = L \cma\]
+        then \(\lim_{n \to \infty} a_n = L.\)
+    </p>    
+    <p>
+        <a href="#describing-sequences" class="summary-anchor">Describing Sequences</a>
+        A sequence \(\{a_n\}\) can be described using three properties—boundedness, monotonicity, and 
+        increasing or decreasing.
+        Let \(N\) be a nonnegative integer. 
+        Then the sequence \(\{a_n\}\) is 
+        <span class="emph">increasing</span> 
+        if \(a_n \lt a_{n + 1}\) for all \(n \geq N.\)
+        It is <span class="emph">decreasing</span>
+        if \(a_n \gt a_{n + 1}\) for all \(n \geq N.\)
+        The sequence is <span class="emph">monotonic</span>
+        if its terms are nondecreasing or nonincreasing—that is, 
+        if \(a_n \leq a_{n + 1}\) or \(a_n \geq a_{n + 1}\) for \(n \geq N.\)
+        Hence, every increasing or decreasing sequence is monotonic.
+        For \(n \geq N,\) the sequence \(\{a_n\}\) is
+        <ol class="list-alpha">
+            <li>
+                <span class="emph">bounded above</span>
+                if a number \(M\) exists such that \(a_n \leq M.\)
+            </li>
+            <li>
+                <span class="emph">bounded below</span>
+                if a number \(m\) exists such that \(m \leq a_n.\)
+            </li>
+            <li>
+                <span class="emph">bounded</span>
+                if numbers \(m\) and \(M\) exist such that
+                \(m \leq a_n \leq M.\)
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        The <span class="emph">Monotonic Sequence Theorem</span>
+        asserts that a bounded, monotonic sequence is convergent.
+    </p>
+</div>
+
+<!-- <div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        For each of (i)–(iii), determine the value to which \(\{a_n\}\) converges,
+        or show that the sequence diverges.
+        <ol class="list-roman">
+            <li>
+                <span>
+                    \(\ds a_n = \sqrt[3]{n - 2}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds a_n = \frac{n + 2}{n + 4}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds a_n = \frac{3n^2 - 4n + 5}{2n^2 + n - 7}\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <ol class="list-roman">
+        <li>
+            The sequence \(\{a_n\}\) converges if \(\lim_{n \to \infty} a_n\) exists;
+            otherwise, the sequence diverges. 
+            We find 
+            \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} \sqrt[3]{n - 2} = \infty \pd\]
+            Thus, \(\lim_{n \to \infty} a_n\) does not exist. 
+            We conclude that the sequence <span class="emph">diverges</span>.
+        </li>
+        <hr>
+        <li>
+            We take the limit of \(a_n\) as 
+            \[\lim_{n \to \infty} a_n = \lim_{n \to \infty} \frac{n + 2}{n + 4} \pd\]
+            As \(n \to \infty,\) we may neglect the constant terms: 
+            \[\lim_{n \to \infty} \frac{n + 2}{n + 4} = \lim_{n \to \infty} \frac{n}{n} = 1 \pd \]
+            Thus, \(\{a_n\}\) converges to \(1.\)
+        </li>
+        <hr>
+        <li>
+            To find \(\lim_{n \to \infty} a_n,\) 
+            we consider solely the highest-degree terms of \((3n^2 - 4n + 5)/(2n^2 + n - 7) \col\)
+            \[\lim_{n \to \infty} \frac{3n^2 - 4n + 5}{2n^2 + n - 7} = 
+            \lim_{n \to \infty} \frac{3n^2}{2n^2} = \frac{3}{2} \pd\]
+            Therefore, \(\{a_n\}\) converges to \(3/2.\)
+        </li>
+    </ol>
+</div> -->
+
+
+
+
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

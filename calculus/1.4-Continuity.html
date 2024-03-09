@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.4: Continuity</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>1.4: Continuity</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="1.4-Continuity-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="1.4-Continuity-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Continuity]]]--> 
+<p>
+    In everyday language, the word <i>continuous</i> might describe a phenomenon that occurs 
+    without interruption. 
+    But in mathematics, we require a description to have a clear, standard definition. 
+    So in this section we provide a formal definition of continuity, explore their uses,
+    and learn to classify discontinuities.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#continuity-at-a-point" class="page-anchor">Continuity at a Point</a>
+        </li>
+        <li>
+            <a href="#continuity-over-an-interval" class="page-anchor">Continuity over an Interval</a>
+        </li>
+        <li>
+            <a href="#continuity-of-combinations-of-functions" class="page-anchor">Continuity of Combinations of Functions</a>
+        </li>
+        <li>
+            <a href="#ivt" class="page-anchor">Intermediate Value Theorem</a>
+        </li>
+    </ul>
+</p>
+<h4 id="continuity-at-a-point">Continuity at a Point</h4>
+<p>
+    Informally, we say a function \(f\) is <i>continuous</i> at \(a\) 
+    if we can trace the curve \(y = f(x)\) 
+    near \(x = a\) without lifting our pen. 
+    Simply put, \(f\) is continuous at \(a\) if the graph does not have a <q>break</q> at \(x = a.\)
+    But formally, we define \(f\) to be <span class="emph">continuous at \(a\)</span> if and only if
+    \begin{equation} 
+    \lim_{x \to a} f(x) = f(a) \pd \label{eq:cont-point}
+    \end{equation}
+    This definition requires us to check three conditions:
+    <ol class="list-num">
+        <li>
+            \(f(a)\) is defined.
+        </li>
+        <li>
+            \(\ds \lim_{x \to a} f(x)\) exists.
+        </li>
+        <li>
+            \(\ds \lim_{x \to a} f(x)\) equals \(f(a).\)
+        </li>
+    </ol>
+    As you determine continuity, it's easiest to check these three conditions in order.
+    If any condition isn't satisfied, then \(\eqref{eq:cont-point}\) is false
+    and so \(f\) is called <span class="emph">discontinuous at \(a.\)</span>
+    In this scenario, we'd say \(f\) has a <span class="emph">discontinuity</span> at \(a.\)
+</p>
+
+<div class="box-title"> DEFINITION OF CONTINUITY </div>
+<div class="box">
+    The function \(f(x)\) is continuous at \(x = a\) if and only if
+    \begin{equation} 
+    \lim_{x \to a} f(x) = f(a) \pd \eqlabel{eq:cont-point}
+    \end{equation}
+</div>
+
+<p>
+    Many phenomena are continuous:
+    A plant's height changes continuously with time 
+    because its height doesn't increase abruptly. 
+    Likewise, 
+    a car's position is a continuous function of time
+    since the car can't teleport. 
+    And the volume of a leaking container 
+    decreases continuously due to the laws of physics.
+</p>
+
+<figure class="determining-continuity-hole" id="determining-continuity-hole">
+    <img src="../images/sectionImages/determining-continuity-hole.jpg" alt="Figure 1">
+</figure>
+<style>
+    .determining-continuity-hole::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    It's easy to identify discontinuities on a graph, 
+    but how do we detect them from equations?
+    Let's classify the three types of discontinuities—<i>removable discontinuities</i>, 
+    <i>jump discontinuities</i>, and <i>infinite discontinuities</i>.
+</p>    
+<p>
+    <span class="label-emph">Removable Discontinuities</span>
+    A function \(f(x)\) has a 
+    <span class="emph">removable discontinuity</span> (also 
+    called a <span class="emph">hole</span>) at  
+    at \(x = a\) if \(\lim_{x \to a} f(x)\) exists but does not equal \(f(a).\)
+    Alternatively, \(f(a)\) may be undefined. 
+    In 
+    <a href="#determining-continuity-hole">Figure 1</a>,
+    the graph of \(y = f(x)\) has a removable discontinuity at \(x = a\) because 
+    \[\lim_{x \to a} f(x) = K \ne f(a) \pd\]
+    We call this discontinuity <i>removable</i> because we may fill in the hole at \((a, K)\)
+    to restore continuity. 
+    By doing so, we construct a new function \(g\) that matches \(f\) but is continuous at \(a\)—namely,
+    \[g(x) = 
+    \begin{cases}
+    f(x)  &x \ne a \nl 
+    K &x = a \pd
+    \end{cases}
+    \]
+</p>
+<figure class="determining-continuity-jump" id="determining-continuity-jump">
+    <img src="../images/sectionImages/determining-continuity-jump.jpg" alt="determining-continuity-jump">
+</figure>
+<style>
+    .determining-continuity-jump::before{
+        content:'FIGURE 2';
+    }
+</style>
+<p>
+    <span class="label-emph">Jump Discontinuities</span>
+    The function \(f(x)\) has a 
+    <span class="emph">jump discontinuity</span>
+    at \(x = a\) 
+    if the one-sided limits
+    \[\lim_{x \to a^-} f(x) \and \lim_{x \to a^+} f(x)\]
+    exist but don't equal each other.
+    (See <a href="#determining-continuity-jump">Figure 2</a>.)
+    The name is self-explanatory: 
+    at \(x = a,\) an abrupt <i>jump</i> interrupts the graph of \(f.\)
+</p>
+<p>
+    <span class="label-emph">Infinite Discontinuities</span>
+    Lastly, the function \(f(x)\) has an 
+    <span class="emph">infinite discontinuity</span>
+    at \(x = a\) 
+    if either 
+    \[\lim_{x \to a^-} f(x) \or \lim_{x \to a^+} f(x)\] 
+    is infinite. 
+    At \(x = a,\) 
+    the graph of \(y = f(x)\) 
+    has a <i>vertical asymptote</i>;
+    \(f\) is therefore unbounded near the line \(x = a.\) 
+    (See <a href="#determining-continuity-infinite">Figure 3</a>.)
+</p>
+
+<figure class="determining-continuity-infinite" id="determining-continuity-infinite">
+    <img src="../images/sectionImages/determining-continuity-infinite.jpg" alt="determining-continuity-infinite">
+</figure>
+<style>
+    .determining-continuity-infinite::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<div class="box-title"> TYPES OF DISCONTINUITIES </div>
+<div class="box">
+    <ol class="list-num">
+        <li>
+            \(f(x)\) has a 
+            <span class="emph">removable discontinuity</span> 
+            at \(x = a\) if \(\lim_{x \to a} f(x)\) exists but does not equal \(f(a).\)
+        </li>
+        <li>
+            \(f(x)\) has a 
+            <span class="emph">jump discontinuity</span>
+            at \(x = a\) if the one-sided limits
+            \[\lim_{x \to a^-} f(x) \and \lim_{x \to a^+} f(x)\]
+            exist and do not equal each other.
+        </li>
+        <li>
+            \(f(x)\) has an 
+            <span class="emph">infinite discontinuity</span>
+            at \(x = a\) if either 
+            \[\lim_{x \to a^-} f(x) \or \lim_{x \to a^+} f(x)\]
+            is infinite.
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="label-emph">One-Sided Continuity</span>
+    How do we discuss continuity at endpoints?
+    To do so, we establish the following definitions:
+    \(f\) is <span class="emph">continuous from the left</span> at \(a\)
+    if and only if
+    \[\lim_{x \to a^-} f(x) = f(a) \pd\]
+    Likewise, \(f\) is <span class="emph">continuous from the right</span> at \(a\)
+    if and only if
+    \[\lim_{x \to a^+} f(x) = f(a) \pd\]
+    As we communicate mathematical ideas, 
+    we must be able to describe a graph's behavior in great detail; 
+    these definitions facilitate this goal. 
+</p>
+
+<div class="box-title">ONE-SIDED CONTINUITY</div>
+<div class="box">
+    The function \(f\) is <span class="emph">continuous from the left</span> at \(a\)
+    if and only if
+    \[\lim_{x \to a^-} f(x) = f(a)\]
+    and is <span class="emph">continuous from the right</span> at \(a\)
+    if and only if
+    \[\lim_{x \to a^+} f(x) = f(a) \pd\]
+</div>
+
+<figure class="floor-graph" id="floor-graph">
+    <img src="../images/sectionImages/floor-graph.jpg" alt="Figure 4">
+</figure>
+<style>
+    .floor-graph::before{
+        content:'FIGURE 4';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Greatest Integer Function</span>
+    The <span class="emph">greatest-integer function</span> \(y = \floor x\) returns 
+    the greatest integer equal to or less than \(x.\)
+    <a href="#floor-graph">Figure 4</a> shows the graph of this function, 
+    which has jump discontinuities at all integers \(n.\)
+    (For example, the greatest integer function has a jump discontinuity 
+    at the integer \(1\) since \(\lim_{x \to 1^-} \floor x = 0\)
+    but \(\lim_{x \to 1^+} \floor x\) <nobr>\(= 1.\))</nobr>
+    Yet at each integer \(x = n,\) we see \(\floor x\) 
+    is continuous from the right because 
+    \[\lim_{x \to n^+} \floor x = n = \floor n \pd\]
+    Conversely, \(\floor x\) is <i>discontinuous</i> 
+    from the left at each integer \(x = n\) since 
+    \[\lim_{x \to n^-} \floor x = n - 1 \ne \floor n \pd\]
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">
+        In <a href="#continuity-types-ex">Figure 5</a>, 
+        locate and classify all the discontinuities in the graph of \(f\)
+        on \((-6, 6).\)
+        Describe the continuity of \(f\) at the endpoints, \(x = -6\) and \(x = 6.\)
+        <figure class="continuity-types-ex figure-center-one" id="continuity-types-ex">
+            <img src="../images/sectionImages/continuity-types-ex.jpg" alt="Figure 5">
+        </figure>
+        <style>
+            .continuity-types-ex::before{
+                content:'FIGURE 5';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <p>
+        The function \(f\) has a <b>removable discontinuity</b> at \(x = -4,\)
+        a <b>jump discontinuity</b> at \(x = -2,\) and an <b>infinite discontinuity</b> at \(x = 2.\)
+        Also, \(f\) is <i>continuous from the right</i> at \(x = -6\)
+        because
+        \[\lim_{x \to -6^+} f(x) = f(-6) = -2 \pd \]
+        Yet \(f\) is discontinuous at \(x = 6\) since 
+        \(f(6)\) does not exist.
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        In each function \(f(x),\) classify the discontinuity at the given \(x.\)
+        <ol class="list-roman">
+            <li>
+                <span>\(\ds f(x) = \frac{x^2 - 16}{x + 4} \scoll x = -4\)</span>
+            </li>
+            <li>
+                <span>\(\ds f(x) = \frac{1}{x + 3} \scoll x = -3 \)</span>
+            </li>
+            <li>
+                <span>
+                    \(\ds f(x) = 
+                    \bc
+                    x - 2 &x \lt 2 \nl 
+                    3(3 - x)^2 &x \geq 2 \scoll 
+                    \ec
+                    x = 2
+                    \)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    In each problem, let's analyze the relationship between 
+    the one-sided limits of \(f\) at the location of the discontinuity.
+    <ol class="list-roman">
+        <li>
+            The numerator of \(f(x)\) is a difference of squares:
+            \[x^2 - 16 = (x + 4)(x - 4) \pd\]
+            We therefore see
+            \[
+            \ba
+            \lim_{x \to -4} f(x) &=
+            \lim_{x \to -4} \frac{\cancel{(x + 4)}(x - 4)}{\cancel{x + 4}} \nl
+            &= \lim_{x \to -4} (x - 4) = -8 \pd 
+            \ea
+            \]
+            Thus, 
+            \[\lim_{x \to -4^-} f(x) = \lim_{x \to -4^+} f(x) = -8 \pd\]
+            Since both one-sided limits at \(-4\) equal each other
+            [but \(f(-4)\) is undefined],
+            \(f(x)\) has a <b>removable discontinuity</b> at \(x = -4.\)
+        </li>        
+        <hr>
+        <li>
+            The graph of \(y = 1/(x + 3)\) has a vertical asymptote at \(x = -3\) because 
+            \[\lim_{x \to -3^-} f(x) = -\infty \and \lim_{x \to -3^+} f(x) = \infty \pd\]
+            Therefore, \(f\) has an <b>infinite discontinuity</b> at \(-3.\)
+        </li> 
+        <hr>
+        <li>
+            We see
+            \[
+            \baat{2}
+            \lim_{x \to 2^-} f(x) &= 2 - 2 &&= 0 \cma \nl 
+            \lim_{x \to 2^+} f(x) &= 3(3 - 2)^2 &&= 3 \pd
+            \eaat
+            \]
+            Since these one-handed limits exist but don't equal each other,
+            \(f\) has a <b>jump discontinuity</b> at \(2.\)
+        </li>
+    </ol>
+</div>
+
+<h4 id="continuity-over-an-interval">Continuity over an Interval</h4>
+<p>
+    <a href="#continuity-endpoints-open">Figure 6A</a>
+    shows the graph of \(y = f(x)\) over the <i>open</i> interval \(a \lt x \lt b.\)
+    We say \(f\) is continuous over the <i>open</i> interval \((a, b)\)
+    because 
+    \[\lim_{x \to c} f(x) = f(c)\]
+    is satisfied by all \(c\) in \((a, b).\)
+    Conversely, 
+    <a href="#continuity-endpoints">Figure 6B</a>
+    shows the graph of \(y = f(x)\) 
+    over the <i>closed</i> interval \(a \leq x \leq b.\)
+    We see \(f(x)\) is continuous from the right at \(x = a\) because 
+    \[\lim_{x \to a^+} f(x) = f(a) \pd\]
+    Likewise, \(f(x)\) is continuous from the left at \(x = b\) since 
+    \[\lim_{x \to b^-} f(x) = f(b) \pd\]
+    Hence, a function \(f\) is said to be <span class="emph">continuous over a closed interval</span> \([a, b]\) 
+    if and only if the following statements are true:
+    <ul>
+        <li>
+            \(f\) is continuous over the <i>open</i> interval \((a, b).\)
+        </li>
+        <li>
+            \(\ds \lim_{x \to a^+} f(x) = f(a)\) and \(\ds \lim_{x \to b^-} f(x) = f(b).\)
+        </li>
+    </ul>
+</p>
+
+<div class="figure-center">
+    <figure class="continuity-endpoints-open" id="continuity-endpoints-open">
+        <img src="../images/sectionImages/continuity-endpoints-open.jpg" class="continuity-endpoints-open" alt="Figure 6A">
+    </figure>
+    <figure class="continuity-endpoints" id="continuity-endpoints">
+        <img src="../images/sectionImages/continuity-endpoints.jpg" class="continuity-endpoints" alt="Figure 6B">
+    </figure>
+</div>
+
+<style>
+    .continuity-endpoints-open::before{
+        content:'FIGURE 6A';
+    }
+
+    .continuity-endpoints::before{
+        content:'FIGURE 6B';
+    }
+</style>
+
+<div class="box-title"> CONTINUITY OVER AN INTERVAL </div>
+<div class="box">
+    If a function \(f(x)\) is continuous at every point in \((a, b),\)
+    continuous from the right at \(x = a,\) and continuous from the left at \(x = b,\)
+    then \(f(x)\) is continuous over \([a, b].\)
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">
+        Let 
+        \[
+        f(x)=
+        \bc
+        kx + 4 &x \leq 3 \nl 
+        2x - 5 &x \gt 3 \pd 
+        \ec
+        \]
+        Find \(k\) such that \(f(x)\) is continuous at \(x = 3.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The limit \(\lim_{x \to 3} f(x)\) exists if and only if its one-sided limits are equivalent. 
+    Equating these one-sided limits and solving for \(k,\) we see
+    \[
+    \ba 
+    \lim_{x \to 3^-} f(x) &= \lim_{x \to 3^+} f(x) \nl 
+    3k + 4 &= 2(3) - 5 \nl 
+    \implies k &= -1 \pd
+    \ea 
+    \]
+    For \(k = -1\) we verify that
+    \[\lim_{x \to 3} f(x) = 1 = f(-3) \pd\]
+    Hence, \(f\) is continuous at \(3\) if \(\boxed{k = -1}.\)
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">
+        Let 
+        \[
+        g(t)=
+        \bc
+        t^2 - 4 &t \lt a \nl 
+        -2 - t &t \geq a \pd 
+        \ec \]
+        Find \(a\) such that \(g(t)\) is continuous at \(t = a.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    The function \(g(t)\) is continuous at \(t = a\) if and only if
+    \[\lim_{t \to a} g(t) = g(a) \pd\]
+    Observe that \(\lim_{t \to a^+} g(t) = g(a).\)
+    The left-hand limit is 
+    \[\lim_{t \to a^-} \par{t^2 - 4} = a^2 - 4 \cma\]
+    and the right-hand limit is 
+    \[\lim_{t \to a^+} \par{-2 - t} = -2 - a \pd\]
+    Equating these expressions, we see
+    \[
+    \ba 
+    a^2 - 4 &= -2 - a \nl 
+    a^2 + a - 2 &= 0 \nl 
+    (a - 1)(a + 2) &= 0 \cma 
+    \ea 
+    \]
+    whose solutions are \(\boxed{a = -2}\) and \(\boxed{a = 1}.\)
+</div>
+
+<p>
+    We say a function \(f\) is continuous 
+    if it is continuous at each point in its domain.
+    Many functions are continuous on their domains.
+    For example, polynomials are continuous for all real numbers,
+    and logarithms are continuous for strictly positive inputs.
+    The following table
+    provides the intervals of continuity for 
+    many functions we've seen: polynomial, rational, radical,
+    absolute value, exponential, logarithmic, trigonometric,
+    and inverse trigonometric. 
+</p>
+
+<div class="box-title">CONTINUITY OF FUNCTIONS </div>
+<div class="box">
+    Let \(n\) be an integer.
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>Interval of Continuity</th>
+            </tr>
+        </thead>
+        
+        <tr>
+            <td>
+                Polynomials: \(c_n x^n + c_{n - 1} x^{n - 1} + \cdots + c_1 x + c_0\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rational expressions: \(P(x)/Q(x),\)
+                where \(P\) and \(Q\) are polynomials 
+            </td>
+            <td>
+                All \(x\) such that \(Q(x) \ne 0\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\sin x\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\cos x\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\tan x\)
+            </td>
+            <td>
+                \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\csc x\)
+            </td>
+            <td>
+                \(\ds x \ne n \pi\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\sec x\)
+            </td>
+            <td>
+                \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\cot x\)
+            </td>
+            <td>
+                \(\ds x \ne n \pi\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(b^x \cma b \gt 0\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\log_b x \cma b \gt 0\) and \(b \ne 1\)
+            </td>
+            <td>
+                \(x \gt 0\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\sqrt[n]{x} \cma n\) odd
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\sqrt[n] x \cma n\) even 
+            </td>
+            <td>
+                \(x \geq 0\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\abs x\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\sin^{-1} x\)
+            </td>
+            <td>
+                \(-1 \leq x \leq 1\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\cos^{-1} x\)
+            </td>
+            <td>
+                \(-1 \leq x \leq 1\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \(\tan^{-1} x\)
+            </td>
+            <td>
+                \(-\infty \lt x \lt \infty\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    In Section <a href="/ValCalc/ValCalc/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>
+    we introduced the method of evaluating limits by <b>Direct Substitution</b>. 
+    The preceding table enables us to extend this method to nearly every function. 
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">
+        Find the interval over which the following function is continuous:
+        \[f(x) = \sqrt[4]{6x + 12} \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    We identify \(n = 4,\) an even number. 
+    The domain of \(\sqrt[4]{6x + 12},\) and therefore the interval on which it is continuous, is 
+    \[6x + 12 \geq 0 \implies \boxed{x \geq -2}\]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">
+        \[\lim_{x \to 3} \par{2^{4x - 9}}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    The domain of an exponential function is all real numbers,
+    so \(2^{4x - 9}\) is continuous for all \(x.\)
+    This limit can therefore be evaluated by Direct Substitution:
+    \[\lim_{x \to 3} \par{2^{4x - 9}} = 2^{4(3) - 9} = \boxed 8\]
+</div>
+
+<h4 id="continuity-of-combinations-of-functions">Continuity of Combinations of Functions</h4>
+<p>
+    Let's discuss the continuity of sums, differences, products, and quotients of functions.
+    If \(f\) and \(g\) are each continuous at \(a,\) 
+    then \((f + g),\) \((f - g),\) \((f \cdot g),\) 
+    and [assuming \(g(a)\) <nobr>\(\ne 0\)]</nobr> \((f/g)\) are all continuous at \(a.\)
+</p>
+
+<div class="box-title">CONTINUITY OF COMBINATIONS OF FUNCTIONS </div>
+<div class="box">
+    If \(f(x)\) and \(g(x)\) are both continuous at \(x = a,\) 
+    then the following combinations of \(f(x)\) and \(g(x)\) are also continuous at \(x = a.\)
+    <ol class="list-alpha">
+        <li>
+            \(f(x) + g(x)\)
+        </li>
+        <li>
+            \(f(x) - g(x)\)
+        </li>
+        <li>
+            \(f(x) \cdot g(x)\)
+        </li>
+        <li>
+            \(f(x)/g(x) \cmaa\) \(\; g(a) \ne 0.\)
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="label-emph">Continuity of Composite Functions</span>
+    A composite function is of the form \(f(g(x)).\)
+    If this function is continuous at \(a,\) then we have
+    \begin{equation}
+    \lim_{x \to a} f(g(x)) = f(g(a)) \pd \label{eq:comp-funct-continuous}
+    \end{equation}
+    In using \(\eqref{eq:comp-funct-continuous},\)
+    we require \(g\) to be continuous at \(a\) and \(f\) to be continuous at \(g(a).\)
+    Then the composite function is continuous at \(a.\)
+</p>
+
+<div class="box-title">CONTINUITY OF COMPOSITE FUNCTIONS </div>
+<div class="box">
+    If \(g(x)\) is continuous at \(x = a\) and \(f(x)\) is continuous at \(x = g(a),\)
+    then \(f(g(x))\) is continuous at \(x = a;\) namely, 
+    \begin{equation}
+    \lim_{x \to a} f(g(x)) = f(g(a)) \pd \eqlabel{eq:comp-funct-continuous}
+    \end{equation}
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    Let \(L = g(a).\)
+    If \(g\) is continuous at \(a,\) then \(\lim_{x \to a} g(x) = L.\)
+    In Section 
+    <a href="/ValCalc/ValCalc/calculus/1.3-Squeeze-Theorem-and-Trigonometric-Limits.html">1.3</a> we learned 
+    to evaluate the limit of a composite function as follows:
+    \[\lim_{x \to a} f(g(x)) = \lim_{t \to L} f(t) \pd\]
+    Since \(f\) is continuous at \(L = g(a),\) we have 
+    \[\lim_{t \to L} f(t) = f(L) = f(g(a)) \cma\]
+    thus giving \(\eqref{eq:comp-funct-continuous}.\)
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">
+        Determine the interval over which \(\log_4(x - 6)\) is continuous.
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    Since logarithms are only defined for positive inputs, 
+    the domain of \(\log_4(x - 6)\) is \(x \gt 6.\)
+    Thus, the function is continuous on \(\boxed{x \gt 6}.\)
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">
+        Determine the interval over which \(e^{\sqrt{7 - x}}\) is continuous.
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    The domain of an exponential function is all real numbers. 
+    But \(\sqrt{7 - x}\) is defined only if \(7 - x \geq 0\)—that is, for \(x \leq 7\)—so  
+    \(\sqrt{7 - x}\) is continuous for \(x \leq 7.\)
+    This restriction is transferred to \(e^{\sqrt{7 - x}},\)
+    which is therefore continuous for \(\boxed{x \leq 7}.\)
+</div>
+<!-- <div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">
+        For each of (i)–(iii), determine the interval on which \(f(x)\) is continuous.
+        <ol class="list-roman">
+            <li>
+                \(\ds f(x) = \frac{\cos x + x}{\ln x}\)
+            </li>
+            <li>
+                \(\ds f(x) = \frac{\tan x}{x - 2}\)
+            </li>
+            <li>
+                \(\ds f(x) = e^{\sqrt{3 - x}}\)
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <ol class="list-roman">
+        <li>
+            The numerator
+            is a sum of two continuous functions—\(\cos x\) and \(x\)—and is therefore continuous for all \(x.\)
+            Conversely, the denominator \(\ln x\) is only continuous for \(x \gt 0.\)
+            Therefore, \(f(x)\) is continuous for \(x \gt 0.\)
+        </li>
+        <hr>
+        <li>
+            We find the values of \(x\) such that the numerator and denominator of \(f(x)\) are both defined 
+            (and the denominator \(\ne 0\)). 
+            On this same interval we establish continuity for \(f(x)\) 
+            since \(\tan x\) and \((x - 2)\) are continuous for all \(x\) in their domains.
+            The function \(\tan x\) is continuous for all 
+            \[ x \ne \pm \frac{\pi}{2} \cma \pm \frac{3 \pi}{2} \cma \pm \frac{5 \pi}{2} \cma \dots \pd\]
+            Also, \(x - 2 = 0\) at \(x = 2.\)
+            Therefore, \(f(x)\) is discontinuous at  
+            \[x = -2 \and x = \frac{\pi}{2} \pm \pi n \pd\]
+        </li>
+        <hr>
+        <li>
+            The function \(e^x\) is continuous for all \(x.\)
+            But we have \(e^{\sqrt{3 - x}},\) 
+            and \(\sqrt{3 - x}\) is continuous for \(x \leq 3.\)
+            Thus, \(f(x)\) is continuous for all \(x \leq 3.\)
+        </li>
+    </ol>
+</div> -->
+
+<h4 id="ivt">Intermediate Value Theorem</h4>
+
+<figure class="ivt-graph" id="ivt-graph">
+    <img src="../images/sectionImages/ivt-graph.jpg" alt="Figure 7">
+</figure>
+<style>
+    .ivt-graph::before{
+        content:'FIGURE 7';
+    }
+</style>
+
+<p>
+    Continuity provides us an important application, the
+    <span class="emph">Intermediate Value Theorem</span>:
+    If \(f\) is continuous on \([a, b],\)
+    then \(f\) <i>takes on every value</i> between \(f(a)\) and \(f(b).\)
+    Intuitively, a continuous curve that begins at \((a, f(a))\)
+    and ends at \((b, f(b))\) must contain any intermediate point that lies 
+    between these endpoints. 
+    To express this idea mathematically, 
+    we let \(Q\) be any intermediate value between \(f(a)\) and \(f(b)\)–that is, 
+    \(f(a) \leq Q \leq f(b).\) 
+    Then the Intermediate Value Theorem guarantees the existence 
+    of some \(c\) in \([a, b]\) for which \(f(c) = Q.\)
+    (See <a href="#ivt-graph">Figure 7</a>.)
+    Some functions have multiple values of \(c\) in \([a, b]\) that satisfy 
+    the Intermediate Value Theorem; these functions take on the value \(Q\)
+    multiple times in \([a, b].\)
+    But the Intermediate Value Theorem does <span class="warning">not</span>
+    give us a method to find \(c;\) it merely proves the existence of such \(c.\)
+</p>
+
+<div class="box-title">INTERMEDIATE VALUE THEOREM</div>
+<div class="box">
+    If \(f\) is continuous on \([a, b],\) 
+    and \(Q\) is a number between \(f(a)\) and \(f(b),\)
+    then the <span class="emph">Intermediate Value Theorem</span> 
+    guarantees a value \(c\) in \([a, b]\)
+    such that \(f(c) = Q.\)
+</div>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">
+        Let \(f(x) = x^3 + 2.\)
+        With \(Q = 3,\) find \(c\) to satisfy the Intermediate Value Theorem for \(f\) 
+        on \([-1, 2].\)
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    <figure class="ivt-graph-x3" id="ivt-graph-x3">
+        <img src="../images/sectionImages/ivt-graph-x3.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .ivt-graph-x3::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    Since \(f(x)\) is a polynomial, it is continuous for all \(x,\)
+    including on \([-1, 2].\)
+    Observe that \(f(-1) = 1\) and \(f(2) = 10.\)
+    Because \(1 \leq Q \leq 10,\) 
+    the Intermediate Value Theorem guarantees a number \(c\) in \([-1, 2]\)
+    such that \(f(c) = Q,\) that is,
+    \[c^3 + 2 = 3 \pd \]
+    The only real solution to this equation is \(\boxed{c = 1}.\)
+    (See <a href="#ivt-graph-x3">Figure 8</a>.)
+</div>
+
+
+<div class="example-title" id="ex-ivt-zeros"> EXAMPLE 10 </div>
+<div class="example">
+    <div class="example-problem">
+        Prove that \(f(x) = 4x^5 + 2x^3 - x - 1\)
+        has a root between \(x = 0\) and \(x = 1.\)
+    </div>
+</div>
+<button onclick="toggle10()" class="solution-button"></button>
+<div id="solution10" class="solution">
+    <figure class="ivt-zero-ex" id="ivt-zero-ex">
+        <img src="../images/sectionImages/ivt-zero-ex.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .ivt-zero-ex::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    Note that \(f(0) = -1\) and \(f(1) = 4.\)
+    We therefore have \(f(0) \leq 0 \leq f(1);\)
+    that is, \(Q = 0\) is a number between \(f(0)\) and \(f(1).\)
+    Since \(f\) is a polynomial, it is continuous.
+    The Intermediate Value Theorem concludes that 
+    a value \(c\) exists in \([0, 1]\)
+    such that \(f(c) = 0.\)
+    So \(f\) has at least one root between \(0\) and \(1.\)
+    (See <a href="#ivt-zero-ex">Figure 9</a>.)
+</div>
+
+<p>
+    <span class="label-emph">Graphing Calculators</span>
+    <a href="/ValCalc/ValCalc/calculus/1.4-Continuity.html#ex-ivt-zeros">Example 10</a>
+    shows how graphing calculators find zeros:
+    The graphing calculator plots two points with opposite \(y\)-values,
+    assumes the function is continuous, 
+    and connects the points.
+    An algorithm enables the calculator to sample many points
+    to attain an accurate guess of the zero.
+    For example, we could use the Intermediate Value Theorem again in 
+    <a href="/ValCalc/ValCalc/calculus/1.4-Continuity.html#ex-ivt-zeros">Example 10</a>
+    by noting that \(f(0.2) = -1.18272\) and \(f(0.8) = 0.53472,\)
+    so the zero \(c\) must lie in \((0.2, 0.8).\)
+    As we repeat this process with \(f(0.5) = -1.125\)
+    and \(f(0.75) = 0.04296875,\)
+    the Intermediate Value Theorem again asserts that the zero \(c\)
+    must lie in \((0.5, 0.75).\)
+    We can continue sampling points to attain a narrower 
+    interval, thus approaching the true value of \(c.\)
+    A computer can iterate this operation many times to get 
+    a zero that is accurate to many decimal places.
+    (It turns out that \(c \approx\) <nobr>\(0.745.\))</nobr>
+</p>
+
+<div class="section-summary">
+    <p>
+        <a href="#continuity-at-a-point" class="summary-anchor">Continuity at a Point</a>
+        The function \(f(x)\) is <span class="emph">continuous</span> at \(x = a\) if and only if
+        \begin{equation} 
+        \lim_{x \to a} f(x) = f(a) \pd \eqlabel{eq:cont-point}
+        \end{equation}
+        This definition requires three conditions:
+        <ol class="list-num">
+            <li>
+                \(f(a)\) is defined.
+            </li>
+            <li>
+                \(\ds \lim_{x \to a} f(x)\) exists.
+            </li>
+            <li>
+                \(\ds \lim_{x \to a} f(x)\) equals \(f(a).\)
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        If any of these conditions is false, 
+        then \(f\) is <span class="emph">discontinuous</span> at \(a.\)
+        We classify discontinuities using three categories:
+        <ol class="list-num">
+            <li>
+                \(f(x)\) has a 
+                <span class="emph">removable discontinuity</span> 
+                at \(x = a\) if \(\lim_{x \to a} f(x)\) exists but does not equal \(f(a).\)
+            </li>
+            <li>
+                \(f(x)\) has a 
+                <span class="emph">jump discontinuity</span>
+                at \(x = a\) if the one-sided limits
+                \[\lim_{x \to a^-} f(x) \and \lim_{x \to a^+} f(x)\]
+                both equal different numbers.
+            </li>
+            <li>
+                \(f(x)\) has an 
+                <span class="emph">infinite discontinuity</span>
+                at \(x = a\) if either 
+                \[\lim_{x \to a^-} f(x) \or \lim_{x \to a^+} f(x)\]
+                is infinite.
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        We also discuss one-sided continuity as follows:
+        The function \(f\) is <span class="emph">continuous from the left</span> at \(a\)
+        if and only if
+        \[\lim_{x \to a^-} f(x) = f(a)\]
+        and is <span class="emph">continuous from the right</span> at \(a\)
+        if and only if
+        \[\lim_{x \to a^+} f(x) = f(a) \pd\]
+    </p>
+    <p>
+        <a href="#continuity-over-an-interval" class="summary-anchor">Continuity over an Interval</a>
+        If a function \(f(x)\) is continuous at every point in \((a, b),\)
+        continuous from the right at \(x = a,\) and continuous from the left at \(x = b,\)
+        then \(f(x)\) is continuous over \([a, b].\)
+        Many functions are continuous on their domains; 
+        the following table shows the intervals over which some functions are continuous. 
+        Let \(n\) be an integer.
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Interval of Continuity</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>
+                    Polynomials: \(c_n x^n + c_{n - 1} x^{n - 1} + \cdots + c_1 x + c_0\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rational expressions: \(P(x)/Q(x),\)
+                    where \(P\) and \(Q\) are polynomials 
+                </td>
+                <td>
+                    All \(x\) such that \(Q(x) \ne 0\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sin x\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\cos x\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\tan x\)
+                </td>
+                <td>
+                    \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\csc x\)
+                </td>
+                <td>
+                    \(\ds x \ne n \pi\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sec x\)
+                </td>
+                <td>
+                    \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\cot x\)
+                </td>
+                <td>
+                    \(\ds x \ne n \pi\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(b^x \cma b \gt 0\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\log_b x \cma b \gt 0\) and \(b \ne 1\)
+                </td>
+                <td>
+                    \(x \gt 0\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sqrt[n]{x} \cma n\) odd
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sqrt[n] x \cma n\) even 
+                </td>
+                <td>
+                    \(x \geq 0\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\abs x\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sin^{-1} x\)
+                </td>
+                <td>
+                    \(-1 \leq x \leq 1\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\cos^{-1} x\)
+                </td>
+                <td>
+                    \(-1 \leq x \leq 1\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\tan^{-1} x\)
+                </td>
+                <td>
+                    \(-\infty \lt x \lt \infty\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#continuity-of-combinations-of-functions" class="summary-anchor">Continuity of Combinations of Functions</a>
+        If \(f(x)\) and \(g(x)\) are both continuous at \(x = a,\) 
+        then the following combinations of \(f(x)\) and \(g(x)\) are also continuous at \(x = a.\)
+        <ol class="list-alpha">
+            <li>
+                \(f(x) + g(x)\)
+            </li>
+            <li>
+                \(f(x) - g(x)\)
+            </li>
+            <li>
+                \(f(x) \cdot g(x)\)
+            </li>
+            <li>
+                \(f(x)/g(x) \cmaa\) \(\; g(a) \ne 0.\)
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        If \(g(x)\) is continuous at \(x = a\) and \(f(x)\) is continuous at \(x = g(a),\)
+        then \(f(g(x))\) is continuous at \(x = a;\) namely, 
+        \begin{equation}
+        \lim_{x \to a} f(g(x)) = f(g(a)) \pd \eqlabel{eq:comp-funct-continuous}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#ivt" class="summary-anchor">Intermediate Value Theorem</a>
+        If \(f\) is continuous on \([a, b],\) 
+        and \(Q\) is a number between \(f(a)\) and \(f(b),\)
+        then the <span class="emph">Intermediate Value Theorem</span> 
+        guarantees a value \(c\) in \([a, b]\)
+        such that \(f(c) = Q.\)
+        In words, the theorem says that on \([a, b],\) the continuous function \(f\)
+        <i>takes on every value</i> between \(f(a)\) and \(f(b).\)
+    </p>
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

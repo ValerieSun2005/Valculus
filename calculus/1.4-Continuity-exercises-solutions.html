@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.4 Exercise Solutions: Continuity</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>1.4 Exercise Solutions: Continuity</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="1.4-Continuity.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="1.4-Continuity-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        In <a href="#classifying-continuity-ex-1">Figure 10</a>,
+        identify and classify the discontinuities of \(f\) on \((-4, 4).\)
+        Describe the continuity at the endpoints, \(x = -4\) and \(x = 4.\)
+        <figure class="classifying-continuity-ex-1 figure-center-one" id="classifying-continuity-ex-1">
+<img alt="Figure 10" src="../images/sectionImages/classifying-continuity-ex-1.jpg"/>
+</figure>
+<style>
+            .classifying-continuity-ex-1::before{
+                content:'FIGURE 10';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(x)\) has an <b>infinite discontinuity</b> at \(x = -1,\)
+        a <b>jump discontinuity</b> at \(x = 1,\) and a <b>removable discontinuity</b>
+        at \(x = 2.\)
+        Also, \(f\) is continuous from the left at \(4\)
+        because 
+        \[\lim_{x \to 4^-} f(x) = f(4) \pd\]
+        Yet \(f\) is discontinuous at \(-4\)
+        because \(f(-4)\) is undefined.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let's investigate the function 
+        \[f(x) = 
+        \bc 
+        x^2 + 1 &amp;x \lt 1 \nl 
+        3 - x &amp;x \geq 1 \pd
+        \ec
+        \]
+        <ol class="list-alpha">
+<li>
+                Determine \(f(1).\)
+            </li>
+<li>    
+                Find \(\lim_{x \to 1^-} f(x)\)
+                and \(\lim_{x \to 1^+} f(x).\)
+            </li>
+<li>
+                Is \(f(x)\) continuous at \(x = 1 \ques\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                We see 
+                \[f(1) = 3 - 1 = \boxed 2\]
+            </li>
+<hr/>
+<li>
+                Since \(f(x) = x^2 + 1\) for \(x \lt 1,\)
+                we see 
+                \[\lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} \par{x^2 + 1} = 1^2 + 1 = \boxed 2\]
+                Likewise, because \(f(x) = 3 - x\) for \(x \geq 1,\)
+                we have 
+                \[\lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} \par{3 - x} = 3 - 1 = \boxed 2\]
+            </li>
+<hr/>
+<li>
+                Because the one-sided limits of \(f\) at \(1\)
+                both equal \(2,\) we have \(\lim_{x \to 1} f(x) = 2.\)
+                We therefore say 
+                \[\lim_{x \to 1} f(x) = f(1) = 2 \pd\]
+                By the definition of continuity, \(f\) is <b>continuous</b> at \(2.\)
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Consider the function
+        \[f(x) = \frac{x^3 + x^2}{x} \pd\]
+        <ol class="list-alpha">
+<li>
+                Justify why \(f\) has a removable discontinuity at \(x = 0.\)
+            </li>
+<li>
+                Define a new function \(g\)
+                that matches \(f\) for all \(x \ne 0\)
+                but is continuous at \(0.\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Observe that \(f(0)\) is undefined. 
+                But we see 
+                \[
+                \ba
+                \lim_{x \to 0} f(x) &amp;= \lim_{x \to 0} \frac{\cancel{x} \par{x^2 + x}}{\cancel x} \nl
+                &amp;= \lim_{x \to 0} \par{x^2 + x} \nl 
+                &amp;= 0^2 + 0 = 0 \pd
+                \ea
+                \]
+                Since \(\lim_{x \to 0} f(x)\) exists but \(f(0)\) is undefined, 
+                \(f\) has a <b>removable discontinuity</b> at \(0.\)
+            </li>
+<hr/>
+<li>
+                Since \(\lim_{x \to 0} f(x) = 0,\)
+                the graph of \(f\) has a hole at \((0, 0).\)  
+                To restore continuity, we <q>fill in</q> this hole by defining the new function
+                \[
+                \ba
+                g(x) 
+                &amp;= 
+                \bc 
+                f(x) &amp;x \ne 0 \nl 
+                0 &amp;x = 0
+                \ec \nl 
+                &amp;= 
+                \boxed{\bc 
+                \dfrac{x^3 + x^2}{x} &amp;x \ne 0 \nl 
+                0 &amp;x = 0
+                \ec}
+                \ea
+                \]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<span class="true-or-false"></span>
+        If \(f\) is continuous at \(a,\) then \(f(a)\)
+        is defined.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>True</b>. 
+        The function \(f\) is continuous at \(a\)
+        if and only if 
+        \[\lim_{x \to a} f(x) = f(a) \pd\]
+        This definition therefore implies that \(f(a)\) must be defined
+        if \(f\) is continuous at \(a.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<span class="true-or-false"></span>
+        If \(f\) is discontinuous at \(a,\) then \(\lim_{x \to a} f(x)\)
+        does not exist.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>False</b>. 
+        The function \(f\) could have a removable discontinuity at \(a;\)
+        in this scenario, \(\lim_{x \to a} f(x)\) exists but does not equal \(f(a)\)
+        [or \(f(a)\) is undefined].
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = 3^{x + 4} \cmaa x = 2\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Exponential functions are continuous for all real numbers,
+        so \(f(x)\) is <b>continuous</b> at \(x = 2.\) 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sin \frac{1}{x} \cmaa x = 0\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\sin(1/x)\) is undefined at \(x = 0,\)
+        it is <b>discontinuous</b> at \(x = 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \log_3(x - 3) \cmaa x = 3\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(\log_3(x - 3)\) is defined only for \(x \gt 3\)
+        [when the input \((x - 3)\) is positive].
+        Since \(f(3)\) is undefined, \(f\) is <b>discontinuous</b> at \(x = 3.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \sqrt{2 - 4x} \cmaa x = -\frac{1}{2}\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Radical functions are continuous over all values in their domain.
+        Since the root has \(n = 2\)
+        (an even number), it is defined for all positive inputs. 
+        We therefore find its domain to be \(2 - 4x \geq 0,\) 
+        or \(x \leq 1/2.\)
+        Because \(x = -1/2\) is in the domain of \(f(x),\) 
+        the function is <b>continuous</b> at \(x = -1/2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[
+        \ds 
+        f(x)=
+        \bc
+        x^2 - 3x &amp;x \lt -1 \nl 
+        \sin(x + 1) &amp;x \geq -1 \cmaa 
+        \ec
+        \;
+        x = -1
+        \]    
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f\) is continuous at \(-1\) if and only if
+        \(\lim_{x \to -1} f(x) = f(-1).\)
+        Analyzing the one-sided limits, we see
+        \[ 
+        \baat{2}
+        \lim_{x \to -1^-} f(x) &amp;=(-1)^2 - 3(-1) 
+        &amp;&amp;= 4 \cma \nl
+        \lim_{x \to -1^+} f(x) &amp;= \sin(-1 + 1) &amp;&amp;= 0 \pd
+        \eaat
+        \]
+        Because the one-sided limits are not equivalent, 
+        \(\lim_{x \to -1} f(x)\) does not exist
+        and so \(f(x)\) is 
+        <b>discontinuous</b>
+        at \(x = -1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[
+        \ds 
+        f(x)=
+        \bc
+        \sqrt{1 - x} &amp;x \leq 1 \nl
+        \log_4(x) &amp;x \gt 1 \cmaa 
+        \ec  
+        \; 
+        x = 1
+        \]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f\) is continuous at \(1,\) then  
+        \[\lim_{x \to 1} f(x) = f(1) = 0 \pd \]
+        We consider the one-sided limits:
+        \[
+        \baat{2}
+        \lim_{x \to 1^-} f(x) &amp;= \sqrt{1 - (1)} &amp;&amp;= 0 \cma \nl 
+        \lim_{x \to 1^+} f(x) &amp;= \log_4(1) &amp;&amp;= 0 \pd \nl
+        \eaat
+        \] 
+        Thus, because \(\lim_{x \to 1} f(x) = f(1),\) we conclude that 
+        \(f(x)\) is 
+        <b>continuous</b>
+        at \(x = 1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \csc \par{x^2} \cmaa x = 2\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(x^2\) is continuous at \(x = 2\)
+        (because polynomials are continuous for all real numbers).
+        Cosecant is continuous for all values in its domain.
+        Note that cosecant is defined, and therefore continuous, at \(2^2 = 4.\)
+        Hence, the composite function \(\csc \par{x^2}\)
+        is <b>continuous</b> at \(x = 2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \cot \sqrt t \cmaa t = \frac{\pi^2}{4}\]
+    </blockquote> determine whether \(f\) is continuous at the given value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\sqrt t\) is continuous at all values in its domain—that is, 
+        for \(t \geq 0\)—it is continuous at \(t = \pi^2/4.\)
+        But cotangent is undefined at \(\sqrt{\pi^2/4}\) \(= \pi/2,\)
+        so \(\cot \sqrt t\) is <b>discontinuous</b> at \(t = \pi^2/4.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \frac{1}{x - 2} \cmaa x = 2\]
+    </blockquote> classify the discontinuity of \(f(x)\) at the given \(x\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have 
+        \[\lim_{x \to 2^-} f(x) = -\infty \and \lim_{x \to 2^+} f(x) = \infty \pd\]
+        Since these one-sided limits are infinite,
+        the graph of \(y = 1/(x - 2)\) has a vertical asymptote at \(x = 2.\)
+        Thus, \(f\) has an <b>infinite discontinuity</b> at \(x = 2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \frac{x^2 - 5x + 6}{x - 3} \cmaa x = 3\]
+    </blockquote> classify the discontinuity of \(f(x)\) at the given \(x\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Factoring the numerator of \(f(x),\) we see 
+        \[
+        \ba 
+        \lim_{x \to 3} f(x) 
+        &amp;= \lim_{x \to 3} \frac{\cancel{(x - 3)}(x - 2)}{\cancel{x - 3}} \nl 
+        &amp;= \lim_{x \to 3} (x - 2) \nl 
+        &amp;= (3 - 2) = 1 \pd
+        \ea 
+        \] 
+        Thus, \(x = 3\) is the location of a <b>removable discontinuity</b> of \(f(x)\)
+        because \(\lim_{x \to 3} f(x)\) exists but \(f(3)\) is undefined.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \frac{\abs{x}}{x} \cmaa x = 0\]
+    </blockquote> classify the discontinuity of \(f(x)\) at the given \(x\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        For \(x \lt 0,\) \(f(x) = -1.\)
+        For \(x \gt 0,\) \(f(x) = 1.\)
+        Hence, 
+        \[\lim_{x \to 0^-} \frac{\abs{x}}{x} = -1 \and \lim_{x \to 0^+} \frac{\abs{x}}{x} = 1 \pd\]
+        Because these one-sided limits equal different numbers,
+        \(f\) has a <b>jump discontinuity</b> at \(0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \frac{4x^2 - 9}{2x + 3} \cmaa x = -\frac{3}{2}\]
+    </blockquote> classify the discontinuity of \(f(x)\) at the given \(x\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We factor the numerator as follows:
+        \[4x^2 - 9 = (2x + 3)(2x - 3) \pd\]
+        So we see 
+        \[
+        \ba
+        \lim_{x \to -3/2} f(x)
+        &amp;= \lim_{x \to -3/2} \frac{\cancel{(2x + 3)} (2x - 3)}{\cancel{2x + 3}} \nl 
+        &amp;= \lim_{x \to -3/2} (2x - 3) \nl 
+        &amp;= 2 \par{-\tfrac{3}{2}} - 3 = -6 \pd
+        \ea
+        \]
+        This limit exists but \(f(-3/2)\) is undefined,
+        so \(f(x)\) has a <b>removable discontinuity</b> at \(x = -3/2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds f(x) = \frac{2 + 2x^2}{1 + x} \cmaa x = -1\]
+    </blockquote> classify the discontinuity of \(f(x)\) at the given \(x\). 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As \(x \to -1,\)
+        the denominator \((1 + x)\) approaches \(0\) 
+        but the numerator \(\par{2 + 2x^2}\) doesn't approach \(0.\)
+        By making \(x\) closer to \(-1,\)
+        we make the denominator of \(f(x)\) closer to \(0.\)
+        Dividing by a smaller number causes \(f(x)\) to approach \(\infty\)
+        or \(-\infty,\) depending on the sign of \(f(x).\)
+        For \(x \lt -1,\) \(f(x) \lt 0.\)
+        for \(x \gt -1,\) \(f(x) \gt 0.\)
+        So we have 
+        \[\lim_{x \to -1^-} f(x) = -\infty \and \lim_{x \to -1^+} f(x) = \infty \pd\]
+        The graph of \(f\) therefore has a vertical asymptote at \(x = -1,\) meaning
+        \(f\) has an <b>infinite discontinuity</b> at \(-1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x^3 + 7x^2 - 4x + 5\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Polynomials are defined and continuous for all real numbers,
+        so the interval of continuity is 
+        \[\boxed{(-\infty, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 8\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The constant \(8\) can be classified as a polynomial (of degree <nobr>\(0\)),</nobr> 
+        which is defined and continuous for all real numbers. 
+        So the interval of continuity is
+        \[\boxed{(-\infty, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt[3]{5x + 2}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Radical functions are continuous over their domains.
+        The function \(\sqrt[3]{5x + 2}\) is radical with \(n = 3,\) an odd number. 
+        A radical function with an odd root is defined, 
+        and therefore continuous, for all real numbers—that is, 
+        \[\boxed{(-\infty, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt[6]{12 - 8x}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Radical functions are continuous over their domains.
+        The function \(\sqrt[6]{12 - 8x}\) is radical with \(n = 6,\) an even number. 
+        A radical function with an even root is defined, 
+        and therefore continuous, for all nonnegative inputs—namely, 
+        \[12 - 8x \geq 0 \iffArrow \boxed{x \leq \frac{3}{2}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 6^x + \sin x\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Exponential and sinusoidal functions are continuous for all real numbers. 
+        The sum of two continuous functions is another continuous function,
+        so \(6^x + \sin x\) is continuous on 
+        \[\boxed{(-\infty, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 2x^3 \tan x\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The product of two continuous functions is another continuous function.
+        The polynomial \(2x^3\) is continuous for all \(x.\)
+        But \(\tan x\) is continuous for \(x \ne \pi/2 \pm n \pi,\)
+        where \(n\) is an integer. 
+        So the product \(2x^3 \tan x\) is continuous for
+        \[\boxed{x \ne \frac{\pi}{2} \pm n \pi}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{3}{x - 5}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A rational function is continuous for all \(x\)
+        in its domain, all \(x\)
+        such that the denominator is nonzero. 
+        Observe that \(x - 5 = 0\) when \(x = 5,\)
+        so the interval of continuity is 
+        \[\boxed{(-\infty, 5) \cup (5, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{4}{5 - x^3}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This function is rational, so it's continuous for all \(x\) in its domain.
+        We beware of any \(x\) at which the denominator evaluates to \(0.\)
+        Note that \(5 - x^3 = 0\) when \(x = \sqrt[3]{5}.\)
+        So the rational function's domain, and therefore its interval of continuity, is
+        \[\boxed{\par{-\infty, \sqrt[3]{5}} \cup \par{\sqrt[3]{5}, \infty}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds e^{\sqrt{2x + 8}}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The domain of an exponential function is all real numbers. 
+        Yet \(\sqrt{2x + 8}\) is defined only if \(2x + 8\geq 0\)—that is, if \(x \geq -4.\)
+        Thus, \(\sqrt{2x + 8}\) is continuous for \(x \geq -4.\)
+        This restriction also applies to to \(e^{\sqrt{2x + 8}},\)
+        which is therefore continuous for \(x\) in 
+        \[\boxed{[-4, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{9 \log x}{8 - 4x}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The quotient of two continuous functions is another continuous function. 
+        We need to find where \(9 \log x\) and \(8 - 4x\)
+        are both continuous, and avoid any point at which \(8 - 4x = 0.\)
+        The logarithm is continuous for all \(x\) in its domain, \(x \gt 0.\)
+        The polynomial \(8 - 4x\) is continuous for all \(x.\)
+        But \(8 - 4x = 0\) when \(x = 2,\) so this point is excluded in the domain
+        of the quotient of functions. 
+        Hence, \((9 \log x)/(8 - 4x)\) is continuous on
+        \[\boxed{(0, 2) \cup (2, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{\par{\log_7 x} - 4}{x^2 - 8}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The quotient of two continuous functions is another continuous function. 
+        So let's find where \(\par{\log_7 x} - 4\) and \(x^2 - 8\)
+        are both continuous, and avoid any point at which \(x^2 - 8 = 0.\)
+        The logarithm is continuous for all \(x\) in its domain,
+        positive \(x.\)
+        Conversely, the polynomial \(x^2 - 8\) is continuous for all \(x.\)
+        But \(x^2 - 8 = 0\)
+        when \(x^2 = 8 \iffArrow\) \(x = \pm 2 \sqrt 2.\)
+        So the function \([(\log_7 x) - 4]/\par{x^2 - 8}\)
+        is continuous on
+        \[\boxed{\par{0, 2 \sqrt 2} \cup \par{2 \sqrt 2, \infty}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{2 + \asin t}{t^3 - 8} \]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's find all \(t\) for which the numerator and denominator are both continuous 
+        (and the denominator doesn't equal <nobr>\(0\)).</nobr>
+        The numerator \(2 + \asin t\) is continuous for all \(t\) in its domain, 
+        \([-1, 1].\)
+        Conversely, the denominator \(t^3 - 8\) is a polynomial and is therefore continuous for all \(t.\)
+        Observe that \(t^3 - 8 = 0\) when \(t = 2.\)
+        Hence, on \([-1, 1]\) we have no instances of division by zero,
+        so the interval of continuity is 
+        \[\boxed{[-1, 1]}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \log_2 \par{\asin u}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The logarithm function is continuous 
+        on its domain, that is, for all positive inputs. 
+        The arcsine function is also continuous on its domain, \([-1, 1].\)
+        So \(\log_2 \par{\asin u}\) is continuous when \(\asin u \gt 0\)—that is, 
+        for \(u\) in
+        \[\boxed{(0, 1]}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{7^t - 4}\]
+    </blockquote> determine the interval on which the function is continuous. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The square root function is continuous for all values in its domain
+        (nonnegative values).
+        On the other hand, the function \(7^t - 4\) is continuous for all \(t.\)
+        Hence, the only restriction we consider is \(7^t - 4 \geq 0,\)
+        or \(t \geq \log_7 4.\)
+        The interval of continuity is therefore 
+        \[\boxed{[\log_7 4, \infty)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 3} 4^{x + 7}\]
+    </blockquote> use Direct Substitution, if possible, to evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Exponential functions are continuous for all real numbers, 
+        so using Direct Substitution gives 
+        \[\lim_{x \to 3} 4^{x + 7} = 4^{3 + 7} = \boxed{4^{10}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 5} \log_9 (17x - 4)\]
+    </blockquote> use Direct Substitution, if possible, to evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Logarithms are continuous for all values in their domain, that is, 
+        for all positive inputs. 
+        So \(\log_9 (17 x - 4)\) is continuous at \(x = 5\)
+        since its domain is \(17x - 4 \gt 0\) \(\iffArrow x \gt 4/17.\)
+        Hence, Direct Substitution gives 
+        \[\lim_{x \to 5} \log_9 (17 x - 4) = \log_9 \parbr{17(5) - 4} = \log_9 81 = \boxed 2\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1^-} \asin x\]
+    </blockquote> use Direct Substitution, if possible, to evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The inverse sine function is continuous 
+        on all values in its domain, \([-1, 1].\)
+        Hence, \(\asin x\) is <i>continuous from the left</i> at \(1.\)
+        So using Direct Substitution gives 
+        \[\lim_{x \to 1^-} \asin x = \asin 1 = \boxed{\frac{\pi}{2}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1} 4 \atan x\]
+    </blockquote> use Direct Substitution, if possible, to evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Constant Multiple Law for limits enables us to rewrite the limit as 
+        \[4 \lim_{x \to 1} \atan x \pd\]
+        The arctangent function is continuous for all \(x\)
+        in its domain, \((-\infty, \infty).\)
+        We therefore use Direct Substitution to find 
+        \[4 \lim_{x \to 1} \atan x = 4 \atan 1 = 4 \par{\frac{\pi}{4}} = \boxed{\pi}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to \sqrt 3/2} \frac{3\acos x}{x + 1}\]
+    </blockquote> use Direct Substitution, if possible, to evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Both \(3 \acos x\) and \((x + 1)\) are continuous at \(x = \sqrt 3/2,\)
+        so the Quotient \(\par{3 \acos x}/(x + 1)\) is also continuous at \(x = \sqrt 3/2.\)
+        Using Direct Substitution therefore gives 
+        \[
+        \ba
+        \lim_{x \to \sqrt 3/2} \frac{3\acos x}{x + 1} 
+        &amp;= \frac{3 \acos \dfrac{\sqrt 3}{2}}{\dfrac{\sqrt 3}{2} + 1} \nl
+        &amp;= \frac{3 \par{\dfrac{\pi}{6}}}{\dfrac{\sqrt 3}{2} + 1} \nl 
+        &amp;= \boxed{\frac{\pi}{\sqrt 3 + 2}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1} \log_5 (7x - 2)\]
+    </blockquote> evaluate the limit if it exists. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \((7x - 2) \to 5\) as \(x \to 1.\)
+        The limit therefore becomes 
+        \[\lim_{t \to 5} \log_5 t \pd\]
+        But since the logarithm is continuous for all positive inputs, 
+        Direct Substitution gives 
+        \[\lim_{t \to 5} \log_5 t = \log_5 5 = \boxed 1\]
+        <i>Note</i>: Since the logarithm 
+        is continuous at \(\lim_{x \to 1} (7x - 2)\) \(= 5,\) we can also argue that
+        \[
+        \ba
+        \lim_{x \to 1} \log_5 (7x - 2) 
+        &amp;= \log_5 \parbr{\lim_{x \to 1} (7x - 2)} \nl
+        &amp;= \log_5 (5) = 1 \pd
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0^+} e^{\sqrt x + 2}\]
+    </blockquote> evaluate the limit if it exists. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We see \(\sqrt x + 2\) approaches \(2\) as \(x \to 0^+.\)
+        The limit therefore becomes 
+        \[\lim_{t \to 2} e^t \pd\]
+        Since exponential functions are continuous for all real numbers, 
+        we use Direct Substitution to get
+        \[\lim_{t \to 2} e^t = \boxed{e^2}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to \pi} \csc \frac{x}{2}\]
+    </blockquote> evaluate the limit if it exists. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As \(x \to \pi,\) \(x/2 \to \pi/2.\)
+        So the limit becomes 
+        \[\lim_{t \to \pi/2} \csc t = \csc \frac{\pi}{2} = \boxed 1\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x^2 + 4 \cmaa 0 \leq x \leq 3 \scoll Q = 5\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f(x) = x^2 + 4,\) then
+        \(f(0) = 4\) and \(f(3) = 13.\)
+        Also observe that \(4 \lt 5 \lt 13.\)
+        Since \(f\) is a polynomial, it is continuous for all \(x,\)
+        including on \([0,3].\)
+        Hence, the Intermediate Value Theorem guarantees a number \(c\)
+        in \([0, 3]\) such that \(f(c) = Q = 5.\)
+        Solving gives 
+        \[f(c) = c^2 + 4 = 5 \implies \boxed{c = 1}\]
+        (We neglect the solution \(c = -1\) because it is outside of <nobr>\([0, 3].\))</nobr>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \frac{1}{t} \cmaa -1 \leq t \leq 8 \scoll Q = \frac{1}{2}\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>The Intermediate Value Theorem cannot be applied</b>. 
+        The function \(1/t\) is not continuous on \([-1, 8]\)
+        because it is discontinuous at \(t = 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 2^y \cmaa -1 \leq y \leq 4 \scoll Q = 8\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(c) = 2^y\) is continuous for all \(y,\)
+        including on \([-1, 4].\)
+        Observe that \(f(-1) = 0.5\) and \(f(4) = 16;\)
+        \(Q = 8\) is between these two outputs.
+        So the Intermediate Value Theorem guarantees a value \(c\)
+        in \([-1, 4]\) for which \(f(c) = Q = 8\)—that is, 
+        \[2^c = 8 \implies \boxed{c = 3}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \cos 2x \cmaa 0 \leq x \leq \frac{\pi}{2} \scoll Q = -\frac{\sqrt 2}{2}\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(x) = \cos 2x\) is continuous for all \(x,\)
+        including on \([0, \pi/2].\)
+        Note that \(f(0) = 1\) and \(f(\pi/2) = -1,\)
+        and \(-1 \lt -\sqrt{2}/2 \lt 1.\)
+        The Intermediate Value Theorem therefore guarantees a value \(c\)
+        in \([0, \pi/2]\)
+        for which \(f(c) = \underbrace{-\sqrt{2}/2}_Q\)—that is, 
+        \[\cos 2c = -\frac{\sqrt 2}{2} \implies \boxed{c = \frac{3 \pi}{8}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \tan x \cmaa \frac{\pi}{4} \leq x \leq \frac{3 \pi}{4} \scoll Q = \frac{\sqrt 3}{3}\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>The Intermediate Value Theorem cannot be applied</b>. 
+        The function \(\tan x\) is not continuous on \([\pi/4, 3\pi/4]\)
+        because it is discontinuous at \(x = \pi/2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{5x - 2} \cmaa 1 \leq x \leq 8 \scoll Q = 3\]
+    </blockquote> find the number \(c\) that satisfies the 
+        Intermediate Value Theorem, if it is applicable, for the given \(Q\) and interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(x) = \sqrt{5x - 2}\) is continuous 
+        on \([1, 8].\)
+        Note that \(f(1) = \sqrt 3\) and \(f(8) = \sqrt{38},\)
+        and \(\sqrt 3 \lt 3 \lt \sqrt{38}.\)
+        Hence, the Intermediate Value Theorem guarantees a number \(c\)
+        in \([1, 8]\) such that \(f(c) = Q = 3\)—that is, 
+        \[\sqrt{5c - 2} = 3 \implies \boxed{c = \frac{11}{5}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that \(f(x) = x^3 - 4x^2 + 2x + 6\) has a zero between \(x = -1\) and \(x = 0.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f\) is continuous on \([-1, 0]\)
+        since polynomials are continuous for all real numbers. 
+        Observe that \(f(-1) = -1\) and \(f(0) = 6.\)
+        The number \(0\) is between \(-1\) and \(6.\)
+        Hence, the Intermediate Value Theorem guarantees that \(f\) 
+        takes on every value between \(-1\) and \(6,\)
+        including \(0,\) on \(-1 \leq x \leq 0.\)
+        In other words, the theorem guarantees a number \(c\)
+        in \([-1, 0]\) such that \(f(c) = 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that \(g(x) = 4x^4 + 2x^3 - x - 8\) has a zero between \(x = 1\) and \(x = 2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(g\) is continuous on \([1, 2]\)
+        since polynomials are continuous for all real numbers. 
+        Examine that \(g(1) = -3\) and \(g(2) = 70.\)
+        Hence, the Intermediate Value Theorem asserts that \(g\) 
+        takes on every value between \(-3\) and \(70,\)
+        which includes \(0,\) on \(1 \leq x \leq 2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the Intermediate Value Theorem to prove that 
+        \[2 \sin^2 \theta + 7 \cos^4 \theta = 4\]
+        has at least one solution on \(0 \leq \theta \leq \pi/2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(\theta) = 2 \sin^2 \theta + 7 \cos^4 \theta\)
+        is continuous on \(0 \leq \theta \leq \pi/2.\)
+        Observe that \(f(0) = 7\) and \(f(\pi/2) = 2.\)
+        Accordingly, because \(2 \lt 4 \lt 7,\) 
+        the Intermediate Value Theorem guarantees a value \(c\)
+        in \([0, \pi/2]\) for which \(f(c) = 4.\)
+        So the equation \(f(\theta) = 4\) has at least one solution 
+        on \([0, \pi/2].\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let 
+        \[
+        g(x)=
+        \bc
+        k^2 - 4x &amp;x \leq 2 \nl 
+        kx &amp;x \gt 2 \pd 
+        \ec 
+        \]
+        Find \(k\) for which \(g(x)\) is continuous at \(x = 2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(g\) is continuous at \(2\) if and only if
+        \[\lim_{x \to 2} g(x) = g(2) \pd\]
+        Observe that \(\lim_{x \to 2^-} g(x) = g(2),\)
+        so we need to find \(k\) such that 
+        \[\lim_{x \to 2^-} g(x) = \lim_{x \to 2^+} g(x) \pd\]
+        The one-sided limits at \(2\) are as follows:
+        \[
+        \ba
+        \lim_{x \to 2^-} g(x) &amp;= k^2 - 4(2) = k^2 - 8 \cma \nl
+        \lim_{x \to 2^+} g(x) &amp;= 2k \pd 
+        \ea
+        \]
+        We equate these expressions to find \(k,\) as follows:
+        \[
+        \ba
+        k^2 - 8 = 2k &amp;\iffArrow k^2 - 2k - 8 = 0 \nl 
+        &amp;\iffArrow (k - 4)(k + 2) = 0 \cma
+        \ea
+        \]
+        whose solutions are 
+        \[\boxed{k = -2} \and \boxed{k = 4}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Determine \(k\) such that
+        \[
+        f(x)=
+        \bc
+        8k - x^2 &amp;x \lt 4 \nl 
+        k^2 \sqrt{x} - k^3 &amp;x \geq 4
+        \ec 
+        \]
+        is continuous at \(x = 4.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f\) is continuous at \(4\) if and only if 
+        \[\lim_{x \to 4} f(x) = f(4) \pd\]
+        Also observe that \(\lim_{x \to 4^+} f(x) = f(4).\)
+        So we need to find \(k\) to satisfy 
+        \[\lim_{x \to 4^-} f(x) = \lim_{x \to 4^+} f(x) \pd\]
+        The left-hand limit is 
+        \[
+        \lim_{x \to 4^-} f(x) = 8k - (4)^2 
+        = 8k - 16 \pd 
+        \]
+        The right-hand limit is 
+        \[
+        \lim_{x \to 4^+} f(x) = k^2 \sqrt{4} - k^3 
+        = 2k^2 - k^3 \pd 
+        \]
+        We equate these expressions and solve for \(k,\) as follows:
+        \[
+        \ba
+        8k - 16 &amp;= 2k^2 - k^3 \nl
+        k^3 - 2k^2 + 8k - 16 &amp;= 0 \nl
+        k^2(k - 2) + 8(k - 2) &amp;= 0 \nl
+        (k^2 + 8)(k - 2) &amp;= 0 \nl 
+        \implies k &amp;= 2 \pd 
+        \ea
+        \]
+        So for \(\boxed{k = 2},\) \(f(x)\) is continuous at \(x = 4.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find \(p\) for which
+        \[
+        k(x)=
+        \bc
+        6 - x &amp;x \leq p \nl 
+        x^2 + 4 &amp;x \gt p
+        \ec 
+        \]
+        is continuous at \(x = p.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        THe function \(k(x)\) is continuous at \(x = p\)
+        if and only if 
+        \[\lim_{x \to p} k(x) = k(p) \pd\]
+        But since \(\lim_{x \to p^-} k(x) = k(p),\)
+        our goal is to find \(p\) for which
+        \[\lim_{x \to p^-} k(x) = \lim_{k \to p^+} k(x) \pd\]
+        The left-hand limit of \(k\) is 
+        \[\lim_{x \to p^-} k(x) = 6 - p \pd \]
+        Moreover, the right-hand limit is 
+        \[\lim_{x \to p^+} k(x) = p^2 + 4 \pd \]
+        Equating these expressions and solving for \(p\) produce
+        \[
+        6 - p = p^2 + 4 \iffArrow
+        p^2 + p - 2 = 0 \cmaa  
+        \]
+        whose solutions are 
+        \[\boxed{p = -2} \and \boxed{p = 1}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let 
+        \[
+        f(x)=
+        \bc
+        e^{2x} + 7 &amp;x \leq q \nl 
+        5e^x + 1 &amp;x \gt q \pd 
+        \ec 
+        \]
+        Find \(q\) for which \(f(x)\) is continuous at \(x = q.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-53"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f\) is continuous at \(q\)
+        if and only if 
+        \[\lim_{x \to q} f(x) = f(q) \pd\]
+        But because \(\lim_{x \to q^-} f(x) = f(q),\)
+        we focus on finding \(q\) to satisfy
+        \[\lim_{x \to q^-} f(x) = \lim_{x \to q^+} f(x) \pd\]
+        The one-sided limits of \(f\) at \(q\) are 
+        \[
+        \ba 
+        \lim_{x \to q^-} f(x) &amp;= e^{2q} + 7 \cma \nl
+        \lim_{x \to q^+} f(x) &amp;= 5e^q + 1 \pd
+        \ea 
+        \]
+        We equate these expressions to obtain 
+        \[
+        \begin{aligned}
+        e^{2q} + 7 &amp;= 5e^q + 1 \\
+        e^{2q} - 5e^q + 6 &amp;= 0 \cmaa \\
+        \ea
+        \]
+        which we factor as 
+        \[(e^q - 2)(e^q - 3)  = 0\pd\]
+        Now we equate each factor to \(0\) to solve for \(q \col\)
+        \[
+        \baat{2}
+        e^q - 2 &amp;= 0 \lspace &amp;e^q - 3&amp;=0 \nl
+        e^q &amp;= 2 \lspace &amp;e^q &amp;= 3 \nl 
+        q &amp;= \ln 2 \lspace &amp;q &amp;= \ln 3 \pd 
+        \eaat 
+        \] 
+        Therefore, \(\boxed{q = \ln 2}\) and \(\boxed{q = \ln 3}\) permit \(f(x)\) to be continuous at \(x = q.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-54"> 
+  <div class="box-solution__head">     EXERCISE 54 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find \(a\) and \(b\) so that the following function is continuous:
+        \[
+        f(x) = 
+        \bc 
+        4x + 2 &amp;x \lt 2 \nl 
+        ax + b &amp;2 \leq x \lt 5 \nl 
+        \sqrt{6 - x} &amp;x \geq 5 \pd
+        \ec 
+        \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-54"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The piecewise function \(f(x)\) has splits at \(x = 2\) and \(x = 5.\)
+        If \(f\) is continuous, then it's continuous at these splits. 
+        Thus, we need
+        \[\lim_{x \to 2} f(x) = f(2) \and \lim_{x \to 5} f(x) = f(5) \pd\]
+        The one-sided limits of \(f\) at \(2\) are 
+        \[
+        \ba
+        \lim_{x \to 2^-} f(x) &amp;= 4(2) + 2 = 10 \cmaa \nl
+        \lim_{x \to 2^+} f(x) &amp;= 2a + b \pd
+        \ea
+        \]
+        These one-sided limits must be equal, so we have 
+        \begin{equation} 
+        2a + b = 10 \pd \label{eq:f(x)-3-piecewise-eq-1}
+        \end{equation}
+        Likewise, the one-sided limits of \(f\) at \(5\) are
+        \[
+        \ba 
+        \lim_{x \to 5^-} f(x) &amp;= 5a + b \cma \nl
+        \lim_{x \to 5^+} f(x) &amp;= \sqrt{6 - 5} = 1 \pd
+        \ea
+        \]
+        These one-sided limits must be equal, so we find 
+        \begin{equation} 
+        5a + b = 1 \pd \label{eq:f(x)-3-piecewise-eq-2}
+        \end{equation}
+        We now have the following system of equations:
+        \begin{align}
+        2a + b &amp;= 10 \cma \eqlabel{eq:f(x)-3-piecewise-eq-1} \nl
+        5a + b &amp;= 1 \cma \eqlabel{eq:f(x)-3-piecewise-eq-2}
+        \end{align}
+        whose solution is 
+        \[\boxed{a = -3} \and \boxed{b = 16}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-55"> 
+  <div class="box-solution__head">     EXERCISE 55 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Functions \(f,\) \(g,\) and \(h\) satisfy 
+        \(g(x) \leq f(x) \leq h(x)\)
+        for \(-3 \leq x \leq -1.\)
+        It is known that \(f(-2) = 8\) and
+        \[\lim_{x \to -2} g(x) = \lim_{x \to -2} h(x) = 8 \pd\]
+        Is \(f(x)\) continuous at \(x = -2 \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-55"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>Yes</b>. 
+        By the Squeeze Theorem 
+        (from Section <a href="/ValCalc/ValCalc/calculus/1.3-Squeeze-Theorem-and-Trigonometric-Limits.html">1.3</a>), 
+        we have \(\lim_{x \to -2} f(x) = 8.\)
+        Since this limit equals \(f(-2) = 8,\)
+        \(f\) is continuous at \(-2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-56"> 
+  <div class="box-solution__head">     EXERCISE 56 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        On \(2 \leq x \leq 5,\)
+        three functions are defined
+        such that \(p(x) \leq r(x) \leq q(x).\)
+        Functions \(p\) and \(q\) are both continuous at \(4,\)
+        and suppose that \(p(4) = q(4)\) \(= 0.\)
+        At \(x = 4,\) prove that \(r(x)\) is continuous and has a zero.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-56"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Functions \(p\) and \(q\) are each given to be continuous at \(x = 4.\)
+        And we are given \(p(4) = q(4) = 0,\) so we have
+        \[
+        \baat{2}
+        \lim_{x \to 4} p(x) &amp;= p(4) &amp;&amp;= 0 \cma \nl 
+        \lim_{x \to 4} q(x) &amp;= q(4) &amp;&amp;= 0 \pd
+        \eaat
+        \]
+        By the Squeeze Theorem, 
+        \(\lim_{x \to 4} r(x) = 0.\)
+        In addition, we have 
+        \(p(4) \leq r(4) \leq q(4)\)
+        \(\iffArrow 0 \leq r(4) \leq 0,\)
+        so \(r(4) = 0.\)
+        Because \(\lim_{x \to 4} r(x) = r(4),\)
+        \(r\) is continuous at \(x = 4.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

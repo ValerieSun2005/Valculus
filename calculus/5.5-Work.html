@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5.5: Work</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>5.5: Work</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="5.5-Work-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="5.5-Work-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Work]]]-->
+<p>
+    The concept of <span class="emph">work</span> is fundamental to physics and engineering. 
+    It measures how much energy is transferred to an object due to a force applied over some distance. 
+    As you push a pencil across a table, or as Earth pushes down on an apple, 
+    work is being done. 
+    In each case, energy is being added to an object to make it move a certain distance.
+    Let's suppose that an object moves along a straight line 
+    with time, as modeled by the position function \(s(t).\)
+    <span class="emph">Newton's Second Law</span> states that the force \(F\) applied to an object 
+    equals the product of its mass \(m\) and acceleration \(a\)—namely, 
+    \begin{equation} 
+    F = ma = m \derivOrder{s}{t}{2} \pd \label{eq:newton-2}
+    \end{equation}
+    In the <span class="emph">International System of Units (SI)</span>, 
+    \(m\) is measured in kilograms and \(a\) is measured in meters per second squared. 
+    Then \(F\) is expressed in kilogram-meters per second squared, 
+    a unit we define as the <span class="emph">newton</span> \((\text N).\) 
+    Symbolically, \(1 \un N\) \(= 1 \undiv{kg m}{sec}^2.\) 
+    The work \(W\) done by a <i>constant</i> force \(F\) over a distance \(d\) is defined by 
+    \begin{equation} 
+    W = Fd \pd \label{eq:work-uniform}
+    \end{equation}
+    So if an object is pushed harder or moved farther, then more work is done 
+    because greater energy is needed for the motion. 
+    The SI unit for work is a newton-meter, which we define as the <span class="emph">joule</span>
+    \((\text J).\) Or if force is measured in pounds and distance is measured in feet, 
+    then work is expressed in pound-feet \((\text{lb-ft}).\) 
+    Work is <i>independent of time</i>; 
+    the time required to move an object is irrelevant to how much energy is transferred to it.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        How much work is done to lift a \(4\)-kilogram box from the floor 
+        onto a chair that is \(0.8\) meter high?
+        (The acceleration due to gravity is \(g = 9.8\) meters per second squared.)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    The force on the box due to gravity—the <i>weight</i> of the box—is, 
+    following \(\eqref{eq:newton-2},\)
+    \[F = mg = (4)(9.8) = 39.2 \un N \pd\]
+    To lift the box, we must <i>oppose</i> this force 
+    by exerting an equal force upward.
+    The work we do is therefore, by \(\eqref{eq:work-uniform},\)
+    \[W = Fd = (39.2)(0.8) = \boxed{31.36 \un J}\]
+    In words, we expend \(31.36 \un J\) of energy to lift the box up onto the chair.
+</div>
+
+<p>
+    <span class="label-emph">Work with Variable Forces</span>
+    We use \(\eqref{eq:work-uniform}\) when \(F\) is constant over the distance \(d.\)
+    But what is the work if \(F\) isn't uniform? 
+    Let's define the object's path to be the positive \(x\)-axis
+    from \(x = a\) to \(x = b.\)
+    At each \(x,\) suppose that a force \(F(x)\) acts on the object. 
+    We split the interval \([a, b]\) into \(n\) subintervals 
+    of endpoints \(x_0,\) \(x_1, \dots,\) \(x_n\) 
+    and equal width \(\Delta x.\)
+    Assuming \(n\) is big (meaning \(\Delta x\) is small), 
+    the force \(F(x)\) is almost constant in each subinterval through which the object moves.
+    If \(x_i^*\) is a sample point in the general subinterval \([x_{i - 1}, x_i],\)
+    then the work done on the object over this subinterval is approximated 
+    by \(\eqref{eq:work-uniform}\) to be 
+    \[W_i \approx F \par{x_i^*} \Delta x \pd\]
+    Hence, the total work \(W\) is approximated by summing the work done over all \(n\) subintervals: 
+    \[W \approx \sum_{i = 1}^n F \par{x_i^*} \Delta x \pd\]
+    As we make \(n\) larger, we sample more subintervals, 
+    in each of which \(F(x)\) changes very little.
+    If we let \(n \to \infty,\) then our sum gives the exact value of \(W\)—that is, 
+    \[W = \lim_{n \to \infty} \sum_{i = 1}^n F \par{x_i^*} \Delta x \pd\]
+    This Riemann sum represents the integral of \(F(x)\) from \(x = a\) to \(x = b,\)
+    so we attain
+    \begin{equation} 
+    W = \int_a^b F(x) \di x \pd \label{eq:work}
+    \end{equation}
+    We use this formula if the force is expressed as a function of displacement. 
+    These models are abundant in physics, as shown by the following examples. 
+</p>
+<p>
+    <span class="text-remark">REMARK</span>
+    If the force is constant, then \(\eqref{eq:work}\) becomes 
+    \[W = F \int_a^b \di x = F x \intEval_a^b = F(b - a) \cma\]
+    where \((b - a)\) is the distance \(d\) moved. 
+    This result is a special case that agrees with \(\eqref{eq:work-uniform}.\)
+    Accordingly, \(\eqref{eq:work}\) is the <i>more general formula for the work done</i>. 
+</p>
+
+<div class="box-title">WORK DONE BY A VARIABLE FORCE</div>
+<div class="box">
+    If a variable force \(F(x)\) acts on an object as it is moved from \(x = a\) to \(x = b,\)
+    then the work done on the object is 
+    \begin{equation} 
+    W = \int_a^b F(x) \di x \pd \eqlabel{eq:work}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        An object travels along the \(x\)-axis, where \(x\) is measured in feet.
+        The force the object experiences, in pounds, is modeled by the function  
+        \[F(x) = 3x^2 + 2x + 15 \pd\]
+        Calculate the work done to move the object from \(x = 1\) to \(x = 2.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Using \(\eqref{eq:work},\) we calculate the work done to be 
+    \[
+    \ba 
+    W &= \int_1^2 \par{3x^2 + 2x + 15} \di x \nl 
+    &= \par{x^3 + x^2 + 15x} \intEval_1^2 \nl 
+    &= \boxed{25 \un{ft-lb}}
+    \ea 
+    \]
+</div>
+
+<figure class="hooke-law" id="hooke-law">
+    <img src="../images/sectionImages/hooke-law.jpg" class="hooke-law" alt="Figure 1">
+</figure>
+
+<style>
+    .hooke-law::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Springs</span>
+    A spring's stiffness is measured by the <span class="emph">spring constant</span>, \(k.\)
+    (A stiff spring has a large \(k,\) whereas a loose spring has a small <nobr>\(k.\))</nobr>
+    When a spring is at its natural length, it is said to be in <i>equilibrium</i>. 
+    But to stretch a spring, a force must be applied. 
+    <span class="emph">Hooke's Law</span> states that  
+    to keep a spring stretched by a distance \(x\) from equilibrium position,
+    we must apply a force of 
+    \begin{equation} 
+    F(x) = kx \pd \label{eq:hooke-law}
+    \end{equation}
+    (See <a href="#hooke-law">Figure 1</a>.)
+    In words, to continue stretching a spring, 
+    we must apply a force that increases linearly with the displacement.
+    Hooke's Law is an excellent approximation if \(x\) isn't too large. 
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        A force of \(30\) newtons is required to keep a spring 
+        stretched by \(5\) centimeters past its natural length.
+        Calculate how much work is required to stretch the spring from 
+        its natural length to \(10\) centimeters past its natural length. 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    With \(F = 30 \un N\) and \(x = 5 \un{cm}\) \(= 0.05 \un m,\)
+    Hooke's law [as in <nobr>\(\eqref{eq:hooke-law}\)]</nobr> 
+    gives the spring constant \(k\) to be 
+    \[k = \frac{F}{x} = \frac{30}{0.05} = 600 \undiv{N}{m} \pd\]
+    Accordingly, the force function is \(F(x) = 600x.\)
+    The work done to stretch the spring from \(x = 0\) (its natural length)
+    to \(x = 0.1\) is then
+    \[W = \int_0^{0.1} 600 x \di x = 300x^2 \intEval_0^{0.1} = \boxed{3 \un J}\]
+</div>
+
+<figure class="work-gas" id="work-gas">
+    <img src="../images/sectionImages/work-gas.jpg" class="work-gas" alt="Figure 2">
+</figure>
+
+<style>
+    .work-gas::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Gases</span>
+    A gas is a substance that expands freely and has no fixed shape.
+    Examples of common gases are oxygen, carbon dioxide, and methane.
+    Consider a sample of gas enclosed by a container and sealed above by a piston
+    (<a href="#work-gas">Figure 2</a>).
+    The gas expands in volume if its temperature is increased, 
+    or if more gaseous molecules are added to the container 
+    (for example, through a reaction between multiple gases).
+    As the gas expands in volume, the piston is pushed outward—a motion that requires work to be done by the gas. 
+    We define <span class="emph">pressure</span> \(P\) as force \(F\) per area \(A;\)
+    namely, \(P = F/A.\)
+    <span class="emph">Boyle's Law</span> states that a gas's pressure varies inversely 
+    with its volume \(V.\)
+    Mathematically, if \(C\) is a constant of proportionality, then 
+    \[P = \frac{C}{V} \pd\]
+    The gas therefore exerts a force of 
+    \[F = PA = \frac{C}{V} A \pd\]
+    When the gas has a volume of \(V_i,\) 
+    the work done to expand the piston by a distance \(\Delta x\)
+    is approximately
+    \[W_i \approx F_i d = \par{\frac{C}{V_i} A} \Delta x 
+    = \frac{C}{V_i} \Delta V \pd\]
+    Thus, the work done by the gas 
+    as its volume increases from \(V_a\) to \(V_b\) is  
+    \begin{equation} 
+    W = \int_{V_a}^{V_b} \frac{C}{V} \di V \pd \label{eq:work-gas}
+    \end{equation}
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        A sample of gas with an initial volume of \(2\) cubic feet 
+        exerts a pressure of \(400\) pounds per square foot.
+        Calculate the work done by the gas as it expands to a volume of \(4\) cubic feet.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Substituting the initial \(P = 400 \un{psi}\) and \(V = 2 \un{ft}^3\) into Boyle's Law shows
+    \[400 = \frac{C}{2} \implies C = 800 \pd\]
+    So by \(\eqref{eq:work-gas},\) the work done by the gas is 
+    \[
+    \ba 
+    W &= \int_2^4 \frac{800}{V} \di V = 800 \ln \abs{V} \intEval_2^4 \nl 
+    &= \boxed{800 \ln 2 \un{ft-lb}} \approx 554.518 \un{ft-lb} \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        A cable weighs \(400\) pounds and is \(100\) feet long.
+        If the cable is anchored vertically to the top of a tall building,
+        then much work is required to lift the cable up the building?
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <p>
+        Each portion of the cable is at a different height, 
+        meaning different amounts of work are required to lift different parts of the cable. 
+        (More work is needed to hoist the bottom part of the cable,
+        whereas the top of the cable is closer to the building's top and therefore requires less work to raise.) 
+        It is difficult to attain a force function.
+        When this occurs, it is a good idea to break the problem up into smaller bits. 
+        Our strategy is to consider horizontal segments of the cable and 
+        calculate the work needed to lift each one up the building.
+        We'll then sum these works to calculate the total work \(W\) needed to 
+        lift the entire cable.
+    </p>
+    <figure class="work-cable" id="work-cable">
+        <img src="../images/sectionImages/work-cable.jpg" class="work-cable" alt="Figure 3">
+    </figure>
+    
+    <style>
+        .work-cable::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    <p>
+        We position the \(y\)-axis to face downward
+        such that \(y = 0\) is the cable's top end 
+        and \(y = 50\) is its bottom end.
+        (See <a href="#work-cable">Figure 3</a>.)
+        Let's divide \([0, 50]\) into \(n\) subintervals 
+        with endpoints \(y_0, y_1,\) \(\dots, y_n\) and equal length \(\Delta y.\)
+        In the general subinterval \([y_{i - 1}, y_i],\) 
+        let \(y_i^*\) be a sample point. 
+        All points in this subinterval are lifted up by roughly the same distance \(y_i^*.\)
+        Since the cable weighs \(400 \un{lb}\) and is \(100 \un{ft}\) long,
+        its <i>linear density</i> is \(4 \undiv{lb}{ft}.\) 
+        The weight of the <nobr>\(i\)th</nobr> part is therefore \(\par{4 \undiv{lb}{ft}} \par{\Delta y \un{ft}}\)
+        \(= 4 \Delta y \un{lb}.\)
+        We therefore require an upward force of \(4 \Delta y\) to overcome gravity 
+        and successfully raise the portion of cable, so the work needed is approximately 
+        \[W_i \approx \underbrace{\par{4 \Delta y}}_{\text{force}} \cdot \underbrace{y_i^*}_{\text{distance}} 
+        = 4 y_i^* \Delta y \pd\] 
+        Hence, the total work \(W\) is given by summing all \(n\) approximations
+        and letting \(n \to \infty \col\)
+        \[
+        \ba 
+        W &= \lim_{n \to \infty} \sum_{i = 1}^n 4 y_i^* \Delta y = \int_0^{50} 4y \di y \nl 
+        &= 2y^2 \intEval_0^{50} = \boxed{5000 \un{ft-lb}}
+        \ea 
+        \]
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        A tank of water is the shape of an inverted cone 
+        with height \(8\) meters and radius \(3\) meters.
+        Water fills the cone to a level of \(6\) meters.
+        Calculate the work required to pump all the water out.
+        (Water has a density of \(1000\) kilograms per cubic meter.)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <p>
+        To pump all the water out, we must lift all the water to the top of the tank. 
+        But the water is scattered across different depths; 
+        the water near the top is easier to pump out than 
+        the water at the bottom.
+        Hence, our strategy is to divide the water into layers
+        and calculate the work needed to raise each layer to the top. 
+        We then sum these values to attain the total work \(W\) required 
+        to empty the entire tank.
+    </p>
+
+    <figure class="work-cone figure-wide" id="work-cone">
+        <img src="../images/sectionImages/work-cone.jpg" class="work-cone" alt="Figure 4">
+    </figure>
+    
+    <style>
+        .work-cone::before{
+            content:'FIGURE 4';
+        }
+    </style>
+
+    <p>
+        Let's position the \(y\)-axis to face downward such that \(y = 0\) is the level of the cone's top.
+        Then the water extends from \(y = 2\) to \(y = 8.\)
+        We split the interval \([2, 8]\) into \(n\) subintervals 
+        \(y_0, y_1,\) \(\dots, y_n\) and equal width \(\Delta y.\)
+        Let \(y_i^*\) be a sample point in the general subinterval \([y_{i - 1}, y_i].\)
+        Consider pumping out the \(i\)th layer, which we approximate to be a cylinder of volume 
+        \[V_i \approx \pi r_i^2 \Delta y \pd\]
+        By similar triangles (<a href="#work-cone">Figure 4</a>), we see
+        \[\frac{r_i}{8 - y_i^*} = \frac{3}{8} \so r_i = \frac{3}{8} \par{8 - y_i^*} \pd\]
+        Accordingly, the mass of the <nobr>\(i\)th</nobr> layer is given by this volume multiplied by 
+        water's density—that is,
+        \[
+        \ba 
+        m_i = 1000 V_i 
+        &\approx 1000 \pi \parbr{\frac{3}{8} \par{8 - y_i^*}}^2 \Delta y \nl 
+        &= \frac{1125}{8} \pi \par{8 - y_i^*}^2 \Delta y \pd
+        \ea 
+        \]
+        This layer must overcome the force of gravity, so we require a force of 
+        \[F_i = m_i g \approx \frac{1125}{8} (9.8) \pi \par{8 - y_i^*}^2 \Delta y \pd\]
+        Since the layer travels up a distance of approximately \(y_i^*,\) 
+        the work required to raise it is roughly
+        \[W_i \approx F_i y_i^* = \frac{1125}{8} (9.8) \pi y_i^* \par{8 - y_i^*}^2 \Delta y \pd\]
+        The total work done to clear the entire tank is given by summing all \(n\) 
+        approximations and letting \(n \to \infty,\) as follows:
+        \[
+        \ba 
+        W &= \lim_{n \to \infty} \sum_{i = 1}^n \frac{1125}{8} (9.8) \pi y_i^* \par{8 - y_i^*}^2 \Delta y \nl 
+        &= \frac{1125}{8} (9.8) \pi \int_2^8 y \par{8 - y}^2 \di y \nl
+        &= \frac{1125}{8} (9.8) \pi \int_2^8 \par{y^3 - 16y^2 + 64y} \di y \nl 
+        &= \frac{1125}{8} (9.8) \pi \par{\frac{y^4}{4} - \frac{16y^3}{3} + 32y^2} \intEval_2^8 \nl 
+        &= \boxed{\frac{694575\pi}{2} \un J} \approx 1.091 \times 10^6 \un J \pd
+        \ea 
+        \]
+    </p>
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        <span class="emph">Work</span> measures how much energy is added to an object
+        to make it move some distance. 
+        If a constant force \(F\) is applied over a distance \(d,\)
+        then the work done is 
+        \begin{equation} 
+        W = Fd \pd \eqlabel{eq:work-uniform}
+        \end{equation}
+        The SI unit for work is the <span class="emph">joule</span> \((\text J);\)
+        if force is measured in pounds and distance is measured in feet, 
+        then work is expressed in pound-feet \((\text{lb-ft}).\) 
+        Work is <i>independent of time</i>. 
+        If a variable force \(F(x)\) acts on an object as it is moved from \(x = a\) to \(x = b,\)
+        then the work done on the object is 
+        \begin{equation} 
+        W = \int_a^b F(x) \di x \pd \eqlabel{eq:work}
+        \end{equation}
+        <span class="emph">Hooke's Law</span> gives a force function 
+        for a spring to be 
+        \begin{equation} 
+        F(x) = kx \cma \eqlabel{eq:hooke-law}
+        \end{equation}
+        where \(k\) is the <span class="emph">spring constant</span>
+        and \(x\) is the distance from equilibrium. 
+        A gas's pressure \(P\) and volume \(V\) are related by 
+        <span class="emph">Boyle's Law</span>:
+        \[P = \frac{C}{V} \cma\]
+        where \(C\) is a constant of proportionality.
+        The work done by the gas 
+        as its volume increases from \(V_a\) to \(V_b\) is  
+        \begin{equation} 
+        W = \int_{V_a}^{V_b} \frac{C}{V} \di V \pd \eqlabel{eq:work-gas}
+        \end{equation}
+    </p>
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

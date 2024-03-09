@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4.5: Numerical Integration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>4.5: Numerical Integration</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="4.5-Numerical-Integration-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="4.5-Numerical-Integration-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Numerical-Integration]]]-->
+<p>
+    In Section <a href="/ValCalc/ValCalc/calculus/4.3-Fundamental-Theorem-of-Calculus.html">4.3</a>
+    we learned a vital fact: 
+    the Fundamental Theorem of Calculus enables us to 
+    compute a definite integral \(\int_a^b f(x) \di x\) if we can find an antiderivative of \(f.\)
+    Sadly, most functions have <i>non-elementary</i> antiderivatives, which can't be expressed using
+    any combination of functions we know (such as polynomial, rational, radical, exponential, trigonometric, and logarithmic functions).
+    For example, functions such as 
+    \[\andThree{e^{x^2}}{\frac{1}{\sqrt{x^7 + 1}}}{\cos \par{x^2}}\]
+    don't have elementary antiderivatives. 
+    To evaluate definite integrals with these functions, 
+    we must settle for an <i>approximation</i> 
+    if we work by hand.
+    But understanding numerical integration allows us to write computer programs 
+    that can evaluate definite integrals almost exactly.
+    These principles are based on the following topics:
+    <ul>
+        <li>
+            <a href="#left-right-endpt-estimate" class="page-anchor">Endpoint Approximations</a>
+        </li>
+        <li>
+            <a href="#midpoint-rule" class="page-anchor">Midpoint Rule</a>
+        </li>
+        <li>
+            <a href="#trapezoidal-rule" class="page-anchor">Trapezoidal Rule</a>
+        </li>
+        <li>
+            <a href="#simpsons-rule" class="page-anchor">Simpson's Rule</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="left-right-endpt-estimate">Endpoint Approximations</h4>
+
+<p>
+    The simplest approximations to definite integrals use <i>Riemann sums</i>, 
+    in which we inscribe rectangles within a curve and add their areas.
+    To estimate \(\int_a^b f(x) \di x,\)
+    we first divide \([a, b]\) into \(n\) subintervals 
+    of endpoints \(a = x_0,\) \(x_1, \dots,\) \(x_{n - 1}, x_n = b\)
+    and equal width \(\Delta x.\)
+    In the general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    we evaluate \(f\) at a sample point \(x_i^*.\)
+    An approximating rectangle in this subinterval has area \(f(x_i^*) \Delta x.\)
+    We then sum the areas of all \(n\) rectangles, as we discussed in 
+    Section <a href="/ValCalc/ValCalc/calculus/4.2-Definite-Integrals.html">4.2</a>.
+    In a left Riemann sum, we take \(x_i^* = x_{i - 1}\) and attain the approximation
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx L_n = \sum_{i = 1}^n f(x_{i - 1}) \Delta x \pd \label{eq:L-n} 
+    \end{equation}
+    (See <a href="#approx-integration-left">Figure 1A</a>.)
+    Likewise, a right Riemann sum uses \(x_i^* = x_i\) and provides the estimate 
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx R_n = \sum_{i = 1}^n f(x_i) \Delta x \pd \label{eq:R-n} 
+    \end{equation}
+    (See <a href="#approx-integration-right">Figure 1B</a>.)
+    We call \(L_n\) and \(R_n\) the <span class="emph">left-endpoint approximation</span>
+    and <span class="emph">right-endpoint approximation</span>, respectively. 
+</p>
+
+<div class="figure-center">
+    <figure class="approx-integration-left" id="approx-integration-left">
+        <img src="../images/sectionImages/approx-integration-left.jpg" class="approx-integration-left" alt="Figure 1A">
+    </figure>
+    <figure class="approx-integration-right" id="approx-integration-right">
+        <img src="../images/sectionImages/approx-integration-right.jpg" class="approx-integration-right" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .approx-integration-left::before{
+        content:'FIGURE 1A';
+    }
+
+    .approx-integration-right::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<div class="box-title">LEFT-ENDPOINT AND RIGHT-ENDPOINT APPROXIMATIONS</div>
+<div class="box">
+    To approximate \(\int_a^b f(x) \di x,\)
+    the <span class="emph">left-endpoint approximation</span> gives 
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx L_n = \sum_{i = 1}^n f(x_{i - 1}) \Delta x \eqlabel{eq:L-n} 
+    \end{equation}
+    and the <span class="emph">right-endpoint approximation</span> gives 
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx R_n = \sum_{i = 1}^n f(x_i) \Delta x \pd \eqlabel{eq:R-n} 
+    \end{equation}
+</div>
+
+<aside class="box-caution">
+    Do not confuse the terms <i>error</i>
+    and <i>error bound</i>. 
+</aside>
+
+<p>
+    <span class="label-emph">Errors</span>
+    When we estimate a definite integral, 
+    our approximation will be wrong by some amount—called the <span class="emph">error</span>. 
+    For example, the error in the left-endpoint approximation is 
+    \[E_n = \underbrace{\int_a^b f(x) \di x}_{\text{true value}} - \underbrace{L_n}_{\text{our estimate}}\]
+    and the error in the right-endpoint approximation is 
+    \[E_n = \underbrace{\int_a^b f(x) \di x}_{\text{true value}} - \underbrace{R_n}_{\text{our estimate}} \pd\]
+    Unless we know the exact value of \(\int_a^b f(x) \di x\)
+    (if so, then why even approximate?), 
+    we cannot find the exact error \(E_n.\)
+    Instead, we <i>can</i> find an <span class="emph">error bound</span>—a 
+    number whose magnitude is no greater than the magnitude of the error.
+    It turns out that endpoint approximations to \(\int_a^b f(x) \di x\)
+    have an error bound given by
+    \begin{equation} 
+    \abs{E_n} \leq \frac{M_1 (b - a)^2}{2n} \cma \label{eq:E-bound-endpts}
+    \end{equation}
+    where \(\abs{f'(x)} \leq M_1\) on \([a, b].\)
+    Simply put, when we use \(\eqref{eq:L-n}\) or \(\eqref{eq:R-n}\)
+    to approximate \(\int_a^b f(x) \di x,\)
+    we can be sure our estimate is off by <i>no more than</i> the prescribed magnitude in \(\eqref{eq:E-bound-endpts}.\)
+    As we increase \(n\)—that is, as we inscribe more, thinner rectangles within a curve—our approximation 
+    grows in accuracy. 
+    So it's intuitive that the error bound in \(\eqref{eq:E-bound-endpts}\)
+    decreases with \(n.\)
+    Unfortunately, the proofs of all the error bounds in this section 
+    are beyond the scope of this text.
+</p>
+<p>
+    If \(f\) is increasing on \([a, b],\)
+    then a left-endpoint approximation underestimates \(\int_a^b f(x) \di x\)
+    and a right-endpoint approximation overestimates \(\int_a^b f(x) \di x.\)
+    For the particular case \(f(x) \geq 0,\)
+    the rectangles positioned at the left endpoints miss portions of the bounded region 
+    (<a href="#approx-integration-L-underestimate">Figure 2A</a>),
+    whereas rectangles positioned at the right endpoints capture excess area 
+    (<a href="#approx-integration-R-overestimate">Figure 2B</a>).
+    Mathematically, we say 
+    \[L_n \leq \int_a^b f(x) \di x \leq R_n \pd\]
+    Conversely, if \(f\) is decreasing on \([a, b],\)
+    then a left-endpoint approximation overestimates \(\int_a^b f(x) \di x\)
+    and a right-endpoint approximation underestimates \(\int_a^b f(x) \di x.\)
+    Symbolically, we have 
+    \[R_n \leq \int_a^b f(x) \di x \leq L_n \pd\]
+    (By sketching a positive decreasing curve, you may verify that a left Riemann sum 
+    overfills a region and a right Riemann sum underfills the region.)
+</p>
+
+<div class="figure-center">
+    <figure class="approx-integration-L-underestimate" id="approx-integration-L-underestimate">
+        <img src="../images/sectionImages/approx-integration-L-underestimate.jpg" class="approx-integration-L-underestimate" alt="Figure 2A">
+    </figure>
+    <figure class="approx-integration-R-overestimate" id="approx-integration-R-overestimate">
+        <img src="../images/sectionImages/approx-integration-R-overestimate.jpg" class="approx-integration-R-overestimate" alt="Figure 2B">
+    </figure>
+</div>
+
+<style>
+    .approx-integration-L-underestimate::before{
+        content:'FIGURE 2A';
+    }
+
+    .approx-integration-R-overestimate::before{
+        content:'FIGURE 2B';
+    }
+</style>
+
+<div class="box-title">ERRORS TO ENDPOINT APPROXIMATIONS</div>
+<div class="box">
+    For \(\int_a^b f(x) \di x,\)
+    a left endpoint approximation \(L_n\) or a right endpoint approximation \(R_n\) satisfies 
+    the error bound
+    \begin{equation} 
+    \abs{E_n} \leq \frac{M_1 (b - a)^2}{2n} \cma \eqlabel{eq:E-bound-endpts}
+    \end{equation}
+    where \(\abs{f'(x)} \leq M_1\) for \(a \leq x \leq b.\)
+    <ol class="list-alpha">
+        <li>
+            If \(f\) is increasing on \([a, b],\)
+            then 
+            \[L_n \leq \int_a^b f(x) \di x \leq R_n \pd\]
+        </li>
+        <li>
+            If \(f\) is decreasing on \([a, b],\)
+            then 
+            \[R_n \leq \int_a^b f(x) \di x \leq L_n \pd\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-approx-integration-parabola"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Estimate the value of \(\int_0^2 x^2 \di x\)
+        by using a right-endpoint approximation with \(n = 4.\)
+        Determine whether the approximation is an underestimate or overestimate. 
+        Then calculate an error bound in the approximation.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <p>
+        We estimate the area using four approximating rectangles of equal width \(\Delta x = 2/4\) \(= 0.5.\)
+        Using \(\eqref{eq:R-n}\) with \(f(x) = x^2\) and \(n = 4,\) 
+        we estimate \(\int_0^2 x^2 \di x\) to be 
+        \[
+        \ba 
+        R_4 &= \sum_{i = 1}^4 x_i^2 \Delta x \nl 
+        &= \parbr{(0.5)^2 + (1)^2 + (1.5)^2 + (2)^2} (0.5) \nl 
+        &= \boxed{3.75}
+        \ea 
+        \]
+    </p>
+    <figure class="approx-integration-parabola-ex" id="approx-integration-parabola-ex">
+        <img src="../images/sectionImages/approx-integration-parabola-ex.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .approx-integration-parabola-ex::before{
+            content:'FIGURE 3';
+        }
+    </style> 
+    <p>
+        <span class="label-emph">Error</span>
+        Because \(f(x) = x^2\) is increasing on \(0 \leq x \leq 2,\)
+        the right-endpoint approximation is an <b>overestimate</b>, 
+        as shown by the excess area in <a href="#approx-integration-parabola-ex">Figure 3</a>. 
+        Observe that \(f'(x) = 2x,\) whose maximum on \([0, 2]\) is \(4.\)
+        Hence, we use \(\eqref{eq:E-bound-endpts}\) with \(M_1 = 4\) and \(n = 4\) to get an error bound of 
+        \[
+        \abs{E_4} \leq \frac{4 (2 - 0)^2}{2(4)} = \boxed 2
+        \]
+    </p>
+</div>
+
+<p>
+    The error bound of \(\abs{E_4} \leq 2\) in <a href="/ValCalc/ValCalc/calculus/4.5-Numerical-Integration.html#ex-approx-integration-parabola">Example 1</a>
+    guarantees that the approximation \(R_4 = 3.75\) differs from the true value of \(\int_0^2 x^2 \di x\) 
+    by no more than \(2.\) 
+    Yet the integral happens to be easy to evaluate; by the Fundamental Theorem of Calculus,
+    \[\int_0^2 x^2 \di x = \tfrac{1}{3} x^3 \intEval_0^2 = \tfrac{8}{3} \approx 2.667 \pd\]
+    Hence, our right-endpoint approximation indeed overestimated this value by roughly \(1.083,\)
+    so the <i>error</i> in the estimate was \(-1.083,\) whose magnitude is within \(2.\)
+    But most definite integrals cannot be calculated exactly; 
+    we deliberately chose the simple example \(\int_0^2 x^2 \di x\) to illustrate the concept of error. 
+</p>
+
+<h4 id="midpoint-rule">Midpoint Rule</h4>
+
+<figure class="approx-integration-mid" id="approx-integration-mid">
+    <img src="../images/sectionImages/approx-integration-mid.jpg" alt="Figure 4">
+</figure>
+<style>
+    .approx-integration-mid::before{
+        content:'FIGURE 4';
+    }
+</style> 
+
+<p>
+    Instead of taking the sampling point \(x_i^*\) to be an endpoint 
+    of \(\parbr{x_{i - 1}, x_i},\)
+    we can let \(x_i^*\) be the midpoint 
+    \[\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i) \pd\]
+    This method leads to the <span class="emph">Midpoint Rule</span>, 
+    in which we use the approximation 
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx M_n = \sum_{i = 1}^n f(\overline x_i) \Delta x \pd \label{eq:M-n} 
+    \end{equation}
+    (See <a href="#approx-integration-mid">Figure 4</a>.)
+    The error bound for the Midpoint Rule is 
+    \begin{equation} 
+    \abs{E_M} \leq \frac{M_2 (b - a)^3}{24n^2} \cma \label{eq:E-M}
+    \end{equation}
+    where \(\abs{f''(x)} \leq M_2\) on \([a, b].\)
+    In general, the Midpoint Rule is more accurate than 
+    <a href="#left-right-endpt-estimate" class="page-anchor">Endpoint Approximations</a>
+    because rectangles positioned at the midpoints \(\overline x_1,\) \(\overline x_2,\) \(\dots, \overline x_n\) 
+    are more effective in capturing a bounded region.
+</p>
+
+<div class="box-title">MIDPOINT RULE</div>
+<div class="box">
+    The <span class="emph">Midpoint Rule</span> 
+    gives the approximation
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx M_n = \sum_{i = 1}^n f(\overline x_i) \Delta x \cma \eqlabel{eq:M-n}
+    \end{equation}
+    where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i).\)
+    The error bound to this estimate is 
+    \begin{equation} 
+    \abs{E_M} \leq \frac{M_2 (b - a)^3}{24n^2} \cma \eqlabel{eq:E-M}
+    \end{equation}
+    where \(\abs{f''(x)} \leq M_2\) for \(a \leq x \leq b.\)
+</div>
+
+<div class="example-title" id="ex-approx-int-1/x"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using the Midpoint Rule with \(n = 5,\)
+        approximate \(\int_1^4 (1/x) \di x.\)
+        Then find an error bound to this estimate.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="approx-integration-inv-midpt" id="approx-integration-inv-midpt">
+        <img src="../images/sectionImages/approx-integration-inv-midpt.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .approx-integration-inv-midpt::before{
+            content:'FIGURE 5';
+        }
+    </style> 
+    Geometrically, we construct five rectangles 
+    of equal width \(\Delta x = (4 - 1)/5\) \(= 0.6\)
+    and sum their areas.
+    The subintervals are \([1, 1.6],\) \([1.6, 2.2],\) \([2.2, 2.8],\) \([2.8, 3.4],\)
+    and \([3.4, 4];\)
+    we sample the midpoint of each subinterval.
+    (See <a href="#approx-integration-inv-midpt">Figure 5</a>.)
+    The Midpoint Rule, as in \(\eqref{eq:M-n},\) therefore estimates \(\int_1^4 (1/x) \di x\) to be 
+    \[
+    \ba 
+    M_5 &= \sum_{i = 1}^5 \frac{1}{\overline x_i} \Delta x \nl 
+    &= \par{\frac{1}{1.3} + \frac{1}{1.9} + \frac{1}{2.5} + \frac{1}{3.1} + \frac{1}{3.7}} (0.6) \nl 
+    &\approx \boxed{1.373}
+    \ea 
+    \]
+    If \(f(x) = 1/x,\) then \(f'(x) = -1/x^2\) and \(f''(x) = 2/x^3.\)
+    The maximum value of \(\abs{f''(x)}\) over \([1, 4]\) is \(\abs{f''(1)} = 2.\)
+    So in \(\eqref{eq:E-M}\) we substitute \(M_2 = 2\) and \(n = 5\) to find 
+    \[
+    \abs{E_M} \leq \frac{2 (4 - 1)^3}{24(5)^2} = \boxed{0.09}
+    \]
+    Thus, our estimation of \(M_5 = 1.373\) differs from the true value of \(\int_1^4 (1/x) \di x\)
+    by no more than \(0.09.\)
+</div>
+
+<p>
+    Again, we intentionally chose an integral in 
+    <a href="/ValCalc/ValCalc/calculus/4.5-Numerical-Integration.html#ex-approx-int-1/x">Example 2</a>
+    whose exact value is easily determined.
+    By the Fundamental Theorem of Calculus, we see 
+    \[\int_1^4 \frac{1}{x} \di x = \ln \abs x \intEval_1^4 = \ln 4 \approx 1.386 \pd\]
+    Our estimate of \(M_5 = 1.373\) was very close!
+    On the other hand, endpoint approximations would give \(L_5 \approx 1.638\)
+    and \(R_5 \approx 1.188.\)
+    By comparing values, we see that the Midpoint Rule tends to be more accurate than endpoint approximations.
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using the Midpoint Rule, what values of \(n\) 
+        give an estimate of \(\int_1^4 (1/x) \di x\) correct to two decimal places? 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The estimate is correct to two decimal places 
+    if the error is less than \(0.01.\)
+    In <a href="/ValCalc/ValCalc/calculus/4.5-Numerical-Integration.html#ex-approx-int-1/x">Example 2</a> 
+    we found an error bound to be 
+    \[\abs{E_M} = \frac{2(4 - 1)^3}{24 n^2} = \frac{27}{12 n^2} \pd\]
+    Setting this expression to be less than \(1/100,\) we find 
+    \[\frac{27}{12n^2} \lt \frac{1}{100} \pd\]
+    Solving for \(n,\) we attain
+    \[n \gt \sqrt{\frac{100(27)}{12}} \iffArrow \boxed{n \gt 15}\]
+</div>
+
+<h4 id="trapezoidal-rule">Trapezoidal Rule</h4>
+
+<figure class="approx-integration-trapezoidal" id="approx-integration-trapezoidal">
+    <img src="../images/sectionImages/approx-integration-trapezoidal.jpg" alt="Figure 6">
+</figure>
+<style>
+    .approx-integration-trapezoidal::before{
+        content:'FIGURE 6';
+    }
+</style> 
+
+<p>
+    Instead of using rectangles, 
+    we could use trapezoids to estimate an integral.
+    In the general subinterval \(\parbr{x_{i - 1}, x_i},\)
+    we construct a trapezoid of heights \(f(x_{i - 1})\) and \(f(x_i)\)
+    and width \(\Delta x,\) 
+    as shown by <a href="#approx-integration-trapezoidal">Figure 6</a>.
+    Recall that a trapezoid of heights \(h_1\) and \(h_2\)
+    and width \(w\) has area \(A = \tfrac{1}{2} (h_1 + h_2) w.\)
+    Taking the width of all the approximating trapezoids to be \(\Delta x,\)
+    we sum their areas to attain
+    \begin{align} 
+    \int_a^b f(x) \di x &\approx T_n \nonum \nl
+    &= \tfrac{1}{2} [f(x_0) + f(x_1)] \Delta x 
+    + \tfrac{1}{2} [f(x_1) + f(x_2)] \Delta x + \cdots 
+    + \tfrac{1}{2} \parbr{f(x_{n - 1}) + f(x_n)} \Delta x \nonum \nl
+    &= \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \pd 
+    \label{eq:T-n}
+    \end{align}
+    This approximation, called the <span class="emph">Trapezoidal Rule</span>, 
+    is the average of the left-endpoint approximation 
+    and right-endpoint approximation; 
+    namely, \(T_n = \tfrac{1}{2} (L_n + R_n).\)
+    We derived the Trapezoidal Rule for positive functions, 
+    but it works for any continuous function \(f.\)
+    The error in a trapezoidal approximation satisfies
+    \begin{equation} 
+    \abs{E_T} \leq \frac{M_2 (b - a)^3}{12 n^2} \cma \label{eq:E-T}
+    \end{equation}
+    where \(\abs{f''(x)} \leq M_2\) for \(a \leq x \leq b.\)
+    Because the Trapezoidal Rule and 
+    <a href="#midpoint-rule" class="page-anchor">Midpoint Rule</a>
+    each account for a graph's curvature,
+    they are usually more accurate than endpoint approximations. 
+    Note that error bounds for the Trapezoidal Rule and Midpoint Rule 
+    depend on \(\abs{f''(x)},\)
+    while the error bound for endpoint approximations depends on \(\abs{f'(x)}.\)
+</p>
+
+<div class="box-title">TRAPEZOIDAL RULE</div>
+<div class="box">
+    The <span class="emph">Trapezoidal Rule</span> provides the estimate
+    \begin{equation} 
+    \int_a^b f(x) \di x \approx T_n 
+    = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \pd 
+    \eqlabel{eq:T-n}
+    \end{equation}
+    The error bound to this approximation is 
+    \begin{equation} 
+    \abs{E_T} \leq \frac{M_2 (b - a)^3}{12 n^2} \cma \eqlabel{eq:E-T}
+    \end{equation}
+    where \(\abs{f''(x)} \leq M_2\) for \(a \leq x \leq b.\)
+</div>
+
+<div class="example-title" id="ex-approx-int-1/x-trap"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Approximate \(\int_1^4 (1/x) \di x\)
+        using the Trapezoidal Rule with \(n = 5.\)
+        Then bound the error to this estimate.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="approx-integration-inv-trap" id="approx-integration-inv-trap">
+        <img src="../images/sectionImages/approx-integration-inv-trap.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .approx-integration-inv-trap::before{
+            content:'FIGURE 7';
+        }
+    </style> 
+    We inscribe five trapezoids (of equal width) under the curve \(y = 1/x\) and sum their areas.
+    (See <a href="#approx-integration-inv-trap">Figure 7</a>.) 
+    Observe that \(\Delta x = (4 - 1)/5\) \(= 0.6.\)
+    So our subintervals are 
+    \([1, 1.6],\) \([1.6, 2.2],\) \([2.2, 2.8],\) \([2.8, 3.4],\)
+    and \([3.4, 4].\)
+    We therefore use the Trapezoidal Rule in \(\eqref{eq:T-n}\) to approximate the integral as
+    \[
+    \ba
+    T_5 &= \frac{0.6}{2} \parbr{\frac{1}{1} + 2 \par{\frac{1}{1.6}} + 2 \par{\frac{1}{2.2}} + 2 \par{\frac{1}{2.8}} + 2 \par{\frac{1}{3.4}} 
+    + \par{\frac{1}{4}}} \nl 
+    &\approx \boxed{1.413}
+    \ea
+    \]
+    If \(f(x) = 1/x,\) then the maximum of \(\abs{f''(x)} = 2/x^3\)
+    on \([1, 4]\) is \(\abs{f''(1)} = 2.\)
+    The error bound is, following \(\eqref{eq:E-T}\)
+    with \(M_2 = 2\) and \(n = 5,\)
+    \[\abs{E_5} \leq \frac{2 (4 - 1)^3}{12 (5)^2} = \boxed{0.18}\]
+    Compare \(T_5 = 1.413\) to the result of 
+    <a href="/ValCalc/ValCalc/calculus/4.5-Numerical-Integration.html#ex-approx-int-1/x">Example 2</a>,
+    which gave a more accurate approximation for \(\int_1^4 (1/x) \di x.\)
+</div>
+
+<h4 id="simpsons-rule">Simpson's Rule</h4>
+
+<p>
+    When we use the <a href="#trapezoidal-rule" class="page-anchor">Trapezoidal Rule</a>, 
+    we approximate the area under a positive function \(f\) by constructing 
+    lines—that is, using first-degree polynomials—and taking 
+    the areas under the lines. 
+    Now let's extend this idea by using <i>second</i>-degree polynomials, quadratics.
+    Let's first develop a useful formula:
+    We will fit a quadratic \(y = Ax^2 + Bx + C\) through three points with equal horizontal spacing; 
+    let's call them \((x_0, y_0),\) \((x_1, y_1),\)
+    and \((x_2, y_2),\) where \(x_1 = \tfrac{1}{2} (x_0 + x_2)\)
+    and 
+    \[
+    \ba
+    y_1 &= A x_1^2 + B x_1 + C \nl
+    &= A \par{\frac{x_0 + x_2}{2}}^2 + B \par{\frac{x_0 + x_2}{2}} + C \pd
+    \ea
+    \]
+    Our goal is to use these \(y\)-values to find an expression for \(\int_{x_0}^{x_2} p(x) \di x\) (the area under the parabola, 
+    in the special case where \(y_0,\) \(y_1,\) and \(y_2\) are positive).
+    We see
+    \[
+    \ba 
+    \int_{x_0}^{x_2} \par{Ax^2 + Bx + C} \di x 
+    &= \frac{A \par{x_2^3 - x_0^3}}{3} + \frac{B \par{x_2^2 - x_0^2}}{2} + C(x_2 - x_0) \nl 
+    &= \frac{x_2 - x_0}{6} \parbr{2A \par{x_0^2 + x_0x_2 + x_2^2} + 3B(x_2 + x_0) + 6 C} \pd
+    \ea 
+    \]
+    Through expansion and collecting terms, we see that the expression in brackets is 
+    \[\underbrace{\par{Ax_0^2 + B x_0 + C}}_{y_0} 
+    + \underbrace{4 \parbr{A \par{\frac{x_0 + x_2}{2}}^2 + B \par{\frac{x_0 + x_2}{2}} + C}}_{4 y_1}
+    + \underbrace{\par{Ax_2^2 + B x_2 + C}}_{y_2} \pd\]
+    Hence, we have 
+    \begin{equation} 
+    \int_{x_0}^{x_2} \par{Ax^2 + Bx + C} \di x 
+    = \frac{x_2 - x_0}{6} \par{y_0 + 4 y_1 + y_2} \pd 
+    \label{eq:parabola-integral}
+    \end{equation}
+</p>
+
+<figure class="simpsons-rule-one-parabola figure-center-one" id="simpsons-rule-one-parabola">
+    <img src="../images/sectionImages/simpsons-rule-one-parabola.jpg" alt="Figure 8">
+</figure>
+<style>
+    .simpsons-rule-one-parabola::before{
+        content:'FIGURE 8';
+    }
+</style> 
+
+<figure class="simpsons-rule-delta-x" id="simpsons-rule-delta-x">
+    <img src="../images/sectionAnimations/simpsons-rule-delta-x.gif" alt="Animation 1">
+</figure>
+<style>
+    .simpsons-rule-delta-x::before{
+        content:'ANIMATION 1';
+    }
+</style> 
+
+<p>
+    Now we return to our question—how do we approximate 
+    a definite integral \(\int_a^b f(x) \di x\) using parabolas?
+    We first cut \([a, b]\)
+    into \(n\) subintervals with endpoints \(a = x_0, x_1, \dots,\) \(x_n = b\)
+    and equal width \(\Delta x.\)
+    But this time \(n\) must be even.
+    In the general double subinterval \(\parbr{x_{i - 2}, x_i},\)
+    we construct a parabola that passes through the points 
+    \(P_{i - 2} \par{x_{i - 2}, f(x_{i - 2})},\) \(P_{i - 1} \par{x_{i - 1}, f(x_{i - 1})},\)
+    and \(P_i \par{x_i, f(x_i)}.\) 
+    In the special case where \(f(x) \geq 0,\)
+    <i>the area under the parabola approximates the area under \(f\)</i> on \(\parbr{x_{i - 2}, x_i},\)
+    as shown by <a href="#simpsons-rule-one-parabola">Figure 8</a>. 
+    Now if we decrease \(\Delta x,\) then the points \(P_{i - 2},\) \(P_{i - 1},\)
+    and \(P_i\) become closer to each other;
+    accordingly, the parabola better follows the shape of \(f.\)
+    In fact, as \(\Delta x \to 0,\) 
+    the parabola becomes indistinguishable to \(f\) on \(\parbr{x_{i - 2}, x_i},\)
+    so the area under the parabola becomes closer to the exact area under \(f.\)
+    (See <a href="#simpsons-rule-delta-x">Animation 1</a>.)
+    Hence, we approximate the area under \(f\) on \(\parbr{x_{i - 2}, x_i}\)
+    to be, following \(\eqref{eq:parabola-integral},\)
+    \[\frac{2 \Delta x}{6} \parbr{f(x_{i - 2}) + 4 f(x_{i - 1}) + f(x_i)} 
+    = \frac{\Delta x}{3} \parbr{f(x_{i - 2}) + 4 f(x_{i - 1}) + f(x_i)} \pd\]
+    If we repeat this argument for all subintervals in \([a, b],\)
+    as in <a href="#simpsons-rule-parabolas">Figure 9</a>,
+    then we attain the following approximation for \(\int_a^b f(x) \di x \col\)
+    \begin{align}
+    S_n 
+    &= \small \frac{\Delta x}{3} \parbr{f(x_0) + 4 f(x_1) + f(x_2)} 
+    + \frac{\Delta x}{3} \parbr{f(x_2) + 4 f(x_3) + f(x_4)} 
+    + \cdots + \frac{\Delta x}{3} \parbr{f(x_{n - 2}) + 4 f(x_{n - 1}) + f(x_n)} \nonum \nl 
+    &= \small \frac{\Delta x}{3} \parbr{f(x_0) + 4 f(x_1) + 2 f(x_2) + 4 f(x_3) + \cdots + 2 f(x_{n - 2}) + 4 f(x_{n - 1}) + f(x_n)} \pd 
+    \label{eq:simpson}
+    \end{align}
+    This approximation is called <span class="emph">Simpson's Rule</span>. 
+    Observe that the coefficients follow the pattern 
+    \(1, 4, 2, 4, 2, 4,\) \(\dots, 4, 2, 4, 1.\)
+    Although we derived this rule for positive functions,
+    it works equally as well for any continuous function \(f.\)
+    As \(n \to \infty,\) Simpson's Rule gives the <i>exact</i> value of \(\int_a^b f(x) \di x.\)
+    So as we construct approximations, we remember that larger values of \(n\) provide better estimates.  
+</p>
+
+<figure class="simpsons-rule-parabolas figure-wide" id="simpsons-rule-parabolas">
+    <img src="../images/sectionImages/simpsons-rule-parabolas.jpg" alt="Figure 9">
+</figure>
+<style>
+    .simpsons-rule-parabolas::before{
+        content:'FIGURE 9';
+    }
+</style> 
+
+<p>
+    The error bound in Simpson's Rule depends on the fourth derivative of \(f.\)
+    If \(\abs{f^{(4)}(x)} \leq M_4\) for \(a \leq x \leq b,\)
+    then the error \(E_S\) satisfies
+    \begin{equation} 
+    \abs{E_S} \leq \frac{M_4 (b - a)^5}{180 n^4} \pd \label{eq:E-S}
+    \end{equation}
+    Let's summarize the main differences in 
+    the error bounds for all the numerical integration methods in this section: 
+    <ul>
+        <li>
+            The error bound for an endpoint approximation depends on 
+            \(\abs{f'(x)}.\)
+        </li>
+        <li>
+            The error bound for the Midpoint Rule or Trapezoidal Rule depends on 
+            \(\abs{f''(x)}.\)
+        </li>
+        <li>
+            The error bound for Simpsons Rule depends on 
+            \(\abs{f^{(4)}(x)}.\)
+        </li>
+    </ul>
+</p>
+
+<div class="box-title">SIMPSON'S RULE</div>
+<div class="box">
+    <span class="emph">Simpson's Rule</span> gives the approximation 
+    \begin{align} 
+    \int_a^b f(x) \di x 
+    &\approx S_n \nonum \nl
+    &= \small \frac{\Delta x}{3} \parbr{f(x_0) + 4 f(x_1) + 2 f(x_2) + 4 f(x_3) + \cdots + 2 f(x_{n - 2}) + 4 f(x_{n - 1}) + f(x_n)} \cma
+    \eqlabel{eq:simpson}
+    \end{align}
+    where \(n\) is even and \(\Delta x = (b - a)/n.\)
+    The error in this estimate satisfies 
+    \begin{equation} 
+    \abs{E_S} \leq \frac{M_4 (b - a)^5}{180 n^4} \cma \eqlabel{eq:E-S}
+    \end{equation}
+    where \(\abs{f^{(4)}(x)} \leq M_4\) for \(a \leq x \leq b.\)
+</div>
+
+<div class="example-title" id="ex-simpson-exp"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using Simpson's Rule with \(n = 4,\)
+        approximate 
+        \[\int_0^1 e^{-x^2/2} \di x \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    We calculate \(\Delta x = (1 - 0)/4\) \(= 0.25.\)
+    The subintervals are therefore \([0, 0.25],\) \([0.25, 0.5],\) \([0.5, 0.75],\)
+    and \([0.75, 1].\)
+    So using \(f(x) = e^{-x^2/2}\) and \(n = 4\) in \(\eqref{eq:simpson},\) 
+    we attain the approximation
+    \[
+    \ba 
+    \int_0^1 e^{-x^2/2} \di x 
+    &\approx S_4 \nl
+    &= \frac{0.25}{3} \par{e^{0} + 4 e^{-0.25^2/2} + 2 e^{-0.5^2/2} + 4 e^{-0.75^2/2} + e^{-1^2/2}} \nl 
+    &\approx \boxed{0.85565}
+    \ea 
+    \]
+</div>
+
+<p>
+    If we repeat <a href="/ValCalc/ValCalc/calculus/4.5-Numerical-Integration.html#ex-simpson-exp">Example 5</a>
+    with \(n = 10,\) then we get the estimate
+    \(S_{10} = 0.85563.\)
+    Likewise, using \(n = 20\) gives \(S_{20} = 0.85562.\)
+    These approximations are close to exact value of \(\int_0^1 e^{-x^2/2} \di x.\)
+    In a computer program, 
+    in which \(n\) can be as large as \(400,\) 
+    definite integrals can therefore be calculated accurately to hundreds of decimal places.
+    (You can write a program to run the Midpoint Rule, the Trapezoidal Rule, or Simpson's Rule 
+    using only a few lines of code.)
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        How large should \(n\) be so that Simpson's Rule 
+        approximates \(\int_0^{\pi/2} \sin 4x \di x\)
+        with an error of less than \(1/100 \ques\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    If \(f(x) = \sin 4x,\) then \(f^{(4)}(x) = 256 \sin 4x.\)
+    The maximum value of \(\abs{f^{(4)}(x)}\) \(= 256 \abs{\sin 4x}\) on \([0, \pi/2]\)
+    is \(256.\)
+    So using \(\eqref{eq:E-S}\) with \(M_4 = 256,\) \(b = \pi/2,\) and \(a = 0\)
+    gives 
+    \[\abs{E_S} \leq \frac{256 \par{\frac{\pi}{2} - 0}^5}{180 n^4} = \frac{2 \pi^5}{45 n^4} \pd\]
+    We take this bound to be less than \(1/100\) and then solve for \(n,\) as follows:
+    \[\frac{2 \pi^5}{45 n^4} \lt \frac{1}{100} \iffArrow n \gt \sqrt[4]{\frac{200 \pi^5}{45}} \approx 6.073 \pd\]
+    Because \(n\) must be even, let's round up our answer to \(\boxed{n \gt 8}.\)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#left-right-endpt-estimate" class="summary-anchor">Endpoint Approximations</a>
+        To approximate \(\int_a^b f(x) \di x,\)
+        the <span class="emph">left-endpoint approximation</span> gives 
+        \begin{equation} 
+        \int_a^b f(x) \di x \approx L_n = \sum_{i = 1}^n f(x_{i - 1}) \Delta x \eqlabel{eq:L-n} 
+        \end{equation}
+        and the <span class="emph">right-endpoint approximation</span> gives 
+        \begin{equation} 
+        \int_a^b f(x) \di x \approx R_n = \sum_{i = 1}^n f(x_i) \Delta x \pd \eqlabel{eq:R-n} 
+        \end{equation}
+        These are the simplest types of approximations, 
+        but they are usually less accurate compared to the other methods.
+        When we construct an approximation,
+        we will be <i>off</i> from the exact value of \(\int_a^b f(x) \di x\)
+        by some amount, called the <span class="emph">error</span>. 
+        But since we usually don't know the error, 
+        we consider an <span class="emph">error bound</span>, 
+        a number greater than or equal to the magnitude of the error.
+        A left endpoint approximation \(L_n\) or a right endpoint approximation \(R_n\) 
+        has an error bound given by
+        \begin{equation} 
+        \abs{E_n} \leq \frac{M_1 (b - a)^2}{2n} \cma \eqlabel{eq:E-bound-endpts}
+        \end{equation}
+        where \(\abs{f'(x)} \leq M_1\) for \(a \leq x \leq b.\)
+        <ol class="list-alpha">
+            <li>
+                If \(f\) is increasing on \([a, b],\)
+                then 
+                \[L_n \leq \int_a^b f(x) \di x \leq R_n \pd\]
+            </li>
+            <li>
+                If \(f\) is decreasing on \([a, b],\)
+                then 
+                \[R_n \leq \int_a^b f(x) \di x \leq L_n \pd\]
+            </li>
+        </ol> 
+    </p>
+    <p>
+        <a href="#midpoint-rule" class="summary-anchor">Midpoint Rule</a>
+        The <span class="emph">Midpoint Rule</span> 
+        provides the approximation
+        \begin{equation} 
+        \int_a^b f(x) \di x \approx M_n = \sum_{i = 1}^n f(\overline x_i) \Delta x \cma \eqlabel{eq:M-n}
+        \end{equation}
+        where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i).\)
+        Geometrically, we position approximating rectangles to be at the midpoints 
+        of each subinterval \(\parbr{x_{i - 1}, x_i}.\)
+        The error bound for the Midpoint Rule is
+        \begin{equation} 
+        \abs{E_M} \leq \frac{M_2 (b - a)^3}{24n^2} \cma \eqlabel{eq:E-M}
+        \end{equation}
+        where \(\abs{f''(x)} \leq M_2\) for \(a \leq x \leq b.\)
+    </p>
+    <p>
+        <a href="#trapezoidal-rule" class="summary-anchor">Trapezoidal Rule</a>
+        We can inscribe trapezoids within a curve and sum the areas of the trapezoids.
+        Doing so yields the <span class="emph">Trapezoidal Rule</span>, which provides the estimate
+        \begin{equation} 
+        \int_a^b f(x) \di x \approx T_n 
+        = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \pd 
+        \eqlabel{eq:T-n}
+        \end{equation}
+        The error bound to this approximation is 
+        \begin{equation} 
+        \abs{E_T} \leq \frac{M_2 (b - a)^3}{12 n^2} \cma \eqlabel{eq:E-T}
+        \end{equation}
+        where \(\abs{f''(x)} \leq M_2\) for \(a \leq x \leq b.\)
+        The Trapezoidal Rule 
+        is the average of the left-endpoint approximation 
+        and right-endpoint approximation; 
+        namely, \(T_n = \tfrac{1}{2} (L_n + R_n).\)
+    </p>
+    <p>
+        <a href="#simpsons-rule" class="summary-anchor">Simpson's Rule</a>
+        We can approximate a curve \(f\) using parabolas 
+        and sum the areas bounded by the parabolas.
+        This method leads to <span class="emph">Simpson's Rule</span>, which gives the approximation
+        \begin{align} 
+        \int_a^b f(x) \di x 
+        &\approx S_n \nonum \nl
+        &= \small \frac{\Delta x}{3} \parbr{f(x_0) + 4 f(x_1) + 2 f(x_2) + 4 f(x_3) + \cdots + 2 f(x_{n - 2}) + 4 f(x_{n - 1}) + f(x_n)} \cma
+        \eqlabel{eq:simpson}
+        \end{align}
+        where \(n\) is even and \(\Delta x = (b - a)/n.\)
+        The error in this estimate satisfies 
+        \begin{equation} 
+        \abs{E_S} \leq \frac{M_4 (b - a)^5}{180 n^4} \cma \eqlabel{eq:E-S}
+        \end{equation}
+        where \(\abs{f^{(4)}(x)} \leq M_4\) for \(a \leq x \leq b.\)
+    </p>
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

@@ -3,12 +3,17 @@
     padding: 0;
 }
 
+@font-face { font-family: Oswald; src: url('fonts/Oswald-VariableFont_wght.ttf'); } 
+
 h1, main, .footer-body, .tab div, .footer-disclaimer{
     /* width: 1150px; */
     margin-left: auto;
     margin-right: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
+}
+
+h1, main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .section-link{
@@ -63,6 +68,22 @@ h1{ /* section title */
     list-style-type:none;
     margin-left: 0%;
     padding-left: 0%;
+    font-family: 'Oswald';
+    font-weight: 380;
+    font-size: 22px;
+}
+
+h1, h3{
+    font-family: 'Oswald'; 
+    font-weight: 500;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h3 a{
+    margin-left: 5px;
 }
 
 @media screen and (max-width: 1720px) {

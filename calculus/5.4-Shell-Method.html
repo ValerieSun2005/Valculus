@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5.4: Shell Method</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>5.4: Shell Method</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="5.4-Shell-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="5.4-Shell-Method-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Shell-Method]]]--> 
+
+<p>
+    In Section <a href="/ValCalc/ValCalc/calculus/5.3-Solids-of-Revolution.html">5.3</a>
+    we introduced the Disk Method and Washer Method, 
+    which enable us to calculate volumes of solids of revolution. 
+    We learned the following facts:
+    <ul>
+        <li>
+            The Disk Method is used when there is no gap between 
+            a region and the axis of rotation.
+        </li>
+        <li>
+            The Washer Method is used when there is a gap between 
+            a region and the axis of rotation.
+        </li>
+    </ul>
+    In this section we discuss the <span class="emph">Shell Method</span>—an alternative 
+    to these two methods.
+</p>
+
+<div class="figure-center">
+    <figure class="shell-method-region" id="shell-method-region">
+        <img src="../images/sectionImages/shell-method-region.jpg" class="shell-method-region" alt="Figure 1A">
+    </figure>
+    <figure class="shell-method-shells" id="shell-method-shells">
+        <img src="../images/sectionImages/shell-method-shells.jpg" class="shell-method-shells" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .shell-method-region::before{
+        content:'FIGURE 1A';
+    }
+
+    .shell-method-shells::before{
+        content:'FIGURE 1B';
+    }
+</style>
+<p>
+    Let's begin by considering the region \(R\) 
+    bounded below the curve \(y = f(x)\) from \(x = a\) to \(x = b\)
+    (<a href="#shell-method-region">Figure 1A</a>). 
+    If we rotate this region about the \(y\)-axis, 
+    then we attain a solid of revolution. 
+    We could use the Washer Method to calculate its volume, 
+    but let's use a new approach:
+    We cut the region into \(n\) rectangles of endpoints \(x_0, x_1,\) \(\dots, x_n\)
+    and equal width \(\Delta x.\)
+    We'll rotate each rectangle about the \(y\)-axis 
+    and sum the volumes of the resulting <i>cylindrical shells</i>.
+    (See <a href="#shell-method-shells">Figure 1B</a>.)
+    Let \(\overline x_i\) be the midpoint of the general subinterval \(\parbr{x_{i - 1}, x_i};\)
+    an approximating rectangle in this subinterval 
+    therefore has height \(f(\overline x_i).\)
+    (See <a href="#shell-method-shell-one">Figure 2</a>.)
+    Rotating this rectangle about the \(y\)-axis produces a cylindrical shell
+    whose inner radius is \(x_{i - 1}\) and outer radius is \(x_i.\)
+    Its volume is therefore the difference in volumes of the cylinders. 
+    Performing some algebraic manipulation, we find the shell's volume to be
+    \[
+    \ba
+    \Delta V &= 
+    \underbrace{\pi x_i^2 f(\overline x_i)}_{\substack{\text{volume of} \\ \text{outer cylinder}}} 
+    - \underbrace{\pi x_{i - 1}^2 f(\overline x_i)}_{\substack{\text{volume of} \\ \text{inner cylinder}}}  \nl 
+    &= \pi f(\overline x_i) \par{x_i^2 - x_{i - 1}^2} \nl 
+    &= \pi f(\overline x_i) \par{x_i + x_{i - 1}} \par{x_i - x_{i - 1}} \nl 
+    &= 2 \pi f(\overline x_i) \par{\frac{x_i + x_{i - 1}}{2}} \par{x_i - x_{i - 1}} \pd
+    \ea
+    \]
+    But since \(\overline x_i\) is the midpoint of the subinterval, we have 
+    \[
+    \ba
+    \Delta V &= 2 \pi f(\overline x_i) \overline x_i \par{x_i - x_{i - 1}} \nl 
+    &= 2 \pi f(\overline x_i) \overline x_i \Delta x \pd
+    \ea
+    \]
+    This is the expression we need. 
+    Rotating all \(n\) rectangles about the \(y\)-axis and summing the volumes of their corresponding shells, 
+    we get 
+    \[
+    V \approx \sum_{i = 1}^n 2 \pi \overline x_i f(\overline x_i) \Delta x \pd
+    \] 
+    We recognize this expression as a Riemann sum for the function \(2 \pi x f(x).\)
+    As we increase \(n,\) the shells become thinner and therefore better encapsulate the solid of revolution.
+    Hence, the sum becomes the exact volume \(V\) if we let \(n \to \infty.\)
+    So we have 
+    \begin{align} 
+    V &= \lim_{n \to \infty} \sum_{i = 1}^n 2 \pi \overline x_i f(\overline x_i) \Delta x \nonum \nl 
+    &= 2 \pi \int_a^b x f(x) \di x \pd \label{eq:shell-f}
+    \end{align}
+    This formula is a special case of the Shell Method 
+    for rotating about the \(y\)-axis.
+    But the same geometric basis allows us to use this method for rotating about any line. 
+</p>
+
+<figure class="shell-method-shell-one" id="shell-method-shell-one">
+    <img src="../images/sectionImages/shell-method-shell-one.jpg" class="shell-method-shell-one" alt="Figure 2">
+</figure>
+
+<style>
+    .shell-method-shell-one::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+
+<div class="box-title">SHELL METHOD FOR ROTATING ABOUT THE \(y\)-AXIS</div>
+<div class="box">
+    If the region bounded by \(y = f(x)\)
+    and the \(x\)-axis from \(x = a\) to \(x = b\) is rotated about the \(y\)-axis, 
+    then its volume is 
+    \begin{equation} 
+    V = 2 \pi \int_a^b x f(x) \di x \pd \eqlabel{eq:shell-f}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-shell-parabola"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use the Shell Method to find the volume of the solid generated 
+        when the region bounded by \(y = 2x(2 - x)\)
+        and the \(x\)-axis is rotated about the \(y\)-axis. 
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="shell-method-parabola-ex" id="shell-method-parabola-ex">
+        <img src="../images/sectionImages/shell-method-parabola-ex.jpg" class="shell-method-parabola-ex" alt="Figure 3">
+    </figure>
+    
+    <style>
+        .shell-method-parabola-ex::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    <a href="#shell-method-parabola-ex">Figure 3</a> shows the enclosed region 
+    and a typical cylindrical shell.
+    The region is bounded from \(x = 0\) to \(x = 2.\)
+    The shell has height \(f(x) = 2x(2 - x)\) and is located a distance of \(x\)
+    away from the \(y\)-axis. 
+    Hence, as given by \(\eqref{eq:shell-f},\) the volume of the generated solid is 
+    \[
+    \ba 
+    V &= 2 \pi \int_0^2 x \parbr{2x(2 - x)} \di x \nl 
+    &= 4 \pi \int_0^2 \par{2x^2 - x^3} \di x \nl 
+    &= 4 \pi \par{\tfrac{2}{3} x^3 - \tfrac{1}{4} x^4} \intEval_0^2 \nl 
+    &= \boxed{\frac{16 \pi}{3}} \approx 16.755 \pd
+    \ea
+    \]
+</div>
+
+<p>
+    In <a href="/ValCalc/ValCalc/calculus/5.4-Shell-Method.html#ex-shell-parabola">Example 1</a> 
+    the Shell Method was an easy way to calculate the volume of the solid of revolution. 
+    Alternatively, we could instead use the Washer Method by finding the graph's relative maximum
+    and reexpressing \(y = 2x(2 - x)\) to be a function of \(y\)—a much more difficult process.
+    But the Shell Method is an alternative to the Disk Method or Washer Method, 
+    so we should attain the same volume regardless.
+</p>
+
+<p>
+    <span class="label-emph">Generalized Shell Method</span>
+    Let's reapply the line of reasoning used to attain \(\eqref{eq:shell-f}.\)
+    When we use the Shell Method, 
+    we construct rectangles <i>parallel</i> to the axis of rotation. 
+    For example, in <a href="/ValCalc/ValCalc/calculus/5.4-Shell-Method.html#ex-shell-parabola">Example 1</a> 
+    we visualized rotating a <i>vertical</i> approximating rectangle about a <i>vertical line</i> (the \(y\)-axis).
+    (Conversely, approximating rectangles are <i>perpendicular</i> to the axis of rotation in the Disk Method and Washer Method.)
+    Suppose that a region is bounded from \(x = a\) to \(x = b,\)
+    and that an approximating rectangle at \(x\) has height \(h(x)\)
+    and is a distance \(r(x)\) from the vertical axis of rotation. 
+    Then the volume of the solid of revolution is 
+    \begin{equation} 
+    V = 2 \pi \int_a^b r(x) h(x) \di x \pd \label{eq:shell-x}
+    \end{equation}
+    \(\eqrefer{eq:shell-f}\) is a special case of \(\eqref{eq:shell-x}\) with \(r(x) = x\)
+    and \(h(x) = f(x).\)
+    Likewise, suppose that a region is bounded from \(y = c\) to \(y = d,\)
+    and that a horizontal approximating rectangle at \(y\) has width \(h(y)\) and 
+    sits a distance \(r(y)\) from the horizontal axis of rotation.
+    The corresponding solid of revolution then has volume 
+    \begin{equation} 
+    V = 2 \pi \int_c^d r(y) h(y) \di y \pd \label{eq:shell-y}
+    \end{equation}
+</p>
+
+<div class="box-title">GENERALIZED SHELL METHOD</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If a <i>vertical</i> approximating rectangle at \(x\) has height \(h(x)\)
+            and is a distance of \(r(x)\) away from the <i>vertical</i> axis of rotation, then 
+            the solid of revolution has volume 
+            \begin{equation} 
+            V = 2 \pi \int_a^b r(x) h(x) \di x \pd \eqlabel{eq:shell-x}
+            \end{equation}
+        </li>
+        <li>
+            If a <i>horizontal</i> approximating rectangle at \(y\) has width \(h(y)\)
+            and is a distance of \(r(y)\) away from the <i>horizontal</i> axis of rotation,
+            then the solid of revolution has volume 
+            \begin{equation} 
+            V = 2 \pi \int_c^d r(y) h(y) \di y \pd \eqlabel{eq:shell-y}
+            \end{equation}
+        </li>
+    </ol>
+</div>
+
+<aside class="box-caution">
+    Just as with the Disk Method and Washer Method, 
+    the Shell Method should <i>never</i> 
+    produce a negative answer.
+</aside>
+
+<div class="example-title" id="ex-rot-x-x^2-y-axis"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using the Shell Method, calculate the volume of the solid of revolution 
+        generated by rotating the region bounded by \(y = x\) and \(y = x^2\)
+        about the \(y\)-axis.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="shell-method-parabola-line" id="shell-method-parabola-line">
+        <img src="../images/sectionImages/shell-method-parabola-line.jpg" class="shell-method-parabola-line" alt="Figure 4">
+    </figure>
+    
+    <style>
+        .shell-method-parabola-line::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    As shown by <a href="#shell-method-parabola-line">Figure 4</a>, 
+    the region is bounded from \(x = 0\) to \(x = 1.\)
+    A vertical approximating rectangle at \(x\) has height \(h(x) = x - x^2\)
+    and is located a distance of \(r(x) = x\) away from the axis of rotation, the \(y\)-axis.
+    Hence, by \(\eqref{eq:shell-x}\) the solid of revolution has volume 
+    \[
+    \ba 
+    V &= 2 \pi \int_0^1 x \par{x - x^2} \di x \nl 
+    &= 2 \pi \int_0^1 \par{x^2 - x^3} \di x \nl 
+    &= 2 \pi \par{\tfrac{1}{3} x^3 - \tfrac{1}{4} x^4} \intEval_0^1 \nl 
+    &= \boxed{\frac{\pi}{6}} \approx 0.524 \pd
+    \ea 
+    \]
+</div>
+
+<p>
+    <span class="text-tip">TIP</span>
+    When you solve problems, it's imperative to stay organized: 
+    Sketch the bounded region and draw an approximating rectangle. 
+    (If you're rotating about a <i>horizontal</i> line, then draw a <i>horizontal</i> approximating rectangle. 
+    Likewise, if you're rotating about a <i>vertical</i> line, then draw a <i>vertical</i> approximating rectangle.)
+    Find the rectangle's height (or width) and its distance from the axis of rotation;
+    then use \(\eqref{eq:shell-x}\) or \(\eqref{eq:shell-y}\) as necessary. 
+</p>
+
+<div class="example-title" id="ex-shell-sqrt-rot-x"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by \(x = 2 \sqrt y,\) the \(y\)-axis, 
+        and the line \(y = 4\) is rotated about the \(x\)-axis. 
+        Using the Shell Method, calculate the volume of the solid of revolution.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="shell-method-sqrt-x-axis" id="shell-method-sqrt-x-axis">
+        <img src="../images/sectionImages/shell-method-sqrt-x-axis.jpg" class="shell-method-sqrt-x-axis" alt="Figure 5">
+    </figure>
+    
+    <style>
+        .shell-method-sqrt-x-axis::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    The region is bounded from \(y = 0\) to \(y = 4.\)
+    Since we rotate about the \(x\)-axis, 
+    we need horizontal approximating rectangles
+    to use the Shell Method. 
+    An approximating rectangle at \(y\) has width \(h(y) = 2 \sqrt y\)
+    and sits a distance of \(r(y) = y\) away from the \(x\)-axis 
+    (the axis of rotation), 
+    as shown by <a href="#shell-method-sqrt-x-axis">Figure 5</a>.
+    Following \(\eqref{eq:shell-y},\) we find the solid's volume to be 
+    \[
+    \ba 
+    V &= 2 \pi \int_0^4 y \par{2 \sqrt y} \di y \nl 
+    &= 4 \pi \int_0^4 y^{3/2} \di y \nl 
+    &= 4 \pi \par{\tfrac{2}{5} y^{5/2}} \intEval_0^4 \nl 
+    &= \boxed{\frac{256 \pi}{5}} \approx 160.850 \pd
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by \(y = 2,\) \(y = 1 + x^2,\) and the \(y\)-axis 
+        is rotated about the line \(x = -1/2.\)
+        Calculate the volume of the solid of revolution by using the Shell Method.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="shell-method-parabola-line-horiz" id="shell-method-parabola-line-horiz">
+        <img src="../images/sectionImages/shell-method-parabola-line-horiz.jpg" class="shell-method-parabola-line-horiz" alt="Figure 6">
+    </figure>
+    
+    <style>
+        .shell-method-parabola-line-horiz::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    The region is bounded from \(x = 0\) to \(x = 1.\)
+    Because we rotate about a vertical line, we 
+    consider a <i>vertical</i> approximating rectangle at \(x,\) 
+    which has height 
+    \[h(x) = (2) - \par{1 + x^2} = 1 - x^2\] 
+    and is a distance of \(r(x) = x + \frac{1}{2}\)
+    away from the line \(x = -1/2.\)
+    (See <a href="#shell-method-parabola-line-horiz">Figure 6</a>.)
+    Following the Shell Method in \(\eqref{eq:shell-x},\) 
+    we calculate the volume as follows:
+    \[
+    \ba 
+    V &= 2 \pi \int_0^1 \par{x + \tfrac{1}{2}} \par{1 - x^2} \di x \nl 
+    &= 2 \pi \int_0^1 \par{-x^3 - \tfrac{1}{2} x^2 + x + \tfrac{1}{2}} \di x \nl 
+    &= 2 \pi \par{-\tfrac{1}{4} x^4 - \tfrac{1}{6} x^3 + \tfrac{1}{2} x^2 + \tfrac{1}{2} x} \intEval_0^1 \nl 
+    &= \boxed{\frac{7 \pi}{6}} \approx 3.665 \pd
+    \ea 
+    \] 
+</div>
+
+<div class="example-title" id="ex-shell-parabolas"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        The region bounded by the parabolas \(x = 2y^2\) and \(x = y^2 + 1\)
+        is rotated about the line \(y = 4.\)
+        What is the volume of the solid generated? 
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="shell-method-parabolas-y" id="shell-method-parabolas-y">
+        <img src="../images/sectionImages/shell-method-parabolas-y.jpg" class="shell-method-parabolas-y" alt="Figure 7">
+    </figure>
+    
+    <style>
+        .shell-method-parabolas-y::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    Solving \(2y^2 = y^2 + 1\) gives \(y = -1\) and \(y = 1.\)
+    The region is therefore bounded between these numbers. 
+    A horizontal approximating rectangle at \(y\)
+    has width 
+    \[h(y) = \par{y^2 + 1} - \par{2y^2} = 1 - y^2 \cma \]
+    and it's located a distance of \(r(y) = 4 - y\) away from the line \(y = 4.\)
+    (See <a href="#shell-method-parabolas-y">Figure 7</a>.)
+    Thus, the Shell Method as in \(\eqref{eq:shell-y}\) gives the solid's volume to be 
+    \[
+    \ba 
+    V &= 2 \pi \int_{-1}^1 (4 - y) \par{1 - y^2} \di y \nl 
+    &= 2 \pi \int_{-1}^1 \par{y^3 - 4y^2 - y + 4} \di y \nl 
+    &= 2 \pi \par{\tfrac{1}{4} y^4 - \tfrac{4}{3} y^3 - \tfrac{1}{2} y^2 + 4y} \intEval_{-1}^1 \nl 
+    &= \boxed{\frac{32 \pi}{3}} \approx 33.510 \pd
+    \ea 
+    \]
+</div>
+
+<p>
+    In <a href="/ValCalc/ValCalc/calculus/5.4-Shell-Method.html#ex-shell-parabolas">Example 5</a>
+    it would be very difficult to calculate the volume using the Washer Method.
+    (We would need to construct vertical approximating rectangles.)
+    Hence, the Shell Method was our preferred resource.
+    But the converse could also be true: 
+    The volume of the solid in <a href="/ValCalc/ValCalc/calculus/5.3-Solids-of-Revolution.html#ex-solid-cbrt-y-axis"target = "_blank">Example 5.3-3</a>
+    is easily computed using the Disk Method, 
+    but using the Shell Method would be grueling.
+    Yet in other problems, it's impossible to use other methods. 
+    For example,
+    if we wish to rotate a region about a vertical axis but cannot express all quantities in terms of \(y,\)
+    then we can't use the Disk Method or Washer Method; we can only resort to the Shell Method.
+    <i>The Shell Method does not supersede the Disk Method and Washer Method</i>; 
+    it's simply an alternative resource we can use if possible.  
+    Thus, be flexible and select the easiest method.
+</p>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        The <span class="emph">Shell Method</span> is an alternative to the Disk Method and Washer Method.
+        When we apply it, we construct approximating rectangles <i>parallel</i> to the axis of rotation 
+        (instead of <i>perpendicular</i> as with the Disk Method and Washer Method). 
+        If the region bounded by \(y = f(x)\)
+        and the \(x\)-axis from \(x = a\) to \(x = b\) is rotated about the \(y\)-axis, 
+        then its volume is 
+        \begin{equation} 
+        V = 2 \pi \int_a^b x f(x) \di x \pd \eqlabel{eq:shell-f}
+        \end{equation}
+        More generally, we have the following formulas:
+        <ol class="list-alpha">
+            <li>
+                If a <i>vertical</i> approximating rectangle at \(x\) has height \(h(x)\)
+                and is a distance of \(r(x)\) away from the <i>vertical</i> axis of rotation, then 
+                the solid of revolution has volume 
+                \begin{equation} 
+                V = 2 \pi \int_a^b r(x) h(x) \di x \pd \eqlabel{eq:shell-x}
+                \end{equation}
+            </li>
+            <li>
+                If a <i>horizontal</i> approximating rectangle at \(y\) has width \(h(y)\)
+                and is a distance of \(r(y)\) away from the <i>horizontal</i> axis of rotation,
+                then the solid of revolution has volume 
+                \begin{equation} 
+                V = 2 \pi \int_c^d r(y) h(y) \di y \pd \eqlabel{eq:shell-y}
+                \end{equation}
+            </li>
+        </ol>
+    </p>
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

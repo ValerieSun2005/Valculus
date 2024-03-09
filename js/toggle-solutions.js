@@ -115,3 +115,31 @@ function toggle13(){
         clicked.style.display = "none";
     }
 }
+
+function toggle14(){
+    var clicked = document.getElementById("solution14");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle15(){
+    var clicked = document.getElementById("solution15");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle16(){
+    var clicked = document.getElementById("solution16");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+

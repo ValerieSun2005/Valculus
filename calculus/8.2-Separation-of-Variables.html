@@ -6,52 +6,65 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-    <link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
-</a>
-    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>8.2 — Separation of Variables</h1>
-    <main>
-      <div class="pdf-panel">
-        <div class="pdf-panel-left">
-          <ul>
-            <li>
-              <button>
-                <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="8.2-Separation-of-Variables-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="8.2-Separation-of-Variables-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--BEGIN BODY-->
-      <hr id="mainBodyBegin">
-      <!--[[[crefId.Separation-of-Variables]]]--> 
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>8.2: Separation of Variables</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="8.2-Separation-of-Variables-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="8.2-Separation-of-Variables-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Separation-of-Variables]]]--> 
 <p>
     We have interpreted differential equations 
     and verified whether a function satisfies a differential equation. 
     In this section, we find functions that satisfy a differential equation;
     this procedure is called <i>solving a differential equation</i>.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#separable-diff-eqs" class="page-anchor">Separable Differential Equations</a>
+        </li>
+        <li>
+            <a href="#orthogonal-trajectories" class="page-anchor">Orthogonal Trajectories</a>
+        </li>
+        <li>
+            <a href="#mixing-problems" class="page-anchor">Mixing Problems</a>
+        </li>
+    </ul>
 </p>
+
+<h4 id="separable-diff-eqs">Separable Differential Equations</h4>
+
 <p>
     A <span class="emph">separable differential equation</span>
     is a first-order differential equation in the form 
@@ -66,18 +79,20 @@
     \begin{equation} 
     \int h(y) \di y = \int g(x) \di x \pd \label{eq:sep-diff-eq-int}
     \end{equation}
-    We ideally evaluate each integral to solve for \(y\) explicitly.
+    The differential equation in \(\eqref{eq:sep-diff-eq}\) is solved by 
+    \(\eqrefer{eq:sep-diff-eq-int}.\)
 </p>
 
 <div class="box-title">SEPARATION OF VARIABLES</div>
 <div class="box">
     A <span class="emph">separable differential equation</span> is of the form 
     \begin{equation*} 
-    \deriv{y}{x} = \frac{g(x)}{h(y)} \pd \tag*{\(\eqref{eq:sep-diff-eq}\)}
+    \deriv{y}{x} = \frac{g(x)}{h(y)} \pd \eqlabel{eq:sep-diff-eq}
     \end{equation*}
-    Using <span class="emph">Separation of Variables</span> gives the form 
+    <span class="emph">Separation of Variables</span> gives the following solution
+    to the differential equation:
     \begin{equation*} 
-    \int h(y) \di y = \int g(x) \di x \pd \tag*{\(\eqref{eq:sep-diff-eq-int}\)}
+    \int h(y) \di y = \int g(x) \di x \pd \eqlabel{eq:sep-diff-eq-int}
     \end{equation*}
 </div>
 
@@ -85,10 +100,12 @@
     <span class="proof">PROOF</span>
     To prove the validity of Separation of Variables, we must show that 
     \(\eqref{eq:sep-diff-eq-int}\) satisfies \(\eqref{eq:sep-diff-eq}.\)
-    We differentiate both sides of \(\eqref{eq:sep-diff-eq-int}\)
-    with respect to \(x.\)
-    The left-hand side requires using the Chain Rule.
-    Doing so gives 
+    Let's perform Implicit Differentiation (from Section 
+    <a href="/ValCalc/ValCalc/calculus/2.5-Implicit-Differentiation-and-Differentiating-Inverse-Functions.html">2.5</a>) 
+    on \(\eqref{eq:sep-diff-eq-int} \col\)
+    We differentiate both sides with respect to \(x,\)
+    use the Chain Rule on the left side, and solve for \(\textderiv{y}{x}.\)
+    Doing so shows
     \[
     \ba 
     \deriv{}{x} \int h(y) \di y &= \deriv{}{x} \int g(x) \di x \nl 
@@ -97,8 +114,8 @@
     \ea 
     \]
     Then we find \(\textDeriv{y}{x} = g(x)/h(y),\) which is \(\eqref{eq:sep-diff-eq}.\)
-    Hence, \(\eqref{eq:sep-diff-eq-int}\) satisfies \(\eqref{eq:sep-diff-eq}\)
-    and so Separation of Variables is justifiable.
+    Hence, \(\eqref{eq:sep-diff-eq-int}\) satisfies \(\eqref{eq:sep-diff-eq};\)
+    Separation of Variables is therefore justifiable.
     \[\qedproof\]
 </p>
 
@@ -110,35 +127,60 @@
 </div>
 <button onclick="toggle1()" class="solution-button">  </button>
 <div id="solution1" class="solution">
-    This differential equation is <b>separable</b> because we can isolate all the \(y\)'s 
-    on one side and all the \(x\)'s on the other.
+    <figure class="sep-variables-solutions-ex-1" id="sep-variables-solutions-ex-1">
+        <img src="../images/sectionImages/sep-variables-solutions-ex-1.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .sep-variables-solutions-ex-1::before{
+            content:'FIGURE 1';
+        }
+    </style>
+    This differential equation is <b>separable</b> because we can isolate all the <nobr>\(y\)'s</nobr> 
+    on one side and all the <nobr>\(x\)'s</nobr> on the other.
     Multiplying both sides by \(y^2 \di x\) gives 
     \[y^2 \di y = 2x \di x \pd\]
-    Now we integrate both sides, obtaining 
-    \[\tfrac{1}{3} y^3 + C_1 = x^2 + C_2 \cma\]
+    Now we integrate both sides, as follows: 
+    \[
+    \ba
+    \int y^2 \di y &= \int 2x \di x \nl
+    \tfrac{1}{3} y^3 + C_1 &= x^2 + C_2 \cma
+    \ea
+    \]
     where \(C_1\) and \(C_2\) are both arbitrary constants. 
-    But for simplicity, we combine these constants into one.
-    Let \(C = C_2 - C_1;\)
-    we then have 
+    But for simplicity, we combine these constants into one 
+    by letting \(C = C_2 - C_1.\)
+    We therefore have
     \[\tfrac{1}{3} y^3 = x^2 + C \pd\]
     Finally, we solve for \(y \col\)
     \[y = \sqrt[3]{3x^2 + 3C} \pd\]
-    Since \(C\) is an arbitrary constant, we can write \(3C\) as simply \(C.\)
-    Our general solution is therefore 
-    \[y = \boxed{\sqrt[3]{3x^2 + C}}\]
+    Since \(C\) is an arbitrary constant, \(3C\) is also an arbitrary constant; 
+    we can therefore write \(3C\) as simply \(C.\)
+    Our general solution is then 
+    \[\boxed{y = \sqrt[3]{3x^2 + C}}\]
+    <a href="#sep-variables-solutions-ex-1">Figure 1</a> shows the slope field 
+    for \(\textDeriv{y}{x} = 2x/y^2,\) as well as
+    the solution curves for various values of \(C.\)
 </div>
 
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Find the solution to \(y' = 3x^2 y\) whose graph passes through the point 
+        Find the particular solution to \(y' = 3x^2 y\) whose graph passes through the point 
         \((1, 1).\)
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button">  </button>
 <div id="solution2" class="solution">
-    We perform Separation of Variables by isolating all the \(y\)'s on the left side 
-    and all the \(x\)'s on the right side. 
+    <figure class="sep-variables-particular-curve-ex" id="sep-variables-particular-curve-ex">
+        <img src="../images/sectionImages/sep-variables-particular-curve-ex.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .sep-variables-particular-curve-ex::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    We perform Separation of Variables by isolating all the <nobr>\(y\)'s</nobr> on the left side 
+    and all the <nobr>\(x\)'s</nobr> on the right side. 
     Note that \(y' = \textDeriv{y}{x},\) so we have 
     \[\frac{1}{y} \di y = 3x^2 \di x \pd\]
     Integrating both sides (and writing one constant \(C\) on the right side) gives 
@@ -152,48 +194,286 @@
     Hence, \(\eqref{eq:ex-C}\) becomes
     \[
     \ln \abs y = x^3 - 1  
-    \or \boxed{y = e^{x^3 - 1}}
+    \or \abs y = e^{x^3 - 1} \pd
     \]
+    But since \(e^{x^3 - 1}\) is positive, \(\abs y = y\) and so
+    our answer is
+    \[\boxed{y = e^{x^3 - 1}}\]
     We could have solved for \(y\) in \(\eqref{eq:ex-C}\) before substituting the initial condition,
     but immediately solving for \(C\) is often easier.
+    <a href="#sep-variables-particular-curve-ex">Figure 2</a> shows the
+    slope field for \(y' = 3x^2 y\) and the graph of the particular 
+    solution \(y = e^{x^3 - 1}.\)
 </div>
-    </main>
-    <!-- <footer>
+
+<p>
+    Sometimes it's impossible to solve for \(y\) after we use Separation of Variables. 
+    In these cases, we must write our solution as an implicit equation. 
+    After we present the following topic, 
+    the next example shows that solutions in implicit form may be useful sometimes.
+</p>
+
+<h4 id="orthogonal-trajectories">Orthogonal Trajectories</h4>
+
+<figure class="orthogonal-trajectory-graphs" id="orthogonal-trajectory-graphs">
+    <img src="../images/sectionImages/orthogonal-trajectory-graphs.jpg" alt="Figure 3">
+</figure>
+<style>
+    .orthogonal-trajectory-graphs::before{
+        content:'FIGURE 3';
+    }
+</style>
+
+<p>
+    An important application of differential equations lies in finding an
+    <span class="emph">orthogonal trajectory</span>—a curve 
+    that intersects a family of curves <i>orthogonally</i>, that is, at right angles.
+    (See <a href="#orthogonal-trajectory-graphs">Figure 3</a>.)
+    In electrostatics, <i>equipotential curves</i> are perpendicular to 
+    the lines of an electric field. 
+    In thermodynamics, heat flows across a plane surface orthogonally to the <i>isothermal curves</i>.
+    And in aerodynamics, the streamlines are orthogonal to the <i>velocity potential curves</i>.
+</p>
+
+<figure class="orthogonal-trajectory-circle" id="orthogonal-trajectory-circle">
+    <img src="../images/sectionImages/orthogonal-trajectory-circle.jpg" alt="Figure 4">
+</figure>
+<style>
+    .orthogonal-trajectory-circle::before{
+        content:'FIGURE 4';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Orthogonal Trajectories to Circles</span>
+    The family of circles \(x^2 + y^2 = r^2\) is fundamental to many applications. 
+    By Implicit Differentiation, 
+    the slope to the circle at any \((x, y)\) is \(\textderiv{y}{x} = -x/y.\)
+    An orthogonal trajectory to this circle must be perpendicular to the circle's tangents, 
+    so its slope at \((x, y)\) must be the negative reciprocal—that is, \(y/x.\) 
+    The graph therefore satisfies the differential equation
+    \[\deriv{y}{x} = \frac{y}{x} \pd\]
+    Performing Separation of Variables, we attain 
+    \[
+    \ba 
+    \int \frac{1}{y} \di y &= \int \frac{1}{x} \di x \nl 
+    \ln \abs y &= \ln \abs x + C_1
+    \ea 
+    \]
+    for any constant \(C_1.\)
+    To solve for \(y,\) we exponentiate both sides using the base \(e.\)
+    Letting \(m = \pm e^{C_1},\) we get 
+    \[
+    \ba
+    \abs{y} &= e^{\ln \abs x + C_1} = e^{C_1} \abs x \nl 
+    y &= \pm e^{C_1} x = mx \pd
+    \ea
+    \]
+    Hence, a line that passes through the origin—the graph \(y = mx\)—with any slope \(m\) is an orthogonal trajectory
+    to a circle centered at the origin, as shown by <a href="#orthogonal-trajectory-circle">Figure 4</a>.
+    The circles and lines are therefore called <i>mutually orthogonal</i>.
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the orthogonal trajectories to the curve \(x = ky^2\)
+        for any constant \(k.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <figure class="orthogonal-trajectory-ellipses" id="orthogonal-trajectory-ellipses">
+        <img src="../images/sectionImages/orthogonal-trajectory-ellipses.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .orthogonal-trajectory-ellipses::before{
+            content:'FIGURE 5';
+        }
+    </style>
+    Using Implicit Differentiation on \(x = ky^2,\) we attain
+    \[
+    \ba
+    \deriv{}{x} (x) &= \deriv{}{x} \par{ky^2} \nl 
+    1 &= 2ky \deriv{y}{x} \nl 
+    \implies \deriv{y}{x} &= \frac{1}{2ky} \pd
+    \ea
+    \]
+    Let's eliminate \(k \col\)
+    From the equation of the general parabola \(x = ky^2,\) we get \(k = x/y^2.\)
+    So we have 
+    \[\deriv{y}{x} = \frac{1}{2 \par{\dfrac{x}{y^2}} y} = \frac{y}{2x} \pd\]
+    An orthogonal trajectory's slope at \((x, y)\) must be the negative reciprocal of \(y/2x.\) 
+    Hence, the orthogonal trajectories satisfy the differential equation  
+    \[\deriv{y}{x} = -\frac{2x}{y} \pd\]
+    Using Separation of Variables, we find 
+    \[
+    \ba 
+    \int y \di y &= \int -2x \di x \nl 
+    \frac{y^2}{2} &= -x^2 + C \nl 
+    \ea
+    \]
+    for any constant \(C.\)
+    Let's rewrite this equation to be in the form 
+    \[\boxed{x^2 + \frac{y^2}{2} = C}\]
+    We intentionally wrote the solution as an implicit equation 
+    to better recognize that it represents an ellipse.
+    Hence, the orthogonal trajectories to \(x = ky^2\) are this family of ellipses,
+    as shown by <a href="#orthogonal-trajectory-ellipses">Figure 5</a>.
+</div>
+
+<h4 id="mixing-problems">Mixing Problems</h4>
+<p>
+    First-order differential equations are powerful tools for modeling many situations;
+    one of their applications involves problems with <i>mixing</i>. 
+    In these problems, a tank contains some volume of liquid. 
+    A solution with some concentration of dissolved solute, such as salt, enters the tank;
+    at the same time, liquid flows out of the tank. 
+    In this process, the solute in the tank changes continuously with time. 
+    If \(y\) is the mass of solute in the tank and \(t\) is time, then 
+    the rate of change of the solute is \(\textderiv{y}{t}.\)
+    It is given by the <i>net rate</i> of solute flow—namely, 
+    the rate at which solute enters the tank minus the rate at which solute leaves the tank. 
+    We therefore write
+    \begin{equation}
+    \deriv{y}{t} = (\text{rate in}) - (\text{rate out}) \pd \label{eq:rate-mixing}
+    \end{equation}
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        A tank initially contains \(30\) kilograms of salt dissolved in \(3000\) liters 
+        of water.
+        A brine with a concentration of \(0.1\) kilogram of salt per liter of water  
+        is pumped into the tank at a rate of \(20\) liters per minute. 
+        The tank is drained so that it maintains a constant volume of \(3000\) liters. 
+        How much salt remains in the tank after \(1\) hour?
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <figure class="sep-variables-mixing-graph" id="sep-variables-mixing-graph">
+        <img src="../images/sectionImages/sep-variables-mixing-graph.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .sep-variables-mixing-graph::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    Let \(y(t)\) be the mass, in kilograms, of salt in the tank after \(t\) minutes. 
+    Note that \(y(0) = 30;\) our goal is to find \(y(60).\)
+    We model the salt in the tank using the differential equation given by \(\eqref{eq:rate-mixing},\)
+    where we express \((\text{rate in})\) and \((\text{rate out})\) to be in kilograms per minute.
+    The rate at which salt is pumped <i>in</i> is 
+    \[\text{rate in} = \frac{0.1 \un{kg}}{1 \un{L}} \times \frac{20 \un{L}}{1 \un{min}} = 2 \, \frac{\un{kg}}{\un{min}} \pd\]
+    Because the tank always contains \(3000 \un L\) of liquid,
+    the concentration of salt at time \(t\) is \(y(t)/3000\) (whose units are kilograms per liter). 
+    Liquid is drained at a rate to maintain the same volume, 
+    so liquid <i>must exit the tank at the same rate</i> \(20 \undiv{L}{min}.\)
+    Thus, the rate at which salt flows <i>out</i> is 
+    \[\text{rate out} = \frac{20 \un{L}}{1 \un{min}} \times \frac{y(t) \un{kg}}{3000 \un{L}}  
+    = \frac{y(t)}{150} \, \frac{\un{kg}}{\un{min}} \pd\]
+    Hence, the differential equation becomes 
+    \[
+    \deriv{y}{t} = 2 - \frac{y(t)}{150} = \frac{300 - y(t)}{150} \pd
+    \]
+    We condense \(y(t)\) as \(y\) and perform Separation of Variables, as follows:
+    \[
+    \ba 
+    \int \frac{\dd y}{300 - y} &= \int \frac{\dd t}{150} \nl 
+    - \ln \abs{300 - y} &= \frac{t}{150} + C \pd
+    \ea 
+    \]
+    Substituting the initial condition \(y(0) = 30\) shows 
+    \[- \ln 270 = \frac{0}{150} + C \implies C = - \ln 270 \pd\]
+    We therefore have
+    \[
+    \ba 
+    -\ln \abs{300 - y} &= \frac{t}{150} - \ln 270 \nl 
+    \abs{300 - y} &= 270 e^{-t/150} \pd
+    \ea 
+    \]
+    Since \(y(0) = 30\) and the right-hand side is never negative, we 
+    have \(\abs{300 - y}\) \(= 300 - y\) and so 
+    \[
+    \ba 
+    300 - y &= 270 e^{-t/150} \nl 
+    y &= 300 - 270 e^{-t/150} \pd
+    \ea 
+    \]
+    So the mass of salt after \(1\) hour, or \(60\) minutes, is 
+    \[y(60) = \boxed{300 - 270 e^{-60/150}} \approx 119.014 \un{kg} \pd\]
+    (See <a href="#sep-variables-mixing-graph">Figure 6</a>.)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#separable-diff-eqs" class="summary-anchor">Separable Differential Equations</a>
+        A <span class="emph">separable differential equation</span> is of the form 
+        \begin{equation*} 
+        \deriv{y}{x} = \frac{g(x)}{h(y)} \pd \eqlabel{eq:sep-diff-eq}
+        \end{equation*}
+        <span class="emph">Separation of Variables</span> gives the following solution
+        to the differential equation:
+        \begin{equation*} 
+        \int h(y) \di y = \int g(x) \di x \pd \eqlabel{eq:sep-diff-eq-int}
+        \end{equation*}
+        In this process, we move all terms with \(y\)
+        to one side and all terms with \(x\) to the other side.
+    </p>
+    <p>
+        <a href="#orthogonal-trajectories" class="summary-anchor">Orthogonal Trajectories</a>
+        An <span class="emph">orthogonal trajectory</span> is a curve 
+        that intersects a family of curves <i>orthogonally</i>, that is, at right angles.
+        Two mutually orthogonal curves have slopes 
+        that are negative reciprocals of each other. 
+        We find orthogonal trajectories by 
+        determining the slope of the orthogonal trajectory 
+        and then solving the resulting differential equation.
+    </p>
+    <p>
+        <a href="#mixing-problems" class="summary-anchor">Mixing Problems</a>
+        In mixing problems, 
+        we model the amount of solute in a container 
+        as liquid flows in and out.
+        If \(y\) is the mass of solute in the tank and \(t\) is time, 
+        then the rate of change of the mass, \(\textderiv{y}{t},\) is given 
+        by the <i>net rate</i> at which solute flows into the container—namely, 
+        \begin{equation}
+        \deriv{y}{t} = (\text{rate in}) - (\text{rate out}) \pd \eqlabel{eq:rate-mixing}
+        \end{equation}
+    </p>
+</div>  
+</main>
+<!-- </main>
+<footer>
     <div class="footer-body">
         <div class="footer-nav-column">
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="../about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="../contact.html">Contact</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Discord</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
         <div class="footer-nav-column">
-            <h3>Supplemental Resources</h3>
+            <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -201,16 +481,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -218,31 +498,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="../about.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">Privacy Policy</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
-    <div class="footer-disclaimer">  
-        <p class="ap-notice">
-            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
-        </p>
-    </div>
-</footer> -->
-    <script src="/Valculus/js/mathjax-config.js"></script>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
-  </body>
-</html>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4.5 Exercises: Numerical Integration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>4.5 Exercises: Numerical Integration</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="4.5-Numerical-Integration.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="4.5-Numerical-Integration-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<section><p class="exercises-hint">Click on a problem number to see its solution.</p> 
+<p class="problems-note">For each of exercises 1 and 2, estimate the integral using the 
+        specified approximation method. 
+<!--div1--> 
+<div class="problem-list-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-1" target="_blank" rel="noopener">\(\hspace{0.56em}1.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        \(\ds \int_0^4 \cos \sqrt x \di x\) using a 
+        left-endpoint approximation with \(n = 3\)
+    </ques> 
+   </div>  
+</div> 
+<!--div2--> 
+<div class="problem-list-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-2" target="_blank" rel="noopener">\(\hspace{0.56em}2.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        \(\ds \int_{-4}^2 \par{t^2 - 2} \di t\) 
+        using a right-endpoint approximation with \(n = 6\)
+    </ques> 
+   </div>  
+</div> 
+</section></section><!--div3--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-3" target="_blank" rel="noopener">\(\hspace{0.56em}3.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        With \(n\) equal-width subintervals, \(\int_a^b f(x) \di x\)
+        is estimated to be \(7\) by a left-endpoint approximation 
+        and \(3\) by a right-endpoint approximation. 
+        What does the Midpoint Rule with \(n\) equal-width subintervals estimate the integral to be?
+    </ques> 
+   </div>  
+</div> 
+<!--div4--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-4" target="_blank" rel="noopener">\(\hspace{0.56em}4.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Let \(f\) be a decreasing function on \([a, b].\)
+        If \(L_n\) is a left-endpoint approximation 
+        and \(R_n\) is a right-endpoint approximation 
+        for \(\int_a^b f(x) \di x,\)
+        then bound \(\int_a^b f(x) \di x\) between these estimates.
+    </ques> 
+   </div>  
+</div> 
+<!--div5--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-5" target="_blank" rel="noopener">\(\hspace{0.56em}5.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Function \(g\) is increasing on \([a, b].\)
+        The definite integral \(\int_a^b g(x) \di x\) 
+        is approximated by a right-endpoint approximation \(R_n,\)
+        and the error \(E_n\) in the approximation satisfies \(\abs{E_n} \leq K.\)
+        Construct an interval in which the true value of \(\int_a^b g(x) \di x\)
+        must lie. 
+    </ques> 
+   </div>  
+</div> 
+</section><p class="problems-note">For each of exercises 6–8, apply the Midpoint Rule to approximate 
+        the integral using \(n\) equal-width subintervals. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-6" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}6.\)</a> 
+        \(\ds \int_{-1}^2 \frac{1}{2x^2 + 3} \di x \scoll n = 3\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-7" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}7.\)</a> 
+        \(\ds \int_1^9 \frac{3}{x^2} \di x \scoll n = 4\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-8" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}8.\)</a> 
+        \(\ds \int_{-4}^0 e^{x} \di x \scoll n = 8\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><p class="problems-note">For each of exercises 9–12, apply the Trapezoidal Rule to approximate the integral 
+        using \(n\) subintervals of equal width. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-9" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}9.\)</a> 
+        \(\ds \int_2^6 \frac{4}{3x + 5} \di x \scoll n = 8\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-10" class="problem-number" rel="noopener" target="_blank">\(10.\)</a> 
+        \(\ds \int_0^2 \par{x - 2x^3} \di x \scoll n = 5\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-11" class="problem-number" rel="noopener" target="_blank">\(11.\)</a> 
+        \(\ds \int_0^{\pi} \sqrt{\sin \theta} \di \theta \scoll n =4\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-12" class="problem-number" rel="noopener" target="_blank">\(12.\)</a> 
+        \(\ds \int_0^{2 \pi} \cos^3 \theta \di \theta \scoll n = 6\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><p class="problems-note">For each of exercises 13–17, approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-13" class="problem-number" rel="noopener" target="_blank">\(13.\)</a> 
+        \(\ds \int_0^1 e^{x^3} \di x \scoll n = 4\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-14" class="problem-number" rel="noopener" target="_blank">\(14.\)</a> 
+        \(\ds \int_1^4 \frac{1}{x^2 + 2} \di x \scoll n = 6\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-15" class="problem-number" rel="noopener" target="_blank">\(15.\)</a> 
+        \(\ds \int_0^8 \sqrt{t^3 + 1} \di t \scoll n = 8\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-16" class="problem-number" rel="noopener" target="_blank">\(16.\)</a> 
+        \(\ds \int_0^{2 \pi} \sin^4 x \di x \scoll n = 6\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-17" class="problem-number" rel="noopener" target="_blank">\(17.\)</a> 
+        \(\ds \int_{-5}^0 e^{-\sqrt{\abs{y}}} \di y \scoll n = 10\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><!--div18--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-18" target="_blank" rel="noopener">\(18.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        A particle travels along a straight line 
+        with time \(t\) (measured in seconds) as modeled by the velocity function 
+        \(v(t),\) measured in meters per second. 
+        The particle's acceleration is positive for all \(0 \leq t \leq 4.\)
+        Selected values of \(t\) and \(v(t)\) are shown in the following table. 
+        Using a left-endpoint approximation 
+        with the given subintervals, 
+        estimate the particle's displacement 
+        over \(0 \leq t \leq 4.\)
+        Does this estimate underestimate or overestimate the particle's true displacement?
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(t\)
+                </td>
+<td>
+                    \(0\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(v(t)\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(5\)
+                </td>
+<td>
+                    \(7\)
+                </td>
+<td>
+                    \(8\)
+                </td>
+<td>
+                    \(13\)
+                </td>
+</tr>
+</table>
+</ques> 
+   </div>  
+</div> 
+<!--div19--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-19" target="_blank" rel="noopener">\(19.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Water is pumped into a pool 
+        with time as given by the continuous rate function \(f(t),\)
+        where \(f(t)\) is measured in milliliters per second and \(t\)
+        is measured in seconds after the pumping begins. 
+        Selected values of \(t\) and \(f(t)\) are provided by the following table.
+        Using a trapezoidal approximation with the given subintervals,
+        estimate the total volume of water that is pumped into the pool 
+        over \(1 \leq t \leq 8.\)
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(t\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(5\)
+                </td>
+<td>
+                    \(8\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(f(t)\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+<td>
+                    \(6\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(7\)
+                </td>
+</tr>
+</table>
+</ques> 
+   </div>  
+</div> 
+<!--div20--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-20" target="_blank" rel="noopener">\(20.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        The following table shows the power output 
+        of a power plant measured every \(6\) hours.
+        Use Simpson's Rule to approximate the total energy 
+        supplied throughout the entire day.
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    Time
+                </td>
+<td>
+                    \(12\) <span class="time">am</span>
+</td>
+<td>
+                    \(6\) <span class="time">am</span>
+</td>
+<td>
+                    \(12\) <span class="time">pm</span>
+</td>
+<td>
+                    \(6\) <span class="time">pm</span>
+</td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    Power Output (Megawatts)
+                </td>
+<td>
+                    \(80\)
+                </td>
+<td>
+                    \(110\)
+                </td>
+<td>
+                    \(120\)
+                </td>
+<td>
+                    \(90\)
+                </td>
+</tr>
+</table>
+</ques> 
+   </div>  
+</div> 
+<!--div21--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-21" target="_blank" rel="noopener">\(21.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        In <a href="#approx-integration-ex-simpson-graph">Figure 10</a>, 
+        use Simpson's Rule with \(n = 4\) to approximate \(\int_{-4}^4 f(x) \di x.\)
+        <figure class="approx-integration-ex-simpson-graph figure-center-one" id="approx-integration-ex-simpson-graph">
+<img alt="Figure 10" src="../images/sectionImages/approx-integration-ex-simpson-graph.jpg"/>
+</figure>
+<style>
+            .approx-integration-ex-simpson-graph::before{
+                content:'FIGURE 10';
+            }
+        </style>
+</ques> 
+   </div>  
+</div> 
+<!--div22--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-22" target="_blank" rel="noopener">\(22.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        In <a href="#approx-integration-ex-trapezoidal-graph">Figure 11</a>, 
+        use the Trapezoidal Rule with \(n = 4\) to approximate \(\int_{-3}^1 g(x) \di x.\)
+        <figure class="approx-integration-ex-trapezoidal-graph figure-center-one" id="approx-integration-ex-trapezoidal-graph">
+<img alt="Figure 11" src="../images/sectionImages/approx-integration-ex-trapezoidal-graph.jpg"/>
+</figure>
+<style>
+            .approx-integration-ex-trapezoidal-graph::before{
+                content:'FIGURE 11';
+            }
+        </style>
+</ques> 
+   </div>  
+</div> 
+</section><!--div23--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-23" target="_blank" rel="noopener">\(23.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Use the Trapezoidal Rule with \(n = 4\) to estimate the area under \(y = \ln x\)
+        from \(x = 1\) to \(x = 3.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div24--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-24" target="_blank" rel="noopener">\(24.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Use a left-endpoint approximation with \(n = 2\) to estimate the area under 
+        \(y = 1 + \atan x\) from \(x = 0\) to \(x = 2.\)
+        Then calculate an error bound for the approximation.
+        Determine whether the approximation is an underestimate or overestimate;
+        accordingly, construct an interval in which the true value of the area must lie. 
+    </ques> 
+   </div>  
+</div> 
+<!--div25--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-25" target="_blank" rel="noopener">\(25.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Use the Midpoint Rule with \(n = 3\) to approximate \(\int_0^1 e^{x^2} \di x.\)
+        Then find a number \(K\) such that 
+        \[\abs{\int_0^1 e^{x^2} \di x - M_3} \leq K \pd \]
+    </ques> 
+   </div>  
+</div> 
+<!--div26--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-26" target="_blank" rel="noopener">\(26.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Let \(k\) and \(m\) be positive numbers.
+        Show that with \(n\) subintervals, an endpoint approximation 
+        estimates
+        \(\int_m^{2m} \par{1/x^k} \di x\)
+        with an error bound given by
+        \[
+        \abs{E_n} \leq \frac{k}{2n m^{k - 1}} \pd
+        \] 
+    </ques> 
+   </div>  
+</div> 
+<!--div27--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-27" target="_blank" rel="noopener">\(27.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Use the Trapezoidal Rule with \(n = 6\) to approximate \(\int_1^{8} e^{1/x} \di x.\)
+        Then calculate and interpret the error bound in the approximation.
+    </ques> 
+   </div>  
+</div> 
+<!--div28--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-28" target="_blank" rel="noopener">\(28.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Prove that the Trapezoidal Rule and Midpoint Rule 
+        always provide exact estimates to \(\int_a^b f(x) \di x\)
+        if \(f\) is linear.
+    </ques> 
+   </div>  
+</div> 
+<!--div29--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-29" target="_blank" rel="noopener">\(29.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Prove that Simpson's Rule always provides exact approximations 
+        to definite integrals of cubic functions.
+    </ques> 
+   </div>  
+</div> 
+<!--div30--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-30" target="_blank" rel="noopener">\(30.\)</a> 
+<div class="exercises-calculator-body">
+   <img src="../images/icons/calculator.png" class="exercises-calculator-icon">
+</div>
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!-- [[[CALC]]] -->
+        On \([1, 5],\) a function \(f\) satisfies \(\abs{f'(x)} \leq 1/30,\)
+        \(\abs{f''(x)} \leq 2,\) and \(\abs{f^{(4)}(x)} \leq 90.\)
+        Find the values of \(n\) such that with \(n\) subintervals,
+        the following numerical integration methods 
+        each approximate \(\int_1^5 f(x) \di x\) with an error whose magnitude is less than \(0.2 \col\)
+        <ol class="list-alpha">
+<li>
+                an endpoint approximation
+            </li>
+<li>
+                the Midpoint Rule
+            </li>
+<li>
+                the Trapezoidal Rule
+            </li>
+<li>
+                Simpson's Rule (if \(n\) is even)
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+<!--div31--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-31" target="_blank" rel="noopener">\(31.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Find the minimum value of \(n\) 
+        such that the Trapezoidal Rule approximates \(\int_{-2}^2 \sqrt[3]{2x + 5} \di x\)
+        with an error whose magnitude is less than \(1/54.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div32--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-32" target="_blank" rel="noopener">\(32.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Determine the minimum value of \(n\)
+        such that the Midpoint Rule approximation for 
+        \(\int_{-3}^1 \sqrt{x^2 + 4} \di x\)
+        is accurate within \(1/12.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div33--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-33" target="_blank" rel="noopener">\(33.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Let \(f(x) = 1/(x + 3).\)
+        Determine the minimum value of \(n\) for which Simpsons Rule estimates \(\int_{-1}^2 f(x) \di x\)
+        with an error whose magnitude is less than \(1/80.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div34--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="4.5-Numerical-Integration-exercises-solutions.html#exercise-34" target="_blank" rel="noopener">\(34.\)</a> 
+<div class="exercises-calculator-body">
+   <img src="../images/icons/calculator.png" class="exercises-calculator-icon">
+</div>
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!-- [[[CALC]]] -->
+        Find the values of \(n\) such that Simpson's Rule approximates 
+        \(\int_{\pi/6}^{\pi/3} \tfrac{1}{4} \cos 2x \di x\)
+        correct to six decimal places.
+    </ques> 
+   </div>  
+</div> 
+</section>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4.5 Exercise Solutions: Numerical Integration</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>4.5 Exercise Solutions: Numerical Integration</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="4.5-Numerical-Integration.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="4.5-Numerical-Integration-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \int_0^4 \cos \sqrt x \di x\) using a 
+        left-endpoint approximation with \(n = 3\)
+    </blockquote> estimate the integral using the 
+        specified approximation method. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([0, 4]\) into three subintervals of equal width 
+        \[\Delta x = \frac{4 - 0}{3} = \frac{4}{3} \pd \]
+        These subintervals are 
+        \(\parbr{0, \tfrac{4}{3}},\)
+        \(\parbr{\tfrac{4}{3}, \tfrac{8}{3}},\) 
+        and \(\parbr{\tfrac{8}{3}, 4}.\)
+        We sample the function \(\cos \sqrt x\)
+        at the left endpoint of each subinterval;
+        doing so gives the following approximation:
+        \[
+        \ba 
+        \int_0^4 \cos \sqrt x \di x 
+        &amp;\approx L_3 \nl 
+        &amp;= \par{\cos \sqrt 0 + \cos \sqrt{\frac{4}{3}} + \cos \sqrt{\frac{8}{3}}} \par{\frac{4}{3}} \nl 
+        &amp;\approx \boxed{1.78938}
+        \ea 
+        \]
+        (This procedure is a review of our discussion in Section 
+        <a href="/ValCalc/ValCalc/calculus/4.2-Definite-Integrals.html">4.2</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \int_{-4}^2 \par{t^2 - 2} \di t\) 
+        using a right-endpoint approximation with \(n = 6\)
+    </blockquote> estimate the integral using the 
+        specified approximation method. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([-4, 2]\) into six subintervals of equal width 
+        \[\Delta t = \frac{2 - (-4)}{6} = 1 \pd\]
+        So our subintervals are \([-4, -3],\) \([-3, -2],\)
+        \(\dots, [1, 2].\)
+        We evaluate the function at the right endpoint of each subinterval;
+        doing so gives the approximation 
+        \[
+        \ba 
+        \int_{-4}^2 \par{t^2 - 2} \di t 
+        &amp;\approx R_6 \nl 
+        &amp;= \Big([(-3)^2 - 2] + [(-2)^2 - 2] + [(-1)^2 - 2] + [(0)^2 - 2] \nl 
+        &amp;\lspace \, \, + [(1)^2 - 2] + [(2)^2 - 2]\Big) (1) \nl 
+        &amp;= \boxed 7
+        \ea 
+        \]
+        (This procedure is a review of our discussion in Section 
+        <a href="/ValCalc/ValCalc/calculus/4.2-Definite-Integrals.html">4.2</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        With \(n\) equal-width subintervals, \(\int_a^b f(x) \di x\)
+        is estimated to be \(7\) by a left-endpoint approximation 
+        and \(3\) by a right-endpoint approximation. 
+        What does the Midpoint Rule with \(n\) equal-width subintervals estimate the integral to be?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Midpoint Rule approximation is the average of the endpoint approximations—namely, 
+        \[\frac{7 + 3}{2} = \boxed 5\]
+        (This fact is only true if \(n\) is the same.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f\) be a decreasing function on \([a, b].\)
+        If \(L_n\) is a left-endpoint approximation 
+        and \(R_n\) is a right-endpoint approximation 
+        for \(\int_a^b f(x) \di x,\)
+        then bound \(\int_a^b f(x) \di x\) between these estimates.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(f\) is decreasing on \([a, b],\)
+        the left-endpoint approximation is an overestimate 
+        and the right-endpoint approximation is an underestimate.
+        We therefore have 
+        \[\boxed{R_n \leq \int_a^b f(x) \di x \leq L_n}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Function \(g\) is increasing on \([a, b].\)
+        The definite integral \(\int_a^b g(x) \di x\) 
+        is approximated by a right-endpoint approximation \(R_n,\)
+        and the error \(E_n\) in the approximation satisfies \(\abs{E_n} \leq K.\)
+        Construct an interval in which the true value of \(\int_a^b g(x) \di x\)
+        must lie. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(g\) is increasing on \([a, b],\)
+        the right-endpoint approximation \(R_n\)
+        is an overestimate of the true value of \(\int_a^b g(x) \di x.\)
+        The approximation \(R_n\) can differ from \(\int_a^b g(x) \di x\)
+        by <i>no more than</i> \(K.\)
+        So the integral's true value must lie between \(R_n\) and \(R_n + K;\)
+        that is,
+        \[\boxed{R_n \leq \int_a^b g(x) \di x \leq R_n + K}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{-1}^2 \frac{1}{2x^2 + 3} \di x \scoll n = 3\]
+    </blockquote> apply the Midpoint Rule to approximate 
+        the integral using \(n\) equal-width subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width 
+        \[\Delta x = \frac{2 - (-1)}{3} = 1 \pd\]
+        Our subintervals are therefore \([-1, 0],\) \([0, 1],\)
+        and \([1, 2].\)
+        We evaluate the function \(1/\par{2x^2 + 3}\) at the midpoint \(\overline x_i\) of each subinterval; 
+        the Midpoint Rule therefore gives 
+        \[
+        \ba 
+        \int_{-1}^2 \frac{1}{2x^2 + 3} \di x 
+        &amp;\approx M_3 = \sum_{i = 1}^3 \frac{1}{2 \overline{x}_i^2 + 3} \Delta x \nl  
+        &amp;= \parbr{\frac{1}{2(-0.5)^2 + 3} + \frac{1}{2(0.5)^2 + 3} + \frac{1}{2(1.5)^2 + 3}} (1) \nl 
+        &amp;\approx \boxed{0.70476}
+        \ea 
+        \]
+        The true value of the integral is roughly \(0.69649,\) so our approximation was decent
+        (since we only used a few terms).
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^9 \frac{3}{x^2} \di x \scoll n = 4\]
+    </blockquote> apply the Midpoint Rule to approximate 
+        the integral using \(n\) equal-width subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width 
+        \[\Delta x = \frac{9 - 1}{4} = 2 \pd\]
+        Our subintervals are therefore \([1, 3],\) \([3, 5],\)
+        \([5, 7],\) and \([7, 9].\)
+        We evaluate the function \(3/x^2\) at the midpoint \(\overline x_i\) of each subinterval; 
+        the Midpoint Rule therefore gives 
+        \[
+        \ba 
+        \int_1^9 \frac{3}{x^2} \di x
+        &amp;\approx M_4 = \sum_{i = 1}^4 \frac{3}{{\overline x_i}^2} \Delta x \nl  
+        &amp;= \parbr{\frac{3}{2^2} + \frac{3}{4^2} + \frac{3}{6^2} + \frac{3}{8^2}} (2) \nl 
+        &amp;\approx \boxed{2.13542}
+        \ea 
+        \]
+        The true value of the integral is \(8/3\) \(\approx 2.66667.\)
+        Because \(\Delta x\) was large, our approximation wasn't close to the exact value.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{-4}^0 e^{x} \di x \scoll n = 8\]
+    </blockquote> apply the Midpoint Rule to approximate 
+        the integral using \(n\) equal-width subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([-4, 0]\) into eight subintervals of equal width 
+        \[\Delta x = \frac{0 - (-4)}{8} = 0.5 \pd\]
+        The subintervals are \([-4, -3.5],\) \([-3.5, -3],\)
+        \(\dots, [-0.5, 0].\)
+        Evaluating the function at the midpoint of each subinterval, 
+        we approximate \(\int_{-4}^0 e^{x} \di x\) to be 
+        \[
+        \ba 
+        M_8 &amp;= \sum_{i = 1}^8 e^{\overline x_i} \nl
+        &amp;= \par{e^{-3.75} + e^{-3.25} + e^{-2.75} + e^{-2.25} + e^{-1.75} + e^{-1.25} + e^{-0.75} + e^{-0.25}} (0.5) \nl 
+        &amp;\approx \boxed{0.97153}
+        \ea 
+        \]
+        The true value of the integral is \(1 - e^{-4}\) \(\approx 0.98168.\)
+        Not bad!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_2^6 \frac{4}{3x + 5} \di x \scoll n = 8\]
+    </blockquote> apply the Trapezoidal Rule to approximate the integral 
+        using \(n\) subintervals of equal width. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width 
+        \[\Delta x = \frac{6 - 2}{8} = 0.5 \pd\]
+        The Trapezoidal Rule therefore gives the approximation 
+        \[
+        \ba 
+        \int_2^6 \frac{4}{3x + 5} \di x &amp;\approx T_8 \nl 
+        &amp;= \frac{0.5}{2} 
+        \Big(\frac{4}{3(2) + 5} + \frac{8}{3(2.5) + 5} + \frac{8}{3(3) + 5} + \frac{8}{3(3.5) + 5} \nl 
+        &amp;\lspace + \frac{8}{3(4) + 5} + \frac{8}{3(4.5) + 5} + \frac{8}{3(5) + 5} \nl 
+        &amp;\lspace + \frac{8}{3(5.5) + 5} 
+        + \frac{4}{3(6) + 5}\Big) \nl 
+        &amp;\approx \boxed{0.98506}
+        \ea 
+        \]
+        The true value of the integral is \(\tfrac{4}{3} \ln \tfrac{23}{11}\) \(\approx 0.98347.\)
+        Our approximation came close!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^2 \par{x - 2x^3} \di x \scoll n = 5\]
+    </blockquote> apply the Trapezoidal Rule to approximate the integral 
+        using \(n\) subintervals of equal width. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width 
+        \[\Delta x = \frac{2 - 0}{5} = 0.4 \pd\]
+        The Trapezoidal Rule therefore gives the approximation 
+        \[
+        \ba 
+        \int_0^2 \par{x - 2x^3} \di x &amp;\approx T_5 \nl 
+        &amp;= \frac{0.4}{2} 
+        \Big(
+        \parbr{(0) - 2(0)^3} + 2 \parbr{(0.4) - 2(0.4)^3} 
+        + 2 \parbr{(0.8) - 2(0.8)^3} 
+        \nl 
+        &amp;\lspace+ 2 \parbr{(1.2) - 2(1.2)^3}
+        + 2 \parbr{(1.6) - 2(1.6)^3}
+        + \parbr{(2) - 2(2)^3}
+        \Big) \nl 
+        &amp;= \boxed{-6.32}
+        \ea 
+        \]
+        The true value of the integral is \(-6,\)
+        which is fairly close to our approximation \(T_5 = -6.32.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{\pi} \sqrt{\sin \theta} \di \theta \scoll n =4\]
+    </blockquote> apply the Trapezoidal Rule to approximate the integral 
+        using \(n\) subintervals of equal width. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width \(\Delta \theta = \pi/4.\)
+        So we use the Trapezoidal Rule to attain the following approximation:
+        \[
+        \ba 
+        \int_0^{\pi} \sqrt{\sin \theta} \di \theta
+        &amp;\approx T_4 \nl 
+        &amp;= \frac{\pi/4}{2} \par{ \sqrt{\sin 0} + 2 \sqrt{\sin \frac{\pi}{4}} + 2 \sqrt{\sin \frac{\pi}{2}} + 2 \sqrt{\sin \frac{3 \pi}{4}} + \sqrt{\sin \pi}} \nl 
+        &amp;= \frac{\pi}{4} \par{0 + \frac{1}{\sqrt[4]{2}} + 1 + \frac{1}{\sqrt[4]{2}} + 0} \nl 
+        &amp;= \boxed{\frac{\pi}{4} \par{1 + 2^{3/4}}} \approx 2.10628 \pd
+        \ea 
+        \]
+        (The integral's exact value is roughly <nobr>\(2.39628.\))</nobr>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{2 \pi} \cos^3 \theta \di \theta \scoll n = 6\]
+    </blockquote> apply the Trapezoidal Rule to approximate the integral 
+        using \(n\) subintervals of equal width. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has equal width 
+        \[\Delta \theta = \frac{2 \pi - 0}{6} = \frac{\pi}{3} \pd \]
+        We therefore have 
+        \[
+        \ba 
+        \int_0^{2 \pi} \cos^3 \theta \di \theta 
+        &amp;\approx T_6 \nl 
+        &amp;= \frac{\pi/3}{2} \Big(\cos^3 0 + 2 \cos^3 \frac{\pi}{3} + 2 \cos^3 \frac{2 \pi}{3} \nl 
+        &amp;\lspace + 2 \cos^3 \frac{3 \pi}{3} + 2 \cos^3 \frac{4 \pi}{3} \nl 
+        &amp;\lspace + 2 \cos^3 \frac{5 \pi}{3} + \cos^3 \frac{6 \pi}{3} \Big) \nl
+        &amp;= \frac{\pi}{6} (0) = \boxed 0
+        \ea 
+        \]
+        The integral \(\int_0^{2 \pi} \cos^3 \theta \di \theta\) truly does equal \(0.\)
+        The Trapezoidal Rule produced an exact answer!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 e^{x^3} \di x \scoll n = 4\]
+    </blockquote> approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 4\) each subinterval has width 
+        \[\Delta x = \frac{1 - 0}{4} = 0.25 \pd\]
+        Hence, using Simpson's Rule gives 
+        \[
+        \ba 
+        \int_0^1 e^{x^3} \di x &amp;\approx S_4 \nl 
+        &amp;= \frac{0.25}{3} \parbr{e^{0^3} + 4 e^{0.25^3} + 2 e^{0.5^3} + 4 e^{0.75^3} + e^{1^3}} \nl 
+        &amp;\approx \boxed{1.34557}
+        \ea 
+        \]
+        The integral's true value is roughly \(1.34190.\)
+        With only a few terms, Simpson's Rule provided an excellent approximation.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^4 \frac{1}{x^2 + 2} \di x \scoll n = 6\]
+    </blockquote> approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 6\) each subinterval has width 
+        \[\Delta x = \frac{4 - 1}{6} = 0.5 \pd \]
+        Hence, using Simpson's Rule gives 
+        \[
+        \ba 
+        \int_1^4 \frac{1}{x^2 + 2} \di x &amp;\approx S_6 \nl 
+        &amp;= \frac{0.5}{3} \Big[\frac{1}{(1)^2 + 2} + \frac{4}{(1.5)^2 + 2} + \frac{2}{(2)^2 + 2} + \frac{4}{(2.5)^2 + 2} \nl
+        &amp;\lspace \; \; \; \, + \frac{2}{(3)^2 + 2} + \frac{4}{(3.5)^2 + 2} + \frac{1}{(4)^2 + 2} \Big] \nl 
+        &amp;\approx \boxed{0.43513}
+        \ea 
+        \]
+        The integral's true value is approximately \(0.43521\)—very close!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^8 \sqrt{t^3 + 1} \di t \scoll n = 8\]
+    </blockquote> approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 8\) each subinterval has width 
+        \[\Delta t = \frac{8 - 0}{8} = 1 \pd\]
+        Hence, using Simpson's Rule gives 
+        \[
+        \ba 
+        \int_0^8 \sqrt{t^3 + 1} \di t &amp;\approx S_8 \nl 
+        &amp;= \frac{1}{3} \Big(\sqrt{0^3 + 1} + 4 \sqrt{1^3 + 1} + 2 \sqrt{2^3 + 1} \nl 
+        &amp;\lspace + 4 \sqrt{3^3 + 1} + 2 \sqrt{4^3 + 1} + 4 \sqrt{5^3 + 1} \nl 
+        &amp;\lspace + 2 \sqrt{6^3 + 1}
+        + 4 \sqrt{7^3 + 1} + \sqrt{8^3 + 1} \Big) \nl 
+        &amp;\approx \boxed{73.71585}
+        \ea 
+        \]
+        The integral actually equals roughly \(73.73682;\)
+        Simpson's Rule was close.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{2 \pi} \sin^4 x \di x \scoll n = 6\]
+    </blockquote> approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Each subinterval has width 
+        \[\Delta x = \frac{2 \pi - 0}{6} = \frac{\pi}{3} \pd\]
+        So we get the approximation 
+        \[
+        \ba 
+        \int_0^{2 \pi} \sin^4 x \di x 
+        &amp;\approx S_6 \nl
+        &amp;= \small \frac{\pi/3}{3} 
+        \parbr{\sin^4 0 + 4 \sin^4 \frac{\pi}{3} + 2 \sin^4 \frac{2 \pi}{3} + 4 \sin^4 \frac{3 \pi}{3} 
+        + 2 \sin^4 \frac{4 \pi}{3} + 4 \sin^4 \frac{5 \pi}{3} + \sin^4 \frac{6 \pi}{3}} \nl 
+        &amp;= \small \frac{\pi}{9} \parbr{0^4 + 4 \par{\frac{\sqrt 3}{2}}^4 + 2\par{\frac{\sqrt 3}{2}}^4 + 4(0)^4
+        + 2 \par{-\frac{\sqrt 3}{2}}^4 + 4 \par{-\frac{\sqrt 3}{2}}^4 + 0^4} \nl 
+        &amp;= \par{\frac{\pi}{9}} \par{12} \par{\frac{9}{16}} \nl 
+        &amp;= \boxed{\frac{3 \pi}{4}} \approx 2.35619 \pd
+        \ea 
+        \]
+        The integral equals \(3 \pi/4\) exactly.
+        Simpson's Rule was so accurate that it gave us the exact answer!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{-5}^0 e^{-\sqrt{\abs{y}}} \di y \scoll n = 10\]
+    </blockquote> approximate the integral using Simpson's Rule 
+        with \(n\) subintervals. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 10\) each subinterval has width 
+        \[\Delta y = \frac{0 - (-5)}{10} = 0.5 \pd\]
+        Hence, applying Simpson's Rule gives 
+        \[
+        \ba 
+        \int_{-5}^0 e^{-\sqrt{\abs{y}}} \di y &amp;\approx S_{10} \nl 
+        &amp;= \frac{0.5}{3} \Big(e^{-\sqrt{\abs{-5}}} + 4 e^{-\sqrt{\abs{-4.5}}} + 2 e^{-\sqrt{\abs{-4}}} \nl 
+        &amp;\lspace \; + 4 e^{-\sqrt{\abs{-3.5}}} + 2 e^{-\sqrt{\abs{-3}}} + 4 e^{-\sqrt{\abs{-2.5}}} \nl 
+        &amp;\lspace \; + 2 e^{-\sqrt{\abs{-2}}} + 4 e^{-\sqrt{\abs{-1.5}}} + 2 e^{-\sqrt{\abs{-1}}} \nl 
+        &amp;\lspace \; + 4 e^{-\sqrt{\abs{-0.5}}} + e^{-\sqrt{\abs{0}}}
+        \Big) \nl 
+        &amp;\approx \boxed{1.33657}
+        \ea 
+        \]
+        The integral truly equals approximately \(1.30827.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A particle travels along a straight line 
+        with time \(t\) (measured in seconds) as modeled by the velocity function 
+        \(v(t),\) measured in meters per second. 
+        The particle's acceleration is positive for all \(0 \leq t \leq 4.\)
+        Selected values of \(t\) and \(v(t)\) are shown in the following table. 
+        Using a left-endpoint approximation 
+        with the given subintervals, 
+        estimate the particle's displacement 
+        over \(0 \leq t \leq 4.\)
+        Does this estimate underestimate or overestimate the particle's true displacement?
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(t\)
+                </td>
+<td>
+                    \(0\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(v(t)\)
+                </td>
+<td>
+                    \(3\)
+                </td>
+<td>
+                    \(5\)
+                </td>
+<td>
+                    \(7\)
+                </td>
+<td>
+                    \(8\)
+                </td>
+<td>
+                    \(13\)
+                </td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The particle's displacement on \(0 \leq t \leq 4\)
+        is \(\int_0^4 v(t) \di t.\)
+        In a left Riemann sum, we use the left endpoint of each subinterval 
+        \([0, 1],\) \([1, 2],\) \([2, 3],\) and \([3, 4].\)
+        Observe that \(\Delta t = 1.\)
+        So we approximate the displacement to be
+        \[
+        L_4 
+        = (3 + 5 + 7 + 8)(1) = \boxed{23 \un{m}}
+        \]
+        Since the particle is <i>accelerating</i> on \(0 \leq t \leq 4,\)
+        the velocity function \(v(t)\) is increasing on this interval. 
+        So this left-endpoint approximation <b>underestimates</b> the true displacement. 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Water is pumped into a pool 
+        with time as given by the continuous rate function \(f(t),\)
+        where \(f(t)\) is measured in milliliters per second and \(t\)
+        is measured in seconds after the pumping begins. 
+        Selected values of \(t\) and \(f(t)\) are provided by the following table.
+        Using a trapezoidal approximation with the given subintervals,
+        estimate the total volume of water that is pumped into the pool 
+        over \(1 \leq t \leq 8.\)
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    \(t\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(2\)
+                </td>
+<td>
+                    \(5\)
+                </td>
+<td>
+                    \(8\)
+                </td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    \(f(t)\)
+                </td>
+<td>
+                    \(4\)
+                </td>
+<td>
+                    \(6\)
+                </td>
+<td>
+                    \(1\)
+                </td>
+<td>
+                    \(7\)
+                </td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The total volume of water pumped in is given by \(\int_1^8 f(t) \di t.\)
+        Because the subintervals in the table don't have equal widths, 
+        we apply the Trapezoidal Rule individually on each subinterval. 
+        Doing so gives 
+        \[
+        \ba 
+        \int_1^8 f(t) \di t 
+        &amp;\approx 
+        \tfrac{1}{2} [f(1) + f(2)] (2 - 1) 
+        + \tfrac{1}{2} [f(2) + f(5)] (5 - 2)
+        + \tfrac{1}{2} [f(5) + f(8)] (8 - 5) \nl 
+        &amp;= \tfrac{1}{2} (4 + 6)(1) 
+        + \tfrac{1}{2} (6 + 1)(3) 
+        + \tfrac{1}{2} (1 + 7)(3) \nl 
+        &amp;= \boxed{27.5 \un{mL}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The following table shows the power output 
+        of a power plant measured every \(6\) hours.
+        Use Simpson's Rule to approximate the total energy 
+        supplied throughout the entire day.
+        <table class="table-full-width">
+<tr>
+<td class="table-function-label">
+                    Time
+                </td>
+<td>
+                    \(12\) <span class="time">am</span>
+</td>
+<td>
+                    \(6\) <span class="time">am</span>
+</td>
+<td>
+                    \(12\) <span class="time">pm</span>
+</td>
+<td>
+                    \(6\) <span class="time">pm</span>
+</td>
+</tr>
+<tr>
+<td class="table-function-label">
+                    Power Output (Megawatts)
+                </td>
+<td>
+                    \(80\)
+                </td>
+<td>
+                    \(110\)
+                </td>
+<td>
+                    \(120\)
+                </td>
+<td>
+                    \(90\)
+                </td>
+</tr>
+</table>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The total energy output is given by the integral of the power output function 
+        throughout the entire day. 
+        (The derivative of energy with respect to time is power.)
+        With \(\Delta t = 6,\)
+        Simpson's Rule provides the following approximation for energy delivered throughout the day:
+        \[\frac{6}{3} [80 + 4(110) + 2(120) + 90] = \boxed{1700 \un{MWh}}\]
+        (<i>Note</i>: \(\un{MWh}\) is the unit for <b>megawatt-hour</b>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        In <a href="#approx-integration-ex-simpson-graph">Figure 10</a>, 
+        use Simpson's Rule with \(n = 4\) to approximate \(\int_{-4}^4 f(x) \di x.\)
+        <figure class="approx-integration-ex-simpson-graph figure-center-one" id="approx-integration-ex-simpson-graph">
+<img alt="Figure 10" src="../images/sectionImages/approx-integration-ex-simpson-graph.jpg"/>
+</figure>
+<style>
+            .approx-integration-ex-simpson-graph::before{
+                content:'FIGURE 10';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(f(-4) = 3,\)
+        \(f(-2) = 2,\) \(f(0) = 4,\)
+        \(f(2) = -2,\) and \(f(4) = -3.\)
+        Using \(n = 4\) implies \(\Delta x = 2.\)
+        So Simpson's Rule gives 
+        \[
+        \ba 
+        \int_{-4}^4 f(x) \di x 
+        &amp;\approx S_4 \nl 
+        &amp;= \frac{2}{3} \parbr{3 + 4(2) + 2(4) + 4(-2) + (-3)} \nl 
+        &amp;= \boxed{\frac{16}{3}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        In <a href="#approx-integration-ex-trapezoidal-graph">Figure 11</a>, 
+        use the Trapezoidal Rule with \(n = 4\) to approximate \(\int_{-3}^1 g(x) \di x.\)
+        <figure class="approx-integration-ex-trapezoidal-graph figure-center-one" id="approx-integration-ex-trapezoidal-graph">
+<img alt="Figure 11" src="../images/sectionImages/approx-integration-ex-trapezoidal-graph.jpg"/>
+</figure>
+<style>
+            .approx-integration-ex-trapezoidal-graph::before{
+                content:'FIGURE 11';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(g(-3) = 3,\)
+        \(g(-2) = -2,\) \(g(-1) = 1,\)
+        \(g(0) = -1,\) and \(g(1) = 4.\)
+        Using \(n = 4\) implies \(\Delta x = 1.\)
+        So the Trapezoidal Rule gives 
+        \[
+        \ba 
+        \int_{-3}^1 g(x) \di x 
+        &amp;\approx T_4 \nl 
+        &amp;= \frac{1}{2} \parbr{3 + 2(-2) + 2(1) + 2(-1) + 4} \nl 
+        &amp;= \boxed{\frac{3}{2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the Trapezoidal Rule with \(n = 4\) to estimate the area under \(y = \ln x\)
+        from \(x = 1\) to \(x = 3.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We cut the interval \([1, 3]\) into four equal-size subintervals:
+        \([1, 1.5],\) \([1.5, 2],\) \([2, 2.5],\) and \([2.5, 3].\)
+        So \(\Delta x = 0.5.\)
+        The area is given by \(\int_1^3 \ln x \di x,\)
+        which we approximate using the Trapezoidal Rule as
+        \[
+        \ba 
+        S_4 &amp;= \frac{0.5}{2} \parbr{\ln 1 + 2 \ln 1.5 + 2 \ln 2 + 2 \ln 2.5 + \ln 3} \nl 
+        &amp;\approx \boxed{1.28210}
+        \ea 
+        \]
+        The true value of the area is \(3 \ln 3 - 2\) \(\approx 1.29584\)—not far off.
+        (In Section <a href="/ValCalc/ValCalc/calculus/6.1-Integration-by-Parts.html">6.1</a>
+        you'll learn to antidifferentiate \(\ln x\) and find the exact answer.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use a left-endpoint approximation with \(n = 2\) to estimate the area under 
+        \(y = 1 + \atan x\) from \(x = 0\) to \(x = 2.\)
+        Then calculate an error bound for the approximation.
+        Determine whether the approximation is an underestimate or overestimate;
+        accordingly, construct an interval in which the true value of the area must lie. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([0, 2]\) into two equal-size subintervals:
+        \([0, 1]\) and \([1, 2].\)
+        We therefore see \(\Delta x = 1.\)
+        The area is given by \(\int_0^1 \par{1 + \atan x} \di x.\)
+        Evaluating \(y = 1 + \atan x\) at the left endpoint of each subinterval, 
+        we approximate the integral to be
+        \[
+        \ba 
+        L_2 &amp;= \parbr{(1 + \atan 0) + (1 + \atan 1)} (1) \nl 
+        &amp;= 2 + \frac{\pi}{4} \approx 2.78540 \pd
+        \ea 
+        \]
+        This approximation is an <b>underestimate</b> because \(y = 1 + \atan x\)
+        is increasing on \(0 \leq x \leq 2.\)
+        If \(f(x) = 1 + \atan x,\) then \(f'(x) = 1/\par{x^2 + 1}.\)
+        The maximum value of \(\abs{f'}\) on \([0, 2]\) is \(\abs{f'(0)} = 1.\)
+        The error \(E_2\) in the approximation therefore satisfies 
+        \[
+        \abs{E_2} \leq \frac{1(2 - 0)^2}{2(2)} = 1 \pd
+        \]
+        Hence, our approximation of \(L_2 = 2 + \pi/4\)
+        differs from the true value of \(\int_0^1 \par{1 + \atan x} \di x\)
+        <i>by no more than</i> \(1.\)
+        Since our approximation is an underestimate, 
+        \(\int_0^1 \par{1 + \atan x} \di x\)
+        must lie between the numbers \(L_2\) and \(L_2 + E_2.\)
+        Mathematically, we have
+        \[
+        \boxed{2 + \frac{\pi}{4} \leq \int_0^1 \par{1 + \atan x} \di x \leq 3 + \frac{\pi}{4}}
+        \]
+        Using decimals, we bound the integral \(\int_0^1 \par{1 + \atan x} \di x\) 
+        to be in \([2.78540, 3.78540].\)
+        It turns out the integral equals roughly \(3.40958,\)
+        which is indeed captured in this interval.
+        Sadly, our estimate of \(L_2 \approx 2.78540\)
+        didn't come close, mainly due to the small \(n.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the Midpoint Rule with \(n = 3\) to approximate \(\int_0^1 e^{x^2} \di x.\)
+        Then find a number \(K\) such that 
+        \[\abs{\int_0^1 e^{x^2} \di x - M_3} \leq K \pd \]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([0, 1]\) into three subintervals of equal width \(\Delta x = 1/3.\)
+        In each subinterval we evaluate \(e^{x^2}\) at the midpoint. 
+        Doing so, we attain the following approximation:
+        \[
+        \ba 
+        \int_0^1 e^{x^2} \di x &amp;\approx M_3 \nl 
+        &amp;= \par{e^{(1/6)^2} + e^{(1/2)^2} + e^{(5/6)^2}} \par{\frac{1}{3}} \nl 
+        &amp;\approx \boxed{1.43826}
+        \ea 
+        \]
+        The number \(K\) is an error bound to the approximation. 
+        If \(f(x) = e^{x^2},\) then \(f'(x) = 2x e^{x^2}\) and 
+        \[f''(x) = 2 e^{x^2} + 4x^2 e^{x^2} \pd\]
+        The maximum value of \(\abs{f''}\) on \([0, 1]\) is 
+        \[\abs{f''(1)} = 2e^{1^2} + 4(1)^2 e^{1^2} = 6e \pd\]
+        Hence, the error bound is given by 
+        \[
+        \abs{E_3} \leq \frac{6e (1 - 0)^3}{24(3)^2} = \underbrace{\boxed{\frac{e}{36}}}_K
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(k\) and \(m\) be positive numbers.
+        Show that with \(n\) subintervals, an endpoint approximation 
+        estimates
+        \(\int_m^{2m} \par{1/x^k} \di x\)
+        with an error bound given by
+        \[
+        \abs{E_n} \leq \frac{k}{2n m^{k - 1}} \pd
+        \] 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f(x) = 1/x^k,\) then we have 
+        \[f'(x) = -kx^{-k - 1} = -\frac{k}{x^{k + 1}} \pd\]
+        The maximum value of \(\abs{f'(x)} = k/x^{k + 1}\)
+        on \([m, 2m]\) is 
+        \[\abs{f'(m)} = \frac{k}{m^{k + 1}} \pd\]
+        [Note that \(\abs{f'(m)}\) is large when the denominator is small,
+        so \(x = m\) minimizes the denominator over our interval.]
+        So the error bound in the endpoint approximation is 
+        \[
+        \abs{E_n} \leq \frac{\ds \par{\frac{k}{m^{k + 1}}} (2m - m)^2}{2n} 
+        = \frac{\ds \par{\frac{k}{m^{k + 1}}} m^2}{2n} 
+        = \frac{k}{2n m^{k - 1}} \cma
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the Trapezoidal Rule with \(n = 6\) to approximate \(\int_1^{8} e^{1/x} \di x.\)
+        Then calculate and interpret the error bound in the approximation.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We split \([1, 8]\) into six equal-width subintervals with 
+        \[\Delta x = \frac{8 - 1}{6} = \frac{7}{6} \pd\]
+        Hence, we approximate the integral to be  
+        \[
+        \ba
+        T_6 &amp;= 
+        \frac{7/6}{2} \Big[e^{1/1} + 2 e^{1/(13/6)} + 2 e^{1/(20/6)} + 2 e^{1/(27/6)} \nl 
+        &amp;\lspace + 2 e^{1/(34/6)} + 2 e^{1/(41/6)} + e^{1/(48/6)} \Big] \nl
+        &amp;\approx \boxed{9.87178}
+        \ea
+        \]
+        If \(f(x) = e^{1/x},\) then \(f'(x) = -\par{e^{1/x}}/x^2\) and
+        \[
+        \ba
+        f''(x) &amp;= -\frac{\ds \par{-\frac{e^{1/x}}{x^2}} \par{x^2} - \par{2x} e^{1/x}}{\par{x^2}^2} \nl 
+        &amp;= \frac{e^{1/x} + 2x e^{1/x}}{x^4} \nl 
+        &amp;= \frac{(2x + 1) e^{1/x}}{x^4} \pd
+        \ea
+        \]
+        The maximum of \(\abs{f''}\) on \([1, 8]\) is 
+        \[\abs{f''(1)} = \frac{[2(1) + 1] e^{1/1}}{(1)^4} = 3e \pd\]
+        (We know that the maximum occurs when \(x = 1\) because the terms \(e^{1/x}\) and \(1/x^4\) cause 
+        \(f''\) to decay as \(x\) is increased.)
+        Hence, the error bound is given by 
+        \[
+        \ba 
+        \abs{E_6} \leq \frac{(3e) (8 - 1)^3}{12(6)^2} = \boxed{\frac{343 e}{144}} \approx 6.47480 \pd
+        \ea 
+        \]
+        So our estimate of \(T_6 = 9.87178\) must differ from the true value of \(\int_1^8 e^{1/x} \di x\)
+        by no more than \(6.47480.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the Trapezoidal Rule and Midpoint Rule 
+        always provide exact estimates to \(\int_a^b f(x) \di x\)
+        if \(f\) is linear.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        An approximation is exact if and only if the error equals \(0\) 
+        for any positive integer \(n.\)
+        A linear function is of the form 
+        \[f(x) = Ax + B \pd\]
+        Observe that \(f'(x) = A\) and \(f''(x) = 0.\)
+        The error bound in the Trapezoidal Rule therefore becomes 
+        \[
+        \abs{E_T} \leq \frac{0(b - a)^3}{12 n^2} = 0 \cma
+        \]
+        so the Trapezoidal Rule is exact. 
+        Likewise, the error bound in the Midpoint Rule is 
+        \[
+        \abs{E_M} \leq \frac{0 (b - a)^3}{24 n^2} = 0 \cma
+        \]
+        meaning the Midpoint Rule is also exact.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that Simpson's Rule always provides exact approximations 
+        to definite integrals of cubic functions.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A cubic function is of the form 
+        \[f(x) = Ax^3 + Bx^2 + Cx + D \pd\]
+        We want to prove that \(\int_a^b f(x) \di x\)
+        can be calculated exactly using Simpson's Rule with any even \(n.\) 
+        The error bound to Simpson's Rule is 
+        \[\abs{E_S} \leq \frac{M_4 (b - a)^5}{180 n^4} \cma\]
+        where \(\abs{f^{(4)}(x)} \leq M_4\) on \([a, b].\)
+        Simpson's Rule is exact if and only if \(E_S = 0\) for all even \(n.\)
+        Taking derivatives of \(f,\) we see 
+        \[
+        \ba 
+        f'(x) &amp;= 3Ax^2 + 2Bx + C \cma \nl 
+        f''(x) &amp;= 6Ax + 2B \cma \nl 
+        f'''(x) &amp;= 6A \cma \nl 
+        f^{(4)}(x) &amp;= 0 \pd
+        \ea 
+        \]
+        Since the maximum value of \(\abs{f^{(4)}(x)} = 0\) is always \(0,\)
+        we have \(M_4 = 0.\) 
+        Hence, \(E_S = 0\) and so the error in Simpson's Rule is \(0\)
+        for all even \(n.\)  
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+        On \([1, 5],\) a function \(f\) satisfies \(\abs{f'(x)} \leq 1/30,\)
+        \(\abs{f''(x)} \leq 2,\) and \(\abs{f^{(4)}(x)} \leq 90.\)
+        Find the values of \(n\) such that with \(n\) subintervals,
+        the following numerical integration methods 
+        each approximate \(\int_1^5 f(x) \di x\) with an error whose magnitude is less than \(0.2 \col\)
+        <ol class="list-alpha">
+<li>
+                an endpoint approximation
+            </li>
+<li>
+                the Midpoint Rule
+            </li>
+<li>
+                the Trapezoidal Rule
+            </li>
+<li>
+                Simpson's Rule (if \(n\) is even)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's find the error bounds to each approximation 
+        and set them to be less than \(0.2.\)
+        <ol class="list-alpha">
+<li>
+                The error in an endpoint approximation satisfies 
+                \[
+                \abs{E_n} \leq \frac{M_1 (b - a)^2}{2n} \pd
+                \] 
+                Using \(M_1 = 1/30,\) \(a = 1,\) and \(b = 5\) shows 
+                \[
+                \abs{E_n} \leq \frac{\frac{1}{30} (5 - 1)^2}{2n} 
+                = \frac{4}{15n} \pd
+                \]
+                Setting this error bound to be less than \(0.2,\) we see 
+                \[
+                \frac{4}{15n} \lt 0.2 \iffArrow n \gt \frac{4}{15(0.2)} \approx 1.333 \cma
+                \]
+                which we round up to \(\boxed{n \gt 2}.\)
+            </li>
+<hr/>
+<li>
+                Using the Midpoint Rule, we have an error bound given by 
+                \[
+                \abs{E_M} \leq \frac{M_2 (b - a)^3}{24n^2} \pd
+                \]
+                Substituting \(M_2 = 2,\) \(a = 1,\) and \(b = 5\) gives 
+                \[
+                \abs{E_M} \leq \frac{2 (5 - 1)^3}{24 n^2} = \frac{16}{3n^2} \pd
+                \]
+                Setting this error bound to be less than \(0.2,\) we get 
+                \[\frac{16}{3n^2} \lt 0.2 \iffArrow n \gt \sqrt{\frac{16}{3(0.2)}} \approx 5.164 \cma\]
+                which we round up to \(\boxed{n \gt 6}.\) 
+            </li>
+<hr/>
+<li>
+                The Trapezoidal Rule has an error bound given by 
+                \[
+                \abs{E_M} \leq \frac{M_2 (b - a)^3}{12n^2} \pd
+                \]
+                Substituting \(M_2 = 2,\) \(a = 1,\) and \(b = 5\) gives 
+                \[
+                \abs{E_M} \leq \frac{2 (5 - 1)^3}{12 n^2} = \frac{32}{3n^2} \pd
+                \]
+                Setting this error bound to be less than \(0.2,\) we get 
+                \[\frac{32}{3n^2} \lt 0.2 \iffArrow n \gt \sqrt{\frac{32}{3(0.2)}} \approx 7.303 \cma\]
+                which we round up to \(\boxed{n \gt 8}.\) 
+            </li>
+<hr/>
+<li>
+                Simpson's Rule has an error bound given by 
+                \[
+                \abs{E_S} \leq \frac{M_4 (b - a)^5}{180n^4} \pd
+                \]
+                We substitute \(M_4 = 90,\) \(a = 1,\) and \(b = 5\)
+                to find 
+                \[\abs{E_S} \leq \frac{90 (5 - 1)^5}{180 n^4} = \frac{512}{n^4} \pd\]
+                Setting this error bound to be less than \(0.2\) and solving for \(n,\) 
+                we find 
+                \[\frac{512}{n^4} \lt 0.2 \iffArrow n \gt \sqrt[4]{\frac{512}{0.2}} \approx 7.113 \pd\]
+                Since \(n\) must be even, we round up our answer to \(\boxed{n \gt 8}.\)
+            </li>
+<hr/>
+</ol>
+        In this particular problem, the endpoint approximations provide the most accurate estimates
+        because the smallest \(n\) is required to attain an error bound of \(0.2.\)
+        Surprisingly, the Trapezoidal Rule and Simpson's Rule 
+        give the least accurate estimates because the largest \(n\) is needed
+        to match the same error bound \(0.2.\)
+        For most functions, we expect Simpson's Rule to provide the most accurate approximation. 
+        But this example shows that exceptions exist,
+        so there is no <q>best numerical integration method.</q>
+        (We deliberately made \(M_1\) very small to illustrate this idea.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find the minimum value of \(n\) 
+        such that the Trapezoidal Rule approximates \(\int_{-2}^2 \sqrt[3]{2x + 5} \di x\)
+        with an error whose magnitude is less than \(1/54.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f(x) = \sqrt[3]{2x + 5},\) 
+        then 
+        \[
+        \ba
+        f'(x) &amp;= \tfrac{2}{3} (2x + 5)^{-2/3} \cma \nl 
+        f''(x) &amp;= -\tfrac{8}{9} (2x + 5)^{-5/3} \pd
+        \ea
+        \]
+        The maximum value of \(\abs{f''(x)}\) \(= \tfrac{8}{9} (2x + 5)^{-5/3}\)
+        on \([-2, 2]\) is 
+        \[\abs{f''(-2)} = \tfrac{8}{9} (-4 + 5)^{-5/3} = \tfrac{8}{9} \pd\]
+        The error bound in the trapezoidal approximation is therefore 
+        \[\abs{E_T} \leq \frac{\par{\tfrac{8}{9}} [2 - (-2)]^3}{12 n^2} = \frac{128}{27 n^2} \pd\]
+        Setting this expression to be less than \(1/54,\) we attain 
+        \[\frac{128}{27 n^2} \lt \frac{1}{54} \iffArrow \boxed{n \gt 16}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Determine the minimum value of \(n\)
+        such that the Midpoint Rule approximation for 
+        \(\int_{-3}^1 \sqrt{x^2 + 4} \di x\)
+        is accurate within \(1/12.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f(x) = \sqrt{x^2 + 4},\) then \(f'(x) = x/\sqrt{x^2 + 4}\)
+        and 
+        \[f''(x) = \frac{4}{\par{x^2 + 4}^{3/2}} \pd\]
+        The maximum value of \(\abs{f''}\) on \([-3, 1]\) is
+        \[\abs{f''(0)} = \frac{4}{(0^2 + 4)^{3/2}} = \frac{1}{2} \pd\]
+        So the error bound for the approximation is given by 
+        \[
+        \ba 
+        \abs{E_M} \leq \frac{\par{\tfrac{1}{2}} [1 - (-3)]^4}{24 n^2} = \frac{16}{3n^2} \pd
+        \ea 
+        \]
+        Setting this expression to be no greater than \(1/12\) shows 
+        \[\frac{16}{3n^2} \leq \frac{1}{12} \iffArrow \boxed{n \geq 8}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f(x) = 1/(x + 3).\)
+        Determine the minimum value of \(n\) for which Simpsons Rule estimates \(\int_{-1}^2 f(x) \di x\)
+        with an error whose magnitude is less than \(1/80.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Taking derivatives of \(f,\) we see 
+        \[
+        \ba 
+        f'(x) &amp;= -\frac{1}{(x + 3)^2} \cma \nl 
+        f''(x) &amp;= \frac{2}{(x + 3)^3} \cma \nl 
+        f'''(x) &amp;= -\frac{6}{(x + 3)^4} \cma \nl 
+        f^{(4)}(x) &amp;= \frac{24}{(x + 3)^5} \pd
+        \ea 
+        \]
+        The maximum value of \(\abs{f^{(4)}}\) 
+        on \([-1, 2]\) is 
+        \[\abs{f^{(4)}(-1)} = \frac{24}{(-1 + 3)^5} = \frac{3}{4} \pd\]
+        The error bound to Simpson's Rule is therefore 
+        \[\abs{E_S} \leq \frac{\par{\tfrac{3}{4}} [2 - (-1)]^5}{180 n^4} = \frac{81}{80 n^4} \pd\]
+        Setting this expression to be less than \(1/80,\) we find 
+        \[\frac{81}{80 n^4} \lt \frac{1}{80} \iffArrow n \gt \sqrt[4]{81} = 3 \pd\]
+        But since \(n\) must be even in Simpson's Rule, we round up our answer to \(\boxed{n \gt 4}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+        Find the values of \(n\) such that Simpson's Rule approximates 
+        \(\int_{\pi/6}^{\pi/3} \tfrac{1}{4} \cos 2x \di x\)
+        correct to six decimal places.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If \(f(x) = \tfrac{1}{4} \cos 2x,\)
+        then \(f^{(4)}(x) = 4 \cos 2x.\)
+        The maximum value of \(\abs{f^{(4)}}\) on \([\pi/6, \pi/3]\) is 
+        \(2.\)
+        Hence, the error bound to Simpson's Rule is 
+        \[
+        \abs{E_S} \leq \frac{(2) \par{\frac{\pi}{3} - \frac{\pi}{6}}^5}{180 n^4} 
+        \approx \frac{4.373 \times 10^{-4}}{n^4} \pd
+        \]
+        Setting this expression to be less than \(1 \times 10^{-6}\)
+        (the threshold for six decimal places of accuracy), we have 
+        \[\frac{4.373 \times 10^{-4}}{n^4} \lt 1 \times 10^{-6} \iffArrow n \gt \sqrt[4]{\frac{4.373 \times 10^{-4}}{1 \times 10^{-6}}} 
+        \approx 4.573 \pd\]
+        But \(n\) must be even, so we round up our answer to \(\boxed{n \gt 6}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+</main>
+<!-- </main>
+<footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->

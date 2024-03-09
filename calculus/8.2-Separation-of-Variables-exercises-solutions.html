@@ -6,45 +6,43 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
-</a>
-    <script src="/Valculus/js/header-load.js" type="text/javascript"></script>
-    <h1>8.2 Exercise Solutions — Separation of Variables</h1>
-    <main>
-      <div class="pdf-panel">
-        <div class="pdf-panel-left">
-          <ul>
-            <li>
-              <button>
-                <a href="8.2-Separation-of-Variables.html">Section <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a href="8.2-Separation-of-Variables-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--BEGIN BODY-->
-      <hr id="mainBodyBegin">
-      <div id="exercise-1"> 
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>8.2 Exercise Solutions: Separation of Variables</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="8.2-Separation-of-Variables.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="8.2-Separation-of-Variables-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
   <div class="box-solution__head">     EXERCISE 1 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
@@ -57,20 +55,20 @@
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Performing Separation of Variables, we place all the \(y\)-terms on the left side and all the \(x\)-terms on the right. 
+        Performing Separation of Variables, we place all the \(y\)-terms on the left and all the \(x\)-terms on the right. 
         We multiply both sides by \(\dd x\) to get 
         \[\dd y = (3x^2 + 4) \dd x \pd\]
-        We now integrate both sides to get 
+        We now integrate both sides, as follows:
         \[
         \ba 
-        \int \di y &amp;= \int (3x^2 + 4) \di x \nl 
+        \int \dd y &amp;= \int (3x^2 + 4) \di x \nl 
         y + C_1 &amp;= x^3 + 4x + C_2 \pd 
         \ea 
         \] 
         No reason exists to write two constants of integration, 
-        so we simply write one constant on the right-hand side:
+        so we simply write one constant on the right:
         \[
-        y = \boxed{x^3 + 4x + C}
+        \boxed{y = x^3 + 4x + C}
         \]
         where \(C = C_2 - C_1.\)
      
@@ -93,14 +91,14 @@
         Separating variables, we multiply both sides by \(\dd x\) and integrate to get 
         \[
         \ba 
-        \dd y &amp;= (4x^3 + 9x^2 - 8x + 4) \di x \nl 
-        \int \di y &amp;= \int (4x^3 + 9x^2 - 8x + 4) \di x \nl 
+        \int \dd y &amp;= \int (4x^3 + 9x^2 - 8x + 4) \di x \nl 
         y + C_1 &amp;= x^4 + 3x^2 - 4x^2 + 4x + C_2
         \ea 
         \]
         No reason exists to write two constants of integration,
-        so for simplicity we let \(C = C_2 - C_1 \col\)
-        \[y = \boxed{x^4 + 3x^2 - 4x^2 + 4x + C}\]
+        so for simplicity we let \(C = C_2 - C_1.\)
+        The solution is therefore
+        \[\boxed{y = x^4 + 3x^2 - 4x^2 + 4x + C}\]
      
         </div> 
        </div>  
@@ -111,24 +109,21 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds y' = 2x \cma y(0) = 2\]
+        \[\ds \deriv{y}{x} = x - \sin x \]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Performing Separation of Variables, 
-        we write \(y'\) as \(\textDeriv{y}{x}\) and multiply both sides by \(\dd x \col\)
-        \[\dd y = 2x \di x \pd\]
-        Integrating both sides gives 
-        \[y = x^2 + C \pd\]
-        (We combine the constant of integration on the left with the constant on the right.)
-        A specific solution has a value for the arbitrary constant \(C.\)
-        We plug in the point \((0, 2) \col\)
-        \[2 = 0^2 + C \implies C = 2 \pd\]
-        Thus, the specific solution is 
-        \[y = \boxed{x^2 + 2}\]
+        Multiplying both sides by \(\dd x,\) we obtain 
+        \[
+        \dd y = (x - \sin x) \di x \pd
+        \]
+        Now we integrate both sides to get
+        \[
+        \boxed{y = \tfrac{1}{2}x^2 + \cos x + C}
+        \]
      
         </div> 
        </div>  
@@ -139,28 +134,17 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{y}{x} = 2y\]
+        \[\ds t \, \deriv{y}{t} = 2\]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We place all the \(y\)-terms on one side and the \(x\)-terms on the other side. 
-        Thus, on both sides we multiply \(\dd x\) and divide \(y \col\)
-        \[\tfrac{1}{y} \di y = 2 \di x \pd\]
-        We now integrate to attain 
-        \[\ln|y| + C_1 = 2x + C_2 \pd\]
-        We simplify this equation by writing one constant \(C,\) \(C = C_2 - C_1,\) to get 
-        \[
-        \ba 
-        \ln|y| &amp;= 2x + C \nl 
-        y &amp;= e^{2x + C} = e^C e^{2x} \pd 
-        \ea 
-        \]
-        Since \(C\) is an arbitrary constant, \(e^C\) is also an arbitrary constant. 
-        So we simply write 
-        \[y = \boxed{Ce^{2x}}\]
+        On both sides we divide by \(t\) and multiply by \(\dd t\) to separate the variables:
+        \[\int \dd y = \int \frac{2}{t} \di t \pd\]
+        Our solution to the differential equation is therefore
+        \[\boxed{y = 2 \ln \abs t + C}\]
      
         </div> 
        </div>  
@@ -171,24 +155,25 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{y}{x} = x - \sin x \]
+        \[\ds y' = 2x \cmaa y(0) = 2\]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Multiplying both sides by \(\dd x,\) we obtain 
-        \[
-        \dd y = (x - \sin x) \di x \pd
-        \]
-        Now we integrate both sides: 
-        \[
-        \ba 
-        \int \di y &amp;= \int(x - \sin x) \di x \nl 
-        y &amp;= \boxed{\tfrac{1}{2}x^2 + \cos x + C}
-        \ea 
-        \]
+        Performing Separation of Variables, 
+        we write \(y'\) as \(\textDeriv{y}{x}\) and multiply both sides by \(\dd x \col\)
+        \[\dd y = 2x \di x \pd\]
+        Integrating both sides gives 
+        \[y = x^2 + C \pd\]
+        (We combine the constant of integration on the left with the constant on the right.)
+        A particular solution has a value for \(C\)
+        that fits the initial condition \(y(0) = 2.\)
+        We see
+        \[2 = 0^2 + C \implies C = 2 \pd\]
+        Thus, the particular solution is 
+        \[\boxed{y = x^2 + 2}\]
      
         </div> 
        </div>  
@@ -199,27 +184,22 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{y}{t} \, \cos y = 4t + 3 \cma y(1) = \pi\]
+        \[\ds \deriv{y}{x} = 2y\]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We multiply both sides by \(\dd t\) to segregate the variables:
-        \[\cos y \di y = (4t + 3) \di t \pd\]
-        Integrating both sides then gives 
-        \begin{equation} 
-        \sin y = 2t^2 + 3t + C \pd \label{eq:y'cosy}
-        \end{equation}
-        To solve for \(C,\) we plug in the point \((1, \pi) \col\)
-        \[\sin \pi = 2(1)^2 + 3(1) + C \implies C = -5 \pd\]
-        \(\eqRefer{eq:y'cosy}\) then becomes 
-        \[\sin y = 2t^2 + 3t - 5 \cma\]
-        and we solve for \(y\) to obtain 
-        \[y = \boxed{\sin^{-1}(2t^2 + 3t - 5)}\]
-        Alternatively, we may first solve for \(y\) in \(\eqRefer{eq:y'cosy}\)
-        and then solve for \(C.\)
+        We place all the \(y\)-terms on one side and the \(x\)-terms on the other side. 
+        Thus, on both sides we multiply by \(\dd x\) and divide by \(y\) to get
+        \[\frac{1}{y} \di y = 2 \di x \pd\]
+        Integrating both sides gives 
+        \[\ln \abs y = 2x + C_1 \pd\]
+        We exponentiate both sides using the base \(e\) to get 
+        \[\abs y = e^{2x + C_1} = e^{C_1} e^{2x} \pd\]
+        Letting \(C = \pm e^{C_1},\) we write the solution as
+        \[\boxed{y = Ce^{2x}}\]
      
         </div> 
        </div>  
@@ -230,23 +210,30 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds t \, \deriv{y}{t} = 2\]
+        \[\ds \deriv{y}{t} \, \cos y = 4t + 3 \cmaa y(1) = \pi\]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We need one side to have all the \(y\)-terms and the other side to contain all the \(t\)-terms. 
-        Thus, on both sides we divide by \(t\) and multiply by \(\dd t\) to find 
-        \[\dd y = \tfrac{2}{t} \di t \pd\]
-        Integrating, we obtain 
+        We multiply both sides by \(\dd t\) to separate the variables:
         \[
-        \ba 
-        \int \di y = \int \tfrac{2}{t} \di t \nl 
-        y &amp;= \boxed{2 \ln|t| + C}
-        \ea 
+        \ba
+        \int \cos y \di y &amp;= \int (4t + 3) \di t \nl 
+        \sin y &amp;= 2t^2 + 3t + C \pd
+        \ea
         \]
+        We are interested in the particular solution that satisfies 
+        the initial condition \((1, \pi).\)
+        Substituting this point and solving for \(C\) yield
+        \[\sin \pi = 2(1)^2 + 3(1) + C \implies C = -5 \pd\]
+        Thus, we have
+        \[\boxed{\sin y = 2t^2 + 3t - 5}\]
+        <i>Note</i>: In this implicit equation, \(y\) can be any real number. 
+        But if we express \(y\) using the inverse sine function,
+        then we impose the restriction \(-\pi/2 \leq y \leq \pi/2,\) which causes a loss of generality.
+        We therefore choose to present our solution as an implicit equation.
      
         </div> 
        </div>  
@@ -265,16 +252,12 @@
             <span class="solution-text">SOLUTION</span> 
             
         We first rewrite \(y'\) as \(\textDeriv{y}{t}.\)
-        Then on both sides we divide by \(t\) and divide by \(1 + y^2.\)
-        This process yields 
+        Then on both sides we divide by \(t \par{1 + y^2}\) to get
         \[\frac{1}{1 + y^2} \di y = \frac{1}{t} \di t \pd\]
-        Integrating both sides gives 
-        \[
-        \ba 
-        \tan^{-1} y &amp;= \ln|t| + C \nl 
-        y &amp;= \boxed{\tan \par{\ln|t| + C}}
-        \ea 
-        \]
+        Integrating both sides gives
+        \[\tan^{-1} y = \ln \abs{t} + C \or \boxed{y = \tan \par{\ln \abs t + C}}\]
+        provided that 
+        \[- \frac{\pi}{2} \lt \ln \abs t + C \lt \frac{\pi}{2} \pd\]
      
         </div> 
        </div>  
@@ -293,17 +276,13 @@
             <span class="solution-text">SOLUTION</span> 
             
         We rewrite \(y'\) as \(\textDeriv{y}{x}.\)
-        To separate the \(x\)- and \(y\)-terms, on each side we divide by \(y\) 
+        To separate the <nobr>\(x\)-</nobr> and <nobr>\(y\)-</nobr>terms, on each side we divide by \(y\) 
         and multiply by \(\sec x \di x.\)
-        We then get 
+        Doing so gives
         \[y \di y = 2 \cos x \pd\]
         Integrating both sides gives 
-        \[
-        \ba 
-        \tfrac{1}{2} y^2 &amp;= 2 \sin x + C \nl 
-        y &amp;= \boxed{2 \sqrt{\sin x + C}}
-        \ea 
-        \]
+        \[\tfrac{1}{2} y^2 = 2 \sin x + C_1 \or \boxed{y = \pm \sqrt{4 \sin x + C}}\]
+        where \(C = 2 C_1.\)
      
         </div> 
        </div>  
@@ -325,16 +304,14 @@
         we isolate the \(x\)- and \(y\)-terms to find 
         \[
         \ba 
-        \frac{1}{y + 3} \di y &amp;= \frac{1}{x^2} \di x \nl 
-        \ln|y + 3| &amp;= -\frac{1}{x} + C \pd
+        \int \frac{1}{y + 3} \di y &amp;= \int \frac{1}{x^2} \di x \nl 
+        \ln \abs{y + 3} &amp;= -\frac{1}{x} + C_1 \pd
         \ea 
         \]
-        To solve for \(y,\) we raise both sides to the power of \(e \col\) 
+        Let \(C = \pm e^{C_1}.\)
+        To solve for \(y,\) we exponentiate both sides using \(e \col\)
         \[
-        \ba 
-        y + 3 &amp;= e^{-1/x + C} \nl 
-        y &amp;= \boxed{Ce^{-1/x} - 3}
-        \ea 
+        \abs{y + 3} = e^{-1/x + C_1} \implies \boxed{y = Ce^{-1/x} - 3}
         \]
      
         </div> 
@@ -346,36 +323,19 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds y \, \deriv{y}{t} = t \, \sqrt{1 - y^2}\]
+        \[\ds \deriv{y}{x} = \frac{x}{\sqrt{y + 2}}\]
     </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We divide both sides by \(\sqrt{1 - y^2}\) and multiply both sides by \(\dd t \col\)
-        \begin{equation}
-        \frac{y}{\sqrt{1 - y^2}} \di y = t \di t \pd \label{eq:yy'}
-        \end{equation}
-        We now integrate both sides. For \(\int (y/\sqrt{1 - y^2}) \di y,\) we substitute 
-        \[
-        \ba 
-        u &amp;= 1 - y^2 \nl 
-        \dd u &amp;= -2y \di y \pd
-        \ea 
-        \]
-        The integral then becomes
-        \[-\frac{1}{2} \int \frac{1}{\sqrt{u}} \di u = - \sqrt{u} = -\sqrt{1 - y^2} \pd \]
-        (We neglect the constant of integration.)
-        \(\eqRefer{eq:yy'}\) then becomes 
-        \[-\sqrt{1 - y^2} = \tfrac{1}{2} t^2 + C \pd\]
-        Now we solve for \(y\) as follows:
-        \[
-        \ba 
-        1 - y^2 &amp;= \par{\tfrac{1}{2} t^2 + C}^2 \nl
-        y &amp;= \boxed{\pm\sqrt{1 -  \par{\tfrac{1}{2} t^2 + C}^2}} 
-        \ea 
-        \]
+        We multiply both sides by \(\sqrt{y + 2} \di x\) to get 
+        \[\sqrt{y + 2} \di y = x \di x \pd\]
+        Integrating both sides, we attain 
+        \[\tfrac{2}{3} (y + 2)^{3/2} = \tfrac{1}{2} x^2 + C_1 \pd\]
+        Letting \(C = \tfrac{3}{2} C_1\) and solving for \(y,\) we get 
+        \[\boxed{y = \par{\tfrac{3}{4} x^2 + C}^{2/3} - 2}\]
      
         </div> 
        </div>  
@@ -385,41 +345,24 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-        By substituting \(y' = u,\) show that a general solution to 
-        \[y'' + y' = 0\]
-        is \(y = C_1 e^{-x} + C_2.\)
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds y' = e^{x + y}\]
+    </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The substitution \(y' = u\) gives 
-        \[u' + u = 0 \cma\]
-        which we rewrite as a separable first-order differential equation: 
-        \[\deriv{u}{x} = -u \pd\]
-        On both sides we multiply by \(\dd x\) and divide by \(u.\) We get  
+        We use exponent properties to write \(y' = e^x e^y.\)
+        Then we perform Separation of Variables as follows:
         \[
-        \ba 
-        \tfrac{1}{u} \di u &amp;= - \di x \nl 
-        \ln|u| &amp;= -x + C_1 \nl 
-        u &amp;= C_1 e^{-x} \pd 
-        \ea 
+        \ba
+        \int e^{-y} \di y &amp;= \int e^x \di x \nl 
+        -e^{-y} &amp;= e^x + C_1 \pd
+        \ea
         \]
-        Remember that \(u = y',\) so we substitute back to find 
-        \[
-        \ba 
-        \deriv{y}{x} &amp;= C_1 e^{-x} \nl 
-        \int \di y &amp;= \int C_1 e^{-x} \di x \nl 
-        y &amp;= -C_1 e^{-x} + C_2 \pd
-        \ea 
-        \]
-        A final remark is that \(-C_1\) is equivalent to \(C_1\) because they are both arbitrary constants. 
-        We therefore make this change to obtain  
-        \[y = \boxed{C_1 e^{-x} + C_2}\]
-        Just as solving a first-order differential equation confers one constant of integration, 
-        the solution of a second-order differential equation has two arbitrary constants.
+        Letting \(C = -C_1,\) we solve for \(y\) as follows:
+        \[e^{-y} = C - e^x \implies \boxed{y = - \ln \par{C - e^x}}\]
      
         </div> 
        </div>  
@@ -429,51 +372,25 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-<style>
-            .diff-eq-capacitor::before{
-                content:'FIGURE 1';
-            }
-        </style>
-<figure class="diff-eq-capacitor" id="diff-eq-capacitor">
-<img alt="diff-eq-capacitor.png" class="diff-eq-capacitor" src="../images/sectionImages/diff-eq-capacitor.png"/>
-</figure>
-        A <i>capacitor</i> is a device that stores electrical energy on one of its conducting plates. 
-        Capacitance is the ability of a capacitor's plate to hold a charge \(Q.\)
-        The apparatus of 
-        <a href="#diff-eq-capacitor">Figure 1</a>
-        shows a capacitor of capacitance \(C\) connected to an appliance of resistance \(R.\)
-        (This configuration is called an <i>RC circuit</i>.)
-        As current travels through the circuit, the resistance dissipates the charge of the capacitor as modeled by the differential equation
-        \[\frac{Q}{C} + R \frac{\dd Q}{\dd t} = 0 \pd \]
-        Initially, the capacitor's plate holds charge \(Q_0.\)
-        Find the specific solution \(Q(t),\) the function that represents the charge on the capacitor at a given time \(t.\)
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{4xy - 9x} = \deriv{y}{x}\]
+    </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We first isolate \(\textDeriv{Q}{t} \col\)  
-        \[\deriv{Q}{t} = -\frac{Q}{RC} \pd\]
-        Now we perform Separation of Variables, placing all the \(Q\) terms on the left-hand side: 
+        Let's write the equation as 
         \[
         \ba
-        \frac{1}{Q} \di Q &amp;= -\frac{1}{RC} \di t \nl 
-        \ln|Q| &amp;= -\frac{t}{RC} + K \nl  
-        \ea 
+        \sqrt{4y - 9} \, \sqrt x &amp;= \deriv{y}{x} \nl 
+        \frac{\dd y}{\sqrt{4y - 9}} &amp;= \sqrt x \di x \pd
+        \ea
         \]
-        where \(K\) is the constant of integration.
-        Raising both sides to the power of \(e\) yields 
-        \[Q = e^{(-t/RC) + K} = Ke^{-t/RC} \pd\]  
-        We now solve for \(K\) by noting that when \(t = 0,\) \(Q(t) = Q_0.\)
-        So we get 
-        \[
-        Q_0 = Ke^{0} \implies K = Q_0 \pd
-        \]
-        Therefore, the solution becomes 
-        \[Q(t) = \boxed{Q_0 e^{-t/RC}}\]
-        This model demonstrates that the charge on the capacitor's plate decreases exponentially with time. 
+        Integrating both sides therefore gives
+        \[\tfrac{1}{2} \sqrt{4y - 9} = \tfrac{2}{3} x^{3/2} + C_1 \pd\]
+        Letting \(C = 2 C_1,\) we have
+        \[\sqrt{4y - 9} = \tfrac{4}{3} x^{3/2} + C \implies \boxed{y = \frac{9 + \par{\tfrac{4}{3} x^{3/2} + C}^2}{4}}\]
      
         </div> 
        </div>  
@@ -483,89 +400,1126 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-<style>
-            .diff-eq-tank::before{
-                content:'FIGURE 2';
-            }
-        </style>
-<figure class="diff-eq-tank" id="diff-eq-tank">
-<img alt="diff-eq-tank.png" class="diff-eq-tank" src="../images/sectionImages/diff-eq-tank.jpg"/>
-</figure>
-        Water flows out of a cylindrical tank of water level \(H\) (<a href="#diff-eq-tank">Figure 2</a>).
-        <i>Torricelli’s Law</i> states that the water level decreases with time 
-        at a rate proportional to the square root of the water level, 
-        as modeled by the differential equation 
-        \[\deriv{H}{t} = -k \sqrt{H} \pd\]
-        Initially, the water level in the tank is \(16 \un{ft}.\)
-        After \(10\) minutes, the water level is \(9 \un{ft}.\)
-        Find the specific solution \(H(t),\) the function that represents the water level in the tank at time \(t.\) 
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds y \, \deriv{y}{t} = t \, \sqrt{1 - y^2}\]
+    </blockquote> solve the differential equation. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Let's first find the general solution \(H(t).\)
-        We isolate the variables, getting 
-        \begin{align}
-        H^{-1/2} \di H &amp;= -k \di t \nonumber \nl 
-        \tfrac{1}{2} \sqrt{H} &amp;= -kt + C \pd \label{eq:tank-1}
-        \end{align}
-        We now solve for \(k\) and \(C \col\)
-        When \(t = 0,\) \(H = 16.\) Thus, we get 
-        \[\tfrac{1}{2} \cdot \sqrt{16} = 0 + C \implies C = 2 \pd\]
-        When \(t = 10,\) \(H = 9.\) We then find 
-        \[\tfrac{1}{2} \cdot \sqrt{9} = -10k + 2 \implies k = -\tfrac{1}{20} \pd \]
-        Therefore, \(\eqRefer{eq:tank-1}\) becomes 
+        We divide both sides by \(\sqrt{1 - y^2}\) and multiply both sides by \(\dd t \col\)
         \[
-        \ba 
-        \tfrac{1}{2} \sqrt{H} &amp;= -\tfrac{1}{20} t + 2 \nl 
-        H &amp;= \boxed{\par{4 - \tfrac{1}{10}t}^2}
-        \ea 
+        \frac{y}{\sqrt{1 - y^2}} \di y = t \di t \pd
+        \]
+        Now we integrate both sides:
+        To integrate the left side, we substitute \(u = 1 - y^2.\)
+        Then \(\dd u = -2y \di y\) and so
+        \[
+        \ba
+        \int \frac{y}{\sqrt{1 - y^2}} \di y 
+        &amp;= -\tfrac{1}{2} \int \frac{1}{\sqrt{u}} \di u \nl 
+        &amp;= - \sqrt{u} = -\sqrt{1 - y^2} \pd
+        \ea
+        \]
+        (We neglected the constant of integration.)
+        So the solution to the differential equation is
+        \[-\sqrt{1 - y^2} = \tfrac{1}{2} t^2 + C \pd\]
+        Now we solve for \(y\) as follows:
+        \[
+        1 - y^2 = \par{\tfrac{1}{2} t^2 + C}^2 \implies 
+        \boxed{y = \pm\sqrt{1 -  \par{\tfrac{1}{2} t^2 + C}^2}}
         \]
      
         </div> 
        </div>  
    </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \par{x^4 + 3} \par{y^2 + 1} = x \deriv{y}{x}\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Moving all terms with \(y\) to the left and all terms with \(x\)
+        to the right, we attain 
+        \[
+        \ba
+        \frac{\dd y}{y^2 + 1} &amp;= \frac{x^4 + 3}{x} \di x \nl
+        \frac{\dd y}{y^2 + 1} &amp;= \par{x^3 + \frac{3}{x}} \di x \pd
+        \ea
+        \]
+        Now we have 
+        \[
+        \ba 
+        \int \frac{\dd y}{y^2 + 1} &amp;= \int \par{x^3 + \frac{3}{x}} \di x \nl 
+        \atan y &amp;= \tfrac{1}{4} x^4 + 3 \ln \abs x + C \pd 
+        \ea 
+        \]
+        We could write our solution explicitly as 
+        \[
+        \boxed{y = \tan \par{\tfrac{1}{4} x^4 + 3 \ln \abs x + C}}
+        \]
+        provided that 
+        \[-\frac{\pi}{2} \lt \tfrac{1}{4} x^4 + 3 \ln \abs x + C \lt \frac{\pi}{2} \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 8 \ln x \di x + 3 x \di y = 0\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's separate the variables as follows:
+        \[
+        \ba 
+        3 x \di y &amp;= - 8 \ln x \di x \nl 
+        \int \dd y &amp;= \int -\frac{8 \ln x}{3x} \di x \pd
+        \ea 
+        \]
+        On the right, we let \(u = \ln x\) and \(\dd u = (1/x) \di x.\)
+        Therefore,
+        \[
+        \ba 
+        \int -\frac{8 \ln x}{3x} \di x &amp;= -\tfrac{8}{3} \int u \di u \nl 
+        &amp;= -\tfrac{8}{3} \par{\tfrac{1}{2} u^2} + C \nl 
+        &amp;= -\tfrac{4}{3} (\ln x)^2 + C \pd
+        \ea 
+        \]
+        Our solution to the differential equation is therefore 
+        \[\boxed{y = C -\tfrac{4}{3} (\ln x)^2}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \cos 4y \deriv{y}{x} - x \ln x = 0\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's move all terms with \(y\) to the left side 
+        and all terms with \(x\) to the right side. 
+        Doing so gives 
+        \[
+        \int \cos 4y \di y = \int x \ln x \di x \pd
+        \]
+        We evaluate \(\int x \ln x \di x\) by parts with 
+        \[
+        \baat{2} 
+        u &amp;= \ln x \lspace &amp;\dd v &amp;= x \di x \nl 
+        \dd u &amp;= \frac{1}{x} \di x \lspace &amp;v &amp;= \frac{x^2}{2} \pd
+        \eaat
+        \]
+        So we see 
+        \[
+        \ba
+        \int x \ln x \di x &amp;= (\ln x) \par{\frac{x^2}{2}} - \int \par{\frac{x^2}{2}} \par{\frac{1}{x}} \di x \nl 
+        &amp;= \tfrac{1}{2} x^2 \ln x - \tfrac{1}{2} \int x \di x \nl 
+        &amp;= \tfrac{1}{2} x^2 \ln x - \tfrac{1}{4} x^2 + C \pd
+        \ea
+        \]
+        The solution to the differential equation is therefore 
+        \[\boxed{\tfrac{1}{4} \sin 4y = \tfrac{1}{2} x^2 \ln x - \tfrac{1}{4} x^2 + C}\]
+        (Solving for \(y\) causes a loss of generality; keeping the solution in implicit form 
+        conserves the generality of the solutions.) 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{y}{t} - \frac{y}{t^2 - 4} = 0\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We separate variables to get 
+        \[
+        \int \frac{\dd y}{y} = \int \frac{1}{t^2 - 4} \di t \pd 
+        \]
+        The integral on the right can be evaluated by either the trigonometric substitution \(t = 2 \sec \theta\)
+        or by using partial fraction decomposition.     
+        Let's use partial fraction decomposition: 
+        We factor \(t^2 - 4\) as \((t + 2)(t - 2)\) and so find 
+        \[\frac{1}{t^2 - 4} = \frac{A}{t + 2} - \frac{B}{t - 2} \pd\]
+        We therefore have 
+        \[1 = A(t - 2) + B(t + 2) \pd\]
+        Substituting \(t = 2\) shows 
+        \[1 = A(0) + 4B \implies B = \tfrac{1}{4} \pd\]
+        Likewise, letting \(t = -2\) yields 
+        \[1 = -4A + B(0) \implies A = -\tfrac{1}{4} \pd\]
+        So we get 
+        \[
+        \ba
+        \int \frac{1}{t^2 - 4} \di t &amp;= \int \par{\frac{-1/4}{t + 2} + \frac{1/4}{t - 2}} \di t \nl
+        &amp;= -\tfrac{1}{4} \ln \abs{t + 2} + \tfrac{1}{4} \ln \abs{t - 2} + C_1 \nl 
+        &amp;= \tfrac{1}{4} \ln \abs{\frac{t - 2}{t + 2}} + C_1 \pd
+        \ea
+        \]
+        The solution to the differential equation is therefore 
+        \[ 
+        \ln \abs y = \tfrac{1}{4} \ln \abs{\frac{t - 2}{t + 2}} + C_1 \pd 
+        \] 
+        Letting \(C = \pm e^{C_1},\) we have
+        \[
+        y = C \abs{\frac{t - 2}{t + 2}}^{1/4} 
+        \or \boxed{y = C \sqrt[4]{\abs{\frac{t - 2}{t + 2}}}}
+        \]
+
+        <!-- On the right, we perform the trigonometric substitution \(t = 2 \sec \theta,\) 
+        from which \(\dd t = 2 \sec \theta \tan \theta.\)
+        Also observe that \(t^2 - 4\) = \(4 \sec^2 \theta - 4\) \(= 4 \tan^2 \theta.\)
+        So we have 
+        \[
+        \ba
+        \int \frac{1}{t^2 - 4} \di t &= \int \frac{2 \sec \theta \tan \theta}{4 \tan^2 \theta} \nl 
+        &= \tfrac{1}{2} \int \frac{\sec \theta}{\tan \theta} \di \theta \nl 
+        &= \tfrac{1}{2} \int \csc \theta \di \theta \nl 
+        &= - \tfrac{1}{2} \ln \abs{\csc \theta + \cot \theta} + C \pd
+        \ea
+        \]
+        Since \(t = 2 \sec \theta,\) we have \(\sec \theta = t/2.\)
+        Accordingly, we get 
+        \[\csc \theta = \frac{t}{\sqrt{t^2 - 4}} \and \cot \theta = \frac{\sqrt{t^2 - 4}}{2} \pd\]
+        Hence, 
+        we have 
+        \[\int \frac{1}{t^2 - 4} \di t = - \tfrac{1}{2} \ln\] -->
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sqrt{r - 3} = \par{16 x^2 + 1} \deriv{r}{x}\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We separate variables to get 
+        \[
+        \int \frac{\dd r}{\sqrt{r - 3}} = \int \frac{\dd x}{16x^2 + 1} \pd 
+        \]
+        On the right, substituting \(u = 4x\) gives \(\dd u = 4 \di x\) and so 
+        \[
+        \ba
+        \int \frac{\dd x}{16x^2 + 1} &amp;= \tfrac{1}{4} \int \frac{1}{u^2 + 1} \di u \nl 
+        &amp;= \tfrac{1}{4} \atan u + C_1 \nl
+        &amp;= \tfrac{1}{4} \atan 4x + C_1 \pd
+        \ea
+        \]
+        So the solution to the differential equation is 
+        \[
+        2 \sqrt{r - 3} = \tfrac{1}{4} \atan 4x + C_1
+        \or \boxed{r = 3 + \par{\tfrac{1}{8} \atan 4x + C}^2}
+        \]
+        where \(C = C_1/2.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x \sqrt[3]{5y - 6} \deriv{y}{x} = \ln x\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Separation of Variables gives 
+        \[
+        \int \sqrt[3]{5y - 6} \di y = \int \frac{\ln x}{x} \di x \pd
+        \]
+        The left integral can be evaluated by substituting \(u = 5y - 6;\)
+        then \(\dd u = 5 \di y.\) 
+        So we see
+        \[
+        \ba
+        \int \sqrt[3]{5y - 6} \di y &amp;= \tfrac{1}{5} \int \sqrt[3]{u} \di u \nl
+        &amp;= \tfrac{3}{20} u^{4/3} + C_1 \nl
+        &amp;= \tfrac{3}{20} (5y - 6)^{4/3} + C_1 \pd
+        \ea
+        \]
+        To evaluate \(\int (\ln x)/x \di x,\) we substitute \(u = \ln x\) to get \(\dd u = (1/x) \di x.\)
+        The integral therefore becomes
+        \[\int u \di u = \tfrac{1}{2} u^2 + C_2 = \tfrac{1}{2} (\ln x)^2 + C_2 \pd\]
+        Hence, the solution to the differential equation is 
+        \[\tfrac{3}{20} (5y - 6)^{4/3} + C_1 = \tfrac{1}{2} (\ln x)^2 + C_2 \pd\]
+        Solving for \(y\) and rewriting the constants \(C_1\) and \(C_2\) as one constant \(C,\) we have 
+        \[
+        (5y - 6)^{4/3} = \tfrac{10}{3} (\ln x)^2 + C 
+        \implies \boxed{y = \tfrac{6}{5} + \tfrac{1}{5} \parbr{\tfrac{10}{3} (\ln x)^2 + C}^{3/4}}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{y}{t} = \frac{5 \sqrt{y + 8}}{t^2 - 4t + 3}\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Separation of Variables gives 
+        \[
+        \int \frac{\dd y}{\sqrt{y + 8}} = \int \frac{5}{t^2 - 4t + 3} \di t \pd
+        \]
+        Since \(t^2 - 4t + 3\) \(= (t - 3)(t - 1),\) we decompose 
+        the rational expression into partial fractions:
+        \[\frac{5}{t^2 - 4t + 3} = \frac{A}{t - 3} + \frac{B}{t - 1} \pd\]
+        To solve for \(A\) and \(B,\) we write 
+        \[5 = A(t - 1) + B(t - 3) \pd\]
+        Substituting \(t = 3\) gives 
+        \[5 = A(3 - 1) + B(0) \implies A = \tfrac{5}{2} \pd\]
+        Likewise, letting \(t = 1\) shows 
+        \[5 = A(1 - 1) + B(1 - 3) \implies B = -\tfrac{5}{2} \pd\]
+        We therefore have 
+        \[
+        \ba 
+        \int \frac{5}{t^2 - 4t + 3} \di t 
+        &amp;= \int \par{\frac{5/2}{t - 3} - \frac{5/2}{t - 1}} \di t \nl
+        &amp;= \tfrac{5}{2} \ln \abs{t - 3} - \tfrac{5}{2} \ln \abs{t - 1} + C_1 \nl 
+        &amp;= \tfrac{5}{2} \ln \abs{\frac{t - 3}{t - 1}} + C_1 \pd
+        \ea 
+        \]
+        Also note that 
+        \[\int \frac{\dd y}{\sqrt{y + 8}} = 2 \sqrt{y + 8} + C_2 \pd\]
+        The solution to the differential equation is therefore 
+        \[
+        2 \sqrt{y + 8} + C_2 = \tfrac{5}{2} \ln \abs{\frac{t - 3}{t - 1}} + C_1 \pd
+        \]
+        Letting \(C = (C_1 - C_2)/2\) and solving for \(y,\) we get 
+        \[
+        \boxed{y = \par{\tfrac{5}{4} \ln \abs{\frac{t - 3}{t - 1}} + C}^2 - 8}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{\theta}{t} \par{\tan^2 \theta + 1} = t \sqrt{2t + 6} \cos \theta\]
+    </blockquote> solve the differential equation. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(\tan^2 \theta + 1\) \(= \sec^2 \theta\) and \(\cos \theta = 1/\sec \theta.\)
+        Performing Separation of Variables, we move all terms with \(\theta\)
+        to the left and all terms with \(t\) to the right:
+        \[\int \sec^3 \theta \di \theta = \int t \sqrt{2t + 6} \di t \pd\]
+        To evaluate the right integral, we substitute \(u = 2t + 6.\) Then \(t = \tfrac{1}{2} u - 3\)
+        and \(\dd u = 2 \di t,\)
+        and we see
+        \[
+        \ba
+        \int t \sqrt{2t + 6} \di t &amp;= \tfrac{1}{2} \int \par{\tfrac{1}{2} u - 3} \sqrt u \di u \nl 
+        &amp;= \int \par{\tfrac{1}{4} u^{3/2} - \tfrac{3}{2} u^{1/2}} \di u \nl 
+        &amp;= \tfrac{1}{10} u^{5/2} - u^{3/2} + C \nl 
+        &amp;= \tfrac{1}{10} (2t + 6)^{5/2} - (2t + 6)^{3/2} + C \pd
+        \ea
+        \]
+        In <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3"target = "_blank">Example 6.2-8</a> we found 
+        \[\int \sec^3 \theta \di \theta 
+        = \tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} + C \pd\]
+        Hence, our solution to the differential equation is 
+        \[
+        \boxed{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} 
+        = \tfrac{1}{10} (2t + 6)^{5/2} - (2t + 6)^{3/2} + C}
+        \]
+        (Solving for \(\theta\) is clearly impossible, 
+        so we settle for an implicit equation.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = kx^2\]
+    </blockquote> find the orthogonal trajectory to the family of functions, where \(k\) is a nonzero constant. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By differentiation, the slope to \(y = kx^2\) at any \((x, y)\) is
+        \[\deriv{y}{x} = 2k x \pd\]
+        Since the orthogonal trajectory intersects the family of parabolas at right angles, 
+        its slope is the negative reciprocal of \(2kx\)—that is, 
+        \[\deriv{y}{x} = -\frac{1}{2kx} \pd\]
+        We use Separation of Variables to solve this differential equation, as follows:
+        \[
+        \int \dd y = \int -\frac{1}{2kx} \di x
+        \implies
+        \boxed{y = -\frac{1}{2k} \ln \abs x + C}
+        \] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = k\ln x\]
+    </blockquote> find the orthogonal trajectory to the family of functions, where \(k\) is a nonzero constant. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        At any \((x, y),\) the slope to \(y = k \ln x\) is 
+        \[\deriv{y}{x} = \frac{k}{x} \pd\]
+        The orthogonal trajectory's slope is therefore the negative reciprocal of this expression;
+        namely, it satisfies the differential equation 
+        \[\deriv{y}{x} = -\frac{x}{k} \pd\]
+        We solve this differential equation by performing Separation of Variables, as follows:
+        \[
+        \int \dd y = \int -\frac{x}{k} \di x
+        \implies \boxed{y = -\frac{x^2}{2k} + C}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = \cos kx\]
+    </blockquote> find the orthogonal trajectory to the family of functions, where \(k\) is a nonzero constant. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The slope to \(y = \cos kx\) at any \((x, y)\) is 
+        \[\deriv{y}{x} = - k \sin kx \pd\]
+        Since the orthogonal trajectory's slope is the negative reciprocal of the cosine curve's 
+        slope, the orthogonal trajectory satisfies the differential equation 
+        \[\deriv{y}{x} = -\frac{1}{-k \sin kx} = \frac{1}{k \sin kx} \pd\]
+        Performing Separation of Variables then gives 
+        \[\int \dd y = \int \frac{\dd x}{k \sin kx} = \int \frac{1}{k} \csc kx \di x \pd\]
+        The orthogonal trajectory is therefore
+        \[\boxed{y = C -\frac{1}{k^2} \ln \abs{\csc kx + \cot kx}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x^2 = e^{ky}\]
+    </blockquote> find the orthogonal trajectory to the family of functions, where \(k\) is a nonzero constant. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We use Implicit Differentiation to find 
+        \[2x = k e^{ky} \deriv{y}{x} \implies \deriv{y}{x} = \frac{2x}{k e^{ky}} \pd\]
+        The orthogonal trajectory is perpendicular to the curve \(x^2 = e^{ky},\)
+        so its slope is the negative reciprocal; that is, 
+        it satisfies the differential equation
+        \[\deriv{y}{x} = -\frac{k e^{ky}}{2x} \pd\]
+        Now we use Separation of Variables to get 
+        \[
+        \ba 
+        \int e^{-ky} \di y &amp;= \int -\frac{k}{2x} \di x \nl 
+        -\frac{1}{k} e^{-ky} &amp;= -\frac{k}{2} \ln \abs x + C_1 \pd 
+        \ea
+        \]
+        Letting \(C = -kC_1,\) we find the orthogonal trajectory to be
+        \[
+        e^{-ky} = \frac{k^2 \ln \abs x}{2} - k C_1
+        \implies \boxed{y = -\frac{1}{k} \ln \par{\frac{k^2 \ln \abs x}{2} + C}}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x = k^y\]
+    </blockquote> find the orthogonal trajectory to the family of functions, where \(k\) is a nonzero constant. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite the equation as \(x = e^{y \ln k}.\)
+        To find \(\textderiv{y}{x}\) we use Implicit Differentiation as follows:
+        \[
+        1 = e^{y \ln k} (\ln k) \deriv{y}{x} \implies \deriv{y}{x} = \frac{1}{e^{y \ln k} \ln k} \pd 
+        \]
+        The orthogonal trajectory is perpendicular to the curve \(x = k^y,\)
+        so its slope is the negative reciprocal; that is, 
+        it satisfies the differential equation
+        \[\deriv{y}{x} = -e^{y \ln k} \ln k \pd\]
+        Performing Separation of Variables, we attain 
+        \[
+        \ba 
+        \int e^{-y \ln k} \di y &amp;= \int (-\ln k) \di x \nl 
+        -\frac{e^{-y \ln k}}{\ln k} &amp;= -x \ln k + C_1 \nl 
+        \frac{1}{k^y \ln k} &amp;= x \ln k - C_1 \pd
+        \ea 
+        \]
+        We solve for \(y\) as follows:
+        \[k^y = \frac{1}{x (\ln k)^2 - C_1 \ln k} \implies \boxed{y = \log_k \par{\frac{1}{x (\ln k)^2 + C}}}\]
+        where \(C = -C_1 \ln k.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A cup holds \(100\) milliliters of water, 
+        in which \(5\) grams of salt is initially dissolved.
+        Saline water with a concentration of \(0.02\) gram of salt per milliliter of water 
+        is poured into the cup at a constant rate of \(10\) milliliters per minute. 
+        Water is drained from the cup such that the cup maintains its volume of \(100\) milliliters. 
+        How much salt is in the cup after \(8\) minutes?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(y\) be the mass, in grams, of salt in the cup. 
+        Also let \(t\) be time in minutes. 
+        Note the initial condition \(y(0) = 5.\)
+        The rate at which salt enters the cup is 
+        \[\text{rate in} = \frac{10 \un{mL}}{1 \un{min}} \times \frac{0.02 \un{g}}{1 \un{mL}} = \frac{0.2 \un{g}}{1 \un{min}} \pd\]
+        At time \(t\) the concentration of salt in the cup, because its volume is constantly \(100 \un{mL},\) 
+        is \(y(t)/100.\)
+        Liquid must exit the cup at the same entrance rate, \(10 \undiv{mL}{min},\)
+        to maintain the same volume. 
+        So the rate at which salt exits the cup is 
+        \[\text{rate out} =
+        \frac{10 \un{mL}}{1 \un{min}} \times \frac{y(t) \un{g}}{100 \un{mL}} = \frac{y(t)}{10} \, \frac{\un{g}}{\un{min}} \pd
+        \]
+        Hence, we attain the differential equation 
+        \[
+        \ba 
+        \deriv{y}{t} &amp;= (\text{rate in}) - (\text{rate out}) \nl 
+        &amp;= 0.2 - \frac{y}{10} = \frac{2 - y}{10} \pd
+        \ea 
+        \]
+        Performing Separation of Variables gives 
+        \[
+        \ba 
+        \int \frac{\dd y}{2 - y} &amp;= \int \frac{\dd t}{10} \nl 
+        - \ln \abs{2 - y} &amp;= \frac{t}{10} + C \pd
+        \ea 
+        \]
+        Substituting the initial condition \(y(0) = 5\) gives 
+        \[- \ln \abs{-3} = \frac{0}{10} + C \implies C = - \ln 3 \pd\]
+        We therefore find 
+        \[
+        \ba 
+        - \ln \abs{2 - y} &amp;= \frac{t}{10} - \ln 3 \nl 
+        \ln \abs{2 - y} &amp;= \ln 3 - \frac{t}{10} \nl 
+        \abs{2 - y} &amp;= 3 e^{-t/10} \pd
+        \ea     
+        \]
+        But since \(y(0) = 5,\) we have \((2 - y) \lt 0\) for \(t \geq 0.\) 
+        Accordingly, \(\abs{2 - y}\) \(= -(2 - y)\) and so we get
+        \[
+        \ba
+        -(2 - y) &amp;= 3 e^{-t/10} \nl 
+        y &amp;= 2 + 3 e^{-t/10} \pd
+        \ea 
+        \]
+        Hence, the amount of salt after \(8\) minutes is 
+        \[y(2) = \boxed{2 + 3 e^{-8/10}} \approx 3.348 \un g \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Brine with a concentration of \(0.2\) kilogram of salt per liter of water 
+        flows into a tank at a rate of \(15\) liters per hour. 
+        Liquid in the tank is pumped out the same rate. 
+        The tank initially contains \(20\) kilograms of salt dissolved in \(600\)
+        liters of water. 
+        How much salt remains in the tank after \(10\) hours?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(y\) be the mass, in kilograms, of salt in the tank. 
+        Also let \(t\) be time in hours.
+        Note the initial condition \(y(0) = 20.\)
+        The rate at which salt enters the tank is 
+        \[\text{rate in} = \frac{15 \un{L}}{1 \un{hr}} \times \frac{0.2 \un{kg}}{1 \un{L}} = \frac{3 \un{kg}}{1 \un{hr}} \pd\]
+        At time \(t\) the concentration of salt in the tank, since its volume is always \(600 \un{L},\) 
+        is \(y(t)/600.\)
+        Liquid must exit at the same entrance rate, \(15 \undiv{L}{hr},\)
+        to maintain the same volume in the tank. 
+        The rate at which salt exits is therefore
+        \[\text{rate out} =
+        \frac{15 \un{L}}{1 \un{hr}} \times \frac{y(t) \un{kg}}{600 \un{L}} = \frac{y(t)}{40} \, \frac{\un{kg}}{\un{hr}} \pd
+        \]
+        We therefore write the differential equation 
+        \[
+        \ba 
+        \deriv{y}{t} &amp;= (\text{rate in}) - (\text{rate out}) \nl 
+        &amp;= 3 - \frac{y}{40} = \frac{120 - y}{40} \pd
+        \ea 
+        \]
+        Performing Separation of Variables gives 
+        \[
+        \ba 
+        \int \frac{\dd y}{120 - y} &amp;= \int \frac{\dd t}{40} \nl 
+        - \ln \abs{120 - y} &amp;= \frac{t}{40} + C \pd
+        \ea 
+        \]
+        Substituting the initial condition \(y(0) = 20\) gives 
+        \[- \ln 100 = \frac{0}{40} + C \implies C = - \ln 100 \pd\]
+        We therefore find 
+        \[
+        \ba 
+        - \ln \abs{120 - y} &amp;= \frac{t}{40} - \ln 100 \nl 
+        \ln \abs{120 - y} &amp;= \ln 100 - \frac{t}{40} \nl 
+        \abs{120 - y} &amp;= 100 e^{-t/40} \pd
+        \ea     
+        \]
+        But since \(y(0) = 20\) and \(100 e^{-t/40} \gt 0\) for all \(t,\) we have 
+        \(\abs{120 - y}\) \(= 120 - y.\)
+        So we obtain
+        \[
+        \ba
+        120 - y &amp;= 100 e^{-t/40} \nl 
+        y &amp;= 120 - 100 e^{-t/40} \pd
+        \ea 
+        \]
+        Hence, the amount of salt after \(10\) hours is 
+        \[y(10) = \boxed{120 - 100 e^{-10/40}} \approx 42.120 \un{kg} \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A water tank contains \(4\) grams of a toxic chemical dissolved
+        in \(500\) liters of water.
+        To dilute the liquid,
+        clean water is pumped into the tank at a rate of \(10\) liters per hour;
+        water is drained from the tank at the same rate. 
+        After \(5\) days, what mass of the toxic chemical remains in the tank?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(y\) be the mass, in grams, of the toxic chemical in the tank. 
+        Also let \(t\) be time in hours. 
+        Note the initial condition \(y(0) = 4.\)
+        The rate at which the chemical enters the tank is \(0 \undiv{g}{hr}.\) 
+        At time \(t\) the concentration of chemical in the tank, because its volume is constantly \(500 \un{L},\) 
+        is \(y(t)/500.\)
+        Liquid must exit the tank at the same entrance rate, \(10 \undiv{L}{hr},\)
+        to maintain the same volume. 
+        So the rate at which the chemical is pumped out is 
+        \[\text{rate out} =
+        \frac{10 \un{L}}{1 \un{hr}} \times \frac{y(t) \un{g}}{500 \un{L}} = \frac{y(t)}{50} \, \frac{\un{g}}{\un{hr}} \pd
+        \]
+        Thus, we attain the differential equation 
+        \[
+        \ba 
+        \deriv{y}{t} &amp;= (\text{rate in}) - (\text{rate out}) \nl 
+        &amp;= 0 - \frac{y}{50} \pd
+        \ea 
+        \]
+        Performing Separation of Variables gives 
+        \[
+        \ba 
+        \int \frac{\dd y}{y} &amp;= \int -\frac{\dd t}{50} \nl 
+        \ln \abs y &amp;= -\frac{t}{50} + C \pd
+        \ea 
+        \]
+        Substituting the initial condition \(y(0) = 4\) gives 
+        \[\ln 4 = -\frac{0}{50} + C \implies C = \ln 4 \pd\]
+        So we have
+        \[
+        \ba 
+        \ln \abs y &amp;= -\frac{t}{50} + \ln 4 \nl 
+        \abs y &amp;= 4 e^{-t/50} \pd
+        \ea     
+        \]
+        But since \(4 e^{-t/50} \gt 0\) for all \(t,\) we get 
+        \[
+        \ba
+        y &amp;= 4 e^{-t/50} \pd
+        \ea 
+        \]
+        Hence, the amount of chemical after \(5\) days—or \(24 \times 5\) \(= 120\) hours—is 
+        \[y(120) = \boxed{4 e^{-120/50}} \approx 0.363 \un g \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Perform the substitution \(u = x + y\) to solve the differential equation 
+        \[\deriv{y}{x} = x + y \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By differentiating both sides of \(u = x + y,\) we observe that
+        \[\deriv{u}{x} = 1 + \deriv{y}{x} \iffArrow \deriv{y}{x} = \deriv{u}{x} - 1 \pd\]
+        So the differential equation becomes 
+        \[\deriv{u}{x} - 1 = u \or \deriv{u}{x} = u + 1 \pd\]
+        We perform Separation of Variables to get 
+        \[
+        \ba 
+        \int \frac{\dd u}{u + 1} &amp;= \int \dd x \nl 
+        \ln \abs{u + 1} &amp;= x + C_1 \nl 
+        u + 1 &amp;= C e^x \nl
+        u &amp;= C e^x - 1 \cma
+        \ea 
+        \]
+        where \(C = \pm e^{C_1}.\)
+        Reexpressing our answer in terms of \(x\) and \(y,\) we have 
+        \[x + y = C e^x - 1 \or \boxed{y = Ce^x - x - 1}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        By substituting \(y' = u,\) show that a general solution to 
+        \(y'' + y' = 0\)
+        is, for arbitrary constants \(C_1\) and \(C_2,\)
+        \[y = C_1 e^{-x} + C_2 \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The substitution \(y' = u\) gives 
+        \[u' + u = 0 \cma\]
+        which we rewrite as the separable first-order differential equation
+        \[\deriv{u}{x} = -u \pd\]
+        On both sides we multiply by \(\dd x,\) divide by \(u,\)
+        and then integrate. Doing so gives  
+        \[
+        \ba 
+        \int \frac{1}{u} \di u &amp;= - \int \dd x \nl 
+        \ln \abs u &amp;= -x + C_0 \nl 
+        u &amp;= C_1 e^{-x} \cma
+        \ea
+        \]
+        where \(C_1 = \pm e^{C_0}.\)
+        Remember that \(u = y',\) so we substitute back to find 
+        \[
+        \ba 
+        \deriv{y}{x} &amp;= C_1 e^{-x} \nl 
+        \int \dd y &amp;= \int C_1 e^{-x} \di x \nl 
+        y &amp;= -C_1 e^{-x} + C_2 \pd
+        \ea 
+        \]
+        Note that \(-C_1\) is semantically equivalent to \(C_1\) because they are both arbitrary constants. 
+        We therefore write
+        \[\boxed{y = C_1 e^{-x} + C_2}\]
+        Just as the general solution to a first-order differential equation has one constant of integration, 
+        the general solution of a second-order differential equation has two arbitrary constants.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<style>
+            .diff-eq-capacitor::before{
+                content:'FIGURE 7';
+            }
+        </style>
+<figure class="diff-eq-capacitor" id="diff-eq-capacitor">
+<img alt="Figure 7" class="diff-eq-capacitor" src="../images/sectionImages/diff-eq-capacitor.png"/>
+</figure>
+        A <b>capacitor</b> is a device that stores electrical energy on one of its conducting plates. 
+        Capacitance is the ability of a capacitor's plate to hold a charge \(Q.\)
+        The apparatus of 
+        <a href="#diff-eq-capacitor">Figure 7</a>
+        shows a capacitor of capacitance \(C\) connected to an appliance of resistance \(R.\)
+        (This configuration is called an <b>RC circuit</b>.)
+        As current travels through the circuit, the resistance dissipates the charge of the capacitor as modeled by the differential equation
+        \[\frac{Q}{C} + R \frac{\dd Q}{\dd t} = 0 \pd \]
+        Initially, the capacitor's plate holds charge \(Q_0.\)
+        Find the particular solution \(Q(t),\) the function that represents the charge on the capacitor at a given time \(t.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We first isolate \(\textDeriv{Q}{t} \col\)  
+        \[\deriv{Q}{t} = -\frac{Q}{RC} \pd\]
+        Remember that \(R\) and \(C\) are constants.
+        Now we perform Separation of Variables, placing all the \(Q\) terms on the left: 
+        \[
+        \ba
+        \int \frac{1}{Q} \di Q &amp;= \int -\frac{1}{RC} \di t \nl 
+        \ln|Q| &amp;= -\frac{t}{RC} + K_1 \nl  
+        \ea 
+        \]
+        where \(K_1\) is the constant of integration.
+        We raise \(e\) to the power of the expression on each side, as follows: 
+        \[\abs Q = e^{(-t/RC) + K_1} \implies Q = Ke^{-t/RC} \cma\]
+        where \(K = \pm e^{K_1}.\)  
+        We now solve for \(K\) by noting that when \(t = 0,\) \(Q = Q_0.\)
+        Substituting this initial condition shows
+        \[
+        Q_0 = Ke^{0} \implies K = Q_0 \pd
+        \]
+        Therefore, the particular solution is 
+        \[\boxed{Q(t) = Q_0 e^{-t/RC}}\]
+        This model demonstrates that the charge on the capacitor's plate decreases exponentially with time. 
+        (We will further explore this idea in Section 
+        <a href="/ValCalc/ValCalc/calculus/8.3-Exponential-Models.html">8.3</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- <style>
+            .diff-eq-tank::before{
+                content:'FIGURE 2';
+            }
+        </style>
+        <figure class="diff-eq-tank" id="diff-eq-tank">
+            <img src="../images/sectionImages/diff-eq-tank.jpg" class="diff-eq-tank" alt="diff-eq-tank.png">
+        </figure> -->
+        Water flows out of a cylindrical tank of water level \(H.\) 
+        <!-- (<a href="#diff-eq-tank">Figure 2</a>). -->
+<b>Torricelli's Law</b> states that the water level decreases with time 
+        at a rate proportional to the square root of the water level, 
+        as modeled by the differential equation 
+        \[\deriv{H}{t} = -k \sqrt{H} \pd\]
+        Initially, the water level in the tank is \(16\) feet.
+        After \(10\) minutes, the water level is \(9\) feet.
+        Find the particular solution \(H(t),\) the function that represents the water level in the tank at time \(t.\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-tip">
+            Having one initial condition 
+            enables you to solve for one unknown constant. 
+            Similarly, having two initial conditions 
+            permits you to solve for two unknown constants.
+        </aside>
+        Let's first find the general solution \(H(t).\)
+        We isolate the variables, getting 
+        \begin{align}
+        \int \frac{\dd H}{\sqrt H} &amp;= \int -k \di t \nonumber \nl 
+        \tfrac{1}{2} \sqrt{H} &amp;= -kt + C \pd \label{eq:tank-1}
+        \end{align}
+        We now solve for \(k\) and \(C \col\)
+        When \(t = 0,\) \(H = 16.\) Thus, we get 
+        \[\tfrac{1}{2} \sqrt{16} = 0 + C \implies C = 2 \pd\]
+        When \(t = 10,\) \(H = 9.\) We then find 
+        \[\tfrac{1}{2} \sqrt{9} = -10k + 2 \implies k = \tfrac{1}{20} \pd \]
+        Therefore, \(\eqref{eq:tank-1}\) becomes 
+        \[
+        \tfrac{1}{2} \sqrt{H} = -\tfrac{1}{20} t + 2 
+        \so \boxed{H(t) = \par{4 - \tfrac{1}{10}t}^2}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find all functions that satisfy the following property:
+        the function's rate of change is inversely proportional to the square of itself. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We interpret <q>rate of change</q> to be \(\textderiv{y}{x},\)
+        which is inversely proportional to \(y^2\)—that is, 
+        \[\deriv{y}{x} = \frac{k}{y^2}\]
+        for any constant \(k.\)
+        Performing Separation of Variables, we get 
+        \[
+        \ba 
+        \int y^2 \di y &amp;= \int k \di x \nl 
+        \tfrac{1}{3} y^3 &amp;= kx + c \nl 
+        \implies y &amp;= \sqrt[3]{3kx + 3c}
+        \ea 
+        \]
+        Since \(c\) is an arbitrary constant, \(3c\) is also an arbitrary constant;
+        likewise, \(3k\) is an arbitrary constant because \(k\) is any constant. 
+        Let's therefore rewrite our answer as 
+        \[\boxed{y = \sqrt[3]{Kx + C}}\]
+        This family of functions satisfies the required property.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The quantity \(Q\) increases with \(t\) at a rate 
+        directly proportional to the cube of \(Q\) and inversely proportional to the square of \(t.\)
+        When \(Q = 4\) and \(t = 2,\) the rate of change of \(Q\) with \(t\) is \(8.\)
+        Express \(Q\) as a function of \(t.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The rate of change of \(Q\) with respect to \(t\) is \(\textderiv{Q}{t}.\)
+        We are given that this rate is directly proportional to \(Q^3\) and inversely proportional to \(t^2.\)
+        So letting \(k\) be a constant, we write 
+        \[\deriv{Q}{t} = \frac{k Q^3}{t^2} \pd\]
+        To solve for \(k\) we substitute the given \(Q = 4,\) \(t = 2,\) and \(\textderiv{Q}{t} = 8 \col\)
+        \[8 = \frac{k (4)^3}{(2)^2} \implies k = \frac{1}{2} \pd\]
+        So the differential equation becomes
+        \[\deriv{Q}{t} = \frac{Q^3}{2t^2} \pd\]
+        Performing Separation of Variables, we see 
+        \[
+        \ba 
+        \int \frac{\dd Q}{Q^3} &amp;= \int \frac{\dd t}{2t^2} \nl 
+        -\frac{1}{2 Q^2} &amp;= -\frac{1}{2t} + C \pd
+        \ea 
+        \]
+        Substituting the initial condition \(Q(2) = 4\) gives 
+        \[-\frac{1}{2(4)^2} = -\frac{1}{2(2)} + C \implies C = \frac{7}{32} \pd\]
+        We therefore find 
+        \[
+        \ba
+        -\frac{1}{2 Q^2} &amp;= -\frac{1}{2t} + \frac{7}{32} \nl 
+        \frac{1}{Q^2} &amp;= \frac{1}{t} - \frac{7}{16} = \frac{16 - 7t}{16t} \nl
+        Q^2 &amp;= \frac{16t}{16 - 7t} \pd
+        \ea
+        \]
+        When we solve for \(Q\) by taking the square root of both sides, 
+        we must choose between the positive or negative square root. 
+        We are given the initial condition \(Q(2) = 4,\) meaning \(Q\) must take on positive values. 
+        So let's choose the positive square root:
+        \[Q = \sqrt{\frac{16t}{16 - 7t}} = \boxed{4 \sqrt{\frac{t}{16 - 7t}}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A particle moves along the \(x\)-axis with an acceleration given by 
+        \(a = -\tfrac{1}{2} v^2,\)
+        where \(v\) is velocity.
+        The particle begins its motion at the origin 
+        with a velocity of \(2\) and an acceleration of \(3.\)
+        Find the particle's position, velocity, and acceleration functions in terms of time \(t \geq 0.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note the initial conditions \(x(0) = 0,\) \(v(0) = 2,\)
+        and \(a(0) = 3.\)
+        <p>
+<span class="label-emph">Velocity Function</span>
+            Recall that acceleration is the time derivative of velocity—that is, 
+            \(a = \textderiv{v}{t}.\)
+            Given \(a = -\tfrac{1}{2} v^2,\) we attain the differential equation 
+            \[
+            \deriv{v}{t} = -\tfrac{1}{2} v^2 \pd
+            \]
+            Performing Separation of Variables, we get
+            \[
+            \ba 
+            \int \frac{1}{v^2} \di v &amp;= \int -\tfrac{1}{2} \di t \nl 
+            -\frac{1}{v} &amp;= -\tfrac{1}{2} t + C \pd
+            \ea 
+            \]
+            To solve for the constant \(C,\) we substitute the given initial condition 
+            \(v(0) = 2\) to find 
+            \[
+            -\tfrac{1}{2} = -\tfrac{1}{2} (0) + C \implies C = -\tfrac{1}{2} \pd
+            \]
+            Our velocity function is therefore 
+            \[v = \frac{1}{\tfrac{1}{2} t + \tfrac{1}{2}} = \boxed{\frac{2}{t + 1}}\]
+        </p>
+<p>
+<span class="label-emph">Acceleration Function</span>
+            Given the relationship \(a = -\tfrac{1}{2} v^2,\) we substitute our velocity function to get
+            \[a = -\tfrac{1}{2} \par{\frac{2}{t + 1}}^2 = \boxed{-\frac{2}{(t + 1)^2}}\]
+        </p>
+<p>
+<span class="label-emph">Position Function</span>
+            The particle's position \(x\) at any time \(t\) is described by the differential equation 
+            \(v = \textderiv{x}{t}.\)
+            Since we found \(v = 2/(t + 1),\) we get the differential equation
+            \[
+            \deriv{x}{t} = \frac{2}{t + 1} \pd
+            \]
+            Integrating both sides gives 
+            \[x = 2 \ln \abs{t + 1} + D\]
+            for some constant \(D.\)
+            Substituting the initial condition \(x(0) = 0,\) we get 
+            \[0 = 2 \ln (0 + 1) + D \implies D = 0 \pd\]
+            Hence, the position as a function of time is 
+            \[x = \boxed{2 \ln(t + 1)}\]
+            (Since \(t \geq 0,\) we drop the absolute value bars 
+            around the logarithm.)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
 </div>
-    </main>
-    <!-- <footer>
+</main>
+<!-- </main>
+<footer>
     <div class="footer-body">
         <div class="footer-nav-column">
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="../about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="../contact.html">Contact</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Discord</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
         <div class="footer-nav-column">
-            <h3>Supplemental Resources</h3>
+            <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
-                </li>
-                <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -573,16 +1527,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="../index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="../faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -590,31 +1544,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="../index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="../about.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="../faq.html">Privacy Policy</a> 
-                </li>
-                <li>
-                    <a href="../contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
-    <div class="footer-disclaimer">  
-        <p class="ap-notice">
-            AP is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
-        </p>
-    </div>
-</footer> -->
-    <script src="/Valculus/js/mathjax-config.js"></script>
+</footer>
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
-  </body>
-</html>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body> -->
