@@ -139,8 +139,8 @@ window.MathJax = {
             normalPdf: ["\\frac{1}{(#2) \\sqrt{2 \\pi}} \\, e^{-(#3 - #1)^2/\\parbr{2(#2)^2}}", 3],
             div: "\\; \\; \\text{diverges}",
             conv: "\\; \\; \\text{converges}",
-            divBoxed: "\\; \\; \\boxed{\\text{diverges}}",
-            convBoxed: "\\; \\; \\boxed{\\text{converges}}",
+            divBoxed: "\\; \\; \\boxed{\\textbf{diverges}}",
+            convBoxed: "\\; \\; \\boxed{\\textbf{converges}}",
             min: ["\\text{min} \\left\\{#1, #2\\right\\}", 2],
             max: ["\\text{max} \\left\\{#1, #2\\right\\}", 2],
             comment: ["&&\\hspace{3em} \\parbr{#1}", 1], // use in \baat environment for comments like "[Because f(x) is even]"

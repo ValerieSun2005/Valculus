@@ -12,8 +12,8 @@
     <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
     <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/index.html">
@@ -45,234 +45,342 @@
 <hr id="mainBodyBegin">
 <!--[[[crefId.Integral-Test]]]--> 
 <p> 
-    This section introduces the 
-    <a href="#integral-test" class="page-anchor">Integral Test</a>.
-    We also prove that the 
-    <a href="#harmonic-series-diverges" class="page-anchor">Harmonic Series Diverges</a>, 
-    and then we discuss 
-    <a href="#p-series" class="page-anchor">\(p\)-Series</a>.
-     
+    In Section <a href="/ValCalc/ValCalc/calculus/10.2-Infinite-Series-and-Divergence-Test.html">10.2</a>
+    we calculated the exact values of geometric series and telescoping series.
+    But most other types of infinite series are impossible to evaluate exactly.
+    Instead, we interest ourselves in whether a series converges or diverges 
+    using a toolbox of <i>convergence tests</i>.
+    If a series converges, then we know it is appropriate to estimate its exact value
+    using a partial sum.
+    (Conversely, we know to avoid approximating a series if it diverges.)
+    In this section we introduce one such convergence test,
+    in which we connect infinite series to improper integrals. 
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#integral-test" class="page-anchor">Integral Test</a>
+        </li>
+        <li>
+            <a href="#p-series" class="page-anchor">\(p\)-Series</a>
+        </li>
+        <li>
+            <a href="#error-bounds-integral-test" class="page-anchor">Error Bounds with the Integral Test</a>
+        </li>
+    </ul>
 </p>
 <h4 id="integral-test">Integral Test</h4>
 <p>
-    Consider the sum 
-    \[S = \sum_{n = k}^\infty a_n \comma \]
-    and let \(f\) be a function that satisfies \(f(n) = a_n.\)
-    The function \(f(x)\) must satisfy three conditions:
-    \(f(x)\) must be continuous, positive, and decreasing for all \(x \geq k.\)
-    Let 
-    \[I = \int_k^\infty f(x) \di x \period\]
-    Then by the Integral Test,
+    In Section <a href="/ValCalc/ValCalc/calculus/6.5-Improper-Integrals.html">6.5</a> 
+    we evaluated improper integrals and concluded whether they converged or diverged. 
+    It turns out that infinite series behave similarly to improper integrals
+    under a set of conditions.
+    Consider the infinite series \(S = \sum_{n = 1}^\infty a_n,\)
+    and let \(f\) be a real-valued function such that \(f(n) = a_n.\)
+    Suppose that \(f\) is continuous, positive, and decreasing. 
+    Then the <span class="emph">Integral Test</span> asserts that 
+    the convergence or divergence of \(\sum_{n = 1}^\infty a_n\)
+    matches the convergence or divergence of \(\int_1^\infty f(x) \di x.\)
+    Simply put, if the test's conditions are met, 
+    then we evaluate \(\int_1^\infty f(x) \di x\) to see whether it converges or diverges—and 
+    make the same conclusion about \(\sum_{n = 1}^\infty a_n.\)
 </p>
-<ul>
-    <li>
-        if \(I\) diverges, then \(S\) also diverges.
-    </li>
-    <li>
-        if \(I\) converges, then \(S\) also converges.
-    </li>
-</ul>
-In other words, the convergence or divergence of the improper integral 
-\(\int_k^\infty f(x) \di x\) 
-matches the convergence or divergence of the infinite series 
-\(\sum_{n = k}^\infty a_n.\)
 
-<!-- integral test -->
+<aside class="box-tip">
+    The Integral Test applies to any starting bound, 
+    not just the generalized case \(n = 1.\)
+</aside>
+
 <div class="box-title"> INTEGRAL TEST </div>
 <div class="box">
     Let \(f\) be a function that satisfies \(f(n) = a_n.\)
-    If \(f(x)\) is continuous, positive, and decreasing for all \(x \geq k,\)
-    then
+    Suppose that \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1.\)
     <ul>
         <li>
-            if \(\int_k^\infty f(x) \di x\) converges, 
-            then \(\sum_{n = k}^\infty a_n\) also converges.
+            If \(\int_1^\infty f(x) \di x\) converges, 
+            then \(\sum_{n = 1}^\infty a_n\) also converges.
         </li>
         <li>
-            if \(\int_k^\infty f(x) \di x\) diverges,
-            then \(\sum_{n = k}^\infty a_n\) also diverges.
+            If \(\int_1^\infty f(x) \di x\) diverges,
+            then \(\sum_{n = 1}^\infty a_n\) also diverges.
         </li>
     </ul>
 </div>
 
-<h4 id="harmonic-series-diverges">Proof: The Harmonic Series Diverges</h4>
 <p>
-    For \(k \geq 1,\) consider the Harmonic Series,
-    \[S = \sum_{n = k}^\infty \frac{1}{n} \period\]
-    Let \(f\) be a function that satisfies \(f(n) = 1/n.\)
-    For all \(n \geq k,\)
-    \[\frac{1}{n + 1} \lt \frac{1}{n} \period \]
-    Therefore, \(f(x)\) is positive, continuous, and decreasing for all \(x \geq k.\)
-    Then the convergence or divergence of \(S\) 
-    matches the convergence or divergence of 
-    \[I = \int_k^\infty \frac{1}{x} \di x \period\]
-    We evaluate this integral and find 
+    <span class="proof">PROOF</span>
+    A right Riemann sum with \(\Delta x = 1\) approximates the area under \(f\) from \(x = 1\)
+    to \(x = N\) to be
     \[
-    I = \ln|x| \Big|_k^\infty \comma
+    \ba 
+    S_N &= \Delta x[f(2) + f(3) + f(4) + \cdots + f(N)] \nl 
+    &= 1[a_2 + a_3 + a_4 + \cdots + a_N] \nl 
+    &= \sum_{i = 2}^N a_i \pd 
+    \ea 
     \]
-    which diverges. 
-    Since \(I\) diverges, the Integral Test states that \(S\) also diverges.
-    Consequently, we assert that Harmonic Series is divergent.
+    Since \(f\) is positive and decreasing, \(S_N\) is an underestimate of the area.
+    (See <a href="#integral-test-rect-right">Figure 1A</a>.)
+    Thus, we have 
+    \[
+    \ba 
+    S_N &\leq \int_1^N f(x) \di x \nl
+    a_1 + S_N &\leq a_1 + \int_1^N f(x) \di x \pd
+    \ea 
+    \]
+    Suppose that \(\int_1^\infty f(x) \di x\) converges and that \(a_1 + \int_1^\infty f(x) \di x\) 
+    equals some number \(K.\)
+    Then we see 
+    \[
+    S_N = a_1 + \sum_{i = 2}^N a_i \leq a_1 + \int_1^N f(x) \di x \leq a_1 + \int_1^\infty f(x) \di x = K \cma
+    \]
+    so the sequence \(\{S_N\}\) is bounded above. 
+    Also, observe that 
+    \[S_{N + 1} = S_N + a_{N + 1} \geq S_N\]
+    because \(a_{N + 1} = f(N + 1)\) \(\geq 0.\)
+    Thus, \(\{S_N\}\) is an increasing, bounded sequence.
+    By the Monotonic Sequence Theorem 
+    (from Section <a href="/ValCalc/ValCalc/calculus/10.1-Sequences.html">10.1</a>), 
+    \(\{S_N\}\) is convergent and so 
+    \(\sum_{n = 1}^\infty a_n\) is convergent.
+    Now assume that \(\int_1^\infty f(x) \di x\) diverges. 
+    Using a left Riemann sum estimates the region's area to be
+    \[
+    \ba
+    S_{N - 1} &=
+    \Delta x [f(1) + f(2) + f(3) + \cdots + f(N - 1)] \nl
+    &= 1[a_1 + a_2 + a_3 + \cdots + a_{N - 1}] \nl 
+    &= \sum_{i = 1}^{N - 1} a_i \pd
+    \ea
+    \]
+    This approximation overestimates the area, so we have 
+    \[S_{N - 1} \geq \int_1^N f(x) \di x \pd\]
+    (See <a href="#integral-test-rect-left">Figure 1B</a>.)
+    Since \(\int_1^\infty f(x) \di x\) diverges, and since \(f(x) \geq 0,\)
+    we have \(\int_1^N f(x) \di x\) \(\to \infty\) as \(N \to \infty.\)
+    Consequently, \(S_{N - 1} \to \infty\) as \(N \to \infty\) too, 
+    meaning \(\sum_{n = 1}^\infty a_n\) diverges.
+    \[\qedproof\]
 </p>
 
-<div class="example-title"> EXAMPLE 1 </div>
+<div class="figure-center">
+    <figure class="integral-test-rect-right" id="integral-test-rect-right">
+        <img src="../images/sectionImages/integral-test-rect-right.jpg" class="integral-test-rect-right" alt="Figure 1A">
+    </figure>
+    <figure class="integral-test-rect-left" id="integral-test-rect-left">
+        <img src="../images/sectionImages/integral-test-rect-left.jpg" class="integral-test-rect-left" alt="Figure 1B">
+    </figure>
+</div>
+<style>
+    .integral-test-rect-right::before{
+        content:'FIGURE 1A';
+    }
+
+    .integral-test-rect-left::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<div class="example-title" id="ex-series-arctan"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
-        Determine whether \(\ds \sum_{n=2}^{\infty} n^{2}e^{-n^3}\) 
-        converges or diverges.
+        Does \(\ds \sum_{n = 0}^\infty \frac{1}{n^2 + 1}\) converge or diverge?
     </div>
 </div>
 <button onclick="toggle1()" class="solution-button"></button>
 <div id="solution1" class="solution">
-    Let \(f(x) = x^{2}e^{-x^3}.\) 
-    Then we find 
-    \[ 
-    \ba 
-    f'(x) &= 2xe^{-x^3} - 3x^{4} e^{-x^3} \\ 
-    &= xe^{-x^3}(2-3x^3) \period 
-    \ea 
-    \]
-    Since \(f'(x) \lt 0\) for all \(x \geq 2,\) 
-    \(f(x)\) is decreasing on this interval.
-    Consequently, the series meets the conditions of the Integral Test:
-    \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 2.\) 
-    Thus, we consider 
-    \[I = \int_2^\infty f(x) \di x \period\]
-    If \(I\) diverges, then \(\sum_{n=2}^{\infty} n^{2}e^{-n^3}\) also diverges.
-    Likewise, if \(I\) converges, then the series also converges.
-    To evaluate \(I,\) we substitute 
+    The function \(f(x) = 1/(x^2 + 1)\) is continuous, positive, and decreasing for \(x \geq 0.\)
+    Hence, we use the Integral Test 
+    by evaluating \(\int_0^\infty f(x) \di x,\) as follows:
     \[
     \ba 
-    u &= x^3 \\ 
-    \di u &= 3x^2 \di x \period  
+    \int_0^\infty \frac{1}{x^2 + 1} \di x 
+    &= \lim_{k \to \infty} \int_0^k \frac{1}{x^2 + 1} \di x \nl 
+    &= \lim_{k \to \infty} \par{\atan x} \intEval_0^k \nl 
+    &= \lim_{k \to \infty} \par{\atan k - \atan 0} \nl 
+    &= \frac{\pi}{2} - 0 = \frac{\pi}{2} \pd
     \ea 
     \]
-    When \(x = 2,\) \(u = 2^3 = 8;\) 
-    when \(x = \infty,\) \(u = \infty.\)
-    Thus, 
-    \[
-    \ba 
-    I &= \int_8^\infty e^{-u} \di u \\[1ex]  
-    &= -\frac{1}{e^u} \Big]_8^\infty \\[1ex]
-    &= \frac{1}{8} \period
-    \ea 
-    \]
-    Since \(I\) converges (is finite), 
-    \(\sum_{n = 2}^\infty n^2 e^{-n^3} \) converges.
+    Because \(\int_0^\infty f(x) \di x\) converges, 
+    the Integral Test concludes that, too,
+    \[\sum_{n = 0}^\infty \frac{1}{n^2 + 1} \convBoxed\]
 </div>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    In general, the value of \(\int_1^\infty f(x) \di x\) does not equal \(\sum_{n = 1}^\infty a_n.\)
+    For example, in <a href="/ValCalc/ValCalc/calculus/10.3-Integral-Test.html#ex-series-arctan">Example 1</a>
+    note that 
+    \[\sum_{n = 0}^\infty \frac{1}{n^2 + 1} \ne \int_0^\infty \frac{1}{x^2 + 1} \di x = \frac{\pi}{2} \pd\]
+    Instead, we interest ourselves solely in whether the improper integral converges or diverges. 
+    The conclusion, not the value, of the improper integral applies to the infinite series.
+</p>
 
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Determine whether \(\ds \sum_{n=3}^{\infty} \frac{1}{n \ln n}\) 
+        Determine whether \(\ds \sum_{n = 2}^{\infty} n^2 \, e^{-n^3}\) 
         converges or diverges.
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button"></button>
 <div id="solution2" class="solution">
-    <p> 
-        We let 
-        \[f(x) = \frac{1}{x \ln x} \comma\] 
-        which is positive and continuous for \(x \geq 3.\)
-        To determine whether \(f(x)\) is decreasing on this interval, we find  
-        \[f'(x) = \frac{-1 - \ln x }{(x \ln x)^2} \comma \]
-        which is negative for \(x \geqslant e.\)
-        Consequently, \(f(x)\) is decreasing for \(x \geqslant 3,\) 
-        so \(\sum_{n = 3}^\infty \frac{1}{n \ln n} \) meets all three criteria of the Integral Test.
-    </p>
-    <p> 
-        Now we evaluate 
-        $$\int_3^\infty f(x) \di x = \int_{3}^{\infty} \frac{1}{x \ln x} \, \textrm{d} x \period $$
-        We substitute 
-        \[
-        \ba 
-        u &= \ln x \\
-        \di u &= \frac{1}{x} \di x \period 
-        \ea 
-        \]
-        When \(x = 3,\) \(u = \ln 3;\) when \(x = \infty,\) \(u = \infty.\)
-        Thus, the integral becomes  
-        \[ \int_{\ln 3}^{\infty} \frac{1}{u} \di u 
-        = \ln|u| \Big|_{\ln 3}^{\infty} \implies \textrm{divergent.} \]
-    </p>
-    <p>
-        Because \(\int_{3}^{\infty} f(x) \di x\) diverges, 
-        so does \(\sum_{n = 3}^{\infty} \frac{1}{n \ln n}\) by the Integral Test.
-    </p>
+    Let \(f(x) = x^2 \, e^{-x^3},\)
+    which is positive and continuous for all \(x.\) 
+    It is not obvious whether \(f\) is decreasing, so we differentiate to see
+    \[ 
+    \ba 
+    f'(x) &= 2xe^{-x^3} - 3x^4 e^{-x^3} \\ 
+    &= xe^{-x^3} (2 - 3x^3) \pd 
+    \ea 
+    \]
+    Since \(f'(x) \lt 0\) for \(x \geq 2,\) 
+    \(f\) is decreasing on \([2, \infty).\)
+    The series therefore meets all three conditions of the Integral Test, 
+    so we consider the improper integral
+    \[\int_2^\infty f(x) \di x = \int_2^\infty x^2 \, e^{-x^3} \di x \pd\]
+    Substituting \(u = x^3,\)
+    we get \(\dd u = 3x^2 \di x.\)
+    When \(x = 2,\) \(u = 8;\) 
+    when \(x = \infty,\) \(u = \infty.\)
+    Hence, the integral becomes
+    \[
+    \ba 
+    \tfrac{1}{3} \int_8^\infty e^{-u} \di u 
+    &= \lim_{k \to \infty} \tfrac{1}{3} \int_8^k e^{-u} \di u \nl 
+    &= \lim_{k \to \infty} \par{-\tfrac{1}{3} e^{-u}} \intEval_8^k \nl 
+    &= \lim_{k \to \infty} \par{-\tfrac{1}{3} e^{-k} + \tfrac{1}{3} e^{-8}} \nl 
+    &= \tfrac{1}{3} e^{-8} \pd
+    \ea 
+    \]
+    Since \(\int_2^\infty f(x) \di x\) converges, 
+    the Integral Test asserts that 
+    \[\sum_{n = 2}^{\infty} n^2 \, e^{-n^3} \convBoxed\]
+</div>
+
+<p>
+    <span class="text-remark">REMARK</span>
+    It is not necessary for \(f\) <i>always</i> to be positive and decreasing. 
+    Instead, \(f\) must <i>eventually</i> be positive and decreasing—namely, 
+    for some \(x \geq N.\)
+    Through this condition, the Integral Test establishes the convergence or divergence of \(\sum_{n = N}^\infty a_n,\) 
+    which matches the convergence or divergence of \(\sum_{n = 1}^\infty a_n.\) 
+    (The partial sum \(\sum_{i = 1}^{N - 1} a_i\) is finite and so does not 
+    influence convergence or divergence.)
+    The following example demonstrates this idea.
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether \(\ds \sum_{n=2}^{\infty} \frac{\ln n}{n}\) 
+        converges or diverges.
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    We let \(f(x) = (\ln x)/x,\)
+    which is positive and continuous for \(x \geq 2.\)
+    To determine whether \(f(x)\) is decreasing on this interval, we differentiate to get  
+    \[f'(x) = \frac{1 - \ln x}{x^2} \cma\]
+    which is negative for \(x \gt e.\)
+    So \(f\) is decreasing on \([e, \infty).\)
+    Since \(f\) is <i>ultimately</i> decreasing,
+    it is safe to continue with the Integral Test:
+    We evaluate 
+    \[\int_2^\infty f(x) \di x = \int_2^{\infty} \frac{\ln x}{x} \di x \pd\]
+    Substituting \(u = \ln x\) gives \(\dd u = \dd x/x.\)
+    When \(x = 2,\) \(u = \ln 2;\)
+    when \(x = \infty,\) \(u = \infty.\)
+    The integral therefore becomes 
+    \[
+    \ba 
+    \int_{\ln 2}^\infty u \di u 
+    &= \lim_{k \to \infty} \int_{\ln 2}^k u \di u \nl
+    &= \lim_{k \to \infty} \par{\tfrac{1}{2} u^2} \intEval_{\ln 2}^k \nl 
+    &= \lim_{k \to \infty} \parbr{\tfrac{1}{2} k^2 - \tfrac{1}{2} (\ln 2)^2} = \infty \pd
+    \ea 
+    \]
+    Since \(\int_2^\infty f(x) \di x\) diverges, the Integral Test says 
+    \[\sum_{n=2}^{\infty} \frac{\ln n}{n} \divBoxed\]
 </div>
 
 <!-- p-series -->
 <h4 id="p-series">\(p\)-Series</h4>
 <p>
-    Consider the family of series  
-    \[S = \sum_{n = k}^\infty \frac{1}{n^p} \period\]
-    Let \(f(x) = 1/x^p.\) 
-    Since \(f(x)\) is positive, continuous, and decreasing for \(x \geq k,\) 
-    we compare \(S\) to the improper integral 
-    \[I = \int_k^\infty \frac{1}{x^p} \di x \period \]
-    If \(I\) converges, then \(S\) also converges; if \(I\) diverges, then \(S\) also converges. 
-    Consider three cases:
-</p>
-<ul>
-    <li>
-        Case 1, \(p \lt 1\)
-    </li>
-    <li>
-        Case 2, \(p = 1\)
-    </li>
-    <li>
-        Case 3, \(p \gt 1.\)
-    </li>
-</ul>
-<p>
-    We start with Cases 1 and 3:
-    If \(p \ne 1,\) then we obtain  
-    \[
-    \ba 
-    I &= \int_k^\infty \frac{1}{x^p} \di x \\[1ex]
-    &= \frac{x^{1 - p}}{1 - p} \Big|_k^\infty \period
-    \ea 
-    \]
-</p>
-<p>
-    For Case 1, we have 
-    \[p \lt 1 \implies 1 - p \gt 0 \period\] 
-    Then as \(x \to \infty,\) \(\frac{x^{1 - p}}{1 - p} \to \infty.\)
-    Therefore, \(I\) diverges and so \(S\) also diverges. 
-    Conversely, for Case 3, 
-    \[p \gt 1 \implies 1 - p \lt 0 \period\]
-    Since this exponent is negative, 
-    it follows that as \(x \to \infty,\) \(\frac{x^{1 - p}}{1 - p} \to 0.\)
-    Thus, \(I\) converges, so by the Integral Test \(S\) also converges.
-</p>
-<p>
-    For Case 2, \(p = 1,\) we have 
-    \[
-    \ba 
-    I &= \int_k^\infty \frac{1}{x^p} \di x \\[1ex] 
-    &= \int_k^\infty \frac{1}{x} \di x \\[1ex]
-    &= \ln|x| \Big|_k^\infty \comma 
-    \ea 
-    \]
-    which diverges. 
-    Consequently, by the Integral Test, \(S\) also diverges. 
+    The family of series 
+    \[S = \sum_{n = 1}^\infty \frac{1}{n^p}\]
+    converges or diverges depending on the value of \(p.\)
+    If \(p \lt 0,\) then \(1/n^p \to \infty\) as \(n \to \infty\)
+    and so the series diverges by the Divergence Test. 
+    But for \(p \gt 0,\) the function \(1/x^p\) 
+    is continuous, positive, and decreasing for \(x \geq 1.\)
+    We therefore compare the series to the 
+    improper integral 
+    \[\int_1^\infty \frac{1}{x^p} \di x \cma\]
+    which diverges for \(p \leq 1\) and converges for \(p \gt 1\)
+    (as we proved in Section <a href="/ValCalc/ValCalc/calculus/6.5-Improper-Integrals.html">6.5</a>).
+    Hence, the Integral Test asserts that \(\sum_{n = 1}^\infty \par{1/n^p}\)
+    also converges for \(p \gt 1\) and diverges for \(p \leq 1.\)
+    This proof justifies why the Harmonic series (from Section 
+    <a href="/ValCalc/ValCalc/calculus/10.2-Infinite-Series-and-Divergence-Test.html">10.2</a>), 
+    given by 
+    \[\sum_{n = 1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots \cma\]
+    is divergent—it is a \(p\)-series with \(p = 1.\)
 </p>
 
 <div class="box-title"> \(p\)-SERIES </div>
 <div class="box">
-    Consider the family of sums
-    \[S = \sum_{n = k}^\infty \frac{1}{n^p} \period \]
-    <ul>
-        <li>
-            If \(p \leq 1,\) then \(S\) diverges. 
-        </li>
-        <li>
-            If \(p \gt 1,\) then \(S\) converges. 
-        </li>
-    </ul>
+    The family of sums
+    \[S = \sum_{n = 1}^\infty \frac{1}{n^p} \cma\]
+    called a <span class="emph">\(\bf p\)-series</span>, 
+    converges for \(p \gt 1\) and diverges for \(p \leq 1.\)
 </div>
 
-<div class="example-title"> EXAMPLE 3 </div>
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Which series converge, and which series diverge?
+        <ol class="list-alpha">
+            <li>
+                <span>
+                    \(\ds \sum_{n = 1}^\infty \frac{1}{n^4}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \sum_{n = 2}^\infty \frac{1}{\sqrt{n^3}}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \sum_{n = 5}^\infty \frac{1}{\sqrt[3] n}\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    These series are all \(p\)-series.
+    <ol class="list-alpha">
+        <li>
+            This series has \(p = 4 \gt 1,\) so it <b>converges</b>. 
+        </li>
+        <hr>
+        <li>
+            Observe that 
+            \[\sum_{n = 2}^\infty \frac{1}{\sqrt{n^3}} = \sum_{n = 2}^\infty \frac{1}{n^{3/2}} \pd\]
+            Since \(p = 3/2 \gt 1,\) the series <b>converges</b>. 
+        </li>
+        <hr>
+        <li>
+            We see 
+            \[\sum_{n = 5}^\infty \frac{1}{\sqrt[3] n} = \sum_{n = 5}^\infty \frac{1}{n^{1/3}} \pd\]
+            Identifying \(p = 1/3 \leq 1,\) we conclude that the series <b>diverges</b>.
+        </li>
+    </ol> 
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
 <div class="example">
     <div class="example-problem">  
         Find the values of \(k\) such that 
@@ -280,48 +388,198 @@ matches the convergence or divergence of the infinite series
         converges.
     </div>
 </div>
-<button onclick="toggle3()" class="solution-button"></button>
-<div id="solution3" class="solution">
-    <p> 
-       For convergence, we compare \(\sum_{n = 1}^\infty 1/n^{2k - 3}\) 
-       to a \(p\)-series of \(p \gt 1.\)
-       We see \(p = 2k - 3,\)
-       so we set this expression greater than \(1:\)
-       \[2k - 3 \gt 1 \implies k \gt 2 \period \]
-       Thus, for \(\boxed{k \gt 2,}\) the series converges.
-    </p>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    This series is a \(p\)-series with \(p = 2k - 3.\)
+    The series converges for \(p \gt 1,\)
+    so we get 
+    \[2k - 3 \gt 1 \implies \boxed{k \gt 2}\]
 </div>
 
-<!--section summary-->
+<h4 id="error-bounds-integral-test">Error Bounds with the Integral Test</h4>
+<p>
+    Most infinite series cannot be evaluated directly.
+    Instead, we estimate their values using partial sums; that is,
+    we approximate \(S = \sum_{n = 1}^\infty a_n\) 
+    to be the sum of the first \(N\) terms, \(S_N = \sum_{i = 1}^N a_i.\)
+    The <span class="emph">error</span> \(R_N\) in the approximation 
+    is the numerical difference between the true sum \(S\) and the partial sum \(S_N\)—mathematically,
+    \(S_N + R_N = S.\)
+    By expanding terms, we see
+    \[
+    \ba
+    R_N &= S - S_N \nl
+    &= \sum_{n = N + 1}^\infty a_n = a_{N + 1} + a_{N + 2} + a_{N + 3} + \cdots \pd
+    \ea
+    \]
+    Think of \(R_N\) as the sum of the <i>remaining terms</i>, 
+    which we exclude from the approximation \(S_N.\)
+    The sum \(R_N\) is therefore a right Riemann sum for the region under \(y = f(x)\)
+    between \(x = N\) and \(x = \infty\) 
+    (<a href="#integral-test-error-bound-left">Figure 2A</a>),
+    and it is a left Riemann sum for the region between \(x = N + 1\) and \(x = \infty\)
+    (<a href="#integral-test-error-bound-right">Figure 2B</a>).
+    By comparing areas, it is apparent that
+    \begin{equation} 
+    \int_{N + 1}^\infty f(x) \di x \leq R_N \leq \int_N^\infty f(x) \di x \pd \label{eq:R-bound}
+    \end{equation}
+    Accordingly, our approximation \(S_N = \sum_{i = 1}^N a_i\)
+    differs from the true value of \(S = \sum_{n = 1}^\infty a_n\) by no more than 
+    \(\int_N^\infty f(x) \di x,\) and by no less than \(\int_{N + 1}^\infty f(x) \di x.\)
+    Since \(R_N = S - S_N,\) \(\eqrefer{eq:R-bound}\) becomes 
+    \[
+    \int_{N + 1}^\infty f(x) \di x \leq S - S_N \leq \int_N^\infty f(x) \di x \pd
+    \]
+    Adding \(S_N\) to every term gives 
+    \begin{equation} 
+    S_N + \int_{N + 1}^\infty f(x) \di x \leq S \leq S_N + \int_N^\infty f(x) \di x \pd \label{eq:S-bound}
+    \end{equation}
+    This equation enables us to bound the true value of the sum \(S,\) that is, 
+    construct an interval in which \(S\) must reside.
+    <div class="figure-center">
+        <figure class="integral-test-error-bound-right" id="integral-test-error-bound-right">
+            <img src="../images/sectionImages/integral-test-error-bound-right.jpg" class="integral-test-error-bound-right" alt="Figure 2A">
+        </figure>
+        <figure class="integral-test-error-bound-left" id="integral-test-error-bound-left">
+            <img src="../images/sectionImages/integral-test-error-bound-left.jpg" class="integral-test-error-bound-left" alt="Figure 2B">
+        </figure>
+    </div>
+    <style>
+        .integral-test-error-bound-right::before{
+            content:'FIGURE 2A';
+        }
+    
+        .integral-test-error-bound-left::before{
+            content:'FIGURE 2B';
+        }
+    </style>
+</p>
+
+<!-- error bound with integral test box -->
+<div class="box-title"> REMAINDER ESTIMATE BY INTEGRAL TEST </div>
+<div class="box">
+    Let \(f\) be a continuous, positive, and decreasing function on \([N, \infty)\) such that 
+    \(f(n) = a_n.\)
+    Then the Integral Test bounds the value of \(S = \sum_{n = 1}^\infty a_n\) as
+    \begin{equation} 
+    S_N + \int_{N + 1}^\infty f(x) \di x \leq S \leq S_N + \int_N^\infty f(x) \di x \pd \eqlabel{eq:S-bound}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        The series \(\ds S = \sum_{n = 1}^\infty \frac{1}{n^2} \)
+        is approximated by the partial sum 
+        \(\ds S_3 = \sum_{i = 1}^3 \frac{1}{i^2}.\)
+        Use the Integral Test to construct an interval in which the true value of \(S\) must reside.
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    We estimate \(S\) using the partial sum 
+    \[S_3 = \sum_{i = 1}^3 \frac{1}{i^2} = \frac{49}{36} \pd\]
+    The function \(f(x) = 1/x^2\) is continuous, positive, and decreasing for \(x \geq 3.\)
+    We see 
+    \[
+    \int_4^\infty \frac{1}{x^2} \di x = \frac{1}{4} 
+    \and \int_3^\infty \frac{1}{x^2} \di x = \frac{1}{3} \pd
+    \]
+    So by the Integral Test, \(\eqref{eq:S-bound}\) gives
+    \[
+    \frac{49}{36} + \frac{1}{4} \leq S \leq \frac{49}{36} + \frac{1}{3} 
+    \iffArrow \boxed{\frac{29}{18} \leq S \leq \frac{61}{36}}
+    \]
+    Numerically, this interval is
+    \(1.611 \leq S \leq 1.694.\)
+    The true value of \(S\) happens to be \(\pi^2/6 \approx 1.644,\)
+    which is indeed contained in the interval.
+    [Unfortunately, the proof of \(\sum_{n = 1}^\infty \par{1/n^2} = \pi^2/6\) is beyond the scope of this text.]
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the smallest \(N\) such that 
+        \(\ds S_N = \sum_{i = 1}^N \frac{1}{i^3}\) estimates 
+        \(\ds S = \sum_{n = 1}^\infty \frac{1}{n^3}\)
+        correctly to two decimal places.
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    If \(S_N\) estimates \(S\) correctly to two decimal places,
+    then the error in \(S_N\) must be less than \(0.01\)—namely, 
+    \(R_N \lt 0.01.\)
+    Since \(1/x^3\) is continuous, positive, and decreasing for \(x \geq 1,\)
+    the series \(\sum_{n = 1}^\infty \par{1/n^3}\) meets the conditions of the Integral Test. 
+    Therefore, \(\eqref{eq:R-bound}\) gives 
+    the error bound 
+    \[R_N \leq \int_N^\infty \frac{1}{x^3} \di x \pd\]
+    Evaluating this improper integral, we get 
+    \[
+    \ba 
+    \int_N^\infty \frac{1}{x^3} \di x
+    &= \lim_{k \to \infty} \int_N^k \frac{1}{x^3} \di x \nl 
+    &= \lim_{k \to \infty} \par{-\frac{1}{2x^2}} \intEval_N^k \nl 
+    &= \lim_{k \to \infty} \par{-\frac{1}{2k^2} + \frac{1}{2N^2}} \nl 
+    &= \frac{1}{2N^2} \pd
+    \ea 
+    \]
+    Setting this error bound to be less than \(0.01,\) we see 
+    \[
+    \ba
+    \frac{1}{2N^2} \lt 0.01 &\iffArrow 2N^2 \gt 100 \nl 
+    &\iffArrow N^2 \gt 50 \nl 
+    &\iffArrow N \gt \sqrt{50} \pd
+    \ea
+    \]
+    Since \(N\) must be an integer, we round up our answer to \(\boxed{N = 8}.\)
+</div>
+
 <div class="section-summary">
-    <ul>
-        <li>
-            Consider the infinite series 
-            \[S = \sum_{n = k}^\infty a_n \period\]
-            Let \(f\) be a function such that \(f(n) = a_n.\)
-            If \(f(x)\) is positive, continuous, and decreasing for \(x \geq k,\)
-            then 
-            <ul>
-                <li>
-                    if \(\int_k^\infty f(x) \di x\) converges, then \(S\) also converges. 
-                </li>
-                <li>
-                    if \(\int_k^\infty f(x) \di x\) diverges, then \(S\) also diverges.
-                </li>
-            </ul>
-        </li>
-        <li>
-            A \(p\)-series is of the form \(S = \sum_{n = k}^\infty 1/n^p.\)
-            <ul>
-                <li>
-                    If \(p \leq 1,\) then \(S\) diverges. 
-                </li>
-                <li>
-                    If \(p \gt 1,\) then \(S\) converges.
-                </li>                
-            </ul>
-        </li>
-    </ul>
+    <p>
+        <a href="#integral-test" class="summary-anchor">Integral Test</a>
+        Let \(f\) be a function that satisfies \(f(n) = a_n.\)
+        Suppose that \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1.\)
+        <ul>
+            <li>
+                If \(\int_1^\infty f(x) \di x\) converges, 
+                then \(\sum_{n = 1}^\infty a_n\) also converges.
+            </li>
+            <li>
+                If \(\int_1^\infty f(x) \di x\) diverges,
+                then \(\sum_{n = 1}^\infty a_n\) also diverges.
+            </li>
+        </ul>
+    </p>
+    <p class="p-no-indent">
+        But a few nuances exist for the test:
+        The Integral Test works for any starting index, not just \(n = 1.\)
+        When we apply the test, we need \(f\) to <i>ultimately</i> be positive and decreasing.
+    </p>
+    <p>
+        <a href="#p-series" class="summary-anchor">\(p\)-Series</a>
+        The family of sums
+        \[S = \sum_{n = 1}^\infty \frac{1}{n^p} \cma\]
+        called a <span class="emph">\(\bf p\)-series</span>, 
+        converges for \(p \gt 1\) and diverges for \(p \leq 1.\)
+    </p>
+    <p>
+        <a href="#error-bounds-integral-test" class="summary-anchor">Error Bounds with the Integral Test</a>
+        When we approximate \(S = \sum_{n = 1}^\infty a_n\) using the partial sum \(S_N = \sum_{i = 1}^N a_i,\)
+        the <span class="emph">error</span> in the estimate is \(R_N.\)
+        Let \(f\) be a continuous, positive, and decreasing function on \([N, \infty)\)
+        such that \(f(n) = a_n.\)
+        The Integral Test enables us to construct an error bound for \(R_N\) as follows:
+        \begin{equation} 
+        \int_{N + 1}^\infty f(x) \di x \leq R_N \leq \int_N^\infty f(x) \di x \pd \eqlabel{eq:R-bound}
+        \end{equation}
+        Then we bound \(S\) using
+        \begin{equation} 
+        S_N + \int_{N + 1}^\infty f(x) \di x \leq S \leq S_N + \int_N^\infty f(x) \di x \pd \eqlabel{eq:S-bound}
+        \end{equation}
+    </p>
 </div>
 
 </main>
@@ -332,16 +590,16 @@ matches the convergence or divergence of the infinite series
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -349,10 +607,10 @@ matches the convergence or divergence of the infinite series
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -360,16 +618,16 @@ matches the convergence or divergence of the infinite series
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -377,17 +635,17 @@ matches the convergence or divergence of the infinite series
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>

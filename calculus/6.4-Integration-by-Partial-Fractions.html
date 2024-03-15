@@ -12,8 +12,8 @@
     <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
     <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/index.html">
@@ -50,10 +50,10 @@
     <a href="#decomposition-with-linear-factors" class="page-anchor">Decomposition with Linear Factors</a>,
     <a href="#decomposition-with-reducible-factors" class="page-anchor">Decomposition with Reducible Factors</a>, and 
     <a href="#decomposition-with-irreducible-factors" class="page-anchor">Decomposition with Irreducible Factors</a>.
-    This integration technique requires decomposing a rational expression into a simplier form:
+    This integration technique requires decomposing a rational expression into a simpler form:
     partial fractions.
     Consider 
-    \[ f(x) = \frac{P(x)}{Q(x)} \comma\]
+    \[ f(x) = \frac{P(x)}{Q(x)} \cma\]
     where \(P\) and \(Q\) are both polynomials. 
     If the degree of \(P\) is greater than or equal to the degree of 
     \(Q\)—that is, if \(\deg(P) \geq \deg(Q)\)—then 
@@ -65,7 +65,7 @@
 <div class="steps-title"> WHEN TO DECOMPOSE INTO PARTIAL FRACTIONS </div>
 <div class="steps">
     Consider the rational function 
-    \[f(x) = \frac{P(x)}{Q(x)} \period\]
+    \[f(x) = \frac{P(x)}{Q(x)} \pd\]
     <ol class="list-num">
         <li>
             If \(\deg(P) \geq \deg(Q),\) then \(f\) should first be simplified by polynomial division.
@@ -85,13 +85,13 @@
         to first perform partial fraction decomposition or polynomial division.
         <ol class="list-roman">
             <li>
-                \(\ds \int \frac{x^2 - 4x + 9}{3 - x} \, \dd x \)
+                \(\ds \int \frac{x^2 - 4x + 9}{3 - x} \di x \)
             </li>
             <li>
-                \(\ds \int \frac{x - 3}{(2x - 5)(9 - x)} \, \dd x \)
+                \(\ds \int \frac{x - 3}{(2x - 5)(9 - x)} \di x \)
             </li>
             <li>
-                \(\ds \int \frac{8 - x^2}{3x^3 - 9} \, \dd x \)
+                \(\ds \int \frac{8 - x^2}{3x^3 - 9} \di x \)
             </li>
         </ol>
     </div>
@@ -128,18 +128,18 @@
     Let's discuss the partial fraction decomposition 
     of a rational expression involving linear factors.
     Consider the example 
-    \[f(x) = \frac{x^2 + 2}{(x - 2)(x + 3)} \comma \]
+    \[f(x) = \frac{x^2 + 2}{(x - 2)(x + 3)} \cma \]
     where \((x - 2)\) and \((x + 3)\) are linear factors since  
     they're of degree one and don't repeat.
     The degrees of the numerator and denominator are equal,
     so we first perform polynomial division to simplify \(f.\)
     Doing so gives 
-    \[f(x) = 1 + \frac{8 - x}{(x - 2)(x + 3)} \period\]
+    \[f(x) = 1 + \frac{8 - x}{(x - 2)(x + 3)} \pd\]
     Now we perform the partial fraction decomposition 
     for \(\frac{8 - x}{(x - 2)(x + 3)}\)
     since the numerator has a smaller degree than does the denominator.
     We rewrite the expression as 
-    \[\frac{8 - x}{(x - 2)(x + 3)} = \frac{A}{x - 2} + \frac{B}{x + 3} \period \]
+    \[\frac{8 - x}{(x - 2)(x + 3)} = \frac{A}{x - 2} + \frac{B}{x + 3} \pd \]
     The terms \(\frac{A}{x - 2}\) and \(\frac{B}{x + 3}\) represent our partial fractions.
     Our goal is then determining the values of the coefficients \(A\) and \(B.\)
     With some algebraic manipulation, we get 
@@ -148,33 +148,33 @@
     \frac{8 - x}{(x - 2)(x + 3)} 
     &= \frac{A}{x - 2} \left(\frac{x + 3}{x + 3}\right) + \frac{B}{x + 3} \left(\frac{x - 2}{x - 2}\right) \nl
     \frac{8 - x}{(x - 2)(x + 3)}  &= \frac{A(x + 3) + B(x - 2)}{(x - 2)(x + 3)} \nl
-    8 - x &= A(x + 3) + B(x - 2) \period
+    8 - x &= A(x + 3) + B(x - 2) \pd
     \ea 
     \]
     To solve for \(A\) and \(B,\) 
     we perform substitutions to equate either \(A(x + 3)\) or \(B(x - 2)\) to zero.
     Namely, letting \(x = 2\) gives 
-    \[6 = 5A + 0 \implies A = \frac{6}{5} \period\]
+    \[6 = 5A + 0 \implies A = \frac{6}{5} \pd\]
     Similarly, assigning \(x = -3\) yields 
-    \[11 = 0 - 5B \implies B = -\frac{11}{5} \period\]
+    \[11 = 0 - 5B \implies B = -\frac{11}{5} \pd\]
     These substitutions are convenient because they permit us to solve for 
     \(A\) and \(B\) immediately.
     The partial fraction decomposition is then 
     \[
-    \frac{x^2 + 2}{(x - 2)(x + 3)} = 1 + \frac{6/5}{x - 2} - \frac{11/5}{x + 3} \period 
+    \frac{x^2 + 2}{(x - 2)(x + 3)} = 1 + \frac{6/5}{x - 2} - \frac{11/5}{x + 3} \pd 
     \]
     Notice the simplicity of integrating this expression!
-    In evaluating \(\int f(x) \, \dd x,\) we attain 
+    In evaluating \(\int f(x) \di x,\) we attain 
     \[
-    \int 1 + \frac{6/5}{x - 2} - \frac{11/5}{x + 3} \, \dd x 
-    = \boxed{x + \frac{6}{5} \ln|x - 2| - \frac{11}{5} \ln|x + 3| + C \period}
+    \int 1 + \frac{6/5}{x - 2} - \frac{11/5}{x + 3} \di x 
+    = \boxed{x + \frac{6}{5} \ln|x - 2| - \frac{11}{5} \ln|x + 3| + C}
     \]
 </p>
 
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \frac{x}{x^2 - x - 12} \, \dd x .\)
+        Evaluate \(\ds \int \frac{x}{x^2 - x - 12} \di x .\)
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button"> </button>
@@ -187,28 +187,28 @@
         Doing so yields
         \[
         \ba 
-        \frac{x}{(x - 4)(x + 3)} &= \frac{A}{x - 4} + \frac{B}{x + 3} \\[2ex] 
-        \frac{x}{(x - 4)(x + 3)} &= \frac{A(x + 3) + B(x - 4)}{(x - 4)(x + 3)} \period
+        \frac{x}{(x - 4)(x + 3)} &= \frac{A}{x - 4} + \frac{B}{x + 3} \nl
+        \frac{x}{(x - 4)(x + 3)} &= \frac{A(x + 3) + B(x - 4)}{(x - 4)(x + 3)} \pd
         \ea 
         \]
         Both sides have a common denominator, so we equate the numerators to get 
-        \[x = A(x + 3) + B(x - 4) \period\]
+        \[x = A(x + 3) + B(x - 4) \pd\]
         At this point, to solve for \(A\) and \(B,\) 
         we perform a series of substitutions. 
         If \(x = -3,\) then we obtain
         \[
         \ba 
-        -3 &= A(-3 + 3) + B(-3 - 4) \\
+        -3 &= A(-3 + 3) + B(-3 - 4) \nl
         -3 &= -7B \nl
-        \frac{3}{7} &= B \period
+        \frac{3}{7} &= B \pd
         \ea 
         \]
         Similarly, let \(x = 4.\) We then have 
         \[
         \ba 
-        4 &= A(4 + 3) + B(4 - 4) \\ 
+        4 &= A(4 + 3) + B(4 - 4) \nl 
         4 &= 7A \nl
-        \frac{4}{7} &= A \period 
+        \frac{4}{7} &= A \pd 
         \ea
         \]
         These substitutions produce equations 
@@ -217,10 +217,10 @@
         Therefore, we have 
         \[
         \ba
-        \int \frac{x}{(x - 4)(x + 3)} \, \dd x 
-        &= \int \frac{A}{x - 4} + \frac{B}{x + 3} \, \dd x \\
-        &= \int \frac{4/7}{x - 4} + \frac{3/7}{x + 3} \, \dd x \nl 
-        &= \boxed{\frac{4}{7} \ln|x - 4| + \frac{3}{7} \ln|x + 3| + C \period}\\
+        \int \frac{x}{(x - 4)(x + 3)} \di x 
+        &= \int \frac{A}{x - 4} + \frac{B}{x + 3} \di x \nl
+        &= \int \frac{4/7}{x - 4} + \frac{3/7}{x + 3} \di x \nl 
+        &= \boxed{\frac{4}{7} \ln|x - 4| + \frac{3}{7} \ln|x + 3| + C}
         \ea 
         \]
     </div>
@@ -235,47 +235,18 @@ Therefore, you should remember them as reference.
 <div class="box-title"> COMMON INTEGRALS WITH PARTIAL FRACTIONS </div>
 <div class="box">
     \[
-    \ba 
-    &\int \frac{1}{ax + b} \, \dd x = \frac{1}{a} \ln|ax + b| + C \nl 
-    &\int \frac{1}{(ax + b)^n} \, \dd x = \frac{(ax + b)^{1 - n}}{a(1 - n)} + C \comma \, n \ne 1 \nl
-    &\int \frac{1}{x^2 + a^2} \, \dd x = \frac{1}{a} \tan^{-1} \left(\frac{x}{a}\right) + C \period
-    \ea 
+    \baat{2}
+    &\int \frac{1}{ax + b} \di x &&= \frac{1}{a} \ln|ax + b| + C \nl 
+    &\int \frac{1}{(ax + b)^n} \di x &&= \frac{(ax + b)^{1 - n}}{a(1 - n)} + C \cmaa n \ne 1 \nl
+    &\int \frac{1}{x^2 + a^2} \di x &&= \frac{1}{a} \tan^{-1} \left(\frac{x}{a}\right) + C \pd
+    \eaat
     \]    
 </div>
-
-<p>
-Let's also review the factoring of differences of squares, sums of cubes, and differences of cubes. 
-The difference of the squares of two numbers \(a\) and \(b\) is 
-
-\begin{equation}
-    a^2 - b^2 = (a + b)(a - b) \period
-\end{equation}
-
-The sum of the cubes of \(a\) and \(b\) is 
-
-\begin{equation} 
-    a^3 + b^3 = (a + b)(a^2 - ab + b^2) \comma
-\end{equation}
-
-and their difference is 
-
-\begin{equation} 
-    a^3 - b^3 = (a - b)(a^2 + ab + b^2) \period
-\end{equation}
-
-Factoring a difference of squares yields two linear factors.
-In contrast, factoring a sum or difference of cubes 
-produces a linear factor and an irreducible quadratic. 
-If one of these forms is in a denominator whose degree is greater than the degree of the numerator, 
-then it's appropriate to perform partial fraction decomposition 
-using Equations \((1),\) \((2),\) and \((3)\) as needed.
-</p>
-
 
 <div class="example-title"> EXAMPLE 3 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \frac{2x^2 + 3}{(2x - 3)(4 - x)} \, \dd x .\)
+        Evaluate \(\ds \int \frac{2x^2 + 3}{(2x - 3)(4 - x)} \di x .\)
     </div>
 </div>
 <button onclick="toggle3()" class="solution-button"></button>
@@ -284,28 +255,28 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
         In the integrand, the degree of the numerator is equal to the degree of the denominator.
         Thus, we must first perform polynomial division.
         Doing so gives 
-        \[\frac{2x^2 + 3}{(2x - 3)(4 - x)} = -1 + \frac{11x - 9}{(4 - x)(2x - 3)} \period\]
+        \[\frac{2x^2 + 3}{(2x - 3)(4 - x)} = -1 + \frac{11x - 9}{(4 - x)(2x - 3)} \pd\]
         We now determine the partial fraction decomposition of \(\frac{11x - 9}{(4 - x)(2x - 3)}.\)
         The expression contains two linear factors, \((4 - x)\) and \((2x - 3),\) 
         so we have 
-        \[\frac{11x - 9}{(4 - x)(2x - 3)} = \frac{A}{4 - x} + \frac{B}{2x - 3} \period\]
+        \[\frac{11x - 9}{(4 - x)(2x - 3)} = \frac{A}{4 - x} + \frac{B}{2x - 3} \pd\]
         Multiplying both sides by \((4 - x)(2x - 3)\) produces 
-        \[11x - 9 = A(2x - 3) + B(4 - x) \period\]
-        To solve for \(A,\) we let \(x = 4 \!:\)
-        \[35 = 5A \implies A = 7 \period\]
+        \[11x - 9 = A(2x - 3) + B(4 - x) \pd\]
+        To solve for \(A,\) we let \(x = 4 \col\)
+        \[35 = 5A \implies A = 7 \pd\]
         Similarly, assigning \(x = 3/2\) yields 
-        \[\frac{15}{2} = 0 + \frac{5}{2} B \implies B = 3 \period\]
+        \[\frac{15}{2} = 0 + \frac{5}{2} B \implies B = 3 \pd\]
         The new integral, therefore, is
-        \[\int -1 + \left(\frac{7}{4 - x} + \frac{3}{2x - 3} \right) \, \dd x \period\]
+        \[\int -1 + \left(\frac{7}{4 - x} + \frac{3}{2x - 3} \right) \di x \pd\]
         Our final answer is then 
-        \[\boxed{-x - 7\ln|4 - x| + \frac{3}{2} \ln|2x - 3| + C \period}\]
+        \[\boxed{-x - 7\ln|4 - x| + \frac{3}{2} \ln|2x - 3| + C}\]
     </div>
 </div>
 
 <div class="example-title"> EXAMPLE 4 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \frac{x - 1}{x(9 - x^2)} \, \dd x .\)
+        Evaluate \(\ds \int \frac{x - 1}{x(9 - x^2)} \di x .\)
     </div>
 </div>
 <button onclick="toggle4()" class="solution-button"></button>
@@ -314,22 +285,22 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
         We factor the integrand as 
         \[\frac{x - 1}{x(3 - x)(3 + x)},\]
         whose partial fraction decomposition is expressed by
-        \[\frac{x - 1}{x(3 - x)(3 + x)} = \frac{A}{x} + \frac{B}{3 - x} + \frac{C}{3 + x} \period\]
+        \[\frac{x - 1}{x(3 - x)(3 + x)} = \frac{A}{x} + \frac{B}{3 - x} + \frac{C}{3 + x} \pd\]
         Multiplying both sides by \(x(3 - x)(3 + x)\) produces 
-        \[x - 1 = A(3 - x)(3 + x) + Bx(3 + x) + Cx(3 - x) \period\]
+        \[x - 1 = A(3 - x)(3 + x) + Bx(3 + x) + Cx(3 - x) \pd\]
         We notice that two terms have the factor \(x,\) 
         so we eliminate them by letting \(x = 0.\)
-        Doing so allows us to solve for \(A\!:\)
-        \[-1 = 9A \implies A = -\frac{1}{9} \period\]
+        Doing so allows us to solve for \(A\col\)
+        \[-1 = 9A \implies A = -\frac{1}{9} \pd\]
         Likewise, letting \(x = 3\) gives 
-        \[2 = 0 + 18B + 0 \implies B = \frac{1}{9} \period\]
+        \[2 = 0 + 18B + 0 \implies B = \frac{1}{9} \pd\]
         Finally, we let \(x = -3\) to get 
-        \[-4 = -18C \implies C = \frac{2}{9} \period\]
+        \[-4 = -18C \implies C = \frac{2}{9} \pd\]
         Thus, our partial fraction decomposition is 
-        \[\frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \period\]
+        \[\frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \pd\]
         Integrating, we obtain 
-        \[\int \frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \, \dd x = 
-        \boxed{-\frac{1}{9} \ln|x| - \frac{1}{9} \ln|3 - x| + \frac{2}{9} \ln|3 + x| + C \period} \]
+        \[\int \frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \di x = 
+        \boxed{-\frac{1}{9} \ln|x| - \frac{1}{9} \ln|3 - x| + \frac{2}{9} \ln|3 + x| + C} \]
         (Note that this "\(+C \, \)" represents a constant of integration, not the coefficient \(C.\))
     </div>
 </div>
@@ -340,7 +311,7 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
     Partial fraction decomposition requires factoring the denominator
     completely, but in some cases the denominator has irreducible factors.
     Examples of irreducible factors include the forms 
-    \((ax + b)^k \comma\) \(ax^2 + bx + c \comma\) and \((ax^2 + bx + c)^k \period\)
+    \((ax + b)^k \cma\) \(ax^2 + bx + c \cma\) and \((ax^2 + bx + c)^k \pd\)
     The following table shows the shape of partial fraction decompositions for various factors in the denominator.
 </p>
 <!-- table for factors -->
@@ -403,49 +374,48 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
     <!--example 5 problem-->
     <div class="example-problem" id="ex-5-problem">  
         Determine the partial fraction decomposition of 
-        \(\ds \frac{4x + 2}{x^3 - 1} \period \)
+        \(\ds \frac{4x + 2}{x^3 - 1} \pd \)
     </div>
 </div>
 <button onclick="toggle5()" class="solution-button"></button>
 <!--example 5 solution-->
 <div>
     <div id="solution5" class="solution">
-        The denominator, \((x^3 - 1),\) is a difference of cubes.
-        From equation \((3),\) we factor it as 
-        \[(x - 1)(x^2 + x + 1) \comma\]
+        The denominator \((x^3 - 1)\) is a difference of cubes, which we factor as
+        \[(x - 1)(x^2 + x + 1) \cma\]
         where \((x - 1)\) is a linear factor and \((x^2 + x + 1)\) is an irreducible quadratic. 
         Therefore, we have 
         \[
-        \frac{4x + 2}{x^3 - 1} = \frac{A}{x - 1} + \frac{Bx + C}{x^2 + x + 1} \period 
+        \frac{4x + 2}{x^3 - 1} = \frac{A}{x - 1} + \frac{Bx + C}{x^2 + x + 1} \pd 
         \]
         Multiplying both sides by \((x^3 - 1),\) we acquire 
         \[
         \ba 
-        4x + 2 &= A(x^2 + x + 1) + (Bx + C)(x - 1) \\
-        4x + 2 &= A(x^2 + x + 1) + Bx(x - 1) + C(x - 1) \period 
+        4x + 2 &= A(x^2 + x + 1) + (Bx + C)(x - 1) \nl
+        4x + 2 &= A(x^2 + x + 1) + Bx(x - 1) + C(x - 1) \pd 
         \ea 
         \]
         Let's now solve for \(A,\) \(B,\) and \(C\) by performing substitutions.
         Letting \(x = 1\) eliminates terms involving \(B\) and \(C,\) 
         yielding 
-        \[6 = 3A + 0 + 0 \implies A = 2 \period\]
+        \[6 = 3A + 0 + 0 \implies A = 2 \pd\]
         Moreover, letting \(x = 0\) gives 
         \[
         \ba 
-        2 &= A + 0 - C \\
-        2 &= 2 - C \\
-        C &= 0 \period
+        2 &= A + 0 - C \nl
+        2 &= 2 - C \nl
+        C &= 0 \pd
         \ea 
         \]
         We now have 
-        \[4x + 2 = 2(x^2 + x + 1) + Bx(x - 1) \period\]
+        \[4x + 2 = 2(x^2 + x + 1) + Bx(x - 1) \pd\]
         We assign \(x\) any value to immediately solve for \(B.\) 
         The most convenient assignment is \(x = 2,\) 
         from which we get 
-        \[10 = 14 + 2B \implies B = -2 \period\]
+        \[10 = 14 + 2B \implies B = -2 \pd\]
         Thus, our partial fraction decomposition is 
         \[
-        \frac{4x + 2}{x^3 - 1} = \boxed{\frac{2}{x - 1} - \frac{2x}{x^2 + x + 1} \period}  
+        \frac{4x + 2}{x^3 - 1} = \boxed{\frac{2}{x - 1} - \frac{2x}{x^2 + x + 1}}  
         \]
     </div>
 </div>
@@ -455,7 +425,7 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
 <div class="example" id="ex-6">
     <!--example 6 problem-->
     <div class="example-problem" id="ex-6-problem">  
-        Evaluate \(\ds \int \frac{1}{x(x + 2)^2} \, \dd x. \)
+        Evaluate \(\ds \int \frac{1}{x(x + 2)^2} \di x. \)
     </div>
 </div>
 <button onclick="toggle6()" class="solution-button"></button>
@@ -464,36 +434,36 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
     <div id="solution6" class="solution">
         The form for the partial fraction decomposition of the integrand is 
         \[
-        \frac{1}{x(x + 2)^2} = \frac{A}{x} + \frac{B}{(x + 2)} + \frac{C}{(x + 2)^2} \comma
+        \frac{1}{x(x + 2)^2} = \frac{A}{x} + \frac{B}{(x + 2)} + \frac{C}{(x + 2)^2} \cma
         \]
         or we could treat \((x + 2)^2\) as a quadratic by writing 
         \[
-        \frac{1}{x(x + 2)^2} = \frac{A}{x} + \frac{Bx + C}{(x + 2)^2} \period
+        \frac{1}{x(x + 2)^2} = \frac{A}{x} + \frac{Bx + C}{(x + 2)^2} \pd
         \]
         (Either form is correct, but we'll solely focus on the first form for simplicity.) 
         In the first form, multiplying each term by \(x(x + 2)^2\) gives 
         \[
-        1 = A(x + 2)^2 + Bx(x + 2) + Cx \period
+        1 = A(x + 2)^2 + Bx(x + 2) + Cx \pd
         \]
         We now solve for \(A,\) \(B,\) and \(C\) using a series of substitutions.
         Letting \(x = 0,\) we get 
-        \[1 = 4A + 0 + 0 \implies A = \frac{1}{4} \period\]
+        \[1 = 4A + 0 + 0 \implies A = \frac{1}{4} \pd\]
         Another convenient substitution is letting \(x = -2.\) 
         Doing so gives
-        \[1 = 0 + 0 - 2 C \implies C = -\frac{1}{2} \period\] 
+        \[1 = 0 + 0 - 2 C \implies C = -\frac{1}{2} \pd\] 
         We now have 
-        \[1 = \frac{1}{4} (x + 2)^2 + Bx(x + 2) - \frac{1}{2} x \period\]
+        \[1 = \frac{1}{4} (x + 2)^2 + Bx(x + 2) - \frac{1}{2} x \pd\]
         At this point, the only unknown is \(B.\) 
         Thus, we let \(x\) to be any value to immediately solve for \(B.\) 
         An easy option is letting \(x = -1.\) 
         Doing so produces 
-        \[1 = \frac{1}{4} - B + \frac{1}{2} \implies B = -\frac{1}{4} \period\]
+        \[1 = \frac{1}{4} - B + \frac{1}{2} \implies B = -\frac{1}{4} \pd\]
         We have, therefore, 
         \[
         \ba 
-        \int \frac{1}{x(x + 2)^2} \, \dd x 
-        &= \int \frac{1/4}{x} - \frac{1/4}{x + 2} - \frac{1/2}{(x + 2)^2} \, \dd x \\ 
-        &= \boxed{\frac{1}{4} \ln|x| - \frac{1}{4} \ln|x + 2| + \frac{1}{2x + 4} + C \period}
+        \int \frac{1}{x(x + 2)^2} \di x 
+        &= \int \frac{1/4}{x} - \frac{1/4}{x + 2} - \frac{1/2}{(x + 2)^2} \di x \nl 
+        &= \boxed{\frac{1}{4} \ln|x| - \frac{1}{4} \ln|x + 2| + \frac{1}{2x + 4} + C}
         \ea 
         \]
     </div>
@@ -504,93 +474,90 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
 <div class="example" id="ex-7">
     <!--example 7 problem-->
     <div class="example-problem" id="ex-7-problem">  
-        Evaluate \(\ds \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \, \dd x.\)
+        Evaluate \(\ds \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \di x.\)
     </div>
 </div>
 <button onclick="toggle7()" class="solution-button"></button>
-<!--example 7 solution-->
-<div>
-    <div id="solution7" class="solution">
-        Our integrand consists of two linear terms, \((x - 2)\) 
-        and \((2x - 6),\) and the irreducible quadratic \((x^2 + 16).\)
-        Our partial fraction decomposition is then 
-        \[
-        \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} 
-        = \frac{A}{x - 2} + \frac{B}{2x - 6} + \frac{Cx + D}{x^2 + 16} \period  
-        \]
-        Multiplying both sides by \((x - 2)(2x - 6)(x^2 + 16)\) yields 
-        \[
-        \small 7 - 3x^2 
-        = A(2x - 6)(x^2 + 16) + B(x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) + D(x - 2)(2x - 6) \period
-        \]
-        All but one term contain the factor \((x - 2).\)
-        Therefore, letting \(x = 2\) leaves only one term, producing  
-        \[-5 = -40A + 0 + 0 + 0 \implies A = \frac{1}{8} \period\]
-        Similarly, all but one term include the factor \((2x - 6).\) 
-        Therefore, letting \(x = 3\) zeroes all of those terms, giving 
-        \[
-        -20 = 0 + 25B + 0 + 0 \implies B = -\frac{4}{5} \period
-        \]
-        At this point, we have 
-        \[
-        \small 7 - 3x^2 
-        = \frac{1}{8}(2x - 6)(x^2 + 16) - \frac{4}{5} (x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) + D(x - 2)(2x - 6) \period
-        \]
-        Letting \(x = 0\) allows us to solve directly for \(D \! :\)
-        \[
-        7 = \frac{1}{8}(-6)(16) - \frac{4}{5}(-2)(16) + 0 + D(-2)(-6) \implies D = -\frac{11}{20} \period \\
-        \] 
-        Our equation is now
-        \[
-        \small 7 - 3x^2 
-        = \frac{1}{8}(2x - 6)(x^2 + 16) 
-        - \frac{4}{5} (x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) - \frac{11}{20} (x - 2)(2x - 6) \period
-        \]
-        We now assign \(x\) any value to immediately solve for \(C.\) 
-        A simple option is letting \(x = 1,\) which yields  
-        \[
-        4 = -\frac{17}{2} + \frac{68}{5} + 4C - \frac{11}{5} \implies C = \frac{11}{40} \period 
-        \]
-        We have, as a result, 
-        \[ 
-        \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \, \dd x 
-        = \int \frac{\frac{1}{8}}{x - 2} - \frac{\frac{4}{5}}{2x - 6} + \frac{\frac{11}{40} x - \frac{11}{20} }{x^2 + 16} \, \dd x
-        \]
-        We split \(\int \frac{\frac{11}{40}x - \frac{11}{20}}{x^2 + 16} \, \dd x\)
-        into 
-        \[
-        \int \frac{11x/40}{x^2 + 16} \, \dd x - \int \frac{11/20}{x^2 + 16} \, \dd x \period 
-        \]
-        The right-hand integral, \(\int \frac{11/20}{x^2 + 16} \, \dd x,\) evaluates to 
-        \[\left(-\frac{11}{20} \right)\frac{1}{4} \tan^{-1} \left(\frac{x}{4}\right) = -\frac{11}{80} \tan^{-1} \left(\frac{x}{4}\right) \period\]
-        The left-hand integral, 
-        \(\int \frac{11x/40}{x^2 + 16} \, \dd x,\) 
-        requires the substitution \(u = x^2 + 16.\) 
-        Doing so produces
-        \[
-        \int \frac{\frac{11}{40}x}{x^2 + 16} \, \dd x = \frac{11}{80} \ln(x^2 + 16) \period
-        \]
-        \(\Big[\) 
-        \((x^2 + 16)\) is always positive, so we don't need any absolute value bars.
-        \(\Big]\)
-        Therefore, 
-        \[
-        \ba 
-        \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \, \dd x 
-        &= \int \frac{\frac{1}{8}}{x - 2} - \frac{\frac{4}{5}}{2x - 6} + \frac{\frac{11}{40} x - \frac{11}{20} }{x^2 + 16} \, \dd x \\ 
-        &= \boxed{\small \frac{1}{8} \ln|x - 2| - \frac{2}{5} \ln|2x - 6| + \frac{11}{80} \ln(x^2 + 16) 
-        - \frac{11}{80} \tan^{-1} \left(\frac{x}{4}\right) + c \period}
-        \ea 
-        \]
-        (This \(c\) is the constant of integration, not a value in the partial fraction decomposition.)
-    </div>
+<div id="solution7" class="solution">
+    Our integrand consists of two linear terms, \((x - 2)\) 
+    and \((2x - 6),\) and the irreducible quadratic \((x^2 + 16).\)
+    Our partial fraction decomposition is then 
+    \[
+    \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} 
+    = \frac{A}{x - 2} + \frac{B}{2x - 6} + \frac{Cx + D}{x^2 + 16} \pd  
+    \]
+    Multiplying both sides by \((x - 2)(2x - 6)(x^2 + 16)\) yields 
+    \[
+    \small 7 - 3x^2 
+    = A(2x - 6)(x^2 + 16) + B(x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) + D(x - 2)(2x - 6) \pd
+    \]
+    All but one term contain the factor \((x - 2).\)
+    Therefore, letting \(x = 2\) leaves only one term, producing  
+    \[-5 = -40A + 0 + 0 + 0 \implies A = \frac{1}{8} \pd\]
+    Similarly, all but one term include the factor \((2x - 6).\) 
+    Therefore, letting \(x = 3\) zeroes all of those terms, giving 
+    \[
+    -20 = 0 + 25B + 0 + 0 \implies B = -\frac{4}{5} \pd
+    \]
+    At this point, we have 
+    \[
+    \small 7 - 3x^2 
+    = \frac{1}{8}(2x - 6)(x^2 + 16) - \frac{4}{5} (x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) + D(x - 2)(2x - 6) \pd
+    \]
+    Letting \(x = 0\) allows us to solve directly for \(D \col\)
+    \[
+    7 = \frac{1}{8}(-6)(16) - \frac{4}{5}(-2)(16) + 0 + D(-2)(-6) \implies D = -\frac{11}{20} \pd
+    \] 
+    Our equation is now
+    \[
+    \small 7 - 3x^2 
+    = \frac{1}{8}(2x - 6)(x^2 + 16) 
+    - \frac{4}{5} (x - 2)(x^2 + 16) + Cx(x - 2)(2x - 6) - \frac{11}{20} (x - 2)(2x - 6) \pd
+    \]
+    We now assign \(x\) any value to immediately solve for \(C.\) 
+    A simple option is letting \(x = 1,\) which yields  
+    \[
+    4 = -\frac{17}{2} + \frac{68}{5} + 4C - \frac{11}{5} \implies C = \frac{11}{40} \pd 
+    \]
+    We have, as a result, 
+    \[ 
+    \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \di x 
+    = \int \frac{\frac{1}{8}}{x - 2} - \frac{\frac{4}{5}}{2x - 6} + \frac{\frac{11}{40} x - \frac{11}{20} }{x^2 + 16} \di x
+    \]
+    We split \(\int \frac{\frac{11}{40}x - \frac{11}{20}}{x^2 + 16} \di x\)
+    into 
+    \[
+    \int \frac{11x/40}{x^2 + 16} \di x - \int \frac{11/20}{x^2 + 16} \di x \pd 
+    \]
+    The right-hand integral, \(\int \frac{11/20}{x^2 + 16} \di x,\) evaluates to 
+    \[\left(-\frac{11}{20} \right)\frac{1}{4} \tan^{-1} \left(\frac{x}{4}\right) = -\frac{11}{80} \tan^{-1} \left(\frac{x}{4}\right) \pd\]
+    The left-hand integral, 
+    \(\int \frac{11x/40}{x^2 + 16} \di x,\) 
+    requires the substitution \(u = x^2 + 16.\) 
+    Doing so produces
+    \[
+    \int \frac{\frac{11}{40}x}{x^2 + 16} \di x = \frac{11}{80} \ln(x^2 + 16) \pd
+    \]
+    \(\Big[\) 
+    \((x^2 + 16)\) is always positive, so we don't need any absolute value bars.
+    \(\Big]\)
+    Therefore, 
+    \[
+    \ba 
+    \int \frac{7 - 3x^2}{(x - 2)(2x - 6)(x^2 + 16)} \di x 
+    &= \int \frac{\frac{1}{8}}{x - 2} - \frac{\frac{4}{5}}{2x - 6} + \frac{\frac{11}{40} x - \frac{11}{20} }{x^2 + 16} \di x \nl 
+    &= \boxed{\small \frac{1}{8} \ln|x - 2| - \frac{2}{5} \ln|2x - 6| + \frac{11}{80} \ln(x^2 + 16) 
+    - \frac{11}{80} \tan^{-1} \left(\frac{x}{4}\right) + c}
+    \ea 
+    \]
+    (This \(c\) is the constant of integration, not a value in the partial fraction decomposition.)
 </div>
 
 <div class="section-summary">
     <ul>
         <li>
             <i>Partial fraction decomposition</i> 
-            is the process of splitting a rational expression into a sum of simplier fractions.  
+            is the process of splitting a rational expression into a sum of simpler fractions.  
             Consider \(f(x) = P(x)/Q(x),\) where \(P\) and \(Q\) are polynomials.
             <ul>
                 <li>
@@ -606,25 +573,25 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
         </li>
         <li>
             The factor \((ax + b)\) on the denominator takes the partial fraction 
-            \[\frac{A}{ax + b} \period\]
+            \[\frac{A}{ax + b} \pd\]
         </li>
         <li>
             The term \((ax + b)^n\) on the denominator results in the partial fraction decomposition  
             \[
             \frac{A_1}{ax + b} + \frac{A_2}{(ax + b)^2} 
-            + \cdots + \frac{A_n}{(ax + b)^n} \period
+            + \cdots + \frac{A_n}{(ax + b)^n} \pd
             \]
         </li>
         <li>
             The factor \((ax^2 + bx + c)\) on the denominator takes the partial fraction  
-            \[\frac{Ax + B}{ax^2 + bx + c} \period\]
+            \[\frac{Ax + B}{ax^2 + bx + c} \pd\]
         </li>
         <li>
             The term \((ax^2 + bx + c)^n\) on the denominator results in the partial fraction decomposition
             \[
             \frac{A_1x + B_1}{ax^2 + bx + c} + \frac{A_2 x + B_2}{(ax^2 + bx + c)^2}
             + \cdots + \frac{A_n x + B_n}{(ax^2 + bx + c)^n}
-            \period\]
+            \pd\]
         </li>
     </ul>
 </div>
@@ -636,16 +603,16 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -653,10 +620,10 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -664,16 +631,16 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -681,17 +648,17 @@ using Equations \((1),\) \((2),\) and \((3)\) as needed.
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>

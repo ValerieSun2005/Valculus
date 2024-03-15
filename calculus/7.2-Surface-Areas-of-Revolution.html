@@ -12,8 +12,8 @@
     <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
     <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/index.html">
@@ -131,33 +131,33 @@
     and its slant height is \(\length{P_{i - 1} P_i}.\)
     (See <a href="#sa-rev-solid">Figure 3B</a>.)
     By \(\eqref{eq:A-frus},\) the band's surface area is roughly 
-    \[\Delta A \approx 2 \pi \par{\frac{y_{i - 1} + y_i}{2}} \length{P_{i - 1} P_i} = \pi \par{y_{i - 1} + y_i} \length{P_{i - 1} P_i} \pd\]
+    \[\Delta S \approx 2 \pi \par{\frac{y_{i - 1} + y_i}{2}} \length{P_{i - 1} P_i} = \pi \par{y_{i - 1} + y_i} \length{P_{i - 1} P_i} \pd\]
     From Section <a href="/ValCalc/ValCalc/calculus/7.1-Arc-Length.html">7.1</a>, the arc length \(\length{P_{i - 1} P_i}\)
     is given by \(\sqrt{1 + [f'\par{x_i^*}]^2}.\)
     Assuming \(\Delta x\) is small, and because \(f\) is continuous, 
     we take \(y_{i - 1} = f \par{x_{i - 1}}\) 
     \(\approx f \par{x_i^*}\) and \(y_i = f \par{x_i}\) \(\approx f \par{x_i^*}.\) 
     Thus, we have 
-    \[\Delta A \approx \pi \parbr{2 f \par{x_i^*}} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x 
+    \[\Delta S \approx \pi \parbr{2 f \par{x_i^*}} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x 
     = 2 \pi f \par{x_i^*} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x \pd\] 
     Summing the surface areas of all \(n\) bands, we obtain 
-    \[A = \lim_{n \to \infty} \sum_{i = 1}^n 2 \pi f \par{x_i^*} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x \pd\]
+    \[S = \lim_{n \to \infty} \sum_{i = 1}^n 2 \pi f \par{x_i^*} \sqrt{1 + [f'\par{x_i^*}]^2} \Delta x \pd\]
     As \(n \to \infty,\) our assumptions become more valid and the limit approaches the solid's surface area. 
-    We recognize the right-hand side as a Riemann Sum for the function \(2 \pi f(x) \sqrt{1 + [f'(x)]^2},\)
+    We recognize the right-hand side as a Riemann sum for the function \(2 \pi f(x) \sqrt{1 + [f'(x)]^2},\)
     so we get 
     \begin{equation}
-    A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \label{eq:A-x-f}
+    S = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \label{eq:A-x-f}
     \end{equation}
     Or in Leibniz notation, we write 
-    \[A = \int_a^b 2 \pi y \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd\]
+    \[S = \int_a^b 2 \pi y \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd\]
     Similarly, if a region is bounded between the smooth curve \(x = g(y)\)
     and the \(y\)-axis from \(y = c\) to \(y = d,\) 
     then the surface area of the generated solid is 
     \begin{equation}
-    A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \cma \label{eq:A-y-g}
+    S = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \cma \label{eq:A-y-g}
     \end{equation}
     or in Leibniz notation, 
-    \[A = \int_c^d 2 \pi x \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
+    \[S = \int_c^d 2 \pi x \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
 </p>
 
 <div class="box-title">SURFACE AREAS OF REVOLUTION</div>
@@ -166,13 +166,13 @@
     from \(x = a\) to \(x = b\) is rotated about the \(x\)-axis, 
     then the generated solid has a surface area of 
     \begin{equation}
-    A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
+    S = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
     \end{equation}
     Likewise, if the region bounded by the smooth curve \(x = g(y)\) and the \(y\)-axis 
     from \(y = c\) to \(y = d\) is rotated about the \(y\)-axis, 
     then the generated solid has a surface area of 
     \begin{equation}
-    A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
+    S = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
     \end{equation}
 </div>
 
@@ -190,11 +190,11 @@
     The following formulas provide us this flexibility:
     We generalize \(\eqref{eq:A-x-f}\) as
     \begin{align}
-    A &= \int_a^b 2 \pi y \di s \pd \label{eq:A-x}
+    S &= \int_a^b 2 \pi y \di s \pd \label{eq:A-x}
     \end{align}
     Likewise, \(\eqref{eq:A-y-g}\) is generalized as 
     \begin{align}
-    A &= \int_c^d 2 \pi x \di s \pd \label{eq:A-y}
+    S &= \int_c^d 2 \pi x \di s \pd \label{eq:A-y}
     \end{align}
     In each case, we choose the differential \(\dd s\) to be either
     \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
@@ -204,8 +204,8 @@
 <div class="box">
     We calculate the surface area of revolution using the following formulas:
     \begin{alignat}{2}
-    A &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
-    A &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
+    S &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
+    S &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
     \end{alignat}
     where 
     \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
@@ -232,13 +232,13 @@
     The region is bounded from \(x = 0\) to \(x = 1.\)
     Using \(\eqref{eq:A-x-f}\) with \(f(x) = x^3,\) 
     we find the surface area to be 
-    \[A = \int_0^1 2 \pi \par{x^3} \sqrt{1 + \par{3x^2}^2} \di x = 2 \pi \int_0^1 x^3 \sqrt{1 + 9x^4} \di x \pd\]
+    \[S = \int_0^1 2 \pi \par{x^3} \sqrt{1 + \par{3x^2}^2} \di x = 2 \pi \int_0^1 x^3 \sqrt{1 + 9x^4} \di x \pd\]
     Letting \(u = 1 + 9x^4,\) we get \(\dd u = 36x^3 \di x.\)
     When \(x = 0,\) \(u = 1;\) when \(x = 1,\) \(u = 10.\)
     We therefore get 
     \[
     \ba 
-    A &= 2 \pi \par{\tfrac{1}{36}} \int_1^{10} \sqrt u \di u 
+    S &= 2 \pi \par{\tfrac{1}{36}} \int_1^{10} \sqrt u \di u 
     = \frac{\pi}{27} u^{3/2} \intEval_1^{10} \nl 
     &= \boxed{\frac{\pi}{27} \par{\sqrt{1000} - 1}} \approx 3.563 \pd
     \ea 
@@ -271,13 +271,13 @@
         We have \(\textderiv{y}{x} = 2x,\) so we use 
         \[\dd s = \sqrt{1 + (2x)^2} \di x = \sqrt{1 + 4x^2} \di x \pd\]
         So by \(\eqref{eq:A-y},\) the surface area is given by 
-        \[A = \int_1^2 2 \pi x \sqrt{1 + 4x^2} \di x \pd\]
+        \[S = \int_1^2 2 \pi x \sqrt{1 + 4x^2} \di x \pd\]
         Letting \(u = 1 + 4x^2,\) we have \(\dd u = 8x \di x.\)
         When \(x = 1,\) \(u = 5;\) when \(x = 2,\) \(u = 17.\)
         The integral therefore becomes 
         \[
         \ba 
-        A &= 2 \pi \par{\tfrac{1}{8}} \int_5^{17} \sqrt u \di u 
+        S &= 2 \pi \par{\tfrac{1}{8}} \int_5^{17} \sqrt u \di u 
         = \frac{\pi}{6} u^{3/2} \intEval_5^{17} \nl 
         &= \boxed{\frac{\pi}{6} \par{17 \sqrt{17} - 5 \sqrt 5}} \approx 30.846 \pd
         \ea
@@ -293,7 +293,7 @@
         Then \(\eqref{eq:A-y}\) gives the surface area to be 
         \[
         \ba
-        A &= \int_1^4 2 \pi \sqrt y \sqrt{1 + \frac{1}{4y}} \di y \nl 
+        S &= \int_1^4 2 \pi \sqrt y \sqrt{1 + \frac{1}{4y}} \di y \nl 
         &= \int_1^4 2 \pi \sqrt{y + \tfrac{1}{4}} \di y \nl 
         &= \pi \int_1^4 \sqrt{4y + 1} \di y \pd 
         \ea 
@@ -303,12 +303,12 @@
         Thus, we have 
         \[
         \ba 
-        A &= \frac{\pi}{4} \int_5^{17} \sqrt u \di u 
+        S &= \frac{\pi}{4} \int_5^{17} \sqrt u \di u 
         = \frac{\pi}{6} u^{3/2} \intEval_5^{17} \nl 
         &= \boxed{\frac{\pi}{6} \par{17 \sqrt{17} - 5 \sqrt 5}} \approx 30.846 \pd
         \ea
         \]
-        Both methods provide the same surface area \(A.\)
+        Both methods provide the same surface area \(S.\)
         (See <a href="#sa-rev-x2">Figure 5</a>.)
     </p>
 </div>
@@ -336,22 +336,22 @@
     \[\dd s = \sqrt{1 + (-\sin x)^2} = \sqrt{1 + \sin^2 x} \pd\]
     So using \(\eqref{eq:A-x}\) from \(a = 0\) to \(b = \pi/2,\) 
     we find the surface area to be 
-    \[A = \int_0^{\pi/2} 2 \pi (\cos x) \sqrt{1 + \sin^2 x} \di x \pd\]
+    \[S = \int_0^{\pi/2} 2 \pi (\cos x) \sqrt{1 + \sin^2 x} \di x \pd\]
     Substituting \(u = \sin x,\) we attain \(\dd u = \cos x \di x.\)
     When \(x = 0,\) \(u = 0;\) when \(x = \pi/2,\) \(u = 1.\)
     The integral therefore becomes
-    \[A = 2 \pi \int_0^1 \sqrt{1 + u^2} \di u \pd\]
+    \[S = 2 \pi \int_0^1 \sqrt{1 + u^2} \di u \pd\]
     Now we perform the trigonometric substitution 
     \(u = \tan \theta,\) from which \(\dd u = \sec^2 \theta \di \theta.\)
     (See Section <a href="/ValCalc/ValCalc/calculus/6.3-Trigonometric-Substitution.html">6.3</a>
     to review how to select trigonometric substitutions.)
     Observe that \(\theta = 0\) when \(u = 0,\) and \(\theta = \pi/4\) when \(u = 1.\)
     We then obtain 
-    \[A = 2 \pi \int_0^{\pi/4} \sqrt{\sec^2 \theta} \sec^2 \theta \di \theta = 2 \pi \int_0^{\pi/4} \sec^3 \theta \di \theta \pd\]
+    \[S = 2 \pi \int_0^{\pi/4} \sqrt{\sec^2 \theta} \sec^2 \theta \di \theta = 2 \pi \int_0^{\pi/4} \sec^3 \theta \di \theta \pd\]
     By <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3"target = "_blank">Example 6.2-8</a>, we have
     \[
     \ba 
-    A &= 2 \pi \par{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} } \intEval_0^{\pi/4} \nl 
+    S &= 2 \pi \par{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta} } \intEval_0^{\pi/4} \nl 
     &= 2 \pi \parbr{\tfrac{1}{2} \par{\sqrt 2} (1) + \tfrac{1}{2} \ln \par{\sqrt 2 + 1}} - 0 \nl 
     &= \boxed{\pi \parbr{\sqrt 2 + \ln \par{\sqrt 2 + 1}}} \approx 7.212 \pd
     \ea 
@@ -365,18 +365,18 @@
         from \(x = a\) to \(x = b\) is rotated about the \(x\)-axis, 
         then the generated solid has a surface area of 
         \begin{equation}
-        A = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
+        S = \int_a^b 2 \pi f(x) \sqrt{1 + [f'(x)]^2} \di x \pd \eqlabel{eq:A-x-f}
         \end{equation}
         Likewise, if the region bounded by the smooth curve \(x = g(y)\) and the \(y\)-axis 
         from \(y = c\) to \(y = d\) is rotated about the \(y\)-axis, 
         then the generated solid has a surface area of 
         \begin{equation}
-        A = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
+        S = \int_c^d 2 \pi g(y) \sqrt{1 + [g'(y)]^2} \di y \pd \eqlabel{eq:A-y-g}
         \end{equation}
         More generally, we use the following formulas:
         \begin{alignat}{2}
-        A &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
-        A &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
+        S &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-axis}] \eqlabel{eq:A-x} \nl
+        S &= \int_c^d 2 \pi x \di s \cma \lspace &&[\text{Rotating about } y \text{-axis}] \eqlabel{eq:A-y}
         \end{alignat}
         where 
         \[\di s = \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \or \di s = \sqrt{1 + \par{\deriv{x}{y}}^2} \di y \pd\]
@@ -390,16 +390,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -407,10 +407,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -418,16 +418,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -435,17 +435,17 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>

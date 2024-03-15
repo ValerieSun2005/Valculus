@@ -12,7 +12,7 @@
     <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
     <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/index.html">
@@ -42,7 +42,1115 @@
   </div>
 </div>
 <hr id="mainBodyBegin">
-
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        State the <b>Integral Test</b> and its three conditions.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The <b>Integral Test</b> connects the convergence or divergence of an infinite series 
+        to the convergence or divergence of an improper integral. 
+        If \(f\) is a continuous, positive, and decreasing function on \([1, \infty)\)
+        such that \(f(n) = a_n,\)
+        then 
+        <ul>
+<li>
+                \(\sum_{n = 1}^\infty a_n\) converges if \(\int_1^\infty f(x) \di x\) converges.
+            </li>
+<li>
+                \(\sum_{n = 1}^\infty a_n\) diverges if \(\int_1^\infty f(x) \di x\) diverges.
+            </li>
+</ul>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Define a <b>\(\bf p\)-series</b>.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        A <b>\(\bf p\)-series</b> is an infinite series of the form 
+        \[\sum_{n = 1}^\infty \frac{1}{n^p} \pd\]
+        The series converges for \(p \gt 1\) and diverges for \(p \leq 1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        How do we use the Integral Test to bound the error in a partial sum?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        If the partial sum \(S_N = \sum_{i = 1}^N a_i\) is used to estimate \(S = \sum_{n = 1}^\infty a_n,\)
+        then by the Integral Test the <b>error</b> in the estimate satisfies 
+        \[\int_{N + 1}^\infty f(x) \di x \leq R_N \leq \int_N^\infty f(x) \di x \pd\]
+        We then bound the true value of \(S\) as follows:
+        \[S_N + \int_{N + 1}^\infty f(x) \di x \leq S \leq S_N + \int_N^\infty f(x) \di x \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 0}^\infty \frac{1}{(5n + 1)^3}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(f(x) = 1/(5x + 1)^3;\)
+        this function is continuous, positive, and decreasing for \(x \geq 0.\)
+        All three conditions of the Integral Test are satisfied, so 
+        we compare the series to the improper integral 
+        \[\int_0^\infty f(x) \di x = \int_0^\infty \frac{1}{(5x + 1)^3} \di x \pd\]
+        Substituting \(u = 5x + 1,\) we see \(\dd u = 5 \di x.\)
+        When \(x = 0,\) \(u = 1;\) when \(x = \infty,\) \(u = \infty.\)
+        The integral therefore becomes 
+        \[
+        \ba
+        \int_1^\infty \frac{1}{5u^3} \di u 
+        &amp;= \lim_{k \to \infty} \int_1^k \frac{1}{5u^3} \di u \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{10u^2}} \intEval_1^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{10k^2} + \frac{1}{10(1)^2}} \nl 
+        &amp;= \frac{1}{10} \pd
+        \ea
+        \]
+        Since \(\int_0^\infty f(x) \di x\) converges,
+        the Integral Test says that, too,
+        \[\sum_{n = 0}^\infty \frac{1}{(5n + 1)^3} \convBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{n}{n^2 + 1}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(f(x) = x/(x^2 + 1),\)
+        which is continuous and positive for \(x \geq 1.\)
+        Observe that 
+        \[f'(x) = \frac{1 - x^2}{\par{x^2 + 1}^2} \cma\]
+        which is negative for \(x \gt 1.\)
+        Hence, \(f\) is decreasing on \([1, \infty).\)
+        We therefore compare the infinite series to the improper integral 
+        \(\int_1^\infty f(x) \di x.\)
+        Substituting \(u = x^2 + 1,\) we have \(\dd u = 2x \di x.\)
+        When \(x = 1,\) \(u = 2;\) when \(x = \infty,\) \(u = \infty.\)
+        So the improper integral becomes 
+        \[
+        \ba
+        \int_2^\infty \frac{1}{2u} \di u &amp;= 
+        \lim_{k \to \infty} \int_2^k \frac{1}{2u} \di u \nl 
+        &amp;= \tfrac{1}{2} \lim_{k \to \infty} \ln \abs u \intEval_2^k \nl 
+        &amp;= \tfrac{1}{2} \lim_{k \to \infty} (\ln k - \ln 2) \nl
+        &amp;= \infty \pd
+        \ea
+        \]
+        Since \(\int_1^\infty f(x) \di x\) diverges, 
+        the Integral Test asserts that
+        \[\sum_{n = 1}^\infty \frac{n}{n^2 + 1} \divBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{n + 1}{n^3}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's compare the summation expression to the real-valued function 
+        \[f(x) = \frac{x + 1}{x^3} \cma\]
+        which is positive and continuous for \(x \geq 1.\)
+        Differentiating shows 
+        \[
+        f'(x) = \frac{-2x - 3}{x^4} \cma
+        \]
+        which is negative for \(x \geq 1.\)
+        Hence, we proceed with the Integral Test 
+        by comparing the series to the improper integral 
+        \[\int_1^\infty f(x) \di x = \int_1^\infty \frac{x + 1}{x^3} \di x \pd\]
+        We see 
+        \[
+        \ba 
+        \int_1^\infty \frac{x + 1}{x^3} \di x
+        &amp;= \int_1^\infty \par{\frac{1}{x^2} + \frac{1}{x^3}} \di x \nl 
+        &amp;= \lim_{k \to \infty} \int_1^k \par{\frac{1}{x^2} + \frac{1}{x^3}} \di x \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{x} - \frac{1}{2x^2}} \intEval_1^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\par{-\frac{1}{k} - \frac{1}{2k^2}} - \par{-\frac{1}{1} - \frac{1}{2(1)^2}}} \nl 
+        &amp;= \frac{3}{2} \pd
+        \ea 
+        \]
+        Because \(\int_1^\infty f(x) \di x\) converges, 
+        the Integral Test also holds that
+        \[\sum_{n = 1}^\infty \frac{n + 1}{n^3} \convBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 0}^\infty \par{4n - e^n}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(4n - e^n\) is negative for large \(n.\)
+        Thus, the Integral Test <b>is not applicable</b>.
+        In fact, the series diverges by the Divergence Test because 
+        \[\lim_{n \to \infty} \par{4n - e^n} \ne 0 \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 0}^\infty \par{e^{-n} + e^{-2n}}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's compare the summation expression to the real-valued function 
+        \[f(x) = e^{-x} + e^{-2x} \cma\]
+        which is continuous and positive for \(x \geq 0.\)
+        Taking the derivative, we see
+        \[f'(x) = -e^{-x} - 2e^{-2x} \cma\]
+        which is negative for all \(x,\)
+        and so \(f\) is decreasing for all \(x.\)
+        Thus, all three conditions for the Integral Test are satisfied,
+        so we evaluate the improper integral
+        \[\int_0^\infty f(x) \di x = \int_0^\infty \par{e^{-x} + e^{-2x}} \di x \pd\]
+        We have
+        \[
+        \ba 
+        \lim_{k \to \infty} \int_0^k \par{e^{-x} + e^{-2x}} \di x
+        &amp;= \lim_{k \to \infty} \par{-e^{-x} - \tfrac{1}{2} e^{-2x}} \intEval_0^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-e^{-k} - \tfrac{1}{2} e^{-2k}} + \par{e^0 + \tfrac{1}{2} e^0} \nl 
+        &amp;= 0 + \tfrac{3}{2} = \tfrac{3}{2} \pd
+        \ea 
+        \]
+        Since \(\int_0^\infty f(x) \di x\) converges, 
+        the Integral Test states that 
+        \[\sum_{n = 0}^\infty \par{e^{-n} + e^{-2n}} \convBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 0}^\infty \frac{3}{n^2 + 9}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's compare the summation expression to the real-valued function 
+        \[f(x) = \frac{3}{x^2 + 9} \cma\]
+        which is continuous and positive for all \(x.\)
+        Differentiating shows 
+        \[
+        f'(x) = -\frac{6x}{\par{x^2 + 9}^2} \cma
+        \]
+        which is negative for \(x \gt 0,\)
+        so \(f\) is decreasing on \([0, \infty).\)
+        Hence, all three conditions for the Integral Test are satisfied. 
+        We compare the series to the improper integral 
+        \[\int_0^\infty f(x) \di x = \int_0^\infty \frac{3}{x^2 + 9} \di x \pd\]
+        Observe that 
+        \[
+        \frac{3}{x^2 + 9} = \frac{3}{\ds 9 \par{\frac{x^2}{9} + 1}}
+        = \frac{1/3}{\ds \frac{x^2}{9} + 1} \pd
+        \]
+        Accordingly,
+        \[
+        \int_0^\infty f(x) \di x = \tfrac{1}{3} \int_0^\infty \frac{1}{\ds \frac{x^2}{9} + 1} \di x \pd
+        \]
+        Letting \(u = x/3,\) we have \(\dd u = \dd x/3.\) 
+        When \(x = 0,\) \(u = 0;\) when \(x = \infty,\) \(u = \infty.\)
+        So the integral becomes 
+        \[
+        \ba
+        \int_0^\infty \frac{1}{u^2 + 1} \di u &amp;= \lim_{k \to \infty} \int_0^k \frac{1}{u^2 + 1} \di u \nl 
+        &amp;= \lim_{k \to \infty} \par{\atan u} \intEval_0^k \nl 
+        &amp;= \lim_{k \to \infty} \par{\atan k - \atan 0} \nl 
+        &amp;= \frac{\pi}{2} - 0 = \frac{\pi}{2} \pd
+        \ea
+        \]
+        Because \(\int_0^\infty f(x) \di x\) converges, 
+        the Integral Test states that 
+        \[\sum_{n = 0}^\infty \frac{3}{n^2 + 9} \convBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{\sin n}{n^2}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The sequence \(\{(\sin n)/n^2\}\) is not monotonic and not uniformly positive. 
+        Thus, the Integral Test <b>is not applicable</b>. 
+        (It turns out that this series is convergent, as we will see much later in 
+        <a href="/ValCalc/ValCalc/calculus/10.6-Absolute-Convergence-and-the-Ratio-and-Root-Tests.html#ex-series-sin-n2"target = "_blank">Example 10.6-3</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 0}^\infty \frac{\sqrt n}{5 + \sqrt{n^3}}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let 
+        \[f(x) = \frac{\sqrt x}{5 + x^{3/2}} \cma \]
+        which is continuous and positive for \(x \gt 0.\)
+        Differentiating \(f\) gives 
+        \[f'(x) = \frac{5 - 2x^{3/2}}{2 \sqrt x \par{x^{3/2} + 5}^2} \cma\]
+        which is negative for \(x \gt (5/2)^{2/3}.\)
+        Since \(f\) is <i>ultimately</i> positive and decreasing, 
+        it is safe to proceed with the Integral Test. 
+        We compare the infinite series to the improper integral 
+        \[
+        \int_0^\infty f(x) \di x = \int_0^\infty \frac{\sqrt x}{5 + x^{3/2}} \di x \pd
+        \]
+        Substituting \(u = 5 + x^{3/2},\)
+        we get \(\dd u = \tfrac{3}{2} \sqrt x \di x.\)
+        When \(x = 0,\) \(u = 5;\)
+        when \(x = \infty,\) \(u = \infty.\)
+        Now the integral becomes 
+        \[
+        \ba 
+        \int_5^\infty \frac{2}{3u} \di u
+        &amp;= \lim_{k \to \infty} \int_5^k \frac{2}{3u} \di u \nl 
+        &amp;= \lim_{k \to \infty} \par{\tfrac{2}{3} \ln \abs u} \intEval_5^k \nl 
+        &amp;= \lim_{k \to \infty} \par{\tfrac{2}{3} \ln k - \tfrac{2}{3} \ln 5} \nl 
+        &amp;= \infty \pd
+        \ea 
+        \]
+        Since the improper integral diverges, 
+        the Integral Test gives the same conclusion to the infinite series—namely, 
+        \[\sum_{n = 0}^\infty \frac{\sqrt n}{5 + \sqrt{n^3}} \divBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 4}^\infty \frac{1}{n (\ln n) \ln(\ln n)}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's compare the summation function to the real-valued function 
+        \[f(x) = \frac{1}{x (\ln x) \ln(\ln x)} \cma\]
+        which is continuous and positive for \(x \geq 4.\)
+        Differentiating shows 
+        \[
+        f'(x) = -\frac{(\ln x) \ln(\ln x) + \ln(\ln x) + 1}{[x(\ln x) \ln(\ln x)]^2} \pd
+        \]
+        Due to the negative sign, \(f'(x) \lt 0\) for \(x \geq 4.\) 
+        Hence, \(f\) is continuous, positive, and decreasing on \([4, \infty).\)
+        We therefore compare the infinite series to the improper integral 
+        \[\int_4^\infty f(x) \di x = \int_4^\infty \frac{1}{x (\ln x) \ln(\ln x)} \di x \pd\]
+        Substituting \(u = \ln(\ln x)\) gives \(\dd u = \dd x/(x \ln x).\)
+        When \(x = 4,\) \(u = \ln(\ln 4);\) 
+        when \(x = \infty,\) \(u = \infty.\)
+        Thus, the improper integral becomes
+        \[
+        \ba
+        \int_{\ln(\ln 4)}^\infty \frac{1}{u} \di u 
+        &amp;= \lim_{k \to \infty} \int_{\ln(\ln 4)}^k \frac{1}{u} \di u \nl 
+        &amp;= \lim_{k \to \infty} \ln \abs{u} \intEval_{\ln(\ln 4)}^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\ln k - \ln(\ln(\ln 4))} \nl
+        &amp;= \infty \pd
+        \ea
+        \]
+        Because \(\int_4^\infty f(x) \di x\) diverges, 
+        the Integral Test states that 
+        \[\sum_{n = 4}^\infty \frac{1}{n (\ln n) \ln(\ln n)} \divBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{1}{n^3 + n^2}\]
+    </blockquote> use the Integral Test, if possible, to test the series for convergence or divergence. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's compare the summation function to the real-valued function 
+        \[f(x) = \frac{1}{x^3 + x^2} \cma\]
+        which is continuous, positive, and decreasing for \(x \geq 1.\)
+        We therefore compare the infinite series to improper integral 
+        \[\int_1^\infty f(x) \di x = \int_1^\infty \frac{1}{x^3 + x^2} \di x \pd\]
+        Observe that \(x^3 + x^2\) \(= x^2(x + 1),\)
+        so we split the rational expression into partial fractions as follows:
+        \[
+        \frac{1}{x^3 + x^2} = \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x + 1} \pd
+        \]
+        (See Section 
+        <a href="/ValCalc/ValCalc/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>
+        to review integration by partial fractions.)
+        Multiplying every term by \(x^2(x + 1)\) to clear the denominators, we get 
+        \[1 = Ax(x + 1) + B(x + 1) + Cx^2 \pd\]
+        Letting \(x = 0\) gives 
+        \[1 = 0 + B(0 + 1) + 0 \implies B = 1 \pd\]
+        Likewise, substituting \(x = -1\) shows 
+        \[1 = 0 + 0 + C(-1)^2 \implies C = 1 \pd\]
+        To find \(A\) we let \(x\) be any other number, say, \(1 \col\)
+        \[1 = A(1)(1 + 1) + (1)(1 + 1) + 1(1)^2 \implies A = -1 \pd\]
+        Thus, we have 
+        \[
+        \frac{1}{x^3 + x^2} = \frac{-1}{x} + \frac{1}{x^2} + \frac{1}{x + 1}
+        \]
+        and so 
+        \[
+        \ba 
+        \int_1^\infty \par{\frac{-1}{x} + \frac{1}{x^2} + \frac{1}{x + 1}} \di x
+        &amp;= \lim_{k \to \infty} \int_1^k \par{\frac{-1}{x} + \frac{1}{x^2} + \frac{1}{x + 1}} \di x \nl 
+        &amp;= \lim_{k \to \infty} \par{-\ln \abs x - \frac{1}{x} + \ln \abs{x + 1}} \intEval_1^k \nl
+        &amp;= \lim_{k \to \infty} \par{\ln \abs{1 + \frac{1}{x}} - \frac{1}{x}} \intEval_1^k \nl 
+        &amp;= \lim_{k \to \infty} \par{\ln \abs{1 + \frac{1}{k}} -\frac{1}{k}} - \par{\ln \abs{1 + \frac{1}{1}} - \frac{1}{1}} \nl 
+        &amp;= 1 - \ln 2 \pd
+        \ea 
+        \]
+        Since this improper integral converges, the Integral Test holds that 
+        \[\sum_{n = 1}^\infty \frac{1}{n^3 + n^2} \convBoxed\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{1}{n^{3s - 5}}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This is a \(p\)-series with \(p = 3s - 5.\)
+        The series converges for \(p \gt 1,\) so we have 
+        \[3s - 5 \gt 1 \implies \boxed{s \gt 2}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 3}^\infty \frac{2}{n^{9 - 4s}}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This is a \(p\)-series with \(p = 9 - 4s.\)
+        The series converges for \(p \gt 1,\) so we see 
+        \[9 - 4s \gt 1 \implies \boxed{s \lt 2}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 9999}^\infty \frac{1}{n^{6 + s/2}}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This is a \(p\)-series with \(p = 6 + s/2.\)
+        The series converges for \(p \gt 1,\) so we have 
+        \[6 + \frac{s}{2} \gt 1 \implies \boxed{s \gt -10}\]
+        The starting index has no effect on whether the series converges or diverges;
+        the \(n = 9999\) is a red herring.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty n^{5s - 8}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the series as 
+        \[\sum_{n = 1}^\infty \frac{1}{n^{8 - 5s}} \cma\]
+        we identify \(p = 8 - 5s.\)
+        The series converges for \(p \gt 1;\)
+        then we have 
+        \[8 - 5s \gt 1 \implies \boxed{s \lt \tfrac{7}{5}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{n^{s - 3} + n^{5s}}{n^{7s - 1}}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's split the summation into two \(p\)-series, as follows:
+        \[
+        \ba 
+        \sum_{n = 1}^\infty \frac{n^{s - 3} + n^{5s}}{n^{7s - 1}}
+        &amp;= \sum_{n = 1}^\infty \frac{n^{s - 3}}{n^{7s - 1}} + \sum_{n = 1}^\infty \frac{n^{5s}}{n^{7s - 1}} \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{1}{n^{6s + 2}} + \sum_{n = 1}^\infty \frac{1}{n^{2s - 1}} \pd
+        \ea 
+        \]
+        Next we find \(s\) such that both series are convergent. 
+        In the first sum we have \(p = 6s + 2,\)
+        and in the second we have \(p = 2s - 1.\)
+        Setting both expressions to be greater than \(1,\) we have 
+        \[
+        \baat{2}
+        6s + 2 &amp;\gt 1 \lspace &amp;2s - 1 &amp;\gt 0 \nl 
+        s &amp;\gt -\tfrac{1}{6} \cma \lspace &amp;s &amp;\gt \tfrac{1}{2} \pd
+        \eaat
+        \]
+        Both series are convergent for \(\boxed{s \gt 1/2}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty \frac{4 n^2}{n^{s^2} \par{n^s}^2}\]
+    </blockquote> find the values of \(s\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        We perform the following algebraic manipulations:
+        \[
+        \ba 
+        \sum_{n = 1}^\infty \frac{4 n^2}{n^{s^2} \par{n^s}^2} 
+        &amp;= 4 \sum_{n = 1}^\infty \frac{n^2}{n^{s^2} \par{n^{2s}}} \nl 
+        &amp;= 4 \sum_{n = 1}^\infty \frac{n^2}{n^{s^2 + 2s}} \nl 
+        &amp;= 4 \sum_{n = 1}^\infty \frac{1}{n^{s^2 + 2s - 2}} \pd
+        \ea     
+        \]
+        We therefore see \(p = s^2 + 2s - 2,\)
+        so the series converges when 
+        \[
+        \ba 
+        s^2 + 2s - 2 &amp; \gt 1 \nl 
+        s^2 + 2s - 3 &amp; \gt 0 \nl 
+        (s + 3)(s - 1) &amp; \gt 0 \pd
+        \ea 
+        \]
+        To solve this inequality, we first test some \(s \in (-3, 1)\)—for example, \(s = 0.\)
+        Then the left side of the inequality becomes \((3)(-1),\) which is <i>not</i> positive. 
+        Hence, the inequality is satisfied by
+        \[\boxed{s \in (-\infty, -3) \cup (1, \infty)}\]
+        (See Section <a href="/ValCalc/ValCalc/calculus/0.1-Quadratics.html">0.1</a>
+        to review solving quadratic inequalities.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 2}^\infty \frac{1}{n (\ln n)^c}\]
+    </blockquote> find the values of \(c\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We assume that \(1/[n(\ln n)^c] \to 0\) as \(n \to \infty;\)
+        otherwise, the series diverges by the Divergence Test. 
+        Accordingly, we hold that the function 
+        \[f(x) = \frac{1}{x (\ln x)^c}\]
+        is ultimately continuous, positive, and decreasing.
+        We therefore find the values of \(c\) for which 
+        \[\int_2^\infty f(x) \di x = \int_2^\infty \frac{1}{x (\ln x)^c} \di x\]
+        converges. 
+        Substituting \(u = \ln x,\) we see \(\dd u = \dd x/x.\)
+        When \(x = 2,\) \(u = \ln 2;\) when \(x = \infty,\) \(u = \infty.\)
+        So the integral becomes 
+        \[
+        \ba
+        \int_{\ln 2}^\infty \frac{1}{u^c} \di u 
+        &amp;= \lim_{k \to \infty} \int_{\ln 2}^k u^{-c} \di u \nl 
+        &amp;= \lim_{k \to \infty} \par{\frac{u^{1 - c}}{1 - c}} \intEval_{\ln 2}^k \nl 
+        &amp;= \lim_{k \to \infty} \par{\frac{k^{1 - c}}{1 - c} - \frac{(\ln 2)^{1 - c}}{1 - c}} \pd
+        \ea
+        \]
+        This result is finite only if \(1 - c \lt 0;\)
+        otherwise, \(k^{1 - c}/(1 - c) \to \infty\) as \(k \to \infty.\)
+        (If \(c = -1\) then we attain \(\ln \abs u \intEval_{\ln 2}^k,\)
+        which approaches \(\infty\) as <nobr>\(k \to \infty.\))</nobr>
+        The improper integral, and therefore the infinite series (by the Integral Test), converges when
+        \[1 - c \lt 0 \implies \boxed{c \gt 1}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{n = 1}^\infty n(1 + n^2)^c\]
+    </blockquote> find the values of \(c\) for which the series converges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We assume that \(n(1 + n^2)^c \to 0\) as \(n \to \infty;\)
+        otherwise, the series diverges by the Divergence Test. 
+        Accordingly, we hold that the function 
+        \[f(x) = x(1 + x^2)^c\]
+        is ultimately continuous, positive, and decreasing.
+        We therefore find the values of \(c\) for which 
+        \[\int_1^\infty f(x) \di x = \int_1^\infty x(1 + x^2)^c \di x\]
+        converges. 
+        Substituting \(u = 1 + x^2,\) we have \(\dd u = 2x \di x.\)
+        When \(x = 1,\) \(u = 2;\)
+        when \(x = \infty,\) \(u = \infty.\)
+        The improper integral therefore becomes 
+        \[
+        \ba
+        \tfrac{1}{2} \int_2^\infty u^c \di u 
+        &amp;= \lim_{k \to \infty} \tfrac{1}{2} \int_2^k u^c \di u \nl
+        &amp;= \tfrac{1}{2} \lim_{k \to \infty} \par{\frac{u^{c + 1}}{c + 1}} \intEval_2^k \nl 
+        &amp;= \tfrac{1}{2} \lim_{k \to \infty} \par{\frac{k^{c + 1}}{c + 1} - \frac{2^{c + 1}}{c + 1}} \pd
+        \ea
+        \]
+        This result is finite only if \(c + 1 \lt 0;\) 
+        otherwise, \(k^{c + 1}/(c + 1) \to \infty\) as \(k \to \infty.\)
+        (If \(c = -1\) then we attain \(\tfrac{1}{2} \ln \abs u \intEval_2^k,\)
+        which approaches \(\infty\) as <nobr>\(k \to \infty.\))</nobr>
+        Hence, the improper integral, and therefore the infinite series (by the Integral Test), converges when 
+        \[c + 1 \lt 0 \implies \boxed{c \lt -1}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{i = 1}^N \frac{1}{i^4} \cmaa \text{error} \lt \frac{1}{3000}\]
+    </blockquote> find the values of \(N\) that satisfy the given error threshold. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(x) = 1/x^4\) is continuous, positive, and decreasing for \(x \geq 1.\)
+        So by the Integral Test, the error in the approximation satisfies 
+        \[R_N \leq \int_N^\infty \frac{1}{x^4} \di x \pd\]
+        We evaluate this improper integral as follows: 
+        \[
+        \ba 
+        \int_N^\infty \frac{1}{x^4} \di x
+        &amp;= \lim_{k \to \infty} \int_N^k \frac{1}{x^4} \di x \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{3x^3}} \intEval_N^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{3k^3} + \frac{1}{3N^3}} \nl 
+        &amp;= \frac{1}{3N^3} \pd
+        \ea 
+        \]
+        Setting this expression to be less than \(1/3000,\) we see 
+        \[
+        \ba
+        \frac{1}{3N^3} \lt \frac{1}{3000} &amp;\iffArrow 3N^3 \gt 3000 \nl
+        &amp;\iffArrow N^3 \gt 1000 \nl 
+        &amp;\iffArrow \boxed{N \gt 10}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{i = 1}^N e^{-2i} \cmaa \text{error} \lt \frac{1}{e^6}\]
+    </blockquote> find the values of \(N\) that satisfy the given error threshold. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(f(x) = e^{-2x}\) is continuous, positive, and decreasing for \(x \geq 1,\)
+        the Integral Test holds that the error in the partial sum satisfies 
+        \[R_N \leq \int_N^\infty e^{-2x} \di x \pd\]
+        We evaluate this improper integral as follows: 
+        \[
+        \ba 
+        \int_N^\infty e^{-2x} \di x
+        &amp;= \lim_{k \to \infty} \int_N^k e^{-2x} \di x \nl 
+        &amp;= \lim_{k \to \infty} \par{-\tfrac{1}{2} e^{-2x}} \intEval_N^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-\tfrac{1}{2} e^{-2k} + \tfrac{1}{2} e^{-2N}} \nl 
+        &amp;= \tfrac{1}{2} e^{-2N} \pd
+        \ea 
+        \]
+        Setting this expression to be less than \(1/e^6\) \(= e^{-6}\) shows 
+        \[
+        \ba 
+        \tfrac{1}{2} e^{-2N} \lt e^{-6} 
+        &amp;\iffArrow e^{-2N} \lt 2 e^{-6} \nl 
+        &amp;\iffArrow -2N \lt \ln \par{2e^{-6}} \nl 
+        &amp;\iffArrow N \gt -\tfrac{1}{2} \ln \par{2e^{-6}} \approx 2.653 \pd
+        \ea 
+        \]
+        We round up our answer to \(\boxed{N \gt 3}\) since \(N\) must be an integer.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{i = 0}^N \frac{1}{\sqrt{(4i + 8)^3}} \cmaa \text{error} \leq \frac{1}{20}\]
+    </blockquote> find the values of \(N\) that satisfy the given error threshold. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The function \(f(x) = 1/\sqrt{(4x + 8)^3}\) is continuous, positive, and decreasing for \(x \geq 0.\)
+        Hence, the Integral Test gives the following error bound for the partial sum:
+        \[R_N \leq \int_N^\infty \frac{1}{\sqrt{(4x + 8)^3}} \di x \pd\]
+        Substituting \(u = 4x + 8,\) we have \(\dd u = 4 \di x.\)
+        When \(x = N,\) \(u = 4N + 8;\) when \(x = \infty,\) \(u = \infty.\)
+        So the improper integral becomes 
+        \[
+        \ba 
+        \tfrac{1}{4} \int_{4N + 8}^\infty \frac{1}{u^{3/2}} \di u 
+        &amp;= \lim_{k \to \infty} \tfrac{1}{4} \int_{4N + 8}^k u^{-3/2} \di u \nl
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{2 \sqrt u}} \intEval_{4N + 8}^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-\frac{1}{2 \sqrt k} + \frac{1}{2 \sqrt{4N + 8}}} \nl 
+        &amp;= \frac{1}{2 \sqrt{4N + 8}} \pd
+        \ea 
+        \]
+        Establishing the inequality with the given error tolerance,
+        we see 
+        \[
+        \ba 
+        \frac{1}{2 \sqrt{4N + 8}} \leq \frac{1}{20}
+        &amp;\iffArrow 2 \sqrt{4N + 8} \geq 20 \nl 
+        &amp;\iffArrow \sqrt{4N + 8} \geq 10 \nl 
+        &amp;\iffArrow 4N + 8 \geq 100 \nl 
+        &amp;\iffArrow \boxed{N \geq 23}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \sum_{i = 0}^N \frac{4i + 4}{e^{i^2 + 2i + 1}} \cmaa \text{error} \lt \frac{2}{e^4}\]
+    </blockquote> find the values of \(N\) that satisfy the given error threshold. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Integral Test gives the error bound 
+        \[R_N \leq \int_N^\infty \frac{4x + 4}{e^{x^2 + 2x + 1}} \di x = \int_N^\infty \frac{4x + 4}{e^{(x + 1)^2}} \di x \]
+        since the integrand is ultimately continuous, positive, and decreasing.
+        To evaluate the integral, we substitute \(u = (x + 1)^2;\)
+        then \(\dd u = (2x + 2) \di x.\)
+        When \(x = N,\) \(u = (N + 1)^2;\)
+        when \(x = \infty,\) \(u = \infty.\)
+        So the integral becomes 
+        \[
+        \ba 
+        \int_{(N + 1)^2}^\infty \frac{2}{e^u} \di u 
+        &amp;= \lim_{k \to \infty} \int_{(N + 1)^2}^k 2e^{-u} \di u \nl 
+        &amp;= \lim_{k \to \infty} \par{-2e^{-u}} \intEval_{(N + 1)^2}^k \nl 
+        &amp;= \lim_{k \to \infty} \par{-2e^{-k} + 2e^{-(N + 1)^2}} \nl 
+        &amp;= 2e^{-(N + 1)^2} \pd
+        \ea 
+        \]
+        Now we set this expression to be less than \(2/e^4\) \(= 2e^{-4},\) as follows:
+        \[
+        \ba
+        2e^{-(N + 1)^2} &amp;\lt 2e^{-4} \nl 
+        -(N + 1)^2 &amp;\lt -4 \nl 
+        -N^2 - 2N - 1 &amp;\lt -4 \nl 
+        N^2 + 2N - 3 &amp; \gt 0 \nl 
+        (N + 3)(N - 1) &amp; \gt 0 \pd
+        \ea
+        \]
+        Let's test some \(N \in (-3, 1) \col\)
+        For \(N = 0\) the left side of the inequality becomes 
+        \((3)(-1),\)
+        which is <i>not</i> greater than \(0.\)
+        Instead, the inequality is satisfied by
+        \[\boxed{N \geq 1}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let's examine the infinite series \(S = \sum_{n = 0}^\infty e^{-n}.\)
+        <ol class="list-alpha">
+<li>
+                Verify that the series is convergent.
+            </li>
+<li>
+                Use the first four terms in the series to approximate \(S.\)
+            </li>
+<li>
+                Using the Integral Test,
+                bound the error in the approximation from part (b).
+            </li>
+<li>
+                Construct an interval in which \(S\) must lie.
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                The function \(f(x) = e^{-x}\) is continuous, positive, and decreasing for \(x \geq 0.\)
+                Then we see
+                \[
+                \ba
+                \int_0^\infty e^{-x} \di x  
+                &amp;= \lim_{k \to \infty} \int_0^k e^{-x} \di x \nl 
+                &amp;= \lim_{k \to \infty} \par{-e^{-x}} \intEval_0^k \nl 
+                &amp;= \lim_{k \to \infty} \par{-e^{-k} + e^0} \nl 
+                &amp;= 1 \pd
+                \ea
+                \]
+                Since \(\int_0^\infty f(x) \di x\) converges, 
+                the Integral Test asserts that 
+                \[\sum_{n = 0}^\infty e^{-n} \conv \pd\]
+            </li>
+<hr/>
+<li>
+                We estimate \(S\) to be 
+                \[
+                \ba 
+                S_3 &amp;= \sum_{i = 0}^3 e^{-i} \nl 
+                &amp;= 1 + e^{-1} + e^{-2} + e^{-3} \nl 
+                &amp;\approx \boxed{1.553} 
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                The Integral Test gives the following interval for the error:
+                \[\int_4^\infty e^{-x} \di x \leq R_3 \leq \int_3^\infty e^{-x} \di x \pd\]
+                We see 
+                \[
+                \ba
+                \int_4^\infty e^{-x} \di x &amp;= e^{-4} \approx 0.018 \cma \nl 
+                \int_3^\infty e^{-x} \di x &amp;= e^{-3} \approx 0.050 \pd
+                \ea
+                \]
+                We therefore have 
+                \[
+                \boxed{0.018 \leq R_3 \leq 0.050}
+                \]
+            </li>
+<hr/>
+<li>
+                The interval is 
+                \[1.553 + 0.018 \leq S \leq 1.553 + 0.050 \iffArrow \boxed{1.571 \leq S \leq 1.603}\]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Using the partial sum \(\sum_{i = 1}^3 [1/(i^2 + 1)]\)
+        and the Integral Test, 
+        construct an interval in which the value of \(\sum_{n = 1}^\infty [1/(n^2 + 1)]\) must reside. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have 
+        \[\sum_{i = 1}^3 \frac{1}{i^2 + 1} = \frac{4}{5} \pd\]
+        Observe that 
+        \[
+        \ba 
+        \int_4^\infty \frac{1}{x^2 + 1} \di x &amp;= \frac{\pi}{2} - \atan 4 \cma \nl 
+        \int_3^\infty \frac{1}{x^2 + 1} \di x &amp;= \frac{\pi}{2} - \atan 3 \pd
+        \ea 
+        \]
+        Since \(1/(x^2 + 1)\) is continuous, positive, and decreasing for \(x \geq 0,\)
+        the Integral Test gives 
+        \[
+        \boxed{\frac{4}{5} + \frac{\pi}{2} - \atan 4
+        \leq \sum_{n = 1}^\infty \frac{1}{n^2 + 1} 
+        \leq \frac{4}{5} + \frac{\pi}{2} - \atan 3}
+        \]
+        Numerically, this interval is
+        \[1.045 \leq \sum_{n = 1}^\infty \frac{1}{n^2 + 1} \leq 1.122 \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The Harmonic series diverges very slowly. 
+        An untrained student may fallaciously conclude that it converges
+        after examining its partial sums.
+        <ol class="list-alpha">
+<!-- <li>
+                Treating the Harmonic series as a left-endpoint approximation with \(\Delta x = 1\)
+                for the area under \(y = 1/x\) from \(x = 1\) to \(x = N,\)
+                show that 
+                \[\sum_{i = 1}^N \frac{1}{i} \geq \frac{1}{N} + \ln N \pd\]
+            </li> -->
+<li>
+                Interpreting the Harmonic series as a right-endpoint approximation with \(\Delta x = 1\) for the area 
+                under \(y = 1/x\) from \(x = 1\) to \(x = N,\)
+                show that
+                \[\sum_{i = 1}^N \frac{1}{i} \leq 1 + \ln N \pd\]
+            </li>
+<li>
+                Using the result in part (a), 
+                show that the sum of the first million terms of the Harmonic series is less than \(15\)
+                and that the sum of its first billion terms is less than \(22.\)
+            </li>
+<li>
+                Using the result in part (a), 
+                estimate many terms in the Harmonic series are needed 
+                to attain a sum of \(50.\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<!-- <li>
+                With \(\Delta x = 1,\) a left Riemann sum for the area under \(y = 1/x\)
+                from \(x = 1\) to \(x = N\) is 
+                \[\Delta x \par{\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{N - 1}}
+                = \sum_{i = 1}^{N - 1} \frac{1}{i} \pd
+                \]
+                Because \(1/x\) is decreasing, this estimate is an <i>overestimate</i> of the area, 
+                so we write 
+                \[\sum_{i = 1}^{N - 1} \frac{1}{i} \geq \int_1^N \frac{1}{x} \di x = \ln N \pd\]
+                Now adding \(1/N\) to both sides gives 
+                \[\sum_{i = 1}^N \frac{1}{i} \geq \frac{1}{N} + \ln N \cma\]
+                as requested.
+            </li>
+            <hr> -->
+<li>
+                Using a right Riemann sum with \(\Delta x = 1,\)
+                we approximate the area under \(y = 1/x\) from \(x = 1\) to \(x = N\) to be 
+                \[
+                \Delta x \par{\frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots + \frac{1}{N}} 
+                = \sum_{i = 2}^N \frac{1}{i} \pd
+                \]
+                Since \(y = 1/x\) is decreasing, the Riemann sum is an <i>underestimate</i> of the area. 
+                We therefore have 
+                \[\sum_{i = 2}^N \frac{1}{i} \leq \int_1^N \frac{1}{x} \di x = \ln N \pd\]
+                Adding \(1\) to both sides shows 
+                \[
+                \ba
+                1 + \sum_{i = 2}^N \frac{1}{i} &amp;\leq 1 + \ln N \nl 
+                \sum_{i = 1}^N \frac{1}{i} &amp;\leq 1 + \ln N \cma
+                \ea
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                The sum of the first million terms is given by 
+                \(N = 1000000.\)
+                The inequality then gives
+                \[\sum_{i = 1}^{1000000} \frac{1}{i} \leq 1 + \ln 1000000 \approx 14.816 \lt 15 \cma\]
+                as requested.
+                Likewise, the sum of the first billion terms is given by \(N = 1000000000 \col\)
+                \[\sum_{i = 1}^{1000000000} \frac{1}{i} \leq 1 + \ln 1000000000 \approx 21.723 \lt 22 \cma\]
+                as requested.
+            </li>
+<hr/>
+<li>
+                Using the inequality from part (a), we get
+                \[
+                \ba
+                50 \leq 1 + \ln N
+                &amp;\iffArrow 49 \leq \ln N \nl 
+                &amp;\iffArrow N \geq e^{49} \approx \boxed{1.907 \times 10^{21}}
+                \ea
+                \]
+                The Harmonic series' slow divergence rate is explained 
+                by the gradual growth of the natural logarithm function.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div>
 </main>
 </main>
 <!-- <footer>
@@ -51,16 +1159,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -68,10 +1176,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -79,16 +1187,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -96,17 +1204,17 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>

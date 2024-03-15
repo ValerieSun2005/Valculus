@@ -12,7 +12,7 @@
     <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
     <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
     <a href="/Valculus/index.html">
@@ -139,12 +139,12 @@
         \[
         \ba 
         \int_2^\infty \frac{1}{x + 9} \di x &amp;= \lim_{k \to \infty} \int_2^k \frac{1}{x + 9} \di x \nl 
-        &amp;= \lim_{k \to \infty} \ln \abs{x + 9} \Big|_2^k \nl 
-        &amp;= \lim_{k \to \infty} \ln \abs{k + 9} - \ln 11 \period 
+        &amp;= \lim_{k \to \infty} \ln \abs{x + 9} \intEval_2^k \nl 
+        &amp;= \lim_{k \to \infty} \ln \abs{k + 9} - \ln 11 \pd 
         \ea 
         \]
         The limit \(\lim_{k \to \infty} \ln(k + 9)\) approaches \(\infty\) and therefore does not exist,
-        so \(\int_2^\infty \frac{1}{x + 9} \di x\) <u>diverges</u>. 
+        so \(\int_2^\infty \frac{1}{x + 9} \di x\) <b>diverges</b>. 
      
         </div> 
        </div>  
@@ -169,11 +169,11 @@
         \[
         \ba 
         \lim_{k \to \infty} \int_1^k \frac{3}{2} x^{-1/2} \di x 
-        &amp;= \lim_{k \to \infty} 3 \sqrt{x} \Big|_1^k \nl 
-        &amp;= \lim_{k \to \infty} 3 \sqrt{k} - 3 \period 
+        &amp;= \lim_{k \to \infty} \par{3 \sqrt{x}} \intEval_1^k \nl 
+        &amp;= \lim_{k \to \infty} 3 \sqrt{k} - 3 \pd 
         \ea 
         \]
-        The limit \(\lim_{k \to \infty} 3 \sqrt{k}\) doesn't exist, so the integral <u>diverges</u>.
+        The limit \(\lim_{k \to \infty} 3 \sqrt{k}\) doesn't exist, so the integral <b>diverges</b>.
      
         </div> 
        </div>  
@@ -196,7 +196,7 @@
         We have 
         \[
         \ba 
-        \lim_{k \to \infty} \int_3^k x^{-5/4} \di x &amp;= \lim_{k \to \infty} -4 x^{-1/4} \Big|_3^k \nl 
+        \lim_{k \to \infty} \int_3^k x^{-5/4} \di x &amp;= \lim_{k \to \infty} -4 x^{-1/4} \intEval_3^k \nl 
         &amp;= \lim_{k \to \infty} -4k^{-1/4} + 4(3)^{-1/4} \nl 
         &amp;= \boxed{\frac{4}{\sqrt[4]{3}}} 
         \ea 
@@ -223,16 +223,16 @@
         because the denominator \(x^2 + 1\) is never zero. 
         We choose to break the integral at any point—say, \(x = 0.\) (Any point suffices, however.)
         This choice gives 
-        \[\int_{-\infty}^0 \frac{1}{x^2 + 1} \di x + \int_0^\infty \frac{1}{x^2 + 1} \di x \period\]
+        \[\int_{-\infty}^0 \frac{1}{x^2 + 1} \di x + \int_0^\infty \frac{1}{x^2 + 1} \di x \pd\]
         Both integrals must converge; otherwise, \( \int_{-\infty}^\infty \dd x/(x^2 + 1)\) diverges.
         Recall that \(\int \dd x/(x^2 + 1) = \tan^{-1} x + C.\)
         Also note that \(\tan 0 = 0\) and \(\lim_{x \to \infty} \tan^{-1} x = \pi/2.\)
         Using this information, the first integral becomes 
         \[\lim_{a \to -\infty} \int_a^0 \frac{1}{x^2 + 1} \di x 
-        = \lim_{a \to -\infty} \tan^{-1} x \Big|_a^0 = \frac{\pi}{2} \period \]
+        = \lim_{a \to -\infty} \tan^{-1} x \intEval_a^0 = \frac{\pi}{2} \pd \]
         The second integral is 
         \[\lim_{b \to \infty} \int_0^b \frac{1}{x^2 + 1} \di x 
-        = \lim_{b \to \infty} \tan^{-1} x \Big|_0^b = \frac{\pi}{2} \period\]
+        = \lim_{b \to \infty} \tan^{-1} x \intEval_0^b = \frac{\pi}{2} \pd\]
         Therefore, 
         \[\int_{-\infty}^\infty \frac{1}{x^2 + 1} \di x 
         = \frac{\pi}{2} + \frac{\pi}{2} = \boxed{\pi}\]
@@ -254,10 +254,10 @@
             <span class="solution-text">SOLUTION</span> 
             
         We rewrite the integral as the limit  
-        \[\lim_{k \to -\infty} \int_k^{-1} \frac{1}{x^2} \di x \period\]
+        \[\lim_{k \to -\infty} \int_k^{-1} \frac{1}{x^2} \di x \pd\]
         We antidifferentiate to find 
         \[
-        \lim_{k \to -\infty} -\frac{1}{x} \Big|_k^{-1} 
+        \lim_{k \to -\infty} -\frac{1}{x} \intEval_k^{-1} 
         = \lim_{k \to -\infty} 1 + \frac{1}{k} = \boxed{1}
         \] 
      
@@ -279,7 +279,7 @@
             
         The graph of \(y = \sin x\) oscillates continuously.
         Thus, the area bounded by the graph and the \(x\)-axis never settles to a final value.
-        As a result, the integral <u>diverges</u>.
+        As a result, the integral <b>diverges</b>.
      
         </div> 
        </div>  
@@ -301,13 +301,13 @@
         The graph of \(y = 1/(x - 4)\) has a vertical asymptote at \(x = 4\), 
         so we break the integral as 
         \[\lim_{k \to 4^-} \int_2^k \frac{1}{x - 4} \di x 
-        + \lim_{k \to 4^+} \int_k^5 \frac{1}{x - 4} \di x \period \]
+        + \lim_{k \to 4^+} \int_k^5 \frac{1}{x - 4} \di x \pd \]
         The integral \(\int_2^5 \di x/(x - 4)\) converges if both limits exist.
         We therefore verify that each limit exists:
         The left limit becomes 
-        \[\lim_{k \to 4^-} \ln \abs{x - 4}  \Big|_{2}^k = \lim_{k \to 4^-} \ln \abs{k - 4} - \ln 2 \period\]
+        \[\lim_{k \to 4^-} \ln \abs{x - 4}  \intEval_{2}^k = \lim_{k \to 4^-} \ln \abs{k - 4} - \ln 2 \pd\]
         Because \(\lim_{k \to 4^-} \ln \abs{k - 4}\) does not exist, 
-        \(\int_2^5 \di x/(x - 4)\) <u>diverges</u>.
+        \(\int_2^5 \di x/(x - 4)\) <b>diverges</b>.
      
         </div> 
        </div>  
@@ -330,7 +330,7 @@
         \[
         \ba 
         \lim_{k \to \infty} \int_0^k (t + 2)^{-3/2} \di t 
-        &amp;= \lim_{k \to \infty} -2(t + 2)^{-1/2} \Big|_0^k \nl 
+        &amp;= \lim_{k \to \infty} -2(t + 2)^{-1/2} \intEval_0^k \nl 
         &amp;= \lim_{k \to \infty} -2(k + 2)^{-1/2} + 2(2)^{-1/2} \nl 
         &amp;= \boxed{\sqrt{2}}
         \ea 
@@ -357,7 +357,7 @@
         \[
         \ba 
         \lim_{k \to 1^-} \int_0^k \frac{1}{\sqrt{1 - x^2}} \di x 
-        &amp;= \lim_{k \to 1^-} \sin^{-1} x \Big|_0^k \nl
+        &amp;= \lim_{k \to 1^-} \sin^{-1} x \intEval_0^k \nl
         &amp;= \lim_{k \to 1^-} \sin^{-1} k - \sin^{-1} 0 \nl 
         &amp;= \boxed{\frac{\pi}{2}}
         \ea 
@@ -382,14 +382,14 @@
         The graph of \(y = 1/(x - 4)^4\) has a vertical asymptote at \(x = 1.\)
         Thus, we break the integral into 
         \[\lim_{k \to 1^-} \int_{-2}^k \frac{1}{(x - 1)^4} \di x + 
-        \lim_{k \to 1^+} \int_k^4 \frac{1}{(x - 1)^4} \di x \period \]
+        \lim_{k \to 1^+} \int_k^4 \frac{1}{(x - 1)^4} \di x \pd \]
         Both limits must exist; otherwise, \(\int_{-2}^4 \di x/(x - 1)^4\) diverges.
         The first limit is 
-        \[\lim_{k \to 1^-} \frac{-1}{3(x - 1)^3} \Big|_{-2}^k 
-        = \lim_{k \to 1^-} \frac{-1}{3(k - 1)^3} - \frac{1}{81} \period 
+        \[\lim_{k \to 1^-} \frac{-1}{3(x - 1)^3} \intEval_{-2}^k 
+        = \lim_{k \to 1^-} \frac{-1}{3(k - 1)^3} - \frac{1}{81} \pd 
         \]
         Because \(\lim_{k \to 1^-} \frac{-1}{3(k - 1)^3}\) does not exist,
-        \(\int_{-2}^4 \di x/(x - 1)^4\) <u>diverges</u>.
+        \(\int_{-2}^4 \di x/(x - 1)^4\) <b>diverges</b>.
      
         </div> 
        </div>  
@@ -413,11 +413,11 @@
         Recall that \(\int \sec \theta \tan \theta  \di \theta = \sec \theta + C.\)
         We therefore get  
         \[
-        \lim_{k \to (\pi/2)^-} \sec \theta \Big|_0^k 
+        \lim_{k \to (\pi/2)^-} \sec \theta \intEval_0^k 
         = \lim_{k \to (\pi/2)^-} \sec k - \sec 0 \pd
         \]
         Because \(\lim_{k \to (\pi/2)^-} \sec k\) does not exist,
-        \(\int_{0}^{\pi/2} \sec \theta \tan \theta \di \theta\) <u>diverges</u>.
+        \(\int_{0}^{\pi/2} \sec \theta \tan \theta \di \theta\) <b>diverges</b>.
      
         </div> 
        </div>  
@@ -439,7 +439,7 @@
         \[
         \ba 
         u &amp;= \ln x \nl 
-        \dd u &amp;= \frac{1}{x} \di x \period 
+        \dd u &amp;= \frac{1}{x} \di x \pd 
         \ea 
         \]
         Now we change the bounds:
@@ -451,12 +451,12 @@
         \[
         \ba 
         \lim_{k \to \infty} \int_{\ln 4}^k \frac{3}{u} \di u
-        &amp;= \lim_{k \to \infty} 3 \ln \abs{u} \Big|_{\ln 4}^k \nl 
+        &amp;= \lim_{k \to \infty} 3 \ln \abs{u} \intEval_{\ln 4}^k \nl 
         &amp;= \lim_{k \to \infty} 3 \ln k - 3 \ln(\ln 4) \pd 
         \ea 
         \]
         Because \(\lim_{k \to \infty} 3 \ln k\) does not exist, 
-        \(\int_4^\infty \frac{3}{x \ln x} \di x\) <u>diverges</u>.
+        \(\int_4^\infty \frac{3}{x \ln x} \di x\) <b>diverges</b>.
      
         </div> 
        </div>  
@@ -476,35 +476,35 @@
             
         The integrand is undefined at \(t = 0.\)
         Thus, we write 
-        \[\lim_{k \to 0^+} \int_k^1 t \ln t \di t \period\]
+        \[\lim_{k \to 0^+} \int_k^1 t \ln t \di t \pd\]
         We integrate by parts using 
         \[
         \baat{2} 
         u &amp;= \ln t \lspace \dd v &amp;&amp;= t \di t \nl 
-        \dd u &amp;= \tfrac{1}{t} \di t \lspace v &amp;&amp;= \tfrac{1}{2} t^2 \period 
+        \dd u &amp;= \tfrac{1}{t} \di t \lspace v &amp;&amp;= \tfrac{1}{2} t^2 \pd 
         \eaat 
         \]
         Thus, our antiderivative is 
         \[
         \ba 
         uv - \int v \di u &amp;= \frac{t^2}{2} \ln t - \int \frac{1}{2} t^2 \cdot \frac{1}{t} \di t \nl 
-        &amp;= \frac{t^2}{2} \ln t - \frac{t^2}{4} + C \period
+        &amp;= \frac{t^2}{2} \ln t - \frac{t^2}{4} + C \pd
         \ea 
         \]
         Consequently, the improper integral becomes 
         \[
         \ba 
-        \lim_{k \to 0^+} \par{\frac{t^2}{2} \ln t - \frac{t^2}{4}} \Big|_k^1 
+        \lim_{k \to 0^+} \par{\frac{t^2}{2} \ln t - \frac{t^2}{4}} \intEval_k^1 
         &amp;= \par{0 - \frac{1}{4}} - \lim_{k \to 0^+} \par{\frac{k^2}{2} \ln k - \frac{k^2}{4}} \nl 
-        &amp;= -\frac{1}{4} - \lim_{k \to 0^+} \frac{k^2}{2} \ln k \period
+        &amp;= -\frac{1}{4} - \lim_{k \to 0^+} \frac{k^2}{2} \ln k \pd
         \ea 
         \]
         The limit \(\lim_{k \to 0^+} \frac{k^2}{2} \ln k\) is in the indeterminate form \(0 \times \infty,\)
         so we need L'Hôpital's Rule. We rewrite the expression as 
-        \[\lim_{k \to 0^+} \frac{\ln k}{2/k^2} \comma\]
+        \[\lim_{k \to 0^+} \frac{\ln k}{2/k^2} \cma\]
         which is in the indeterminate form \(\indInfty.\) 
         After differentiating, we obtain  
-        \[\lim_{k \to 0^+} \frac{1/k}{-4/k^3} = \lim_{k \to 0^+} \frac{-k^2}{4} = 0 \period\]
+        \[\lim_{k \to 0^+} \frac{1/k}{-4/k^3} = \lim_{k \to 0^+} \frac{-k^2}{4} = 0 \pd\]
         Therefore, 
         \[\int_0^1 t \ln t \di t = \boxed{-\frac{1}{4}}\]
      
@@ -528,19 +528,19 @@
         \[
         \ba 
         u &amp;= -x^2 \nl 
-        \dd u &amp;= -2x \di x \period
+        \dd u &amp;= -2x \di x \pd
         \ea 
         \]
         When \(x = 0,\) \(u = 0;\)
         when \(x = \infty,\) \(u = -\infty.\)
         Thus, we have 
-        \[-\frac{1}{2} \int_0^{-\infty} e^u \di u = \frac{1}{2} \int_{-\infty}^0 e^u \di u \period\]
+        \[-\frac{1}{2} \int_0^{-\infty} e^u \di u = \frac{1}{2} \int_{-\infty}^0 e^u \di u \pd\]
         We now replace the lower bound \(-\infty\) with a variable \(k.\)
         Doing so gives 
         \[
         \ba 
         \lim_{k \to -\infty} \frac{1}{2} \int_k^0 e^u \di u 
-        &amp;= \lim_{k \to -\infty} \frac{1}{2} e^u \Big|_k^0 \nl 
+        &amp;= \lim_{k \to -\infty} \frac{1}{2} e^u \intEval_k^0 \nl 
         &amp;= \frac{1}{2} e^0 - \frac{1}{2} \lim_{k \to -\infty} e^k \nl 
         &amp;= \boxed{\frac{1}{2}}
         \ea 
@@ -555,17 +555,34 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int_{1}^{\infty} \frac{1}{x^{1 - 3n}} \di x\]
-    </blockquote> find the values of \(n\) such that the integral converges. 
+        \[\ds \int_2^\infty \frac{1}{x \sqrt{4 + x^2}} \di x\]
+    </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The integral takes the form \(\int_1^\infty (1/x^p) \di x\) with \(p = 1 - 3n.\)
-        If \(p \gt 1,\) then the integral converges.
-        Thus, we find 
-        \[1 - 3n \gt 1 \implies \boxed{n \lt 0}\]
+        Performing a trigonometric substitution with \(x = 2 \tan \theta,\)
+        we have \(\dd x = 2 \sec^2 \theta \di \theta.\)
+        When \(x = 2,\) \(\theta = \pi/4;\)
+        when \(x = \infty,\) \(\theta = \pi/2.\)
+        (See Section <a href="/ValCalc/ValCalc/calculus/6.3-Trigonometric-Substitution.html">6.3</a>
+        to review selecting trigonometric substitutions.)
+        Also observe that 
+        \[
+        \sqrt{4 + x^2} = \sqrt{4 + (2 \tan \theta)^2} = \sqrt{4 \sec^2 \theta} = 2 \abs{\sec \theta} \pd
+        \]
+        Since \(\sec \theta \gt 0\) on \((\pi/4, \pi/2),\) it is safe to drop the absolute value bars.
+        So the integral becomes 
+        \[
+        \ba
+        \int_{\pi/4}^{\pi/2} \frac{1}{(2 \tan \theta)(2 \sec \theta)} (2 \sec^2 \theta) \di \theta 
+        &amp;= \tfrac{1}{2} \int_{\pi/4}^{\pi/2} \csc \theta \di \theta \nl 
+        &amp;= -\tfrac{1}{2} \ln \abs{\csc \theta + \cot \theta} \intEval_{\pi/4}^{\pi/2} \nl 
+        &amp;= \tfrac{1}{2} \ln \par{\csc \theta + \cot \theta} \intEval_{\pi/2}^{\pi/4} \nl
+        &amp;= \boxed{\tfrac{1}{2} \ln (\sqrt 2 + 1)}
+        \ea
+        \]
      
         </div> 
        </div>  
@@ -576,17 +593,41 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int_{2}^{\infty} \frac{1}{x^{5n - 1}} \di x\]
-    </blockquote> find the values of \(n\) such that the integral converges. 
+        \[\ds \int_3^\infty \frac{1}{x^3 - 4x} \di x\]
+    </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The integral is a \(p\)-integral with \(p = 5n - 1.\)
-        If \(p \gt 1,\) then the integral converges.
-        Thus, we find 
-        \[5n - 1 \gt 1 \implies \boxed{n \gt \frac{2}{5}}\]
+        We factor the denominator as follows:
+        \[x^3 - 4x = x (x^2 - 4) = x(x + 2)(x - 2) \pd\]
+        We split the rational expression into partial fractions of the following shape:
+        \[\frac{1}{x^3 - 4x} = \frac{A}{x} + \frac{B}{x + 2} + \frac{C}{x - 2} \pd\]
+        (See Section <a href="/ValCalc/ValCalc/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>
+        to review integration by partial fractions.)
+        Multiplying both sides by \(x(x + 2)(x - 2)\) to clear the denominators, we get 
+        \[1 = A(x + 2)(x - 2) + Bx (x - 2) + Cx (x + 2) \pd\]
+        To solve for \(A,\) we let \(x = 0\) to see 
+        \[1 = A(2)(-2) + 0 + 0 \implies A = -\frac{1}{4} \pd\]
+        Likewise, substituting \(x = 2\) shows 
+        \[1 = 0 + 0 + 8C \implies C = \frac{1}{8} \pd\]
+        Lastly, plugging in \(x = -2\) gives 
+        \[1 = 0 + 8B + 0 \implies B = \frac{1}{8} \pd\]
+        Hence, we have 
+        \[\frac{1}{x^3 - 4x} = \frac{-1/4}{x} + \frac{1/8}{x + 2} + \frac{1/8}{x - 2} \pd\]
+        Now we integrate, as follows:
+        \[
+        \ba 
+        \lim_{k \to \infty} \int_3^k \par{\frac{-1/4}{x} + \frac{1/8}{x + 2} + \frac{1/8}{x - 2}} \di x 
+        &amp;= \lim_{k \to \infty} \par{-\tfrac{1}{4} \ln \abs x + \tfrac{1}{8} \ln \abs{x + 2} + \tfrac{1}{8} \ln \abs{x - 2}} \intEval_3^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\tfrac{1}{8} \ln \par{x^2 - 4} -\tfrac{1}{4} \ln x} \intEval_3^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\tfrac{1}{8} \ln \par{x^2 - 4} - \tfrac{1}{8} \ln \par{x^2}} \intEval_3^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\tfrac{1}{8} \ln \par{1 - \frac{4}{x^2}}} \intEval_3^k \nl 
+        &amp;= \lim_{k \to \infty} \parbr{\tfrac{1}{8} \ln \par{1 - \frac{4}{k^2}} - \tfrac{1}{8} \ln \tfrac{5}{9}} \nl 
+        &amp;= \boxed{\tfrac{1}{8} \ln \tfrac{9}{5}}
+        \ea 
+        \]
      
         </div> 
        </div>  
@@ -597,24 +638,17 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int_{2}^{\infty} \frac{1}{x^{n^2 - 4n + 4}} \di x\]
+        \[\ds \int_{1}^{\infty} \frac{1}{x^{1 - 3n}} \di x\]
     </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We equate the exponent of \(x\) to be greater than \(1.\) 
-        We see 
-        \[
-        \ba 
-        n^2 - 4n + 4 &amp;\gt 1 \nl 
-        n^2 - 4n + 3 &amp;\gt 0 \nl 
-        (n - 3)(n - 1) &amp;\gt 0 \period
-        \ea 
-        \]
-        The solutions to this inequality are 
-        \[\boxed{1 \lt n \lt 3}\]
+        The integral takes the form \(\int_1^\infty (1/x^p) \di x\) with \(p = 1 - 3n.\)
+        If \(p \gt 1,\) then the integral converges.
+        Thus, we find 
+        \[1 - 3n \gt 1 \implies \boxed{n \lt 0}\]
      
         </div> 
        </div>  
@@ -624,29 +658,18 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-        Let \(f\) be a continuous function such that \(0 \leq f(x) \leq 1/x^{4/3}.\) 
-        Show that \(\int_1^\infty f(x) \di x\) converges and is no greater than \(3.\) 
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{2}^{\infty} \frac{1}{x^{5n - 1}} \di x\]
+    </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
             
-        From the given information, we deduce that  
-        \[0 \leq \int_1^\infty f(x) \di x \leq \int_1^\infty \frac{1}{x^{4/3}} \di x \pd \]
-        We evaluate the right-hand integral, as follows:
-        \[
-        \ba 
-        \int_1^\infty \frac{1}{x^{4/3}} \di x
-        &amp;= \lim_{k \to \infty} \int_1^k x^{-4/3} \di x \nl 
-        &amp;= \lim_{k \to \infty} -3 x^{-1/3} \Big|_1^k \nl 
-        &amp;= \lim_{k \to \infty} -3 k^{-1/3} + 3 \nl 
-        &amp;= 3 \period
-        \ea
-        \]
-        Thus, 
-        \[0 \leq \int_1^\infty f(x) \di x \leq 3 \pd \]
+        The integral is a \(p\)-integral with \(p = 5n - 1.\)
+        If \(p \gt 1,\) then the integral converges.
+        Thus, we find 
+        \[5n - 1 \gt 1 \implies \boxed{n \gt \frac{2}{5}}\]
      
         </div> 
        </div>  
@@ -656,21 +679,25 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-        It is known that \(0 \leq 1/x^{5/9} \leq g(x),\) where \(g\) is a continuous function. 
-        Show that \(\int_1^\infty g(x) \di x\) is divergent. 
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{2}^{\infty} \frac{1}{x^{n^2 - 4n + 4}} \di x\]
+    </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Since 
-        \[\ds 0 \leq \frac{1}{x^{5/9}} \leq g(x) \comma \]  
-        it follows that 
-        \[0 \leq \int_1^\infty \frac{1}{x^{5/9}} \di x \leq \int_1^\infty g(x) \di x \pd \]
-        The integral \(\int_1^\infty (1/x^{5/9}) \di x\) diverges because \(p = 5/9 \leq 1.\) 
-        Therefore, using the Comparison Test, \(\int_1^\infty g(x) \di x\) also diverges.
+        We equate the exponent of \(x\) to be greater than \(1.\) 
+        We see 
+        \[
+        \ba 
+        n^2 - 4n + 4 &amp;\gt 1 \nl 
+        n^2 - 4n + 3 &amp;\gt 0 \nl 
+        (n - 3)(n - 1) &amp;\gt 0 \pd
+        \ea 
+        \]
+        The solutions to this inequality are 
+        \[\boxed{1 \lt n \lt 3}\]
      
         </div> 
        </div>  
@@ -681,12 +708,68 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        Let \(f\) be a continuous function such that \(0 \leq f(x) \leq 1/x^{4/3}.\) 
+        Show that \(\int_1^\infty f(x) \di x\) converges and is no greater than \(3.\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        From the given information, we deduce that  
+        \[0 \leq \int_1^\infty f(x) \di x \leq \int_1^\infty \frac{1}{x^{4/3}} \di x \pd \]
+        We evaluate the right-hand integral, as follows:
+        \[
+        \ba 
+        \int_1^\infty \frac{1}{x^{4/3}} \di x
+        &amp;= \lim_{k \to \infty} \int_1^k x^{-4/3} \di x \nl 
+        &amp;= \lim_{k \to \infty} -3 x^{-1/3} \intEval_1^k \nl 
+        &amp;= \lim_{k \to \infty} -3 k^{-1/3} + 3 \nl 
+        &amp;= 3 \pd
+        \ea
+        \]
+        Thus, 
+        \[0 \leq \int_1^\infty f(x) \di x \leq 3 \pd \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        It is known that \(0 \leq 1/x^{5/9} \leq g(x),\) where \(g\) is a continuous function. 
+        Show that \(\int_1^\infty g(x) \di x\) is divergent. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since 
+        \[\ds 0 \leq \frac{1}{x^{5/9}} \leq g(x) \cma \]  
+        it follows that 
+        \[0 \leq \int_1^\infty \frac{1}{x^{5/9}} \di x \leq \int_1^\infty g(x) \di x \pd \]
+        The integral \(\int_1^\infty (1/x^{5/9}) \di x\) diverges because \(p = 5/9 \leq 1.\) 
+        Therefore, using the Comparison Test, \(\int_1^\infty g(x) \di x\) also diverges.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         Let \(g\) be a differentiable function that satisfies \(g(0) = 0\) and \(g(4) = 12.\) 
         Evaluate \(\int_0^4 [g'(x)/g(x)] \di x\) or show that it diverges.
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         We substitute \(u = g(x);\)
@@ -700,55 +783,12 @@
         \[ 
         \ba 
         \lim_{k \to 0^+} \int_k^{12} \frac{1}{u} \di u 
-        &amp;= \lim_{k \to 0^+} \ln u \Big|_k^{12} \nl 
+        &amp;= \lim_{k \to 0^+} \ln u \intEval_k^{12} \nl 
         &amp;= \ln 12 - \lim_{k \to 0^+} \ln k \pd 
         \ea 
         \]
         Because \(\lim_{k \to 0^+} \ln k\) does not exist, 
-        \(\int_0^4 [g'(x)/g(x)] \di x\) <u>diverges</u>.
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-        Let \(g\) and \(q\) be two continuous functions such that \(g(x) \leq q(x).\)
-        Suppose \(\int_2^\infty q(x) \di x\) converges. 
-        Explain why \(\int_2^\infty g(x) \di x\) could be divergent.
-     
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        The integral \(\int_2^\infty g(x) \di x\) could approach \(-\infty.\)
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-        If \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1,\) 
-        and \(\lim_{x \to \infty} f(x) = 0,\) 
-        then must \(\int_1^\infty f(x) \di x\) be convergent?
-     
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-<u>No</u>, the integral could diverge.
-        For example, \(f(x) = 1/x\) is continuous, positive, and decreasing for all \(x \geq 1,\)
-        and it satisfies \(\lim_{x \to \infty} f(x) = 0.\)
-        However, \(\int_1^\infty (1/x) \di x\) diverges.
+        \(\int_0^4 [g'(x)/g(x)] \di x\) <b>diverges</b>.
      
         </div> 
        </div>  
@@ -759,12 +799,55 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        Let \(g\) and \(q\) be two continuous functions such that \(g(x) \leq q(x).\)
+        Suppose \(\int_2^\infty q(x) \di x\) converges. 
+        Explain why \(\int_2^\infty g(x) \di x\) could be divergent.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral \(\int_2^\infty g(x) \di x\) could be \(-\infty.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1,\) 
+        and \(\lim_{x \to \infty} f(x) = 0,\) 
+        then must \(\int_1^\infty f(x) \di x\) be convergent?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>No</b>, the integral could diverge.
+        For example, \(f(x) = 1/x\) is continuous, positive, and decreasing for all \(x \geq 1,\)
+        and it satisfies \(\lim_{x \to \infty} f(x) = 0.\)
+        However, \(\int_1^\infty (1/x) \di x\) diverges.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         The rate at which people like a social media post is given by \(S(t) = 200e^{-t/10},\) where \(t\) is time in hours.
         How many likes will the post receive?
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
         The total number of likes is \(\int_0^\infty S(t) \di t.\)
@@ -774,7 +857,7 @@
         \lim_{k \to \infty} \int_0^k 200e^{-t/10} \di t 
         &amp;= -2000 \lim_{k \to \infty} e^{-t/10} \Big]_0^k \nl 
         &amp;= -2000 \lim_{k \to \infty} e^{-k/10} + 2000 e^{0} \nl 
-        &amp;= 2000 \period 
+        &amp;= 2000 \pd 
         \ea 
         \] 
         Thus, the post will receive \(2000\) likes.
@@ -782,8 +865,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -795,7 +878,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
         The distance traveled by the particle is \(\int_1^\infty \abs{v(t)} \di t.\)
@@ -807,7 +890,7 @@
         \[
         \ba 
         \lim_{k \to \infty} \int_1^k 2 t^{-2/3} \di t 
-        &amp;= \lim_{k \to \infty} 6t^{1/3} \Big|_1^k \nl 
+        &amp;= \lim_{k \to \infty} 6t^{1/3} \intEval_1^k \nl 
         &amp;= \lim_{k \to \infty} 6k^{1/3} - 6 \nl 
         &amp;= \infty \pd 
         \ea 
@@ -817,21 +900,21 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
         The density of trees in a forest surrounding a campsite is modeled by 
-        \[T(r) = \frac{290}{r^3 + 8r^2 + 16r} \comma \]
+        \[T(r) = \frac{290}{r^3 + 8r^2 + 16r} \cma \]
         where \(r\) is the distance, in meters, from the campsite and \(T(r)\) is measured in trees per square meter.
         The number of trees within \(K\) meters of the campsite is given by \(\int_0^K 2 \pi r \, T(r) \di r.\)
         Explain why the total number of trees in the forest is less than \(700.\) 
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         We take \(K \to \infty\) in order to cover the entire forest. 
@@ -841,7 +924,7 @@
         \ba 
         2 \pi \lim_{K \to \infty} \int_0^K \frac{290}{r^2 + 8r + 16} \di r 
         &amp;= 580 \pi \lim_{K \to \infty} \int_0^K \frac{1}{(r + 4)^2} \di r \nl 
-        &amp;= 580 \pi \lim_{K \to \infty} \frac{-1}{r + 4} \Big|_0^k \nl 
+        &amp;= 580 \pi \lim_{K \to \infty} \frac{-1}{r + 4} \intEval_0^k \nl 
         &amp;= 580 \pi \lim_{K \to \infty} \frac{-1}{K + 4} - \frac{580 \pi}{4} \nl 
         &amp;= 145 \pi \lt 700 \pd 
         \ea 
@@ -861,16 +944,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -878,10 +961,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -889,16 +972,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -906,17 +989,17 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
