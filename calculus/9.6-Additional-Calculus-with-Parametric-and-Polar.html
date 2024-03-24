@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9.6: Additional Calculus with Parametric and Polar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>9.6: Additional Calculus with Parametric and Polar</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="9.6-Additional-Calculus-with-Parametric-and-Polar-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="9.6-Additional-Calculus-with-Parametric-and-Polar-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Additional-Calculus-with-Parametric-and-Polar]]]-->
+
+<p>
+    Parametric equations and polar functions expand our vision of calculus's uses.
+    In the past few sections, we focused on this idea by differentiating and integrating 
+    parametric equations and polar functions. 
+    Now let's further extend our toolkit by discussing the following topics:
+    <ul>
+        <li>
+            <a href="#arc-length-parametric-polar" class="page-anchor">Arc Lengths in Parametric and Polar</a>
+        </li>
+        <li>
+            <a href="#surface-area-parametric-polar" class="page-anchor">Surface Areas of Revolution in Parametric and Polar</a>
+        </li>
+    </ul> 
+</p>
+
+<h4 id="arc-length-parametric-polar">Arc Lengths in Parametric and Polar</h4>
+<p>
+    In Section <a href="/ValCalc/ValCalc/calculus/7.1-Arc-Length.html">7.1</a>
+    we derived the following formula for the arc length of a smooth curve:
+    \begin{equation} 
+    L = \int_a^b \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \pd \label{eq:arc-length}
+    \end{equation}
+    Now let's modify this formula to be applicable to parametric equations and polar functions.
+</p>
+<p>
+    <span class="label-emph">Parametric Equations</span>
+    Suppose that a smooth curve is parameterized by the equations \(x = f(t)\)
+    and \(y = g(t),\) where \(\alpha \leq t \leq \beta.\)  
+    (The word <i>smooth</i> means \(f'\) and \(g'\) are both continuous and not simultaneously \(0\) on <nobr>\(\alpha \leq t \leq \beta.\))</nobr>
+    Then we have \(\textderiv{x}{t} = f'(t) \iffArrow\)
+    \(\dd x = f'(t) \di t\) and
+    \[
+    \deriv{y}{x} = \frac{\textderiv{y}{t}}{\textderiv{x}{t}} 
+    = \frac{g'(t)}{f'(t)} \pd
+    \]
+    Replacing \(a\) with \(\alpha\) and \(b\) with \(\beta,\) 
+    and using the Substitution Rule, \(\eqref{eq:arc-length}\) becomes 
+    \begin{align} 
+    L &= \int_\alpha^\beta \sqrt{1 + \parbr{\frac{g'(t)}{f'(t)}}^2} f'(t) \di t \nonum \nl 
+    &= \int_\alpha^\beta \sqrt{\frac{[f'(t)]^2 + [g'(t)]^2}{[f'(t)]^2}} \, f'(t) \di t \nonum \nl
+    &= \int_\alpha^\beta \frac{1}{f'(t)} \sqrt{[f'(t)]^2 + [g'(t)]^2} \, f'(t) \di t \nonum \nl 
+    &= \int_\alpha^\beta \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \label{eq:arc-length-parametric}
+    \end{align}
+    Or in Leibniz notation, we write 
+    \begin{equation} 
+    L = \int_\alpha^\beta \sqrt{\par{\deriv{x}{t}}^2 + \par{\deriv{y}{t}}^2} \di t \pd \label{eq:arc-length-para-leib}
+    \end{equation}
+    When we calculate the arc length of a parametric curve,
+    the curve must be traversed <i>once</i> over
+    \(\alpha \leq t \leq \beta.\)
+</p>
+
+<div class="box-title"> ARC LENGTH WITH PARAMETRIC EQUATIONS </div>
+<div class="box">
+    Let \(C\) be a curve parameterized by the equations \(x = f(t)\) and \(y = g(t)\) for \(\alpha \leq t \leq \beta.\)
+    If \(f'\) and \(g'\) are continuous on this interval,
+    then the arc length of \(C\) is 
+    \begin{equation} 
+    L = \int_\alpha^\beta \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \eqlabel{eq:arc-length-parametric}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-para-arc-circle"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the circumference of the circle expressed by the parametric equations 
+        \[x = \cos 4t \cma \quad y = \sin 4t \cma \quad 0 \leq t \leq \frac{\pi}{2} \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="parametric-arclength-unit-circle" id="parametric-arclength-unit-circle">
+        <img src="../images/sectionImages/parametric-arclength-unit-circle.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .parametric-arclength-unit-circle::before{
+            content:'FIGURE 1';
+        }
+    </style> 
+    Differentiating both parametric functions shows
+    \[x'(t) = -4 \sin 4t \and y'(t) = 4 \cos 4t \pd\]
+    Hence, \(\eqref{eq:arc-length-parametric}\) gives 
+    \[
+    \ba 
+    L &= \int_0^{\pi/2} \sqrt{(-4 \sin 4t)^2 + (4 \cos 4t)^2} \di t \nl 
+    &= \int_0^{\pi/2} \sqrt{16 \sin^2 4t + 16 \cos^2 4t} \di t \nl 
+    &= \int_0^{\pi/2} \sqrt{16 (\sin^2 4t + \cos^2 4t)} \di t \nl
+    &= \int_0^{\pi/2} 4 \di t \nl 
+    &= 4t \intEval_0^{\pi/2} = \boxed{2 \pi}
+    \ea 
+    \]
+    Because the parametric equations represent a Unit Circle (<a href="#parametric-arclength-unit-circle">Figure 1</a>),
+    we expect the circumference to be \(2 \pi.\)
+</div> 
+
+<p>
+    In <a href="/ValCalc/ValCalc/calculus/9.6-Additional-Calculus-with-Parametric-and-Polar.html#ex-para-arc-circle">Example 1</a>
+    doubling the integral's upper bound would yield
+    \[
+    \ba 
+    L &= \int_0^\pi \sqrt{(-4 \sin 4t)^2 + (4 \cos 4t)^2} \di t \nl 
+    &= \int_0^{\pi} 4 \di t = 4 \pi \pd
+    \ea 
+    \]
+    This result is twice the correct arc length because over \(0 \leq t \leq \pi\) the circle is traced <i>twice</i>,
+    so the integral is double-counting.
+    Therefore, ensure that the bounds traverse a parametric curve only <i>once</i>.
+</p> 
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the arc length function for the parametric curve parameterized by
+        \[x = 1 + 4t^2 \cma \quad y = 1 - 3t^2 \cma \quad 0 \leq t \leq 2 \pd \]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    An <b>arc length function</b> 
+    gives the arc length of the curve between \(t = 0\) and \(t = T,\)
+    where \(0 \leq T \leq 2.\)
+    We differentiate both parametric equations to find 
+    \[x'(t) = 8t \and y'(t) = -6t \pd\]
+    Then using \(\eqref{eq:arc-length-parametric}\) with \(\alpha = 0\) and \(\beta = T\) gives 
+    \[
+    \ba 
+    L(T) &= \int_0^T \sqrt{(8t)^2 + (-6t)^2} \di t \nl 
+    &= \int_0^T 10 t \di t \nl 
+    &= 5t^2 \intEval_0^T  
+    = \boxed{5T^2}
+    \ea 
+    \]
+    The arc length of the entire curve—that is, over \(0 \leq t \leq 2\)—is then 
+    \(L(2) = 5(2)^2 = 20.\)
+</div> 
+
+<p>
+    <span class="label-emph">Polar Functions</span>
+    A polar function \(r = f(\theta)\) can be expressed parametrically as 
+    \[x = f(\theta) \cos \theta \and y = f(\theta) \sin \theta \cma\]
+    where \(\theta\) is the parameter.
+    Assuming that \(f'\) is continuous, let's use \(\eqref{eq:arc-length-para-leib}\) 
+    to derive a special expression for the arc length of a polar curve on \(\alpha \leq \theta \leq \beta.\)
+    We treat \(\theta\) similarly to \(t,\) so our objective is to find an expression for 
+    \(\par{\textderiv{x}{\theta}}^2 + \par{\textderiv{y}{\theta}}^2.\)
+    Differentiating shows 
+    \[
+    \ba
+    \deriv{x}{\theta} &= f'(\theta) \cos \theta - f(\theta) \sin \theta \cma \nl 
+    \deriv{y}{\theta} &= f'(\theta) \sin \theta + f(\theta) \cos \theta \pd
+    \ea
+    \]
+    Observe that 
+    \[
+    \ba
+    \par{\deriv{x}{\theta}}^2 
+    &= [f'(\theta)]^2 \cos^2 \theta - 2 f(\theta) f'(\theta) \sin \theta \cos \theta + [f(\theta)]^2 \sin^2 \theta \cma \nl 
+    \par{\deriv{y}{\theta}}^2 
+    &= [f'(\theta)]^2 \sin^2 \theta + 2 f(\theta) f'(\theta) \sin \theta \cos \theta + [f(\theta)]^2 \cos^2 \theta \pd
+    \ea
+    \]
+    Adding both equations, we get
+    \[
+    \ba
+    \par{\deriv{x}{\theta}}^2 + \par{\deriv{y}{\theta}}^2
+    &= [f(\theta)]^2 (\sin^2 \theta + \cos^2 \theta) + [f'(\theta)]^2 (\sin^2 \theta + \cos^2 \theta) \nl 
+    &= [f(\theta)]^2 + [f'(\theta)]^2 \cma
+    \ea
+    \]
+    where the last step is true by the Pythagorean identity.
+    Since \(r = f(\theta)\) and \(\textderiv{r}{\theta} = f'(\theta),\)
+    we write
+    \[[f(\theta)]^2 + [f'(\theta)]^2 = r^2 + \par{\deriv{r}{\theta}}^2 \pd\]
+    Thus, \(\eqref{eq:arc-length-para-leib}\) gives the arc length to be
+    \begin{equation} 
+    L = \int_\alpha^\beta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta \pd \label{eq:arc-length-polar}
+    \end{equation}
+</p>
+
+<div class="box-title">ARC LENGTH WITH POLAR FUNCTIONS</div>
+<div class="box">
+    Suppose that a polar function \(r = f(\theta)\) has a continuous derivative on \([\alpha, \beta].\) 
+    The curve's arc length on \(\alpha \leq \theta \leq \beta,\) 
+    assuming that the curve is traversed only once, is 
+    \begin{equation} 
+    L = \int_\alpha^\beta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta \pd \eqlabel{eq:arc-length-polar}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the arc length of the cardioid \(r = 1 + \sin \theta.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="polar-arc-length-cardioid" id="polar-arc-length-cardioid">
+        <img src="../images/sectionImages/polar-arc-length-cardioid.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .polar-arc-length-cardioid::before{
+            content:'FIGURE 2';
+        }
+    </style> 
+    <p>
+        <span class="label-emph">Integral Setup</span>
+        The graph of the cardioid is shown by 
+        <a href="#polar-arc-length-cardioid">Figure 2</a>.
+        We find \(\textderiv{r}{\theta} = \cos \theta,\) which is continuous, and
+        \[
+        \ba 
+        r^2 &= (1 + \sin \theta)^2 = 1 + 2 \sin \theta + \sin^2 \theta \cma \nl 
+        \par{\deriv{r}{\theta}}^2 &= \cos^2 \theta \pd
+        \ea 
+        \]
+        Thus, we see 
+        \[
+        \ba
+        r^2 + \par{\deriv{r}{\theta}}^2 &= 1 + 2 \sin \theta + \sin^2 \theta + \cos^2 \theta \nl 
+        &= 2 + 2 \sin \theta \pd
+        \ea
+        \]
+        The entire cardioid is traced out once over \(0 \leq \theta \leq 2 \pi,\)
+        so \(\eqref{eq:arc-length-polar}\) gives 
+        \[L = \int_0^{2 \pi} \sqrt{2 + 2 \sin \theta} \di \theta \pd\]
+    </p>
+    <p>
+        <span class="label-emph">Evaluating the Integral</span>
+        We multiply the numerator and denominator inside the radical by \(2 - 2 \sin \theta,\)
+        as follows:
+        \[
+        \ba
+        \sqrt{\par{2 + 2 \sin \theta} \par{\frac{2 - 2 \sin \theta}{2 - 2 \sin \theta}}} 
+        &= \sqrt{\frac{4 - 4 \sin^2 \theta}{2 - 2 \sin \theta}} \nl 
+        &= \sqrt{\frac{4 \cos^2 \theta}{2 - 2 \sin \theta}} \nl 
+        &= \frac{2 \abs{\cos \theta}}{\sqrt{2 - 2 \sin \theta}} \pd
+        \ea
+        \]
+        The integral therefore becomes 
+        \[
+        \ba
+        L &= \int_0^{2 \pi} \frac{2 \abs{\cos \theta}}{\sqrt{2 - 2 \sin \theta}} \di \theta \nl 
+        &= \int_0^{\pi/2} \frac{2 \cos \theta}{\sqrt{2 - 2 \sin \theta}} \di \theta 
+        - \int_{\pi/2}^{3\pi/2} \frac{2 \cos \theta}{\sqrt{2 - 2 \sin \theta}} \di \theta
+        + \int_{3\pi/2}^{2\pi} \frac{2 \cos \theta}{\sqrt{2 - 2 \sin \theta}} \di \theta \cma
+        \ea
+        \]
+        where the last step is true because \(\cos \theta \lt 0\) on \((\pi/2, 3\pi/2).\)
+        To antidifferentiate \((2 \cos \theta)/\sqrt{2 - 2 \sin \theta},\) 
+        we substitute \(u = 2 - 2 \sin \theta.\)
+        Then \(\dd u = -2 \cos \theta \di \theta,\)
+        so we see 
+        \[
+        \ba
+        \int \frac{2 \cos \theta}{\sqrt{2 - 2 \sin \theta}} \di \theta 
+        &= \int \frac{-1}{\sqrt u} \di u \nl 
+        &= -2 \sqrt{u} + C \nl 
+        &= -2 \sqrt{2 - 2 \sin \theta} + C \pd
+        \ea 
+        \]
+        We therefore find the arc length to be
+        \[
+        \ba 
+        L &= \par{-2 \sqrt{2 - 2 \sin \theta}} \intEval_0^{\pi/2} 
+        - \par{-2 \sqrt{2 - 2 \sin \theta}} \intEval_{\pi/2}^{3\pi/2} 
+        + \par{-2 \sqrt{2 - 2 \sin \theta}} \intEval_{3\pi/2}^{2 \pi} \nl 
+        &= \par{0 + 2 \sqrt 2} - \par{-4 + 0} + \par{-2 \sqrt 2 + 4} = \boxed 8
+        \ea 
+        \]
+    </p>
+</div>
+
+<h4 id="surface-area-parametric-polar">Surface Areas of Revolution in Parametric and Polar</h4>
+<p>
+    In Section <a href="/ValCalc/ValCalc/calculus/7.2-Surface-Areas-of-Revolution.html">7.2</a>
+    we attained the following formulas for surface areas of revolution around an axis:
+    \begin{alignat*}{2}
+    S &= \int_a^b 2 \pi y \di s \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \nl
+    S &= \int_c^d 2 \pi x \di s \pd \lspace &&[\text{Rotating about } y \text{-Axis}]
+    \end{alignat*}
+    Let's suppose that a smooth curve \(C,\) parameterized by 
+    \(x = f(t)\) and \(y = g(t),\)
+    is revolved around the \(x\)- or \(y\)-axis. 
+    Then we modify the preceding formulas by substituting \(x = f(t)\) or \(y = g(t)\)
+    and using the differential arc length segment
+    \[\dd s = \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd\]
+    Doing so produces the following formulas:
+    \begin{alignat}{2}
+    S &= \int_\alpha^\beta 2 \pi g(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \label{eq:S-parametric-x} \nl
+    S &= \int_\alpha^\beta 2 \pi f(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \label{eq:S-parametric-y}
+    \end{alignat}
+</p>
+
+<div class="box-title">SURFACE AREAS OF REVOLUTION WITH PARAMETRIC EQUATIONS</div>
+<div class="box">
+    If a smooth curve \(C\) parameterized by \(x = f(t)\) and \(y = g(t)\) 
+    does not cross itself over \(\alpha \leq t \leq \beta,\)
+    then the surface area of revolution generated by rotating \(C\) about each axis is given by the following formulas:
+    \begin{alignat}{2}
+    S &= \int_\alpha^\beta 2 \pi g(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \eqlabel{eq:S-parametric-x} \nl
+    S &= \int_\alpha^\beta 2 \pi f(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \eqlabel{eq:S-parametric-y}
+    \end{alignat}
+</div>
+
+<div class="example-title" id="ex-sa-cos-sin-3"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Calculate the surface area of the solid generated upon 
+        rotating the parametric curve \(x = \cos^3 \theta,\) \(y = \sin^3 \theta,\) \(0 \leq \theta \leq \pi/2,\)
+        about the \(x\)-axis.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="para-polar-sa-rev-ex" id="para-polar-sa-rev-ex">
+        <img src="../images/sectionImages/para-polar-sa-rev-ex.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .para-polar-sa-rev-ex::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    The curve does not cross itself on \([0, \pi/2].\)
+    Also observe that 
+    \[\deriv{x}{\theta} = -3 \cos^2 \theta \sin \theta \and \deriv{y}{\theta} = 3 \sin^2 \theta \cos \theta \cma\]
+    which are both continuous.
+    Accordingly, the differential arc length segment is
+    \[
+    \ba
+    \dd s &= \sqrt{(-3 \cos^2 \theta \sin \theta)^2 + (3 \sin^2 \theta \cos \theta)^2} \di \theta \nl 
+    &= \sqrt{9 \cos^4 \theta \sin^2 \theta + 9 \sin^4 \theta \cos^2 \theta} \di \theta \nl 
+    &= \sqrt{9 \cos^2 \theta \sin^2 \theta (\cos^2 \theta + \sin^2 \theta)} \di \theta \nl 
+    &= 3 \abs{\cos \theta \sin \theta} \di \theta = 3 \cos \theta \sin \theta \di \theta \cma
+    \ea
+    \]
+    where we dropped the absolute value bars because both sine and cosine are positive on \((0, \pi/2).\)
+    So the surface area of revolution, following \(\eqref{eq:S-parametric-x},\) is 
+    \[
+    \ba 
+    S &= \int_0^{\pi/2} 2 \pi \sin^3 \theta (3 \cos \theta \sin \theta) \di \theta \nl 
+    &= 6 \pi \int_0^{\pi/2} \sin^4 \theta \cos \theta \di \theta \pd
+    \ea 
+    \]
+    Substituting \(u = \sin \theta\) gives \(\dd u = \cos \theta \di \theta.\)
+    When \(\theta = 0,\) \(u = 0;\) when \(\theta = \pi/2,\) \(u = 1.\)
+    We therefore have 
+    \[
+    \ba 
+    S &= 6 \pi \int_0^1 u^4 \di u \nl 
+    &= \frac{6 \pi}{5} \par{u^5} \intEval_0^1 \nl 
+    &= \boxed{\frac{6 \pi}{5}} \approx 3.770 \pd
+    \ea 
+    \]
+    (See <a href="#para-polar-sa-rev-ex">Figure 3</a>.)
+</div>
+
+<p>
+    A similar strategy enables us to find surface areas of revolution 
+    with polar functions. 
+    By substituting \(x = f(\theta) \cos \theta\) and \(y = f(\theta) \sin \theta\)
+    and the differential arc length segment 
+    \[\dd s = \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta \cma\]
+    we attain the following equations:
+    \begin{alignat}{2}
+    S &= \int_\alpha^\beta 2 \pi f(\theta) \sin \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+    \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \label{eq:S-polar-x} \nl
+    S &= \int_\alpha^\beta 2 \pi f(\theta) \cos \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+    \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \label{eq:S-polar-y}
+    \end{alignat}
+</p>
+
+<div class="box-title">SURFACE AREAS OF REVOLUTION WITH POLAR FUNCTIONS</div>
+<div class="box">
+    If \(f\) is a polar function whose derivative is continuous on \([\alpha, \beta],\)
+    and the curve does not cross itself, then the surface area of revolution formed by revolving the curve \(r = f(\theta),\)
+    \(\alpha \leq \theta \leq \beta,\) around an axis is as follows: 
+    \begin{alignat}{2}
+    S &= \int_\alpha^\beta 2 \pi f(\theta) \sin \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+    \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \eqlabel{eq:S-polar-x} \nl
+    S &= \int_\alpha^\beta 2 \pi f(\theta) \cos \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+    \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \eqlabel{eq:S-polar-y}
+    \end{alignat}
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine the surface area generated upon revolving the 
+        right half of the cardioid \(r = 2 + 2 \sin \theta\) around the \(y\)-axis.
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <figure class="polar-surface-area-rev-card-ex" id="polar-surface-area-rev-card-ex">
+        <img src="../images/sectionImages/polar-surface-area-rev-card-ex.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .polar-surface-area-rev-card-ex::before{
+            content:'FIGURE 4';
+        }
+    </style> 
+    Observe that \(\textderiv{r}{\theta} = 2 \cos \theta,\) 
+    which is continuous, so
+    \[
+    \ba
+    r^2 + \par{\deriv{r}{\theta}}^2 &= (2 + 2 \sin \theta)^2 + (2 \cos \theta)^2 \nl 
+    &= 4 + 8 \sin \theta + 4 \sin^2 \theta + 4 \cos^2 \theta \nl 
+    &= 8 \sin \theta + 8 \cma
+    \ea
+    \]
+    where the last step is true by the Pythagorean identity. 
+    The right half of the cardioid (shown in <a href="#polar-surface-area-rev-card-ex">Figure 4</a>)
+    is traced from \(\theta = -\pi/2\) to \(\theta = \pi/2.\)
+    We therefore use \(\eqref{eq:S-polar-y}\) to find a surface area of 
+    \[
+    S = 2 \pi \int_{-\pi/2}^{\pi/2} (2 + 2 \sin \theta) (\cos \theta) \sqrt{8 \sin \theta + 8} \di \theta \pd
+    \] 
+    Substituting \(u = 8 \sin \theta + 8,\) we see \(\dd u = 8 \cos \theta \di \theta\)
+    and \(2 + 2 \sin \theta = u/4.\)
+    When \(\theta = -\pi/2,\) \(u = 0;\) when \(\theta = \pi/2,\) \(u = 16.\)
+    The integral therefore becomes 
+    \[
+    \ba 
+    S &= \frac{\pi}{4} \int_0^{16} \par{\frac{u}{4}} \sqrt u \di u \nl 
+    &= \frac{\pi}{16} \int_0^{16} u^{3/2} \di u \nl 
+    &= \frac{\pi}{40} u^{5/2} \intEval_0^{16} \nl 
+    &= \boxed{\frac{128 \pi}{5}} \approx 80.425 \pd
+    \ea 
+    \]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#arc-length-parametric-polar" class="summary-anchor">Arc Lengths in Parametric and Polar</a>
+        Special formulas enable us to find arc lengths of curves described by parametric equations 
+        or polar functions.
+        Let \(C\) be a curve parameterized by the equations \(x = f(t)\) and \(y = g(t)\) for \(\alpha \leq t \leq \beta.\)
+        If \(f'\) and \(g'\) are continuous on this interval,
+        then the arc length of \(C\) is 
+        \begin{equation} 
+        L = \int_\alpha^\beta \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \eqlabel{eq:arc-length-parametric}
+        \end{equation}
+        In Leibniz notation, we write 
+        \begin{equation} 
+        L = \int_\alpha^\beta \sqrt{\par{\deriv{x}{t}}^2 + \par{\deriv{y}{t}}^2} \di t \pd \eqlabel{eq:arc-length-para-leib}
+        \end{equation}
+        Alternatively, suppose that a polar function \(r = f(\theta)\) has a continuous derivative on \([\alpha, \beta].\) 
+        The curve's arc length on \(\alpha \leq \theta \leq \beta,\) 
+        assuming that the curve is traversed only once, is 
+        \begin{equation} 
+        L = \int_\alpha^\beta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta \pd \eqlabel{eq:arc-length-polar}
+        \end{equation}
+        In each case, ensure that the curve does not cross itself
+        to avoid double-counting.
+    </p>
+    <p>
+        <a href="#surface-area-parametric-polar" class="summary-anchor">Surface Areas of Revolution in Parametric and Polar</a>
+        We have specialized equations that provide us the surface areas of revolution
+        for parametric or polar curves.
+        If a smooth curve \(C\) parameterized by \(x = f(t)\) and \(y = g(t)\) 
+        does not cross itself over \(\alpha \leq t \leq \beta,\)
+        then the surface area of revolution generated by rotating \(C\) about each axis is given by the following formulas:
+        \begin{alignat}{2}
+        S &= \int_\alpha^\beta 2 \pi g(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \eqlabel{eq:S-parametric-x} \nl
+        S &= \int_\alpha^\beta 2 \pi f(t) \sqrt{[f'(t)]^2 + [g'(t)]^2} \di t \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \eqlabel{eq:S-parametric-y}
+        \end{alignat}
+        Conversely, if \(f\) is a polar function whose derivative is continuous on \([\alpha, \beta],\)
+        then the surface area of revolution formed by revolving the curve \(r = f(\theta),\)
+        \(\alpha \leq \theta \leq \beta,\) around an axis, assuming that the curve does not cross itself, is as follows: 
+        \begin{alignat}{2}
+        S &= \int_\alpha^\beta 2 \pi f(\theta) \sin \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+        \cma \lspace &&[\text{Rotating about } x \text{-Axis}] \eqlabel{eq:S-polar-x} \nl
+        S &= \int_\alpha^\beta 2 \pi f(\theta) \cos \theta \sqrt{r^2 + \par{\deriv{r}{\theta}}^2} \di \theta 
+        \pd \lspace &&[\text{Rotating about } y \text{-Axis}] \eqlabel{eq:S-polar-y}
+        \end{alignat}
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

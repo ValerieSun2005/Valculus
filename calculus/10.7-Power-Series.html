@@ -178,7 +178,7 @@
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Find the interval of convergence of the power series 
+        Determine the interval of convergence of the power series 
         \[\sum_{n = 1}^\infty \frac{x^{2n}}{n!} \pd\]
     </div>
 </div>
@@ -217,7 +217,7 @@
 <div class="example-title"> EXAMPLE 3 </div>
 <div class="example">
     <div class="example-problem">  
-        Find the interval of convergence of the power series 
+        Find all \(x\) for which the following power series converges:
         \[\sum_{n = 1}^\infty \frac{(-1)^n x^{3n}}{n} \pd\]
     </div>
 </div>
@@ -275,19 +275,24 @@
 </style>
 
 <p>
-    In Section <a href="/ValCalc/ValCalc/calculus/10.2-Infinite-Series-and-Divergence-Test.html">10.2</a>, we asserted that a convergent infinite geometric series takes the form
+    In Section <a href="/ValCalc/ValCalc/calculus/10.2-Infinite-Series-and-Divergence-Test.html">10.2</a> we asserted that a convergent infinite geometric series takes the form
     \[1 + r + r^2 + r^3 + \cdots = \frac{1}{1 - r} \cma\]
     where \(|r| \lt 1.\)
     We now reverse this perspective
     by using an infinite sum to define a rational function. 
-    For example, if \(|x| \lt 1,\) then we express \(1/(1 - x)\) as follows: 
+    If \(|x| \lt 1,\) then we express \(1/(1 - x)\) as the following <span class="emph">geometric power series</span>: 
     \begin{equation}
-    \frac{1}{1 - x} = 1 + x + x^2 + x^3 + \cdots + x^n + \cdots \pd \label{eq:geo-power-series}
+    \frac{1}{1 - x} = 1 + x + x^2 + x^3 + \cdots = \sum_{n = 0}^\infty x^n \pd \label{eq:geo-power-series}
     \end{equation}
-    In <a href="#power-series-f-geometric">Figure 1</a>,
-    power series of various degrees \(n\) approximate the graph of \(f(x) = 1/(1 - x).\)
-    As \(n\) increases, the power series better match \(f.\)
-    But they only converge to \(f\) if \(|x| \lt 1\)—that is, if \(-1 \lt x \lt 1.\)
+    Let's construct a polynomial using only a few terms of this power series; that is, 
+    we plot the graph of \(y = \sum_{i = 0}^N x^i.\)
+    For \(N = 0\) the polynomial is merely \(y = 1;\)
+    for \(N = 1\) the polynomial is \(y = 1 + x;\) 
+    for \(N = 2\) polynomial is \(y = 1 + x + x^2.\)
+    In <a href="#power-series-f-geometric">Figure 1</a>
+    polynomials of various degrees \(N\) approximate the graph of \(f(x) = 1/(1 - x).\)
+    As \(N\) increases—that is, as we use more terms from \(\eqref{eq:geo-power-series}\)—the polynomials better match the graph of \(f.\)
+    But the polynomials only converge to \(f\) if \(|x| \lt 1,\) that is, if \(-1 \lt x \lt 1.\)
     Hence, \((-1, 1)\) is the <i>interval of convergence</i> for the power series \(\sum_{n = 0}^\infty x^n.\)
     In other words, the series converges—converges to \(f\)—for \(x\) in \((-1, 1)\) but diverges for \(x\) outside this interval. 
     For example, if \(x = 1/2,\) then \(\eqref{eq:geo-power-series}\) becomes the convergent geometric series 
@@ -297,6 +302,15 @@
     \[1 + 2 + 2^2 + 2^3 + \cdots + 2^n + \cdots \cma\]
     which diverges and therefore does <span class="warning">not</span> represent \(f(2) = 1/(1 - 2).\)
 </p>
+
+<div class="box-title">GEOMETRIC POWER SERIES</div>
+<div class="box">
+    For \(\abs x \lt 1,\)
+    the <span class="emph">geometric power series</span> is
+    \begin{equation}
+    \frac{1}{1 - x} = 1 + x + x^2 + x^3 + \cdots = \sum_{n = 0}^\infty x^n \pd \eqlabel{eq:geo-power-series}
+    \end{equation}
+</div>
 
 <p>
     We obtain many useful power series representations by manipulating \(\eqref{eq:geo-power-series};\)
@@ -633,8 +647,10 @@
         A convergent infinite geometric series takes the form 
         \[\frac{1}{1 - r} = 1 + r + r^2 + r^3 + \cdots \pd\]
         Reversing the perspective, we define rational functions as geometric series. 
-        The general case of this is representing \(1/(1 - x)\) as 
-        \[1 + x + x^2 + x^3 + \cdots = \sum_{n = 0}^\infty x^n \cma \abs{x} \lt 1 \pd\]
+        For \(\abs x \lt 1,\) the <span class="emph">geometric power series</span> is 
+        \begin{equation}
+        \frac{1}{1 - x} = 1 + x + x^2 + x^3 + \cdots = \sum_{n = 0}^\infty x^n \pd \eqlabel{eq:geo-power-series}
+        \end{equation}
         We derive many useful power series by manipulating this form:
         we can replace \(x\) with another function.
     </p>

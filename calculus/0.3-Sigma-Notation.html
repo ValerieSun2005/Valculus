@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.3: Sigma Notation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.3: Sigma Notation</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.3-Sigma-Notation-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.3-Sigma-Notation-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Sigma-Notation]]]-->
+<p>
+    Given the commonality of summations in mathematics, 
+    let's find a way to abbreviate this operation 
+    by using <i>sigma notation</i>. 
+    In this section we discuss the following:
+    <ul>
+        <li>
+            <a href="#defining-sigma" class="page-anchor">Defining Sigma Notation</a>
+        </li>
+        <li>
+            <a href="#sigma-properties" class="page-anchor">Properties of Summations</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="defining-sigma">Defining Sigma Notation</h4>
+<p>
+    We use <span class="emph">sigma notation</span> to condense summations.
+    The greek letter \(\sum\) <nobr>(<i>sigma</i>)</nobr> means <q>sum.</q>
+    The following definition explains its use.
+</p>
+
+<div class="box-title">SIGMA NOTATION</div>
+<div class="box">
+    If \(a_m,\) \(a_{m + 1},\) \(a_{m + 2}, \dots,\) \(a_{n - 1},\) \(a_n\)
+    are real numbers, and \(m\) and \(n\) are integers such that \(m \leq n,\)
+    then 
+    \begin{equation}
+    \sum_{i = m}^n a_i = a_m + a_{m + 1} + a_{m + 2} + \cdots + a_{n - 1} + a_n \pd \label{eq:sigma-def}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following series.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \sum_{i = 1}^5 i\)</span>
+            </li>
+            <li>
+                <span>\(\ds \sum_{i = 0}^3 i^3\)</span>
+            </li>
+            <li>
+                <span>\(\ds \sum_{j = 2}^4 \frac{j + 3}{7j + 1}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    We follow the formula in \(\eqref{eq:sigma-def}.\)
+    <ol class="list-alpha">
+        <li>
+            Expanding the summation, we get 
+            \[
+            \ba 
+            \sum_{i = 1}^5 i &= 1 + 2 + 3 + 4 + 5 \nl 
+            &= \boxed{15}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We have 
+            \[
+            \ba 
+            \sum_{i = 0}^3 i^3 &= 0^3 + 1^3 + 2^3 + 3^3 \nl 
+            &= \boxed{36}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We have
+            \[
+            \ba 
+            \sum_{j = 2}^4 \frac{j + 3}{7j + 1} 
+            &= \frac{(2) + 3}{7(2) + 1} + \frac{(3) + 3}{7(3) + 1} + \frac{(4) + 3}{7(4) + 1} \nl 
+            &= \boxed{\frac{811}{957}}
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-sum-c"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        For any constant \(c,\) show that
+        \[\sum_{i = 1}^n c = c \, n \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    We see 
+    \[
+    \ba 
+    \sum_{i = 1}^n c &= \underbrace{c + c + c + \cdots}_{n \text{ terms}} \nl 
+    &= c \, n \cma
+    \ea 
+    \]
+    as requested.
+</div>
+
+<div class="example-title" id="ex-sum-n"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that 
+        \[\sum_{i = 1}^n i = \frac{n(n + 1)}{2} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    Let's write the terms in ascending order and then in descending order, as follows:
+    \[
+    \baat{7} 
+    S &= 1 &&+ 2 &&+ 3 &&+ \cdots &&+ (n - 2) &&+ (n - 1) &&+ n \cma \nl 
+    S &= n &&+ (n - 1) &&+ (n - 2) &&+ \cdots &&+ 3 &&+ 2 &&+ 1 \pd
+    \eaat
+    \]
+    Adding every column vertically gives
+    \[
+    \ba
+    2S &= \underbrace{(n + 1) + (n + 1) + (n + 1) + (n + 1) + \cdots}_{n \textrm{ terms}} \nl 
+    &= n(n + 1) \pd
+    \ea
+    \]
+    Then solving for \(S\) gives, as requested, 
+    \[S = \frac{n(n + 1)}{2} \pd\]
+</div>
+
+<div class="example-title" id="ex-sum-n2"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Using a Proof by Induction, prove that
+        \[\sum_{i = 1}^n i^2 = \frac{n(n + 1)(2n + 1)}{6} \pd\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">   
+    Let \(S_n\) \(= \sum_{i = 1}^n i^2\) \(= n(n + 1)(2n + 1)/6.\)
+    To perform a Proof by Induction,
+    we first show that \(S_1\) is true and then show that 
+    if \(S_k\) is true (where \(k\) is a positive integer), then \(S_{k + 1}\) is also true.
+    First observe that 
+    \[S_1 = 1^2 \equalsCheck \frac{1(1 + 1)(2 + 1)}{6} \pd\]
+    Next assume that \(S_k\) is true—that is, 
+    \[\sum_{i = 1}^k i^2 = \frac{k(k + 1)(2k + 1)}{6} \pd\]
+    Observe that 
+    \[
+    \ba 
+    S_{k + 1} &= \sum_{i = 1}^{k + 1} i^2 \nl 
+    &= \sum_{i = 1}^k i^2 + (k + 1)^2 \nl 
+    &= \frac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 \nl 
+    &= (k + 1) \parbr{\frac{k (2k + 1)}{6} + (k + 1)} \nl 
+    &= (k + 1) \parbr{\frac{k (2k + 1) + 6(k + 1)}{6}} \nl 
+    &= (k + 1) \parbr{\frac{2k^2 + 7k + 6}{6}} \nl 
+    &= (k + 1) \parbr{\frac{(k + 2)(2k + 3)}{6}} \nl 
+    &= \frac{(k + 1) [(k + 1) + 1] [2(k + 1) + 1]}{6} \pd
+    \ea     
+    \]
+    Thus, \(S_{k + 1}\) is also true. 
+    By mathematical induction, \(S_n = \sum_{i = 1}^n i^2\) is true 
+    for all positive integers \(n.\) 
+</div>
+
+<h4 id="sigma-properties">Properties of Summations</h4>
+<p>
+    Instead of performing long computations, let's use rules to 
+    simplify the evaluation of summations. 
+</p>
+
+<div class="box-title">PROPERTIES OF SUMMATIONS</div>
+<div class="box">
+    If \(c\) is a constant, and \(a_i\) and \(b_i\) are real numbers for all \(m \leq i \leq n,\) 
+    then we have the following properties:
+    \begin{align}
+    \sum_{i = m}^n (a_i + b_i) &= \sum_{i = m}^n a_i + \sum_{i = m}^n b_i \cma \label{eq:sigma-sum} \nl 
+    \sum_{i = m}^n (a_i - b_i) &= \sum_{i = m}^n a_i - \sum_{i = m}^n b_i \cma \label{eq:sigma-diff} \nl
+    \sum_{i = m}^n c a_i &= c \sum_{i = m}^n a_i \pd \label{eq:sigma-cons} \nl
+    \end{align}
+</div>
+
+<p>
+    In words, the summation of a sum is the sum of summations [by <nobr>\(\eqref{eq:sigma-sum}\)]</nobr> and 
+    the summation of a difference is the difference of summations [by <nobr>\(\eqref{eq:sigma-diff}\)].</nobr> 
+    By \(\eqref{eq:sigma-cons},\) we can <q>pull out</q> a constant from the summation expression.
+    Let's also provide a list of useful formulas,
+    which include the results of <a href="/ValCalc/ValCalc/calculus/0.3-Sigma-Notation.html#ex-sum-c">Example 2</a>,
+    <a href="/ValCalc/ValCalc/calculus/0.3-Sigma-Notation.html#ex-sum-n">Example 3</a>,
+    and 
+    <a href="/ValCalc/ValCalc/calculus/0.3-Sigma-Notation.html#ex-sum-n2">Example 4</a>.
+</p>
+
+<aside class="box-remark">
+    The proof of \(\eqref{eq:sum-i3}\) is left as an exercise in the Exercises section.
+</aside>
+
+<div class="box-title">SUMMATION FORMULAS</div>
+<div class="box">
+    Let \(c\) be a constant. 
+    \begin{align}
+    \sum_{i = 1}^n c &= c \, n \cma \label{eq:sum-c} \nl 
+    \sum_{i = 1}^n i &= \frac{n(n + 1)}{2} \cma \label{eq:sum-i} \nl 
+    \sum_{i = 1}^n i^2 &= \frac{n(n + 1)(2n + 1)}{6} \cma \label{eq:sum-i2} \nl
+    \sum_{i = 1}^n i^3 &= \parbr{\frac{n(n + 1)}{2}}^2 \pd \label{eq:sum-i3}
+    \end{align}
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\sum_{i = 1}^{10} \par{2i^3 - 6i^2 + 8i}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution"> 
+    Let the sum be \(S.\)  
+    We decompose the series one step at a time, as follows:
+    \[
+    \baat{2}
+    S
+    &= \sum_{i = 1}^{10} 2i^3 - \sum_{i = 1}^{10} 6 i^2 + \sum_{i = 1}^{10} 8i 
+    &&\comment{\text{by } \eqref{eq:sigma-sum} \text{ and } \eqref{eq:sigma-diff}} \nl
+    &= 2 \sum_{i = 1}^{10} i^3 - 6 \sum_{i = 1}^{10} i^2 + 8 \sum_{i = 1}^{10} i 
+    &&\comment{\text{by } \eqref{eq:sigma-cons}} \nl 
+    &= 2 \parbr{\frac{10(10 + 1)}{2}}^2 - 6 \parbr{\frac{10(10 + 1)(10 + 1)}{6}} + 8 \parbr{\frac{10(10 + 1)}{2}} 
+    &&\comment{\text{by } \eqref{eq:sum-i3} \cma \eqref{eq:sum-i2} \cma \text{and } \eqref{eq:sum-i}} \nl 
+    &= \boxed{4180}
+    \eaat
+    \]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-sigma" class="summary-anchor">Defining Sigma Notation</a>
+        If \(a_m,\) \(a_{m + 1},\) \(a_{m + 2}, \dots,\) \(a_{n - 1},\) \(a_n\)
+        are real numbers, and \(m\) and \(n\) are integers such that \(m \leq n,\)
+        then 
+        \begin{equation}
+        \sum_{i = m}^n a_i = a_m + a_{m + 1} + a_{m + 2} + \cdots + a_{n - 1} + a_n \pd \eqlabel{eq:sigma-def}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#sigma-properties" class="summary-anchor">Properties of Summations</a>
+        If \(c\) is a constant, and \(a_i\) and \(b_i\) are real numbers for all \(m \leq i \leq n,\) 
+        then we have the following properties:
+        \begin{align}
+        \sum_{i = m}^n (a_i + b_i) &= \sum_{i = m}^n a_i + \sum_{i = m}^n b_i \cma \eqlabel{eq:sigma-sum} \nl 
+        \sum_{i = m}^n (a_i - b_i) &= \sum_{i = m}^n a_i - \sum_{i = m}^n b_i \cma \eqlabel{eq:sigma-diff} \nl
+        \sum_{i = m}^n c a_i &= c \sum_{i = m}^n a_i \pd \eqlabel{eq:sigma-cons} \nl
+        \end{align}
+        The following formulas also prove useful in dissecting series:
+        \begin{align}
+        \sum_{i = 1}^n c &= c \, n \cma \eqlabel{eq:sum-c} \nl 
+        \sum_{i = 1}^n i &= \frac{n(n + 1)}{2} \cma \eqlabel{eq:sum-i} \nl 
+        \sum_{i = 1}^n i^2 &= \frac{n(n + 1)(2n + 1)}{6} \cma \eqlabel{eq:sum-i2} \nl
+        \sum_{i = 1}^n i^3 &= \parbr{\frac{n(n + 1)}{2}}^2 \pd \eqlabel{eq:sum-i3}
+        \end{align}
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

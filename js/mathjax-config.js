@@ -82,7 +82,7 @@ window.MathJax = {
             eqrefer: ["\\text{Equation } \\eqref{#1}", 1],
             eqlabel: ["\\tag*{\\eqref{#1}}", 1],
             diffDelta: ["\\, \\frac{\\Delta #1}{\\Delta #2} \\, ", 2],
-            deriv: ["\\, \\frac{\\dd #1}{\\dd #2} \\, ", 2],
+            deriv: ["\\hspace{0.05em} \\frac{\\dd #1}{\\dd #2} \\hspace{0.05em}", 2],
             derivOrder: ["\\, \\frac{\\dd^{#3} #1}{\\dd #2^{#3}} \\, ", 3],
             textDeriv: ["\\dd #1 / \\dd #2", 2],
             textderiv: ["\\dd #1 / \\dd #2", 2],
