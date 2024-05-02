@@ -6,18 +6,18 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
-    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
 <link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
-    <a href="/ValCalc/ValCalc/index.html">
-    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
     </a>
 <h1>4.4: Integration by Substitution</h1>
 <main>
@@ -45,7 +45,7 @@
 <hr id="mainBodyBegin">
 <!--[[[crefId.Integration-by-Substitution]]]-->
 <p>
-    In Section <a href="/ValCalc/ValCalc/calculus/2.4-Chain-Rule.html">2.4</a>
+    In Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>
     we differentiated composite functions. 
     We now learn to <i>integrate</i> composite functions, 
     which requires a variable change using a substitution. 
@@ -180,7 +180,7 @@
     The integral therefore becomes 
     \[\int \tfrac{1}{4} \underbrace{\sqrt{x^4 + 3}}_{\sqrt u} \, \underbrace{(4x^3) \di x}_{\dd u} = \int \tfrac{1}{4} \sqrt u \di u \pd\]
     Because \(1/4\) is a constant, we move it out of the integral by the Constant Multiple Rule
-    (see Section <a href="/ValCalc/ValCalc/calculus/4.1-Antidifferentiation.html">4.1</a>). 
+    (see Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>). 
     Thus, we have 
     \[\tfrac{1}{4} \int u^{1/2} \di u = \tfrac{1}{4} \par{\tfrac{2}{3} u^{3/2}} + C = \tfrac{1}{6} u^{3/2} + C \pd\]
     Our final step is to reexpress the integral in terms of \(x;\)
@@ -209,7 +209,7 @@
     This substitution is successful because we obtain the integral \(\int \tfrac{1}{k} e^u \di u,\)
     which is expressed entirely in terms of \(u.\)
     Since \(1/k\) is a constant, we take it out of the integral by the Constant Multiple Rule
-    (see Section <a href="/ValCalc/ValCalc/calculus/4.1-Antidifferentiation.html">4.1</a>).  
+    (see Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>).  
     We therefore have, for any number \(C,\)
     \[\tfrac{1}{k} \int e^u \di u = \tfrac{1}{k} e^u + C \pd\]
     Finally, we reexpress our answer in terms of \(x.\)
@@ -220,7 +220,7 @@
 
 <p>
     In 
-    <a href="/ValCalc/ValCalc/calculus/4.4-Integration-by-Substitution.html#ex-e^kx">Example 3</a>
+    <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html#ex-e^kx">Example 3</a>
     we showed that 
     \[\int e^{kx} \di x = \tfrac{1}{k} e^{kx} \pd\]
     Observe that 
@@ -381,7 +381,7 @@
 
 <h4 id="trig-integrals">Integrals with Trigonometric Functions</h4>
 <p>
-    In Section <a href="/ValCalc/ValCalc/calculus/4.1-Antidifferentiation.html">4.1</a> 
+    In Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a> 
     we learned that \(\int \cos x \di x\) \(= \sin x + C\)
     and \(\int \sin x \di x\) \(= - \cos x + C.\)
     The Substitution Rule enables us to determine antiderivatives 
@@ -427,8 +427,8 @@
 <p>
     The integral \(\int \csc x \di x\) is left as an exercise in the Exercises section.
     The following table represents the integrals of all six trigonometric functions. 
-    In Sections <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
-    and <a href="/ValCalc/ValCalc/calculus/6.3-Trigonometric-Substitution.html">6.3</a>, 
+    In Sections <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
+    and <a href="/Valculus/calculus/6.3-Trigonometric-Substitution.html">6.3</a>, 
     it will be essential to have them memorized.
 </p>
 
@@ -483,7 +483,7 @@
 <p>
     Another common family of integrals contains polynomials in the denominator.
     To evaluate these integrals, we often complete the square 
-    (see Section <a href="/ValCalc/ValCalc/calculus/0.1-Quadratics.html">0.1</a>) 
+    (see Section <a href="/Valculus/calculus/0.1-Quadratics.html">0.1</a>) 
     and then use the Substitution Rule;
     the result features inverse trigonometric functions.
     The following integrals are therefore useful for this procedure.
@@ -609,16 +609,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                    <a href="/Valculus/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                    <a href="/Valculus/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                    <a href="/Valculus/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                    <a href="/Valculus/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -626,10 +626,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -637,16 +637,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                    <a href="/Valculus/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -654,27 +654,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                    <a href="/Valculus/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                    <a href="/Valculus/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="/Valculus/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
 </body>
