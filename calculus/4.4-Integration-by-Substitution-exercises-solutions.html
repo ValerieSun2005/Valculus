@@ -6,17 +6,17 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
     </a>
 <h1>4.4 Exercise Solutions: Integration by Substitution</h1>
 <main>
@@ -431,22 +431,23 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{e^{\sqrt x}}{\sqrt x} \di x\]
+    \[\ds \int 6e^t \cot \par{2e^t + 3} \di t\]
 </blockquote> evaluate the indefinite integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
             
-    We think of the integral as 
-    \[\int \frac{1}{\sqrt x} \cdot e^{\sqrt x} \di x \pd\]
-    The derivative of \(\sqrt x\) is \(1/(2 \sqrt x);\)
-    thus, we <q>clear out</q> the factor \(1/\sqrt x\) by substituting \(u = \sqrt x.\)
-    Then \(\dd u = 1/(2 \sqrt x) \di x,\) and we attain 
-    \[2 \int e^u \di u = 2e^u + C \cma\]
-    where \(C\) is an arbitrary constant.
-    Substituting back gives 
-    \[\boxed{2e^{\sqrt x} + C}\]
+    Substituting \(u = 2e^t + 3,\) 
+    we get \(\dd u = 2e^t \di t.\)
+    The integral therefore becomes 
+    \[
+    \ba 
+    3 \int \cot u \di u 
+    &amp;= 3 \ln \abs{\sin u} + C \nl 
+    &amp;= \boxed{3 \ln \abs{\sin \par{2e^t + 3}} + C}
+    \ea 
+    \]
  
         </div> 
        </div>  
@@ -457,26 +458,21 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{x}{3 + 2x^2} \di x\]
+    \[\ds \int \cos x \sec(\sin x) \di x\]
 </blockquote> evaluate the indefinite integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
             
-    We write the integral as 
-    \[\int \frac{1}{3 + 2x^2} \cdot x \di x \pd\]
-    The derivative of \(3 + 2x^2\) is \(4x.\)
-    You should recognize that although \(4\) doesn't appear in the integrand, 
-    \(x\) does appear.
-    We therefore <q>strip</q> the \(x\) by substituting \(u = 3 + 2x^2,\)
-    since \(\dd u = 4x \di x\) or \(\dd x = (1/4x) \di u.\) 
-    We attain 
-    \[\int \frac{1}{u} \cdot \frac{1}{4} \di u = \frac{1}{4} \ln \abs u + C \cma\]
-    where \(C\) is an arbitrary constant.
-    Substituting back gives 
-    \[\boxed{\tfrac{1}{4} \ln(3 + 2x^2) + C}\]
-    (We don't need absolute value bars around the natural logarithm, because its argument is always positive.)
+    Substituting \(u = \sin x,\) we get \(\dd u = \cos x.\)
+    The integral therefore becomes 
+    \[
+    \ba 
+    \int \sec u \di u &amp;= \ln \abs{\sec u + \tan u} + C \nl 
+    &amp;= \boxed{\ln \abs{\sec(\sin x) + \tan(\sin x)} + C}
+    \ea 
+    \]
  
         </div> 
        </div>  
@@ -487,17 +483,21 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{1}{(x \ln x) \ln(\ln x)} \di x\]
+    \[\ds \int \frac{e^{\sqrt x}}{\sqrt x} \di x\]
 </blockquote> evaluate the indefinite integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
             
-    Letting \(u = \ln(\ln x),\) we find \(\dd u = \dd x/(x \ln x)\)
-    and so the integral becomes 
-    \[\int \frac{1}{u} \di u = \ln \abs u + C = \boxed{\ln \abs{\ln(\ln x)} + C}\]
-    where \(C\) is an arbitrary constant.
+    We think of the integral as 
+    \[\int \frac{1}{\sqrt x} \cdot e^{\sqrt x} \di x \pd\]
+    The derivative of \(\sqrt x\) is \(1/(2 \sqrt x);\)
+    thus, we <q>clear out</q> the factor \(1/\sqrt x\) by substituting \(u = \sqrt x.\)
+    Then \(\dd u = 1/(2 \sqrt x) \di x,\) and we attain 
+    \[2 \int e^u \di u = 2e^u + C \pd\]
+    Substituting back gives 
+    \[\boxed{2e^{\sqrt x} + C}\]
  
         </div> 
        </div>  
@@ -508,11 +508,60 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int y \sqrt{y - 1} \di y\]
+    \[\ds \int \frac{x}{3 + 2x^2} \di x\]
 </blockquote> evaluate the indefinite integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    We write the integral as 
+    \[\int \frac{1}{3 + 2x^2} \cdot x \di x \pd\]
+    The derivative of \(3 + 2x^2\) is \(4x.\)
+    You should recognize that although \(4\) doesn't appear in the integrand, 
+    \(x\) does appear.
+    We therefore <q>strip</q> the \(x\) by substituting \(u = 3 + 2x^2,\)
+    since \(\dd u = 4x \di x\) or \(\dd x = (1/4x) \di u.\) 
+    We attain 
+    \[\int \frac{1}{u} \cdot \frac{1}{4} \di u = \frac{1}{4} \ln \abs u + C \pd\]
+    Substituting back gives 
+    \[\boxed{\tfrac{1}{4} \ln(3 + 2x^2) + C}\]
+    (We don't need absolute value bars around the natural logarithm, because its argument is always positive.)
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{(x \ln x) \ln(\ln x)} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Letting \(u = \ln(\ln x),\) we find \(\dd u = \dd x/(x \ln x)\)
+    and so the integral becomes 
+    \[\int \frac{1}{u} \di u = \ln \abs u + C = \boxed{\ln \abs{\ln(\ln x)} + C}\]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int y \sqrt{y - 1} \di y\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
     The term \(\sqrt{y - 1}\) is problematic to us; we want to use a substitution to convert it to \(\sqrt u.\)
@@ -524,13 +573,217 @@
     Antidifferentiating, we attain 
     \[\tfrac{2}{5} u^{5/2} + \tfrac{2}{3} u^{3/2} + C 
     = \boxed{\tfrac{2}{5} (y - 1)^{5/2} + \tfrac{2}{3} (y - 1)^{3/2} + C}\]
-    if \(C\) is an arbitrary constant. 
  
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int x \sqrt{2x + 4} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The term \(\sqrt{2x + 4}\) is problematic to us; we want to use a substitution to convert it to \(\sqrt u.\)
+    Hence, we let \(u = 2x + 4.\)
+    Then \(\dd u = 2 \di x\) and \(x = \tfrac{1}{2} u - 2.\)
+    The integral therefore becomes 
+    \[
+    \ba
+    \tfrac{1}{2} \int \par{\tfrac{1}{2} u - 2} \sqrt u \di u &amp;= \int \par{\tfrac{1}{4} u - 1} u^{1/2} \di u \nl 
+    &amp;= \int \par{\tfrac{1}{4} u^{3/2} - u^{1/2}} \di u \nl
+    &amp;= \tfrac{1}{10} u^{5/2} - \tfrac{2}{3} u^{3/2} + C \nl 
+    &amp;= \boxed{\tfrac{1}{10} (2x + 4)^{5/2} - \tfrac{2}{3} (2x + 4)^{3/2} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int x^3 \sqrt{1 + x^2} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Let's rewrite the integral as 
+    \[\int x \cdot x^2 \sqrt{1 + x^2} \di x \pd\]
+    A good substitution is therefore \(u = 1 + x^2;\) then \(\dd u = 2x \di x\)
+    and \(x^2 = u - 1.\)
+    The integral therefore becomes
+    \[
+    \ba
+    \tfrac{1}{2} \int (u - 1) \sqrt u \di u 
+    &amp;= \tfrac{1}{2} \int \par{u^{3/2} - u^{1/2}} \di u \nl 
+    &amp;= \tfrac{1}{2} \par{\tfrac{2}{5} u^{5/2} - \tfrac{2}{3} u^{3/2}} + C \nl 
+    &amp;= \tfrac{1}{5} u^{5/2} - \tfrac{1}{3} u^{3/2} + C \nl 
+    &amp;= \boxed{\tfrac{1}{5} (1 + x^2)^{5/2} - \tfrac{1}{3} (1 + x^2)^{3/2} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int x^8 \sqrt{x^3 + 4} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Let's rewrite the integral as 
+    \[\int x^6 \cdot x^2 \sqrt{1 + x^2} \di x \pd\]
+    A good substitution is therefore \(u = x^3 + 4;\) then \(\dd u = 3x^2 \di x\)
+    and \(x^6 = (u - 4)^2.\)
+    The integral therefore becomes 
+    \[
+    \ba 
+    \tfrac{1}{3} \int (u - 4)^2 \sqrt u \di u 
+    &amp;= \tfrac{1}{3} \int \parbr{\par{u^2 - 8u + 16} u^{1/2}} \di u \nl 
+    &amp;= \tfrac{1}{3} \int \par{u^{5/2} - 8u^{3/2} + 16u^{1/2}} \di u \nl 
+    &amp;= \tfrac{1}{3} \par{\tfrac{2}{7} u^{7/2} - \tfrac{16}{5} u^{5/2} + \tfrac{32}{3} u^{3/2}} + C \nl 
+    &amp;= \tfrac{2}{21} u^{7/2} - \tfrac{16}{15} u^{5/2} + \tfrac{32}{9} u^{3/2} + C \nl 
+    &amp;= \boxed{\tfrac{2}{21} \par{x^3 + 4}^{7/2} - \tfrac{16}{15} \par{x^3 + 4}^{5/2} + \tfrac{32}{9} \par{x^3 + 4}^{3/2} + C}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{x^2 + 4} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Observe that 
+    \[\frac{1}{x^2 + 4} = \frac{1/4}{\dfrac{x^2}{4} + 1} = \frac{1/4}{\par{\dfrac{x}{2}}^2 + 1} \pd\]
+    The integral therefore becomes 
+    \[\tfrac{1}{4} \int \frac{1}{\par{\dfrac{x}{2}}^2 + 1} \di x \pd\]
+    Substituting \(u = x/2,\) we get \(\dd u = \tfrac{1}{2} \di x\)
+    and so the integral becomes 
+    \[
+    \ba
+    \tfrac{1}{2} \int \frac{1}{u^2 + 1} \di u 
+    &amp;= \tfrac{1}{2} \atan u + C \nl 
+    &amp;= \boxed{\tfrac{1}{2} \atan \par{x^2 + 4} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{\sin t \cos t} \di t\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The double-angle identity for sine gives 
+    \[\sin 2t = 2 \sin t \cos t \iffArrow \sin t \cos t = \tfrac{1}{2} \sin 2t \pd\]
+    The integral therefore becomes 
+    \[
+    \ba 
+    \int \frac{2}{\sin 2t} \di t = \int 2 \csc 2t \di t \pd 
+    \ea 
+    \]
+    Substituting \(u = 2t,\) we get \(\dd u = 2 \di t.\)
+    So we have 
+    \[
+    \ba
+    \int \csc u \di u &amp;= -\ln \abs{\csc u + \cot u} + C \nl
+    &amp;= \boxed{-\ln \abs{\csc 2t + \cot 2t} + C}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{\cos^2 \theta - \sin^2 \theta} \di \theta\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    By the double-angle identity for cosine, the integral becomes 
+    \[\int \frac{1}{\cos 2 \theta} \di \theta = \int \sec 2 \theta \di \theta \pd\]
+    Substituting \(u = 2 \theta,\) we have \(\dd u = 2 \di \theta\) and so the integral becomes 
+    \[
+    \ba
+    \tfrac{1}{2} \int \sec u \di u 
+    &amp;= \tfrac{1}{2} \ln \abs{\sec u + \tan u} + C \nl
+    &amp;= \boxed{\tfrac{1}{2} \ln \abs{\sec 2 \theta + \tan 2 \theta}}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{4x}{x^4 + 4x^2 + 4} \di x\]
+</blockquote> evaluate the indefinite integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The denominator is the perfect square \((x^2 + 2)^2,\)
+    so the integral becomes 
+    \[\int \frac{4x}{(x^2 + 2)^2} \di x \pd\]
+    Substituting \(u = x^2 + 2,\) we have \(\dd u = 2x \di x\)
+    and so the integral becomes
+    \[\int \frac{2}{u^2} \di u = -\frac{2}{u} + C = \boxed{-\frac{2}{x^2 + 2} + C}\]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -539,7 +792,7 @@
 </blockquote> evaluate the indefinite integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
     Recall that 
@@ -553,10 +806,9 @@
     \ba 
     \int \frac{x}{1 + (u)^2} \cdot \frac{1}{2x} \di u 
     &amp;= \tfrac{1}{2} \int \frac{1}{1 + u^2} \di u \nl 
-    &amp;= \tfrac{1}{2} \tan^{-1} u + C 
+    &amp;= \tfrac{1}{2} \tan^{-1} u + C \pd
     \ea 
     \]
-    for any value \(C.\)
     Our final step is to reexpress this answer in terms of \(x.\)
     We chose \(u = x^2,\) so our final answer is 
     \[\boxed{\tfrac{1}{2} \tan^{-1} (x^2) + C}\]
@@ -564,8 +816,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -586,16 +838,15 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
 <li>
-                Substituting \(u = \sin x\) gives \(\dd u = \cos x \di x,\) 
-                so the integral becomes 
-                \[\int \underbrace{\sin x}_{u} \, \underbrace{\cos x \di x}_{\dd u } = \int u \di u = \tfrac{1}{2} u^2 + C\]
-                for an arbitrary constant \(C.\)
-                We now substitute back to obtain 
+                Substituting \(u = \sin x\) gives \(\dd u = \cos x \di x.\) 
+                We then see
+                \[\int \underbrace{\sin x}_{u} \, \underbrace{\cos x \di x}_{\dd u } = \int u \di u = \tfrac{1}{2} u^2 + C \pd\]
+                Substituting back gives
                 \[\boxed{\tfrac{1}{2} \sin^2 x + C}\]
             </li>
 <hr/>
@@ -603,8 +854,7 @@
                 When we substitute \(u = \cos x\) we get \(\dd u = -\sin x \di x,\) 
                 or \(\dd x = (-1/\sin x) \di u.\)
                 Hence, the integral becomes 
-                \[\int -u \di u = -\tfrac{1}{2} u^2 + C \cma\]
-                where \(C\) is an arbitrary constant.
+                \[\int -u \di u = -\tfrac{1}{2} u^2 + C \pd\]
                 Substituting back then gives  
                 \[\boxed{-\tfrac{1}{2} \cos^2 x + C}\]
             </li>
@@ -615,8 +865,7 @@
                 We substitute \(u = 2x;\) then \(\dd u = 2 \di x,\)
                 or \(\dd x = (1/2) \di u.\)
                 The integral then becomes 
-                \[\tfrac{1}{2} \int \tfrac{1}{2} \sin u \di u = -\tfrac{1}{4} \cos u + C\]
-                for any number \(C.\)
+                \[\tfrac{1}{2} \int \tfrac{1}{2} \sin u \di u = -\tfrac{1}{4} \cos u + C \pd\]
                 Substituting back yields 
                 \[\boxed{-\tfrac{1}{4} \cos 2x + C}\]
             </li>
@@ -627,8 +876,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -639,7 +888,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -660,8 +909,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -672,7 +921,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -694,8 +943,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -707,7 +956,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         In this new form, we have 
@@ -721,6 +970,91 @@
         </div> 
        </div>  
    </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\sin^2 \theta}{\cos \theta} \di \theta\]
+    </blockquote> evaluate the trigonometric integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The Pythagorean identity gives \(\sin^2 \theta = 1 - \cos^2 \theta,\)
+        so the integral becomes
+        \[
+        \ba 
+        \int \frac{1 - \cos^2 \theta}{\cos \theta} \di \theta 
+        &amp;= \int \par{\sec \theta - \cos \theta} \di \theta \nl 
+        &amp;= \boxed{\ln \abs{\sec \theta + \tan \theta} - \sin \theta + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \cot \theta \cos \theta \di \theta\]
+    </blockquote> evaluate the trigonometric integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's rewrite the integrand to be in terms of sine and cosine, as follows: 
+        \[\int \frac{\cos \theta}{\sin \theta} \, \cos \theta \di \theta 
+        = \int \frac{\cos^2 \theta}{\sin \theta} \di \theta \pd\]
+        The Pythagorean identity then gives \(\cos^2 \theta = 1 - \sin^2 \theta,\)
+        so the integral becomes 
+        \[
+        \ba 
+        \int \frac{1 - \sin^2 \theta}{\sin \theta} \di \theta 
+        &amp;= \int \par{\csc \theta - \sin \theta} \di \theta \nl 
+        &amp;= \boxed{- \ln \abs{\csc \theta + \cot \theta} + \cos \theta + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\tan^4 x}{\cos^2 x} \di x\]
+    </blockquote> evaluate the trigonometric integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We rewrite the integral as 
+        \[\int \tan^4 x \sec^2 x \di x \pd\]
+        Substituting \(u = \tan x,\) we have \(\dd u = \sec^2 x \di x\) and so the integral becomes 
+        \[
+        \ba 
+        \int u^4 \di u &amp;= \tfrac{1}{5} u^5 + C \nl 
+        &amp;= \boxed{\tfrac{1}{5} \tan^5 x + C}
+        \ea 
+        \]
+        In Section 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
+        we will formulate a strategy to evaluate most integrals 
+        that contain tangent and secant terms.
+     
+        </div> 
+       </div>  
+   </div> 
 </div>
 </main>
 </main>
@@ -730,16 +1064,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -747,10 +1081,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -758,16 +1092,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -775,27 +1109,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

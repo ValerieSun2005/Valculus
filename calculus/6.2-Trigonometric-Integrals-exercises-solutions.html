@@ -6,17 +6,17 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/exercises-style.css" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
     </a>
 <h1>6.2 Exercise Solutions: Trigonometric Integrals</h1>
 <main>
@@ -55,20 +55,15 @@
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Since the integrand has the extra factor \(\sin x,\) 
-        we substitute 
-        \[
-        \ba 
-        u &amp;= \cos x \nl 
-        \dd u &amp;= - \sin x \di x \period 
-        \ea 
-        \]
+        Since the integrand contains an extra factor \(\sin x,\) 
+        we substitute \(u = \cos x\) to strip it,
+        given that \(\dd u = - \sin x \di x.\)
         The integral then becomes 
         \[
         \ba 
-        -\int u^2 \di u 
-        &amp;= -\frac{u^3}{3} + C \nl 
-        &amp;= \boxed{-\frac{\cos^3 x}{3} + C}
+        \int -u^2 \di u 
+        &amp;= -\tfrac{1}{3} u^3 + C \nl 
+        &amp;= \boxed{-\tfrac{1}{3} \cos^3 x + C}
         \ea 
         \]
      
@@ -88,23 +83,23 @@
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The power of sine is odd, so we save an extra term \(\sin x.\)
+        Sine's power is odd, so we save an extra term \(\sin x.\)
         We then use \(\sin^2 x = 1 - \cos^2 x\) to rewrite the integrand in terms of cosine:
         \[
         \ba 
         \int \sin^3 x \cos^4 x \di x 
-        &amp;= \int \sin x \sin^2 x \cos^4 x \di x \nl 
-        &amp;= \int \sin x (1 - \cos^2 x) \cos^4 x \di x \period 
+        &amp;= \int \sin^2 x \cos^4 x \sin x \di x \nl 
+        &amp;= \int (1 - \cos^2 x) \cos^4 x \sin x \di x \pd 
         \ea 
         \]
         Substituting \(u = \cos x,\) we get \(\dd u = - \sin x \di x\)
-        and the integral becomes 
+        and so the integral becomes 
         \[
         \ba 
-        \int - (1 - u^2) \, u^4 \di u 
-        &amp;= \int u^6 - u^4 \di u \nl 
-        &amp;= \frac{u^7}{7} - \frac{u^5}{5} + C \nl 
-        &amp;= \boxed{\frac{\cos^7 x}{7} - \frac{\cos^5 x}{5} + C}
+        \int [- (1 - u^2) \, u^4] \di u 
+        &amp;= \int \par{u^6 - u^4} \di u \nl 
+        &amp;= \tfrac{1}{7} u^7 - \tfrac{1}{5} u^5 + C \nl 
+        &amp;= \boxed{\tfrac{1}{7} \cos^7 x - \tfrac{1}{5} \cos^5 x + C}
         \ea 
         \]
      
@@ -117,21 +112,21 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sin^2 x \di x\]
+        \[\ds \int_0^{\pi/4} \frac{1}{1 - \sin^2 x} \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We rewrite the integrand using the power-reduction formula for sine:
-        \[\sin^2 x = \frac{1}{2} (1 - \cos 2x) \period\]
-        Then the integral becomes  
+        The Pythagorean identity gives \(\sin^2 x + \cos^2 x = 1\) \(\iffArrow \cos^2 x = 1 - \sin^2 x.\)
+        So the integral becomes 
         \[
         \ba 
-        \int \frac{1}{2} (1 - \cos 2x) \di x 
-        &amp;= \frac{1}{2} \par{x - \frac{1}{2} \sin 2x} + C \nl 
-        &amp;= \boxed{\frac{1}{2} x - \frac{1}{4} \sin 2x + C}
+        \int_0^{\pi/4} \frac{1}{\cos^2 x} \di x
+        &amp;= \int_0^{\pi/4} \sec^2 x \di x \nl 
+        &amp;= \tan x \intEval_0^{\pi/4} \nl 
+        &amp;= 1 - 0 = \boxed 1
         \ea 
         \]
      
@@ -144,26 +139,19 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sin^4 x \di x\]
+        \[\ds \int \sin^2 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We use the power-reduction formula for sine,
-        \[\sin^2 x = \frac{1}{2} (1 - \cos 2x) \cma\]
-        to rewrite the integral as  
-        \[\int \left(\frac{1}{2}(1 - \cos 2x)\right)^2 \di x 
-        = \frac{1}{4} \int 1 - 2 \cos 2x + \cos^2 2x \di x \period \]
-        Now we use the power-reduction formula 
-        \[\cos^2 2x = \frac{1}{2} (1 + \cos 4x)\]
-        to get 
+        We rewrite the integrand using the power-reduction formula for sine:
         \[
         \ba 
-        \frac{1}{4} \int 1 - 2 \cos 2x + \frac{1}{2} (1 + \cos 4x) \di x 
-        &amp;= \frac{1}{4} \left(\frac{3}{2} x - \sin 2x + \frac{1}{8} \sin 4x \right) + C \nl
-        &amp;= \boxed{\frac{3}{8} x - \frac{1}{4} \sin 2x + \frac{1}{32} \sin 4x + C}
+        \int \tfrac{1}{2} (1 - \cos 2x) \di x 
+        &amp;= \tfrac{1}{2} \par{x - \tfrac{1}{2} \sin 2x} + C \nl 
+        &amp;= \boxed{\tfrac{1}{2} x - \tfrac{1}{4} \sin 2x + C}
         \ea 
         \]
      
@@ -176,27 +164,27 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \cos^3 x \sin^4 x \di x\]
+        \[\ds \int \sin^4 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The power of cosine is odd, so we preserve an extra factor \(\cos x.\)
-        We then use \(\cos^2 x = 1 - \sin^2 x\) to rewrite the integrand in terms of sine:
-        \[
-        \int \cos x \cos^2 x \sin^4 x \di x 
-        = \int \cos x (1 - \sin^2 x) \sin^4 x \di x \period 
-        \]
-        We then let \(u = \sin x\) because then \(\dd u = \cos x \di x\) 
-        and the integral becomes 
+        We use the power-reduction formula for sine,
+        \(\sin^2 x = \tfrac{1}{2} (1 - \cos 2x),\)
+        to rewrite the integral as  
+        \[\int \parbr{\tfrac{1}{2}(1 - \cos 2x)}^2 \di x 
+        = \tfrac{1}{4} \int \par{1 - 2 \cos 2x + \cos^2 2x} \di x \pd \]
+        From \(\cos^2 x = \tfrac{1}{2} (1 + \cos 2x),\)
+        it follows that
+        \(\cos^2 2x = \tfrac{1}{2} (1 + \cos 4x).\)
+        The integral is therefore
         \[
         \ba 
-        \int (1 - u^2) \, u^4 \di u 
-        &amp;= \int u^4 - u^6 \nl 
-        &amp;= \frac{u^5}{5} - \frac{u^7}{7} + C \nl 
-        &amp;= \boxed{\frac{\sin^5 x}{5} - \frac{\sin^7 x}{7} + C}
+        \tfrac{1}{4} \int \parbr{1 - 2 \cos 2x + \tfrac{1}{2} (1 + \cos 4x)} \di x 
+        &amp;= \tfrac{1}{4} \par{\tfrac{3}{2} x - \sin 2x + \tfrac{1}{8} \sin 4x} + C \nl
+        &amp;= \boxed{\tfrac{3}{8} x - \tfrac{1}{4} \sin 2x + \tfrac{1}{32} \sin 4x + C}
         \ea 
         \]
      
@@ -209,44 +197,30 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sec^2 x \tan x \di x\]
+        \[\ds \int \cos^3 x \sin^4 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
             <span class="solution-text">SOLUTION</span> 
             
-<p>
-<span class="label-emph">Solution 1</span>
-            We substitute \(u = \tan x\) because then \(\dd u = \sec^2 x \di x\)
-            and the integral becomes 
-            \[
-            \ba 
-            \int u \di u &amp;= \frac{u^2}{2} + C \nl 
-            &amp;= \boxed{\frac{\tan^2 x}{2} + C} 
-            \ea 
-            \]
-        </p>
-<p>
-<span class="label-emph">Solution 2</span>
-            We rewrite the integral as 
-            \[\int \sec x \sec x \tan x \di x \period\]
-            Then we substitute 
-            \[
-            \ba 
-            u &amp;= \sec x \nl 
-            \dd u &amp;= \sec x \tan x \di x \period 
-            \ea 
-            \]
-            The integral then becomes 
-            \[
-            \ba 
-            \int u \di u &amp;= \frac{u^2}{2} + C \nl 
-            &amp;= \boxed{\frac{\sec^2 x}{2} + C} 
-            \ea 
-            \]
-        </p>
- 
+        Cosine's power is odd, so we preserve an extra factor \(\cos x.\)
+        We then use \(\cos^2 x = 1 - \sin^2 x\) to rewrite the integrand in terms of sine:
+        \[
+        \int \cos^2 x \sin^4 x \cos x \di x 
+        = \int (1 - \sin^2 x) \sin^4 x \cos x \di x \pd 
+        \]
+        We let \(u = \sin x\) because then \(\dd u = \cos x \di x\) 
+        and so the integral becomes 
+        \[
+        \ba 
+        \int (1 - u^2) \, u^4 \di u 
+        &amp;= \int \par{u^4 - u^6} \di u \nl 
+        &amp;= \tfrac{1}{5} u^5 - \tfrac{1}{7} u^7 + C \nl 
+        &amp;= \boxed{\tfrac{1}{5} \sin^5 x - \tfrac{1}{7} \sin^7 x + C}
+        \ea 
+        \]
+     
         </div> 
        </div>  
    </div> 
@@ -256,32 +230,35 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sec^3 x \tan^3 x \di x\]
+        \[\ds \int \sin^2 x \cos^2 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-7"> 
             <span class="solution-text">SOLUTION</span> 
-            
-        The power of tangent is odd, so we preserve the extra factor \(\sec x \tan x \col\) 
-        \[\int \sec x \tan x \sec^2 x \tan^2 x \di x \period\]
-        We now use \(\tan^2 x = \sec^2 x - 1\) to find 
-        \[\int \sec x \tan x \sec^2 x (\sec^2 x - 1) \di x \period\]
-        We now substitute 
+               
+        Since sine and cosine both have even powers, 
+        let's write the integrand fully in terms of cosine 
+        by using \(\sin^2 x = 1 - \cos^2 x \col\)
         \[
-        \ba 
-        u &amp;= \sec x \nl 
-        \dd u &amp;= \sec x \tan x \di x \period 
-        \ea 
+        \int \par{1 - \cos^2 x} \cos^2 x \di x 
+        = \int \par{\cos^2 x - \cos^4 x} \di x \pd
         \]
-        The integral then becomes 
+        In 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-int-cos2-area" target="_blank">Example 3</a>
+        and 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-int-cos-4" target="_blank">Example 4</a>,
+        we found 
         \[
-        \ba 
-        \int u^2 \, (u^2 - 1) \di u 
-        &amp;= \int u^4 - u^2 \di u \nl 
-        &amp;= \frac{u^5}{5} - \frac{u^3}{3} + C \nl 
-        &amp;= \boxed{\frac{\sec^5 x}{5} - \frac{\sec^3 x}{3} + C}
-        \ea 
+        \ba
+        \int \cos^2 x \di x &amp;= \tfrac{1}{2} x + \tfrac{1}{4} \sin 2x + C \cma \nl
+        \int \cos^4 x \di x &amp;= \tfrac{3}{8} x + \tfrac{1}{4} \sin 2x + \tfrac{1}{32} \sin 4x + C \pd
+        \ea
+        \]
+        Thus, the integral is
+        \[
+        \par{\tfrac{1}{2} x + \tfrac{1}{4} \sin 2x} - \par{\tfrac{3}{8} x + \tfrac{1}{4} \sin 2x + \tfrac{1}{32} \sin 4x} + C \nl 
+        = \boxed{\tfrac{1}{8} x - \tfrac{1}{32} \sin 4x + C}
         \]
      
         </div> 
@@ -293,37 +270,27 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sin^5 x \sec^6 x \di x\]
+        \[\ds \int \sec^3 x \tan^3 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The integral is equivalent to 
-        \[\int \tan^5 x \sec x \di x \period\]
-        Since the power of tangent is odd, we save the factor \(\sec x \tan x\) 
-        and use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factoring in terms of \(\sec x \col\)
+        Tangent's power is odd, so we preserve an extra factor \(\sec x \tan x\)
+        and use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of secants:
+        \[\int \sec^2 x \tan^2 x \sec x \tan x \di x 
+        = \int \sec^2 x (\sec^2 x - 1) \sec x \tan x \di x \pd\]
+        To strip the extra factor \(\sec x \tan x,\)
+        we substitute \(u = \sec x\)
+        because then \(\dd u = \sec x \tan x \di x.\)
+        The integral is now 
         \[
         \ba 
-        \int \tan^5 x \sec x \di x &amp;= \int \tan^4 x \sec x \tan x \di x \nl 
-        &amp;= \int (\sec^2 x - 1)^2 \sec x \tan x \di x \period 
-        \ea 
-        \]
-        We now substitute 
-        \[
-        \ba 
-        u &amp;= \sec x \nl 
-        \dd u &amp;= \sec x \tan x \di x \period 
-        \ea 
-        \]
-        The integral becomes 
-        \[
-        \ba 
-        \int (u^2 - 1)^2 \di u 
-        &amp;= \int u^4 - 2u^2 + 1 \di u \nl 
-        &amp;= \frac{u^5}{5} - \frac{2u^3}{3} + u + C \nl 
-        &amp;= \boxed{\frac{\sec^5 x}{5} - \frac{2 \sec^3 x}{3} + \sec x + C}
+        \int u^2 \, (u^2 - 1) \di u 
+        &amp;= \int \par{u^4 - u^2} \di u \nl 
+        &amp;= \tfrac{1}{5} u^5 - \tfrac{1}{3} u^3 + C \nl 
+        &amp;= \boxed{\tfrac{1}{5} \sec^5 x- \tfrac{1}{3} \sec^3 x + C}
         \ea 
         \]
      
@@ -336,30 +303,42 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sec^4 x \di x\]
+        \[\ds \int \sec^2 x \tan x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We rewrite the integral as 
-        \[\int \sec^2 x (1 + \tan^2 x) \di x \period\]
-        We now substitute
-        \[
-        \ba 
-        u &amp;= \tan x \nl 
-        \dd u &amp;= \sec^2 x \di x \period
-        \ea 
-        \]
-        The integral then becomes 
-        \[
-        \ba 
-        \int 1 + u^2 \di u 
-        &amp;= u + \frac{u^3}{3} + C \nl 
-        &amp;= \boxed{\tan x + \frac{\tan^3 x}{3} + C}
-        \ea 
-        \]
+        The power of secant is even, and the power of tangent is odd.
+        We therefore have two ways to evaluate the integral.
+        <p>
+<span class="label-emph">Solution 1</span>
+            We substitute \(u = \tan x\) because then \(\dd u = \sec^2 x \di x\)
+            and the integral becomes 
+            \[
+            \ba 
+            \int u \di u &amp;= \tfrac{1}{2} u^2 + C \nl 
+            &amp;= \boxed{\tfrac{1}{2} \tan^2 x + C} 
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Solution 2</span>
+            We rewrite the integral as 
+            \[\int \sec x \sec x \tan x \di x \pd\]
+            Then we substitute \(u = \sec x\)
+            so that \(\dd u = \sec x \tan x \di x.\)
+            The integral then becomes 
+            \[
+            \ba 
+            \int u \di u &amp;= \tfrac{1}{2} u^2 + C \nl 
+            &amp;= \boxed{\tfrac{1}{2} \sec^2 x + C} 
+            \ea 
+            \]
+        </p>
+        Both answers are valid antiderivatives; 
+        they therefore only differ by a constant.
      
         </div> 
        </div>  
@@ -370,43 +349,62 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \csc^4 x \cot x \di x\]
+        \[\ds \int \sec^6 x \tan^3 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Since the power of cosecant is even, we keep an extra factor \(\csc^2 x\)
-        and use \(\csc^2 x = 1 + \cot^2 x \col\)
-        \[
-        \ba 
-        \int \csc^4 x \cot x \di x &amp;=
-        \int \csc^2 x \csc^2 x \cot x \di x \nl 
-        &amp;= \int \csc^2 x (1 + \cot^2 x) \cot x \di x \period 
-        \ea 
-        \]
-        We now substitute 
-        \[
-        \ba 
-        u &amp;= \cot x \nl 
-        \dd u &amp;= - \csc^2 x \di x \period 
-        \ea 
-        \]
-        The integral then becomes 
-        \[
-        \ba 
-        - \int (1 + u^2) \, u \di u 
-        &amp;= \int -u -u^3 \di u \nl 
-        &amp;= -\frac{u^2}{2} - \frac{u^4}{4} + C \nl 
-        &amp;= \boxed{- \frac{\cot^2 x}{2} - \frac{\cot^4 x}{4} + C}
-        \ea 
-        \]
-        An alternative solution is writing the integral as 
-        \[\int \csc^3 x \csc x \cot x \di x \period\]
-        Substituting \(u = \csc x,\) we get \(\dd u = - \csc x \cot x \di x\)
-        and the integral becomes 
-        \[\int -u^3 \di u = -\frac{u^4}{4} + C = \boxed{\frac{\csc^4 x}{4} + C}\]
+        The power of secant is even, and the power of tangent is odd.
+        We therefore have two ways to evaluate the integral.
+        <p>
+<span class="label-emph">Solution 1</span>
+            We conserve an extra factor \(\sec^2 x\)
+            and use \(\sec^2 x = \tan^2 x + 1\)
+            to reexpress the remaining factors in terms of tangents:
+            \[
+            \ba 
+            \int \sec^6 x \tan^3 x \di x 
+            &amp;= \int \sec^4 x \tan^3 x \sec^2 x \di x \nl 
+            &amp;= \int (\tan^2 x + 1)^2 \tan^3 x \sec^2 x \di x \pd
+            \ea     
+            \]
+            Substituting \(u = \tan x\) enables us to clear the extra \(\sec^2 x,\)
+            given that \(\dd u = \sec^2 x \di x.\)
+            Then the integral becomes 
+            \[
+            \ba 
+            \int \par{u^2 + 1}^2 \, u^3 \di u 
+            &amp;= \int \par{u^7 + 2u^5 + u^3} \di u \nl 
+            &amp;= \tfrac{1}{8} u^8 + \tfrac{1}{3} u^6 + \tfrac{1}{4} u^4 + C \nl 
+            &amp;= \boxed{\tfrac{1}{8} \tan^8 x + \tfrac{1}{3} \tan^6 x + \tfrac{1}{4} \tan^4 x + C}
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Solution 2</span>
+            Conserving an extra factor \(\sec x \tan x\)
+            and using \(\tan^2 x = \sec^2 x - 1\)
+            to reexpress the remaining factors in terms of secants,
+            we rewrite the integral as 
+            \[\int \sec^5 x \tan^2 x \sec x \tan x \di x
+            = \int \sec^5 x \par{\sec^2 x - 1} \sec x \tan x \di x \pd
+            \]
+            Substituting \(u = \sec x,\)
+            we have \(\dd u = \sec x \tan x \di x\)
+            and so the integral becomes 
+            \[
+            \ba 
+            \int u^5 \par{u^2 - 1} \di u 
+            &amp;= \int \par{u^7 - u^5} \di u \nl 
+            &amp;= \tfrac{1}{8} u^8 - \tfrac{1}{6} u^6 + C \nl 
+            &amp;= \boxed{\tfrac{1}{8} \sec^8 x - \tfrac{1}{6} \sec^6 x + C}
+            \ea 
+            \]
+        </p>
+        Both answers are valid antiderivatives; 
+        they therefore only differ by a constant.
      
         </div> 
        </div>  
@@ -417,30 +415,35 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \csc^4 x \cot^3 x \di x\]
+        \[\ds \int \frac{\cos^3 \theta}{\sin \theta} \di \theta\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-11"> 
             <span class="solution-text">SOLUTION</span> 
-            
-        The power of cosecant is even, so we save an extra factor \(\csc^2 x\)
-        and use \(\csc^2 x = 1 + \cot^2 x\) to express the remaining factors in terms of \(\cot x \col\)
+               
+        This integral is unorthodox, 
+        but we take some inspiration from the strategy 
+        we devised to evaluate \(\int \sin^m x \cos^n x \di x.\)
+        Cosine's power is odd, 
+        so we conserve an extra factor \(\cos \theta\)
+        and use \(\cos^2 \theta\) \(= 1 - \sin^2 \theta\)
+        to express the remaining factors in terms of sines:
         \[
-        \int \csc^2 x \csc^2 x \cot^3 x \di x 
-        = \int \csc^2 x (1 + \cot^2 x) \cot^3 x \di x \period 
+        \int \frac{\cos^2 \theta \cos \theta}{\sin \theta} \di \theta 
+        = \int \frac{(1 - \sin^2 \theta) \cos \theta}{\sin \theta} \di \theta \pd
         \]
-        Substituting \(u = \cot x\) gives \(\dd u = - \csc^2 x \di x\) and so the integral becomes 
+        Substituting \(u = \sin \theta,\) we get \(\dd u = \cos \theta \di \theta\)
+        and so the integral becomes 
         \[
         \ba 
-        -\int (1 + u^2) u^3 \di u 
-        &amp;= \int -u^3 - u^5 \di u \nl 
-        &amp;= -\frac{u^4}{4} - \frac{u^6}{6} + C \nl 
-        &amp;= \boxed{-\frac{\cot^4 x}{4} - \frac{\cot^6 x}{6} + C}
+        \int \frac{1 - u^2}{u} \di u 
+        &amp;= \int \par{\frac{1}{u} - u} \di u \nl 
+        &amp;= \ln \abs{u} - \tfrac{1}{2} u^2 + C \nl 
+        &amp;= \boxed{\ln \abs{\sin \theta} - \tfrac{1}{2} \sin^2 \theta + C}
         \ea 
         \]
-        <!--add alternate solution-->
- 
+     
         </div> 
        </div>  
    </div> 
@@ -450,39 +453,33 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \tan^3 x \di x\]
+        \[\ds \int \frac{\sin^4 \theta}{\cos \theta} \di \theta\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-12"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We rewrite the integral as 
+<aside class="box-recall">
+            \(\int \sec \theta \di \theta\)
+            \(= \ln \abs{\sec \theta + \tan \theta} + C\)
+        </aside>
+        This integral is unorthodox, 
+        but we take some inspiration from the strategy 
+        we devised to evaluate \(\int \sin^m x \cos^n x \di x.\)
+        The power of sine is even, so 
+        we rewrite \(\sin^4 \theta\) as \((1 - \cos^2 \theta)^2\) to get
         \[
-        \ba 
-        \int \tan x \tan^2 x \di x 
-        &amp;= \int \tan x \left(\sec^2 x - 1\right) \di x \nl
-        &amp;= \int \tan x \sec^2 x \di x - \int \tan x \di x \period 
-        \ea 
+        \ba
+        \int \frac{(1 - \cos^2 \theta)^2}{\cos \theta} \di \theta 
+        &amp;= \int \frac{1 - 2 \cos^2 \theta + \cos^4 \theta}{\cos \theta} \di \theta \nl 
+        &amp;= \int \par{\sec \theta - 2 \cos \theta + \cos^3 \theta} \di \theta \nl 
+        &amp;= \ln \abs{\sec \theta + \tan \theta} - 2 \sin \theta + \sin \theta - \tfrac{1}{3} \sin^3 \theta + C \nl 
+        &amp;= \boxed{\ln \abs{\sec \theta + \tan \theta} - \sin \theta - \tfrac{1}{3} \sin^3 \theta + C}
+        \ea
         \]
-        The right integral is \(\int \tan x \di x = \ln \abs{\sec x} + C,\)
-        and we write the left integral as 
-        \[\int \sec x \cdot \sec x \tan x \di x \period \]
-        Substituting \(u = \sec x,\) we get \(\dd u = \sec x \tan x \di x\)
-        and the integral becomes 
-        \[
-        \ba 
-        \int u \di u &amp;= \frac{u^2}{2} + C \nl 
-        &amp;= \frac{\sec^2 x}{2} + C \period 
-        \ea 
-        \]
-        Therefore, 
-        \[
-        \ba 
-        \int \tan^3 x \di x &amp;= \int \tan x \sec^2 x \di x - \int \tan x \di x \nl 
-        &amp;= \boxed{\frac{\sec^2 x}{2} - \ln \abs{\sec x} + C}
-        \ea 
-        \]
+        (We evaluated \(\int \cos^3 \theta \di \theta\) in 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-int-cos3" target="_blank">Example 1</a>.)
      
         </div> 
        </div>  
@@ -493,29 +490,1218 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \tan^4 x \di x\]
+        \[\ds \int \sin^5 x \sec^6 x \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We use \(\tan^2 x = \sec^2 x - 1\) to write the integral as   
+        Integrals with sines and secants are unorthodox,
+        yet the integral is equivalent to the orthodox integral
+        \[\int \tan^5 x \sec x \di x \pd\]
+        Since tangent's power is odd, we save an extra factor \(\sec x \tan x\) 
+        and use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of secants:
+        \[
+        \ba 
+        \int \tan^5 x \sec x \di x &amp;= \int \tan^4 x \sec x \tan x \di x \nl 
+        &amp;= \int (\sec^2 x - 1)^2 \sec x \tan x \di x \pd 
+        \ea 
+        \]
+        Substituting \(u = \sec x,\)
+        we have \(\dd u = \sec x \tan x \di x\) 
+        and so the integral becomes
+        \[
+        \ba 
+        \int (u^2 - 1)^2 \di u 
+        &amp;= \int \par{u^4 - 2u^2 + 1} \di u \nl 
+        &amp;= \tfrac{1}{5} u^5 - \tfrac{2}{3} u^3 + u + C \nl 
+        &amp;= \boxed{\tfrac{1}{5} \sec^5 x - \tfrac{2}{3} \sec^3 x + \sec x + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^{\pi/4} \frac{\sin^4 x \tan^2 x}{\cos^8 x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral is equivalent to the standard integral
+        \[\int_0^{\pi/4} \tan^6 x \sec^4 x \di x \pd\]
+        Because secant's power is even, we preserve an extra factor \(\sec^2 x\)
+        and use \(\sec^2 x\) \(= \tan^2 x + 1\) 
+        to reexpress the remaining factors in terms of tangents, as follows:
+        \[\int_0^{\pi/4} \tan^6 x \sec^2 x \sec^2 x \di x = \int_0^{\pi/4} \tan^6 x (\tan^2 x + 1) \sec^2 x \di x \pd\]
+        Substituting \(u = \tan x,\) we have \(\dd u = \sec^2 x \di x.\)
+        When \(x = 0,\) \(u = 0;\) when \(x = \pi/4,\) \(u = 1.\)
+        So the integral becomes
+        \[
+        \ba
+        \int_0^1 u^6 (u^2 + 1) \di u &amp;= \int_0^1 \par{u^8 + u^6} \di u \nl 
+        &amp;= \par{\tfrac{1}{9} u^9 + \tfrac{1}{7} u^7} \intEval_0^1 \nl 
+        &amp;= \boxed{\tfrac{16}{63}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sec^4 x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As secant's power is even, we preserve an extra factor \(\sec^2 x\) 
+        and write the integral as 
+        \[\int (\tan^2 x + 1) \sec^2 x \di x \pd\]
+        Substituting \(u = \tan x,\) we get \(\dd u = \sec^2 x \di x\)
+        and so the integral becomes
+        \[
+        \ba 
+        \int \par{u^2 + 1} \di u 
+        &amp;= \tfrac{1}{3} u^3 + u + C \nl 
+        &amp;= \boxed{\tfrac{1}{3} \tan^3 x + \tan x + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sec^8 t \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Secant's power is even, 
+        so we conserve an extra factor \(\sec^2 t\)
+        and use \(\sec^2 t = \tan^2 t + 1\)
+        to convert the remaining secants in terms of tangents. 
+        The integral therefore becomes 
+        \[\int \sec^6 t \sec^2 t \di t = \int (\tan^2 t + 1)^3 \sec^2 t \di t \pd\]
+        Substituting \(u = \tan t,\)
+        we get \(\dd u= \sec^2 t \di t.\)
+        The integral therefore becomes 
+        \[
+        \ba 
+        \int \par{u^2 + 1}^3 \di u 
+        &amp;= \int \par{u^6 + 3u^4 + 3u^2 + 1} \di u \nl 
+        &amp;= \tfrac{1}{7} u^7 + \tfrac{3}{5} u^5 + u^3 + u + C \nl 
+        &amp;= \boxed{\tfrac{1}{7} \tan^7 t + \tfrac{3}{5} \tan^5 t + \tan^3 t + \tan t + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \csc^8 y \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Cosecant's power is even,
+        so we conserve an extra factor \(\csc^2 y\)
+        and use \(\csc^2 y\) \(= \cot^2 y + 1\)
+        to reexpress the remaining cosecants in terms of cotangents. 
+        Doing so, we get 
+        \[\int \csc^6 y \csc^2 y \di y = \int (\cot^2 y + 1)^3 \csc^2 y \di y \pd\]
+        Substituting \(u = \cot y,\) we have \(\dd u = -\csc^2 y \di y\)
+        and so the integral becomes 
+        \[
+        \ba 
+        -\int \par{u^2 + 1}^3 \di u 
+        &amp;= -\int \par{u^6 + 3u^4 + 3u^2 + 1} \di u \nl 
+        &amp;= -\tfrac{1}{7} u^7 - \tfrac{3}{5} u^5 - u^3 - u + C \nl 
+        &amp;= \boxed{-\tfrac{1}{7} \cot^7 y - \tfrac{3}{5} \cot^5 y - \cot^3 y - \cot y + C}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{\pi/6}^{\pi/3} \frac{1}{\cos^6 \theta} \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral is equivalent to 
+        \[\int_{\pi/6}^{\pi/3} \sec^6 \theta \di \theta \pd\]
+        Secant's power is even, so we conserve an extra factor \(\sec^2 \theta\)
+        and use \(\sec^2 \theta\) \(= \tan^2 \theta + 1\) 
+        to express the remaining factors in terms of tangents. 
+        Doing so, we rewrite the integral as 
+        \[\int_{\pi/6}^{\pi/3} \sec^4 \theta \sec^2 \theta \di \theta 
+        = \int_{\pi/6}^{\pi/3} (\tan^2 \theta + 1)^2 \sec^2 \theta \di \theta \pd\]
+        Substituting \(u = \tan \theta,\) we have \(\dd u = \sec^2 \theta \di \theta.\)
+        When \(\theta = \pi/6,\) \(u = \sqrt{3}/3;\) when \(\theta = \pi/3,\) \(u = \sqrt 3.\)
+        The integral therefore becomes 
+        \[
+        \ba 
+        \int_{\sqrt 3/3}^{\sqrt 3} (u^2 + 1)^2 \di u 
+        &amp;= \int_{\sqrt 3/3}^{\sqrt 3} \par{u^4 + 2u^2 + 1} \di u \nl 
+        &amp;= \par{\tfrac{1}{5} u^5 + \tfrac{2}{3} u^3 + u} \intEval_{\sqrt 3/3}^{\sqrt 3} \nl 
+        &amp;= \boxed{\tfrac{592}{135} \sqrt 3}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \csc^4 x \cot x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Cosecant's power is even 
+        and cotangent's power is odd, 
+        so there are two good ways to evaluate the integral.
+        <p>
+<span class="label-emph">Solution 1</span>
+            We keep an extra factor \(\csc^2 x\)
+            and use \(\csc^2 x = \cot^2 x + 1\) to express the remaining factors in terms of cotangents:
+            \[
+            \ba 
+            \int \csc^4 x \cot x \di x &amp;=
+            \int \csc^2 x \cot x \csc^2 x \di x \nl 
+            &amp;= \int (\cot^2 x + 1) \cot x \csc^2 x \di x \pd 
+            \ea 
+            \]
+            Substituting \(u = \cot x,\) we have \(\dd u = -\csc^2 x \di x\)
+            and so the integral becomes
+            \[
+            \ba 
+            \int [-(u^2 + 1) \, u] \di u 
+            &amp;= \int \par{-u^3 - u} \di u \nl 
+            &amp;= -\tfrac{1}{4} u^4 - \tfrac{1}{2} u^2 + C \nl 
+            &amp;= \boxed{-\tfrac{1}{4} \cot^4 x - \tfrac{1}{2} \cot^2 x + C}
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Solution 2</span>
+            We rewrite the integral as 
+            \[\int \csc^3 x \csc x \cot x \di x \pd\]
+            Substituting \(u = \csc x,\) we get \(\dd u = - \csc x \cot x \di x\)
+            and the integral becomes 
+            \[-\int u^3 \di u = -\tfrac{1}{4} u^4 + C = \boxed{-\tfrac{1}{4} \csc^4 x + C}\]
+        </p>
+        Both answers are valid antiderivatives; 
+        they therefore only differ by a constant.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \csc^4 x \cot^3 x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The power of cosecant is even, so we save an extra factor \(\csc^2 x\)
+        and use \(\csc^2 x = \cot^2 x + 1\) to express the remaining factors in terms of \(\cot x \col\)
+        \[
+        \int \csc^2 x \cot^3 x \csc^2 x \di x 
+        = \int (\cot^2 x + 1) \cot^3 x \csc^2 x \di x \pd 
+        \]
+        Substituting \(u = \cot x\) gives \(\dd u = - \csc^2 x \di x\) and so the integral becomes 
+        \[
+        \ba 
+        \int [-(u^2 + 1) \, u^3] \di u 
+        &amp;= \int \par{-u^5 - u^3} \di u \nl 
+        &amp;= - \tfrac{1}{6} u^6 - \tfrac{1}{4} u^4 + C \nl 
+        &amp;= \boxed{-\tfrac{1}{6} \cot^6 x - \tfrac{1}{4} \cot^4 x + C}
+        \ea 
+        \]
+        <!--add alternate solution-->
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \tan^3 x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using \(\tan^2 x\) \(= \sec^2 x - 1,\) we rewrite the integral as 
+        \[
+        \ba 
+        \int \tan x \tan^2 x \di x 
+        &amp;= \int \tan x \left(\sec^2 x - 1\right) \di x \nl
+        &amp;= \int \tan x \sec^2 x \di x - \int \tan x \di x \pd 
+        \ea 
+        \]
+        The right integral is \(\int \tan x \di x = \ln \abs{\sec x} + C,\)
+        and we write the left integral as 
+        \[\int \sec x \sec x \tan x \di x \pd \]
+        Substituting \(u = \sec x,\) we get \(\dd u = \sec x \tan x \di x\)
+        and the integral becomes 
+        \[
+        \ba 
+        \int u \di u &amp;= \tfrac{1}{2} u^2 + C \nl 
+        &amp;= \tfrac{1}{2} \sec^2 x + C \pd 
+        \ea 
+        \]
+        Therefore, 
+        \[
+        \int \tan^3 x \di x = \boxed{\tfrac{1}{2} \sec^2 x - \ln \abs{\sec x} + C} 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \tan^4 x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using \(\tan^2 x = \sec^2 x - 1,\) we rewrite the integral as   
         \[
         \ba 
         \int \tan^2 x \tan^2 x \di x 
         &amp;= \int \tan^2 x (\sec^2 x - 1) \di x \nl 
         &amp;= \int \tan^2 x \sec^2 x \di x - \int \tan^2 x \di x \nl 
-        &amp;= \int \tan^2 x \sec^2 x \di x - \int \sec^2 x \di x + \int \di x \period
+        &amp;= \int \tan^2 x \sec^2 x \di x - \int \sec^2 x \di x + \int \dd x \pd
         \ea 
         \]
         To evaluate \(\int \tan^2 x \sec^2 x \di x,\)
-        we let \(u = \tan x\) because then \(\dd u = \sec^2 x \di x\) 
-        and the integral becomes \(\int u^2 \di u = \frac{1}{3} u^3 + C = \frac{1}{3} \tan^3 x + C.\)
-        Therefore, 
+        we let \(u = \tan x\) because then \(\dd u = \sec^2 x \di x;\)
+        that is, we have
+        \[\int u^2 \di u = \tfrac{1}{3} u^3 + C = \tfrac{1}{3} \tan^3 x + C \pd\] 
+        Since \(\textderiv{}{x} (\tan x)\) \(= \sec^2 x,\)
+        we have
         \[
-        \int \tan^2 x \sec^2 x \di x - \int \sec^2 x \di x + \int \di x
-        = \boxed{\frac{\tan^3 x}{3} - \tan x + x + C}
+        \int \tan^4 x \di x = \boxed{\tfrac{1}{3} \tan^3 x - \tan x + x + C}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \cos 14 \theta \cos 4 \theta \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a sum, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\cos(14 \theta - 4 \theta) + \cos(14 \theta + 4 \theta)] \di \theta 
+        &amp;= \tfrac{1}{2} \int \par{\cos 10 \theta + \cos 18 \theta} \di \theta \nl 
+        &amp;= \boxed{\tfrac{1}{20} \sin 10 \theta + \tfrac{1}{36} \sin 18 \theta + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin 10t \sin 5t \di t\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a difference, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\cos(10t - 5t) - \cos(10t + 5t)] \di t 
+        &amp;= \tfrac{1}{2} \int (\cos 5t - \cos 15t) \di t \nl  
+        &amp;= \boxed{\tfrac{1}{10} \sin 5t - \tfrac{1}{30} \sin 15t + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \cos 8 x \cos 10 x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a sum, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\cos(8 x - 10 x) + \cos(8 x + 10 x)] \di x 
+        &amp;= \tfrac{1}{2} \int [\cos (-2 x) + \cos 18 x] \di x \nl 
+        &amp;= -\tfrac{1}{4} \sin (-2 x) + \tfrac{1}{36} \sin 18 x + C \nl 
+        &amp;= \boxed{\tfrac{1}{4} \sin 2 x + \tfrac{1}{36} \sin 18 x + C}
+        \ea
+        \]
+        Note that \(\sin(-2x)\) \(= -\sin 2x\)
+        because sine is an odd function.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin 8x \cos 6x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a sum, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\sin(8x - 6x) + \sin(8x + 6x)] \di x 
+        &amp;= \tfrac{1}{2} \int \par{\sin 2x + \sin 14x} \di x \nl 
+        &amp;= \boxed{-\tfrac{1}{4} \cos 2x - \tfrac{1}{28} \cos 14x + C} 
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin 5x \cos 11x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a sum, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\sin(5x - 11x) + \sin(5x + 11x)] \di x 
+        &amp;= \tfrac{1}{2} \int [\sin(-6x) + \sin 16x] \di x \nl 
+        &amp;= \tfrac{1}{12} \cos(-6x) - \tfrac{1}{32} \cos 16x + C \nl 
+        &amp;= \boxed{\tfrac{1}{12} \cos 6x - \tfrac{1}{32} \cos 16x + C}
+        \ea
+        \]
+        The last step is true because cosine is even and so \(\cos(-6x)\) \(= \cos 6x.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin 20y \sin 2y \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a difference, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\cos(20y - 2y) - \cos(20y + 2y)] \di y 
+        &amp;= \tfrac{1}{2} \int (\cos 18y - \cos 22y) \di y \nl  
+        &amp;= \boxed{\tfrac{1}{36} \sin 18y - \tfrac{1}{44} \sin 22y + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \cos x \sin 7x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Rewriting the product of trigonometric functions 
+        as a sum, we get 
+        \[
+        \ba 
+        \tfrac{1}{2} \int [\sin(7x - x) + \sin(7x + x)] \di x 
+        &amp;= \tfrac{1}{2} \int (\sin 6x + \sin 8x) \di x \nl 
+        &amp;= \boxed{-\tfrac{1}{12} \cos 6x - \tfrac{1}{16} \cos 8x + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{1}{1 - \cos \theta} \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Multiplying the numerator and denominator each by the conjugate, \((1 + \cos \theta),\)
+        we see 
+        \[
+        \ba 
+        \int \frac{1}{1 - \cos \theta} \di \theta 
+        &amp;= \int \frac{1}{1 - \cos \theta} \par{\frac{1 + \cos \theta}{1 + \cos \theta}} \di \theta \nl 
+        &amp;= \int \frac{1 + \cos \theta}{1 - \cos^2 \theta} \di \theta \nl 
+        &amp;= \int \frac{1 + \cos \theta}{\sin^2 \theta} \di \theta \nl 
+        &amp;= \int \par{\csc^2 \theta + \csc \theta \cot \theta} \di \theta \nl 
+        &amp;= \boxed{-\cot \theta - \csc \theta + C}
+        \ea     
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\cos 2 \theta}{\sin^4 \theta} \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the double-angle identity for cosine, the integral becomes 
+        \[
+        \ba 
+        \int \frac{\cos^2 \theta - \sin^2 \theta}{\sin^4 \theta} \di \theta 
+        &amp;= \int \par{\csc^2 \theta \cot^2 \theta - \csc^2 \theta} \di \theta \nl 
+        &amp;= \cot \theta + \int \csc^2 \theta\ \cot^2 \theta \di \theta \pd
+        \ea
+        \]
+        To evaluate \(\int \csc^2 \theta \cot^2 \theta \di \theta,\)
+        we substitute \(u = \cot \theta.\)
+        Then \(\dd u = -\csc^2 \theta \di \theta\)
+        and so the integral becomes
+        \[
+        \ba
+        - \int u^2 \di u
+        &amp;= -\tfrac{1}{3} u^3 + C \nl 
+        &amp;= -\tfrac{1}{3} \cot^3 \theta + C \pd
+        \ea 
+        \]
+        So
+        \[\int \frac{\cos 2 \theta}{\sin^4 \theta} \di \theta = 
+        \boxed{\cot \theta -\tfrac{1}{3} \cot^3 \theta + C}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{1}{\sin x \sin 2x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-recall">
+            \(\int \sec \theta \di \theta\)
+            \(= \ln \abs{\sec \theta + \tan \theta} + C\)
+        </aside>
+        The double-angle identity for sine gives \(\sin 2x = 2 \sin x \cos x.\)
+        The integral therefore becomes 
+        \[\int \frac{1}{2 \sin^2 x \cos x} \di x \pd\]
+        When sine and cosine factors are built up in the denominator, 
+        it is a good idea to use the Pythagorean identity to split the fraction.
+        Observe that 
+        \[
+        \ba 
+        \frac{1}{2 \sin^2 x \cos x}
+        &amp;= \frac{\sin^2 x}{2 \sin^2 x \cos x} + \frac{\cos^2 x}{2 \sin^2 x \cos x} \nl 
+        &amp;= \frac{1}{2 \cos x} + \frac{\cos x}{2 \sin^2 x} \nl 
+        &amp;= \tfrac{1}{2} \sec x + \tfrac{1}{2} \csc x \cot x \pd
+        \ea     
+        \]
+        So the integral becomes 
+        \[
+        \int \par{\tfrac{1}{2} \sec x + \tfrac{1}{2} \csc x \cot x} \di x 
+        = \boxed{\tfrac{1}{2} \ln \abs{\sec x + \tan x} - \tfrac{1}{2} \csc x + C}  
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \tan^3 \theta \csc^5 \theta \di \theta\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<aside class="box-recall">
+            \(\int \sec \theta \di \theta\)
+            \(= \ln \abs{\sec \theta + \tan \theta} + C\)
+        </aside>
+        Integrals with products of tangent and cosecant 
+        are unorthodox. 
+        Instead, let's convert the integrand into sines and cosines:
+        \[
+        \int \frac{\sin^3 \theta}{\cos^3 \theta} \, \frac{1}{\sin^5 \theta} \di \theta 
+        = \int \frac{1}{\sin^2 \theta \cos^3 \theta} \di \theta \pd
+        \]
+        When factors of sines and cosines are accumulated in the denominator, 
+        it is helpful to use the Pythagorean identity to split the fraction. 
+        Then the integral becomes
+        \[
+        \ba 
+        \int \par{\frac{\sin^2 \theta}{\sin^2 \theta \cos^3 \theta} + \frac{\cos^2 \theta}{\sin^2 \theta \cos^3 \theta}} \di \theta
+        &amp;= \int \par{\sec^3 \theta + \frac{1}{\sin^2 \theta \cos \theta}} \di \theta \nl
+        &amp;= \int \par{\sec^3 \theta + \frac{\sin^2 \theta}{\sin^2 \theta \cos \theta} + \frac{\cos^2 \theta}{\sin^2 \theta \cos \theta}} \di \theta \nl 
+        &amp;= \int \par{\sec^3 \theta + \sec \theta + \csc \theta \cot \theta} \di \theta \pd 
+        \ea 
+        \] 
+        By the result of 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3" target="_blank">Example 12</a>,
+        the integral becomes
+        \[
+        \par{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{1}{2} \ln \abs{\sec \theta + \tan \theta}} 
+        + \par{\ln \abs{\sec \theta + \tan \theta}} - (\csc \theta) + C \pd 
+        \]
+        Simplifying gives
+        \[
+        \boxed{\tfrac{1}{2} \sec \theta \tan \theta + \tfrac{3}{2} \ln \abs{\sec \theta + \tan \theta} - \csc \theta + C}
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{1}{\sin^4 y \cos^4 y} \di y\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because sines and cosines are built up in the denominator, 
+        we use the Pythagorean identity to split the fraction, as follows:
+        \[
+        \ba 
+        \int \frac{1}{\sin^4 y \cos^4 y} \di y
+        &amp;= \int \par{\frac{\sin^2 y}{\sin^4 y \cos^4 y} + \frac{\cos^2 y}{\sin^4 y \cos^4 y}} \di y \nl 
+        &amp;= \int \par{\frac{1}{\sin^2 y \cos^4 y} + \frac{1}{\sin^4 y \cos^2 y}} \di y \nl 
+        &amp;= \int \par{\frac{\sin^2 y}{\sin^2 y \cos^4 y} + \frac{\cos^2 y}{\sin^2 y \cos^4 y} 
+        + \frac{\sin^2 y}{\sin^4 y \cos^2 y} + \frac{\cos^2 y}{\sin^4 y \cos^2 y}} \di y \nl
+        &amp;= \int \par{\sec^4 y + \frac{1}{\sin^2 y \cos^2 y} + \frac{1}{\sin^2 y \cos^2 y} + \csc^4 y} \di y \nl 
+        &amp;= \int \par{\sec^4 y + \frac{2}{\sin^2 y \cos^2 y} + \csc^4 y} \di y \pd
+        \ea 
+        \]
+        Note that
+        \[
+        \ba 
+        \int \sec^4 y \di y &amp;= \tan y + \tfrac{1}{3} \tan^3 y + C \cma \nl 
+        \int \csc^4 y \di y &amp;= -\cot y - \tfrac{1}{3} \cot^3 y + C \pd
+        \ea 
+        \]
+        Using these answers and the result of 
+        <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-int-denom-sin-cos-2" target="_blank">Example 14</a>, 
+        the integral becomes 
+        \[\par{\tan y + \tfrac{1}{3} \tan^3 y} + 
+        \par{2 \tan y - 2 \cot y}
+        + \par{- \cot y - \tfrac{1}{3} \cot^3 y} + C \pd\]
+        Simplifying gives a final answer of
+        \[\boxed{\tfrac{1}{3} \tan^3 y - \tfrac{1}{3} \cot^3 y + 3 \tan y - 3 \cot y + C}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_{\pi/6}^{\pi/4} \sqrt{1 + \cos x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        In the square root, we multiply the numerator and denominator each by the conjugate, \((1 - \cos x).\)
+        The integral therefore becomes 
+        \[
+        \ba
+        \int_{\pi/6}^{\pi/4} \sqrt{(1 + \cos x) \, \frac{1 - \cos x}{1 - \cos x}} \di x 
+        &amp;= \int_{\pi/6}^{\pi/4} \sqrt{\frac{1 - \cos^2 x}{1 - \cos x}} \di x \nl 
+        &amp;= \int_{\pi/6}^{\pi/4} \sqrt{\frac{\sin^2 x}{1 - \cos x}} \di x \nl 
+        &amp;= \int_{\pi/6}^{\pi/4} \frac{\abs{\sin x}}{\sqrt{1 - \cos x}} \di x \nl 
+        &amp;= \int_{\pi/6}^{\pi/4} \frac{\sin x}{\sqrt{1 - \cos x}} \di x \pd
+        \ea
+        \]
+        We drop the absolute value bars because \(\sin x \gt 0\) for \(x \in (\pi/6, \pi/4).\)
+        Substituting \(u = 1 - \cos x,\) we have \(\dd u = \sin x \di x.\)
+        When \(x = \pi/6,\) \(u = 1 - \sqrt{3}/2;\) 
+        when \(x = \pi/4,\) \(u = 1 - \sqrt{2}/2.\)
+        So the integral becomes 
+        \[
+        \ba
+        \int_{1 - \sqrt{3}/2}^{1 - \sqrt{2}/2} \frac{1}{\sqrt u} \di u
+        &amp;= 2 \sqrt u \intEval_{1 - \sqrt{3}/2}^{1 - \sqrt{2}/2} \nl 
+        &amp;= \boxed{2 \sqrt{1 - \frac{\sqrt 2}{2}} - 2 \sqrt{1 - \frac{\sqrt 3}{2}}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Calculate the average value of \(f(x) = \tan^5 x \sec^3 x\) 
+        on \(0 \leq x \leq \pi/4.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The average value 
+        (see Section
+        <a href="/ValCalc/ValCalc/calculus/5.6-Average-Value-of-a-Function.html">5.6</a>)
+        is given by 
+        \[
+        \avg f = \frac{1}{\pi/4 - 0} \int_0^{\pi/4} f(x) \di x 
+        = \frac{4}{\pi} \int_0^{\pi/4} \tan^5 x \sec^3 x \di x \pd
+        \]
+        We conserve an extra factor \(\sec x \tan x\) and reexpress the integrand in terms of secant, as follows:
+        \[
+        \ba 
+        \avg f &amp;= \frac{4}{\pi} \int_0^{\pi/4} \sec^2 x \tan^4 x \sec x \tan x \di x \nl 
+        &amp;= \frac{4}{\pi} \int_0^{\pi/4} \sec^2 x (\sec^2 x - 1)^2 \sec x \tan x \di x \pd
+        \ea 
+        \]
+        Substituting \(u = \sec x,\) we get \(\dd u = \sec x \tan x \di x.\)
+        When \(x = 0,\) \(u = 1;\) when \(x = \pi/4,\) \(u = \sqrt 2.\)
+        We therefore have 
+        \[
+        \ba 
+        \avg f &amp;= \frac{4}{\pi} \int_1^{\sqrt 2} u^2 (u^2 - 1)^2 \di u \nl 
+        &amp;= \frac{4}{\pi} \int_1^{\sqrt 2} \par{u^6 - 2u^4 + u^2} \di u \nl 
+        &amp;= \frac{4}{\pi} \, \par{\tfrac{1}{7} u^7 - \tfrac{2}{5} u^5 + \tfrac{1}{3} u^3} \intEval_1^{\sqrt 2} \nl 
+        &amp;= \boxed{\frac{88 \sqrt 2 - 32}{105 \pi}} \approx 0.280 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(F(x) = 4 \sin 8x \cos 2x\) be the force, 
+        in pounds, exerted upon an object located at a position of \(x\) feet.
+        How much work is required to move an object from \(x = 0\) 
+        to \(x = \pi/4 \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The work done (see Section <a href="/ValCalc/ValCalc/calculus/5.5-Work.html">5.5</a>)
+        is 
+        \[
+        \ba 
+        W &amp;= \int_0^{\pi/4} 4 \sin 8x \cos 2x \di x \nl 
+        &amp;= 4 \int_0^{\pi/4} \sin 8x \cos 2x \di x \nl 
+        &amp;= 4 \int_0^{\pi/4} \tfrac{1}{2} (\sin 6x + \sin 10 x) \di x \nl 
+        &amp;= \par{-\tfrac{1}{3} \cos 6x - \tfrac{1}{5} \cos 10x} \intEval_0^{\pi/4} \nl 
+        &amp;= \boxed{\tfrac{8}{15} \un{ft-lb}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A particle travels along the \(x\)-axis 
+        with time according to the velocity function \(v(t) = \sin^2 2t \cos^3 2t.\)
+        Find the particle's displacement from \(t = 0\) to \(t = T.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The displacement is given by
+        \[D = \int_0^T v(t) \di t = \int_0^T \sin^2 2t \cos^3 2t \di t \pd \]
+        Since cosine's power is odd, we conserve an extra factor \(\cos 2t\)
+        and use \(\cos^2 2t\) \(= 1 - \sin^2 2t\)
+        to reexpress the remaining cosines in terms of sines. 
+        Doing so, we get 
+        \[
+        \ba 
+        D &amp;= \int_0^T \sin^2 2t \cos^2 2t \cos 2t \di t \nl 
+        &amp;= \int_0^T \sin^2 2t (1 - \sin^2 2t) \cos 2t \di t \pd
+        \ea 
+        \]
+        Substituting \(u = \sin 2t,\) we get \(\dd u = 2 \cos 2t \di t.\)
+        When \(t = 0,\) \(u = 0;\) 
+        when \(t = T,\) \(u = \sin 2T.\)
+        The displacement is therefore
+        \[
+        \ba 
+        D &amp;= \tfrac{1}{2} \int_0^{\sin 2T} u^2 (1 - u^2) \di u \nl 
+        &amp;= \tfrac{1}{2} \int_0^{\sin 2T} \par{u^2 - u^4} \di u \nl 
+        &amp;= \par{\tfrac{1}{6} u^3 - \tfrac{1}{10} u^5} \intEval_0^{\sin 2T} \nl 
+        &amp;= \boxed{\tfrac{1}{6} \sin^3 2T - \tfrac{1}{10} \sin^5 2T}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The region enclosed by the function \(y = \asin x\) for \(0 \leq x \leq 1\)
+        is the base of a solid whose cross sections perpendicular to the \(y\)-axis 
+        are equilateral triangles.
+        Calculate the solid's volume.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        See Section 
+        <a href="/ValCalc/ValCalc/calculus/5.2-Volumes-with-Cross-Sections.html">5.2</a>
+        to review calculating volumes with cross sections.
+        Because we know the identity of cross sections perpendicular to the \(y\)-axis, 
+        we express all quantities in terms of \(y.\)
+        We rewrite \(y = \asin x\) as \(x = \sin y\) for \(0 \leq y \leq \pi/2.\)      
+        At each \(y,\) the cross section to the solid perpendicular to the \(y\)-axis 
+        is an equilateral triangle of side length \(x = \sin y.\)
+        The triangle's height is therefore \(x\sqrt{3}/2\) \(= (\sin y) \sqrt 3/2.\)
+        So at each \(y,\) the solid's cross-sectional area perpendicular to the \(y\)-axis is 
+        \[A(y) = \tfrac{1}{2} \par{\sin y} \par{\sin y \frac{\sqrt 3}{2}} = \frac{\sqrt 3}{4} \sin^2 y \pd\]
+        The volume is therefore given by integrating \(A(y)\) from \(y = 0\) to \(y = \pi/2,\) as follows:
+        \[
+        \ba 
+        V &amp;= \int_0^{\pi/2} \frac{\sqrt 3}{4} \sin^2 y \di y \nl 
+        &amp;= \frac{\sqrt 3}{8} \int_0^{\pi/2} \par{1 - \cos 2y} \di y \nl 
+        &amp;= \frac{\sqrt 3}{8} \par{y - \tfrac{1}{2} \sin 2y} \intEval_0^{\pi/2} \nl 
+        &amp;= \boxed{\frac{\pi \sqrt 3}{16}} \approx 0.340 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = \sin 2x \cmaa y = 0 \cmaa x = 0 \cmaa x = \frac{\pi}{4} \scoll \abtAxis{x}\)
+    </blockquote> calculate the volume of the solid generated 
+        upon rotating the bounded region about the specified axis. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The distance from the curve \(y = \sin 2x\) to the \(x\)-axis 
+        is \(r(x) = \sin 2x.\)
+        By the Disk Method 
+        (from Section <a href="/ValCalc/ValCalc/calculus/5.3-Solids-of-Revolution.html">5.3</a>),
+        the solid's volume is therefore 
+        \[
+        V = \pi \int_0^{\pi/4} \sin^2 2x \di x \pd
+        \]
+        By the power-reduction formula for sine, we have 
+        \[\sin^2 2x = \tfrac{1}{2} \par{1 - \cos[2(2x)]} = \tfrac{1}{2} (1 - \cos 4x) \pd\]
+        So the volume becomes 
+        \[
+        \ba 
+        V &amp;= \pi \int_0^{\pi/4} \tfrac{1}{2} (1 - \cos 4x) \di x \nl 
+        &amp;= \frac{\pi}{2} \int_0^{\pi/4} (1 - \cos 4x) \di x \nl 
+        &amp;= \frac{\pi}{2} \par{x - \tfrac{1}{4} \sin 4x} \intEval_0^{\pi/4} \nl 
+        &amp;= \boxed{\frac{\pi^2}{8}} \approx 1.234 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = \atan x \cmaa y = 0 \cmaa x = -2 \cmaa x = 1 \scoll \abt{x = -2}\)
+    </blockquote> calculate the volume of the solid generated 
+        upon rotating the bounded region about the specified axis. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        When we rotate a region about a vertical line using the Disk Method, 
+        we want to express all quantities in terms of \(y.\)
+        Let's first rewrite the equation of the curve as \(x = \tan y.\)
+        When \(x = 1,\) \(y = \pi/4.\)
+        At any \(y,\) the distance between the curve \(x = \tan y\)
+        and the line \(x = -2\) is \(r(y) = \tan y + 2.\)
+        So the volume is 
+        \[
+        \ba 
+        V &amp;= \pi \int_0^{\pi/4} (\tan y + 2)^2 \di y \nl 
+        &amp;= \pi \int_0^{\pi/4} \par{\tan^2 y + 4 \tan y + 4} \di y \nl 
+        &amp;= \pi \int_0^{\pi/4} \par{\sec^2 y - 1 + 4 \tan y + 4} \di y \nl 
+        &amp;= \pi \int_0^{\pi/4} \par{\sec^2 y + 4 \tan y + 3} \di y \nl 
+        &amp;= \pi \par{\tan y + 4 \ln \abs{\sec y} + 3y} \intEval_0^{\pi/4} \nl 
+        &amp;= \boxed{\pi + 4 \pi \ln \sqrt 2 + \frac{3 \pi^2}{4}} \approx 14.899 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds y = \cos x \cmaa y = \sin x \cmaa y = 0 \cmaa x = 0 \cmaa x = \frac{\pi}{4} \scoll \abt{y = 1}\)
+    </blockquote> calculate the volume of the solid generated 
+        upon rotating the bounded region about the specified axis. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Using the Washer Method
+        (from Section <a href="/ValCalc/ValCalc/calculus/5.3-Solids-of-Revolution.html">5.3</a>),
+        we attain outer and inner radii of, respectively, 
+        \[
+        \ba 
+        \out r(x) &amp;= 1 - \sin x \cma \nl 
+        \inn r(x) &amp;= 1 - \cos x \pd
+        \ea 
+        \]
+        The volume is therefore 
+        \[
+        \ba 
+        V &amp;= \pi \int_0^{\pi/4} \par{\parbr{\out r(x)}^2 - \parbr{\inn r(x)}^2} \di x \nl 
+        &amp;= \pi \int_0^{\pi/4} \parbr{(1 - \sin x)^2 - (1 - \cos x)^2} \di x \nl 
+        &amp;= \pi \int_0^{\pi/4} \par{-2 \sin x + \sin^2 x + 2 \cos x - \cos^2 x} \di x \nl 
+        &amp;= \pi \int_0^{\pi/4} \par{2 \cos x - 2 \sin x - \cos 2x} \di x \nl 
+        &amp;= \pi \par{2 \sin x + 2 \cos x - \tfrac{1}{2} \sin 2x} \intEval_0^{\pi/4} \nl 
+        &amp;= \boxed{2 \sqrt 2 \, \pi - \frac{5 \pi}{2}} \approx 1.032 \pd
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(n\) is a positive integer greater than \(2,\)
+        then prove that 
+        \[\int \tan^n x \di x = \frac{\tan^{n - 1} x}{n - 1} - \int \tan^{n - 2} x \di x \pd\]
+        (This formula is the <b>power-reduction formula for tangent</b>.)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We decompose the integral as 
+        \[\int \tan^n x \di x = \int \tan^{n - 2} x \tan^2 x \di x \pd\]
+        Using \(\tan^2 x = \sec^2 x - 1,\) we see 
+        \[
+        \int \tan^n x \di x = \int \tan^{n - 2} x \sec^2 x \di x - \int \tan^{n - 2} x \di x \pd
+        \]
+        Substituting \(u = \tan x,\) we get \(\dd u = \sec^2 x \di x\)
+        and so we see
+        \[
+        \ba
+        \int \tan^{n - 2} x \sec^2 x \di x &amp;= \int u^{n - 2} \di x \nl 
+        &amp;= \frac{u^{n - 1}}{n - 1} + C \nl 
+        &amp;= \frac{\tan^{n - 1} x}{n - 1} + C \pd
+        \ea
+        \]
+        Thus, we have proved that 
+        \[\int \tan^n x \di x = \frac{\tan^{n - 1} x}{n - 1} - \int \tan^{n - 2} x \di x \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the power-reduction formula for tangent to evaluate \(\int \tan^6 x \di x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(n = 6,\)
+        the formula from the preceding exercise gives
+        \[
+        \ba
+        \int \tan^6 x \di x &amp;= \frac{\tan^{6 - 1} x}{6 - 1} - \int \tan^{6 - 2} x \di x \nl 
+        &amp;= \tfrac{1}{5} \tan^5 x - \int \tan^4 x \di x \pd
+        \ea
+        \]
+        Reapplying the formula with \(n = 4\) yields 
+        \[
+        \ba 
+        \int \tan^4 x \di x 
+        &amp;= \frac{\tan^{4 - 1} x}{4 - 1} - \int \tan^{4 - 2} x \di x \nl
+        &amp;= \tfrac{1}{3} \tan^3 x - \int \tan^2 x \di x \nl 
+        &amp;= \tfrac{1}{3} \tan^3 x - \int \par{\sec^2 x - 1} \di x \nl 
+        &amp;= \tfrac{1}{3} \tan^3 x - \tan x + x + C \pd
+        \ea 
+        \]
+        Hence, we have 
+        \[
+        \ba 
+        \int \tan^6 x \di x 
+        &amp;= \tfrac{1}{5} \tan^5 x - \par{\tfrac{1}{3} \tan^3 x - \tan x + x} + C \nl 
+        &amp;= \boxed{\tfrac{1}{5} \tan^5 x - \tfrac{1}{3} \tan^3 x + \tan x - x + C}
+        \ea     
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Letting \(n\) be a positive integer 
+        greater than \(2,\)
+        prove that 
+        \[\int \sec^n x \di x = \frac{\sec^{n - 2} x \tan x}{n - 1} + \frac{n - 2}{n - 1} \int \sec^{n - 2} x \di x \pd\]
+        (This formula is the 
+        <b>power-reduction formula for secant</b>.)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\sec^2 x\) is easy to integrate, 
+        let's break up the integral as
+        \[\int \sec^n x \di x = \int \sec^{n - 2} x \sec^2 x \di x\]
+        and perform Integration by Parts. 
+        We choose 
+        \[
+        \baat{2} 
+        u &amp;= \sec^{n - 2} x \lspace &amp;\dd v &amp;= \sec^2 x \di x \nl 
+        \dd u &amp;= (n - 2) \sec^{n - 3} x (\sec x \tan x) \di x \lspace &amp;v &amp;= \tan x \pd \nl 
+        &amp;= (n - 2) \sec^{n - 2} x \tan x \di x 
+        \eaat
+        \]
+        So we have 
+        \[
+        \ba
+        \int \sec^n x \di x 
+        &amp;= \sec^{n - 2} x \tan x - (n - 2) \int \sec^{n - 2} x \tan^2 x \di x \nl 
+        &amp;= \sec^{n - 2} x \tan x - (n - 2) \int \sec^{n - 2} x (\sec^2 x - 1) \di x \nl 
+        &amp;= \sec^{n - 2} x \tan x - (n - 2) \int \sec^n x \di x + (n - 2) \int \sec^{n - 2} x \di x \nl 
+        (n - 1) \int \sec^n x \di x &amp;= \sec^{n - 2} x \tan x + (n - 2) \int \sec^{n - 2} x \di x \nl 
+        \implies \int \sec^n x \di x &amp;= \frac{\sec^{n - 2} x \tan x}{n - 1} + \frac{n - 2}{n - 1} \int \sec^{n - 2} x \di x \cma
+        \ea
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Use the power-reduction formula for secant and the result of <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3" target="_blank">Example 12</a>
+        to evaluate \(\int \sec^5 x \di x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We identify \(n = 5,\) 
+        so the power-reduction formula from the previous exercise gives 
+        \[
+        \ba 
+        \int \sec^5 x \di x &amp;= \frac{\sec^{5 - 2} x \tan x}{5 - 1} + \frac{5 - 2}{5 - 1} \int \sec^{5 - 2} x \di x \nl 
+        &amp;= \tfrac{1}{4} \sec^3 x \tan x + \tfrac{3}{4} \int \sec^3 x \di x \pd
+        \ea 
+        \]
+        By the result of <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3" target="_blank">Example 12</a>, 
+        we have 
+        \[
+        \ba
+        \int \sec^5 x \di x 
+        &amp;= \tfrac{1}{4} \sec^3 x \tan x + \tfrac{3}{4} \par{\tfrac{1}{2} \sec x \tan x + \tfrac{1}{2} \ln \abs{\sec x + \tan x}} + C \nl 
+        &amp;= \boxed{\tfrac{1}{4} \sec^3 x \tan x + \tfrac{3}{8} \sec x \tan x + \tfrac{3}{8} \ln \abs{\sec x + \tan x} + C}
+        \ea
         \]
      
         </div> 
@@ -530,16 +1716,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -547,10 +1733,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -558,16 +1744,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -575,27 +1761,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

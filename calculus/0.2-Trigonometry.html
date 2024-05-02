@@ -6,18 +6,18 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
     </a>
 <h1>0.2: Trigonometry</h1>
 <main>
@@ -1428,24 +1428,31 @@
     \end{equation}
 </div>
 
-<div class="example-title"> EXAMPLE 15 </div>
+<div class="example-title" id="ex-power-red-cos"> EXAMPLE 15 </div>
 <div class="example">
     <div class="example-problem">  
-        Prove that 
-        \[\cos^2 \theta = \tfrac{1}{2} (1 + \cos 2 \theta) \pd\]
-        (This identity is called a <span class="emph">power-reduction formula</span>;
-        we will apply it in Section 
+        Prove the following identities:
+        \[
+        \ba
+        \cos^2 \theta &= \tfrac{1}{2} (1 + \cos 2 \theta) \cma \nl 
+        \sin^2 \theta &= \tfrac{1}{2} (1 - \cos 2 \theta) \pd
+        \ea
+        \]
+        (These identities are called <span class="emph">power-reduction formulas</span>;
+        they will be useful in Section
         <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html">6.2</a>.)
     </div>
 </div>
 <button onclick="toggle15()" class="solution-button">  </button>
 <div id="solution15" class="solution">
-    By \(\eqref{eq:cos-2-square},\) we have 
-    \[\cos 2 \theta = 2 \cos^2 \theta - 1 \pd\]
-    So solving for \(\cos^2 \theta,\) we get 
+    In \(\eqref{eq:cos-2-square}\) we solve for \(\cos^2 \theta\) and \(\sin^2 \theta,\)
+    as follows:
     \[
-    \cos^2 \theta \equalsCheck \tfrac{1}{2} (1 + \cos 2 \theta) \pd
-    \]
+    \baat{2}
+    \cos 2 \theta &= 2 \cos^2 \theta - 1 \lspace &\cos 2 \theta &= 1 - 2 \sin^2 \theta \nl
+    \cos^2 \theta &\equalsCheck \tfrac{1}{2} (1 + \cos 2 \theta) \lspace &\sin^2 \theta &\equalsCheck \tfrac{1}{2} (1 - \cos 2 \theta) \pd
+    \eaat 
+    \]  
 </div>
 
 <div class="example-title"> EXAMPLE 16 </div>
@@ -1827,16 +1834,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -1844,10 +1851,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -1855,16 +1862,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -1872,27 +1879,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

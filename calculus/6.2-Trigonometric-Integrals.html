@@ -6,18 +6,18 @@
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
     <meta charset="UTF-8">
-    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/hamburger-menu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/Valculus/css/layout.css" rel="stylesheet">
-    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
-    <link href="/Valculus/images/favicon.png" rel="icon">
+    <link href="/ValCalc/ValCalc/css/layout.css" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/images/favicon.png" rel="icon">
     <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
-<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+    <link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
   </head>
   <body>
-    <a href="/Valculus/index.html">
-    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    <a href="/ValCalc/ValCalc/index.html">
+    <img src="/ValCalc/ValCalc/images/logo.png" class="logo-image" alt="">
     </a>
 <h1>6.2: Trigonometric Integrals</h1>
 <main>
@@ -44,6 +44,25 @@
   </div>
 <hr id="mainBodyBegin">
 <!--[[[crefId.Trigonometric-Integrals]]]--> 
+<p>
+    In this section we investigate integrals with combinations of trigonometric functions. 
+    In doing so, we apply a variety of trigonometric properties and relationships using calculus.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a href="#integrals-with-sin-and-cos" class="page-anchor">Integrals with Sine and Cosine</a>
+        </li>
+        <li>
+            <a href="#int-sec-tan" class="page-anchor">Integrals with Secants and Tangents</a>
+        </li>
+        <li>
+            <a href="#int-csc-cot" class="page-anchor">Integrals with Cosecant and Cotangent</a>
+        </li>
+        <li>
+            <a href="#trig-integrals-with-products" class="page-anchor">Trigonometric Integrals with Products</a>
+        </li>
+    </ul>
+</p>
 <h4 id="integrals-with-sin-and-cos">Integrals with Sine and Cosine</h4>
 <p>     
     We evaluate 
@@ -52,63 +71,120 @@
     because \(\dd u = \cos x \di x,\) thereby stripping the extra factor \(\cos x\) in the integrand. 
     Similarly, we evaluate \(\int \cos^n x \sin x \di x \) using \(u = \cos x\)
     since \(\dd u = - \sin x \di x,\) eliminating the factor \(\sin x.\)
-    Let's discuss the family of integrals 
+    Now let's devise a strategy to evaluate the families of integrals 
     \[\int \sin^n x \di x \and \int \cos^n x \di x \]
-    where \(n\) is positive and odd. 
-    Recall the Pythagorean identity: 
-    \[\sin^2 x + \cos^2 x = 1 \period\]
+    where \(n\) is a positive integer.
+</p>
+<p>
+    <span class="label-emph">Odd \(n\)</span>
+    If \(n\) is odd, then \(n - 1\) is even.
     To evaluate \(\int \sin^n x \di x,\) 
-    we save an extra factor \(\sin x;\) 
-    that is, we write \(\sin^n x\) as \(\sin x \sin^{n - 1} x.\)
-    We then use \(\sin^2 x = 1 - \cos^2 x \) to express \(\sin^{n - 1} x\) 
-    term in terms of cosine:
-    \[
-    \ba 
-    \int \sin^n x \di x 
-    &= \int \sin x \sin^{n - 1} x \di x \nl 
-    &= \int \sin x (1 - \cos^2 x)^{\frac{n - 1}{2}} \di x \comma 
-    \ea 
-    \] 
-    and we eliminate the extra factor \(\sin x\) by substituting \(u = \cos x.\)
-    The process is nearly identical for \(\int \cos^n x \di x \col\)
-    We need an extra factor \(\cos x\) and so we break \(\cos^n x\) into \(\cos x \cos^{n - 1} x.\)
-    Then we use \(\cos^2 x = 1 - \sin^2 x \) to express \(\cos^{n - 1} x\) in terms of sine:
-    \[
-    \ba 
-    \int \cos^n x \di x 
-    &= \int \cos x \cos^{n - 1} x \di x \nl 
-    &= \int \cos x (1 - \sin^2 x)^{\frac{n - 1}{2}} \di x \period 
-    \ea 
-    \]
-    And we strip the extra \(\cos x\) by substituting \(u = \sin x.\)
+    we save an extra factor \(\sin x\)
+    and use the Pythagorean identity to express \(\sin^{n - 1} x\) 
+    in terms of cosine. 
+    Then substituting \(u = \cos x\) strips the extra \(\sin x.\)
+    Likewise, to evaluate \(\int \cos^n x \di x,\)
+    we preserve an extra factor \(\cos x\)
+    and use the Pythagorean identity to express \(\cos^{n - 1} x\)
+    in terms of sine.
+    The substitution \(u = \sin x\) then eliminates the extra \(\cos x.\)
+</p>
+<p>
+    <span class="label-emph">Even \(n\)</span>
+    <span class="emph">Power-reduction formulas</span>
+    help us convert \(\sin^2 x\) and \(\cos^2 x\)
+    into expressions of lower degree through the following equations:
+    \begin{align}
+    \sin^2 x &= \tfrac{1}{2} (1 - \cos 2x) \cma \label{eq:power-reduction-sin} \nl
+    \cos^2 x &= \tfrac{1}{2} (1 + \cos 2x) \pd \label{eq:power-reduction-cos}
+    \end{align}
+    The expressions on the right are far easier to integrate.
+    (We proved these equations in 
+    <a href="/ValCalc/ValCalc/calculus/0.2-Trigonometry.html#ex-power-red-cos"target = "_blank">Example 0.2-15</a>.)
+    Thus, we evaluate \(\int \sin^n x \di x\) and \(\int \cos^n x \di x\)
+    by using \(\eqref{eq:power-reduction-sin}\) and \(\eqref{eq:power-reduction-cos}\)
+    as many times as necessary.
 </p>
 
-<div class="example-title"> EXAMPLE 1 </div>
+<!--table on how to integrate sin^n x-->
+<div class="box-title"> INTEGRATING \(\int \sin^n x \di x\) </div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If \(n\) is odd, then save an extra factor \(\sin x\) by writing 
+            \(\sin^n x\) as \(\sin^{n - 1} x \sin x.\)
+            Use \(\sin^2 x = 1 - \cos^2 x\) to express \(\sin^{n - 1} x\) 
+            in terms of cosine:
+            \[
+            \ba 
+            \int \sin^n x \di x 
+            &= \int \sin^{n - 1} x \sin x \di x \nl 
+            &= \int (1 - \cos^2 x)^{(n - 1)/2} \sin x \di x \pd 
+            \ea 
+            \]
+            Then substitute \(u = \cos x.\)
+        </li>
+        <li>
+            If \(n\) is even, then reduce the integral using \(\eqref{eq:power-reduction-sin}\) 
+            as necessary:
+            \[
+            \int \sin^n x \di x 
+            = \int \parbr{\tfrac{1}{2} (1 - \cos 2x)}^{n/2} \di x \pd
+            \]
+        </li>
+    </ol>
+</div>
+
+<!--table on how to integrate cos^n x-->
+<div class="box-title"> INTEGRATING \(\int \cos^n x \di x\) </div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If \(n\) is odd, then save an extra factor \(\cos x\) by writing 
+            \(\cos^n x\) as \(\cos^{n - 1} x \cos x.\)
+            Use \(\cos^2 x = 1 - \sin^2 x\) to express \(\cos^{n - 1} x\) 
+            in terms of sine:
+            \[
+            \ba 
+            \int \cos^n x \di x 
+            &= \int \cos^{n - 1} x \cos x \di x \nl 
+            &= \int (1 - \sin^2 x)^{(n - 1)/2} \cos x \di x \pd 
+            \ea 
+            \]
+            Then substitute \(u = \sin x.\)
+        </li>
+        <li>
+            If \(n\) is even, then reduce the integral using \(\eqref{eq:power-reduction-cos}\) 
+            as necessary:
+            \[
+            \int \cos^n x \di x 
+            = \int \parbr{\tfrac{1}{2} (1 + \cos 2x)}^{n/2} \di x \pd
+            \]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title" id="ex-int-cos3"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \cos^3 x \di x.\)
+        \[\int \cos^3 x \di x\]
     </div>
 </div>
 <button onclick="toggle1()" class="solution-button"></button>
 <div id="solution1" class="solution">
-    Since the power of cosine is odd, 
-    we save an extra term \(\cos x\) by writing 
-    \[\int \cos^3 x \di x = \int \cos x \cos^2 x \di x \period\]
-    We now express \(\cos^2 x\) in terms of sine by using \(\cos^2 x = 1 - \sin^2 x \col\)
-    \[\int \cos x \cos^2 x \di x = \int \cos x (1 - \sin^2 x) \di x \period\]
-    To strip the extra \(\cos x\) term, we substitute 
+    Since cosine's power is odd, 
+    we preserve an extra term \(\cos x\) and use use the Pythagorean identity 
+    \((\cos^2 x = 1 - \sin^2 x)\) to
+    express \(\cos^2 x\) in terms of sine. 
+    Doing so, the integral becomes
+    \[\int \cos^2 x \cos x \di x = \int (1 - \sin^2 x) \cos x \di x \pd\]
+    To strip the extra \(\cos x\) term, we substitute \(u = \sin x.\)
+    Then \(\dd u = \cos x \di x\) and so the integral becomes
     \[
     \ba 
-    u &= \sin x \nl 
-    \dd u &= \cos x \di x \period 
-    \ea 
-    \]
-    The integral then becomes 
-    \[
-    \ba 
-    \int 1 - u^2 \di u 
-    &= u - \frac{u^3}{3} + C \nl 
-    &= \boxed{\sin x - \frac{\sin^3 x}{3} + C}
+    \int \par{1 - u^2} \di u 
+    &= u - \tfrac{1}{3} u^3 + C \nl 
+    &= \boxed{\sin x - \tfrac{1}{3} \sin^3 x + C}
     \ea 
     \]
 </div> 
@@ -117,360 +193,144 @@
 <div class="example-title"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \sin^5 x \di x.\)
+        \[\int \sin^5 x \di x\]
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button"></button>
 <div id="solution2" class="solution">
-    The power of sine is odd, 
-    so we preserve an extra term \(\sin x.\)
-    We then use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining sines in terms of cosine. 
-    We find   
+    Sine's power is odd, 
+    so we conserve an extra term \(\sin x\)
+    and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining sines in terms of cosine. 
+    Doing so yields
     \[
     \ba 
     \int \sin^5 x \di x
-    &= \int \sin x \sin^4 x \di x \nl 
-    &= \int \sin x (1 - \cos^2 x)^2 \di x \period 
+    &= \int \sin^4 x \sin x \di x \nl 
+    &= \int (1 - \cos^2 x)^2 \sin x \di x \pd 
     \ea 
     \]
     Substituting \(u = \cos x,\) we get \(\dd u = - \sin x \di x \) and so the integral becomes
     \[
     \ba 
     - \int (1 - u^2)^2 \di u 
-    &= - \int 1 - 2u^2 + u^4 \di u \nl 
-    &= -u + \frac{2u^3}{3} - \frac{u^5}{5} + C \nl 
-    &= \boxed{- \cos x + \frac{2 \cos^3 x}{3} - \frac{\cos^5 x}{5} + C}
+    &= - \int \par{1 - 2u^2 + u^4} \di u \nl 
+    &= -u + \tfrac{2}{3} u^3 - \tfrac{1}{5} u^5 + C \nl 
+    &= \boxed{-\cos x + \tfrac{2}{3} \cos^3 x - \tfrac{1}{5} \cos^5 x + C}
     \ea 
     \]
 </div>
 
-<!-- <div class="example-title"> EXAMPLE 1 </div>
+<div class="example-title" id="ex-int-cos2-area"> EXAMPLE 3 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \sin^5 x \di x.\)
-    </div>
-</div>
-<button onclick="toggle1()" class="solution-button"></button>
-<div id="solution1" class="solution">
-    <p>
-        We rewrite the integral as 
-        \[\int \sin x \sin^4 x \di x = \int \sin x (1 - \cos^2 x)^2 \di x \period \]
-        We now substitute
-        \[
-        \ba 
-        u &= \cos x \nl 
-        \dd u &= - \sin x \di x \period
-        \ea 
-        \]
-        The integral then becomes 
-        \[
-        \ba 
-        -\int (1 - u^2)^2 \di u 
-        &= - \int 1 - 2u^2 + u^4 \di u \nl 
-        &= -\frac{u^5}{5} + \frac{2u^3}{3} - u + C \nl 
-        &= \boxed{- \frac{\cos^5 x}{5} + \frac{2 \cos^3 x}{3} - \cos x + C}
-        \ea 
-        \]
-    </p>
-</div>   -->
-
-<h4 id="power-reduction-formulas">Power-Reduction Formulas</h4>
-<p>
-    <span class="emph">Power-reduction formulas</span>
-    permit us to convert 
-    \[\sin^2 x \and \cos^2 x\]
-    into expressions of lower degree.
-    The double-angle identity for cosine is 
-    \[ \cos 2x = \cos^2 x - \sin^2 x \period \]
-    We manipulate this equation to find 
-    \begin{align}
-    \cos 2x &= \cos^2 x - \left(1 - \cos^2 x \right) \nonumber \nl 
-    &= 2 \cos^2 x - 1 \nonumber \nl 
-    \cos^2x &= \frac{1}{2}(1 + \cos 2x) \label{eq:power-reduction-cos} \period
-    \end{align}
-    Let's now derive a power reduction formula for \(\sin^2 x \col \) 
-    \begin{align}
-    \cos 2x &= \cos^2 x - \sin^2 x \nonumber \nl 
-    &= (1 - \sin^2 x) - \sin^2 x \nonumber \nl 
-    &= 1 - 2 \sin ^2 x \nonumber \nl 
-    \sin^2x &= \frac{1}{2}(1 - \cos 2x) \label{eq:power-reduction-sin} \period 
-    \end{align}
-</p>
-<p>
-    Let us consider the families of integrals 
-    \[\int \sin^n x \di x \and \int \cos^n x \di x \]
-    for positive, even \(n.\)
-    We reduce the degrees of  \(\int \sin^n x \di x\) and \(\int \cos^n x \di x\)
-    using \(\eqRefer{eq:power-reduction-sin}\) and \(\eqRefer{eq:power-reduction-cos},\) respectively.
-    For example, \(\eqRefer{eq:power-reduction-cos}\) allows us to evaluate 
-    \(\int \cos^2 x \di x\) as 
-    \[\int \frac{1}{2}(1 + \cos 2x) \di x = \frac{x}{2} + \frac{1}{4} \sin 2x + C \period\]
-</p>
-
-<!--table on how to integrate sin^n x-->
-<div class="steps-title"> INTEGRATING \(\int \sin^n x \di x\) </div>
-<div class="steps">
-    <ol class="list-alpha">
-        <li>
-            If \(n\) is odd, then save an extra factor \(\sin x\) by writing 
-            \(\sin^n x\) as \(\sin x \sin^{n - 1} x.\)
-            Use \(\sin^2 x = 1 - \cos^2 x\) to express \(\sin^{n - 1} x\) 
-            in terms of cosine:
-            \[
-            \ba 
-            \int \sin^n x \di x 
-            &= \int \sin x \sin^{n - 1} x \di x \nl 
-            &= \int \sin x (1 - \cos^2 x)^{\frac{n - 1}{2}} \di x \period 
-            \ea 
-            \]
-            Then substitute \(u = \cos x.\)
-        </li>
-        <li>
-            If \(n\) is even, then reduce the integral using 
-            \[\sin^2 x = \frac{1}{2}(1 - \cos 2x) \tag{1} \period\]
-        </li>
-    </ol>
-</div>
-
-<!--table on how to integrate cos^n x-->
-<div class="steps-title"> INTEGRATING \(\int \cos^n x \di x\) </div>
-<div class="steps">
-    <ol class="list-alpha">
-        <li>
-            If \(n\) is odd, then save an extra factor \(\cos x\) by writing 
-            \(\cos^n x\) as \(\cos x \cos^{n - 1} x.\)
-            Use \(\cos^2 x = 1 - \sin^2 x\) to express \(\cos^{n - 1} x\) 
-            in terms of sine:
-            \[
-            \ba 
-            \int \cos^n x \di x 
-            &= \int \cos x \cos^{n - 1} x \di x \nl 
-            &= \int \cos x (1 - \sin^2 x)^{\frac{n - 1}{2}} \di x \period 
-            \ea 
-            \]
-            Then substitute \(u = \sin x.\)
-        </li>
-        <li>
-            If \(n\) is even, then reduce the integral using 
-            \[\cos^2 x = \frac{1}{2}(1 + \cos 2x) \tag{2} \period\]
-        </li>
-    </ol>
-</div>
-
-<div class="example-title"> EXAMPLE 3 </div>
-<div class="example">
-    <div class="example-problem">  
-        Evaluate \(\ds \int \cos^4 x \di x.\)
+        Calculate the area bounded by one wave of the curve \(y = \cos^2 x\) and the \(x\)-axis.
     </div>
 </div>
 <button onclick="toggle3()" class="solution-button"></button>
 <div id="solution3" class="solution">
-    The integral is  
-    \[ \int \left(\cos^2 x\right)^2 \di x \comma \]
-    which we rewrite using \(\eqRefer{eq:power-reduction-cos}\) as  
-    \[\int \left(\frac{1}{2} (1 + \cos 2x)\right)^2 \di x 
-    = \frac{1}{4} \int 1 + 2 \cos 2x + \cos^2 2x \di x \period \]
-    But since we have \(\cos^2 2x,\) we use a variant of \(\eqRefer{eq:power-reduction-cos}\)—namely,
-    \[\cos^2 2x = \frac{1}{2} (1 + \cos 4x) \period \]
-    Substituting gives
+    <figure class="trig-integrals-area-cos2" id="trig-integrals-area-cos2">
+        <img src="../images/sectionImages/trig-integrals-area-cos2.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .trig-integrals-area-cos2::before{
+            content:'FIGURE 1';
+        }
+    </style> 
+    Because the curve intersects the \(x\)-axis at \(x = -\pi/2\) and \(\pi/2,\)
+    the area of one wave is given by 
+    \[
+    A = \int_{-\pi/2}^{\pi/2} \cos^2 x \di x \pd
+    \]
+    (See <a href="#trig-integrals-area-cos2">Figure 1</a>.)
+    Because cosine's power is even, we use \(\eqref{eq:power-reduction-cos}\)
+    to decompose the integral:
     \[
     \ba 
-    \frac{1}{4} \int 1 + 2 \cos 2x + \frac{1}{2}(1 + \cos 4x) \di x 
-    &= \frac{1}{4} \int \frac{3}{2} + 2 \cos 2x + \frac{1}{2} \cos 4x \di x \nl 
-    &= \boxed{\frac{3}{8}x + \frac{1}{4} \sin 2x + \frac{1}{32} \sin 4x + C} 
+    A &= \int_{-\pi/2}^{\pi/2} \tfrac{1}{2} (1 + \cos 2x) \di x \nl 
+    &= \tfrac{1}{2} \par{x + \tfrac{1}{2} \sin 2x} \intEval_{-\pi/2}^{\pi/2} \nl 
+    &= \boxed{\frac{\pi}{2}}
+    \ea     
+    \]
+</div>  
+
+<div class="example-title" id="ex-int-cos-4"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \cos^4 x \di x\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Because cosine's power is even, we use \(\eqref{eq:power-reduction-cos}\)
+    to reduce the degree, as follows:
+    \[
+    \ba
+    \int \par{\cos^2 x}^2 \di x &= \int \parbr{\tfrac{1}{2} (1 + \cos 2x)}^2 \di x \nl 
+    &= \tfrac{1}{4} \int \par{1 + 2 \cos 2x + \cos^2 2x} \di x \pd
+    \ea
+    \]
+    A modification of \(\eqref{eq:power-reduction-cos}\) is \(\cos^2 2x = \tfrac{1}{2} (1 + \cos 4x),\)
+    which we substitute to get
+    \[
+    \ba
+    \tfrac{1}{4} \int \parbr{1 + 2 \cos 2x + \tfrac{1}{2} (1 + \cos 4x)} \di x 
+    &= \tfrac{1}{4} \int \par{\tfrac{3}{2} + 2 \cos 2x + \tfrac{1}{2} \cos 4x} \di x \nl 
+    &= \boxed{\tfrac{3}{8} x + \tfrac{1}{4} \sin 2x + \tfrac{1}{32} \sin 4x + C}
     \ea
     \]
 </div>  
 
 <!--family of integrals sin^m() cos^n()-->
 <p>
-    Now let us analyze the family of integrals \(\int \sin^m x \cos^n x \di x,\)
-    where \(m\) and \(n\) are positive constants.
-    If the power of sine is odd (\(m\) odd), then 
-    we save an extra factor \(\sin x\) and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining terms in terms of cosine:
-    \[\int \sin x \sin^{m - 1} x \cos^n x \di x 
-    = \int \sin x \left(1 - \cos^2 x\right)^{\frac{m - 1}{2}} \cos^n x \di x \period \]
-    We then substitute \(u = \cos x\) because then \(\dd u = - \sin x \di x,\)
-    removing the extra factor \(\sin x\) in the integrand.
-    Conversely, if the power of sine is even and the power of cosine is odd (\(m\) even; \(n\) odd),
-    then we preserve an extra factor \(\cos x\) and use \(\cos^2 x = 1 - \sin^2 x\) 
-    to rewrite the integrand in terms of sine: 
-    \[ \int \sin^m x \cos x \cos^{n-1}(x) \di x 
-    = \int \sin^m x \cos x \left(1 - \sin^2 x\right)^{\frac{n - 1}{2}} \di x \period \]
-    Then we substitute \(u = \sin x\) to eliminate the extra factor \(\cos x.\)
-    Lastly, if sine and cosine both have even powers (\(m\) and \(n\) both even), then the integral is  
-    \[ \int \left(1 - \cos^2 x\right)^{\frac{m}{2}} \cos^n(x) \di x \comma \]
-    which we reduce using \(\eqRefer{eq:power-reduction-cos}\)
-    as needed.
+    Another common family of integrals is \(\int \sin^m x \cos^n x \di x,\)
+    where \(m\) and \(n\) are positive integers.
+    We evaluate these integrals similarly to how we evaluate 
+    \(\int \sin^n x \di x\) and \(\int \cos^n x \di x\)—by conserving 
+    a factor and performing a substitution, or by applying power-reduction formulas.
 </p>
 
 <!--table on how to integrate sin^m x cos^n x-->
-<div class="steps-title"> INTEGRATING \(\int \sin^m x \cos^n x \di x\) </div>
-<div class="steps">
+<div class="box-title"> INTEGRATING \(\int \sin^m x \cos^n x \di x\) </div>
+<div class="box">
     <ol class="list-alpha">
         <li>
             If the power of sine is odd (\(m\) odd),
             then save an extra factor \(\sin x\) 
-            and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining terms in terms of cosine:
+            and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining factors in terms of cosine:
             \[
             \ba 
             \int \sin^m x \cos^n x \di x 
-            &= \int \sin x \sin^{m - 1} x \cos^n x \di x \nl 
-            &= \int \sin x (1 - \cos^2 x)^{\frac{m - 1}{2}} \cos^n x \di x \period 
+            &= \int \sin^{m - 1} x \cos^n x \sin x \di x \nl 
+            &= \int (1 - \cos^2 x)^{(m - 1)/2} \cos^n x \sin x \di x \pd 
             \ea 
             \]
             Then substitute \(u = \cos x.\)
         </li>
         <li>
-            If the power of sine is even and the power of cosine is odd (\(m\) even; \(n\) odd),
+            If the power of sine is even and the power of cosine is odd (\(m\) even, \(n\) odd),
             then save an extra factor \(\cos x\) 
-            and use \(\cos^2 x = 1 - \sin^2 x\) to rewrite the remaining terms in terms of sine:
+            and use \(\cos^2 x = 1 - \sin^2 x\) to express the remaining factors in terms of sine:
             \[
             \ba 
             \int \sin^m x \cos^n x \di x 
-            &= \int \sin^m x \cos x \cos^{n - 1} x \di x \nl 
-            &= \int \sin^m x \cos x (1 - \sin^2 x)^{\frac{n - 1}{2}} \di x \period 
+            &= \int \sin^m x \cos^{n - 1} x \cos x \di x \nl 
+            &= \int \sin^m x (1 - \sin^2 x)^{(n - 1)/2} \cos x \di x \pd 
             \ea 
             \]
             Then substitute \(u = \sin x.\)
         </li>
         <li>
             If the powers of sine and cosine are both even (\(m\) and \(n\) both even),
-            then use \(\sin^2 x = 1- \cos^2 x\) to express the integrand in terms of cosine:
+            then use \(\sin^2 x = 1 - \cos^2 x\) to express the integrand in terms of cosine:
             \[
             \ba 
             \int \sin^m x \cos^n x \di x 
             &= \int (\sin^2 x)^{m/2} \cos^n x \di x \nl 
-            &= \int (1 - \cos^2 x)^{m/2} \cos^n x \di x \period 
+            &= \int (1 - \cos^2 x)^{m/2} \cos^n x \di x \pd 
             \ea 
             \]
-            Then use \(\eqRefer{eq:power-reduction-cos}\)
+            Then use \(\eqref{eq:power-reduction-cos}\)
             to reduce the integral.
-        </li>
-    </ol>
-</div>
-
-<div class="example-title"> EXAMPLE 4 </div>
-<div class="example">
-    <div class="example-problem">  
-        Evaluate \(\ds \int \sin^2 x \cos^3 x \di x.\)
-    </div>
-</div>
-<button onclick="toggle4()" class="solution-button"></button>
-<div id="solution4" class="solution">
-    <p>
-        We rewrite the integral, using the Pythagorean identity, as 
-        $$ \int \sin^2 x \left(1 - \sin^2 x\right) \cos x \di x. $$
-        Since the integrand has an extra term \(\cos x,\) we substitute
-        \[
-        \ba 
-        u &= \sin x \nl 
-        \dd u &= \cos x \di x \period 
-        \ea 
-        \]
-        The integral then becomes 
-        \[
-        \ba 
-        \int u^2 \left(1 - u^2 \right) \di u
-        &= \int u^2 - u^4 \di u \nl 
-        &= \frac{u^3}{3} - \frac{u^5}{5} + C \nl 
-        &= \boxed{\frac{\sin^3 x}{3} - \frac{\sin^5 x}{5} + C}
-    </p>
-</div>    
-
-<p>
-    In each of our discussions, we cover an integral that contains one of three pairs of trigonometric functions: 
-    <ul>
-        <li>
-            \(\sin x\) and \(\cos x\)
-        </li>
-        <li>
-            \(\tan x\) and \(\sec x\)
-        </li>
-        <li>
-            \(\cot x\) and \(\csc x.\)
-        </li>
-    </ul>
-    Each of these groups has functions that complement each other.
-    For example, \(\sin x\) and \(\cos x\) are connected by 
-    \[\deriv{}{x} [\sin x] = \cos x \and \deriv{}{x} [\cos x] = - \sin x \period \]
-    Moreover, \(\tan x\) and \(\sec x\) are related because  
-    \[\deriv{}{x} [\tan x] = \sec^2 x \and \deriv{}{x} [\sec x] = \sec x \tan x \period \]
-    Similarly, \(\cot x\) and \(\csc x\) are related by 
-    \[\deriv{}{x} [\cot x] = - \csc^2 x \and \deriv{}{x} [\csc x] = - \csc x \cot x \period\]
-    And lastly, we have the following forms of the Pythagorean identity,
-    \[
-    \ba 
-    \sin^2 x + \cos^2 x &= 1 \nl 
-    \tan^2 x + 1 &= \sec^2 x \nl 
-    \cot^2 x + 1 &= \csc^2 x \comma  
-    \ea 
-    \]
-    which corroborate the relationships we mentioned.
-</p>   
-
-<h4 id="integrals-of-tan-and-sec">Integrals with Tangents and Secants</h4>
-<p>
-    Consider the family of integrals \(\int \sec^m x \tan^n x \di x,\)
-    where \(m\) and \(n\) are positive constants.
-    If the power of secant is even (\(m\) even), then 
-    we break \(\sec^m x\) into \((\sec^2 x \sec^{m - 2} x).\)
-    Then we use \(\sec^2 x = 1 + \tan^2 x\) to rewrite \(\sec^{m - 2} x\) in terms of \(\tan x,\)
-    and we keep the \(\sec^2 x\) since \((\dd /\dd x) \tan x = \sec^2 x.\)
-    The integral becomes 
-    \[
-    \ba 
-    \int \sec^m x \tan^n x \di x 
-    &= \int \sec^2 x \sec^{m - 2} x \tan^n x \di x \nl 
-    &= \int \sec^2 x \left(1 + \tan^2 x \right)^{\frac{m - 2}{2}} \tan^n x \di x \comma
-    \ea 
-    \]
-    and we substitute \(u = \tan x\) to strip the \(\sec^2 x\) factor.
-    In contrast, if the power of tangent is odd (\(n\) odd), then 
-    we split \(\sec^m x\) and \(\tan^n x\) as follows: 
-    \[\sec^m x = \sec x \sec^{m - 1} x \and \tan^n x = \tan x \tan^{n - 1} x \period\]
-    This strategy preserves the extra factor \(\sec x \tan x.\) 
-    We then use \(\tan^2 x = \sec^2 x - 1\) to express the remaining tangent terms in terms of secant:
-    \[ 
-    \ba 
-    \int \sec^m x \tan^n x \di x  
-    &= \int \sec x \sec^{m - 1} x \tan x \tan^{n - 1} x \di x \nl 
-    &= \int \sec x \tan x \sec^{m - 1} x \left(\sec^2 x - 1 \right)^{\frac{n - 1}{2}} \di x \period 
-    \ea 
-    \]
-    And since \((\dd / \dd x) \sec x = \sec x \tan x,\) 
-    we substitute \(u = \sec x\) to eliminate the extra factor \(\sec x \tan x.\)
-</p>
-
-<!--table for how to integrate sec^m() tan^n()-->
-<div class="steps-title"> INTEGRATING \(\int \sec^m x \tan^n x \di x\) </div>
-<div class="steps">
-    <ol class="list-alpha">
-        <li>
-            If the power of secant is even (\(m\) even), 
-            then preserve an extra factor \(\sec^2 x.\) 
-            Use \(\sec^2 x = 1 + \tan^2 x\) to express the remaining factors in terms of \(\tan x \col \)
-            \[
-            \ba 
-            \int \sec^m x \tan^n x \di x 
-            &= \int \sec^2 x \sec^{m - 2} x \tan^n x \di x \nl 
-            &= \int \sec^2 x (1 + \tan^2 x)^{\frac{m - 2}{2}} \tan^n x \di x \period
-            \ea 
-            \]
-            Then substitute \(u = \tan x.\)
-        </li>
-        <li>
-            If the power of tangent is odd (\(n\) odd),
-            then preserve an extra factor \(\sec x \tan x.\)
-            Use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of \(\sec x \col \)
-            \[ 
-            \ba 
-            \int \sec^m x \tan^n x \di x  
-            &= \int \sec x \sec^{m - 1} x \tan x \tan^{n - 1} x \di x \nl 
-            &= \int \sec x \tan x \sec^{m - 1} x \left(\sec^2 x - 1 \right)^{\frac{n - 1}{2}} \di x \period
-            \ea 
-            \]
-            Then substitute \(u = \sec x.\)
         </li>
     </ol>
 </div>
@@ -478,218 +338,206 @@
 <div class="example-title"> EXAMPLE 5 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \sec^4 x \tan^6 x \di x.\)
+        \[\int \sin^2 x \cos^3 x \di x\]
     </div>
 </div>
 <button onclick="toggle5()" class="solution-button"></button>
 <div id="solution5" class="solution">
-    Since the power of \(\sec^4 x\) is even, 
-    we aim to save the extra factor \(\sec^2 x.\)
-    We write \(\sec^4 x\) as \(\sec^2 x \sec^2 x.\)
-    And using \(\sec^2 x = \tan^2 x + 1,\)
-    we further find \(\sec^4 x = \sec^2 x (\tan^2 x + 1).\)
-    The integral then becomes 
-    \[\int \sec^2 x (\tan^2 x + 1) \tan^6 x \di x \period\]
-    Now we substitute 
+    Since cosine's power is odd, we conserve an extra factor \(\cos x.\)
+    We write the remaining cosine factors in terms of sine using the Pythagorean identity, as follows:
+    \[\int \sin^2 x \cos^2 x \cos x \di x = \int \sin^2 x \par{1 - \sin^2 x} \cos x \di x \pd \]
+    To strip the factor \(\cos x,\) we substitute \(u = \sin x.\)
+    Then \(\dd u = \cos x \di x\) and so the integral becomes
     \[
     \ba 
-    u &= \tan x \nl 
-    \dd u &= \sec^2 x \di x \period 
+    \int u^2 \par{1 - u^2} \di u
+    &= \int \par{u^2 - u^4} \di u \nl 
+    &= \tfrac{1}{3} u^3 - \tfrac{1}{5} u^5 + C \nl 
+    &= \boxed{\tfrac{1}{3} \sin^3 x - \tfrac{1}{5} \sin^5 x + C}
     \ea 
     \]
-    We then have  
-    \[
-    \ba 
-    \int (u^2 + 1) u^6 \di u &= \int u^8 + u^6 \di u \nl 
-    &= \frac{u^9}{9} + \frac{u^7}{7} + C \nl 
-    &= \boxed{\frac{\tan^9 x}{9} + \frac{\tan^7 x}{7} + C}
-    \ea 
-    \]
-</div> 
+</div>    
 
-<div class="example-title"> EXAMPLE 6 </div>
-<div class="example">
-    <div class="example-problem">  
-        Evaluate \(\ds \int \sec^5 x \tan^3 x \di x.\)
-    </div>
-</div>
-<button onclick="toggle6()" class="solution-button"></button>
-<div id="solution6" class="solution">
-    Since the power of tangent is odd, 
-    we aim to save an extra factor \(\sec x \tan x.\)
-    We do so by writing 
-    \[\sec^5 x = \sec x \sec^4 x \and \tan^3 x = \tan x \tan^2 x \period\]
-    Also, we use \(\tan^2 x = \sec^2 x - 1\) to re-express the remaining 
-    tangents in terms of secants.
-    The integral is then 
-    \[\int \sec x \sec^4 x \tan x \tan^2 x \di x = \int \sec x \tan x \sec^4 x (\sec^2 x - 1) \di x \period\]
-    We now substitute
-    \[
-    \ba 
-    u &= \sec x \nl 
-    \dd u &= \sec x \tan x \di x \period 
-    \ea 
-    \]
-    Now the integral becomes 
-    \[
-    \ba 
-    \int u^4(u^2 - 1) \di u 
-    &= \int u^6 - u^4 \di u \nl 
-    &= \frac{u^7}{7} - \frac{u^5}{5} + C \nl 
-    &= \boxed{\frac{\sec^7 x}{7} - \frac{\sec^5 x}{5} + C}
-    \ea 
-    \]
-</div> 
-
+<h4 id="int-sec-tan">Integrals with Secants and Tangents</h4>
 <p>
-    Now consider the family of integrals \(\int \sec^n x \di x,\)
-    where \(n\) is a positive integer.
-    If \(n\) is even, then we find  
-    \[\int \sec^n x \di x = \int \sec^2 x (1 + \tan^2 x)^{\frac{n - 2}{2}} \di x \period \]
-    Saving this extra \(\sec^2 x\) term allows us to evaluate the integral by substituting \(u = \tan x\)
-    because \(\textDeriv{u}{x} = \sec^2 x.\)
-    But if \(n\) is odd, then the procedure isn't as simple. 
-    Obviously, for \(n = 1\) we get \(\int \sec x \di x,\)
-    which we evaluate by multiplying the numerator and denominator each by \(\sec x + \tan x \col\)
-    \[
-    \ba 
-    \int \sec x \di x 
-    &= \int \sec x \, \frac{\sec x + \tan x}{\sec x + \tan x} \di x \nl 
-    &= \int \frac{\sec^2 x + \sec x \tan x}{\sec x + \tan x} \di x \period  
-    \ea 
-    \]
-    We substitute \(u = \sec x + \tan x\) because then \(\dd u = (\sec x \tan x + \sec^2 x) \di x.\)
-    The integral then becomes \(\int 1/u \di u = \ln \abs{u} + C,\) which is 
-    \begin{equation} 
-    \int \sec x \di x = \ln \abs{\sec x + \tan x} + C \period \label{eq:int-sec}
-    \end{equation}
-    But for other odd \(n,\) the integral may constitute Integration by Parts. 
+    The next family of integrals we explore is \(\int \sec^m x \tan^n x \di x,\)
+    where \(m\) and \(n\) are positive integers.
+    Recall that \(\textderiv{}{x} (\tan x) = \sec^2 x.\) 
+    Accordingly, one option is to conserve an extra factor \(\sec^2 x\) in the integrand,
+    express the remaining secants in terms of tangent (using \(\tan^2 x =\) <nobr>\(\sec^2 x - 1\))</nobr>
+    and substitute \(u = \tan x.\)
+    Alternatively, given that \(\textderiv{}{x} (\sec x) = \sec x \tan x,\) 
+    we can conserve an extra factor \(\sec x \tan x\) in the integrand
+    and rewrite the remaining tangents in terms of secant (using \(\sec^2 x =\) <nobr>\(\tan^2 x + 1\)),</nobr>
+    substituting \(u = \sec x.\)
+    The following guidelines elaborate on this strategy.
 </p>
 
-<!--table for how to integrate sec^n() -->
-<div class="box-title"> INTEGRATING \(\int \sec^n x \di x\) </div>
+<div class="box-title"> INTEGRATING \(\int \sec^m x \tan^n x \di x\) </div>
 <div class="box">
     <ol class="list-alpha">
         <li>
-            If the power of secant is even (\(n\) even), then save the extra factor \(\sec^2 x\)
-            and use \(\sec^2 x = \tan^2 x + 1\) to express the remaining terms in terms of \(\tan x \col\)
+            If the power of secant is even (\(m\) even), 
+            then preserve an extra factor \(\sec^2 x.\) 
+            Use \(\sec^2 x = \tan^2 x + 1\) to express the remaining factors in terms of tangent:
             \[
             \ba 
-            \int \sec^n x \di x 
-            &= \int \sec^2 x \sec^{n - 2} x \di x \nl 
-            &= \int \sec^2 x (\tan^2 x + 1)^{\frac{n - 2}{2}} \period 
+            \int \sec^m x \tan^n x \di x 
+            &= \int \sec^{m - 2} x \tan^n x \sec^2 x \di x \nl 
+            &= \int (\tan^2 x + 1)^{(m - 2)/2} \tan^n x \sec^2 x \di x \pd
             \ea 
             \]
+            Then substitute \(u = \tan x.\)
         </li>
         <li>
-            If the power of secant is odd (\(n\) odd) and greater than \(1,\)
-            then the integral may require Integration by Parts.
-        </li>
-        <li>
-            If \(n = 1,\) then 
-            \[\int \sec x \di x = \ln \abs{\sec x + \tan x} + C \period\]
+            If the power of tangent is odd (\(n\) odd),
+            then preserve an extra factor \(\sec x \tan x.\)
+            Use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of secant:
+            \[ 
+            \ba 
+            \int \sec^m x \tan^n x \di x  
+            &= \int \sec^{m - 1} x \tan^{n - 1} x \sec x \tan x \di x \nl 
+            &= \int \sec^{m - 1} x \par{\sec^2 x - 1}^{(n - 1)/2} \sec x \tan x \di x \pd
+            \ea 
+            \]
+            Then substitute \(u = \sec x.\)
         </li>
     </ol>
 </div>
 
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \sec^4 x \tan^6 x \di x\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    Since secant's power is even,
+    we separate the factor \(\sec^2 x\)
+    and convert the remaining secants to be in terms of tangents.
+    The integral therefore becomes
+    \[
+    \int \sec^2 x \tan^6 x \sec^2 x \di x = 
+    \int (\tan^2 x + 1) \tan^6 x \sec^2 x \di x \pd\]
+    To clear the factor \(\sec^2 x,\) we substitute \(u = \tan x.\)
+    Then \(\dd u = \sec^2 x \di x\) and so the integral becomes
+    \[
+    \ba 
+    \int \parbr{(u^2 + 1) \, u^6} \di u &= \int \par{u^8 + u^6} \di u \nl 
+    &= \tfrac{1}{9} u^9 + \tfrac{1}{7} u^7 + C \nl 
+    &= \boxed{\tfrac{1}{9} \tan^9 x + \tfrac{1}{7} \tan^7 x + C}
+    \ea 
+    \]
+</div> 
+
 <div class="example-title"> EXAMPLE 7 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \sec^6 x \di x.\)
+        \[\int \sec^5 x \tan^3 x \di x\]
     </div>
 </div>
 <button onclick="toggle7()" class="solution-button"></button>
 <div id="solution7" class="solution">
-    Since the power of secant is even, we save the extra factor \(\sec^2 x.\)
-    We then use \(\sec^2 x = 1 + \tan^2 x\) to express the remaining term, \(\sec^4 x,\)
-    in terms of tangent. We have 
+    Because tangent's power is odd,
+    we save an extra factor \(\sec x \tan x\)
+    and use \(\tan^2 x = \sec^2 x - 1\) to reexpress the integrand in terms of secant. 
+    The integral therefore becomes 
+    \[\int \sec^4 x \tan^2 x \sec x \tan x \di x = \int \sec^4 x \par{\sec^2 x - 1} \sec x \tan x \di x \pd\]
+    To strip the extra factor \(\sec x \tan x,\) 
+    we substitute \(u = \sec x\) because then \(\dd u = \sec x \tan x \di x.\)
+    Accordingly, the integral becomes 
     \[
     \ba 
-    \int \sec^6 x \di x 
-    &= \int \sec^2 x \sec^6 x \di x \nl
-    &= \int \sec^2 x (1 + \tan^2 x)^2 \di x \period 
-    \ea 
-    \]
-    Substituting \(u = \tan x,\) we get \(\dd u = \sec^2 x \di x\) and so the integral becomes 
-    \[
-    \ba 
-    \int (1 + u^2)^2 \di u 
-    &= \int 1 + 2u^2 + u^4 \di u \nl 
-    &= u + \frac{2u^3}{3} + \frac{u^5}{5} + C \nl 
-    &= \boxed{\tan x + \frac{2 \tan^3 x}{3} + \frac{\tan^5 x}{5} + C}
-    \ea
-    \]
-</div> 
-
-<div class="example-title" id="ex-sec^3"> EXAMPLE 8 </div>
-<div class="example">
-    <div class="example-problem">  
-        Evaluate \(\ds \int \sec^3 x \di x.\)
-    </div>
-</div>
-<button onclick="toggle8()" class="solution-button"></button>
-<div id="solution8" class="solution">
-    The power of secant is odd, so there's no clear guideline to evaluate the integral. 
-    We can't manipulate the integrand in any meaningful form—for example, 
-    rewriting as \(\int \sec x (\tan^2 x + 1) \di x\) doesn't help, 
-    since no substitution can eliminate the extra factor \(\sec x.\)
-    But because \(\int \sec^2 x \di x = \tan x + C,\)
-    we break \(\sec^3 x\) into \(\sec x \sec^2 x\) and perform Integration by Parts.
-    From the Integration by Parts formula, 
-    \[\int u \di v = uv - \int v \di u \period\]
-    We choose 
-    \[u = \sec x \and \di v = \sec^2 x \di x \period\]
-    Then 
-    \[\dd u = \sec x \tan x \di x \and v = \tan x \period \]
-    We then find
-    \[
-    \ba 
-    \int \sec^3 x \di x 
-    &= \sec x \tan x - \int \sec x \tan^2 x \di x \nl 
-    &= \sec x \tan x - \int \sec x (\sec^2 x - 1) \di x \nl 
-    \int \sec^3 x \di x &= \sec x \tan x - \int \sec^3 x \di x + \int \sec x \di x \period 
-    \ea 
-    \]
-    We now add \(\int \sec^3 x \di x\) to both sides to get 
-    \[2 \int \sec^3 x \di x = \sec x \tan x + \int \sec x \di x \period\]
-    We know \(\int \sec x \di x = \ln \abs{\sec x + \tan x} + C.\)
-    Therefore, the equation becomes  
-    \[
-    \ba 
-    2 \int \sec^3 x \di x &= \sec x \tan x + \ln \abs{\sec x + \tan x} \nl 
-    \int \sec^3 x \di x &= \boxed{\frac{1}{2} \sec x \tan x + \frac{1}{2} \ln \abs{\sec x + \tan x} + C}
+    \int [u^4(u^2 - 1)] \di u 
+    &= \int \par{u^6 - u^4} \di u \nl 
+    &= \tfrac{1}{7} u^7 - \tfrac{1}{5} u^5 + C \nl 
+    &= \boxed{\tfrac{1}{7} \sec^7 x - \tfrac{1}{5} \sec^5 x + C}
     \ea 
     \]
 </div> 
 
 <p>
-    Integrating 
-    \(\int \csc^m x \cot^n x \di x\)
-    is highly similar to integrating \(\int \sec^m x \tan^n n \di x\) 
-    if \(m\) and \(n\) are positive integers.
-    Namely, \(\csc x\) is analogous to \(\sec x\)
-    and \(\tan x\) is similar to \(\cot x\) due to the following relationship: 
-    \[
-    \ba 
-    \csc^2 x &= 1 + \cot^2 x \nl 
-    \cot^2 x &= \csc^2 x - 1 \period
-    \ea 
-    \] 
+    A similar strategy enables us to evaluate \(\int \sec^n x \di x\)
+    if \(n\) is a positive even integer, as shown below.
+    But if \(n\) is odd, then no simple guideline exists;
+    instead, evaluating the integral may require ingenuity 
+    with trigonometric identities or Integration by Parts. 
 </p>
 
-<!--table for how to integrate csc^m() cot^n()-->
-<div class="steps-title"> INTEGRATING \(\int \csc^m x \cot^n x \di x\) </div>
-<div class="steps">
+<div class="box-title"> INTEGRATING \(\int \sec^n x \di x\) </div>
+<div class="box">
+    If the power of secant is even (\(n\) even), then save an extra factor \(\sec^2 x\)
+    and use \(\sec^2 x = \tan^2 x + 1\) to express the remaining secants in terms of tangents:
+    \[
+    \ba 
+    \int \sec^n x \di x 
+    &= \int \sec^{n - 2} x \sec^2 x \di x \nl 
+    &= \int (\tan^2 x + 1)^{(n - 2)/2} \sec^2 x \di x \pd 
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-sec6"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \sec^6 x \di x\]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    Secant's power is even, so we conserve an extra factor \(\sec^2 x\)
+    and apply \(\sec^2 x = \tan^2 x + 1\) to express the remaining secants 
+    in terms of tangents. 
+    The integral therefore becomes
+    \[
+    \int \sec^4 x \sec^2 x \di x \nl
+    = \int \par{\tan^2 x + 1}^2 \sec^2 x \di x \pd 
+    \]
+    We strip the \(\sec^2 x\) by substituting \(u = \tan x,\)
+    given that \(\dd u = \sec^2 x \di x.\)
+    So the integral becomes 
+    \[
+    \ba 
+    \int (u^2 + 1)^2 \di u 
+    &= \int \par{u^4 + 2u^2 + 1} \di u \nl 
+    &= \tfrac{1}{5} u^5 + \tfrac{2}{3} u^3 + u + C \nl 
+    &= \boxed{\tfrac{1}{5} \tan^5 x + \tfrac{2}{3} \tan^3 x + \tan x + C}
+    \ea
+    \]
+</div> 
+
+<h4 id="int-csc-cot">Integrals with Cosecant and Cotangent</h4>
+
+<p>
+    It turns out that \(\csc x\) is analogous to \(\sec x\)
+    and \(\tan x\) is analogous to \(\cot x.\) 
+    For example,
+    the identity \(\cot^2 x + 1 = \csc^2 x\) is akin to \(\tan^2 x + 1 = \sec^2 x.\)
+    The derivatives of cosecant and cotangent are also similar 
+    to the derivatives of secant and tangent, respectively;
+    recall that \(\textderiv{}{x} (\csc x)\) \(= -\csc x \cot x\)
+    and \(\textderiv{}{x} (\cot x)\) \(= -\csc^2 x.\)
+    Therefore, if \(m\) and \(n\) are positive integers, then 
+    we evaluate
+    \(\int \csc^m x \cot^n x \di x\)
+    nearly identically to how we evaluate \(\int \sec^m x \tan^n n \di x.\) 
+    Let's therefore take inspiration from our strategy for
+    <a href="#int-sec-tan" class="page-anchor">Integrals with Secants and Tangents</a>.
+</p>
+
+<div class="box-title"> INTEGRATING \(\int \csc^m x \cot^n x \di x\) </div>
+<div class="box">
     <ol class="list-alpha">
         <li>
             If the power of cosecant is even (\(m\) even), 
             then preserve an extra factor \(\csc^2 x.\) 
-            Use \(\csc^2 x = 1 + \cot^2 x\) to express the remaining factors in terms of \(\cot x \col \)
+            Use \(\csc^2 x = \cot^2 x + 1\) to express the remaining factors in terms of cotangent:
             \[
             \ba 
             \int \csc^m x \cot^n x \di x 
-            &= \int \csc^2 x \csc^{m - 2} x \cot^n x \di x \nl 
-            &= \int \csc^2 x (1 + \cot^2 x)^{\frac{m - 2}{2}} \cot^n x \di x \period
+            &= \int \csc^{m - 2} x \cot^n x \csc^2 x \di x \nl 
+            &= \int (\cot^2 x + 1)^{(m - 2)/2} \cot^n x \csc^2 x \di x \pd
             \ea 
             \]
             Then substitute \(u = \cot x.\)
@@ -697,12 +545,12 @@
         <li>
             If the power of cotangent is odd (\(n\) odd),
             then preserve an extra factor \(\csc x \cot x.\)
-            Use \(\cot^2 x = \csc^2 x - 1\) to express the remaining factors in terms of \(\csc x \col \)
+            Use \(\cot^2 x = \csc^2 x - 1\) to express the remaining factors in terms of cosecant:
             \[ 
             \ba 
             \int \csc^m x \cot^n x \di x  
-            &= \int \csc x \csc^{m - 1} x \cot x \cot^{n - 1} x \di x \nl 
-            &= \int \csc x \cot x \csc^{m - 1} x \left(\csc^2 x - 1 \right)^{\frac{n - 1}{2}} \di x \period
+            &= \int \csc^{m - 1} x \cot^{n - 1} x \csc x \cot x \di x \nl 
+            &= \int \csc^{m - 1} x (\csc^2 x - 1)^{(n - 1)/2} \csc x \cot x \di x \pd
             \ea 
             \]
             Then substitute \(u = \csc x.\)
@@ -710,368 +558,511 @@
     </ol>
 </div>
 
+<div class="box-title"> INTEGRATING \(\int \csc^n x \di x\) </div>
+<div class="box">
+    If the power of cosecant is even (\(n\) even), then save an extra factor \(\csc^2 x\)
+    and use \(\csc^2 x =\) \(\cot^2 x + 1\) to express the remaining cosecants in terms of cotangents:
+    \[
+    \ba 
+    \int \csc^n x \di x 
+    &= \int \csc^{n - 2} x \csc^2 x \di x \nl 
+    &= \int (\cot^2 x + 1)^{(n - 2)/2} \csc^2 x \di x \pd 
+    \ea 
+    \]
+</div>
+
 <div class="example-title"> EXAMPLE 9 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \csc^6 x \cot^4 x \di x.\)
+        \[\int \csc^6 x \cot^4 x \di x\]
     </div>
 </div>
 <button onclick="toggle9()" class="solution-button"></button>
 <div id="solution9" class="solution">
-    The power of cosecant is even, so we save an extra \(\csc^2 x\) in the integrand.
-    We also use \(\csc^2 x = 1 + \cot^2 x\) to rewrite the remaining terms in terms of cotangent:
-    \[\int \csc^2 \csc^4 x \cot^4 x \di x = \int \csc^2 x (1 + \cot^2 x)^2 \cot^4 x \di x \period \]
-    We now substitute \(u = \cot x\) because then \(\dd u = - \csc^2 x \di x\) and the integral becomes 
+    Cosecant's power is even, so we preserve an extra \(\csc^2 x\) in the integrand.
+    We then use \(\csc^2 x = \cot^2 x + 1\) to rewrite the remaining factors in terms of cotangent:
+    \[\int \csc^4 x \cot^4 x \csc^2 x \di x = \int (\cot^2 x + 1)^2 \cot^4 x \csc^2 x \di x \pd \]
+    To eliminate the extra factor \(\csc^2 x,\) 
+    we substitute \(u = \cot x\) because then \(\dd u = - \csc^2 x \di x.\) 
+    Accordingly, the integral becomes 
     \[
     \ba 
-    - \int (1 + u^2)^2 \; u^4 \di u 
-    &= - \int u^4 + 2u^6 + u^8 \di u \nl 
-    &= - \frac{u^5}{5} - \frac{2u^7}{7} - \frac{u^9}{9} + C \nl 
-    &= \boxed{- \frac{\cot^5 x}{5} - \frac{2 \cot^7 x}{7} - \frac{\cot^9 x}{9} + C}
+    - \int \parbr{(u^2 + 1)^2 \, u^4} \di u 
+    &= -\int \par{u^8 + 2u^6 + u^4} \di u \nl 
+    &= -\tfrac{1}{9} u^9 - \tfrac{2}{7} u^7 - \tfrac{1}{5} u^5 + C \nl 
+    &= \boxed{-\tfrac{1}{9} \cot^9 x - \tfrac{2}{7} \cot^7 x - \tfrac{1}{5} \cot^5 x + C}
     \ea 
     \]
 </div> 
 
-<p>
-    Now consider the family of integrals \(\int \csc^n x \di x,\)
-    where \(n\) is a positive integer.
-    If \(n\) is even, then we save the extra factor \(\csc^2 x\) 
-    and use \(\csc^2 x = 1 + \cot^2 x\) to express the remaining terms in terms of cotangent:
-    \[\int \csc^n x \di x = \int \csc^2 x (1 + \cot^2 x)^{\frac{n - 2}{2}} \di x \period \]
-    Saving this extra \(\csc^2 x\) term allows us to evaluate the integral by substituting \(u = \cot x\)
-    because \(\textDeriv{u}{x} = -\csc^2 x.\)
-    But if \(n\) is odd, then we may need to use Integration by Parts.
-    For \(n = 1\) we have \(\int \csc x \di x,\) 
-    which we evaluate by multiplying the numerator and denominator each by \(\csc x + \cot x \col\)
-    \[
-    \ba 
-    \int \csc x \di x 
-    &= \int \csc x \, \frac{\csc x + \cot x}{\csc x + \cot x} \di x \nl 
-    &= \int \frac{\csc^2 x + \csc x \cot x}{\csc x + \cot x} \di x \period  
-    \ea 
-    \]
-    We substitute \(u = \csc x + \cot x\) because then \(\dd u = (-\csc x \cot x - \csc^2 x) \di x.\)
-    The integral then becomes \(\int -1/u \di u = -\ln \abs{u} + C,\) 
-    so
-    \begin{equation} 
-    \int \csc x \di x = -\ln \abs{\csc x + \cot x} + C \period \label{eq:int-csc}
-    \end{equation} 
-</p>
+<aside class="box-remark">
+    Compare the similarity of
+    <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec6">Example 8</a> and
+    <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-csc6">Example 10</a>.
+</aside>
 
-<!--table for how to integrate csc^n() -->
-<div class="box-title"> INTEGRATING \(\int \csc^n x \di x\) </div>
-<div class="box">
-    <ol class="list-alpha">
-        <li>
-            If the power of cosecant is even (\(n\) even), then save the extra factor \(\csc^2 x\)
-            and use \(\csc^2 x = \cot^2 x + 1\) to express the remaining terms in terms of \(\cot x \col\)
-            \[
-            \ba 
-            \int \csc^n x \di x 
-            &= \int \csc^2 x \csc^{n - 2} x \di x \nl 
-            &= \int \csc^2 x (\cot^2 x + 1)^{\frac{n - 2}{2}} \di x \period 
-            \ea 
-            \]
-        </li>
-        <li>
-            If the power of cosecant is odd (\(n\) odd) and greater than \(1,\) 
-            then the integral may require Integration by Parts.
-        </li>
-        <li>
-            If \(n = 1,\) then 
-            \[\int \csc x \di x = -\ln \abs{\csc x + \cot x} + C \period\]
-        </li>
-    </ol>
-</div>
-
-<div class="example-title"> EXAMPLE 10 </div>
+<div class="example-title" id="ex-csc6"> EXAMPLE 10 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \csc^6 x \di x.\)
+        \[\int \csc^6 x \di x\]
     </div>
 </div>
 <button onclick="toggle10()" class="solution-button"></button>
 <div id="solution10" class="solution">
-    Since the power of cosecant is even, we save the extra factor \(\csc^2 x\)
-    and use \(\csc^2 x = 1 + \cot^2 x\) to express the remaining term, \(\csc^6 x,\)
-    in terms of cotangent. We have  
+    Since cosecant's power is even, we conserve an extra factor \(\csc^2 x\)
+    and use \(\csc^2 x = \cot^2 x + 1\) to express the remaining cosecants
+    in terms of cotangents. 
+    The integral therefore becomes
     \[
-    \ba 
-    \int \csc^6 x \di x 
-    &= \int \csc^2 x \csc^4 x \di x \nl
-    &= \int \csc^2 x (1 + \cot^2 x)^2 \di x \period 
-    \ea 
+    \int \csc^4 x \csc^2 x \di x \nl
+    = \int (\cot^2 x + 1)^2 \csc^2 x \di x \pd  
     \]
     Substituting \(u = \cot x,\) we get \(\dd u = -\csc^2 x \di x\) and so the integral becomes 
     \[
     \ba 
-    -\int (1 + u^2)^2 \di u 
-    &= -\int 1 + 2u^2 + u^4 \di u \nl 
-    &= -u - \frac{2u^3}{3} - \frac{u^5}{5} + C \nl 
-    &= \boxed{\cot x + \frac{2 \cot^3 x}{3} + \frac{\cot^5 x}{5} + C}
+    -\int (u^2 + 1)^2 \di u 
+    &= -\int \par{u^4 + 2u^2 + 1} \di u \nl 
+    &= -\tfrac{1}{5} u^5 - \tfrac{2}{3} u^3 - u + C \nl 
+    &= \boxed{-\tfrac{1}{5} \cot^5 x - \tfrac{2}{3} \cot^3 x - \cot x + C}
     \ea
     \]
 </div> 
 
 <h4 id="trig-integrals-with-products">Trigonometric Integrals with Products</h4>
 <p>
-    The next families of integrals that we will cover involve the forms 
-    \(\int \sin(m x) \sin(n x) \di x,\)
-    \(\int \cos(m x) \cos(n x) \di x,\)
-    and \(\int \sin(m x) \cos(n x) \di x.\)
-    We use the following sum-to-product trigonometric identities:
+    The next families of integrals we evaluate contain products of trigonometric functions,
+    such as the family \(\int \sin mx \cos nx \di x.\)
+    Whereas we could use Integration by Parts to evaluate these integrals, 
+    it is far better to convert these products to sums of trigonometric functions,
+    which are much easier to integrate.
+    The following trigonometric identities enable us to do so.
+</p>
+
+<div class="steps-title">PRODUCT-TO-SUM TRIGONOMETRIC IDENTITIES</div>
+<div class="steps">
     \begin{align} 
-        \sin \alpha \sin \beta &= \frac{1}{2} [\cos(\alpha - \beta) - \cos(\alpha + \beta)] \label{eq:sinsin} \nl 
-        \cos \alpha \cos \beta &= \frac{1}{2} [\cos(\alpha - \beta) + \cos(\alpha + \beta)] \label{eq:coscos} \nl 
-        \sin \alpha \cos \beta &= \frac{1}{2} [\sin(\alpha - \beta) + \sin(\alpha + \beta)] \label{eq:sincos}  \period 
+        \sin A \sin B &= \tfrac{1}{2} [\cos(A - B) - \cos(A + B)] \label{eq:sinsin} \nl 
+        \cos A \cos B &= \tfrac{1}{2} [\cos(A - B) + \cos(A + B)] \label{eq:coscos} \nl 
+        \sin A \cos B &= \tfrac{1}{2} [\sin(A - B) + \sin(A + B)] \label{eq:sincos}
     \end{align}
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    The addition and subtraction identities for sine are, respectively,
+    \[
+    \ba
+    \sin(A + B) &= \sin A \cos B + \cos A \sin B \cma \nl 
+    \sin(A - B) &= \sin A \cos B - \cos A \sin B \pd
+    \ea
+    \]
+    Adding both equations gives 
+    \begin{align}
+    \sin(A - B) + \sin(A + B) &= 2 \sin A \cos B \nonum \nl 
+    \implies \sin A \cos B &= \tfrac{1}{2} [\sin(A - B) + \sin(A + B)] \pd \eqlabel{eq:sincos}
+    \end{align}
+    Conversely, the addition and subtraction identities for cosine are, respectively, 
+    \[
+    \ba 
+    \cos(A + B) &= \cos A \cos B - \sin A \sin B \cma \nl 
+    \cos(A - B) &= \cos A \cos B + \sin A \sin B \pd
+    \ea     
+    \]
+    By adding both equations, we see 
+    \begin{align}
+    \cos(A - B) + \cos(A + B) &= 2 \cos A \cos B \nonum \nl 
+    \implies \cos A \cos B &= \tfrac{1}{2} [\cos(A - B) + \cos(A + B)] \pd \eqlabel{eq:coscos}
+    \end{align}
+    Likewise, subtracting both identities for cosine gives 
+    \begin{align}
+    \cos(A - B) - \cos(A + B) &= 2 \sin A \sin B \nonum \nl 
+    \implies \sin A \sin B &= \tfrac{1}{2} [\cos(A - B) - \cos(A + B)] \pd \eqlabel{eq:sinsin}
+    \end{align}
+    \[\qedproof\]
 </p>
 
 <div class="example-title"> EXAMPLE 11 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \sin(8x) \cos(3x) \di x.\)
+        Evaluate the following integrals.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds \int \cos 4x \cos 2x \di x\)</span>
+            </li>
+            <li>
+                <span>\(\ds \int \sin 8x \cos 3x \di x\)</span>
+            </li>
+            <li>
+                <span>\(\ds \int \sin 12 x \sin 20 x \di x\)</span>
+            </li>
+        </ol>
     </div>
 </div>
 <button onclick="toggle11()" class="solution-button"></button>
 <div id="solution11" class="solution">
-    We use \(\eqRefer{eq:sincos}\) 
-    to rewrite the integrand as 
-    \[\frac{1}{2} [\sin 5x + \sin 11 x] \period\]
-    And so  
-    \[
-    \ba 
-    \int \sin(8x) \cos(3x) \di x 
-    &= \frac{1}{2} \int \sin 5x + \sin 11 x \di x \nl 
-    &= \boxed{-\frac{1}{10} \cos 5x - \frac{1}{22} \cos 11 x + C}
-    \ea 
-    \]
+    <ol class="list-alpha">
+        <li>
+            By \(\eqref{eq:coscos},\) 
+            the integral becomes
+            \[
+            \int \tfrac{1}{2} (\cos 2x + \cos 6x) \di x
+            = \boxed{\tfrac{1}{4} \sin 2x + \tfrac{1}{12} \sin 6x + C}
+            \]
+        </li>
+        <hr>
+        <li>
+            By \(\eqref{eq:sincos},\) the integral becomes
+            \[
+            \int \tfrac{1}{2} \par{\sin 5x + \sin 11 x} \di x
+            = \boxed{-\tfrac{1}{10} \cos 5x - \tfrac{1}{22} \cos 11 x + C}
+            \]
+        </li>
+        <hr>
+        <li>
+            By \(\eqref{eq:sinsin},\) the integral becomes
+            \[
+            \ba
+            \int \tfrac{1}{2} [\cos(-8x) - \cos 32 x] \di x
+            &= -\tfrac{1}{16} \sin(-8x) - \tfrac{1}{64} \sin 32 x + C \nl 
+            &= \boxed{\tfrac{1}{16} \sin 8x - \tfrac{1}{64} \sin 32 x + C}
+            \ea
+            \]
+            where the last step is true because sine is odd and so \(\sin(-8x)\) \(= -\sin 8x.\)
+        </li>
+    </ol>
 </div> 
 
-<div class="example-title"> EXAMPLE 12 </div>
+<p>
+    We culminate this section by evaluating miscellaneous trigonometric integrals,
+    which require ingenuity and apply the strategies we have discussed.
+</p>
+
+<p>
+    <span class="text-recall">RECALL</span>
+    As we proceed into the following examples,
+    let's remind ourselves of the antiderivatives of tangent, secant, cosecant, and cotangent, 
+    which we found in Section <a href="/ValCalc/ValCalc/calculus/4.4-Integration-by-Substitution.html">4.4</a>.
+    The following information is essential to memorize.
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \int \tan x \di x = \ln \abs{\sec x} + C\)
+                </td>
+                <td>
+                    \(\ds \int \cot x \di x = \ln \abs{\sin x} + C\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \int \sec x \di x = \ln \abs{\sec x + \tan x} + C\)
+                </td>
+                <td>
+                    \(\ds \int \csc x \di x = - \ln \abs{\csc x + \cot x} + C\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</p>
+
+<div class="example-title" id="ex-sec^3"> EXAMPLE 12 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate \(\ds \int \cos(4x) \cos(2x) \di x.\)
+        \[\int \sec^3 x \di x\]
     </div>
 </div>
 <button onclick="toggle12()" class="solution-button"></button>
 <div id="solution12" class="solution">
-    We use \(\eqRefer{eq:coscos}\) 
-    to rewrite the integrand as 
-    \[\frac{1}{2} [\cos 2x + \cos 6x] \period\]
-    We then find 
+    Secant's power is odd, so there's no clear guideline for evaluating the integral. 
+    We can't manipulate the integrand into any useful form. 
+    For example, 
+    rewriting as \(\int \sec x (\tan^2 x + 1) \di x\) doesn't help, 
+    since no substitution can eliminate the extra factor \(\sec x.\)
+    But because \(\textderiv{}{x} (\tan x)\) \(= \sec^2 x,\)
+    it's easy to integrate \(\sec^2 x.\)
+    Let's therefore break \(\sec^3 x\) into \(\sec x \sec^2 x\) and perform Integration by Parts
+    (see Section <a href="/ValCalc/ValCalc/calculus/6.1-Integration-by-Parts.html">6.1</a>).
+    We choose 
+    \[
+    \baat{2} 
+    u &= \sec x \lspace &\dd v &= \sec^2 x \di x \nl 
+    \dd u &= \sec x \tan x \di x \lspace &v &= \tan x \pd
+    \eaat
+    \]
+    So we see
     \[
     \ba 
-    \int \cos(4x) \cos(2x) \di x &= \frac{1}{2} \int \cos 2x + \cos 6x \di x \nl 
-    &= \boxed{\frac{1}{4} \sin 2x + \frac{1}{12} \sin 6x + C}
+    \int \sec^3 x \di x 
+    &= \sec x \tan x - \int \sec x \tan^2 x \di x \nl 
+    \int \sec^3 x \di x &= \sec x \tan x - \int \sec x \par{\sec^2 x - 1} \di x \nl 
+    \int \sec^3 x \di x &= \sec x \tan x - \int \sec^3 x \di x + \int \sec x \di x \nl 
+    2 \int \sec^3 x \di x &= \sec x \tan x + \int \sec x \di x \pd
+    \ea 
+    \]
+    We have \(\int \sec x \di x = \ln \abs{\sec x + \tan x} + C.\)
+    Then we solve for \(\int \sec^3 x \di x,\) as follows:
+    \[
+    \ba 
+    2 \int \sec^3 x \di x &= \sec x \tan x + \ln \abs{\sec x + \tan x} \nl 
+    \int \sec^3 x \di x &= \boxed{\tfrac{1}{2} \sec x \tan x + \tfrac{1}{2} \ln \abs{\sec x + \tan x} + C}
     \ea 
     \]
 </div> 
 
-<!--section summary-->
+<p>
+    The result in
+    <a href="/ValCalc/ValCalc/calculus/6.2-Trigonometric-Integrals.html#ex-sec^3">Example 12</a>
+    seems unorthodox.
+    But this integral happens to appear in many applications of integration,
+    as we will see in the next chapters.
+</p>
+
+<div class="example-title"> EXAMPLE 13 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \frac{1}{1 - \sin x} \di x\]
+    </div>
+</div>
+<button onclick="toggle13()" class="solution-button"></button>
+<div id="solution13" class="solution">
+    Because the denominator contains a binomial with a trigonometric function,
+    it is useful to multiply the numerator and denominator by the conjugate, \((1 + \sin x).\)
+    We then see  
+    \[
+    \ba 
+    \int \frac{1}{1 - \sin x} \di x
+    &= \int \frac{1}{1 - \sin x} \par{\frac{1 + \sin x}{1 + \sin x}} \di x \nl 
+    &= \int \frac{1 + \sin x}{1 - \sin^2 x} \di x \nl 
+    &= \int \frac{1 + \sin x}{\cos^2 x} \di x \nl
+    &= \int \par{\sec^2 x + \sec x \tan x} \di x \nl
+    &= \boxed{\tan x + \sec x + C}
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-int-denom-sin-cos-2"> EXAMPLE 14 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int \frac{1}{\sin^2 x \cos^2 x} \di x\]
+    </div>
+</div>
+<button onclick="toggle14()" class="solution-button"></button>
+<div id="solution14" class="solution">
+    When sine and cosine factors are built up in the denominator,
+    it is useful to use the Pythagorean identity \((\sin^2 x + \cos^2 x = 1)\)
+    to split the fraction. 
+    Doing so, we see
+    \[
+    \ba 
+    \int \frac{1}{\sin^2 x \cos^2 x} \di x 
+    &= \int \par{\frac{\sin^2 x}{\sin^2 x \cos^2 x} + \frac{\cos^2 x}{\sin^2 x \cos^2 x}} \di x \nl 
+    &= \int \par{\sec^2 x + \csc^2 x} \di x \nl 
+    &= \boxed{\tan x - \cot x + C}
+    \ea 
+    \]
+</div> 
+
 <div class="section-summary">
-    <ul>
-        <li>
-            Consider \(\int \sin^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If \(n\) is odd, then save an extra factor \(\sin x\) by writing 
-                    \(\sin^n x\) as \(\sin x \sin^{n - 1} x.\)
-                    Use \(\sin^2 x = 1 - \cos^2 x\) to express \(\sin^{n - 1} x\) 
-                    in terms of cosine:
-                    \[
-                    \ba 
-                    \int \sin^n x \di x 
-                    &= \int \sin x \sin^{n - 1} x \di x \nl 
-                    &= \int \sin x (1 - \cos^2 x)^{\frac{n - 1}{2}} \di x \period 
-                    \ea 
-                    \]
-                    Then substitute \(u = \cos x.\)
-                </li>
-                <li>
-                    If \(n\) is even, then reduce the integral using 
-                    \[\sin^2 x = \frac{1}{2}(1 - \cos 2x) \tag{1} \period\]
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \cos^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If \(n\) is odd, then save an extra factor \(\cos x\) by writing 
-                    \(\cos^n x\) as \(\cos x \cos^{n - 1} x.\)
-                    Use \(\cos^2 x = 1 - \sin^2 x\) to express \(\cos^{n - 1} x\) 
-                    in terms of sine:
-                    \[
-                    \ba 
-                    \int \cos^n x \di x 
-                    &= \int \cos x \cos^{n - 1} x \di x \nl 
-                    &= \int \cos x (1 - \sin^2 x)^{\frac{n - 1}{2}} \di x \period 
-                    \ea 
-                    \]
-                    Then substitute \(u = \sin x.\)
-                </li>
-                <li>
-                    If \(n\) is even, then reduce the integral using 
-                    \[\cos^2 x = \frac{1}{2}(1 + \cos 2x) \tag{2} \period\]
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \sin^m x \cos^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If the power of sine is odd (\(m\) odd),
-                    then save an extra factor \(\sin x\) 
-                    and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining terms in terms of cosine:
-                    \[
-                    \ba 
-                    \int \sin^m x \cos^n x \di x 
-                    &= \int \sin x \sin^{m - 1} x \cos^n x \di x \nl 
-                    &= \int \sin x (1 - \cos^2 x)^{\frac{m - 1}{2}} \cos^n x \di x \period 
-                    \ea 
-                    \]
-                    Then substitute \(u = \cos x.\)
-                </li>
-                <li>
-                    If the power of sine is even and the power of cosine is odd (\(m\) even; \(n\) odd),
-                    then save an extra factor \(\cos x\) 
-                    and use \(\cos^2 x = 1 - \sin^2 x\) to rewrite the remaining terms in terms of sine:
-                    \[
-                    \ba 
-                    \int \sin^m x \cos^n x \di x 
-                    &= \int \sin^m x \cos x \cos^{n - 1} x \di x \nl 
-                    &= \int \sin^m x \cos x (1 - \sin^2 x)^{\frac{n - 1}{2}} \di x \period 
-                    \ea 
-                    \]
-                    Then substitute \(u = \sin x.\)
-                </li>
-                <li>
-                    If the powers of sine and cosine are both even (\(m\) and \(n\) both even),
-                    then use \(\sin^2 x = 1- \cos^2 x\) to express the integrand in terms of cosine:
-                    \[
-                    \ba 
-                    \int \sin^m x \cos^n x \di x 
-                    &= \int (\sin^2 x)^{m/2} \cos^n x \di x \nl 
-                    &= \int (1 - \cos^2 x)^{m/2} \cos^n x \di x \period 
-                    \ea 
-                    \]
-                    Then use \(\eqRefer{eq:power-reduction-cos}\)
-                    to reduce the integral.
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \sec^m x \tan^n \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If the power of secant is even (\(m\) even), 
-                    then preserve an extra factor \(\sec^2 x.\) 
-                    Use \(\sec^2 x = 1 + \tan^2 x\) to express the remaining factors in terms of \(\tan x \col \)
-                    \[
-                    \ba 
-                    \int \sec^m x \tan^n x \di x 
-                    &= \int \sec^2 x \sec^{m - 2} x \tan^n x \di x \nl 
-                    &= \int \sec^2 x (1 + \tan^2 x)^{\frac{m - 2}{2}} \tan^n x \di x \period
-                    \ea 
-                    \]
-                    Then substitute \(u = \tan x.\)
-                </li>
-                <li>
-                    If the power of tangent is odd (\(n\) odd),
-                    then preserve an extra factor \(\sec x \tan x.\)
-                    Use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of \(\sec x \col \)
-                    \[ 
-                    \ba 
-                    \int \sec^m x \tan^n x \di x  
-                    &= \int \sec x \sec^{m - 1} x \tan x \tan^{n - 1} x \di x \nl 
-                    &= \int \sec x \tan x \sec^{m - 1} x \left(\sec^2 x - 1 \right)^{\frac{n - 1}{2}} \di x \period
-                    \ea 
-                    \]
-                    Then substitute \(u = \sec x.\)
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \sec^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If the power of secant is even (\(n\) even), then save the extra factor \(\sec^2 x\)
-                    and use \(\sec^2 x = \tan^2 x + 1\) to express the remaining terms in terms of \(\tan x \col\)
-                    \[
-                    \ba 
-                    \int \sec^n x \di x 
-                    &= \int \sec^2 x \sec^{n - 2} x \di x \nl 
-                    &= \int \sec^2 x (\tan^2 x + 1)^{\frac{n - 2}{2}} \period 
-                    \ea 
-                    \]
-                </li>
-                <li>
-                    If the power of secant is odd (\(n\) odd) and greater than \(1,\)
-                    then the integral may require Integration by Parts.
-                </li>
-                <li>
-                    If \(n = 1,\) then 
-                    \[\int \sec x \di x = \ln \abs{\sec x + \tan x} + C \period\]
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \csc^m x \cot^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If the power of cosecant is even (\(m\) even), 
-                    then preserve an extra factor \(\csc^2 x.\) 
-                    Use \(\csc^2 x = 1 + \cot^2 x\) to express the remaining factors in terms of \(\cot x \col \)
-                    \[
-                    \ba 
-                    \int \csc^m x \cot^n x \di x 
-                    &= \int \csc^2 x \csc^{m - 2} x \cot^n x \di x \nl 
-                    &= \int \csc^2 x (1 + \cot^2 x)^{\frac{m - 2}{2}} \cot^n x \di x \period
-                    \ea 
-                    \]
-                    Then substitute \(u = \cot x.\)
-                </li>
-                <li>
-                    If the power of cotangent is odd (\(n\) odd),
-                    then preserve an extra factor \(\csc x \cot x.\)
-                    Use \(\cot^2 x = \csc^2 x - 1\) to express the remaining factors in terms of \(\csc x \col \)
-                    \[ 
-                    \ba 
-                    \int \csc^m x \cot^n x \di x  
-                    &= \int \csc x \csc^{m - 1} x \cot x \cot^{n - 1} x \di x \nl 
-                    &= \int \csc x \cot x \csc^{m - 1} x \left(\csc^2 x - 1 \right)^{\frac{n - 1}{2}} \di x \period
-                    \ea 
-                    \]
-                    Then substitute \(u = \csc x.\)
-                </li>
-            </ol>
-        </li>
-        <li>
-            Consider \(\int \cot^n x \di x.\)
-            <ol class="list-alpha">
-                <li>
-                    If the power of cosecant is even (\(n\) even), then save the extra factor \(\csc^2 x\)
-                    and use \(\csc^2 x = \cot^2 x + 1\) to express the remaining terms in terms of \(\cot x \col\)
-                    \[
-                    \ba 
-                    \int \csc^n x \di x 
-                    &= \int \csc^2 x \csc^{n - 2} x \di x \nl 
-                    &= \int \csc^2 x (\cot^2 x + 1)^{\frac{n - 2}{2}} \di x \period 
-                    \ea 
-                    \]
-                </li>
-                <li>
-                    If the power of cosecant is odd (\(n\) odd) and greater than \(1,\) 
-                    then the integral may require Integration by Parts.
-                </li>
-                <li>
-                    If \(n = 1,\) then 
-                    \[\int \csc x \di x = -\ln \abs{\csc x + \cot x} + C \period\]
-                </li>
-            </ol>
-        </li>
-    </ul>
+    <p>
+        <a href="#integrals-with-sin-and-cos" class="summary-anchor">Integrals with Sine and Cosine</a>
+        We evaluate integrals that contain sine and cosine factors by 
+        exploiting the identities \(\textderiv{}{x} (\sin x) = \cos x\)
+        and \(\textderiv{}{x} (\cos x) = -\sin x.\) 
+        The following guidelines enable us to evaluate \(\int \sin^n x \di x\)
+        if \(n\) is a positive integer.
+        <ol class="list-alpha">
+            <li>
+                If \(n\) is odd, then save an extra factor \(\sin x\) by writing 
+                \(\sin^n x\) as \(\sin^{n - 1} x \sin x.\)
+                Use \(\sin^2 x = 1 - \cos^2 x\) to express \(\sin^{n - 1} x\) 
+                in terms of cosine:
+                \[
+                \ba 
+                \int \sin^n x \di x 
+                &= \int \sin^{n - 1} x \sin x \di x \nl 
+                &= \int (1 - \cos^2 x)^{(n - 1)/2} \sin x \di x \pd 
+                \ea 
+                \]
+                Then substitute \(u = \cos x.\)
+            </li>
+            <li>
+                If \(n\) is even, then reduce the integral using \(\eqref{eq:power-reduction-sin}\) 
+                as necessary:
+                \[
+                \int \sin^n x \di x 
+                = \int \parbr{\tfrac{1}{2} (1 - \cos 2x)}^{n/2} \di x \pd
+                \]
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        Likewise, we use the following guidelines in evaluating \(\int \cos^n x \di x.\)
+        <ol class="list-alpha">
+            <li>
+                If \(n\) is odd, then save an extra factor \(\cos x\) by writing 
+                \(\cos^n x\) as \(\cos^{n - 1} x \cos x.\)
+                Use \(\cos^2 x = 1 - \sin^2 x\) to express \(\cos^{n - 1} x\) 
+                in terms of sine:
+                \[
+                \ba 
+                \int \cos^n x \di x 
+                &= \int \cos^{n - 1} x \cos x \di x \nl 
+                &= \int (1 - \sin^2 x)^{(n - 1)/2} \cos x \di x \pd 
+                \ea 
+                \]
+                Then substitute \(u = \sin x.\)
+            </li>
+            <li>
+                If \(n\) is even, then reduce the integral using \(\eqref{eq:power-reduction-cos}\) 
+                as necessary:
+                \[
+                \int \cos^n x \di x 
+                = \int \parbr{\tfrac{1}{2} (1 + \cos 2x)}^{n/2} \di x \pd
+                \]
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        The following guidelines enable us to evaluate \(\int \sin^m x \cos^n x \di x.\)
+        <ol class="list-alpha">
+            <li>
+                If the power of sine is odd (\(m\) odd),
+                then save an extra factor \(\sin x\) 
+                and use \(\sin^2 x = 1 - \cos^2 x\) to express the remaining factors in terms of cosine:
+                \[
+                \ba 
+                \int \sin^m x \cos^n x \di x 
+                &= \int \sin^{m - 1} x \cos^n x \sin x \di x \nl 
+                &= \int (1 - \cos^2 x)^{(m - 1)/2} \cos^n x \sin x \di x \pd 
+                \ea 
+                \]
+                Then substitute \(u = \cos x.\)
+            </li>
+            <li>
+                If the power of sine is even and the power of cosine is odd (\(m\) even, \(n\) odd),
+                then save an extra factor \(\cos x\) 
+                and use \(\cos^2 x = 1 - \sin^2 x\) to rewrite the remaining factors in terms of sine:
+                \[
+                \ba 
+                \int \sin^m x \cos^n x \di x 
+                &= \int \sin^m x \cos^{n - 1} x \cos x \di x \nl 
+                &= \int \sin^m x (1 - \sin^2 x)^{(n - 1)/2} \cos x \di x \pd 
+                \ea 
+                \]
+                Then substitute \(u = \sin x.\)
+            </li>
+            <li>
+                If the powers of sine and cosine are both even (\(m\) and \(n\) both even),
+                then use \(\sin^2 x = 1 - \cos^2 x\) to express the integrand in terms of cosine:
+                \[
+                \ba 
+                \int \sin^m x \cos^n x \di x 
+                &= \int (\sin^2 x)^{m/2} \cos^n x \di x \nl 
+                &= \int (1 - \cos^2 x)^{m/2} \cos^n x \di x \pd 
+                \ea 
+                \]
+                Then use \(\eqref{eq:power-reduction-cos}\)
+                to reduce the integral.
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#int-sec-tan" class="summary-anchor">Integrals with Secants and Tangents</a>
+        The derivatives \(\textderiv{}{x} (\tan x)\) \(= \sec^2 x\)
+        and \(\textderiv{}{x} (\sec x)\) \(= \sec x \tan x\) enable 
+        us to evaluate the family of integrals \(\int \sec^m x \tan^n x \di x\)
+        as follows.
+        <ol class="list-alpha">
+            <li>
+                If the power of secant is even (\(m\) even), 
+                then preserve an extra factor \(\sec^2 x.\) 
+                Use \(\sec^2 x = 1 + \tan^2 x\) to express the remaining factors in terms of \(\tan x \col \)
+                \[
+                \ba 
+                \int \sec^m x \tan^n x \di x 
+                &= \int \sec^{m - 2} x \tan^n x \sec^2 x \di x \nl 
+                &= \int (1 + \tan^2 x)^{(m - 2)/2} \tan^n x \sec^2 x \di x \pd
+                \ea 
+                \]
+                Then substitute \(u = \tan x.\)
+            </li>
+            <li>
+                If the power of tangent is odd (\(n\) odd),
+                then preserve an extra factor \(\sec x \tan x.\)
+                Use \(\tan^2 x = \sec^2 x - 1\) to express the remaining factors in terms of \(\sec x \col \)
+                \[ 
+                \ba 
+                \int \sec^m x \tan^n x \di x  
+                &= \int \sec^{m - 1} x \tan^{n - 1} x \sec x \tan x \di x \nl 
+                &= \int \sec^{m - 1} x \par{\sec^2 x - 1}^{(n - 1)/2} \sec x \tan x \di x \pd
+                \ea 
+                \]
+                Then substitute \(u = \sec x.\)
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        To evaluate \(\int \sec^n x \di x\) if \(n\) is a positive even integer, 
+        we save an extra factor \(\sec^2 x\)
+        and use \(\sec^2 x = \tan^2 x + 1\) to express the remaining factors in terms of tangent:
+        \[
+        \ba 
+        \int \sec^n x \di x 
+        &= \int \sec^{n - 2} x \sec^2 x \di x \nl 
+        &= \int (\tan^2 x + 1)^{(n - 2)/2} \sec^2 x \di x \pd 
+        \ea 
+    \]
+    </p>
+    <p>
+        <a href="#int-csc-cot" class="summary-anchor">Integrals with Cosecant and Cotangent</a>
+        The derivatives \(\textderiv{}{x} (\cot x)\) \(= -\csc^2 x\)
+        and \(\textderiv{}{x} (\csc x)\) \(= -\csc x \cot x\) enable 
+        us to evaluate the family of integrals \(\int \csc^m x \cot^n x \di x.\)
+        We do so by employing a similar strategy 
+        from <a href="#int-sec-tan" class="page-anchor">Integrals with Secants and Tangents</a>;
+        namely, \(\tan x\) is analogous to \(\cot x\) and \(\sec x\)
+        is analogous to \(\csc x.\)
+        We therefore use the following guidelines.
+        <ol class="list-alpha">
+            <li>
+                If the power of cosecant is even (\(m\) even), 
+                then preserve an extra factor \(\csc^2 x.\) 
+                Use \(\csc^2 x = \cot^2 x + 1\) to express the remaining factors in terms of cotangent:
+                \[
+                \ba 
+                \int \csc^m x \cot^n x \di x 
+                &= \int \csc^{m - 2} x \cot^n x \csc^2 x \di x \nl 
+                &= \int (\cot^2 x + 1)^{(m - 2)/2} \cot^n x \csc^2 x \di x \pd
+                \ea 
+                \]
+                Then substitute \(u = \cot x.\)
+            </li>
+            <li>
+                If the power of cotangent is odd (\(n\) odd),
+                then preserve an extra factor \(\csc x \cot x.\)
+                Use \(\cot^2 x = \csc^2 x - 1\) to express the remaining factors in terms of cosecant:
+                \[ 
+                \ba 
+                \int \csc^m x \cot^n x \di x  
+                &= \int \csc^{m - 1} x \cot^{n - 1} x \csc x \cot x \di x \nl 
+                &= \int \csc^{m - 1} x (\csc^2 x - 1)^{(n - 1)/2} \csc x \cot x \di x \pd
+                \ea 
+                \]
+                Then substitute \(u = \csc x.\)
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#trig-integrals-with-products" class="summary-anchor">Trigonometric Integrals with Products</a>
+        Trigonometric identities convert products of trigonometric functions 
+        into sums and differences, which are simple to integrate. 
+        We use the following equations:
+        \begin{align} 
+        \sin A \sin B &= \tfrac{1}{2} [\cos(A - B) - \cos(A + B)] \eqlabel{eq:sinsin} \nl 
+        \cos A \cos B &= \tfrac{1}{2} [\cos(A - B) + \cos(A + B)] \eqlabel{eq:coscos} \nl 
+        \sin A \cos B &= \tfrac{1}{2} [\sin(A - B) + \sin(A + B)] \eqlabel{eq:sincos}
+    \end{align}
+    </p>
 </div>
 </main>
 </main>
@@ -1081,16 +1072,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -1098,10 +1089,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -1109,16 +1100,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -1126,27 +1117,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>
