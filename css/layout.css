@@ -224,6 +224,11 @@ aside p{
     font-style: italic;
 }
 
+code{
+    background-color: rgb(39, 40, 34);
+    color:burlywood;
+}
+
 .p-no-indent{
     text-indent: 0%;
 }

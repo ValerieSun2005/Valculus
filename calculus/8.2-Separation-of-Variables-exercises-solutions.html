@@ -1430,7 +1430,7 @@
         \(a = -\tfrac{1}{2} v^2,\)
         where \(v\) is velocity.
         The particle begins its motion at the origin 
-        with a velocity of \(2\) and an acceleration of \(3.\)
+        with a velocity of \(2.\)
         Find the particle's position, velocity, and acceleration functions in terms of time \(t \geq 0.\)
      
         </div> 
@@ -1438,8 +1438,7 @@
         <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Note the initial conditions \(x(0) = 0,\) \(v(0) = 2,\)
-        and \(a(0) = 3.\)
+        Note the initial conditions \(x(0) = 0\) and \(v(0) = 2.\)
         <p>
 <span class="label-emph">Velocity Function</span>
             Recall that acceleration is the time derivative of velocity—that is, 
@@ -1485,6 +1484,107 @@
             \[x = \boxed{2 \ln(t + 1)}\]
             (Since \(t \geq 0,\) we drop the absolute value bars 
             around the logarithm.)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[HARD]]] -->
+        A duck swims back and forth along a river with acceleration given by
+        \(a^2 = 1 - 4v^2,\)
+        where \(v\) is the duck's velocity. 
+        Let \(s\) be the duck's position from its nest in the river,
+        and take east to be the positive direction. 
+        The duck begins at the nest and travels east with an initial velocity of \(1/2.\)
+        Determine the duck's position, velocity, and acceleration 
+        as functions of time \(t \geq 0.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note the initial conditions \(s(0) = 0\) and \(v(0) = 1/2.\)
+        <p>
+<span class="label-emph">Velocity Function</span>
+            Recall that acceleration is the time derivative of velocity—that is, 
+            \(a = \textderiv{v}{t}.\)
+            Given \(a^2 = 1 - 4v^2,\) we have the following differential equation: 
+            \[
+            \deriv{v}{t} = \sqrt{1 - 4v^2} \pd
+            \]
+            (Once we attain the solution, we will see that 
+            it is irrelevant whether we choose the positive or negative square root.)
+            Performing Separation of Variables gives 
+            \[\int \frac{1}{\sqrt{1 - 4v^2}} \di v = \int \dd t \pd\]
+            To evaluate the integral on the left, 
+            we substitute \(u = 2v.\)
+            Then \(\dd u = 2 \di v\)
+            and so
+            \[
+            \ba 
+            \int \frac{1}{\sqrt{1 - 4v^2}} \di v
+            &amp;= \int \frac{1/2}{\sqrt{1 - u^2}} \di u \nl 
+            &amp;= \tfrac{1}{2} \asin u \nl 
+            &amp;= \tfrac{1}{2} \asin 2v \cma
+            \ea 
+            \]
+            where we omitted the constant of integration.
+            We therefore have 
+            \[\tfrac{1}{2} \asin 2v = t + C \pd\]
+            Substituting the initial condition \(v(0) = 1/2,\) we find 
+            \[\tfrac{1}{2} \asin 1 = 0 + C \implies C = \frac{\pi}{4} \pd\]
+            Hence, we have 
+            \[
+            \ba
+            \tfrac{1}{2} \asin 2v &amp;= t + \frac{\pi}{4} \nl 
+            \asin 2v &amp;= 2t + \frac{\pi}{2} \nl 
+            2v &amp;= \sin \par{2t + \frac{\pi}{2}} \nl 
+            v(t) &amp;= \boxed{\tfrac{1}{2} \sin \par{2t + \frac{\pi}{2}}}
+            \ea
+            \]
+            (This function is even, so it was acceptable to pick the positive square root 
+            when decomposing <nobr>\(a^2 = 1 - 4v^2.\))</nobr>
+</p>
+<p>
+<span class="label-emph">Acceleration Function</span>
+            The acceleration function is given by \(a(t) = \textderiv{v}{t},\)
+            namely, 
+            \[
+            \ba
+            a(t) &amp;= \deriv{}{t} \parbr{\tfrac{1}{2} \sin \par{2t + \frac{\pi}{2}}} \nl 
+            &amp;= \boxed{\cos \par{2t + \frac{\pi}{2}}}
+            \ea
+            \]
+        </p>
+<p>
+<span class="label-emph">Position Function</span>
+            The position function is given by \(s(t) = \int v(t) \di t,\)
+            that is,
+            \[s(t) = \int \tfrac{1}{2} \sin \par{2t + \frac{\pi}{2}} \di t \pd\]
+            Substituting \(u = 2t + \pi/2,\)
+            we have \(\dd u = 2 \di t\)
+            and therefore
+            \[
+            \ba 
+            \int \tfrac{1}{2} \sin \par{2t + \frac{\pi}{2}} \di t
+            &amp;= \int \tfrac{1}{4} \sin u \di u \nl 
+            &amp;= - \tfrac{1}{4} \cos u + D \nl 
+            &amp;= -\tfrac{1}{4} \cos \par{2t + \frac{\pi}{2}} + D \pd
+            \ea 
+            \]
+            Accordingly, the position function is 
+            \[s(t) = -\tfrac{1}{4} \cos \par{2t + \frac{\pi}{2}} + D \pd\]
+            Since \(s(0) = 0,\) we find 
+            \[0 = -\tfrac{1}{4} \cos \par{0 + \frac{\pi}{2}} + D \implies D = 0 \pd\]
+            Thus, the position function is 
+            \[s(t) = \boxed{-\tfrac{1}{4} \cos \par{2t + \frac{\pi}{2}}}\]
         </p>
  
         </div> 

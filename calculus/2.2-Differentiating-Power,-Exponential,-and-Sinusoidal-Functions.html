@@ -468,39 +468,16 @@
     \deriv{}{x} \par{e^x} = e^x \lim_{h \to 0} \frac{e^h - 1}{h} \pd \label{eq:deriv-lim}
     \end{equation}
     But what is the value of the limit on the right-hand side?
-    To calculate it, we use a series of algebraic manipulations and a substitution.
-    Euler's number is given by 
-    \[
-    e = \lim_{n \to \infty} \par{1 + \frac{1}{n}}^n \pd
-    \]
-    Taking the natural logarithm of both sides gives 
-    \[1 = \ln \parbr{\lim_{n \to \infty} \par{1 + \frac{1}{n}}^n} \pd\]
-    Because the natural logarithm is continuous for all positive inputs, the last step is equivalent to 
-    \[1 = \lim_{n \to \infty} \parbr{\ln \par{1 + \frac{1}{n}}^n}\]
-    by the arguments of Section <a href="/Valculus/calculus/1.4-Continuity.html">1.4</a>.
-    Using the logarithmic property \(\ln x^n = n \ln x,\) we attain 
-    \[1 = \lim_{n \to \infty} \parbr{n \ln \par{1 + \frac{1}{n}}} \pd\]
-    We now perform a clever substitution: Let \(1/n = e^h - 1.\)
-    As \(n \to \infty,\) \(1/n \to 0.\)
-    The expression \(e^h - 1\) must also approach \(0,\) which is satisfied by \(h \to 0.\)
-    The limit equation therefore becomes 
-    \[
-    \ba 
-    1 &= \lim_{h \to 0} \frac{\ln \parbr{1 + \par{e^h - 1}}}{e^h - 1} \nl 
-    &= \lim_{h \to 0} \frac{\ln \par{e^h}}{e^h - 1} \nl 
-    &= \lim_{h \to 0} \frac{h}{e^h - 1} \pd
-    \ea 
-    \]
-    The Quotient Law of Limits enables us to reciprocate the limit, from which we attain  
+    The limit must be \(1\) so that \(\eqref{eq:deriv-e^x}\) holds true; 
+    in fact, \(e\) <i>is the number for which</i> 
     \begin{equation} 
     \lim_{h \to 0} \frac{e^h - 1}{h} = 1 \pd \label{eq:e-lim}
     \end{equation}
-    In calculus, we choose to work with \(e\) for convenience because \(e\)
-    <i>is the number for which \(\eqref{eq:e-lim}\) holds true</i>. 
-    This limit is useful because then \(\eqref{eq:deriv-lim}\) becomes 
+    Then \(\eqref{eq:deriv-lim}\) becomes 
     \[\deriv{}{x} \par{e^x} = e^x \cdot 1 = e^x \pd\]
     Any other number wouldn't produce such a clean derivative function,
     as we will see in Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>.
+    For this reason, we work with \(e\) in calculus.
     \[\qedproof\]
 </p>
 
@@ -685,7 +662,7 @@
 <div class="example-title"> EXAMPLE 6 </div>
 <div class="example">
     <div class="example-problem">  
-        \[\deriv{}{x} \parbrBig{4 \sin x - 2 \cos x + e^x - \tfrac{1}{5} x^{15} + \sqrt[5]{x^2} - \pi^2}\]
+        \[\deriv{}{x} \par{4 \sin x - 2 \cos x + e^x - \tfrac{1}{5} x^{15} + \sqrt[5]{x^2} - \pi^2}\]
     </div>
 </div>
 <button onclick="toggle6()" class="solution-button"></button>

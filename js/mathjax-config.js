@@ -22,7 +22,7 @@ window.MathJax = {
         packages: {'[+]': ['mhchem']},
         tags: 'ams',
         macros: {
-            RR: "{\\bf R}",
+            RR: "{\\mathbb R}",
             bold: ["{\\bf #1}", 1],
             notimplies: "\, \, \; \not \!\!\!\!\!\!\! \implies",
             dd: "{\\textrm{d}}",
@@ -51,6 +51,8 @@ window.MathJax = {
             farenheit: "\\degree \\text{F}",
             fahrenheit: "\\degree \\text{F}",
             celcius: "\\degree \\text{C}",
+            pH: "\\text{pH}",
+            txtSlope: "\\text{slope}",
             length: ["\\abs{#1}", 1], // measure of line segment — e.g., the number |AB|
             segment: ["\\overline{#1}", 1], // line segment itself (NOT measure) — e.g., the line segment AB 
             angleM: ["\\text{m} \\angle #1", 1], // angle measure — e.g., m<A
@@ -63,6 +65,7 @@ window.MathJax = {
             for: "\\qquad \\text{for} \\qquad",
             if: "\\qquad \\text{if} \\qquad",
             vdotss: "\\; \\; \\vdots", // \vdots aligned with equals sign
+            sspace: "\\hspace{1em}",  // space between inline math
             lspace: "\\hspace{6.5em}",
             comma: "\\, , \\,",
             period: "\\, .",
