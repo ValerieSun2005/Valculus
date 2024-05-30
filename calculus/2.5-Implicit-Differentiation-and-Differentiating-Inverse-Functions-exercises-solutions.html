@@ -1896,7 +1896,7 @@
         <div class="box-solution__problem"> 
             
 <!--[[[HARD]]]-->
-        The function \(f(x) = 1/x + \atan x\) is invertible for \(x \gt 0.\)
+        The function \(f(x) = 1/x + \atan x\) is one-to-one for \(x \gt 0.\)
         Show that 
         \[\lim_{x \to (\pi/2)^+} \par{\inv f}'(x) = -\infty \pd\]
      
@@ -1924,6 +1924,80 @@
         &amp;= \lim_{u \to \infty} - \par{u^4 + u^2} \nl 
         &amp;= -\infty \pd
         \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-60"> 
+  <div class="box-solution__head">     EXERCISE 60 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!--[[[HARD]]]-->
+        A circle of radius \(r\) is centered at point \(C\) on the \(y\)-axis and is inscribed in the triangle formed by the graph of \(y = \abs x\)
+        and the horizontal line \(\ell,\)
+        as shown by <a href="#diff-ex-circle-inscribed-abs-l">Figure 6</a>. 
+        In terms of \(r,\) calculate the area of \(\Delta OPQ.\)
+        <figure class="diff-ex-circle-inscribed-abs-l figure-center-one" id="diff-ex-circle-inscribed-abs-l">
+<img alt="Figure 6" src="../images/sectionImages/diff-ex-circle-inscribed-abs-l.jpg"/>
+</figure>
+<style>
+            .diff-ex-circle-inscribed-abs-l::before{
+                content:'FIGURE 6';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-60"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The problem becomes trivial if the identity of line \(\ell\) is known;
+        this is our objective.
+        First let's express the coordinates of point \(C(0, y_C)\) in terms of \(r.\)
+        Note that point \(R\) is a point of tangency, 
+        so at \(R\) the graph \(y = \abs x\) and the circle share the same slope, \(1.\)
+        Accordingly, an equation of the <i>normal line</i> (see Section 
+        <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>)
+        at \(R\) is 
+        \[y - y_C = -\frac{1}{1} (x - 0) \or y = y_C - x \pd\]
+        The circle and \(y = \abs x\) also have the same \(y\)-coordinate at \(R,\)
+        so we see 
+        \[y_C - x = x \implies x = \tfrac{1}{2} y_C \pd\]
+        Hence, the coordinates of \(R\) are \(\par{\tfrac{1}{2} y_C, \tfrac{1}{2} y_C}.\)
+        By the Distance Formula, 
+        we have 
+        \[
+        \ba 
+        r &amp;= \length{CR} \nl 
+        &amp;= \sqrt{\par{0 - \tfrac{1}{2} y_C}^2 + \par{y_C - \tfrac{1}{2} y_C}^2} \nl 
+        &amp;= \frac{y_C}{\sqrt 2} \pd
+        \ea 
+        \]
+        It follows that \(y_C = r \sqrt 2.\)
+        Hence, the identity of line \(\ell\) is 
+        \[
+        \ba
+        y &amp;= y_C + r \nl 
+        &amp;= r \sqrt 2 + r \nl 
+        &amp;= r (1 + \sqrt 2) \pd
+        \ea
+        \]
+        Line \(\ell\) therefore intersects \(y = \abs x\) in the first quadrant at 
+        \(Q(r(1 + \sqrt 2), r(1 + \sqrt 2))\)
+        and in the second quadrant at 
+        \(P(-r(1 + \sqrt 2), r(1 + \sqrt 2)).\)
+        Therefore, \(\Delta OPQ\) has a width of \(2r(1 + \sqrt 2)\)
+        and a height of \(r(1 + \sqrt 2).\)
+        So its area is 
+        \[
+        \ba
+        A &amp;= \tfrac{1}{2} \parbr{2r(1 + \sqrt 2)} \parbr{r(1 + \sqrt 2)} \nl 
+        &amp;= r^2 (1 + \sqrt 2)^2 \nl 
+        &amp;= \boxed{r^2 \par{2 + 2 \sqrt 2 + 1}} \approx 5.828 r^2 \pd
+        \ea
         \]
      
         </div> 

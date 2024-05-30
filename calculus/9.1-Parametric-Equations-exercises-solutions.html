@@ -1109,7 +1109,7 @@
                 Then parametric equations are 
                 \[
                 \baat{2} 
-                x &amp;= 160(\cos 30 \degree) t &amp;&amp;= 80 \par{\sqrt 3} t \nl 
+                x &amp;= 160(\cos 30 \degree) t &amp;&amp;= 80 \par{\sqrt 3} t \cma \nl 
                 y &amp;= 160(\sin 30 \degree) t - \tfrac{1}{2} (32) t^2 &amp;&amp;= 80t - 16t^2 \pd 
                 \eaat 
                 \]
@@ -1160,7 +1160,7 @@
         Parametric equations modeling the bullet's motion are 
         \[
         \baat{2} 
-        x &amp;= 500 (\cos 0 \degree) t &amp;&amp;= 500 t \nl 
+        x &amp;= 500 (\cos 0 \degree) t &amp;&amp;= 500 t \cma \nl 
         y &amp;= 2 + 500 (\sin 0 \degree) t - \tfrac{1}{2} (9.8) t^2 &amp;&amp;= 2 - 4.9 t^2 \pd 
         \eaat 
         \]
@@ -1208,7 +1208,7 @@
         At any time \(t,\) parametric equations for the basketball's trajectory are 
         \[
         \baat{2} 
-        x &amp;= 30(\cos 41 \degree) t &amp;&amp;\approx 22.64 t \nl 
+        x &amp;= 30(\cos 41 \degree) t &amp;&amp;\approx 22.64 t \cma \nl 
         y &amp;= 6 + 30 (\sin 41 \degree) t - \tfrac{1}{2} (32)t^2 &amp;&amp;\approx 6 + 19.68 t - 16t^2 \pd 
         \eaat 
         \]
@@ -1343,7 +1343,7 @@
         the football's trajectory follows the parametric equations 
         \[
         \ba 
-        x &amp;= v_0 (\cos \alpha) t \nl 
+        x &amp;= v_0 (\cos \alpha) t \cma \nl 
         y &amp;= v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \pd 
         \ea 
         \]
@@ -1408,6 +1408,85 @@
         &amp;\approx \boxed{26.531 \un{m}}
         \ea 
         \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[HARD]]] -->
+        A projectile is fired such that its distance from the launch point 
+        is always increasing. 
+        Ignoring air resistance, calculate the maximum angle above the ground at which the projectile 
+        could have been launched. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="parametric-projectile-motion-ex-dist-increasing" id="parametric-projectile-motion-ex-dist-increasing">
+<img alt="parametric-projectile-motion-ex-dist-increasing.jpg" src="../images/sectionImages/parametric-projectile-motion-ex-dist-increasing.jpg"/>
+</figure>
+        Let \(x\) be the projectile's horizontal position and \(y\) be its vertical position. 
+        If \(t\) is time, then parametric equations for the projectile are 
+        \[
+        \baat{2} 
+        x &amp;= v_0 (\cos \alpha) t \cma \nl 
+        y &amp;= v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2 \pd 
+        \eaat
+        \]
+        The projectile's distance from the launch point to a point on its trajectory (see the figure) is, 
+        by the Pythagorean Theorem,
+        \[
+        \ba 
+        r &amp;= \length{OP} \nl 
+        &amp;= \sqrt{x^2 + y^2} \nl 
+        &amp;= \sqrt{[v_0 (\cos \alpha) t]^2 + \parbr{v_0 (\sin \alpha) t - \tfrac{1}{2} gt^2}^2} \nl 
+        &amp;= \sqrt{\par{v_0}^2 \par{\cos^2 \alpha} t^2 + \par{v_0}^2 \par{\sin^2 \alpha} t^2 - v_0 (\sin \alpha) gt^3 + \tfrac{1}{4} g^2 t^4} \nl 
+        &amp;= \sqrt{\tfrac{1}{4} g^2 t^4 - v_0 (\sin \alpha) gt^3 + \par{v_0}^2 t^2} \pd
+        \ea 
+        \]
+        The distance \(r\) is always increasing, so we need \(\textderiv{r}{t} \gt 0\)
+        for all \(t \geq 0.\)
+        Differentiating gives
+        \[
+        \deriv{r}{t} = \frac{g^2 t^3 - 3 v_0 (\sin \alpha) gt^2 + 2 \par{v_0}^2 t}{2 \sqrt{\tfrac{1}{4} g^2 t^4 - v_0 (\sin \alpha) gt^3 + \par{v_0}^2 t^2}} \pd
+        \]
+        This function <i>must not have any critical points</i>;
+        that is, \(\textderiv{r}{t} \ne 0.\)
+        We therefore see
+        \[
+        \ba 
+        \frac{g^2 t^3 - 3 v_0 (\sin \alpha) gt^2 + 2 \par{v_0}^2 t}{2 \sqrt{\tfrac{1}{4} g^2 t^4 - v_0 (\sin \alpha) gt^3 + \par{v_0}^2 t^2}} &amp;\ne 0 \nl 
+        g^2 t^3 - 3 v_0 (\sin \alpha) gt^2 + 2 \par{v_0}^2 t &amp;\ne 0 \nl 
+        t \parbr{g^2 t^2 - 3 v_0 (\sin \alpha) gt + 2 \par{v_0}^2} &amp;\ne 0 \pd
+        \ea 
+        \]
+        By the Quadratic Formula, the expression in brackets equals \(0\) when
+        \[
+        \ba 
+        t &amp;= \frac{3 v_0 (\sin \alpha) gt + \sqrt{\parbr{- 3 v_0 (\sin \alpha) gt}^2 - 4 (g^2) [2 \par{v_0}^2]}}{2 g^2} \nl 
+        &amp;= \frac{3 v_0 (\sin \alpha) gt + \sqrt{9 \par{v_0}^2 g^2 \sin^2 \alpha - 8 g^2 \par{v_0}^2}}{2 g^2} \pd
+        \ea 
+        \]
+        No real solutions of \(t\) exist if the discriminant, the expression within the square root, 
+        is negative. 
+        So we see 
+        \[
+        \ba 
+        9 \par{v_0}^2 g^2 \sin^2 \alpha - 8 g^2 \par{v_0}^2 \lt 0 
+        &amp;\iffArrow 9 \sin^2 \alpha - 8 \lt 0 \nl 
+        &amp;\iffArrow \sin^2 \alpha \lt \frac{8}{9} \nl 
+        &amp;\iffArrow \sin \alpha \lt \frac{\sqrt 8}{3} \nl 
+        &amp;\iffArrow \alpha \lt \boxed{\asin \par{\frac{\sqrt 8}{3}}} \approx 70.429 \degree \pd 
+        \ea 
+        \]
+        This result is completely independent of \(g\) and the projectile's initial speed!
      
         </div> 
        </div>  
