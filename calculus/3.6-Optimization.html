@@ -487,117 +487,7 @@
     </p>
 </div>
 
-<h4 id="optimization-in-business">Optimization in Business</h4>
-
-<p>
-    <span class="emph">Revenue</span>
-    is the amount of money a firm earns from sales. 
-    Revenue is the product of quantity and price.
-    Let \(x\) be the number of units sold. 
-    If \(R(x)\) is a firm's <i>revenue function</i> 
-    and \(p(x)\) is the firm's <i>price function</i>, then 
-    \[R(x) = x \, p(x) \pd\]
-    In many situations, \(p\) is a constant function because 
-    the price of each unit is the same. 
-    <span class="emph">Profit</span>
-    is the positive difference between revenue and cost.
-    If a firm produces \(x\) units, then its profit function \(P(x)\) is 
-    \[
-    \ba 
-    P(x) &= R(x) - C(x) \cma 
-    \ea 
-    \]
-    where \(R(x)\) is the <span class="emph">revenue function</span> and \(C(x)\) is the <span class="emph">cost function</span>.
-</p>
-
 <div class="example-title"> EXAMPLE 6 </div>
-<div class="example">
-    <div class="example-problem">  
-        Sydney operates a food truck in which she sells hot dogs for \(12\) dollars each. 
-        The cost, in dollars, of her producing \(x\) hot dogs is modeled by the function 
-        \[C(x) = 3000 - 100x + x^2 \pd\]
-        How many hot dogs should Sydney sell to maximize her profit from hot dog sales?
-    </div>
-</div>
-<button onclick="toggle6()" class="solution-button"></button>
-<div id="solution6" class="solution">
-    <p>
-        Profit is the positive difference between revenue and cost. 
-        The revenue function is \(12x\) and the cost function is \(C(x),\) so 
-        the profit function is 
-        \[
-        \ba 
-        P(x) &= 12x - (3000 - 100x + x^2) \nl 
-        &= -x^2 + 112x - 3000 \pd
-        \ea 
-        \]
-        We want to <i>maximize</i> \(P(x).\)
-        We find the critical numbers of \(P \col\)
-        \[
-        \ba 
-        P'(x) = -2x + 112 &= 0\nl 
-        \implies x &= 56 \pd \nl
-        \ea 
-        \]
-        For \(x \lt 56,\) \(P' > 0;\) for \(x \gt 56,\) \(P' \lt 0.\) 
-        So \(P\) has a <i>relative</i> maximum at \(x = 56.\) 
-        The domain of \(P(x)\) is \(x \geq 0.\)
-        At the endpoints \(P(0) = -3000\) and \(\lim_{x \to \infty} P(x) = -\infty.\) 
-        This analysis asserts that \(P\) has a maximum value, which must correspond to \(x = 56.\)
-        Sydney therefore should sell \(\boxed{56}\) hot dogs to maximize her profit. 
-    </p>
-</div>
-
-<div class="example-title"> EXAMPLE 7</div>
-<div class="example">
-    <div class="example-problem">  
-        A store sells makeup products. 
-        In a day, the store sells \(40\) eyeliner pencils if they are priced at \(\$10\) each.
-        For every \(\$2\) increase in price, the manager predicts that the store will sell \(4\) fewer pencils.
-        Determine the price of the pencils such that the store maximizes its revenue from eyeliner sales.
-    </div>
-</div>
-<button onclick="toggle7()" class="solution-button"></button>
-<div id="solution7" class="solution">
-    <p>
-        Let \(x\) be the number of dollars the store raises the price of eyeliner pencils. 
-        For every \(\$2\) increase in the pencil,
-        the price function is \((10 + 2x)\) and the quantity function is \((40 - 4x).\)
-        Revenue is the product of quantity and price, so we have
-        \[
-        \ba 
-        R(x) &= (40 - 4x)(10 + 2x) \nl
-        &= -8x^2 + 40x + 400 \pd
-        \ea 
-        \]
-        Its critical numbers are
-        \[
-        \ba 
-        R'(x) = -16x + 40 &= 0 \nl
-        x &= \tfrac{40}{16} = 2.5 \pd
-        \ea 
-        \]
-        For \(x \lt 2.5,\) \(R' \gt 0;\) for \(x \gt 2.5,\) \(R' \lt 0.\) 
-        Thus, the First-Derivative Test states that \(x = 2.5\) 
-        corresponds to a <i>relative maximum</i> of \(R(x).\)
-        The domain of \(R(x)\) is \(x \geq 0,\) and we note the following:
-        <ul>
-            <li>
-                \(R(0) = 400.\)
-            </li>
-            <li>
-                \(R(2.5) = 450.\)
-            </li>
-            <li>
-                \(\ds \lim_{x \to \infty} R(x) = -\infty.\)
-            </li>
-        </ul>
-        Thus, \(x = 2.5\) corresponds to the <i>absolute maximum</i> of \(R(x).\) 
-        The store should raise the price of the eyeliner pencil by \(\boxed{\$2.5}.\) 
-    </p>
-</div>
-
-<div class="example-title"> EXAMPLE 8 </div>
 <div class="example">
     <div class="example-problem">  
         <figure class="optimization-ex-lifeguard-diagram" id="optimization-ex-lifeguard-diagram">
@@ -616,8 +506,8 @@
         At what distance \(x\) should the lifeguard enter the water in order to minimize the time to rescue the swimmer?
     </div>
 </div>
-<button onclick="toggle8()" class="solution-button"></button>
-<div id="solution8" class="solution">
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
     <p>
         We need to derive an expression for the time, \(t,\) the lifeguard takes to rescue the swimming person.
         The distance she runs is \(x,\) and the distance she swims is \(\sqrt{(20 - x)^2 + 64}.\)
@@ -658,7 +548,7 @@
     </p>
 </div>
 
-<div class="example-title"> EXAMPLE 9 </div>
+<div class="example-title"> EXAMPLE 7 </div>
 <div class="example">
     <div class="example-problem"> 
         <figure class="optimization-ex-triangle-diagram" id="optimization-ex-triangle-diagram">
@@ -676,8 +566,8 @@
         <br>
     </div>
 </div>
-<button onclick="toggle9()" class="solution-button"></button>
-<div id="solution9" class="solution">
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
     <p>
         The three angles 
         \[\andThree{\theta}{\tan^{-1} \par{\frac{x}{4}}}{\tan^{-1} \par{\frac{3}{x + 1}}}\]
@@ -688,7 +578,7 @@
     </p>
 </div>
 
-<div class="example-title"> EXAMPLE 10 </div>
+<div class="example-title"> EXAMPLE 8 </div>
 <div class="example">
     <div class="example-problem" id="optimization-ex-power"> 
         <figure class="optimization-ex-power">
@@ -704,8 +594,8 @@
         Where on the ground should the wires be anchored to use the least amount of wire? 
     </div>
 </div>
-<button onclick="toggle10()" class="solution-button"></button>
-<div id="solution10" class="solution">
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
     <p>
         Let Tower A be the \(10 \un{m}\) tower and tower B be the \(15 \un{m}\) tower.
         Let \(x\) be the distance from the base of tower A to the anchor point. 

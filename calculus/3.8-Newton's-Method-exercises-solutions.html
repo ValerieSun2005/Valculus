@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>3.7 Exercise Solutions: Newton's Method</title>
+    <title>3.8 Exercise Solutions: Newton's Method</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie-edge" http-equiv="X-UA-Compatible">
     <meta content="Valerie" name="author">
@@ -18,19 +18,19 @@
     <a href="/Valculus/index.html">
     <img src="/Valculus/images/logo.png" class="logo-image" alt="">
     </a>
-<h1>3.7 Exercise Solutions: Newton's Method</h1>
+<h1>3.8 Exercise Solutions: Newton's Method</h1>
 <main>
 <div class="pdf-panel">
   <div class="pdf-panel-left">
     <ul>
       <li>
         <button>
-          <a href="3.7-Newton's-Method.html">Section <i class="fa fa-external-link"></i></a>
+          <a href="3.8-Newton's-Method.html">Section <i class="fa fa-external-link"></i></a>
         </button>
       </li>
       <li>
         <button>
-          <a href="3.7-Newton's-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          <a href="3.8-Newton's-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
         </button>
       </li>
       <li>
@@ -976,7 +976,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        If \(x_1 \ne 0,\) then prove that Newton's Method completely fails to locate the root of \(f(x) = \sqrt x.\)
+        If \(x_1 \ne 0,\) then prove that Newton's Method completely fails to locate the zero of \(f(x) = \sqrt x.\)
      
         </div> 
         <hr> 
@@ -996,7 +996,7 @@
         But the domain of \(f(x) = \sqrt x\) is \([0, \infty).\)
         Thus, any choice of \(x_1\) (apart from <nobr>\(0\))</nobr> must be positive;
         then \(x_2 = -x_1\) is negative.
-        So Newton's Method gives a zero that is outside of the domain of \(f,\)
+        So Newton's Method gives an approximation that is outside of the domain of \(f,\)
         thus failing <i>completely</i>.
      
         </div> 
@@ -1020,7 +1020,8 @@
         So Newton's Method gives 
         \[
         \ba 
-        x_2 &amp;= x_1 - \frac{1 + \ln x_1}{1/x_1} \nl 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= x_1 - \frac{1 + \ln x_1}{1/x_1} \nl 
         &amp;= x_1 - x_1 - x_1 \ln x_1 \nl 
         &amp;= - x_1 \ln x_1 \pd
         \ea 
@@ -1072,8 +1073,8 @@
         By inspection, a solution to the preceding equation is \(x_1 = -1.\)
         Using polynomial division, we find 
         \[2 \par{x_1}^3 - 3 \par{x_1}^2 + 5 = \par{x_1 + 1} \parbr{2 \par{x_1}^2 - 5 x_1 + 5} \pd\]
-        The discriminant of the expression in brackets is \((-5)^2 - 4(2)(5)\) \(= -15,\)
-        so the quadratic expression has no zeros. 
+        The discriminant of the expression in brackets is \((-5)^2 - 4(2)(5)\) \(= -15.\)
+        Since this value is negative, the quadratic expression has no zeros. 
         Hence, the only solution is \(\boxed{x_1 = -1}.\)
      
         </div> 
@@ -1086,8 +1087,8 @@
         <div class="box-solution__problem"> 
             
 <!-- [[[HARD]]] -->
-        Determine all the starting approximations \(x_1\)
-        for which Newton's Method fails to converge to the root of \(f(x) = x^3 + 2.\)
+        Determine all the starting approximations \(x_1\) in \([0, 1]\)
+        for which Newton's Method fails to converge to the zero of \(f(x) = x^3 + 2.\)
      
         </div> 
         <hr> 
@@ -1117,16 +1118,35 @@
         \implies x_1 &amp;= 1 \pd
         \ea
         \]
-        There are no other cases in which Newton's Method fails. 
+        Newton's Method also fails if it yields \(x_2 = 1,\)
+        since the following approximation would be \(x_3 = 0.\)
+        The function \(2x_1/3 - 2/[3(x_1)^2]\) is increasing for positive \(x_1,\)
+        so the solution to
+        \[
+        1 = \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2} 
+        \]
+        satisfies \(x_1 \gt 1\)
+        <nobr>(the solution is \(x_1 \approx 1.806\)).</nobr>
+        Newton's Method <i>also</i> fails if it yields \(x_2 \approx 1.806\)
+        (because then \(x_3 = 1\) and <nobr>\(x_4 = 0\)),</nobr>
+        yet the solution to 
+        \[
+        1.806 = \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2}
+        \]
+        satisfies \(x_1 \gt 1.806\)
+        <nobr>(the solution is \(x_1 \approx 2.834\)).</nobr>
+        This pattern is repeating—subsequent defective values of \(x_1\)
+        are all outside \([0, 1].\)
+        But inside \([0, 1],\) there are no other cases in which Newton's Method fails. 
         Note that \(f'\) is nonnegative, so \(f\) is always increasing. 
-        Hence, it has only one zero,
+        Hence, \(f\) has only one zero,
         and Newton's Method cannot converge to another zero.
         Additionally, in 
-        <a href="/Valculus/calculus/3.7-Newton's-Method.html#ex-newtons-method-fail-bounce" target="_blank">Example 3</a>
-        Newton's Method failed because the approximations bounced back and forth. 
+        <a href="/Valculus/calculus/3.8-Newton's-Method.html#ex-newtons-method-fail-bounce" target="_blank">Example 3</a>
+        Newton's Method fails because the approximations bounce back and forth. 
         But \(f\) is increasing, so the tangent lines always have nonnegative slope,
         thus avoiding the bouncing issue.
-        Hence, the defective starting approximations are \(\boxed{x_1 = 0}\)
+        Hence, the defective starting approximations \(x_1 \in [0, 1]\) are \(\boxed{x_1 = 0}\)
         and \(\boxed{x_1 = 1}.\)
      
         </div> 
