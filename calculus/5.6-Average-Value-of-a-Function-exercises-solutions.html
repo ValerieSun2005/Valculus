@@ -96,7 +96,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[f(x) = x \cma 0 \leq x \leq 2\]
+        \[f(x) = x \cmaa 0 \leq x \leq 2\]
     </blockquote> calculate the average value of the function over the given interval. 
         </div> 
         <hr> 
@@ -122,7 +122,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[g(t) = t^2 + 1 \cma 0 \leq t \leq 1\]
+        \[g(t) = t^2 + 1 \cmaa 0 \leq t \leq 1\]
     </blockquote> calculate the average value of the function over the given interval. 
         </div> 
         <hr> 
@@ -148,7 +148,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[f(x) = e^x \cma 0 \leq x \leq \ln 3\]
+        \[f(x) = e^x \cmaa 0 \leq x \leq \ln 3\]
     </blockquote> calculate the average value of the function over the given interval. 
         </div> 
         <hr> 
@@ -175,7 +175,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds h(x) = \sin x \cma 0 \leq x \leq \frac{\pi}{2}\]
+        \[\ds h(x) = \sin x \cmaa 0 \leq x \leq \frac{\pi}{2}\]
     </blockquote> calculate the average value of the function over the given interval. 
         </div> 
         <hr> 
@@ -201,7 +201,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(y) = \frac{1}{y} \cma 1 \leq y \leq 4\]
+        \[\ds f(y) = \frac{1}{y} \cmaa 1 \leq y \leq 4\]
     </blockquote> calculate the average value of the function over the given interval. 
         </div> 
         <hr> 
@@ -386,6 +386,61 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        What is the average value of \(y\) on the semicircle \(y = \sqrt{r^2 - x^2} \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The domain of \(y = \sqrt{r^2 - x^2}\) is \(-r \leq x \leq r.\)
+        By geometry, the semicircle's area is half the area of a circle of radius \(r\)—namely,
+        \[\int_{-r}^r \sqrt{r^2 - x^2} \di x = \frac{\pi}{2} r^2 \pd\]
+        So the average value on \([-r, r]\) is
+        \[
+        \ba 
+        \avg y &amp;= \frac{1}{r - (-r)} \int_{-r}^r \sqrt{r^2 - x^2} \di x \nl 
+        &amp;= \frac{1}{2r} \par{\frac{\pi}{2} r^2} \nl 
+        &amp;= \boxed{\frac{\pi r}{4}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A particle's average velocity is \(10\) over the interval \(0 \leq t \leq 4,\)
+        where \(t\) is time. 
+        What is the particle's displacement over this interval?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The displacement is \(\int_0^4 v(t) \di t,\) where \(v\) is the velocity function. 
+        We have
+        \[
+        \ba
+        \avg v = \frac{1}{4 - 0} \int_0^4 v(t) \di t &amp;= 10 \nl 
+        \implies \int_0^4 v(t) \di t &amp;= \boxed{40}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         Assume that \(f(x) = 1/x^2\) is continuous for \(a \leq x \leq b.\)
         Prove that the average value of \(f\) over \([a, b]\)
         is \(\avg f = 1/ab.\)
@@ -394,7 +449,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-13"> 
+        <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
             
         The expression for the average value is 

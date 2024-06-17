@@ -1774,6 +1774,68 @@
         </div> 
        </div>  
    </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+    The entrance gate to a Ferris wheel ride is located \(30\) feet below
+    the wheel's center.
+    Each capsule on the Ferris wheel is located \(10\) feet away from the wheel's center. 
+    A couple shares a capsule that is initially at the same height as the center. 
+    If the Ferris wheel completes a revolution in \(1\) minute, 
+    then calculate the rate at which the distance between the couple and the gate is changing 
+    after \(3\) seconds. 
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="related-rates-ferris-wheel" id="related-rates-ferris-wheel">
+<img alt="related-rates-ferris-wheel.jpg" src="../images/sectionImages/related-rates-ferris-wheel.jpg"/>
+</figure>
+    Let \(r\) be the distance between the capsule and the gate. 
+    Then a triangle of lengths \(10 \un{ft},\) \(30 \un{ft},\) and \(r\) is formed.
+    If \(\theta\) is the angle subtended by the \(10 \un{ft}\) and \(30 \un{ft}\)
+    line segments, 
+    then the Law of Cosines gives 
+    \begin{equation} 
+    r^2 = 10^2 + 30^2 - 2(10)(30) \cos \theta \pd \label{eq:ferris}
+    \end{equation}
+    One revolution contains \(2 \pi\) radians, 
+    so the angular speed is \(2 \pi\) radians per minute; 
+    this rate is \(\textderiv{\theta}{t}.\)
+    Differentiating both sides of \(\eqref{eq:ferris}\) with respect to time yields
+    \begin{align} 
+    2r \deriv{r}{t} &amp;= 600 (\sin \theta) \deriv{\theta}{t} \nonum \nl
+    2r \deriv{r}{t} &amp;= 600 (\sin \theta) (2 \pi) \nonum \nl
+    \implies \deriv{r}{t} &amp;= \frac{600 \pi \sin \theta}{r} \pd \label{eq:ferris-rate}
+    \end{align}
+    When \(t = 3 \un{sec}\) \(= 1/20 \un{min},\)
+    the capsule has rotated through an angle of 
+    \[\Delta \theta = \frac{1}{20} \times 2 \pi \times \frac{180}{\pi} = 18 \degree \pd\]
+    So at this time, the angle is \(\theta = 90 \degree + 18 \degree\) \(= 108 \degree\)
+    and the distance is, by \(\eqref{eq:ferris},\)
+    \[
+    \ba 
+    r &amp;= \sqrt{10^2 + 30^2 - 2(10)(30) \cos 108 \degree} \nl 
+    &amp;= \sqrt{1000 - 600 \cos 108 \degree} \pd
+    \ea 
+    \]
+    Then by \(\eqref{eq:ferris-rate},\) when \(t = 3 \un{sec}\) 
+    the distance between the capsule and gate is changing at a rate given by 
+    \[
+    \ba
+    \deriv{r}{t} &amp;= \boxed{\frac{600 \pi \sin 108 \degree}{\sqrt{1000 - 600 \cos 108 \degree}}} \nl 
+    &amp;\approx 52.068 \un{ft/min} \pd
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
 </div>
 </main>
 </main>

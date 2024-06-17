@@ -65,6 +65,9 @@
         <li>
             <a href="#trig-integrals" class="page-anchor">Integrals with Trigonometric Functions</a>
         </li>
+        <li>
+            <a href="#int-odd-even" class="page-anchor">Integrals of Odd and Even Functions</a>
+        </li>
     </ul>
 </p>
 
@@ -183,10 +186,14 @@
     (see Section <a href="/Valculus/calculus/4.1-Antidifferentiation.html">4.1</a>). 
     Thus, we have 
     \[\tfrac{1}{4} \int u^{1/2} \di u = \tfrac{1}{4} \par{\tfrac{2}{3} u^{3/2}} + C = \tfrac{1}{6} u^{3/2} + C \pd\]
-    Our final step is to reexpress the integral in terms of \(x;\)
-    we declared \(u = x^4 + 3,\) so our final answer is 
-    \[\boxed{\tfrac{1}{6} (x^4 + 3)^{3/2} + C}\] 
+    We declared \(u = x^4 + 3,\) so converting back yields
+    \[\boxed{\tfrac{1}{6} \par{x^4 + 3}^{3/2} + C}\] 
 </div>
+
+<aside class="box-tip">
+    In evaluating an indefinite integral, 
+    remember that you can differentiate your answer to confirm whether it is correct.
+</aside>
 
 <h4 id="ax+b">Integrating \(f(ax + b)\)</h4>
 
@@ -219,35 +226,20 @@
 </div>
 
 <p>
-    In 
+    Compare the result of
     <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html#ex-e^kx">Example 3</a>
-    we showed that 
-    \[\int e^{kx} \di x = \tfrac{1}{k} e^{kx} \pd\]
-    Observe that 
+    to the derivative
     \[\deriv{}{x} \par{e^{kx}} = k e^{kx} \pd\]
-    When we integrate \(e^{kx},\) we divide by \(k,\)
-    whereas our answer contains the factor \(k\) when we differentiate \(e^{kx}.\)
-</p>
-<p>
-    Now let's generalize this notion:
+    When we differentiate \(e^{kx},\) we multiply by \(k;\)
+    but when we <i>integrate</i> \(e^{kx},\) we <i>divide</i> by \(k.\)
+    Let's generalize this notion:
     Consider the composite function \(f(ax + b)\) for \(a \ne 0.\)
-    The family of these functions appear frequently, so we want to easily recognize 
+    This family of functions appears frequently, so we want to easily recognize 
     its derivatives and integrals.
     By the Chain Rule, if \(f\) is differentiable, then 
     \[\deriv{}{x} [f(ax + b)] = af'(ax + b) \pd\]
-    Now consider \(\int f(ax + b) \di x.\)
-    We want to substitute the inner function \(ax + b,\)
-    whose derivative is \(a.\)
-    Thus, we rearrange the integral as 
-    \[\int \par{\tfrac{1}{a}} \, a f(ax + b) \di x \pd\]
-    Now letting \(u = ax + b,\) we have \(\dd u = a \di x\) and so the integral becomes 
-    \[\int \tfrac{1}{a} f(\underbrace{ax + b}_{u}) \, \underbrace{a \di x}_{\dd u}
-    = \tfrac{1}{a} \int f(u) \di u \pd 
-    \]
-    If \(F\) is an antiderivative of \(f,\) then the integral becomes,
-    for any value \(C,\)
-    \[\tfrac{1}{a} F(u) + C = \tfrac{1}{a} F(ax + b) + C \pd\]
-    Thus,
+    Instead of multiplying by \(a,\)
+    we <i>divide</i> by \(a\) when we integrate:
     \begin{equation}
     \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \label{eq:int-reverse-chain}
     \end{equation}
@@ -258,9 +250,28 @@
     Let \(F\) be an antiderivative of \(f.\) 
     If \(a \ne 0,\) then for any constant \(C,\)
     \[
-    \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
+    \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \eqlabel{eq:int-reverse-chain}
     \]
 </div>
+
+<p>
+    <span class="proof">PROOF</span>
+    To evaluate \(\int f(ax + b) \di x,\)
+    we want to substitute the inner function \(ax + b,\)
+    whose derivative is \(a.\)
+    Thus, we rewrite the integral as 
+    \[\int \par{\tfrac{1}{a}} \, a f(ax + b) \di x \pd\]
+    Now letting \(u = ax + b,\) we have \(\dd u = a \di x\) and so we see
+    \[\int \tfrac{1}{a} f(\underbrace{ax + b}_{u}) \, \underbrace{a \di x}_{\dd u}
+    = \tfrac{1}{a} \int f(u) \di u \pd 
+    \]
+    If \(F\) is an antiderivative of \(f,\) then the integral becomes,
+    for any value \(C,\)
+    \[\tfrac{1}{a} F(u) + C = \tfrac{1}{a} F(ax + b) + C \pd\]
+    \[\qedproof\]
+</p>
+
+
 
 <div class="example-title"> EXAMPLE 4 </div>
 <div class="example">
@@ -346,7 +357,7 @@
         We find an antiderivative of \(u^4\) in terms of \(x.\)
         Doing so gives 
         \[\tfrac{1}{5} u^5 + C = \tfrac{1}{5} (x^3 + 1)^5 + C \pd\]
-        Now we use Part II of the Fundamental Theorem of Calculus (FTC II)
+        Now we use Part II of the Fundamental Theorem of Calculus
         with our original bounds in terms of \(x \col\) 
         \[
         \ba 
@@ -528,6 +539,109 @@
     \]
 </div>
 
+<h4 id="int-odd-even">Integrals of Odd and Even Functions</h4>
+
+<p>
+    Many integral calculations are facilitated by using symmetry.
+    Suppose that a function \(f\) is continuous on \([-a, a].\)
+    Then the following properties help us evaluate \(\int_{-a}^a f(x) \di x.\)
+</p>
+
+<aside class="box-recall">
+    \(f\) is odd if and only if \(f(-x) = -f(x),\)
+    and \(f\) is even if and only if \(f(-x) = f(x).\)
+</aside>
+
+<div class="box-title">INTEGRALS OF ODD AND EVEN FUNCTIONS</div>
+<div class="box">
+    Let \(f\) be a continuous function on \([-a, a].\)
+    <ol class="list-alpha">
+        <li id="prop-int-odd">
+            If \(f\) is odd, then \(\int_{-a}^a f(x) \di x\) \(= 0.\)
+        </li>
+        <li id="prop-int-even">
+            If \(f\) is even, then \(\int_{-a}^a f(x) \di x\) 
+            \(= 2 \int_0^a f(x) \di x.\)
+        </li>
+    </ol> 
+</div>
+
+<div class="figure-center">
+    <figure class="int-odd" id="int-odd">
+        <img src="../images/sectionImages/int-odd.jpg" alt="FIGURE 1A">
+    </figure>
+    <figure class="int-even" id="int-even">
+        <img src="../images/sectionImages/int-even.jpg" alt="FIGURE 1B">
+    </figure>
+</div>
+
+<style>
+    .int-odd::before{
+        content:'FIGURE 1A';
+    }
+
+    .int-even::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<p>
+    Recall that a definite integral equals a positive number 
+    if the region enclosed by \(f\) is above the \(x\)-axis,
+    but a definite integral returns a <i>negative</i> number 
+    if the region is below the \(x\)-axis. 
+    In <a href="#int-odd">Figure 1A</a> the region above the \(x\)-axis 
+    has the same area as the region below the \(x\)-axis.
+    Thus, the signed areas cancel, so part <a href="#prop-int-odd">(a)</a>
+    states that the integral equals \(0.\)
+    For the special case of \(f(x) \geq 0\) on \([-a, a],\)
+    part <a href="#prop-int-even">(b)</a> says the area under \(f\)
+    from \(-a\) to \(a\) is twice the area from \(0\) to \(a\)
+    due to symmetry
+    (<a href="#int-even">Figure 1B</a>).
+</p>
+
+<p>
+    <span class="proof">PROOF</span>
+    Using the Additive Interval Property, we see 
+    \begin{align} 
+    \int_{-a}^a f(x) \di x &= \int_{-a}^0 f(x) \di x + \int_0^a f(x) \di x \nonum \nl 
+    &= -\int_0^{-a} f(x) \di x + \int_0^a f(x) \di x \pd \label{eq:int-split}
+    \end{align}
+    Substituting \(u = -x\) shows \(\dd u = -\dd x;\)
+    when \(x = -a,\) \(u = a.\)
+    Accordingly, we see 
+    \[-\int_0^{-a} f(x) \di x = -\int_0^a f(-u) (-\dd u) = \int_0^a f(-u) \di u \pd\]
+    So \(\eqref{eq:int-split}\) becomes 
+    \begin{equation} 
+    \int_{-a}^a f(x) \di x = \int_0^a f(-u) \di u + \int_0^a f(x) \di x \pd \label{eq:int-split-2}
+    \end{equation}
+    If \(f\) is odd, then \(f(-u) = -f(u)\) and so \(\eqref{eq:int-split-2}\) becomes 
+    \[
+    \ba 
+    \int_{-a}^a f(x) \di x = - \int_0^a f(u) \di u + \int_0^a f(x) \di x = 0 \pd
+    \ea 
+    \]
+    Conversely, if \(f\) is even, then \(f(-u) = f(u)\) and so \(\eqref{eq:int-split-2}\) becomes 
+    \[\int_{-a}^a f(x) \di x = \int_0^a f(u) \di u + \int_0^a f(x) \di x = 2 \int_0^a f(x) \di x \pd\]
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\int_{-3}^3 \frac{x^5 \cos x}{\sqrt{36 - x^2}} \di x\]
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button">  </button>
+<div id="solution9" class="solution">
+    Note that 
+    \[\frac{(-x)^5 \cos (-x)}{\sqrt{36 - (-x)^2}} = - \frac{x^5 \cos x}{\sqrt{36 - x^2}} \pd\]
+    Hence, the integrand is odd. 
+    So by symmetry, the integral equals \(\boxed 0.\)
+</div>
+
+
 <div class="section-summary">
     <p>
         <a href="#sub-rule" class="summary-anchor">Substitution Rule</a>
@@ -540,7 +654,7 @@
         substitute \(u = g(x).\)
         Then \(\dd u = g'(x) \di x,\) and 
         \[
-        \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \pd \tag*{\(\eqref{eq:u-sub-f}\)}
+        \int f(g(x)) \, g'(x) \di x = \int f(u) \di u \pd \eqlabel{eq:u-sub-f}
         \]
     </p>
     <p>
@@ -548,7 +662,7 @@
         Let \(F\) be an antiderivative of \(f.\) 
         If \(a \ne 0,\) then for any constant \(C,\)
         \[
-        \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \tag*{\(\eqref{eq:int-reverse-chain}\)}
+        \int f(ax + b) \di x = \tfrac{1}{a} F(ax + b) + C \pd \eqlabel{eq:int-reverse-chain}
         \]
     </p>
     <p>
@@ -599,6 +713,20 @@
         \int \frac{1}{\sqrt{1 - u^2}} \di u &= \asin u + C \cma \eqlabel{eq:int-asin} \nl 
         \int \frac{1}{u^2 + 1} \di u &= \atan u + C \pd \eqlabel{eq:int-atan}
         \end{align}
+    </p>
+    <p>
+        <a href="#int-odd-even" class="summary-anchor">Integrals of Odd and Even Functions</a>
+        Evaluating definite integrals is made easier through properties of symmetry. 
+        Let \(f\) be a continuous function on \([-a, a].\)
+        <ol class="list-alpha">
+            <li>
+                If \(f\) is odd, then \(\int_{-a}^a f(x) \di x\) \(= 0.\)
+            </li>
+            <li>
+                If \(f\) is even, then \(\int_{-a}^a f(x) \di x\) 
+                \(= 2 \int_0^a f(x) \di x.\)
+            </li>
+        </ol> 
     </p>
 </div>
 </main>

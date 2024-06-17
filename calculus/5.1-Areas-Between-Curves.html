@@ -80,10 +80,9 @@
     We proceed by demanding that \(f(x) \geq g(x)\) for all \(x\) in \([a, b].\) 
     To find the area, we construct a Riemann sum in which we cut \(R\) into \(n\)
     rectangles of equal width \(\Delta x.\)
-    Each rectangle's height is the <i>difference</i> between \(f(x_i^*)\) and \(g(x_i^*).\)
-    The height \(f(x)\) is bigger than the height \(g(x),\)
-    so the difference \(f - g\) is a positive quantity, as we expect.
-    (See <a href="#areas-between-curves-x-rectangles">Figure 2A</a>.)
+    The height of the <nobr>\(i\)th</nobr> rectangle is the <i>difference</i> between \(f(x_i^*)\) and \(g(x_i^*),\)
+    as shown by <a href="#areas-between-curves-x-rectangles">Figure 2A</a>.
+    (Since \(f \gt g,\) the height is positive, as we expect.)
 </p>
 
 <div class="figure-center">
@@ -113,7 +112,7 @@
 <p>
     As in <a href="#areas-between-curves-x-rectangles">Figure 2B</a>, 
     we wish to sum up \(n\) of these rectangles to approximate the area \(A.\) 
-    If \(n \to \infty,\) then the rectangles become thinner and therefore better approximate \(A.\)
+    As \(n\) is increased, the rectangles become thinner and therefore better approximate \(A.\)
     Our Riemann sum is therefore
     \[A = \lim_{n \to \infty} \sum_{i = 1}^n [f(x_i^*) - g(x_i^*)] \, \Delta x \pd\]
     This limit is the definite integral of \(f(x) - g(x),\) so we have 
@@ -146,7 +145,7 @@
     (See <a href="#areas-between-curves-special-case">Figure 3</a>;
     the pink area under the graph of \(g\) is subtracted from the total orange area under the graph of \(f.\))
     It is easy to note \(\eqref{eq:area-x}\) as integrating the top function 
-    minus the bottom function, or "top minus bottom."
+    minus the bottom function, or <q>top minus bottom.</q>
     This idea enables us to find any area over an interval when one function is always 
     greater than another.
     We are interested in area as a <i>positive</i>, geometric quantity.
@@ -251,7 +250,10 @@
 <div class="example-title" id="ex-x-x^2"> EXAMPLE 3 </div>
 <div class="example">
     <div class="example-problem">  
-        <figure class="areas-between-curves-cos-sin" id="areas-between-curves-cos-sin">
+        In <a href="#areas-between-curves-cos-sin">Figure 6</a>
+        calculate the total area bounded by the graphs of \(y = \sin x\) and \(y = \cos x\)
+        for \(0 \leq x \leq \pi/2.\)
+        <figure class="areas-between-curves-cos-sin figure-center-one" id="areas-between-curves-cos-sin">
             <img src="../images/sectionImages/areas-between-curves-cos-sin.jpg" alt="Figure 6">
         </figure>
         <style>
@@ -259,9 +261,6 @@
                 content:'FIGURE 6';
             }
         </style>
-        In <a href="#areas-between-curves-cos-sin">Figure 6</a>,
-        calculate the shaded area bounded by the graphs of \(y = \sin x\) and \(y = \cos x.\)
-        <span class="white-space"></span>
     </div>
 </div>
 <button onclick="toggle3()" class="solution-button">  </button>
@@ -364,8 +363,8 @@
     \begin{equation} 
     A = \int_c^d [f(y) - g(y)] \di y \pd \label{eq:area-y}
     \end{equation}
-    When we integrate a region with respect to \(y,\) we use "right minus left"
-    instead of "top minus bottom," as we do with <a href="#areas-x" class="page-anchor">Areas with \(x\)</a>.
+    When we integrate a region with respect to \(y,\) we use <q>right minus left</q>
+    instead of <q>top minus bottom,</q> as we do with <a href="#areas-x" class="page-anchor">Areas with \(x\)</a>.
     Integrating horizontally may be unfamiliar to you.
     If so, you may find it helpful to rotate the graph counterclockwise such that 
     the horizontal cuts become rotated, vertical strips.
@@ -535,14 +534,6 @@
 </div>
 <button onclick="toggle6()" class="solution-button">  </button>
 <div id="solution6" class="solution">
-    <figure class="areas-between-curves-hybrid2" id="areas-between-curves-hybrid2">
-        <img src="../images/sectionImages/areas-between-curves-hybrid2.jpg" alt="Figure 11">
-    </figure>
-    <style>
-        .areas-between-curves-hybrid2::before{
-            content:'FIGURE 11';
-        }
-    </style>
     <p>
         We obtain the sketch in <a href="#areas-between-curves-hybrid2">Figure 11</a>. 
         The parabola intersects \(x = 2 - y\) at \((1, 1)\)
@@ -552,6 +543,14 @@
         In either case, we need to split the region
         and express all equations in terms of the respective variable.
     </p>
+    <figure class="areas-between-curves-hybrid2" id="areas-between-curves-hybrid2">
+        <img src="../images/sectionImages/areas-between-curves-hybrid2.jpg" alt="Figure 11">
+    </figure>
+    <style>
+        .areas-between-curves-hybrid2::before{
+            content:'FIGURE 11';
+        }
+    </style>
     <p>
         <span class="label-emph">Integrating with \(x\)</span>
         For \(0 \leq x \leq 1,\) the upper boundary is \(y = 4\)
@@ -590,7 +589,7 @@
         then the area bounded by \(y = f(x),\) \(y = g(x),\) the line \(x = a,\)
         and the line \(x = b\) is 
         \[A = \int_a^b [f(x) - g(x)] \di x \pd \tag*{\(\eqref{eq:area-x}\)}\]
-        The geometric interpretation of this form is "top function minus bottom function."
+        The geometric interpretation of this form is <q>top function minus bottom function.</q>
     </p>
     <p>
         <a href="#areas-y" class="summary-anchor">Areas with \(y\)</a>
@@ -598,7 +597,7 @@
         then the area bounded by \(x = f(y),\) \(x = g(y),\) the line \(y = c,\)
         and the line \(y = d\) is 
         \[A = \int_c^d [f(y) - g(y)] \di y \pd \tag*{\(\eqref{eq:area-y}\)}\]
-        In this form, we integrate "right function minus left function."
+        In this form, we integrate <q>right function minus left function.</q>
     </p>
     <p>
         <a href="#tips" class="summary-anchor">Problem-Solving Tips</a>

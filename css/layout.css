@@ -690,11 +690,11 @@ ol li{
     font-variant: small-caps;
 }
 
-.list-alpha, .list-num, .list-roman, .list-mcq {
+.list-alpha, .list-num, .list-roman, .list-roman-caps, .list-mcq {
     counter-reset: list;
 }
 
-.list-alpha  li, .list-num > li, .list-roman > li, .list-mcq > li {
+.list-alpha  li, .list-num > li, .list-roman > li, .list-roman-caps > li, .list-mcq > li {
     list-style: none;
 }
 
@@ -724,29 +724,34 @@ ol li{
     counter-increment: list;
 }
 
+.list-roman-caps > li:before {
+    content: counter(list, upper-roman) ". ";
+    counter-increment: list;
+}
+
 .list-mcq > li:before {
     content: "(" counter(list, upper-alpha) ")  ";
     counter-increment: list;
 }
 
-.list-alpha > li:before, .list-num > li:before, .list-roman > li:before, .list-mcq > li:before{
+.list-alpha > li:before, .list-num > li:before, .list-roman > li:before, .list-roman-caps > li:before, .list-mcq > li:before{
     position: absolute;
     left: -1.7em;
 }
 
-.list-num > li > span, .list-alpha > li > span, .list-roman > li > span, .list-mcq > li > span{
+.list-num > li > span, .list-alpha > li > span, .list-roman > li > span, .list-roman-caps > li > span, .list-mcq > li > span{
     margin-left: 20px;
 }
 
-.list-num > li > .label-emph, .list-alpha > li > .label-emph, .list-roman > li > .label-emph, .list-mcq > li > .label-emph{
+.list-num > li > .label-emph, .list-alpha > li > .label-emph, .list-roman > li > .label-emph, .list-roman-caps > li > .label-emph, .list-mcq > li > .label-emph{
     margin-left: 0px;
 }
 
-.list-num > li > .emph, .list-alpha > li > .emph, .list-roman > li > .emph, .list-mcq > li > .emph{
+.list-num > li > .emph, .list-alpha > li > .emph, .list-roman > li > .emph, .list-roman-caps > li > .emph, .list-mcq > li > .emph{
     margin-left: 0px;
 }
 
-.list-num > li > .warning, .list-alpha > li > .warning, .list-roman > li > .warning, .list-mcq > li > .warning{
+.list-num > li > .warning, .list-alpha > li > .warning, .list-roman > li > .warning, .list-roman-caps > li > .warning, .list-mcq > li > .warning{
     margin-left: 0px;
 }
 

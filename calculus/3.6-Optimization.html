@@ -45,8 +45,10 @@
 <hr id="mainBodyBegin">
 <!--[[[crefId.Optimization]]]-->
 <p>
-    Optimization is the process by which a quantity of interest is maximized or minimized. 
-    It is a mathematical procedure that applies absolute extrema to real-world problems.
+    <span class="emph">Optimization</span> is the process by which a quantity of interest is maximized or minimized. 
+    It is a mathematical procedure that applies absolute extrema,
+    which we investigated in Section <a href="/Valculus/calculus/3.2-Minimum-and-Maximum-Values.html">3.2</a>,
+    to real-world problems.
     The emphasis on efficiency in the everyday world cultivates the need for optimization in a wide range of applications, 
     including geometry, finance, and science.
     Examples of optimization problems include maximizing volume, 
@@ -64,18 +66,18 @@
 <div class="steps">
     <ol class="list-num">
         <li>
-            <i>Understand.</i> Understand the situation by drawing diagrams and testing various possibilities. 
+            <span class="label-emph">Understand</span> Understand the situation by drawing diagrams and testing various possibilities. 
         </li>
         <li>
-            <i>Notation.</i> Assign a variable—say, \(Q\)—to the quantity to maximize or minimize.
+            <span class="label-emph">Notation</span> Assign a variable—say, \(Q\)—to the quantity to maximize or minimize.
             Introduce notation by assigning algebraic quantities to unknown values. 
             It is helpful to use suggestive variables, such as \(A\) for area, \(d\) for distance, and \(L\) for length.
         </li>
         <li>
-            <i>Express.</i> Express \(Q\) in terms of one variable—say, \(x\)—to obtain \(Q(x).\)
+            <span class="label-emph">Express</span> Express \(Q\) in terms of one variable—say, \(x\)—to obtain \(Q(x).\)
         </li>
         <li>
-            <i>Minimize or Maximize.</i> Use calculus 
+            <span class="label-emph">Minimize or Maximize</span> Use calculus 
             to to find the absolute minimum or maximum of \(Q(x).\)  
             Find the critical numbers of \(Q\) and consider the endpoints of the domain in context.
         </li>
@@ -207,7 +209,7 @@
         Thus, \(a = 7\) must also correspond to the <i>absolute</i> maximum of \(P\)
         (see <a href="#optimization-ex-product">Figure 1</a>).
         If \(a = 7,\) then 
-        \[b = 14 - 7 = 7\] and \(P = 7 \cdot 7 = 49.\) 
+        \[b = 14 - 7 = 7\] and \(P = 7 \times 7 = 49.\) 
         So \(\boxed{a = 7}\) and \(\boxed{b = 7}\)
         maximize the product \(P.\)
     </p>
@@ -354,28 +356,47 @@
         Thus, a can of radius \(1.853 \un{in}\) and height \(3.707 \un{in}\)
         minimizes the materials used while holding the required volume.
         With a radius of \(1.853 \un{in},\) the cylinder's diameter is \(3.707 \un{in}\)—the
-        same dimension as the height. 
+        same dimension as the height.
+        The minimized surface area is 
+        \[
+        \ba
+        S \par{\sqrt[3]{\frac{20}{\pi}}} 
+        &= 2 \pi \par{\sqrt[3]{\frac{20}{\pi}}}^2 + \frac{80}{\sqrt[3]{20/\pi}} \nl 
+        &= 2 \pi \sqrt[3]{\frac{400}{\pi^2}} + 80 \sqrt[3]{\frac{\pi}{20}} \nl 
+        &\approx 64.747 \un{in}^2 \pd
+        \ea
+        \] 
     </p>
 </div>
 
 <p>
-    In some situations, minimizing or maximizing the square of a function is more convenient. 
     If \(f(x)\) has a relative minimum or maximum at \(x = a,\) then so does \(\sqrt{f(x)}.\) 
     For example, 
     \[p(x) = \sqrt{3 + (x - 2)^2} \and q(x) = 3 + (x - 2)^2\]
     each have a relative minimum at \(x = 2.\)
     This fact is convenient because we can choose to optimize the <i>square</i> 
-    of a function—a process that is sometimes easier.
+    of a function—often an easier process.
 </p>
 
 <div class="example-title"> EXAMPLE 4 </div>
 <div class="example">
     <div class="example-problem">  
-        Find two points on the parabola \(y = x^2\) that are closest to \((0, 1).\)
+        Which two points on the parabola \(y = x^2\) are closest to \((0, 1) \ques\)
     </div>
 </div>
 <button onclick="toggle4()" class="solution-button"></button>
 <div id="solution4" class="solution">
+    <p>
+        <a href="#optimization-ex-distance-sketch">Figure 6</a> shows a sketch of the parabola
+        and the points \((0, 1)\) and \((x, x^2).\)
+        The distance between the points is, by the Distance Formula,
+        \[
+        \ba
+        d &= \sqrt{(x - 0)^2 + (x^2 - 1)^2} \nl 
+        &= \sqrt{x^4 - x^2 + 1} \pd 
+        \ea
+        \]
+    </p>
     <figure class="optimization-ex-distance-sketch" id="optimization-ex-distance-sketch">
         <img src="../images/sectionImages/optimization-ex-distance-sketch.jpg" alt="optimization-ex-distance-sketch.jpg">
     </figure>
@@ -385,17 +406,22 @@
         }
     </style>
     <p>
-        We sketch a picture of the situation (<a href="#optimization-ex-distance-sketch">Figure 6</a>).
-        Let \(d\) be this shortest distance. The Distance Formula then provides 
-        \begin{equation} 
-        d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \pd \label{eq:parabola-d}
-        \end{equation}
-        We have \((x_1, y_1)\) \(= (0, 1)\) 
-        and the point on the parabola, \((x_2, y_2)\) \(= (x, x^2).\)
-        Thus, \(\eqRefer{eq:parabola-d}\) becomes 
-        \[d = \sqrt{x^2 + (x^2 - 1)^2} \pd \]
+        We need to find the critical numbers of \(d.\)
+        But \(d^2\) has the same critical numbers,
+        so we choose to optimize \(d^2\) for convenience:
+        Let \(q(x) = d^2\) \(= x^4 - x^2 + 1,\)
+        whose derivative is
+        \[q'(x) = 4x^3 - 2x \pd\]
+        Solving \(q'(x) = 0,\) we find
+        \[
+        \ba 
+        4x^3 - 2x &= 0 \nl
+        2x(2x^2 - 1) &= 0 \nl
+        \implies x &= 0 \cma x = \frac{-1}{\sqrt 2} \cma x = \frac{1}{\sqrt 2} \pd 
+        \ea 
+        \]       
     </p>
-    <figure class="optimization-ex-distance-graph" id="optimization-ex-distance-graph">
+        <figure class="optimization-ex-distance-graph" id="optimization-ex-distance-graph">
         <img src="../images/sectionImages/optimization-ex-distance-graph.jpg" alt="optimization-ex-distance-graph.jpg">
     </figure>
     <style>
@@ -404,42 +430,26 @@
         }
     </style>
     <p>
-        We need to find the critical numbers of \(d.\)
-        But \(d^2\) has the same critical numbers,
-        so we choose to optimize \(d^2\) for convenience:
-        Let \(q(x) = d^2.\) Then 
-        \[q(x) = x^2 + (x^2 - 1)^2 \cma\]
-        whose derivative is
-        \[q'(x) = 4x^3 - 2x \pd\]
-        Solving \(q'(x) = 0,\) we get 
-        \[
-        \ba 
-        4x^3 - 2x &= 0 \nl
-        2x(2x^2 - 1) &= 0 \nl
-        \implies x &= 0 \cma \tfrac{-1}{\sqrt 2} \cma \tfrac{1}{\sqrt 2} \pd 
-        \ea 
-        \]       
-        <aside class="box-remark">
-            If we differentiated \(d,\) then we would've gotten
-            \[d'(x) = \frac{2x(2x^2-1)}{\sqrt{x^4 - x^2 + 1}} \cma\]
-            which has the same zeros as \(q'(x),\) 
-            confirming that \(d\) and \(q(x) = d^2\) have the same critical numbers. 
-        </aside>
+        Note that \(q'\) changes sign from positive to negative at \(x = 0,\)
+        so this value corresponds to a relative <i>maximum</i> of \(q\) by the First-Derivative Test.
+        But we seek to <i>minimize</i> \(q,\) so we ignore this critical number. 
+        Conversely, \(q'\) changes sign from negative to positive at both \(x = -1/\sqrt 2\) and \(x = 1/\sqrt 2.\) 
+        So both values are locations of relative <i>minima</i> of \(q.\)
+        Because 
+        \[\lim_{x \to -\infty} q(x) = \infty \and \lim_{x \to \infty} q(x) = \infty \cma\]
+        the <i>absolute</i> minima of \(q\)—and therefore the absolute minima of 
+        \(d\)—must occur when \(x = -1/\sqrt 2\) and \(x = 1/\sqrt 2\) (<a href="#optimization-ex-distance-graph">Figure 7</a>).
+        At each value, \(y = (\pm 1/\sqrt 2)^2\) \(= 1/2.\)
+        Thus, the closest points on the parabola to \((0, 1)\) are
+        \[\boxed{\par{\frac{-1}{\sqrt 2} \cma \frac{1}{2}}} \and \boxed{\par{\frac{1}{\sqrt 2} \cma \frac{1}{2}}}\]
+        as we expect from the parabola's symmetry.
     </p>
     <p>
-        We see \(q'\) changes sign from positive to negative at \(x = 0,\)
-        so this value corresponds to a relative <i>maximum</i> of \(q.\) 
-        But we want to <i>minimize</i> \(q,\) so we ignore this critical number. 
-        Conversely, \(q'\) changes sign from negative to positive at both \(x = -1/\sqrt 2\) and \(x = 1/\sqrt 2.\) 
-        So both values are relative <i>minima</i> of \(q.\)
-        Because \(\lim_{x \to -\infty} q\) \(= \infty\) and \(\lim_{x \to \infty} q\) \(= \infty,\)  
-        the <i>absolute</i> minima of \(q\) (and therefore of \(d\)) 
-        must occur when \(x = -1/\sqrt 2\) and \(x = 1/\sqrt 2\) (<a href="#optimization-ex-distance-graph">Figure 7</a>).
-        At each value, 
-        \[y = \par{\frac{1}{\sqrt 2}}^2 = \frac{1}{2} \pd\]
-        Thus,  
-        \[\boxed{\par{\frac{-1}{\sqrt 2} \cma \frac{1}{2}}} \and \boxed{\par{\frac{1}{\sqrt 2} \cma \frac{1}{2}}}\]
-        are the closest points on \(y = x^2\) to \((0, 1).\)
+        <span class="text-remark">REMARK</span>
+        If we differentiated \(d,\) then we would've gotten
+        \[d'(x) = \frac{4x^3 - 2x}{\sqrt{x^4 - x^2 + 1}} \cma\]
+        which has the same zeros as \(q'(x),\) 
+        confirming that \(d\) and \(q(x) = d^2\) have the same critical numbers. 
     </p>
 </div>
 
@@ -460,31 +470,29 @@
             content:'FIGURE 8';
         }
     </style>
-    <p>
-        The word <i>inscribed</i> means the rectangle has two vertices on the parabola and two vertices on the \(x\)-axis 
-        (<a href="#optimization-ex-inscribed-diagram">Figure 8</a>). 
-        Since the rectangle has length \(2x\) and height \(y,\) its area is 
-        \begin{equation}
-            A = 2xy \pd \label{eq:inscribe-area}
-        \end{equation}
-        But \(y = 9 - x^2,\) so \(\eqRefer{eq:inscribe-area}\) becomes  
-        \[A(x) = 2x(9 - x^2) \pd\]
-        We solve \(A'(x) = 0,\) finding
-        \[
-        \ba 
-        A'(x) = 18 - 6x^2 &= 0 \nl
-        \implies x &= \nspace -\sqrt 3 \cma \sqrt 3 \pd 
-        \ea 
-        \]
-        The domain of \(A(x)\) is \(0 \leq x \leq 3,\)
-        so we discard \(x = - \sqrt 3.\)
-        The value \(x = \sqrt 3\) corresponds to a <i>relative</i> maximum of \(A\) because 
-        \(A'\) changes sign from positive to negative at that point.
-        At each endpoint, \(A = 0\) since the rectangle collapses into a line.
-        Thus, \(x = \sqrt 3\) is the location of the <i>absolute</i> maximum of \(A.\)
-        Then \(y = 9 - (\sqrt 3)^2 = 6,\) so \(\eqRefer{eq:inscribe-area}\) gives the maximum area to be 
-        \[A = 2(\sqrt 3)(6) = \boxed{12 \sqrt 3}\]
-    </p>
+    The word <i>inscribed</i> means the rectangle has two vertices on the parabola and two vertices on the \(x\)-axis 
+    (<a href="#optimization-ex-inscribed-diagram">Figure 8</a>). 
+    Since the rectangle has length \(2x\) and height \(y,\) its area is 
+    \begin{equation}
+        A = 2xy \pd \label{eq:inscribe-area}
+    \end{equation}
+    But \(y = 9 - x^2,\) so \(\eqRefer{eq:inscribe-area}\) becomes  
+    \[A(x) = 2x(9 - x^2) \pd\]
+    We solve \(A'(x) = 0,\) finding
+    \[
+    \ba 
+    A'(x) = 18 - 6x^2 &= 0 \nl
+    \implies x &= \nspace -\sqrt 3 \cma x = \sqrt 3 \pd 
+    \ea 
+    \]
+    The domain of \(A(x)\) is \(0 \leq x \leq 3,\)
+    so we discard \(x = - \sqrt 3.\)
+    The value \(x = \sqrt 3\) corresponds to a <i>relative</i> maximum of \(A\) because 
+    \(A'\) changes sign from positive to negative at that point.
+    At each endpoint, \(A = 0\) since the rectangle collapses into a line.
+    Thus, \(x = \sqrt 3\) is the location of the <i>absolute</i> maximum of \(A.\)
+    Then \(y = 9 - (\sqrt 3)^2 = 6,\) so \(\eqRefer{eq:inscribe-area}\) gives the maximum area to be 
+    \[A = 2(\sqrt 3)(6) = \boxed{12 \sqrt 3}\]
 </div>
 
 <div class="example-title"> EXAMPLE 6 </div>
@@ -498,60 +506,77 @@
                 content:'FIGURE 9';
             }
         </style>
-        A lifeguard on the shoreline runs to rescue a drowning swimmer
-        located \(20\) feet east of the lifeguard and \(8\) feet from the shoreline.
-        The lifeguard can run at \(10\) feet per second and swim at \(6\) feet per second.
+        A lifeguard on the shoreline rushes to rescue a drowning swimmer
+        located \(20\) feet ahead of the lifeguard and \(8\) feet from the shoreline.
+        The lifeguard runs at \(10\) feet per second and swims at \(6\) feet per second.
         She runs a distance \(x\) before jumping into the water and swimming to the drowning person 
         (<a href="#optimization-ex-lifeguard-diagram">Figure 9</a>).
-        At what distance \(x\) should the lifeguard enter the water in order to minimize the time to rescue the swimmer?
+        Calculate the distance \(x\) the lifeguard should run to minimize the time needed to rescue the swimmer.
     </div>
 </div>
 <button onclick="toggle6()" class="solution-button"></button>
 <div id="solution6" class="solution">
-    <p>
-        We need to derive an expression for the time, \(t,\) the lifeguard takes to rescue the swimming person.
-        The distance she runs is \(x,\) and the distance she swims is \(\sqrt{(20 - x)^2 + 64}.\)
-        The relationship between time, distance, and speed is
-        \[\textrm{time} = \frac{\textrm{distance}}{\textrm{speed}} \pd\]
-        The lifeguard's speed is \(10\) feet per second onshore and \(6\) feet per second in water. 
-        Therefore, her time for the first part of the trip, running onshore, is   
-        \[t_1 = \frac{x}{10} \pd\]
-        Her time for the second part of the trip, swimming, is 
-        \[t_2 = \frac{\sqrt{(20 - x)^2 + 64}}{6} \pd\]
-        The total time, \(t,\) is the sum of these times:
-        \[
-        \ba 
-        t &= t_1 + t_2 \nl
-        &= \frac{x}{10} + \frac{\sqrt{(20 - x)^2 + 64}}{6} \pd
-        \ea 
-        \]
-        This expression is in terms of \(x,\) so we differentiate to locate its critical numbers:
-        \[
-        \ba 
-        t'(x) = \frac{1}{10} + \frac{x - 20}{6 \sqrt{x^2 - 40x + 464}} &= 0 \nl
-        \implies x &= 14 \pd
-        \ea 
-        \]
-        <figure class="optimization-ex-lifeguard-graph" id="optimization-ex-lifeguard-graph">
-            <img src="../images/sectionImages/optimization-ex-lifeguard-graph.jpg" alt="optimization-ex-lifeguard-graph.jpg">
-        </figure>
-        <style>
-            .optimization-ex-lifeguard-graph::before{
-                content:'FIGURE 10';
-            }
-        </style>
-        Since \(t'(x)\) changes sign from negative to positive at \(x = 14,\) 
-        this value corresponds to a <i>relative minimum</i> of \(t.\) 
-        You may verify that this value also corresponds to the <i>absolute minimum</i> of \(t\) 
-        (<a href="#optimization-ex-lifeguard-graph">Figure 10</a>).
-        So the lifeguard should run \(\boxed{14 \un{ft}}\) before jumping in the water.
-    </p>
+    <figure class="optimization-ex-lifeguard-graph" id="optimization-ex-lifeguard-graph">
+        <img src="../images/sectionImages/optimization-ex-lifeguard-graph.jpg" alt="optimization-ex-lifeguard-graph.jpg">
+    </figure>
+    <style>
+        .optimization-ex-lifeguard-graph::before{
+            content:'FIGURE 10';
+        }
+    </style>
+    We seek an expression of the time, \(t,\) the lifeguard takes to rescue the swimming person.
+    The distance she runs is \(x,\) and the distance she swims is (by the Distance Formula) \(\sqrt{(20 - x)^2 + 64}.\)
+    Note that \(\text{time}\) \(= \text{distance}/\text{speed}.\)
+    The lifeguard's speed is \(10\) feet per second onshore and \(6\) feet per second in water. 
+    Therefore, her time for the first part of the trip, running onshore, is   
+    \[t_1 = \frac{x}{10} \pd\]
+    Her time for the second part of the trip, swimming, is 
+    \[t_2 = \frac{\sqrt{(20 - x)^2 + 64}}{6} \pd\]
+    The total time, \(t,\) is the sum of these times:
+    \[
+    \ba 
+    t &= t_1 + t_2 \nl
+    &= \frac{x}{10} + \frac{\sqrt{(20 - x)^2 + 64}}{6} \nl 
+    &= \frac{x}{10} + \frac{\sqrt{x^2 - 40x + 464}}{6} \pd
+    \ea 
+    \]
+    Differentiating with respect to \(x\) shows
+    \[
+    t'(x) = \frac{1}{10} + \frac{x - 20}{6 \sqrt{x^2 - 40x + 464}} \pd 
+    \]
+    To locate the critical numbers of \(t,\)
+    we solve \(t'(x) = 0,\) as follows:
+    \[
+    \ba 
+    \frac{1}{10} + \frac{x - 20}{6 \sqrt{x^2 - 40x + 464}} &= 0 \nl 
+    \frac{6 \sqrt{x^2 - 40x + 464} + 10 x - 200}{60 \sqrt{x^2 - 40x + 464}} &= 0 \nl 
+    6 \sqrt{x^2 - 40x + 464} + 10 x - 200 &= 0 \nl 
+    6 \sqrt{x^2 - 40x + 464} &= -10x + 200 \nl 
+    36 \par{x^2 - 40x + 464} &= 100x^2 - 4000x + 40000 \nl 
+    64 (x - 26)(x - 14) &= 0 \nl
+    \implies x &= 14 \pd
+    \ea 
+    \]
+    (The solution \(x = 26\) is extraneous.)
+    The domain of \(t(x)\) in context is \(\{x \mid x \geq 0\}.\)
+    Observe that \(t' \lt 0\) for \(0 \leq x \lt 14\)
+    and \(t' \gt 0\) for \(x \gt 14.\)
+    Hence, \(t\) has a <i>relative</i> at \(x = 14\) by the First-Derivative Test. 
+    Observe that \(t(0) \approx 3.590,\) \(t(14) \approx 3.067,\) and \(\lim_{x \to \infty} t(x) = \infty.\)
+    Hence, \(t\) has an <i>absolute</i> minimum at \(x = 14\) 
+    (<a href="#optimization-ex-lifeguard-graph">Figure 10</a>).
+    So the lifeguard should run \(\boxed{14 \un{ft}}\) before jumping in the water
+    to save the swimmer in just \(3.067\) seconds.
 </div>
 
 <div class="example-title"> EXAMPLE 7 </div>
 <div class="example">
     <div class="example-problem"> 
-        <figure class="optimization-ex-triangle-diagram" id="optimization-ex-triangle-diagram">
+        <a href="#optimization-ex-triangle-diagram">Figure 11</a> shows an arrangement of right triangles that subtend an angle 
+        \(\theta.\)
+        Using a graphing calculator, 
+        find \(x\) such that \(\theta\) is minimized.
+        <figure class="optimization-ex-triangle-diagram figure-center-one" id="optimization-ex-triangle-diagram">
             <img src="../images/sectionImages/optimization-ex-triangle-diagram.jpg" alt="optimization-ex-triangle-diagram.jpg">
         </figure>
         <style>
@@ -559,23 +584,17 @@
                 content:'FIGURE 11';
             }
         </style>
-        <a href="#optimization-ex-triangle-diagram">Figure 11</a> shows an arrangement of right triangles that subtend an angle 
-        \(\theta.\)
-        Find \(x\) such that \(\theta\) is maximized. (Calculator required.)
-        <p></p>
-        <br>
     </div>
 </div>
 <button onclick="toggle7()" class="solution-button"></button>
 <div id="solution7" class="solution">
-    <p>
-        The three angles 
-        \[\andThree{\theta}{\tan^{-1} \par{\frac{x}{4}}}{\tan^{-1} \par{\frac{3}{x + 1}}}\]
-        add to \(\pi.\)
-        Thus, we have
-        \[\theta = \pi - \tan^{-1} \left( \frac{x}{4} \right) - \tan^{-1} \left(\frac{3}{x + 1}\right) \pd\]
-        The absolute maximum of \(\theta\) occurs when \(\boxed{x = 0.899}.\)
-    </p>
+    The three angles 
+    \[\andThree{\theta}{\tan^{-1} \par{\frac{x}{4}}}{\tan^{-1} \par{\frac{3}{x + 1}}}\]
+    must sum to \(\pi.\)
+    Thus, we have
+    \[\theta = \pi - \tan^{-1} \left( \frac{x}{4} \right) - \tan^{-1} \left(\frac{3}{x + 1}\right) \pd\]
+    Graphing the function \(y = \theta(x)\) 
+    reveals the maximum of \(\theta\) to occur when \(\boxed{x = 0.899}.\)
 </div>
 
 <div class="example-title"> EXAMPLE 8 </div>
@@ -590,35 +609,67 @@
             }
         </style>
         Two power towers—one of height \(10\) meters and the other of height \(15\) meters—are \(30\) meters apart. 
-        Wire is anchored from the ground to the top of each tower (<a href="#optimization-ex-power">Figure 12</a>).
+        Wire is anchored from a shared point on the ground to the top of each tower (<a href="#optimization-ex-power">Figure 12</a>).
         Where on the ground should the wires be anchored to use the least amount of wire? 
     </div>
 </div>
 <button onclick="toggle8()" class="solution-button"></button>
 <div id="solution8" class="solution">
     <p>
-        Let Tower A be the \(10 \un{m}\) tower and tower B be the \(15 \un{m}\) tower.
-        Let \(x\) be the distance from the base of tower A to the anchor point. 
-        The amount of wire needed to connect top of tower A to the anchor point is then 
-        \[w_1 = \sqrt{x^2 + 15^2} = \sqrt{x^2 + 225} \pd\]
-        Likewise, the amount of wire needed to connect the anchor point to the top of tower B is  
-        \[w_2 = \sqrt{(30 - x)^2 + 10^2} = \sqrt{x^2 - 60x + 1000} \pd\] 
-        Therefore, the total amount of wire required is 
+        Let \(x\) be the distance from the anchor point to the left tower's base. 
+        Then the distance from the anchor point to the right tower's base is \((30 - x).\)
+        The wire needed to connect the anchor point to the top of the left tower is,
+        by the Distance Formula,
+        \[w_1 = \sqrt{x^2 + 10^2} = \sqrt{x^2 + 100} \pd\]
+        Likewise, the wire needed to connect the anchor point to the top of the right tower is 
+        \[w_2 = \sqrt{(30 - x)^2 + 15^2} = \sqrt{x^2 - 60x + 1125} \pd\] 
+        Therefore, the total required amount of wire is 
         \[
         \ba 
         w &= w_1 + w_2 \nl 
-        &= \sqrt{x^2 + 225} + \sqrt{x^2 - 60x + 1000} \pd 
+        &= \sqrt{x^2 + 100} + \sqrt{x^2 - 60x + 1125} \pd 
         \ea 
         \]
-        We differentiate \(w\) and equate it to \(0\) to find  
+        Differentiating \(w\) to locate its critical points, 
+        we see
         \[
         \ba 
-        \frac{\dd w}{\dd x} = \frac{x - 30}{\sqrt{x^2 - 60x + 1000}} + \frac{x}{\sqrt{x^2 + 225}} &= 0 \nl
-        \implies x &= 18 \pd
+        \frac{\dd w}{\dd x} = \frac{x}{\sqrt{x^2 + 100}} + \frac{x - 30}{\sqrt{x^2 - 60x + 1125}} &= 0 \nl
+        \implies x &= 12 \pd
         \ea 
         \]
-        This critical number corresponds to the absolute minimum of \(w.\)
-        Thus, the optimal spot to anchor the wires is \(\boxed{18 \un{m}}\) east of tower A.
+        By graphing \(y = w(x),\) 
+        you may convince yourself that this critical number 
+        is the location of the <i>absolute minimum</i> of \(w.\)
+        Thus, the optimal spot to anchor the wires is \(\boxed{12 \un{m}}\) <b>to the right of the left tower</b>.
+    </p>
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        <span class="emph">Optimization</span> is the procedure of 
+        minimizing or maximizing a quantity.
+        When solving a word problems, 
+        it is crucial to <i>read carefully</i> and <i>sketch a diagram</i>. 
+        The following tips will guide you through the process of optimization.
+        <ol class="list-num">
+            <li>
+                <span class="label-emph">Understand</span> Understand the situation by drawing diagrams and testing various possibilities. 
+            </li>
+            <li>
+                <span class="label-emph">Notation</span> Assign a variable—say, \(Q\)—to the quantity to maximize or minimize.
+                Introduce notation by assigning algebraic quantities to unknown values. 
+                It is helpful to use suggestive variables, such as \(A\) for area, \(d\) for distance, and \(L\) for length.
+            </li>
+            <li>
+                <span class="label-emph">Express</span> Express \(Q\) in terms of one variable—say, \(x\)—to obtain \(Q(x).\)
+            </li>
+            <li>
+                <span class="label-emph">Minimize or Maximize</span> Use calculus 
+                to to find the absolute minimum or maximum of \(Q(x).\)  
+                Find the critical numbers of \(Q\) and consider the endpoints of the domain in context.
+            </li>
+        </ol>
     </p>
 </div>
 </main>

@@ -58,7 +58,7 @@
 </figure>
         A triangle has sides of lengths \(a\) and \(b,\)
         and the angle between them is \(\theta\) 
-        (see <a href="#optimization-triangle">Figure 13</a>).
+        (<a href="#optimization-triangle">Figure 13</a>).
         The area of the triangle is 
         \[A = \tfrac{1}{2} ab \sin \theta \pd\]
         Using calculus, show that the area is maximized when \(\theta = 90 \degree.\)
@@ -312,7 +312,7 @@
 </figure>
         A uniform, thin rod of length \(30\) centimeters is pivoted at a point \(x\) centimeters from its center of gravity as it oscillates 
         (see <a href="#optimization-physical-pendulum">Figure 14</a>). 
-        This device is called a <i>physical pendulum</i>. 
+        This device is called a <b>physical pendulum</b>. 
         The equation for its period, the time it takes to complete one full revolution, in seconds, is 
         \[T = 2 \pi \sqrt{\frac{(0.01x)^2 + 0.3^2/12}{9.8(0.01x)}} \pd \]
         Find the value of \(x\) for which the period is minimized.
@@ -565,17 +565,12 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-<style>
-            .optimization-theta-1::before{
-                content:'FIGURE 15';
-            }
-        </style>
-<figure class="optimization-theta-1" id="optimization-theta-1">
-<img alt="Figure 15" class="optimization-theta-1" src="../images/sectionImages/optimization-theta-1.jpg"/>
+            For <blockquote class="box-problem-display"> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/optimization-theta-1.jpg
+    " alt="optimization-theta-1.jpg
+    ">
 </figure>
-        In <a href="#optimization-theta-1">Figure 15</a>, what value of \(x\) maximizes \(\theta \ques\)
-     
+</blockquote> using a graphing calculator, find \(x\) to minimize \(\theta\). 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-13"> 
@@ -596,17 +591,12 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-<style>
-            .optimization-theta-2::before{
-                content:'FIGURE 16';
-            }
-        </style>
-<figure class="optimization-theta-2" id="optimization-theta-2">
-<img alt="Figure 16" class="optimization-theta-2" src="../images/sectionImages/optimization-theta-2.jpg"/>
+            For <blockquote class="box-problem-display"> <figure class="exercise-grid-img">
+<img src="../images/sectionImages/optimization-theta-2.jpg
+    " alt="optimization-theta-2.jpg
+    ">
 </figure>
-        In <a href="#optimization-theta-2">Figure 16</a>, determine the value of \(x\) such that \(\theta\) is minimized.
-     
+</blockquote> using a graphing calculator, find \(x\) to minimize \(\theta\). 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-14"> 
@@ -690,18 +680,18 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        A trapezoidal trough of length \(L\) is designed.
+        Three sides of the trapezoidal face have length \(1\) (<a href="#optimization-trough">Figure 15</a>).
+        What value of \(\theta\) maximizes the trough's volume?
+        <figure class="optimization-trough figure-center-one" id="optimization-trough">
+<img alt="Figure 15" class="optimization-trough" src="../images/sectionImages/optimization-trough.jpg"/>
+</figure>
 <style>
             .optimization-trough::before{
-                content:'FIGURE 17';
+                content:'FIGURE 15';
             }
         </style>
-<figure class="optimization-trough" id="optimization-trough">
-<img alt="Figure 17" class="optimization-trough" src="../images/sectionImages/optimization-trough.png"/>
-</figure>
-        A trapezoidal trough of length \(L\) is designed.
-        Three sides of the trapezoidal face have length \(1\) (<a href="#optimization-trough">Figure 17</a>).
-        What value of \(\theta\) maximizes the trough's volume?
-     
+ 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-16"> 
@@ -1012,7 +1002,7 @@
         <div class="box-solution__problem"> 
             
         In the first quadrant, a line of negative slope passes through the point \((1, 4).\) 
-        Determine the equation of the line such that the area bounded by the line, the \(x\)-axis, and the \(y\)-axis is minimized.
+        Determine an equation of the line such that the area bounded by the line, the \(x\)-axis, and the \(y\)-axis is minimized.
      
         </div> 
         <hr> 
@@ -1261,10 +1251,10 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Regan is decorating the top surface of a rectangular cake. 
+        A baker is decorating the top surface of a rectangular cake. 
         She applies a \(2\)-centimeter margin of frosting on the sides, 
         a \(1\)-centimeter margin on the top, and a \(3\)-centimeter margin on the bottom.
-        Regan wants the area without frosting to be \(284\) square centimeters. 
+        The baker wants the area without frosting to be \(284\) square centimeters. 
         What dimensions of the cake minimize its perimeter?
      
         </div> 
@@ -1309,7 +1299,7 @@
         From \(\eqRefer{eq:cake-w},\)
         \[W = 4 + \frac{284}{(4 + \sqrt{284}) - 4} = 4 + \sqrt{284} \pd\]
         The value of \(4 + \sqrt{284}\) is roughly \(20.852,\)
-        so Regan's cake should have dimensions
+        so the cake should have dimensions
         \(\boxed{20.852 \un{cm}}\) by \(\boxed{20.852 \un{cm}}.\)
      
         </div> 
@@ -1321,6 +1311,50 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        A battery with internal resistance \(r\) supplies an electromotive force of \(\emf.\)
+        If the battery is connected to a resistor of resistance \(R,\)
+        then the power in the resistor is given by 
+        \[P = \frac{\emf^2 R}{(r + R)^2} \pd\]
+        If \(r\) and \(\emf\) are constant but \(R\) is variable,
+        then calculate the resistor's maximum possible power output.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating the power expression with respect to \(R\) gives 
+        \[\deriv{P}{R} = \frac{\emf^2 (r + R)^2 - 2 \emf^2 R (r + R)}{(r + R)^4} \pd\]
+        To determine the critical points of \(P,\) 
+        we equate the derivative to \(0,\)
+        as follows:
+        \[
+        \ba 
+        \frac{\emf^2 (r + R)^2 - 2 \emf^2 R (r + R)}{(r + R)^4} &amp;= 0 \nl
+        \emf^2 (r + R)^2 - 2 \emf^2 R (r + R) &amp;= 0 \nl 
+        (r + R)^2 - 2 R(r + R) &amp;= 0 \nl
+        (r + R) - 2R &amp;= 0 \nl 
+        \implies R &amp;= r \pd
+        \ea 
+        \]
+        Note that \(P' \gt 0\) for \(R \lt r\) and \(P' \lt 0\)
+        for \(R \gt r.\)
+        Thus, \(P\) has a <i>relative</i> maximum at \(R = r\) by the First-Derivative Test.
+        Also observe that \(P(0) = 0\) and \(\lim_{R \to \infty} P(R) = 0,\)
+        so \(P\) has an <i>absolute</i> maximum when \(R = r.\)
+        The power output at this value is 
+        \[P = \frac{\emf^2 r}{(r + r)^2} = \boxed{\frac{\emf^2}{4r}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
         An oil refinery is located on the north bank of a pond that extends \(3\) miles south. 
         Pipes are connected from the refinery to a storage facility located across the pond and \(10\) miles east of the refinery. 
         The cost of installing pipe is twice as expensive in water than on land. 
@@ -1328,7 +1362,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-refinery" id="optimization-refinery">
@@ -1349,12 +1383,13 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+<!-- [[[CALC]]] -->
         Eliza stands on the west bank of a long river that extends \(2\) feet east.
         Eliza's house is across the river and \(12\) feet south of her.
         She first runs due south before jumping into the water and swimming directly to her house.
@@ -1364,7 +1399,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-river" id="optimization-river">
@@ -1388,8 +1423,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1398,7 +1433,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-circle-r" id="optimization-circle-r">
@@ -1444,18 +1479,268 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        A box of weight \(W\) is attached to a rope that makes an angle \(\theta\) 
+        with the horizontal. 
+        Then the magnitude of the force in pulling the box is 
+        \[
+        F = \frac{\mu W}{\mu \sin \theta + \cos \theta} \cma
+        \]
+        where \(\mu\) is a constant called the coefficient of friction. 
+        (Large values of \(\mu\) indicate high levels of friction.)
+        Find \(\theta\) such that \(F\) is minimized.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Our goal is to find the absolute minimum of \(F\)
+        for \(0 \leq \theta \leq \pi/2.\)
+        Differentiating gives 
+        \[
+        \deriv{F}{\theta} = - \frac{\mu W}{(\mu \sin \theta + \cos \theta)^2} (\mu \cos \theta - \sin \theta) \pd
+        \]
+        We locate the critical points of \(F\)
+        by equating the derivative to \(0,\) as follows:
+        \[
+        \ba
+        - \frac{\mu W}{(\mu \sin \theta + \cos \theta)^2} (\mu \cos \theta - \sin \theta) &amp;= 0 \nl 
+        \mu \cos \theta - \sin \theta &amp;= 0 \nl 
+        \tan \theta &amp;= \mu \nl 
+        \implies \theta &amp;= \atan \mu \pd
+        \ea
+        \]
+        Note that \(\textderiv{F}{\theta} \gt 0\) when \(\mu \cos \theta - \sin \theta \lt 0\) 
+        \(\implies \mu \cos \theta \lt \sin \theta\) 
+        \(\implies \mu \lt \tan \theta\)
+        \(\implies \theta \gt \atan \mu.\)
+        Hence, \(F\) is decreasing on \([0, \atan \mu]\) and increasing on \([\atan \mu, \pi/2].\)
+        Thus, \(F\) has a <i>relative</i> minimum at \(\theta = \atan \mu\)
+        by the First-Derivative Test.
+        Observe that the denominator of \(F,\) \(\mu \sin \theta + \cos \theta,\)
+        equals \(1\) when \(\theta = 0\) and equals \(\mu\) when \(\theta = \pi/2.\)
+        But when \(\theta = \atan \mu,\) the denominator becomes
+        \[
+        \ba
+        \mu \sin \par{\atan \mu} + \cos \par{\atan \mu} &amp;= \frac{\mu^2}{\sqrt{\mu^2 + 1}} + \frac{1}{\sqrt{\mu^2 + 1}} \nl
+        &amp;= \frac{\mu^2 + 1}{\sqrt{\mu^2 + 1}} \nl 
+        &amp;= \sqrt{\mu^2 + 1} \cma
+        \ea
+        \]
+        which is greater than \(1\) <i>and</i> greater than \(\mu.\)
+        Thus, \(F(\atan \mu)\) is smaller than \(F(0)\) and \(F(\pi/2).\)
+        Hence, \(F\) attains its <i>absolute</i> minimum when \(\boxed{\theta = \atan \mu}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        What value of \(x\) minimizes the slope of the tangent to the graph of 
+        \[y = x^5 + 4x^4 - 8x^3 + 2x - 3 \ques\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The slope of the tangent is given by 
+        \[\deriv{y}{x} = 5x^4 + 16x^3 - 24x^2 + 2 \pd\]
+        We seek to minimize this derivative function.
+        The second derivative is 
+        \[\derivOrder{y}{x}{2} = 20x^3 + 48x^2 - 48x \pd\]
+        The critical numbers of \(\textderiv{y}{x}\) are given by solving \(\textderivOrder{y}{x}{2} = 0,\)
+        as follows:
+        \[
+        \ba 
+        20x^3 + 48x^2 - 48x &amp;= 0 \nl 
+        4x (5x^2 + 12x - 12) &amp;= 0 \pd
+        \ea 
+        \]
+        Clearly, one zero is \(x = 0.\)
+        The other zeros are given by the Quadratic Formula to be 
+        \[
+        \ba
+        x &amp;= \frac{-12 + \sqrt{12^2 - 4(5)(-12)}}{2(5)} \qquad &amp;x &amp;= \frac{-12 - \sqrt{12^2 - 4(5)(-12)}}{2(5)} \nl 
+        &amp;= \frac{-12 + \sqrt{384}}{10} \qquad &amp; &amp;=  \frac{-12 - \sqrt{384}}{10} \pd
+        \ea
+        \]
+        The following table shows the sign of \(\textderivOrder{y}{x}{2}\) 
+        for subintervals of \(x\) bounded by the critical numbers. 
+        <table class="table-vertical table-tall">
+<tr>
+<td class="label-cell">
+                    Interval of \(x\)
+                </td>
+<td class="label-cell">
+                    Sign of \(\ds \derivOrder{y}{x}{2}\)
+                </td>
+</tr>
+<tr>
+<td>
+                    \(\ds \par{-\infty, \frac{-12 - \sqrt{384}}{10}}\)
+                </td>
+<td>
+                    negative
+                </td>
+</tr>
+<tr>
+<td>
+                    \(\ds \par{\frac{-12 - \sqrt{384}}{10} \cma 0}\)
+                </td>
+<td>
+                    positive
+                </td>
+</tr>
+<tr>
+<td>
+                    \(\ds \par{0 \cma \frac{-12 + \sqrt{384}}{10}}\)
+                </td>
+<td>
+                    negative
+                </td>
+</tr>
+<tr>
+<td>
+                    \(\ds \par{\frac{-12 + \sqrt{384}}{10} \cma \infty}\)
+                </td>
+<td>
+                    positive
+                </td>
+</tr>
+</table>
+        So \(\textderiv{y}{x}\) has <i>relative</i> minima at \(x = (-12 - \sqrt{384})/10\)
+        and \(x = (-12 + \sqrt{384})/10.\)
+        Note that 
+        \[\lim_{x \to -\infty} \deriv{y}{x} = \infty \and \lim_{x \to \infty} \deriv{y}{x} = \infty \pd\]
+        Also observe that
+        \[
+        \ba
+        \deriv{y}{x} \intEval_{x =\frac{-12 - \sqrt{384}}{10}} &amp;\approx -243.965 \cma \nl
+        \deriv{y}{x} \intEval_{x =\frac{-12 + \sqrt{384}}{10}} &amp;\approx -3.171 \pd
+        \ea
+        \]
+        Hence, the slope to 
+        \(y = x^5 + 4x^4 - 8x^3 + 2x - 3\)
+        is minimized at
+        \[x = \boxed{\frac{-12 - \sqrt{384}}{10}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        In statistics, \(p\) is the proportion of all individuals in a population
+        who fit a criterion. 
+        To estimate \(p,\) we take
+        a random sample from the population; \(\hat p\) is the proportion of individuals in the <i>sample</i>
+        who fit the same criterion.
+        For example, if \(60 \%\) of all residents in a city support lowering taxes, then \(p = 0.6.\) 
+        But if \(55 \%\) of residents taken from a <i>sample</i> support lowering taxes, then \(\hat p = 0.55.\)
+        <ol class="list-alpha">
+<li>
+                At a confidence level of \(95\%,\)
+                the <b>margin of error</b> of a sample of size \(n\) and proportion \(\hat p\) is
+                given by 
+                \[E = 1.96 \sqrt{\frac{\hat p (1 - \hat p)}{n}} \pd\]
+                If \(n\) is constant, then find the maximum possible value of \(E.\)
+            </li>
+<li>
+                A committee of political scientists will conduct a sample to estimate the proportion of all individuals 
+                in a town who prefer to elect a new mayor.
+                At a \(95\%\) confidence level,
+                the committee wants a margin of error of less than \(4\%.\)
+                How large should the sample be?
+                [<i>Hint</i>: The committee does not yet know \(\hat p,\)
+                so it must use the maximum value of \(E\) found in part (a).]
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                It is easier to find the critical numbers of 
+                \[
+                \ba
+                E^2 &amp;= 1.96^2 \par{\frac{\hat p (1 - \hat p)}{n}} \nl 
+                &amp;= \frac{3.8416}{n} \, \hat p (1 - \hat p) \nl 
+                &amp;= \frac{3.8416}{n} \parbr{\hat p - (\hat p)^2} \pd
+                \ea
+                \]
+                Since \(n\) is constant, 
+                we differentiate with respect to \(\hat p\)
+                to calculate the critical numbers, as follows:
+                \[
+                \ba 
+                \deriv{(E^2)}{\hat p} = \frac{3.8416}{n} \par{1 - 2 \hat p} &amp;= 0 \nl 
+                1 - 2 \hat p &amp;= 0 \nl
+                \implies \hat p &amp;= 0.5 \pd
+                \ea 
+                \]
+                The domain of \(E\) is \(0 \leq \hat p \leq 1.\)
+                Note that \(E = 0\) for \(\hat p = 0\) and \(\hat p = 1.\)
+                Thus, \(E\) attains its <i>absolute</i> maximum when \(\hat p = 0.5.\)
+                This maximum value is 
+                \[
+                \ba 
+                E &amp;= 1.96 \sqrt{\frac{\hat 0.5 (1 - 0.5)}{n}} \nl 
+                &amp;= \boxed{\frac{0.98}{\sqrt n}}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                A margin of error of less than \(4\%\) means \(E \lt 0.04.\)
+                Since \(\hat p\) is unknown, 
+                a conservative estimate of the margin of error is necessary;
+                using the maximum value of \(E\) in part (a) shows
+                \[
+                \ba 
+                \frac{0.98}{\sqrt n} &amp;\lt 0.04 \nl 
+                \frac{\sqrt n}{0.98} &amp;\gt 25 \nl 
+                \sqrt n &amp;\gt 24.5 \nl 
+                n &amp;\gt 600.25 \cma
+                \ea 
+                \]
+                which we round up to \(601.\)
+                Thus, the sample should include <i>at least</i> \(\boxed{601}\) individuals.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
         Find the point on the graph of \(y = x^3\) such that its combined distance 
         to the points \((-1, 4),\) \((2, 7),\) and \((5, 3)\) is minimized.
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-x3" id="optimization-x3">
@@ -1470,19 +1755,20 @@
         &amp;= \sqrt{(x + 1)^2 + (x^3 - 4)^2} + \sqrt{(x - 2)^2 + (x^3 - 7)^2} + \sqrt{(x - 5)^2 + (x^3 - 3)^2} \pd  
         \ea
         \] 
-        Using a calculator, we find the <i>absolute minimum</i> of \(d\)
+        Using a graphing calculator, we find the <i>absolute minimum</i> of \(d\)
         to occur when \(x \approx 1.741.\)
         Then \(x^3 \approx 5.277\) and so the point is \(\boxed{(1.741, 5.277)}.\)
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+<!-- [[[CALC]]] -->
         In the \(xy\)-plane, three houses are located at \((2, 5),\) \((4, 3),\) and \((6, 2).\)
         These houses are connected by pipes to the neighborhood's wastewater treatment plant, 
         which must be plotted on a paved pathway whose shape is the graph of \(y = \sqrt x.\)
@@ -1490,7 +1776,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-sqrtx" id="optimization-sqrtx">
@@ -1505,7 +1791,7 @@
         &amp;= \sqrt{(x - 2)^2 + (\sqrt x - 5)^2} + \sqrt{(x - 4)^2 + (\sqrt x - 3)^2} + \sqrt{(x - 6)^2 + (\sqrt x - 2)^2} \pd  
         \ea
         \] 
-        Using a calculator, we find the <i>absolute minimum</i> of \(\ell\)
+        Using a graphing calculator, we find the <i>absolute minimum</i> of \(\ell\)
         to occur when \(x = 4.675.\)
         Then \(y = \sqrt{4.675} = 2.162.\)
         Thus, the plant should be built at \(\boxed{(4.675, 2.162).}\)
@@ -1513,12 +1799,13 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+<!-- [[[CALC]]] -->
         A miniature, quarter-elliptical ceiling is supported by two beams at its ends—one 
         of height \(3\) inches and the other of height \(5\) inches—which are located \(4\) inches apart. 
         A rope is tied around the base of each beam and hooked up to a shared position on the ceiling. 
@@ -1526,7 +1813,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="optimization-ceiling-elliptical" id="optimization-ceiling-elliptical">
@@ -1561,21 +1848,21 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
 <style>
             .optimization-light::before{
-                content:'FIGURE 18';
+                content:'FIGURE 16';
             }
         </style>
 <figure class="optimization-light" id="optimization-light">
-<img alt="Figure 18" class="optimization-light" src="../images/sectionImages/optimization-light.jpg"/>
+<img alt="Figure 16" class="optimization-light" src="../images/sectionImages/optimization-light.jpg"/>
 </figure>
-        In <a href="#optimization-light">Figure 18</a>,
+        In <a href="#optimization-light">Figure 16</a>,
         a ray of light starts in the air at point \(P,\)
         is refracted into a medium of water at point \(O,\) 
         and travels to point \(Q.\)
@@ -1583,11 +1870,11 @@
         Let \(v_1\) be the light's speed in air and \(v_2\) be its speed in water. 
         Show that 
         \[\frac{\sin \theta_1}{v_1} = \frac{\sin \theta_2}{v_2} \pd\]
-        This formula is <i>Snell's Law</i>, a fundamental equation in the study of optics. 
+        This formula is <b>Snell's Law</b>, a fundamental equation in the study of optics. 
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
         Recall that \(\text{time} = \text{distance}/\text{speed}.\)
