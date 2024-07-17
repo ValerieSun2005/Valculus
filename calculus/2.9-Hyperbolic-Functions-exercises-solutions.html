@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.9 Exercise Solutions: Hyperbolic Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>2.9 Exercise Solutions: Hyperbolic Functions</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="2.9-Hyperbolic-Functions.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="2.9-Hyperbolic-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        How do we define the <b>hyperbolic sine</b>
+        and <b>hyperbolic cosine</b> functions?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        These functions are defined by 
+        \[\sinh x = \frac{e^x - e^{-x}}{2} \and \cosh x = \frac{e^x + e^{-x}}{2} \pd\]
+        Hyperbolic sine is an odd combination of exponential functions, 
+        while hyperbolic cosine is an even combination of exponential functions.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[2 \sinh 8 + 4 \cosh 3\]
+    </blockquote> find the expression's exact value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have 
+        \[
+        \ba 
+        2 \sinh 8 &amp;= 2 \par{\frac{e^8 - e^{-8}}{2}} \nl 
+        &amp;= e^8 - e^{-8} \cma \nl 
+        4 \cosh 3 &amp;= 4 \par{\frac{e^3 + e^{-3}}{2}} \nl 
+        &amp;= 2e^3 + 2 e^{-3} \pd
+        \ea 
+        \]
+        Hence, 
+        \[2 \sinh 8 + 4 \cosh 3 = \boxed{e^8 - e^{-8} + 2e^3 + 2e^{-3}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds 5 \tanh 7\]
+    </blockquote> find the expression's exact value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\tanh 7 =\) \((\sinh 7)/(\cosh 7),\)
+        we have 
+        \[
+        \ba 
+        5 \tanh 7 &amp;= 5 \par{\frac{\dfrac{e^7 - e^{-7}}{2}}{\dfrac{e^7 + e^{-7}}{2}}} \nl 
+        &amp;= \boxed{\frac{5e^7 - 5e^{-7}}{e^7 + e^{-7}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \acoth(-8)\]
+    </blockquote> find the expression's exact value. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have
+        \[
+        \ba 
+        \acoth(-8) &amp;= \tfrac{1}{2} \ln \par{\frac{-8 + 1}{-8 - 1}} \nl 
+        &amp;= \boxed{\tfrac{1}{2} \ln \par{\tfrac{7}{9}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\sinh(-x) = -\sinh x\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The definition of the hyperbolic sine function is 
+        \[\sinh x = \frac{e^x - e^{-x}}{2} \pd\]
+        Replacing \(x\) with \(-x\) shows 
+        \[
+        \ba 
+        \sinh (-x) &amp;= \frac{e^{-x} - e^{-(-x)}}{2} \nl 
+        &amp;= \frac{-e^x + e^{-x}}{2} \nl 
+        &amp;= - \frac{e^x - e^{-x}}{2} \nl 
+        &amp;\equalsCheck -\sinh x \pd
+        \ea 
+        \]
+        This analysis proves that hyperbolic sine is odd.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\cosh(-x) = \cosh x\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The definition of the hyperbolic cosine function is 
+        \[\cosh x = \frac{e^x + e^{-x}}{2} \pd\]
+        Replacing \(x\) with \(-x\) shows 
+        \[
+        \ba 
+        \cosh (-x) &amp;= \frac{e^{-x} + e^{-(-x)}}{2} \nl 
+        &amp;= \frac{e^x + e^{-x}}{2} \nl 
+        &amp;\equalsCheck \cosh x \pd
+        \ea 
+        \]
+        This analysis proves that hyperbolic cosine is even.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \tanh(-x) = -\tanh x\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have 
+        \[
+        \ba 
+        \tanh(-x) &amp;= \frac{\sinh(-x)}{\cosh(-x)} \nl 
+        &amp;= \frac{-\sinh x}{\cosh x} \nl
+        &amp;\equalsCheck -\tanh x \pd
+        \ea 
+        \]
+        Thus, hyperbolic tangent is odd.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \sinh(x + y) = \sinh x \cosh y + \cosh x \sinh y\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Starting with the definition of the hyperbolic sine function,
+        we have
+        \[
+        \ba 
+        \sinh(x + y) &amp;= \frac{e^{x + y} - e^{-x - y}}{2} \nl 
+        &amp;= \frac{e^x \, e^y - e^{-x} \, e^{-y}}{2} \pd
+        \ea 
+        \]
+        Observe that 
+        \[
+        \ba
+        \sinh x \cosh y &amp;= \par{\frac{e^x - e^{-x}}{2}} \par{\frac{e^y + e^{-y}}{2}} \nl
+        &amp;= \frac{e^x \, e^y + e^x \, e^{-y} - e^{-x} \, e^y - e^{-x} \, e^{-y}}{4} \cma \nl 
+        \cosh x \sinh y &amp;= \par{\frac{e^x + e^{-x}}{2}} \par{\frac{e^y - e^{-y}}{2}} \nl
+        &amp;= \frac{e^x \, e^y - e^x \, e^{-y} + e^{-x} \, e^y - e^{-x} \, e^{-y}}{4} \pd
+        \ea
+        \]
+        So 
+        \[
+        \ba 
+        \sinh x \cosh y + \cosh x \sinh y 
+        &amp;= \small \frac{e^x \, e^y + e^x \, e^{-y} - e^{-x} \, e^y - e^{-x} \, e^{-y}}{4} + \frac{e^x \, e^y - e^x \, e^{-y} + e^{-x} \, e^y - e^{-x} \, e^{-y}}{4} \nl 
+        &amp;= \frac{e^x \, e^y - e^{-x} \, e^{-y}}{2} \nl 
+        &amp;\equalsCheck \sinh(x + y) \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \cosh(x + y) = \cosh x \cosh y + \sinh x \sinh y\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Starting with the definition of the hyperbolic cosine function,
+        we have
+        \[
+        \ba 
+        \cosh(x + y) &amp;= \frac{e^{x + y} + e^{-x - y}}{2} \nl 
+        &amp;= \frac{e^x \, e^y + e^{-x} \, e^{-y}}{2} \pd
+        \ea 
+        \]
+        Observe that 
+        \[
+        \ba
+        \cosh x \cosh y &amp;= \par{\frac{e^x + e^{-x}}{2}} \par{\frac{e^y + e^{-y}}{2}} \nl
+        &amp;= \frac{e^x \, e^y + e^x \, e^{-y} + e^{-x} \, e^y + e^{-x} \, e^{-y}}{4} \cma \nl 
+        \sinh x \sinh y &amp;= \par{\frac{e^x - e^{-x}}{2}} \par{\frac{e^y - e^{-y}}{2}} \nl
+        &amp;= \frac{e^x \, e^y - e^x \, e^{-y} - e^{-x} \, e^y + e^{-x} \, e^{-y}}{4} \pd
+        \ea
+        \]
+        So 
+        \[
+        \ba 
+        \cosh x \cosh y + \sinh x \sinh y 
+        &amp;= \small \frac{e^x \, e^y + e^x \, e^{-y} + e^{-x} \, e^y + e^{-x} \, e^{-y}}{4} + \frac{e^x \, e^y - e^x \, e^{-y} - e^{-x} \, e^y + e^{-x} \, e^{-y}}{4} \nl 
+        &amp;= \frac{e^x \, e^y + e^{-x} \, e^{-y}}{2} \nl 
+        &amp;\equalsCheck \cosh(x + y) \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \tanh(x + y) = \frac{\tanh x + \tanh y}{1 + \tanh x \tanh y}\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We have 
+        \[
+        \ba 
+        \tanh(x + y) &amp;= \frac{\sinh(x + y)}{\cosh(x + y)} \nl 
+        &amp;= \frac{\sinh x \cosh y + \cosh x \sinh y}{\cosh x \cosh y + \sinh x \sinh y} \pd
+        \ea 
+        \]
+        Dividing the numerator and denominator by \(\cosh x \cosh y,\)
+        we get 
+        \[
+        \ba 
+        \tanh(x + y) 
+        &amp;= \frac{\ds \frac{\sinh x \cosh y}{\cosh x \cosh y} + \frac{\cosh x \sinh y}{\cosh x \cosh y}}{\ds \frac{\cosh x \cosh y}{\cosh x \cosh y} + \frac{\sinh x \sinh y}{\cosh x \cosh y}} \nl 
+        &amp;\equalsCheck \frac{\tanh x + \tanh y}{1 + \tanh x \tanh y} \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \tanh^2 x + \sech^2 x = 1\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\tanh x\) \(= (\sinh x)/(\cosh x)\) and \(\sech x\) \(= 1/(\cosh x),\)
+        \[
+        \baat{2}
+        \tanh x &amp;= \frac{\dfrac{e^x - e^{-x}}{2}}{\dfrac{e^x + e^{-x}}{2}} &amp;&amp;= \frac{e^x - e^{-x}}{e^x + e^{-x}} \cma \nl 
+        \sech x &amp;= \frac{1}{\dfrac{e^x + e^{-x}}{2}} &amp;&amp;= \frac{2}{e^x + e^{-x}} \pd 
+        \eaat
+        \]
+        So 
+        \[
+        \ba 
+        \tanh^2 x + \sech^2 x &amp;= \par{\frac{e^x - e^{-x}}{e^x + e^{-x}}}^2 + \par{\frac{2}{e^x + e^{-x}}}^2 \nl 
+        &amp;= \frac{e^{2x} - 2 + e^{-2x}}{\par{e^x + e^{-x}}^2} + \frac{4}{\par{e^x + e^{-x}}^2} \nl 
+        &amp;= \frac{e^{2x} + 2 + e^{-2x}}{\par{e^x + e^{-x}}^2} \nl 
+        &amp;= \frac{\par{e^x + e^{-x}}^2}{\par{e^x + e^{-x}}^2} \nl 
+        &amp;\equalsCheck 1 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \coth^2 x - \csch^2 x = 1\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\coth x\) \(= (\cosh x)/(\sinh x)\) and \(\csch x\) \(= 1/(\sinh x),\)
+        \[
+        \baat{2}
+        \coth x &amp;= \frac{\dfrac{e^x + e^{-x}}{2}}{\dfrac{e^x - e^{-x}}{2}} &amp;&amp;= \frac{e^x + e^{-x}}{e^x - e^{-x}} \cma \nl 
+        \csch x &amp;= \frac{1}{\dfrac{e^x - e^{-x}}{2}} &amp;&amp;= \frac{2}{e^x - e^{-x}} \pd 
+        \eaat
+        \]
+        So 
+        \[
+        \ba 
+        \coth^2 x - \csch^2 x &amp;= \par{\frac{e^x + e^{-x}}{e^x - e^{-x}}}^2 - \par{\frac{2}{e^x - e^{-x}}}^2 \nl 
+        &amp;= \frac{e^{2x} + 2 + e^{-2x}}{\par{e^x - e^{-x}}^2} - \frac{4}{\par{e^x - e^{-x}}^2} \nl 
+        &amp;= \frac{e^{2x} - 2 + e^{-2x}}{\par{e^x - e^{-x}}^2} \nl 
+        &amp;= \frac{\par{e^x - e^{-x}}^2}{\par{e^x - e^{-x}}^2} \nl 
+        &amp;\equalsCheck 1 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ds \tanh (\ln x) = \frac{x^2 - 1}{x^2 + 1}\)
+    </blockquote> prove the hyperbolic identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that 
+        \[
+        \baat{2}
+        \sinh (\ln x) &amp;= \frac{e^{\ln x} - e^{-\ln x}}{2} 
+        \qquad &amp; \cosh(\ln x) &amp;= \frac{e^{\ln x} + e^{-\ln x}}{2} \nl 
+        &amp;= \frac{x - x^{-1}}{2} &amp; &amp;= \frac{x + x^{-1}}{2} \pd
+        \eaat
+        \]
+        So 
+        \[
+        \ba
+        \tanh (\ln x) &amp;= \frac{\sinh (\ln x)}{\cosh (\ln x)} \nl 
+        &amp;= \frac{\dfrac{x - x^{-1}}{2}}{\dfrac{x + x^{-1}}{2}} \nl 
+        &amp;= \frac{x - x^{-1}}{x + x^{-1}} \pd 
+        \ea 
+        \]
+        Multiplying the numerator and denominator by \(x\) gives, as requested,
+        \[
+        \tanh (\ln x) = \frac{x^2 - 1}{x^2 + 1} \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \acosh x = \ln \par{x + \sqrt{x^2 - 1}}\]
+    </blockquote> prove the identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This procedure is identical to 
+        that in <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-asin-ln" target="_blank">Example 2</a>, 
+        apart from a single negative sign.
+        Let \(y = \acosh x;\)
+        then
+        \[x = \cosh y = \frac{e^y + e^{-y}}{2} \pd\]
+        Our objective is to solve for \(y\) in terms of \(x.\)
+        Multiplying both sides by \(2e^y\) gives 
+        \[
+        \ba 
+        2x e^y &amp;= e^{2y} + 1 \nl 
+        e^{2y} - 2x e^y + 1 &amp;= 0 \pd
+        \ea 
+        \]
+        This equation is a quadratic equation in terms of \(e^y \col\)
+        \[\par{e^y}^2 - 2x \par{e^y} + 1 = 0 \pd\]
+        So by the Quadratic Formula, 
+        \[
+        \ba 
+        e^y &amp;= \frac{2x \pm \sqrt{4x^2 - 4}}{2} \nl 
+        &amp;= x \pm \sqrt{x^2 - 1} \pd
+        \ea 
+        \]
+        Because \(e^y \gt 0,\)
+        the negative solution is extraneous.
+        Hence, the only solution is 
+        \[e^y = x + \sqrt{x^2 - 1} \pd\]
+        Taking the natural logarithm of both sides yields 
+        \[
+        \ba 
+        y &amp;= \ln \par{x + \sqrt{x^2 - 1}} \nl 
+        \implies \acosh x &amp;= \ln \par{x + \sqrt{x^2 - 1}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \asech x = \ln \par{\frac{1 + \sqrt{1 - x^2}}{x}}\]
+    </blockquote> prove the identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This procedure is similar to 
+        that in <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-asin-ln" target="_blank">Example 2</a>. 
+        Let \(y = \asech x;\)
+        then
+        \[
+        \ba
+        x &amp;= \sech y \nl 
+        &amp;= \frac{1}{\cosh y} \nl 
+        &amp;= \frac{2}{e^y + e^{-y}} \pd
+        \ea 
+        \]
+        Our objective is to solve for \(y\) in terms of \(x.\)
+        Multiplying both sides by \(e^y + e^{-y}\) yields 
+        \[
+        x e^y + x e^{-y} = 2 \pd
+        \]
+        Then multiplying both sides by \(e^y,\)
+        we get 
+        \[
+        \ba
+        x e^{2y} + x &amp;= 2 e^y \nl 
+        x e^{2y} - 2e^y + x &amp;= 0 \pd
+        \ea
+        \]
+        By the Quadratic Formula, 
+        \[
+        \ba 
+        e^y &amp;= \frac{2 \pm \sqrt{4 - 4x^2}}{2x} \nl 
+        &amp;= \frac{1 \pm \sqrt{1 - x^2}}{x} \pd
+        \ea 
+        \]
+        Because \(e^y \gt 0,\)
+        the negative solution is extraneous.
+        Since \(x = \sech y\) \(\gt 0,\) the only solution is 
+        \[e^y = \frac{1 + \sqrt{1 - x^2}}{x} \pd\]
+        Taking the natural logarithm of both sides, we get 
+        \[
+        \ba 
+        y &amp;= \ln \par{\frac{1 + \sqrt{1 - x^2}}{x}} \nl 
+        \implies \asech x &amp;= \ln \par{\frac{1 + \sqrt{1 - x^2}}{x}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \acsch x = \ln \par{\frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x}}\]
+    </blockquote> prove the identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This procedure is nearly identical to the proof of the identity with \(\asech x.\)
+        Let \(y = \acsch x;\)
+        then
+        \[
+        \ba
+        x &amp;= \csch y \nl 
+        &amp;= \frac{1}{\sinh y} \nl 
+        &amp;= \frac{2}{e^y - e^{-y}} \pd
+        \ea 
+        \]
+        Our objective is to solve for \(y\) in terms of \(x.\)
+        Multiplying both sides by \(e^y - e^{-y}\) yields 
+        \[
+        x e^y - x e^{-y} = 2 \pd
+        \]
+        Then multiplying both sides by \(e^y,\)
+        we get 
+        \[
+        \ba
+        x e^{2y} - x &amp;= 2 e^y \nl 
+        x e^{2y} - 2e^y - x &amp;= 0 \pd
+        \ea
+        \]
+        By the Quadratic Formula, 
+        \[
+        \ba 
+        e^y &amp;= \frac{2 \pm \sqrt{4 + 4x^2}}{2x} \nl 
+        &amp;= \frac{1 \pm \sqrt{1 + x^2}}{x} \pd
+        \ea 
+        \]
+        Note that \(e^y \gt 0,\)
+        so when \(x = 0\)
+        the solution is
+        \[e^y = \frac{1}{x} + \frac{\sqrt{1 + x^2}}{x} \pd\]
+        When \(x \lt 0,\)
+        we have 
+        \[e^y = \frac{1}{x} - \frac{\sqrt{1 + x^2}}{x} \pd\]
+        Since \(\abs x\) \(= -x\) if \(x \lt 0,\) we write 
+        \[e^y = \frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x} \cma\]
+        which is always positive.
+        Taking the natural logarithm of both sides, we get 
+        \[
+        \ba 
+        y &amp;= \ln \par{\frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x}} \nl 
+        \implies \acsch x &amp;= \ln \par{\frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \atanh x = \tfrac{1}{2} \ln \par{\frac{1 + x}{1 - x}}\]
+    </blockquote> prove the identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This procedure is similar to 
+        that in <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-asin-ln" target="_blank">Example 2</a>. 
+        Let \(y = \atanh x;\)
+        then
+        \[
+        \ba
+        x &amp;= \tanh y \nl 
+        &amp;= \frac{\sinh y}{\cosh y} \nl 
+        &amp;= \frac{\dfrac{e^y - e^{-y}}{2}}{\dfrac{e^y + e^{-y}}{2}} \nl 
+        &amp;= \frac{e^y - e^{-y}}{e^y + e^{-y}} \pd
+        \ea 
+        \]
+        Our objective is to solve for \(y\) in terms of \(x.\)
+        Multiplying both sides by \(e^y + e^{-y}\) yields 
+        \[
+        x e^y + x e^{-y} = e^y - e^{-y} \pd
+        \]
+        Then multiplying both sides by \(e^y,\)
+        we get 
+        \[
+        \ba
+        x e^{2y} + x &amp;= e^{2y} - 1 \nl 
+        e^{2y} (1 - x) &amp;= 1 + x \nl 
+        e^{2y} &amp;= \frac{1 + x}{1 - x} \pd
+        \ea
+        \]
+        Taking the natural logarithm of both sides, we get 
+        \[
+        \ba 
+        2y &amp;= \ln \par{\frac{1 + x}{1 - x}} \nl 
+        y &amp;= \tfrac{1}{2} \ln \par{\frac{1 + x}{1 - x}} \nl  
+        \implies \atanh x &amp;= \tfrac{1}{2} \ln \par{\frac{1 + x}{1 - x}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \acoth x = \tfrac{1}{2} \ln \par{\frac{x + 1}{x - 1}}\]
+    </blockquote> prove the identity. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This procedure is nearly identical to the proof for the identity for \(\atanh x.\)
+        Let \(y = \acoth x;\)
+        then
+        \[
+        \ba
+        x &amp;= \coth y \nl 
+        &amp;= \frac{\cosh y}{\sinh y} \nl 
+        &amp;= \frac{\dfrac{e^y + e^{-y}}{2}}{\dfrac{e^y - e^{-y}}{2}} \nl 
+        &amp;= \frac{e^y + e^{-y}}{e^y - e^{-y}} \pd
+        \ea 
+        \]
+        Our objective is to solve for \(y\) in terms of \(x.\)
+        Multiplying both sides by \(e^y - e^{-y}\) yields 
+        \[
+        x e^y - x e^{-y} = e^y + e^{-y} \pd
+        \]
+        Then multiplying both sides by \(e^y,\)
+        we get 
+        \[
+        \ba
+        x e^{2y} - x &amp;= e^{2y} + 1 \nl 
+        e^{2y} (x - 1) &amp;= x + 1 \nl 
+        e^{2y} &amp;= \frac{x + 1}{x - 1} \pd
+        \ea
+        \]
+        Taking the natural logarithm of both sides, we get 
+        \[
+        \ba 
+        2y &amp;= \ln \par{\frac{x + 1}{x - 1}} \nl 
+        y &amp;= \tfrac{1}{2} \ln \par{\frac{x + 1}{x - 1}} \nl  
+        \implies \acoth x &amp;= \tfrac{1}{2} \ln \par{\frac{x + 1}{x - 1}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\cosh x} = \sinh x\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Working with exponential functions, we see
+        \[
+        \ba 
+        \deriv{}{x} \par{\cosh x} &amp;= \deriv{}{x} \par{\frac{e^x + e^{-x}}{2}} \nl 
+        &amp;= \frac{e^x - e^{-x}}{2} \nl 
+        &amp;= \sinh x \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\sech x} = - \sech x \tanh x\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\sech x\) \(= 1/(\cosh x),\)
+        we have
+        \[
+        \ba 
+        \deriv{}{x} \par{\sech x} &amp;= \deriv{}{x} \par{\frac{1}{\cosh x}} \nl 
+        &amp;= \frac{(0) \cosh x - 1 (\sinh x)}{\cosh^2 x} \nl 
+        &amp;= -\frac{\sinh x}{\cosh^2 x} \nl 
+        &amp;= -\sech x \tanh x \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\csch x} = - \csch x \coth x\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\csch x\) \(= 1/(\sinh x),\)
+        we have
+        \[
+        \ba 
+        \deriv{}{x} \par{\csch x} &amp;= \deriv{}{x} \par{\frac{1}{\sinh x}} \nl 
+        &amp;= \frac{(0) \sinh x - 1 (\cosh x)}{\sinh^2 x} \nl 
+        &amp;= -\frac{\cosh x}{\sinh^2 x} \nl 
+        &amp;= -\csch x \coth x \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\tanh x} = \sechPower{2} x\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\tanh x\) \(= (\sinh x)/(\cosh x),\)
+        we have
+        \[
+        \ba 
+        \deriv{}{x} \par{\tanh x} &amp;= \deriv{}{x} \par{\frac{\sinh x}{\cosh x}} \nl 
+        &amp;= \frac{(\cosh x) \cosh x - \sinh x (\sinh x)}{\cosh^2 x} \nl 
+        &amp;= \frac{\cosh^2 x - \sinh^2 x}{\cosh^2 x} \nl 
+        &amp;= \frac{1}{\cosh^2 x} \nl 
+        &amp;= \sechPower{2} x \cma
+        \ea 
+        \]
+        as requested.
+        (Note that \(\cosh^2 x - \sinh^2 x\) \(= 1\)
+        by the result of 
+        <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-cosh-sinh-1" target="_blank">Example 1</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\coth x} = -\cschPower{2} x\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(\coth x\) \(= (\cosh x)/(\sinh x),\)
+        we have
+        \[
+        \ba 
+        \deriv{}{x} \par{\coth x} &amp;= \deriv{}{x} \par{\frac{\cosh x}{\sinh x}} \nl 
+        &amp;= \frac{(\sinh x) \sinh x - \cosh x (\cosh x)}{\sinh^2 x} \nl 
+        &amp;= \frac{- \par{\cosh^2 x - \sinh^2 x}}{\sinh^2 x} \nl 
+        &amp;= \frac{-1}{\sinh^2 x} \nl 
+        &amp;= -\cschPower{2} x \cma
+        \ea 
+        \]
+        as requested.
+        (Note that \(\cosh^2 x - \sinh^2 x\) \(= 1\)
+        by the result of 
+        <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-cosh-sinh-1" target="_blank">Example 1</a>.)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\acosh x} = \frac{1}{\sqrt{x^2 - 1}}\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Letting \(y = \acosh x,\)
+        we have \(x = \cosh y.\)
+        Differentiating both sides with respect to \(x\)
+        gives 
+        \[
+        \ba
+        1 &amp;= \sinh y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= \frac{1}{\sinh y} \pd
+        \ea
+        \]
+        Since \(\cosh^2 y - \sinh^2 y = 1,\)
+        we have 
+        \[\sinh^2 y = \cosh^2 y - 1 = x^2 - 1 \pd \]
+        Then \(\sinh y\) \(= \pm \sqrt{x^2 - 1}.\)
+        Since \(y = \acosh x \geq 0,\) \(\sinh y \geq 0\) and so we use the positive square root. 
+        Hence, 
+        \[\deriv{y}{x} = \boxed{\frac{1}{\sqrt{x^2 - 1}}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\atanh x} = \frac{1}{1 - x^2}\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-25"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Letting \(y = \atanh x,\)
+        we have \(x = \tanh y.\)
+        Differentiating both sides with respect to \(x\)
+        gives 
+        \[
+        \ba
+        1 &amp;= \sechPower{2} y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= \frac{1}{\sechPower{2} y} \pd
+        \ea
+        \]
+        Since \(\tanh^2 y + \sechPower{2} y = 1,\)
+        it follows that \(\sechPower{2} y = 1 - \tanh^2 y\) \(= 1 - x^2.\)
+        So 
+        \[\deriv{y}{x} = \boxed{\frac{1}{1 - x^2}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\acoth x} = \frac{1}{1 - x^2}\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-26"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Letting \(y = \acoth x,\)
+        we have \(x = \coth y.\)
+        Differentiating both sides with respect to \(x\)
+        gives 
+        \[
+        \ba
+        1 &amp;= -\cschPower{2} y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= -\frac{1}{\cschPower{2} y} \pd
+        \ea
+        \]
+        Since \(\coth^2 y - \cschPower{2} y = 1,\)
+        it follows that \(\cschPower{2} y = \coth^2 y - 1\) \(= x^2 - 1.\)
+        So 
+        \[\deriv{y}{x} = -\frac{1}{x^2 - 1} = \boxed{\frac{1}{1 - x^2}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\asech x} = -\frac{1}{x \sqrt{1 - x^2}}\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-27"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Letting \(y = \asech x,\)
+        we have \(x = \sech y.\)
+        Differentiating both sides with respect to \(x\)
+        gives 
+        \[
+        \ba
+        1 &amp;= -\sech y \tanh y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= -\frac{1}{\sech y \tanh y} \pd
+        \ea
+        \]
+        Since \(\tanh^2 y + \sechPower{2} y = 1,\)
+        it follows that \(\tanh^2 y = 1 - \sechPower{2} y\) \(= 1 - x^2.\)
+        Note that \(y = \asech x \geq 0,\)
+        so \(\tanh y \geq 0.\)
+        Thus, we choose the positive square root—namely, 
+        \(\tanh y = \sqrt{1 - x^2}.\)
+        So 
+        \[\deriv{y}{x} = \boxed{-\frac{1}{x \sqrt{1 - x^2}}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\acsch x} = -\frac{1}{\abs x \sqrt{1 + x^2}}\]
+    </blockquote> prove the derivative formula. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-28"> 
+            <span class="solution-text">SOLUTION</span> 
+               
+        Letting \(y = \acsch x,\)
+        we have \(x = \csch y.\)
+        Differentiating both sides with respect to \(x\)
+        gives 
+        \[
+        \ba
+        1 &amp;= -\csch y \coth y \deriv{y}{x} \nl 
+        \implies \deriv{y}{x} &amp;= -\frac{1}{\csch y \coth y} \pd
+        \ea
+        \]
+        Since \(\coth^2 y - \cschPower{2} y = 1,\)
+        it follows that \(\coth^2 y = 1 + \cschPower{2} y\) \(= 1 + x^2.\)
+        If \(x \gt 0,\) 
+        then \(y = \acsch x \gt 0\)
+        and so \(\coth y \gt 0.\)
+        But if \(x \lt 0,\)
+        then \(y = \acsch x \lt 0\)
+        and so \(\coth y \lt 0.\)
+        Thus, the denominator \(\csch y \coth y\) is <i>always positive</i>,
+        so we write
+        \[\deriv{y}{x} = \boxed{-\frac{1}{\abs x \sqrt{1 + x^2}}}\] 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        At what point on the curve \(y = \cosh x\)
+        is the tangent line parallel to the line that passes through the points 
+        \(\par{8, e^{-4}}\) and \(\par{10, e^4} \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The slope of the line that passes through \(\par{8, e^{-4}}\) and \(\par{10, e^4}\) 
+        is 
+        \[\frac{e^4 - e^{-4}}{10 - 8} = \sinh 4 \pd\]
+        Since \(\textderiv{}{x} (\cosh x)\) \(= \sinh x,\)
+        the line is parallel to the tangent line at \(\boxed{x = 4}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the graph of \(y = \sech x\) has a horizontal asymptote of \(y = 0.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the definition of hyperbolic secant,
+        \[
+        \sech x = \frac{1}{\cosh x} = \frac{2}{e^x + e^{-x}} \pd
+        \]
+        As \(x \to \infty,\) \(e^x \to \infty\) and \(e^{-x} \to 0.\)
+        Hence, \(\lim_{x \to \infty} \sech x = 0.\)
+        Conversely, 
+        as \(x \to -\infty,\) \(e^x \to 0\) and \(e^{-x} \to \infty.\)
+        So \(\lim_{x \to -\infty} \sech x = 0.\)
+        Thus, the graph of \(y = \sech x\) has a horizontal asymptote at \(y = 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the graph of \(y = \tanh x\) has horizontal asymptotes of \(y = -1\)
+        and \(y = 1.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that 
+        \[
+        \ba 
+        \tanh x &amp;= \frac{\sinh x}{\cosh x} \nl 
+        &amp;= \frac{\dfrac{e^x - e^{-x}}{2}}{\dfrac{e^x + e^{-x}}{2}} \nl 
+        &amp;= \frac{e^x - e^{-x}}{e^x + e^{-x}} \nl 
+        &amp;= \frac{e^x + e^{-x} - 2 e^{-x}}{e^x + e^{-x}} \nl 
+        &amp;= 1 - \frac{2 e^{-x}}{e^x + e^{-x}} \pd
+        \ea 
+        \] 
+        Multiplying the numerator and denominator by \(e^x\) gives 
+        \[
+        \tanh x = 1 - \frac{2}{e^{2x} + 1} \pd
+        \]
+        Note that \(2/(e^{2x} + 1) \to 0\) as \(x \to \infty\)
+        and \(2/(e^{2x} + 1) \to 2\) as \(x \to -\infty.\)
+        Thus, we have 
+        \[
+        \lim_{x \to -\infty} \tanh x = -1 \and \lim_{x \to \infty} \tanh x = 1 \pd
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For nonzero \(A\) and \(B,\)
+        show that the line \(y = A + Bx\) is tangent to \(y = A + \sinh Bx\) 
+        at \(x = 0.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The word <i>tangent</i> means \(y = A + Bx\)
+        and \(y = A + \sinh Bx\)
+        intersect each other with the same slope. 
+        Both graphs intersect at \(x = 0 \col\)  
+        \[
+        A + 0 \equalsCheck A + \sinh 0 \pd 
+        \]
+        Also, 
+        \[\deriv{}{x} (A + Bx) = B \and \deriv{}{x} (A + \sinh Bx) = B \cosh Bx \pd\]
+        At \(x = 0,\) the derivatives are equal:
+        \[B \equalsCheck B \cosh 0 \pd\]
+        Thus, the line \(y = A + Bx\) 
+        is tangent to \(y = A + \sinh Bx\) at \(x = 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        At what point does the tangent to \(y = \cosh x\) have slope \(1 \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\textderiv{y}{x} = \sinh x,\)
+        we have 
+        \[
+        \ba 
+        \frac{e^x - e^{-x}}{2} &amp;= 1 \nl 
+        e^x - e^{-x} &amp;= 2 \nl 
+        e^{2x} - 1 &amp;= 2 e^x \nl 
+        e^{2x} - 2 e^x - 1 &amp;= 0 \pd
+        \ea     
+        \]
+        By the Quadratic Formula, 
+        \[
+        \ba 
+        e^x &amp;= \frac{2 \pm \sqrt 8}{2} \nl 
+        &amp;= 1 + \sqrt 2 \pd
+        \ea 
+        \]
+        We scrap the negative solution because \(e^x \gt 0.\)
+        Taking the natural logarithm of both sides yields 
+        \[x = \boxed{\ln \par{1 + \sqrt 2}} \approx 0.881 \pd\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Prove that the tangent to \(y = \sinh x\) never has the same slope as the tangent to \(y = \csch x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that 
+        \[\deriv{}{x} (\sinh x) = \cosh x \and \deriv{}{x} (\csch x) = -\csch x \coth x \pd\]
+        Let's assume that there <i>is</i> a point at which the tangent to \(y = \sinh x\) has the same slope as the tangent to \(y = \csch x.\)
+        Equating the derivative functions, we see 
+        \[
+        \ba 
+        \cosh x &amp;= -\csch x \coth x \nl 
+        \cosh x &amp;= -\frac{\cosh x}{\sinh^2 x} \pd 
+        \ea 
+        \]
+        This equation could be solved by \(\cosh x = 0,\)
+        but \(\cosh x \geq 1.\)
+        Multiplying both sides by \(\sinh^2 x\) gives 
+        \[
+        \ba
+        \cosh x \sinh^2 x &amp;= -\cosh x \nl
+        \sinh^2 x &amp;= -1 \pd
+        \ea
+        \]
+        Since this equation has no solutions, we have a contradiction—there is 
+        <i>no</i> point at which the tangents have the same slope.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 0^-} \csch 4x\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\csch 4x =\) \(1/(\sinh 4x),\)
+        it follows that 
+        \[\csch 4x = \frac{2}{e^{4x} - e^{-4x}} = \frac{2 e^{4x}}{e^{8x} - 1} \cma\]
+        where the last step is true by multiplying the numerator and denominator by \(e^{4x}.\)
+        Note that \(\csch 4x\) is undefined at \(x = 0;\)
+        in fact, \(x = 0\) is the location of a vertical asymptote.
+        Let's analyze the behavior from the left of the asymptote:
+        For \(x \lt 0,\)
+        observe that \(2 e^{4x} \gt 0\) and \(e^{8x} - 1 \lt 0\)
+        (since <nobr>\(e^{8x} \lt 1\)).</nobr>
+        For \(x \lt 0,\) the sign of \(\csch 4x\) is therefore \((+)/(-)\) \(= (-).\)
+        Hence, 
+        \[\lim_{x \to 0^-} \csch 4x = \boxed{-\infty}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to \infty} \par{\frac{1 + 5 \, \sech x}{3 \tanh x}}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As \(x \to \infty,\) \(\sech x \to 0\) and \(\tanh x \to 1.\)
+        By Limit Laws
+        (see Section <a href="/Valculus/calculus/1.2-Evaluating-Limits-Analytically.html">1.2</a>), 
+        \[
+        \ba 
+        \lim_{x \to \infty} \par{\frac{1 + 5 \, \sech x}{3 \tanh x}} 
+        &amp;= \frac{\ds \lim_{x \to \infty} \par{1 + 5 \, \sech x}}{\ds \lim_{x \to \infty} 3 \tanh x} \nl 
+        &amp;= \frac{\ds 1 + 5 \lim_{x \to \infty} \sech x}{\ds 3 \lim_{x \to \infty} \tanh x} \nl 
+        &amp;= \frac{1 + 5(0)}{3(1)} = \boxed{\frac{1}{3}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to \infty} \frac{\sinh x}{e^x}\]
+    </blockquote> evaluate the limit. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(\sinh x \to \infty\) and \(e^x \to \infty\)
+        as \(x \to \infty.\)
+        Thus, this limit is in the indeterminate form \(\indInfty.\)
+        Let's try to cancel a common factor:
+        By the definition of the hyperbolic sine function, 
+        \[\frac{\sinh x}{e^x} = \frac{\dfrac{e^x - e^{-x}}{2}}{e^x} = \frac{1 - e^{-2x}}{2} \pd\]
+        So the limit is 
+        \[\lim_{x \to \infty} \frac{1 - e^{-2x}}{2} = \frac{1 - 0}{2} = \boxed{\frac{1}{2}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \, \asech (x^2)\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \, \asech \par{x^2} 
+        &amp;= -\frac{1}{\par{x^2} \sqrt{1 - \par{x^2}^2}} \deriv{}{x} \par{x^2} \nl 
+        &amp;= -\frac{2x}{x^2 \sqrt{1 - x^4}} \nl 
+        &amp;= \boxed{-\frac{2}{x \sqrt{1 - x^4}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{u} \par{e^u \sinh u}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-39"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that 
+        \[e^u \sinh u = e^u \par{\frac{e^u - e^{-u}}{2}} = \frac{e^{2u} - 1}{2} \pd\]
+        So the derivative is 
+        \[
+        \ba
+        \deriv{}{u} \par{\frac{e^{2u} - 1}{2}} 
+        &amp;= \deriv{}{u} \par{\frac{e^{2u}}{2} - \frac{1}{2}} \nl
+        &amp;= \boxed{e^{2u}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \sqrt{\cosh x}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \sqrt{\cosh x} &amp;= \frac{1}{2 \sqrt{\cosh x}} \deriv{}{x} (\cosh x) \nl 
+        &amp;= \boxed{\frac{\sinh x}{2 \sqrt{\cosh x}}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{e^{\tanh x}}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{\tanh x}} 
+        &amp;= e^{\tanh x} \deriv{}{x} (\tanh x) \nl 
+        &amp;= \boxed{e^{\tanh x} \, \sechPower{2} x}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{x \, \acoth x}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-42"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Product Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \par{x \, \acoth x} 
+        &amp;= (1) \, \acoth x + x \par{\frac{1}{1 - x^2}} \nl 
+        &amp;= \boxed{\acoth x + \frac{x}{1 - x^2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \, \atanh (\sin x)\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-43"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \, \atanh (\sin x) 
+        &amp;= \frac{1}{1 - \sin^2 x} \deriv{}{x} (\sin x) \nl 
+        &amp;= \frac{\cos x}{\cos^2 x} = \boxed{\sec x}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \, \asin (\tanh x)\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-44"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \, \asin (\tanh x) 
+        &amp;= \frac{1}{\sqrt{1 - \tanh^2 x}} \deriv{}{x} (\tanh x) \nl 
+        &amp;= \frac{1}{\sqrt{\sech^2 x}} \, \sechPower{2} x \nl 
+        &amp;= \frac{1}{\abs{\sech x}} \, \sechPower{2} x \nl 
+        &amp;= \frac{1}{\sech x} \, \sechPower{2} x \nl 
+        &amp;= \boxed{\sech x}
+        \ea 
+        \]
+        Note that \(\abs{\sech x}\) \(= \sech x\)
+        because \(\sech x \gt 0.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \deriv{}{x} \par{\frac{x^3}{\asinh x}}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By the Quotient Rule, 
+        \[
+        \ba 
+        \deriv{}{x} \par{\frac{x^3}{\asinh x}} 
+        &amp;= \frac{\ds \par{3x^2} \, \asinh x - x^3 \par{\frac{1}{\sqrt{1 + x^2}}}}{\par{\asinh x}^2} \nl 
+        &amp;= \boxed{\ds \frac{3x^2 \, \asinh x - \dfrac{x^3}{\sqrt{1 + x^2}}}{\par{\asinh x}^2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \derivOrder{}{t}{2} \par{\acsch t}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-46"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The first derivative is 
+        \[\deriv{}{t} \par{\acsch t} = -\frac{1}{\abs t \sqrt{1 + t^2}} \pd\]
+        To differentiate \(\abs t,\) we note that \(\sqrt{t^2} = \abs t\) and so 
+        \[\deriv{}{t} \abs t = \deriv{}{t} \par{\sqrt{t^2} \,} = \frac{t}{\sqrt{t^2}} = \frac{t}{\abs t} \pd\]
+        Thus, 
+        \[
+        \ba 
+        \derivOrder{}{t}{2} \par{\acsch t} 
+        &amp;= \deriv{}{t} \par{-\frac{1}{\abs t \sqrt{1 + t^2}}} \nl 
+        &amp;= \frac{\ds \par{\frac{t}{\abs t}} \sqrt{1 + t^2} + \abs t \par{\frac{t}{\sqrt{1 + t^2}}}}{\abs t^2 (1 + t^2)} \nl 
+        &amp;= \boxed{\frac{\ds \frac{t}{\abs t} \sqrt{1 + t^2} + \frac{t \abs t}{\sqrt{1 + t^2}}}{t^4 + t^2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \derivOrder{}{t}{2} \par{\sechPower{4} t}\]
+    </blockquote> find the derivative. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-47"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The first derivative is, by the Chain Rule, 
+        \[
+        \ba 
+        \deriv{}{t} \par{\sechPower{4} t} 
+        &amp;= 4 \, \sechPower{3} t \deriv{}{t} \par{\sech t} \nl 
+        &amp;= -4 \, \sechPower{4} t \tanh t \pd
+        \ea 
+        \]
+        The second derivative is, by the Product Rule, 
+        \[
+        \ba 
+        \derivOrder{}{t}{2} \par{\sechPower{4} t} &amp;= \deriv{}{t} \par{-4 \, \sechPower{4} t \tanh t} \nl 
+        &amp;= \par{-16 \, \sechPower{3} t \tanh t} (-\sech t \tanh t) - 4 \, \sechPower{4} t \par{\sechPower{2} t} \nl 
+        &amp;= \boxed{16 \, \sechPower{4} t \tanh^2 t - 4 \, \sechPower{6} t}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(\tanh x = 12/13,\) 
+        then calculate the other five hyperbolic functions.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(\tanh^2 x + \sechPower{2} x = 1,\)
+        we see 
+        \[
+        \ba 
+        \sechPower{2} x &amp;= 1 - \par{\tfrac{12}{13}}^2 = \tfrac{25}{169} \nl 
+        \implies \sech x &amp;= \tfrac{5}{13} \pd
+        \ea 
+        \]
+        We choose the positive solution because the range of \(\sech x\) is \((0, 1].\)
+        Then 
+        \[\cosh x = \frac{1}{\sech x} = \tfrac{13}{5} \pd\]
+        Because \(\cosh^2 x - \sinh^2 x = 1,\) it follows that 
+        \[
+        \ba 
+        \sinh^2 x &amp;= \par{\tfrac{13}{5}}^2 - 1 = \tfrac{144}{25} \nl 
+        \implies \sinh x &amp;= \tfrac{12}{5} \pd
+        \ea 
+        \]
+        We choose the positive solution because then \(\tanh x\) \(= (\sinh x)/(\cosh x)\) is positive.
+        Then 
+        \[
+        \baat{2}
+        \csch x &amp;= \frac{1}{\sinh x} &amp;&amp;= \tfrac{5}{12} \cma \nl 
+        \coth x &amp;= \frac{1}{\tanh x} &amp;&amp;= \tfrac{13}{12} \pd
+        \eaat
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        It is often easiest to simplify a function 
+        before proceeding to differentiation. 
+        <ol class="list-alpha">
+<li>
+                Prove that 
+                \[\frac{1 + \tanh x}{1 - \tanh x} = e^{2x} \pd\]
+            </li>
+<li>
+                Let \(k\) be a positive constant.
+                Using the result in part (a), 
+                show that 
+                \[\deriv{}{x} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k = 2 k x e^{2kx} \pd\]
+            </li>
+<li>
+                By differentiating the result in part (b), show that
+                \[\derivOrder{}{x}{2} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k = 4k^2 e^{2kx} \pd\]
+            </li>
+<li>
+                If \(n\) is any positive integer, 
+                then derive an expression for 
+                \[\derivOrder{}{x}{n} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k \pd \]
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-49"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Since \(\tanh x\) \(= (\sinh x)/(\cosh x),\)
+                \[\tanh x = \frac{\dfrac{e^x - e^{-x}}{2}}{\dfrac{e^x + e^{-x}}{2}} = \frac{e^x - e^{-x}}{e^x + e^{-x}} \pd\]
+                So 
+                \[
+                \ba 
+                \frac{1 + \tanh x}{1 - \tanh x} 
+                &amp;= \frac{1 + \dfrac{e^x - e^{-x}}{e^x + e^{-x}}}{1 - \dfrac{e^x - e^{-x}}{e^x + e^{-x}}} \nl 
+                &amp;= \frac{e^x + e^{-x} + e^x - e^{-x}}{e^x + e^{-x} - e^x + e^{-x}} \nl 
+                &amp;= \frac{2 e^x}{2 e^{-x}} \nl 
+                &amp;= e^{2x} \cma
+                \ea 
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                Note that 
+                \[\par{\frac{1 + \tanh x}{1 - \tanh x}}^k = \par{e^{2x}}^k = e^{2kx} \pd\]
+                So
+                \[
+                \ba
+                \deriv{}{x} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k
+                &amp;= \deriv{}{x} \par{e^{2kx}} \nl 
+                &amp;= 2k e^{2kx} \cma
+                \ea
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                We have 
+                \[
+                \ba 
+                \derivOrder{}{x}{2} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k 
+                &amp;= \deriv{}{x} \par{2k e^{2kx}} \nl 
+                &amp;= 4k^2 e^{2kx} \cma
+                \ea 
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                Observe that 
+                \[
+                \baat{2}
+                \derivOrder{}{x}{3} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k 
+                &amp;= \deriv{}{x} \par{4k^2 e^{2kx}} &amp;&amp;= 8k^3 e^{2kx} \cma \nl 
+                \derivOrder{}{x}{4} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k 
+                &amp;= \deriv{}{x} \par{8k^3 e^{2kx}} &amp;&amp;= 16 k^4 e^{2kx} \cma \nl 
+                &amp;\vdotss
+                \eaat
+                \]
+                So for any positive integer \(n,\)
+                \[\derivOrder{}{x}{n} \par{\frac{1 + \tanh x}{1 - \tanh x}}^k = \boxed{(2k)^n e^{2kx}}\]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        An instructor wishes to inflate (<q>curve</q>) students' grades 
+        using the function \(f(x) = \asinh kx,\)
+        where \(x\) is the student's raw score and \(y\) is the student's adjusted score.
+        If a raw score of \(90\%\) maps to an adjusted score of \(100\%,\)
+        then what adjusted score is earned by a student whose raw score is \(80\% \ques\)
+        [<i>Hint</i>: Calculate \(k\) to satisfy the condition <nobr>\(f(0.9) = 1.\)]</nobr>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-50"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Since \(f(0.9) = 1,\) 
+        we have 
+        \[
+        \ba 
+        \asinh 0.9 k &amp;= 1 \nl 
+        0.9k &amp;= \sinh 1 \nl 
+        0.9k &amp;= \frac{e - e^{-1}}{2} \nl 
+        \implies k &amp;= \frac{e - e^{-1}}{1.8} \pd
+        \ea 
+        \]
+        Hence, the identity of \(f\) is 
+        \[f(x) = \asinh \par{\frac{e - e^{-1}}{1.8} x} \pd\]
+        A student who scores \(80\%\) earns an adjusted score of 
+        \[
+        \ba
+        f(0.8) &amp;= \asinh \par{\frac{e - e^{-1}}{1.8} \cdot 0.8} \nl 
+        &amp;\approx 0.9126 = \boxed{91.26\%}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Waves in an ocean have a length of \(2\) meters and a depth of \(5\) meters
+        (<a href="#hyperbolic-functions-ocean-wave-ex">Figure 8</a>). 
+        Calculate the speed of the waves.
+        (The acceleration due to gravity is \(g = 9.8\) meters per second squared.)
+        <figure class="hyperbolic-functions-ocean-wave-ex figure-center-one" id="hyperbolic-functions-ocean-wave-ex">
+<img alt="Figure 8" src="../images/sectionImages/hyperbolic-functions-ocean-wave-ex.jpg"/>
+</figure>
+<style>
+            .hyperbolic-functions-ocean-wave-ex::before{
+                content:'FIGURE 8';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-51"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        With \(d = 5\) and \(L = 2,\) the speed is
+        \[
+        \ba 
+        v &amp;= \sqrt{\frac{(9.8)(2)}{2 \pi} \, \tanh \par{\frac{2 \pi (5)}{2}}} \nl 
+        &amp;= \sqrt{\frac{9.8}{\pi} \, \tanh 5 \pi} \nl 
+        &amp;= \sqrt{\frac{9.8}{\pi} \frac{e^{5 \pi} - e^{-5 \pi}}{e^{5 \pi} + e^{-5 \pi}}} \nl 
+        &amp;\approx \boxed{1.766 \undiv{m}{sec}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The speed of an ocean wave of length \(L\) and depth \(d\)
+        is given by 
+        \[v = \sqrt{\frac{gL}{2 \pi} \, \tanh \par{\frac{2 \pi d}{L}}} \pd\]
+        Calculate and interpret \(\lim_{d \to \infty} v.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-52"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The graph of hyperbolic tangent has horizontal asymptotes of \(y = \pm 1.\)
+        Thus, \(\tanh (2 \pi d/L) \to 1\) as \(d \to \infty.\)
+        So 
+        \[
+        \ba 
+        \lim_{d \to \infty} v &amp;= \sqrt{\frac{gL}{2 \pi} (1)} \nl 
+        &amp;= \boxed{\sqrt{\frac{gL}{2 \pi}}}
+        \ea 
+        \]
+        Hence, the speed of a wave in deep water can be approximated by \(\sqrt{gL/2 \pi};\)
+        in this form, we only need the wavelength!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-53"> 
+  <div class="box-solution__head">     EXERCISE 53 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The velocity of a falling object of mass \(m\) as a function of time \(t\)
+        can be modeled by 
+        \[v(t) = \sqrt{\frac{mg}{k}} \tanh \par{t \sqrt{\frac{g k}{m}}} \cma\]
+        where \(k\) is a constant and \(g\) is the acceleration due to gravity, 
+        \(9.8\) meters per second squared. 
+        If \(k = 0.2\) and \(m = 60\) kilograms, then calculate the terminal velocity—that is, 
+        \(\lim_{t \to \infty} v(t).\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-53"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(\tanh( t \sqrt{gk/m}) \to 1\) as \(t \to \infty.\)
+        So 
+        \[
+        \ba
+        \lim_{t \to \infty} v(t) &amp;= \sqrt{\frac{mg}{k}} \nl 
+        &amp;= \sqrt{\frac{(60)(9.8)}{0.2}} \nl
+        &amp;\approx \boxed{54.222 \undiv{m}{sec}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-54"> 
+  <div class="box-solution__head">     EXERCISE 54 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+<figure class="gateway-arch" id="gateway-arch">
+<img alt="Figure 9" src="../images/sectionImages/gateway-arch.jpg"/>
+</figure>
+<style>
+            .gateway-arch::before{
+                content:'FIGURE 9';
+            }
+        </style>
+        The central curve of the Gateway Arch in St. Louis, Missouri (<a href="#gateway-arch">Figure 9</a>), was designed by 
+        the equation 
+        \[y = 211.49 - 20.96 \cosh 0.03291765x \cmaa \abs x \leq 91.20 \cma\]
+        where \(x\) and \(y\) are measured in meters
+        and \(y\) is the height above the ground.
+        <ol class="list-alpha">
+<li>
+                Calculate the maximum height of the central arch.
+            </li>
+<li>
+                At what points is the height \(80\) meters?
+            </li>
+<li>
+                Calculate the slope to the arch at the points in part (b).
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-54"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                The maximum height occurs when \(x = 0 \col\)
+                \[
+                \ba 
+                y &amp;= 211.49 - 20.96 \cosh 0 \nl 
+                &amp;= 211.49 - 20.96 = \boxed{190.53 \un{m}}
+                \ea 
+                \]
+                (<i>Note</i>: The Gateway Arch's maximum height is \(192 \un{m},\)
+                but the <i>central arch</i> is \(190.53 \un{m}\) tall.)
+            </li>
+<hr/>
+<li>
+                Using a graphing calculator, 
+                we find the solutions of 
+                \[y = 211.49 - 20.96 \cosh 0.03291765x = 80\]
+                to be \(x = \pm 76.647.\)
+                Hence, the central curve is \(80 \un{m}\) tall 
+                at the points located \(76.647 \un{m}\) from the center.
+            </li>
+<hr/>
+<li>
+                The derivative function is 
+                \[
+                \ba
+                y' &amp;= -20.96(0.03291765) \sinh 0.03291765x \nl 
+                &amp;= -0.689953944 \sinh 0.03291765x \pd
+                \ea
+                \]
+                So at \(x = \pm 76.747,\) the slopes are
+                \[
+                \ba
+                y'(\pm 76.647) &amp;= -0.689953944 \sinh 0.03291765 (\pm 76.647) \nl 
+                &amp;\approx \mp 4.273 \pd
+                \ea
+                \]
+                So the slope at \((-76.747, 80)\) is approximately \(4.273,\)
+                and the slope at \((76.747, 80)\) is approximately \(-4.273.\)
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-55"> 
+  <div class="box-solution__head">     EXERCISE 55 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[CALC]]] -->
+        The chain in <a href="#hanging-chain">Figure 10</a>
+        hangs freely from two pillars that are \(2.6\) feet apart.
+        If the chain touches the pillars at a height of \(1\) foot above the ground,
+        and its lowest point is \(0.8\) foot above the ground,
+        then find an equation for the chain's shape.
+        <figure class="hanging-chain figure-center-one" id="hanging-chain">
+<img alt="Figure 10" src="../images/sectionImages/hanging-chain.jpg"/>
+</figure>
+<style>
+            .hanging-chain::before{
+                content:'FIGURE 10';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-55"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's take the \(x\)-axis to be the ground 
+        and the \(y\)-axis to be the catenary's axis of symmetry,
+        where \(x\) and \(y\) are measured in feet.
+        Also let \(f\) be the function whose graph is the chain's shape;
+        then we have 
+        \[f(x) = a \cosh \par{\frac{x}{a}} + c\]
+        for constants \(a\) and \(c.\)
+        Then we have the conditions \(f(0) = 0.8,\)
+        \(f(1.3) = 1,\) and \(f(-1.3) = 1.\)
+        Substituting \(f(0) = 0.8\) yields 
+        \begin{align} 
+        f(0) = a \cosh 0 + c &amp;= 0.8 \nonum \nl 
+        a + c &amp;= 0.8 \pd \label{eq:chain-1}
+        \end{align}
+        Likewise, substituting \(f(1.3) = 1\) shows 
+        \begin{align} 
+        a \cosh \par{\frac{1.3}{a}} + c &amp;= 1 \pd \label{eq:chain-2}
+        \end{align}
+        From \(\eqref{eq:chain-1}\) we have \(c = 0.8 - a,\) 
+        which we substitute into \(\eqref{eq:chain-2}\) to attain 
+        \[
+        a \cosh \par{\frac{1.3}{a}} + 0.8 - a = 1 \pd
+        \] 
+        Using a graphing calculator shows \(a \approx 4.258.\)
+        By \(\eqref{eq:chain-1},\) \(c = 0.8 - 4.258\) \(= -3.458.\)
+        So the shape of the curve is 
+        \[f(x) = \boxed{4.258 \cosh \par{\frac{x}{4.258}} - 3.458}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-56"> 
+  <div class="box-solution__head">     EXERCISE 56 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[HARD]]] -->
+        In <a href="#hanging-chain-ex">Figure 11</a>,
+        with the aid of a graphing calculator,
+        calculate the angle \(\theta\) between a support beam and the freely hanging cable.
+        <figure class="hanging-chain-ex figure-center-one" id="hanging-chain-ex">
+<img alt="Figure 11" src="../images/sectionImages/hanging-chain-ex.jpg"/>
+</figure>
+<style>
+            .hanging-chain-ex::before{
+                content:'FIGURE 11';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-56"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="hanging-chain-ex-geom" id="hanging-chain-ex-geom">
+<img alt="hanging-chain-ex-geom.jpg" src="../images/sectionImages/hanging-chain-ex-geom.jpg"/>
+</figure>
+        Let's take the \(x\)-axis to be the ground and the \(y\)-axis to be the cable's axis of symmetry.
+        Then the cable's shape is a catenary:
+        \[f(x) = a \cosh \par{\frac{x}{a}} + c\]
+        for any constants \(a\) and \(c.\)
+        Our axis orientation provides the points \(f(0) = 0.7,\)
+        \(f(-2.5) = 3,\) and \(f(2.5) = 3.\)
+        Substituting \(f(0) = 0.7,\)
+        we have 
+        \begin{align} 
+        f(0) = a \cosh 0 + c &amp;= 0.7 \nonum \nl 
+        a + c &amp;= 0.7 \pd \label{eq:chain-theta-1}
+        \end{align}
+        Likewise, substituting \(f(2.5) = 3\) gives 
+        \begin{equation} 
+        a \cosh \par{\frac{2.5}{a}} + c = 3 \pd \label{eq:chain-theta-2}
+        \end{equation}
+        From \(\eqref{eq:chain-theta-1},\) \(c = 0.7 - a;\)
+        substituting this expression into \(\eqref{eq:chain-theta-2}\) gives 
+        \[a \cosh \par{\frac{2.5}{a}} + 0.7 - a = 3 \pd\]
+        By graphing, we find \(a = 1.642;\) then \(c = 0.7 - 1.642\) \(= -0.942.\)
+        So the shape of the hanging cable is 
+        \[f(x) = 1.642 \cosh \par{\frac{x}{1.642}} - 0.942 \pd\]
+        The slope of the tangent to the cable at the right end is 
+        \[f'(2.5) \approx 2.183 \pd\]
+        By similar triangles (see the figure), the angle is
+        \[\theta = \atan \par{\frac{1}{2.183}} \approx 0.430 = \boxed{24.6 \degree}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

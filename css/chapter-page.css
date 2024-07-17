@@ -10,3 +10,12 @@
 .chapter-page-img{
     float: right;
 }
+
+.intro-p{
+    text-indent: 0%;
+    margin-bottom: 2%;
+}
+
+h4{
+    font-size: 26px;
+}

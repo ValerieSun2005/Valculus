@@ -134,6 +134,7 @@
     \begin{equation} 
     \int_a^b f(x) \di x \approx R_n = \sum_{i = 1}^n f(x_i) \Delta x \pd \eqlabel{eq:R-n} 
     \end{equation}
+    Here, \(\Delta x = (b - a)/n.\)
 </div>
 
 <aside class="box-caution">
@@ -328,7 +329,7 @@
     \begin{equation} 
     \int_a^b f(x) \di x \approx M_n = \sum_{i = 1}^n f(\overline x_i) \Delta x \cma \eqlabel{eq:M-n}
     \end{equation}
-    where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i).\)
+    where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i)\) and \(\Delta x = (b - a)/n.\)
     The error bound to this estimate is 
     \begin{equation} 
     \abs{E_M} \leq \frac{M_2 (b - a)^3}{24n^2} \cma \eqlabel{eq:E-M}
@@ -466,9 +467,10 @@
     The <span class="emph">Trapezoidal Rule</span> provides the estimate
     \begin{equation} 
     \int_a^b f(x) \di x \approx T_n 
-    = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \pd 
+    = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \cma
     \eqlabel{eq:T-n}
     \end{equation}
+    where \(\Delta x = (b - a)/n.\)
     The error bound to this approximation is 
     \begin{equation} 
     \abs{E_T} \leq \frac{M_2 (b - a)^3}{12 n^2} \cma \eqlabel{eq:E-T}
@@ -744,6 +746,7 @@
         \begin{equation} 
         \int_a^b f(x) \di x \approx R_n = \sum_{i = 1}^n f(x_i) \Delta x \pd \eqlabel{eq:R-n} 
         \end{equation}
+        In each case, \(\Delta x = (b - a)/n.\)
         These are the simplest types of approximations, 
         but they are usually less accurate compared to the other methods.
         When we construct an approximation,
@@ -778,7 +781,7 @@
         \begin{equation} 
         \int_a^b f(x) \di x \approx M_n = \sum_{i = 1}^n f(\overline x_i) \Delta x \cma \eqlabel{eq:M-n}
         \end{equation}
-        where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i).\)
+        where \(\overline x_i = \tfrac{1}{2} (x_{i - 1} + x_i)\) and \(\Delta x = (b - a)/n.\)
         Geometrically, we position approximating rectangles to be at the midpoints 
         of each subinterval \(\parbr{x_{i - 1}, x_i}.\)
         The error bound for the Midpoint Rule is
@@ -793,9 +796,10 @@
         Doing so yields the <span class="emph">Trapezoidal Rule</span>, which provides the estimate
         \begin{equation} 
         \int_a^b f(x) \di x \approx T_n 
-        = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \pd 
+        = \frac{\Delta x}{2} \parbr{f(x_0) + 2 f(x_1) + 2f(x_2) + \cdots + 2 f(x_{n - 1}) + f(x_n)} \cma
         \eqlabel{eq:T-n}
         \end{equation}
+        where \(\Delta x = (b - a)/n.\)
         The error bound to this approximation is 
         \begin{equation} 
         \abs{E_T} \leq \frac{M_2 (b - a)^3}{12 n^2} \cma \eqlabel{eq:E-T}
@@ -833,16 +837,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -850,10 +854,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -861,16 +865,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -878,27 +882,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.8: Linearization and Differentials</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>2.8: Linearization and Differentials</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.8-Linearization-and-Differentials-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.8-Linearization-and-Differentials-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Linearization-and-Differentials]]]-->
+<p>
+    When we first introduced derivatives in Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>, 
+    we declined to elaborate on <b>differentials</b>.
+    In Section 
+    <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>, 
+    we wrote equations of tangent lines. 
+    In this section we use tangent lines to <i>approximate</i> a function's outputs. 
+    We also define differentials and provide applications 
+    for them, including how they are connected to tangent lines.
+    This section covers the following topics:
+    <ul>
+        <li>
+            <a href="#linearization" class="page-anchor">Linearization</a>
+        </li>
+        <li>
+            <a href="#differentials" class="page-anchor">Differentials</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="linearization">Linearization</h4>
+
+<figure class="deriv-linear-approximation" id="deriv-linear-approximation">
+    <img src="../images/sectionImages/deriv-linear-approximation.jpg" alt="Figure 1">
+</figure>
+<style>
+    .deriv-linear-approximation::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    When we have a complicated function, it could be difficult to compute its outputs explicitly. 
+    But we can use calculus to approximate its values by using a line. 
+    The best <i>linear approximation</i> of a function is its tangent line.
+    This process is called <span class="emph">linearization</span>—the procedure of estimating 
+    a function's values by using the outputs of its tangent line.
+    In other words, we approximate a curve to be its tangent line.
+    Suppose that a line is tangent to the curve \(f\) at the point \(P(a, f(a)).\)
+    Let \(T(x)\) be the function that represents this tangent line.
+    In Section 
+    <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+    we asserted that an equation of this tangent line is 
+    \[y - f(a) = f'(a) (x - a) \pd\]
+    Replacing \(y\) with \(T(x)\) gives 
+    \[T(x) = f(a) + f'(a)(x - a) \pd\]
+    We take \(T(x)\) to estimate \(f(x),\) so we use 
+    \begin{equation} 
+    f(x) \approx f(a) + f'(a) (x - a) \pd \label{eq:f-approx}
+    \end{equation}
+    <a href="#deriv-linear-approximation">Figure 1</a>
+    shows the line tangent to the curve \(f\) at the point \(P(a, f(a)).\)
+    The point \((x, T(x))\) on the line approximates \((x, f(x)).\)
+    We say the linearization of \(f(x)\) is <b>centered at</b> \(x = a\)
+    because we use this point as a reference for the approximation; note that \(T(a) = f(a).\) 
+    In this estimate, we are assuming that \(f\) <i>changes consistently at the same rate</i> \(f'(a).\)
+    This approximation for \(f\) is effective for \(x\) near the <i>point of tangency</i>, point \(P,\)
+    because zooming in on the curve \(f\) near \(P\) reveals a resemblance to a line. 
+    But this approximation often diminishes in accuracy for \(x\) far away from \(P.\)
+</p>
+
+<div class="box-title">LINEARIZATION</div>
+<div class="box">
+    <span class="emph">Linearization</span> is the process by which we 
+    approximate a function \(f\) by using its tangent line at \(a\)
+    (called the <span class="emph">center</span> of the approximation).
+    We use 
+    \begin{equation} 
+    f(x) \approx f(a) + f'(a) (x - a) \pd \eqlabel{eq:f-approx}
+    \end{equation}
+    The right-hand side is the output of the tangent line at \(x.\)
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find an equation of the line tangent to the curve \(y = \sqrt x\) at \(x = 9.\)
+        Use this line to approximate \(\sqrt{10}.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="deriv-tan-line-sqrt-9" id="deriv-tan-line-sqrt-9">
+        <img src="../images/sectionImages/deriv-tan-line-sqrt-9.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .deriv-tan-line-sqrt-9::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Equation of Tangent Line</span>
+        To calculate the slope to \(y = \sqrt x\) when \(x = 9,\) 
+        we differentiate \(\sqrt x = x^{1/2}\) using the Power Rule:
+        \[\deriv{}{x} \par{x^{1/2}} = \tfrac{1}{2} x^{-1/2} = \frac{1}{2 \sqrt x} \pd\]
+        Hence, the slope when \(x = 9\) is 
+        \[\frac{1}{2 \sqrt 9} = \frac{1}{6} \pd\]
+        The point of tangency is \((9, 3),\)
+        so an equation of the tangent line is 
+        \[y - 3 = \tfrac{1}{6} (x - 9) \or \boxed{y = 3 + \tfrac{1}{6} (x - 9)}\] 
+        (See <a href="#deriv-tan-line-sqrt-9">Figure 2</a>.)
+    </p>
+    <figure class="deriv-linear-sqrt10" id="deriv-linear-sqrt10">
+        <img src="../images/sectionImages/deriv-linear-sqrt10.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .deriv-linear-sqrt10::before{
+            content:'FIGURE 3';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Approximation</span>
+        The tangent line \(y = 3 + \tfrac{1}{6} (x - 9)\) is the best linear approximation to 
+        \(y = \sqrt x\) for \(x\) near \(9.\)
+        We estimate \(\sqrt{10}\) as the output of this tangent line when \(x = 10.\)
+        Substituting \(x = 10\) into the equation of the tangent line, we see 
+        \[\sqrt{10} \approx 3 + \tfrac{1}{6}(10 - 9) = \boxed{\tfrac{19}{6}} \approx 3.167 \pd\]
+        The actual value of \(\sqrt{10}\) is approximately \(3.162.\)
+        Our approximation of \(3.167\) is very accurate! 
+        Since \(x = 10\) is close to the <b>center</b> of the approximation, \(a = 9,\)
+        the tangent line is an excellent estimate for the value of \(\sqrt x.\)
+        (See <a href="#deriv-linear-sqrt10">Figure 3</a>.)
+        Using tangent lines allows you to estimate values of square roots in your head—a 
+        great trick. 
+    </p>
+</div>
+
+<aside class="box-tip">
+    Calculations often become easier if you write
+    your tangent-line equation using <i>point-slope</i> form.  
+</aside>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine an equation for the tangent line to the curve \(y = \sin x\)
+        at \(x = 2 \pi/3\)
+        and use it to approximate \(\sin 3.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="deriv-sin-3-approx" id="deriv-sin-3-approx">
+        <img src="../images/sectionImages/deriv-sin-3-approx.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .deriv-sin-3-approx::before{
+            content:'FIGURE 4';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Equation of Tangent Line</span>
+        The derivative of \(\sin x\) is \(\cos x,\) 
+        so the slope to the curve \(y = \sin x\) at \(x = 2 \pi/3\) is 
+        \[\cos \tfrac{2 \pi}{3} = -\tfrac{1}{2} \pd\]
+        When \(x = 2 \pi/3,\)
+        \[y = \sin \tfrac{2 \pi}{3} = \tfrac{\sqrt 3}{2} \pd\]
+        Thus, an equation of the tangent line is
+        \[y - \tfrac{\sqrt 3}{2} = -\tfrac{1}{2} \par{x - \tfrac{2 \pi}{3}} 
+        \or \boxed{y = -\tfrac{1}{2} x + \tfrac{\pi}{3} + \tfrac{\sqrt 3}{2}}
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Approximation</span>
+        We approximate \(\sin 3\) as the \(y\)-value the tangent line 
+        reaches when \(x = 3.\)
+        Substituting \(x = 3\) into the equation of the tangent line shows that 
+        \[\sin 3 \approx -\tfrac{1}{2} (3) + \tfrac{\pi}{3} + \tfrac{\sqrt 3}{2} \approx \boxed{0.413}\]
+        Unfortunately, the actual value of \(\sin 3\) turns out to be roughly \(0.141.\)
+        Our estimate \(0.413\) is not very accurate because \(x = 3\) is 
+        relatively far away from the <b>center</b> of the linearization, \(x = 2 \pi/3.\)
+        (See <a href="#deriv-sin-3-approx">Figure 4</a>.)
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        A linearization for the function \(f(x) = \sqrt{2x + 3}\)
+        is given by \(y = \tfrac{x}{5} + \tfrac{14}{5}.\)
+        Use a graphing calculator to find the interval of \(x\) for which the linearization differs from \(f\)
+        by less than \(0.1.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    Accuracy to within \(0.1\) means that the difference between \(f\) and the linearization 
+    should be less than \(0.1 \col\)
+    \[
+    \ba 
+    \abs{f(x) - \par{\tfrac{x}{5} + \tfrac{14}{5}}} &\lt 0.1 \nl 
+    \abs{\sqrt{2x + 3} - \par{\tfrac{x}{5} + \tfrac{14}{5}}} &\lt 0.1 \pd
+    \ea 
+    \]
+    Solving the inequality 
+    \[-0.1 \lt \sqrt{2x + 3} - \par{\tfrac{x}{5} + \tfrac{14}{5}} \lt 0.1\] gives 
+    the interval 
+    \(\boxed{6.5 \lt x \lt 16.5}.\)
+</div>
+
+<h4 id="differentials">Differentials</h4>
+<p>
+    Until now, we have postponed the interpretation of the <b>differentials</b> 
+    \(\dd x\) and \(\dd y\) in the equation \(\textDeriv{y}{x} = f'(x).\) 
+    Multiplying both sides by \(\dd x\) shows 
+    \begin{equation} 
+    \dd y = f'(x) \di x \pd \label{eq:dy-dx}
+    \end{equation}
+    In this form, we interpret \(\dd x\) as an <i>independent variable</i> whose value 
+    we are free to select. 
+    Then \(\dd y\) is a corresponding dependent variable whose value depends on \(x\) and \(\dd x.\)
+    Notice that little values of \(\dd x\) yield small outputs \(\dd y,\)
+    whereas large values of \(\dd x\) force \(\dd y\) to be more substantial.
+</p>
+
+<div class="box-title">DIFFERENTIALS</div>
+<div class="box">
+    If \(y = f(x)\) and \(f\) is differentiable, then 
+    the <b>differential</b> \(\dd y\) is given by
+    \begin{equation} 
+    \dd y = f'(x) \di x \pd \eqlabel{eq:dy-dx}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following differentials.
+        <ol class="list-alpha">
+            <li>
+                <span>\(\dd \par{\sin x}\)</span>
+            </li>
+            <li>
+                <span>\(\dd \par{y^4}\)</span>
+            </li>
+            <li>
+                <span>\(\dd \par{t e^t}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The derivative of \(\sin x\) is \(\cos x,\) so 
+            we say 
+            \[\dd \par{\sin x} = \boxed{\cos x \di x}\]
+        </li>
+        <hr>
+        <li>
+            By the Power Rule, the derivative of \(y^4\) is \(4y^3.\)
+            So 
+            \[\dd \par{y^4} = \boxed{4y^3 \di y}\]
+        </li>
+        <hr>
+        <li>
+            The Product Rule gives the derivative of \(te^t\) to be \(e^t + te^t.\)
+            Thus, 
+            \[\dd \par{t e^t} = \boxed{\par{e^t + te^t} \di t}\]
+        </li>
+    </ol>
+</div>
+
+<figure class="differential-graph" id="differential-graph">
+    <img src="../images/sectionImages/differential-graph.jpg" alt="Figure 5">
+</figure>
+<style>
+    .differential-graph::before{
+        content:'FIGURE 5';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Interpreting Differentials Geometrically</span>
+    Differentials model the slope of a tangent line.
+    In <a href="#differential-graph">Figure 5</a>, the points \(P(x, f(x))\)
+    and \(Q(x + \Delta x, f(x + \Delta x))\) are marked on the graph of \(f.\) 
+    The line tangent to \(f\) at \(P\) is drawn.
+    Segment \(\segment{PS}\) is the change in \(x\) over the interval 
+    \([x, x + \Delta x];\) we take \(\Delta x = \dd x.\)
+    Observe that the change in the \(y\)-value of \(f\) over \([x, x + \Delta x]\) is given by 
+    \[\Delta y = f(x + \Delta x) - f(x) = \length{QS} \pd\]
+    Over the interval \([x, x + \Delta x],\) the tangent line rises by a height \(\segment{RS}.\)
+    Since this tangent line has slope \(f'(x),\)
+    its rise \(\length{RS}\) is given by 
+    \begin{equation} 
+    \dd y = f'(x) \di x \pd \eqlabel{eq:dy-dx}
+    \end{equation}
+    Thus, \(\dd y\) is the amount by which the <i>tangent line rises or falls</i>, whereas 
+    \(\Delta y\) measures the amount by which the <i>curve \(f\) rises or falls</i>. 
+    As an example, in <a href="#deriv-linear-approximation">Figure 1</a> 
+    over the interval \([a, x],\) the curve \(f\) falls but the tangent line rises; 
+    hence, \(\Delta y \lt 0\) but \(\dd y \gt 0.\)
+    As \(\dd x\) is made smaller, the approximation \(\Delta y = \dd y\) increases in accuracy; that is, 
+    the amount by which the tangent line rises or falls follows the 
+    amount risen or fallen by the curve.
+    Therefore, we often think of \(\dd x\) and \(\dd y\) as <i>infinitely small quantities</i>—such that 
+    the curve behaves identically to its tangent line. 
+    Doing so enables us to approximate values of \(f\) (whose identity could be difficult to obtain) as the values of its tangent line.
+</p>
+<p>
+    If we desire, then we can use \(\eqref{eq:dy-dx}\) as a linear approximation. 
+    In fact, \(\eqref{eq:dy-dx}\) is an alternate representation of \(\eqref{eq:f-approx},\) 
+    as shown by the following algebra:
+    Taking \(\dd y \approx \Delta y\) and \(\dd x = \Delta x,\) \(\eqref{eq:dy-dx}\) becomes   
+    \begin{flalign}
+    &&\Delta y &\approx f'(x) \Delta x \nonumber &\nl
+    \laWord{or} && f(x) - f(a) &\approx f'(x)(x - a) \nonumber &\nl 
+    \laWord{so} && f(x) &\approx f(a) + f'(x) (x - a) \pd \eqlabel{eq:f-approx}
+    \end{flalign}
+    Thus, differentials present another (yet equivalent) perspective to linear approximations.
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        For \(y = \tfrac{1}{2} x^2 + 1,\)
+        calculate and compare \(\dd y\) and \(\Delta y\)
+        as \(x\) changes from \(1\) to \(1.7\)
+        and as \(x\) changes from \(1\) to \(1.2.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <figure class="diff-05x21" id="diff-05x21">
+        <img src="../images/sectionImages/diff-0.5x^2+1.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .diff-05x21::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    <p>
+        <span class="label-emph">From \(1\) to \(1.7\)</span>
+        We see 
+        \[\deriv{}{x} \par{\tfrac{1}{2} x^2 + 1} = x \pd\]
+        Therefore, the differential \(\dd y\) is given by 
+        \begin{equation} 
+        \dd y = x \di x \pd \label{eq:dy-ex}
+        \end{equation}
+        Because \(x\) changes from \(1\) to \(1.7,\) we take \(\dd x = 0.7\) 
+        and so \(\eqrefer{eq:dy-ex}\) gives
+        \[\dd y = (1)(0.7) = \boxed{0.7}\]
+        Conversely, we see  
+        \[
+        \ba 
+        \Delta y &= \parbr{\tfrac{1}{2} (1.7)^2 + 1} - \parbr{\tfrac{1}{2} (1)^2 + 1} \nl 
+        &= \boxed{0.945}
+        \ea 
+        \]
+        (See <a href="#diff-05x21">Figure 6</a>.)
+    </p>
+    <aside class="box-remark">
+        The tangent line to \(y = \tfrac{1}{2} x^2 + 1\) at \(x = 1\)
+        has slope \(1.\)
+        Thus, we expect the <i>rise</i> \(\dd y\)
+        to be the same as the <i>run</i> \(\dd x.\)
+    </aside>
+
+    <p>
+        <span class="label-emph">From \(1\) to \(1.2\)</span>
+        Since \(x\) changes from \(1\) to \(1.2,\) we use \(\dd x = 0.2.\)
+        By \(\eqref{eq:dy-ex},\)  
+        \[\dd y = (1)(0.2) = \boxed{0.2}\]
+        In contrast, 
+        \[
+        \ba 
+        \Delta y &= \parbr{\tfrac{1}{2} (1.2)^2 + 1} - \parbr{\tfrac{1}{2} (1)^2 + 1} \nl 
+        &= \boxed{0.22}
+        \ea 
+        \]
+        Note that \(\dd y\) is much easier to compute than \(\Delta y.\)
+        We see that \(\Delta y \approx \dd y\)
+        increases in accuracy for small values of \(\dd x.\)
+        For example, the difference between \(\dd y\) and \(\Delta y\)
+        is even smaller if \(x\) changes from \(1\) to \(1.1.\)
+        For small values of \(\dd x,\) the tangent line to \(y = \tfrac{1}{2} x^2 + 1\) at \(x = 1\) becomes 
+        nearly indistinguishable to the curve.
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        A sphere's radius is measured to be \(14\) centimeters with a maximum error 
+        of \(0.07\) centimeter. Use differentials to calculate the maximum error in the sphere's volume
+        and the percent error.
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <p>
+        <span class="label-emph">Maximum Error</span>
+        Let \(r\) be the sphere's radius and \(V\) be its volume. 
+        Then \(V = \tfrac{4}{3} \pi r^3.\)
+        We take the maximum measurement error of \(r\) to be \(\Delta r = \dd r.\)
+        Likewise, the error in \(V\) is \(\Delta V,\) as approximated by
+        \[\dd V = 4 \pi r^2 \di r \pd\]
+        For \(r = 14\) and \(\dd r = 0.07,\) we 
+        estimate the maximum error in the sphere's volume to be 
+        \[\dd V = 4 \pi(14)^2 (0.07) \approx \boxed{172.411 \un{cm}^3}\]
+    </p>
+    <aside class="box-remark">
+        Note that 
+        \[
+        \frac{\dd V}{V} = \frac{4 \pi r^2 \di r}{\tfrac{4}{3} \pi r^3} = \frac{3 \di r}{r} \pd
+        \]
+        Hence, the relative error of the volume is three times the percent error of the radius.
+    </aside>
+    <p>
+        <span class="label-emph">Percent Error</span>
+        The <b>relative error</b> 
+        is given by the error \(\Delta V\) divided by the measured volume \(V.\)
+        The sphere's volume is measured to be 
+        \[V = \tfrac{4}{3} \pi r^3 = \tfrac{4}{3} \pi (14)^3 \approx 11494.040 \un{cm}^3 \pd\]
+        Hence, the maximum relative error in the measurement is 
+        \[
+        \frac{\Delta V}{V} \approx \frac{\dd V}{V} = \frac{172.411}{11494.040} \approx 0.015 \pd
+        \]
+        This <i>relative error</i> is equivalent to a <b>percent error</b> of \(\boxed{1.500\%}.\) 
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use differentials to approximate the amount by which a cube's volume decreases 
+        when all its sides are shrunk from \(2\) inches to \(1.9\) inches.
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    Let \(V\) be the cube's volume and \(s\) be the length of one side.
+    Then \(V = s^3.\)
+    The length of one side changes by \(\dd s = -0.1,\)
+    so we see  
+    \[\dd V = 3s^2 \di s = 3(2)^2(-0.1) = -1.2 \un{in}^3 \pd\]
+    (This result is negative because the volume has <i>decreased</i>.)
+    So the volume has <i>shrunk</i> by \(\boxed{1.2 \un{in}^3}.\)
+    The actual amount by which the cube's volume changes is 
+    \[\Delta V = \tfrac{4}{3} \pi (1.9 - 2)^3 \approx -1.141 \un{in}^3 \cma\]
+    so our differential \(\dd V = -1.2\) is close. 
+    With calculators, using differentials seems pointless—but what if you 
+    needed to perform estimations in your head?
+</div> 
+<div class="section-summary">
+    <p>
+        <a href="#linearization" class="summary-anchor">Linearization</a>
+        We use <span class="emph">linearization</span> to approximate a function's values 
+        by constructing a tangent line.
+        If \(f\) is differentiable at \(a,\) then we form a tangent line to \(f\) 
+        at \(a\) (the <span class="emph">center</span> of the approximation).
+        Then we approximate \(f(x)\) by 
+        evaluating the function for its tangent line at \(x \col\)
+        \begin{equation} 
+        f(x) \approx f(a) + f'(a) (x - a) \pd \eqlabel{eq:f-approx}
+        \end{equation}
+        The right-hand side is the output of the tangent line at \(x.\)
+        Linearization is most effective for \(x\) close to \(a.\)
+    </p>
+    <p>
+        <a href="#differentials" class="summary-anchor">Differentials</a>
+        If \(y = f(x)\) and \(f\) is differentiable, then 
+        the <b>differential</b> \(\dd y\) is given by
+        \begin{equation} 
+        \dd y = f'(x) \di x \pd \eqlabel{eq:dy-dx}
+        \end{equation}
+        Geometrically, \(\dd y\) is the amount by which the tangent line to \(f\)
+        at \(x\) rises or falls as \(x\) is increased by \(\dd x.\)
+        Differentials present another way to conduct linear approximations
+        and are useful to estimate the maximum errors of measurements.
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

@@ -45,24 +45,27 @@
 <hr id="mainBodyBegin">
 <!--[[[crefId.Defining-a-Derivative]]]--> 
 <p>
-    In this section we discuss the following:
+    In <a href="/Valculus/Chapters/chapter1.html">Chapter 1</a>
+    we studied limits and continuity, 
+    but how are they used in defining advanced concepts in calculus?
+    In this section we learn the fundamentals of <span class="emph">differential calculus</span>—the study 
+    of rates of change. 
+    We discuss the following topics:
     <ul>
         <li>
-            Using limits to <a class="page-anchor" href="#definition-of-a-derivative">Define a Derivative</a> and interpret a derivative's meaning
-            at a point and as a function
+            <a class="page-anchor" href="#definition-of-a-derivative">Definition of a Derivative</a> 
         </li>
         <li>
-            Determining <a class="page-anchor" href="#differentiability">Differentiability</a> by introducing 
-            one-sided derivatives 
+            <a class="page-anchor" href="#differentiability">Differentiability</a>
         </li>
         <li>
-            Applying and proving <a class="page-anchor" href="#derivative-properties">Derivative Properties</a>
+            <a class="page-anchor" href="#derivative-properties">Derivative Properties</a>
         </li>
         <li>
-            Computing <a class="page-anchor" href="#higher-order-derivatives">Higher-Order Derivatives</a>
+            <a class="page-anchor" href="#higher-order-derivatives">Higher-Order Derivatives</a>
         </li>
         <li>
-            Relating <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>
+            <a class="page-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>
         </li>
     </ul>
 </p>
@@ -152,10 +155,10 @@
             content:'ANIMATION 1';
         }
     </style>
-    And we have accomplished our goal—\(\eqref{eq:lim-defn}\) gives the slope of \(f\) at \(x.\)
+    And we have accomplished our goal: \(\eqref{eq:lim-defn}\) gives the slope of \(f\) at \(x.\)
     We interpret \(\eqref{eq:lim-defn}\) as a <span class="emph">derivative function</span>, 
     which gives the slope to \(f\) at any input \(x.\)
-    Another notation for the derivative is \(\textDeriv{y}{x}\) or \(\textDeriv{f}{x}\)—called 
+    Another notation for the derivative is \(\textDeriv{y}{x}\) or \(\textDeriv{f}{x},\) called 
     <span class="emph">Leibniz</span> notation.
     For example, \(\eqrefer{eq:lim-defn}\) can also be written using Leibniz notation as 
     \[\deriv{f}{x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd\]
@@ -206,7 +209,7 @@
     \end{equation} 
     We use \(\eqrefer{eq:lim-defn-point}\) to find a derivative of \(f\) at a <i>specific point</i> \((a, f(a)).\)
     In contrast, \(\eqrefer{eq:lim-defn}\) gives the derivative of \(f\) as
-    a <i>function</i> of \(x\)—that is, the slope of \(f\) as a function of \(x.\)
+    a <i>function</i> of \(x,\) that is, the slope of \(f\) as a function of \(x.\)
     To find a derivative of a function at a point, 
     we can use either difference quotient in \(\eqref{eq:lim-defn}\) or \(\eqref{eq:lim-defn-point}.\)
     Sometimes one form is easier to use than the other.
@@ -224,14 +227,14 @@
 <aside class="box-remark">
     The verb for taking a derivative is 
     <i>differentiate</i>, not <i>derive</i>.
-    To <i>derive</i> is to obtain an idea based on another concept—for example, 
+    To <i>derive</i> is to obtain an idea based on another concept, for example, 
     <i>deriving</i> an equation from another equation.
 </aside>
 
 <p>
     We pronounce \(\textDeriv{y}{x}\) as "\(\dd y\) by \(\dd x\)" or simply "\(\dd y,\) \(\dd x.\)"
     Using Leibniz notation, we can also write 
-    \[\deriv{y}{x} = \deriv{}{x} [y] \pd\]
+    \[\deriv{y}{x} = \deriv{}{x} (y) \pd\]
     The expression \(\textDeriv{}{x}\) is an <i>operator</i>, whereas \(\textDeriv{y}{x}\) is a quantity.
     An analogy is as follows: \(\textDeriv{}{x}\) is a verb, and \(\textDeriv{y}{x}\) is a noun.
     To denote the derivative of \(y = f(x)\) at a point \(x = a,\) 
@@ -301,13 +304,13 @@
         Compute the following derivatives.
         <ol class="list-roman">
             <li>
-                <span>\(\ds \deriv{}{x}[3x + 2]\)</span>
+                <span>\(\ds \deriv{}{x}(3x + 2)\)</span>
             </li>
             <li>
-                <span>\(\ds \deriv{}{x} \left[x^2 \right]\)</span>
+                <span>\(\ds \deriv{}{x} \par{x^2}\)</span>
             </li>
             <li>
-                <span>\(\ds \deriv{}{x} \sqrt x\)</span>
+                <span>\(\ds \deriv{}{x} \par{\sqrt x \,}\)</span>
             </li>
         </ol>
     </div>
@@ -322,7 +325,7 @@
             Thus, 
             \[
             \ba 
-            \deriv{}{x}[3x + 2] &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nl 
+            \deriv{}{x} (3x + 2) &= \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \nl 
             &= \lim_{h \to 0} \frac{[3(x + h) + 2] - [3x + 2]}{h} \pd
             \ea 
             \]
@@ -338,14 +341,14 @@
         <hr>
         <li>
             Using \(\eqref{eq:lim-defn},\) with \(f(x) = x^2\) and \(f(x + h) = (x + h)^2,\) we obtain 
-            \[\deriv{}{x} \left[x^2 \right] = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h} \pd\]
+            \[\deriv{}{x} \par{x^2} = \lim_{h \to 0} \frac{(x + h)^2 - x^2}{h} \pd\]
             We cannot immediately substitute \(h = 0\) in the difference quotient, as 
             we get the indeterminate form \(\indZero.\)
             Instead, we expand \((x + h)^2\) and cancel terms.
             This strategy gives
             \[
             \ba 
-            \deriv{}{x} \left[x^2 \right] &= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \nl 
+            \deriv{}{x} \par{x^2} &= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \nl 
             &= \lim_{h \to 0} \frac{2xh + h^2}{h} \nl 
             &= \lim_{h \to 0} (2x + h) \nl 
             &= \boxed{2x}
@@ -356,14 +359,14 @@
         <li>
             We use \(\eqref{eq:lim-defn}\) with \(f(x) = \sqrt x\) and \(f(x + h) = \sqrt{x + h}.\)
             The derivative is then 
-            \[\deriv{}{x} \sqrt x = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt x}{h} \pd\]
+            \[\deriv{}{x} \par{\sqrt x \,} = \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt x}{h} \pd\]
             This limit is in the indeterminate form \(\indZero.\)
             Since the fraction contains radicals, our strategy is to multiply the numerator and denominator by the 
-            <i>conjugate</i> of the numerator—namely, \(\sqrt{x + h} + \sqrt x.\)
+            <i>conjugate</i> of the numerator, namely, \(\sqrt{x + h} + \sqrt x.\)
             Doing so, we find 
             \[
             \ba 
-            \deriv{}{x} \sqrt x 
+            \deriv{}{x} \par{\sqrt x \,} 
             &= \lim_{h \to 0} \frac{\sqrt{x + h} - \sqrt x}{h} \cdot \frac{\sqrt{x + h} + \sqrt x}{\sqrt{x + h} + \sqrt x} \nl 
             &= \lim_{h \to 0} \frac{(x + h) - x}{h \par{\sqrt{x + h} + \sqrt x}} \nl 
             &= \lim_{h \to 0} \frac{h}{h \par{\sqrt{x + h} + \sqrt x}} \nl 
@@ -973,7 +976,7 @@
 <button onclick="toggle8()" class="solution-button"></button>
 <div id="solution8" class="solution">
     <p>
-        By \(\eqrefer{eq:v(t)-deriv}\) the particle's velocity function is the derivative of position with respect to time—namely, 
+        By \(\eqrefer{eq:v(t)-deriv}\) the particle's velocity function is the derivative of position with respect to time; namely, 
         \(v(t) = s'(t).\)
         We seek the derivative of position as a function, so we use \(\eqref{eq:lim-defn}\) to get 
         \[
@@ -1112,16 +1115,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -1129,10 +1132,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -1140,16 +1143,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -1157,27 +1160,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

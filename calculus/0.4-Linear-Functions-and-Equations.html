@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.4: Linear Functions and Equations</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.4: Linear Functions and Equations</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.4-Linear-Functions-and-Equations-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.4-Linear-Functions-and-Equations-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Linear-Functions-and-Equations]]]-->
+<p>
+    Lines and linear functions dominate many areas of math and physics. 
+    Thus, understanding these topics is crucial to learn calculus. 
+    From graphing lines to solving linear equations, 
+    a calculus student needs a solid foundation in the following topics: 
+    <ul>
+        <li>
+            <a href="#linear-functions" class="page-anchor">Linear Functions</a>
+        </li>
+        <li>
+            <a href="#parallel-perpendicular-lines" class="page-anchor">Parallel and Perpendicular Lines</a>
+        </li>
+        <li>
+            <a href="#sys-linear-eqs" class="page-anchor">Systems of Linear Equations</a>
+        </li>
+    </ul>
+</p>
+<h4 id="linear-functions">Linear Functions</h4>
+<figure class="linear-graph" id="linear-graph">
+    <img src="../images/sectionImages/linear-graph.jpg" alt="Figure 1">
+</figure>
+<style>
+    .linear-graph::before{
+        content:'FIGURE 1';
+    }
+</style>
+<p>
+    A <span class="emph">linear function</span>
+    can be written in the form 
+    \begin{equation} 
+    f(x) = mx + b \pd \label{eq:mx+b}
+    \end{equation}
+    All the combinations of points \((x, y)\)
+    that satisfy \(y = mx + b\) form the graph of \(y = f(x).\)
+    This graph is a line with constant rate of change \(m,\) 
+    called the <span class="emph">slope</span>.
+    Observe that \(f(0) = b,\)
+    so \((0, b)\) is the \(y\)-intercept of the graph of \(f.\)
+    \(\eqrefer{eq:mx+b}\) is called the <span class="emph">slope-intercept form</span>
+    of a line, since the line's equation is given by its slope and \(y\)-intercept.
+    <a href="#linear-graph">Figure 1</a> shows the graph of \(y = mx + b;\)
+    consider any two points \(P\) and \(Q\) on the line. 
+    The slope of the line is given by dividing the change in \(y\) (denoted <nobr>\(\Delta y\))</nobr> between \(P\) and \(Q\)
+    by the change in \(x\) (denoted <nobr>\(\Delta x\))</nobr> between \(P\) and \(Q \col\)
+    \begin{equation} 
+    m = \frac{\Delta y}{\Delta x} \pd \label{eq:m-frac}
+    \end{equation}
+    (The greek symbol \(\Delta\) is called <i>delta</i>; 
+    it denotes the <i>change in</i> a quantity.)
+    Some people call \(\Delta y\) the <i>rise</i> and \(\Delta x\) the <i>run</i>; 
+    then \(\eqref{eq:m-frac}\) is colloquially called the <i>rise over run</i>.
+</p>
+
+<div class="box-title">LINEAR FUNCTIONS</div>
+<div class="box">
+    A <span class="emph">linear function</span> has a constant rate of change 
+    and can be written in the form 
+    \begin{equation} 
+    f(x) = mx + b \cma \eqlabel{eq:mx+b}
+    \end{equation}
+    where \((0, b)\) is the graph's \(y\)-intercept and \(m\)
+    is the <span class="emph">slope</span>. 
+    The slope is given by choosing two points on the line and calculating 
+    \begin{equation} 
+    m = \frac{\Delta y}{\Delta x} \pd \eqlabel{eq:m-frac}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find an equation of the line that passes through 
+        the points \((-1, 5)\) and \((2, -1).\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <figure class="linear-graph-ex-2x3" id="linear-graph-ex-2x3">
+        <img src="../images/sectionImages/linear-graph-ex-2x3.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .linear-graph-ex-2x3::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    By \(\eqref{eq:m-frac},\) the line's slope is 
+    \[
+    \ba 
+    m &= \frac{\Delta y}{\Delta x} \nl 
+    &= \frac{(-1) - 5}{2 - (-1)} \nl 
+    &= -2 \pd
+    \ea 
+    \]
+    Then \(\eqref{eq:mx+b}\) gives
+    the line's equation to be 
+    \[y = -2x + b\]
+    for some unknown \(b.\)
+    To calculate \(b,\) we substitute the \(x\)- and \(y\)-coordinates 
+    of any point on the line—for example, 
+    \((2, -1) \col\)
+    \[
+    \ba
+    -1 &= -2(2) + b \nl 
+    b &= 3 \pd
+    \ea
+    \]
+    So the equation of the line is 
+    \[\boxed{y = -2x + 3}\]
+    (See <a href="#linear-graph-ex-2x3">Figure 2</a>.)
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the slope and \(y\)-intercept of the graph of 
+        \[8x - 2y = 6 \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    Let's manipulate this equation to be in slope-intercept form, 
+    as in \(\eqref{eq:mx+b}.\)
+    In doing so, we solve for \(y \col\)
+    \[
+    \ba 
+    8x - 2y &= 6 \nl 
+    2y &= 8x - 6 \nl 
+    y &= 4x - 3 \pd
+    \ea 
+    \]
+    In slope-intercept form, 
+    the slope is the number by which \(x\) is multiplied—that is, \(\boxed{m = 4}.\)
+    Accordingly, the \(y\)-intercept is \(\boxed{(0, -3)}.\)
+</div>
+
+<p>
+    <span class="label-emph">Point-Slope Form</span>
+    Suppose that a line of slope \(m\) passes through the points \(\par{x_0, y_0}\)
+    and \((x, y).\)
+    Then \(\eqref{eq:m-frac}\) gives 
+    \[m = \frac{y - y_0}{x - x_0} \pd\]
+    Multiplying both sides by \(\par{x - x_0}\) gives 
+    \begin{equation} 
+    y - y_0 = m \par{x - x_0} \pd \label{eq:pt-slope}
+    \end{equation}
+    This equation is called the <span class="emph">point-slope form</span> of a line.
+    Thus, if you know a line's slope and a point on the line, then
+    using \(\eqref{eq:pt-slope}\) is a simpler alternative to manipulating \(\eqref{eq:mx+b}.\) 
+</p>
+
+<div class="box-title">POINT-SLOPE FORM OF A LINE</div>
+<div class="box">
+    If a line of slope \(m\) passes through a point \(\par{x_0, y_0},\)
+    then an equation of the line in <span class="emph">point-slope form</span> is 
+    \begin{equation} 
+    y - y_0 = m \par{x - x_0} \pd \eqlabel{eq:pt-slope}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine an equation of the line that passes through the point 
+        \((4, 2)\) with a slope of \(6.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    Using point-slope form, as in \(\eqref{eq:pt-slope},\)
+    with \(\par{x_0, y_0}\) \(= (4, 2)\) and \(m = 6\) gives 
+    \[y - 2 = 6(x - 4) \pd \]
+    Algebraic expansion yields 
+    \[
+    y - 2 = 6x - 24 
+    \or \boxed{y = 6x - 22}
+    \]
+</div>
+
+<p>
+    <span class="label-emph">Horizontal and Vertical Lines</span>
+    Let \(c\) be a constant. 
+    Then a <i>horizontal</i> line is given by plotting \(y = c,\)
+    whose slope is \(0\) because \(\Delta y = 0\) for any two points on the line
+    (<a href="#linear-horiz-line">Figure 3A</a>). 
+    Conversely, a <i>vertical</i> line is the graph \(x = c;\)
+    its slope is <i>undefined</i> 
+    (<a href="#linear-vert-line">Figure 3B</a>).
+</p>
+
+<div class="figure-center">
+    <figure class="linear-horiz-line" id="linear-horiz-line">
+        <img src="../images/sectionImages/linear-horiz-line.jpg" class="linear-horiz-line" alt="Figure 3A">
+    </figure>
+    <figure class="linear-vert-line" id="linear-vert-line">
+        <img src="../images/sectionImages/linear-vert-line.jpg" class="linear-vert-line" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .linear-horiz-line::before{
+        content:'FIGURE 3A';
+    }
+
+    .linear-vert-line::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<h4 id="parallel-perpendicular-lines">Parallel and Perpendicular Lines</h4>
+
+<figure class="linear-graph-ABC" id="linear-graph-ABC">
+    <img src="../images/sectionImages/linear-graph-ABC.jpg" alt="Figure 4">
+</figure>
+<style>
+    .linear-graph-ABC::before{
+        content:'FIGURE 4';
+    }
+</style>
+
+<p>
+    Let's discuss key properties for comparing lines,
+    a fundamental concept applied in calculus.
+    Two lines are <i>parallel</i> if and only if their slopes are equal. 
+    Conversely, two lines are <i>perpendicular</i> if and only if their
+    slopes are negative reciprocals of each other.
+    (For example, the reciprocal of \(3/5\) is <nobr>\(5/3.\))</nobr> 
+    As an example, in <a href="#linear-graph-ABC">Figure 4</a> 
+    lines \(A\) and \(B\) are parallel to each other because they 
+    each have the same slope \(m;\)
+    line \(C\) has slope \(-1/m\) and is therefore perpendicular to lines \(A\) and \(B.\)
+</p>
+
+<div class="box-title">PARALLEL AND PERPENDICULAR LINES</div>
+<div class="box">
+    Two lines are 
+    <ol class="list-alpha">
+        <li>
+            parallel if and only if their slopes are equal.
+        </li>
+        <li>
+            perpendicular if and only if their slopes are negative reciprocals of each other.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Are the two lines \(y = 4x - 2\) and \(y = 5 - x/4\)
+        parallel, perpendicular, or neither?
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    The line \(y = 4x - 2\) has a slope of \(4,\)
+    while the line \(y = 5 - x/4\) has a slope of \(-1/4.\)
+    Since \(4\) and \(-1/4\) are negative reciprocals, 
+    the two lines are <b>perpendicular</b>.
+    (See <a href="#linear-graph-perp-4">Figure 5</a>.)
+    <figure class="linear-graph-perp-4 figure-center-one" id="linear-graph-perp-4">
+        <img src="../images/sectionImages/linear-graph-perp-4.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .linear-graph-perp-4::before{
+            content:'FIGURE 5';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Write an equation of the line that is parallel to 
+        the line \(y = 5x + 3\) and passes through the point \((2, 4).\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    The line \(y = 5x + 3\) has a slope of \(5.\)
+    So our objective is to find an equation of a line whose slope is also \(5\)
+    and that passes through \((2, 4).\)
+    The point-slope form of a line, as in \(\eqref{eq:pt-slope},\) 
+    gives 
+    \[y - 4 = 5(x - 2) \or \boxed{y = 5x - 6}\]
+    (See <a href="#linear-graphs-parallel-5">Figure 6</a>.)
+    <figure class="linear-graphs-parallel-5 figure-center-one" id="linear-graphs-parallel-5">
+        <img src="../images/sectionImages/linear-graphs-parallel-5.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .linear-graphs-parallel-5::before{
+            content:'FIGURE 6';
+        }
+    </style>
+</div>
+
+<h4 id="sys-linear-eqs">Systems of Linear Equations</h4>
+<p> 
+    In a system of linear equations, 
+    our goal is to determine values for variables to satisfy multiple linear equations.
+    Generally, the first step is to reduce a system of multiple equations and unknown variables
+    into a single equation with only one unknown variable.
+    Let's walk through an example.
+</p>
+
+<div class="example-title" id="linear-ex-sub"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the solution to the following system of linear equations: 
+        \begin{align} 
+        y &= 2x + 6 \label{eq:ex-sub-1} \nl 
+        6x - y &= 2 \pd \label{eq:ex-sub-2}
+        \end{align}
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <figure class="linear-eq-sys-ex-sub" id="linear-eq-sys-ex-sub">
+        <img src="../images/sectionImages/linear-eq-sys-ex-sub.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .linear-eq-sys-ex-sub::before{
+            content:'FIGURE 7';
+        }
+    </style>
+    We want to express either equation in terms of only one variable.
+    Observe that \(\eqref{eq:ex-sub-1}\) expresses \(y\)
+    in terms of \(x.\)
+    Both equations <i>are simultaneously true</i>, so in \(\eqref{eq:ex-sub-2}\)
+    replacing \(y\) with \(2x + 6\) shows 
+    \[
+    \ba
+    6x - (2x + 6) &= 2 \nl 
+    4x - 6 &= 2 \nl 
+    4x &= 8 \nl
+    x &= 2 \pd
+    \ea
+    \]
+    To solve for \(y,\) we substitute the solution \(x = 2\)
+    into either equation of the system—for example, into \(\eqref{eq:ex-sub-1} \col\)
+    \[y = 2(2) + 6 = 10 \pd\]
+    So the solution to the system is \(\boxed{(2, 10)}.\)
+    Graphically, this point is the intersection of the two lines \(y = 2x + 6\)
+    and \(6x - y = 2\)
+    (<a href="#linear-eq-sys-ex-sub">Figure 7</a>).
+</div>
+
+<p>
+    In <a href="/Valculus/calculus/0.4-Linear-Functions-and-Equations.html#linear-ex-sub">Example 6</a>
+    we solved a system of two linear equations using the method of <span class="emph">substitution</span>, 
+    in which we express one variable in terms of the other variable
+    and substitute this expression into the other equation.
+    The next example demonstrates solving by the method of <span class="emph">elimination</span>, 
+    in which we add or subtract equations to cancel out a set of variables.
+    The method of elimination is best used when the variables 
+    and constants are all vertically aligned.
+</p>
+
+<div class="example-title" id="linear-ex-elim"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the following system of linear equations:
+        \[
+        \ba 
+        2x + y &= 6 \nl
+        x - 3y &= -4 \pd
+        \ea 
+        \]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    <figure class="linear-eq-sys-ex-elim" id="linear-eq-sys-ex-elim">
+        <img src="../images/sectionImages/linear-eq-sys-ex-elim.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .linear-eq-sys-ex-elim::before{
+            content:'FIGURE 8';
+        }
+    </style>
+    Using the method of elimination, 
+    we strive to merge both equations into a single equation 
+    with only one unknown variable.
+    We multiply both sides of the second equation by \(2;\)
+    then the system becomes
+    \begin{align} 
+    2x + y &= 6 \label{eq:ex-elim-1} \nl 
+    2x - 6y &= -8 \label{eq:ex-elim-2} \pd
+    \end{align}
+    Since both equations contain \(2x,\)
+    subtracting \(\eqref{eq:ex-elim-2}\) from \(\eqref{eq:ex-elim-1}\) gives 
+    \[
+    \ba
+    2x + y - (2x - 6y) &= 6 - (-8) \nl 
+    7y &= 14 \nl 
+    y &= 2 \pd
+    \ea
+    \]
+    To solve for \(x,\)
+    we substitute \(y = 2\)
+    into either equation of the system—for example, into \(\eqref{eq:ex-elim-1} \col\)
+    \[
+    \ba
+    2x + (2) &= 6 \nl 
+    2x &= 4 \nl
+    x &= 2 \pd
+    \ea
+    \]
+    The solution to the system is therefore \(\boxed{(2, 2)}.\)
+    (See <a href="#linear-eq-sys-ex-elim">Figure 8</a>.)
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the following system of linear equations:
+        \[
+        \ba 
+        x + y &= 2 \nl
+        -5x - 5y &= 7 \pd
+        \ea 
+        \]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    <figure class="linear-eq-sys-parallel" id="linear-eq-sys-parallel">
+        <img src="../images/sectionImages/linear-eq-sys-parallel.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .linear-eq-sys-parallel::before{
+            content:'FIGURE 9';
+        }
+    </style>
+    Because the <nobr>\(x\)'s,</nobr>
+    <nobr>\(y\)'s,</nobr> and constants are vertically aligned, 
+    it is best to use the method of elimination.
+    Multiplying both sides of the first equation by \(5,\) 
+    we attain the following system:
+    \begin{align} 
+    5x + 5y &= 10 \label{eq:ex-elim-no-sol-1} \nl 
+    -5x - 5y &= 7 \pd \label{eq:ex-elim-no-sol-2}
+    \end{align}
+    Adding \(\eqref{eq:ex-elim-no-sol-1}\) and \(\eqref{eq:ex-elim-no-sol-2}\) gives 
+    \[
+    \ba 
+    5x + 5y + \par{-5x - 5y} &= 10 + 7 \nl 
+    0 &= 17 \pd
+    \ea 
+    \]
+    Thus, this system has <b>no solutions</b>. 
+    Graphically, the lines \(x + y = 2\)
+    and \(-5x - 5y = 7\) are parallel,
+    so they never intersect.
+    (See <a href="#linear-eq-sys-parallel">Figure 9</a>.)
+</div>
+
+<p>
+    In the Exercises section, 
+    you can work through a variety of application problems that require solving systems of linear equations.
+</p>
+
+<div class="section-summary">
+    <p>
+        <a href="#linear-functions" class="summary-anchor">Linear Functions</a>
+        A <span class="emph">linear function</span> has a constant rate of change and can be written in the form 
+        \begin{equation} 
+        f(x) = mx + b \pd \eqlabel{eq:mx+b}
+        \end{equation}
+        All the points \((x, y)\)
+        that satisfy \(y = mx + b\) produce the graph of \(y = f(x)\)—a 
+        line with constant rate of change \(m,\) 
+        called the <span class="emph">slope</span>.
+        The \(y\)-intercept is \((0, b).\)
+        So \(\eqref{eq:mx+b}\) is called the <span class="emph">slope-intercept form</span> 
+        of a line.
+        The slope is given by choosing two points on the line and calculating 
+        \begin{equation} 
+        m = \frac{\Delta y}{\Delta x} \pd \eqlabel{eq:m-frac}
+        \end{equation}
+        If a line of slope \(m\) passes through a point \(\par{x_0, y_0},\)
+        then an equation of the line in <span class="emph">point-slope form</span> is 
+        \begin{equation} 
+        y - y_0 = m \par{x - x_0} \pd \eqlabel{eq:pt-slope}
+        \end{equation}
+        If \(c\) is a constant, then a horizontal line is \(y = c\) and has a slope of \(0.\)
+        Conversely, a vertical line is \(x = c,\) whose slope is undefined. 
+    </p>
+    <p>
+        <a href="#parallel-perpendicular-lines" class="summary-anchor">Parallel and Perpendicular Lines</a>
+        Lines can be compared by their slopes.
+        Two lines are 
+        <ol class="list-alpha">
+            <li>
+                parallel if and only if their slopes are equal.
+            </li>
+            <li>
+                perpendicular if and only if their slopes are negative reciprocals of each other.
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#sys-linear-eqs" class="summary-anchor">Systems of Linear Equations</a>
+        In a system of linear equations, we aim to calculate the values of variables 
+        such that multiple linear equations are satisfied.
+        To solve such problems, we first reduce the system from multiple equations and unknowns 
+        to a single equation of one unknown variable.
+        Doing so requires the methods of <span class="emph">substitution</span>
+        or <span class="emph">elimination</span>. 
+        When solving a system of two linear equations by <i>substitution</i>, 
+        we express one variable in terms of the other variable
+        and substitute this expression into the other equation.
+        But when solving a system of two linear equations by <i>elimination</i>, 
+        we vertically align all the variables and constants;
+        then we add or subtract the equations to cancel out a set of variables. 
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

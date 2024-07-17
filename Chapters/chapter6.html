@@ -24,24 +24,63 @@
 <hr id="mainBodyBegin">
 <!--[[[crefId.Chapter-6]]]-->
 <link href="../css/chapter-page.css" rel="stylesheet">
-<figure class="chapter-page-figure"><img src="../images/indexImages/6.jpg" alt=""></figure><div class="section-unit">
+<figure class="chapter-page-figure">
+    <img src="../images/indexImages/6.jpg" alt="">
+</figure>
+
+<style>
+    .chapter-page-figure:after{
+        content: "The shaded region is unbounded, so its area must be infinite—or is it?";
+    }
+</style>
+
+<p class="intro-p">
+    In Section <a href="/Valculus/calculus/4.4-Integration-by-Substitution.html">4.4</a> 
+    we learned the Substitution Rule, 
+    the most fundamental resource for integration. 
+    But integration isn't as straightforward as differentiation; 
+    there is no universal strategy.
+    Instead, in this chapter we will study how to evaluate common types of 
+    integrals—integrals with products 
+    (<a href="/Valculus/calculus/6.1-Integration-by-Parts.html">6.1</a>), 
+    trigonometric functions 
+    (<a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>), 
+    radicals 
+    (<a href="/Valculus/calculus/6.3-Trigonometric-Substitution.html">6.3</a>), 
+    and rational functions 
+    (<a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>). 
+    We will also examine whether an unbounded region has an infinite area. 
+    The integral \(\int_{-1}^1 \dd x/x^2\) looks innocent,
+    but in Section <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>
+    you will understand why it <i>diverges</i>.
+</p>
+
+<h4>Sections</h4>
+<div class="section-unit">
 <p class="chapter-section-body">
 6.1 &nbsp; &nbsp;  <a href="../calculus/6.1-Integration-by-Parts.html">Integration by Parts
 </a>
-</p>Integrating a product of functions by reexpressing the integral.<p class="chapter-section-body">
+</p>Derivation of Integration by Parts. Discussion of integrating products of functions.<p class="chapter-section-body">
 6.2 &nbsp; &nbsp;  <a href="../calculus/6.2-Trigonometric-Integrals.html">Trigonometric Integrals
 </a>
-</p>Computing trigonometric integrals using trigonometric identities and Integration by Parts.<p class="chapter-section-body">
+</p>Strategy for evaluating integrals with trigonometric functions using trigonometric identities and Integration by Parts. Integrals with sines and cosines, secants and tangents, and cosecants and cotangents. Integrals of products of sines and cosines.<p class="chapter-section-body">
 6.3 &nbsp; &nbsp;  <a href="../calculus/6.3-Trigonometric-Substitution.html">Trigonometric Substitution
 </a>
-</p>Transformation of an integral using trigonometric substitutions. Discussion of cases of substitution and changing of bounds. Geometric motivation.<p class="chapter-section-body">
+</p>Transforming integrals with roots by using trigonometric substitutions. Discussion of cases of substitution and changing of bounds.<p class="chapter-section-body">
 6.4 &nbsp; &nbsp;  <a href="../calculus/6.4-Integration-by-Partial-Fractions.html">Integration by Partial Fractions
 </a>
-</p>Integration by reexpressing a rational expression as the sum of partial fractions. Review of calculating partial fractions. Linear and higher-order partial fractions. <p class="chapter-section-body">
+</p>Integration by reexpressing a rational expression as the sum of partial fractions. Discussion of partial fraction shapes: linear, reducible quadratic, irreducible quadratic, and higher-order irreducible polynomials.<p class="chapter-section-body">
 6.5 &nbsp; &nbsp;  <a href="../calculus/6.5-Improper-Integrals.html">Improper Integrals
 </a>
-</p>Integration of a function over an unbounded region (Type I improper integral) or through an infinite discontinuity (Type II improper integral).  </div>
+</p>Integration of a function over an unbounded region (Type I improper integral) or through an infinite discontinuity (Type II improper integral). Discussing \(p\)-series. Comparison Tests for improper integrals.</div>
 
+
+<h4>Review Exercises</h4>
+<section class="hanging-par-indent">
+<p>
+    <a href="../review-exercises-mcq/Integration Techniques.pdf" target = "_blank">Multiple-Choice Review Exercises</a>
+</p>
+</section>
 </main>
 </main>
 <!-- <footer>
@@ -50,16 +89,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -67,10 +106,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -78,16 +117,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -95,27 +134,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

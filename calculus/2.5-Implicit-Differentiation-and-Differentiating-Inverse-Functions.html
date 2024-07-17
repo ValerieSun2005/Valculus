@@ -61,9 +61,6 @@
             <a href="#inverse-diff" class="page-anchor">Differentiating Inverse Functions</a>
         </li>
         <li>
-            <a href="#deriv-ln" class="page-anchor">Derivatives of Logarithmic Functions</a>
-        </li>
-        <li>
             <a href="#deriv-inv-trig-functions" class="page-anchor">Differentiating Inverse Trigonometric Functions</a>
         </li>
     </ul>
@@ -149,8 +146,8 @@
             Differentiate both sides of the implicit equation with respect to \(x.\)
         </li>
         <li>
-            On the left side, collect all terms containing the factor \(\textderiv{y}{x}.\)
-            Move all other terms to the right side of the equation.
+            On the left side, collect all the terms containing the factor \(\textderiv{y}{x}.\)
+            Move all the other terms to the right side of the equation.
         </li>
         <li>
             Factor \(\textderiv{y}{x}\) out of the left side of the equation.
@@ -436,175 +433,6 @@
     \[\par{\inv f}'(2) = \boxed{\tfrac{1}{4}}\]
 </div>
 
-<h4 id="deriv-ln">Derivatives of Logarithmic Functions</h4>
-<p>
-    In Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
-    we defined the number \(e \approx 2.718\) such that \(\textderiv{}{x}(e^x) = e^x.\)
-    The inverse function of an exponential function is a <i>logarithmic function</i>; that is, 
-    if \(g(x) = b^x\) (where \(b\) is positive), then \(\inv g(x)\) \(= \log_b x.\)
-    The inverse function of \(e^x\) is called the <span class="emph">natural logarithm</span>
-    (abbreviated by the symbol \(\ln\)),
-    a logarithm whose base is the number \(e.\)
-    That is, 
-    \[g(x) = e^x \iffArrow \inv g(x) = \ln x \pd\]
-</p>
-
-<figure class="lnx-graph" id="lnx-graph">
-    <img src="../images/sectionImages/lnx-graph.jpg" alt="Figure 4">
-</figure>
-<style>
-    .lnx-graph::before{
-        content:'FIGURE 4';
-    }
-</style>
-
-<p>
-    <span class="label-emph">Derivative of Natural Logarithm</span>
-    It is easy to obtain the formula for the derivative of \(\ln x.\)
-    Let \(y = \ln x.\)
-    It follows that \(x = e^y,\) so \(\textderiv{x}{y} = e^y.\)
-    Thus, \(\eqref{eq:dx/dy}\) gives 
-    \[\deriv{}{x} \par{\ln x} = \frac{1}{\textderiv{x}{y}} = \frac{1}{e^y} \pd\]
-    But since \(x = e^y,\)
-    we attain 
-    \begin{equation} 
-    \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \label{eq:deriv-ln-x}
-    \end{equation}
-    It is astonishing that the rate of change of the natural logarithm, 
-    which we must define using the irrational number \(e \approx 2.718,\)
-    turns out to be such a clean result—the reciprocal function.
-    \(\eqrefer{eq:deriv-ln-x}\) is extremely useful and is central to many operations we will perform in future chapters.
-    This result is intuitive because \(y = \ln x\)
-    slows in growth as \(x\) increases; \(\eqref{eq:deriv-ln-x}\)
-    corroborates this observation by asserting that the curve's tangents decrease to \(0\) as \(x \to \infty\)
-    (<a href="#lnx-graph">Figure 4</a>).
-    Paradoxically, although its tangents decrease to \(0\) as \(x\) grows,
-    the function \(\ln x\) grows to infinity as \(x\) approaches infinity—that is, 
-    \(\lim_{x \to \infty} \ln x = \infty.\)
-</p>
-<p>
-    A purist may wish to obtain \(\eqref{eq:deriv-ln-x}\) by performing implicit differentiation 
-    on the equation \(x = e^y\) instead of memorizing \(\eqref{eq:dx/dy},\) 
-    which we derived from applying implicit differentiation on <i>any inverse function</i>.
-    The steps are as follows:
-    \[
-    \ba 
-    \deriv{}{x} (x) &= \deriv{}{x} \par{e^y} \nl 
-    1 &= e^y \deriv{y}{x} \nl 
-    \implies \deriv{y}{x} &= \frac{1}{e^y} = \frac{1}{x} \pd
-    \ea 
-    \]
-    Thus, we have officially united \(e^x\) with its twin, \(\ln x.\)
-</p>
-
-<p>
-    <span class="label-emph">Differentiating Logarithms of Any Base</span>
-    \(\eqrefer{eq:deriv-ln-x}\) gives the derivative of a logarithmic function whose base is \(e.\)
-    But if the base is any positive number \(b,\) then the Change of Base Formula for Logarithms 
-    holds that 
-    \[\log_b x = \frac{\ln x}{\ln b} \pd\]
-    Since \(b\) is a constant, \(\ln b\) is a constant.
-    Thus, 
-    \[\deriv{}{x} \par{\log_b x} = \frac{1}{\ln b} \cdot \deriv{}{x} \par{\ln x} \pd\]
-    Then using \(\eqref{eq:deriv-ln-x}\) gives 
-    \begin{equation} 
-    \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \label{eq:deriv-log-b}
-    \end{equation}
-    Observe that \(\eqref{eq:deriv-log-b}\) agrees with \(\eqref{eq:deriv-ln-x}\)
-    because \(\ln b = 1\) if \(b = e.\)
-    This explains why we use the number \(e\) in calculus—so that the derivatives of \(e^x\) and \(\ln x\)
-    are very convenient to use.
-</p>
-
-<p>
-    <span class="label-emph">Differentiating Composite Logarithmic Functions</span>
-    To differentiate the family of functions \(\ln[g(x)],\) we use \(\eqref{eq:deriv-ln-x}\)
-    in combination with the Chain Rule. 
-    Note that the natural logarithm is the outer layer and \(g(x)\) is the inner layer.
-    If \(g\) is differentiable, then the Chain Rule gives 
-    \[\deriv{}{x} \ln[g(x)] = \frac{1}{g(x)} \cdot \deriv{}{x} \parbr{g(x)} \pd\]
-    We rewrite this form to obtain the following beautiful formula:
-    \begin{equation} 
-    \deriv{}{x} \ln[g(x)] = \frac{g'(x)}{g(x)} \pd \label{eq:ln-g(x)-deriv}
-    \end{equation}
-</p>
-
-<div class="box-title">DIFFERENTIATING LOGARITHMIC FUNCTIONS</div>
-<div class="box">
-    The derivative of the <b>natural logarithm</b> is given by 
-    \begin{equation} 
-    \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \eqlabel{eq:deriv-ln-x}
-    \end{equation}
-    If \(b\) is a positive constant, then 
-    \begin{equation} 
-    \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \eqlabel{eq:deriv-log-b}
-    \end{equation}
-    If \(g\) is a differentiable function, then 
-    \begin{equation} 
-    \deriv{}{x} \ln[g(x)] = \frac{g'(x)}{g(x)} \pd \eqlabel{eq:ln-g(x)-deriv}
-    \end{equation}
-</div>
-
-<div class="example-title"> EXAMPLE 5 </div>
-<div class="example">
-    <div class="example-problem">  
-        Find the point on the curve \(y = \ln x\)
-        to which the tangent line is parallel to the line 
-        \(y = 2 + x/3.\)
-    </div>
-</div>
-<button onclick="toggle5()" class="solution-button"></button>
-<div id="solution5" class="solution">
-    <figure class="lnx-parallel-lines" id="lnx-parallel-lines">
-        <img src="../images/sectionImages/lnx-parallel-lines.jpg" alt="Figure 5">
-    </figure>
-    <style>
-        .lnx-parallel-lines::before{
-            content:'FIGURE 5';
-        }
-    </style>
-    The given line has a slope of \(1/3.\)
-    Two lines are parallel to each other if they share the same slope.
-    Hence, we seek the point on \(y = \ln x\)
-    at which the slope is equal to \(1/3.\)
-    Since \(\textderiv{y}{x} = 1/x,\) we see 
-    \[\frac{1}{x} = \frac{1}{3} \implies x = 3 \pd\]
-    Thus, the line \(y = 2 + x/3\) is parallel to the tangent line to \(y = \ln x\) at \(\boxed{(3, \ln 3)}\)
-    (<a href="#lnx-parallel-lines">Figure 5</a>).
-</div>
-
-<div class="example-title"> EXAMPLE 6 </div>
-<div class="example">
-    <div class="example-problem">  
-        \[\deriv{}{x} \par{\log_4 x}\]
-    </div>
-</div>
-<button onclick="toggle6()" class="solution-button"></button>
-<div id="solution6" class="solution">
-    Applying \(\eqref{eq:deriv-log-b}\) with \(b = 4\) shows 
-    \[\deriv{}{x} \par{\log_4 x} = \boxed{\frac{1}{x \ln 4}}\]
-    In words, the derivative is \(1/x\) divided by the natural logarithm of the base \(4.\)
-</div>
-
-<div class="example-title"> EXAMPLE 7 </div>
-<div class="example">
-    <div class="example-problem">  
-        \[\deriv{}{x} \ln \par{4x^2 + \sin x - e^x}\]
-    </div>
-</div>
-<button onclick="toggle7()" class="solution-button"></button>
-<div id="solution7" class="solution">
-    Using \(\eqref{eq:ln-g(x)-deriv}\) with \(g(x) = 4x^2 + \sin x - e^x,\)
-    we see \(g'(x) = 8x + \cos x - e^x\) and  
-    \[
-    \ba 
-    \deriv{}{x} \ln \par{4x^2 + \sin x - e^x}
-    &= \frac{g'(x)}{g(x)} \nl 
-    &= \boxed{\frac{8x + \cos x - e^x}{4x^2 + \sin x - e^x}}
-    \ea 
-    \]
-</div>
-
 <h4 id="deriv-inv-trig-functions">Differentiating Inverse Trigonometric Functions</h4>
 <p>
     We now differentiate the inverse trigonometric functions \(\asin x,\)
@@ -637,14 +465,14 @@
     \]
 </p>
 
-<div class="example-title" id="ex-arctan"> EXAMPLE 8 </div>
+<div class="example-title" id="ex-arctan"> EXAMPLE 5 </div>
 <div class="example">
     <div class="example-problem">  
         \[\deriv{}{x} \par{\atan x}\]
     </div>
 </div>
-<button onclick="toggle8()" class="solution-button"></button>
-<div id="solution8" class="solution">
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
     Let \(y = \atan x.\)
     Because \(\tan\) and \(\atan\) are inverse functions, 
     we see \(x = \tan y\) and \(\textderiv{x}{y}\) \(= \sec^2 y\)
@@ -657,14 +485,14 @@
     \[\deriv{}{x} \par{\atan x} = \boxed{\frac{1}{x^2 + 1}}\]
 </div>
 
-<div class="example-title" id="ex-asec"> EXAMPLE 9 </div>
+<div class="example-title" id="ex-asec"> EXAMPLE 6 </div>
 <div class="example">
     <div class="example-problem">  
         \[\deriv{}{x} \par{\asec x}\]
     </div>
 </div>
-<button onclick="toggle9()" class="solution-button"></button>
-<div id="solution9" class="solution">
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
     Let \(y = \asec x\) so that \(x = \sec y.\)
     We therefore see \(\textderiv{x}{y} = \sec y \tan y\)
     (recall from Section <a href="/Valculus/calculus/2.3-Product-Rule-and-Quotient-Rule.html">2.3</a>), so by \(\eqref{eq:dx/dy}\)
@@ -691,7 +519,7 @@
     Applying the method of inverse differentiation (or implicit differentiation) gives us
     formulas for all six inverse trigonometric functions. \(\eqrefer{eq:deriv-arcsin}\)
     gives the derivative of \(\asin x;\) and we found the derivatives of \(\atan x\) and 
-    \(\asec x\) in  <a href="#ex-arctan">Example 8</a> and <a href="#ex-asec">Example 9</a>, respectively.
+    \(\asec x\) in  <a href="#ex-arctan">Example 5</a> and <a href="#ex-asec">Example 6</a>, respectively.
     Differentiating the remaining three functions are similar, so they are left as exercises in the Exercises section. 
     The following table displays the derivatives of all the inverse trigonometric functions.
 </p>
@@ -747,14 +575,14 @@
     </ol>
 </p>
 
-<div class="example-title"> EXAMPLE 10 </div>
+<div class="example-title"> EXAMPLE 7 </div>
 <div class="example">
     <div class="example-problem">  
         \[\deriv{}{x} \asin \par{\atan x}\]
     </div>
 </div>
-<button onclick="toggle10()" class="solution-button"></button>
-<div id="solution10" class="solution">
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
     The derivative of \(\asin x\) is \(1/\sqrt{1 - x^2},\)
     and the derivative of \(\atan x\) is \(1/(x^2 + 1).\)
     Thus, applying the Chain Rule shows 
@@ -764,28 +592,6 @@
     &= \frac{1}{\sqrt{1 - \par{\atan x}^2}} \cdot \deriv{}{x} \par{\atan x} \nl
     &= \frac{1}{\sqrt{1 - \par{\atan x}^2}} \cdot \frac{1}{x^2 + 1} \nl 
     &= \boxed{\frac{1}{\par{x^2 + 1} \sqrt{1 - \par{\atan x}^2}}}
-    \ea 
-    \]
-</div>
-
-<div class="example-title"> EXAMPLE 11 </div>
-<div class="example">
-    <div class="example-problem">  
-        \[\deriv{}{x} \parbr{\ln \par{x^3 + 2} \asec 2x}\]
-    </div>
-</div>
-<button onclick="toggle11()" class="solution-button"></button>
-<div id="solution11" class="solution">
-    By \(\eqref{eq:ln-g(x)-deriv},\) the derivative of \(\ln \par{x^3 + 2}\) is 
-    \[\frac{1}{x^3 + 2} \cdot \deriv{}{x} \par{x^3 + 2} = \frac{3x^2}{x^3 + 2} \pd\]
-    The derivative of \(\asec 2x\) is 
-    \[\frac{1}{\abs{2x} \sqrt{(2x)^2 - 1}} \cdot \deriv{}{x} \par{2x} = \frac{1}{\abs{x} \sqrt{4x^2 - 1}} \pd\]
-    Hence, the Product Rule gives 
-    \[
-    \ba 
-    \deriv{}{x} \parbr{\ln \par{x^3 + 2} \asec 2x} 
-    &= \frac{3x^2}{x^3 + 2} \cdot \asec 2x + \ln \par{x^3 + 2} \cdot \frac{1}{\abs{x} \sqrt{4x^2 - 1}} \nl 
-    &= \boxed{\frac{3x^2 \asec 2x}{x^3 + 2} + \frac{\ln \par{x^3 + 2}}{\abs{x} \sqrt{4x^2 - 1}}}
     \ea 
     \]
 </div>
@@ -804,8 +610,8 @@
                 Differentiate both sides of the implicit equation with respect to \(x.\)
             </li>
             <li>
-                On the left side, collect all terms containing the factor \(\textderiv{y}{x}.\)
-                Move all other terms to the right side of the equation.
+                On the left side, collect all the terms containing the factor \(\textderiv{y}{x}.\)
+                Move all the other terms to the right side of the equation.
             </li>
             <li>
                 Factor \(\textderiv{y}{x}\) out of the left side of the equation.
@@ -824,23 +630,6 @@
         Alternatively, if \(y\) is an invertible, differentiable function of \(x,\) then 
         \[\deriv{y}{x} = \frac{1}{\textderiv{x}{y}} \pd \eqlabel{eq:dx/dy}\]
         You can either use these formulas or perform implicit differentiation to attain derivatives of inverse functions. 
-    </p>
-    <p>
-        <a href="#deriv-ln" class="summary-anchor">Derivatives of Logarithmic Functions</a>
-        The <span class="emph">natural logarithm</span> is the inverse function of \(e^x.\)
-        We denote the natural logarithm as \(\ln x,\)
-        whose base is \(e\) and derivative is 
-        \begin{equation} 
-        \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \eqlabel{eq:deriv-ln-x}
-        \end{equation}
-        If \(b\) is a positive constant, then 
-        \begin{equation} 
-        \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \eqlabel{eq:deriv-log-b}
-        \end{equation}
-        If \(g\) is a differentiable function, then 
-        \begin{equation} 
-        \deriv{}{x} \ln[g(x)] = \frac{g'(x)}{g(x)} \pd \eqlabel{eq:ln-g(x)-deriv}
-        \end{equation}
     </p>
     <p>
         <a href="#deriv-inv-trig-functions" class="summary-anchor">Differentiating Inverse Trigonometric Functions</a>
@@ -902,16 +691,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -919,10 +708,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -930,16 +719,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -947,27 +736,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

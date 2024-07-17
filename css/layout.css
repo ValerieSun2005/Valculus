@@ -48,6 +48,27 @@ h4{
     text-indent: -5vmin;
 }
 
+.section-links{ /* sections to list links in table-like layout */
+    padding-left: 5vmin;
+    text-indent: -5vmin;
+    font-size: 22px;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+
+.section-links a{
+    font-family: 'Oswald';
+}
+
+.section-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.section-links div{
+    flex: 1;
+}
+
 .link-space{  /* space after an <a> tag */
     margin-right: 1%;
 }
@@ -107,9 +128,10 @@ main figure::before{
 }
 
 main figure::after{
-    font-size: 15px;
+    font-size: 18px;
     color: gray;
     font-style: oblique;
+    letter-spacing: normal;
 }
 
 main img, aside{
@@ -730,7 +752,7 @@ ol li{
 }
 
 .list-mcq > li:before {
-    content: "(" counter(list, upper-alpha) ")  ";
+    content: "(" counter(list, upper-alpha) ")";
     counter-increment: list;
 }
 

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.6: Differentiating Logarithmic Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>2.6: Differentiating Logarithmic Functions</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.6-Differentiating-Logarithmic-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.6-Differentiating-Logarithmic-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Differentiating-Logarithmic-Functions]]]--> 
+<p>
+    In Section <a href="/Valculus/calculus/2.5-Implicit-Differentiation-and-Differentiating-Inverse-Functions.html">2.5</a> used Implicit Differentiation
+    to attain the derivatives of all six inverse trigonometric functions. 
+    In this section we build on this idea by investigating the derivatives of logarithmic functions, 
+    as well as their applications. 
+    In this section we discuss the following topics:    
+    <ul>
+        <li>
+            <a href="#deriv-ln" class="page-anchor">Derivatives of Logarithmic Functions</a>
+        </li>
+        <li>
+            <a href="#logarithmic-differentiation" class="page-anchor">Logarithmic Differentiation</a>
+        </li>
+        <li>
+            <a href="#e-limit" class="page-anchor">The Number \(e\) as a Limit</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="deriv-ln">Derivatives of Logarithmic Functions</h4>
+<p>
+    In Section <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>
+    we defined the number \(e \approx 2.718\) such that \(\textderiv{}{x}(e^x) = e^x.\)
+    The inverse function of the exponential function is the <i>logarithmic function</i>; that is, 
+    if \(g(x) = b^x\) (where \(b\) is positive), then \(\inv g(x)\) \(= \log_b x.\)
+    The inverse function of \(e^x\) is called the <span class="emph">natural logarithm</span>
+    (abbreviated by the symbol \(\ln\)),
+    a logarithm whose base is the number \(e.\)
+    That is, 
+    \[g(x) = e^x \iffArrow \inv g(x) = \ln x \pd\]
+</p>
+
+<figure class="lnx-graph" id="lnx-graph">
+    <img src="../images/sectionImages/lnx-graph.jpg" alt="Figure 1">
+</figure>
+<style>
+    .lnx-graph::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    Letting \(y = \ln x,\)
+    it follows that \(x = e^y.\) 
+    Performing Implicit Differentiation,
+    we get 
+    \[
+    1 = e^y \deriv{y}{x} 
+    \so \deriv{y}{x} = \frac{1}{e^y} \pd 
+    \]
+    But since \(x = e^y,\)
+    we have
+    \begin{equation} 
+    \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \label{eq:deriv-ln-x}
+    \end{equation}
+    It is astonishing that the rate of change of the natural logarithm, 
+    defined using the irrational number \(e \approx 2.718,\)
+    turns out to be such a clean result—the reciprocal function.
+    \(\eqrefer{eq:deriv-ln-x}\) is extremely useful and is central to many operations we will perform in future chapters.
+    This result is intuitive because \(y = \ln x\)
+    slows in growth as \(x\) increases; \(\eqref{eq:deriv-ln-x}\)
+    corroborates this observation by asserting that the curve's tangents decrease to \(0\) as \(x \to \infty\)
+    (<a href="#lnx-graph">Figure 1</a>).
+    Paradoxically, although its tangents decrease to \(0\) as \(x\) grows,
+    the function \(\ln x\) grows to infinity as \(x\) approaches infinity—that is, 
+    \(\lim_{x \to \infty} \ln x = \infty.\)
+</p>
+
+<p>
+    <span class="label-emph">Differentiating Logarithms of Any Base</span>
+    \(\eqrefer{eq:deriv-ln-x}\) gives the derivative of a logarithmic function whose base is \(e.\)
+    But if the base is any positive number \(b,\) then the Change of Base Formula for Logarithms 
+    gives
+    \[\log_b x = \frac{\ln x}{\ln b} \pd\]
+    Since \(b\) is a constant, \(\ln b\) is a constant.
+    Thus, 
+    \[\deriv{}{x} \par{\log_b x} = \frac{1}{\ln b} \cdot \deriv{}{x} \par{\ln x} \pd\]
+    Then using \(\eqref{eq:deriv-ln-x}\) gives 
+    \begin{equation} 
+    \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \label{eq:deriv-log-b}
+    \end{equation}
+    Observe that \(\eqref{eq:deriv-log-b}\) agrees with \(\eqref{eq:deriv-ln-x}\)
+    because \(\ln b = 1\) if \(b = e.\)
+    This explains why we use the number \(e\) in calculus—so that the derivatives of \(e^x\) and \(\ln x\)
+    are convenient to use.
+</p>
+
+<div class="box-title">DIFFERENTIATING LOGARITHMIC FUNCTIONS</div>
+<div class="box">
+    The derivative of the <b>natural logarithm</b> is given by 
+    \begin{equation} 
+    \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \eqlabel{eq:deriv-ln-x}
+    \end{equation}
+    If \(b\) is a positive constant, then 
+    \begin{equation} 
+    \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \eqlabel{eq:deriv-log-b}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the point on the curve \(y = \ln x\)
+        to which the tangent line is parallel to the line 
+        \(y = 2 + x/3.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="lnx-parallel-lines" id="lnx-parallel-lines">
+        <img src="../images/sectionImages/lnx-parallel-lines.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .lnx-parallel-lines::before{
+            content:'FIGURE 2';
+        }
+    </style>
+    The given line has a slope of \(1/3.\)
+    Two lines are parallel to each other if they share the same slope.
+    Hence, we seek the point on \(y = \ln x\)
+    at which the slope is equal to \(1/3.\)
+    Since \(\textderiv{y}{x} = 1/x,\) we see 
+    \[\frac{1}{x} = \frac{1}{3} \implies x = 3 \pd\]
+    Thus, the line \(y = 2 + x/3\) is parallel to the tangent line to \(y = \ln x\) at \(\boxed{(3, \ln 3)}\)
+    (<a href="#lnx-parallel-lines">Figure 2</a>).
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{\log_4 x}\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Applying \(\eqref{eq:deriv-log-b}\) with \(b = 4\) shows 
+    \[\deriv{}{x} \par{\log_4 x} = \boxed{\frac{1}{x \ln 4}}\]
+    In words, the derivative is \(1/x\) divided by the natural logarithm of the base \(4.\)
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \ln \par{x^5 + 7x - 8}\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    By the Chain Rule, 
+    \[
+    \ba 
+    \deriv{}{x} \ln \par{x^5 + 7x - 8} 
+    &= \frac{1}{x^5 + 7x - 8} \deriv{}{x} \par{x^5 + 7x - 8} \nl 
+    &= \boxed{\frac{5x^4 + 7}{x^5 + 7x - 8}}
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-abs-ln-abs"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} (\ln \abs x)\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    Note that 
+    \[
+    \ln \abs x 
+    = 
+    \bc 
+    \ln x & x \gt 0 \nl 
+    \ln(-x) &x \lt 0 \pd
+    \ec 
+    \]
+    Differentiating each definition shows 
+    \[
+    \deriv{}{x} (\ln \abs x) 
+    = 
+    \bc 
+    \dfrac{1}{x} & x \gt 0 \nl 
+    \dfrac{1}{-x} (-1) = \dfrac{1}{x} &x \lt 0 \pd
+    \ec 
+    \]
+</div>
+
+<p>
+    The result of <a href="/Valculus/calculus/2.6-Differentiating-Logarithmic-Functions.html#ex-abs-ln-abs">Example 4</a>
+    is an extension of \(\eqref{eq:deriv-ln-x}\) and should be remembered:
+    \begin{equation} 
+    \deriv{}{x} (\ln \abs x) = \frac{1}{x} \pd \label{eq:deriv-ln|x|}
+    \end{equation}
+    In <a href="/Valculus/Chapters/chapter4.html">Chapter 4</a>
+    we'll need the natural logarithm to be defined for all nonzero values,
+    so \(\eqref{eq:deriv-ln|x|}\) will be important. 
+</p>
+
+<h4 id="logarithmic-differentiation">Logarithmic Differentiation</h4>
+
+<p>
+    To differentiate an expression that contains many powers, products, and quotients,
+    it's often tedious to use just the differentiation rules we have learned so far.
+    But logarithms transform products and quotients into sums and differences, and they convert powers into multiples.
+    Thus, <span class="emph">Logarithmic Differentiation</span>
+    is an easier method for differentiating combinations of powers, multiples, and quotients.
+    Let's refresh ourselves on logarithm laws, shown below. 
+</p>
+
+<div class="box-title">LOGARITHM LAWS</div>
+<div class="box">
+    For all real \(p\) and positive \(a\) and \(b,\) 
+    <ol class="list-alpha">
+        <li>
+            <span>\(\ln(ab) = \ln a + \ln b.\)</span>
+        </li>
+        <li>
+            <span>\(\ds \ln \par{\frac{a}{b}} = \ln a - \ln b.\)</span>
+        </li>
+        <li>
+            <span>\(\ln \par{a^p} = p \ln a.\)</span>
+        </li>
+    </ol>
+</div>
+
+<div class="steps-title"> LOGARITHMIC DIFFERENTIATION </div>
+<div class="steps">
+    To find \(\textDeriv{y}{x}\) for \(y = f(x)\) using Logarithmic Differentiation,
+    use the following steps:
+    <ol class="list-num">
+        <li>
+            Take the natural logarithm of both sides to get  
+            \begin{equation} \label{eq:step-1}
+                \ln y = \ln[f(x)] \pd
+            \end{equation}
+            Use logarithm laws to expand \(\ln[f(x)]\) into a sum or difference of logarithms.
+        </li>
+        <li>
+            Differentiate both sides of \(\eqrefer{eq:step-1}\) implicitly; 
+            the resulting left-hand expression is \((1/y) \, \textderiv{y}{x}.\) 
+        </li>
+        <li>
+            Solve for \(\textDeriv{y}{x}\) by multiplying both sides by \(y = f(x).\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use Logarithmic Differentiation to differentiate
+        \[y = \frac{x^5 \, \sqrt[3]{x^2 + 1}}{\cos^2 x}\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"> </button>
+<div id="solution5" class="solution">
+    It would be highly strenuous to use the Product and Quotient Rules. 
+    Instead, we take the natural logarithm of both sides and apply logarithm laws, as follows:
+    \[
+    \ba 
+    \ln y &= \ln \par{\frac{x^5 \, \sqrt[3]{x^2 + 1}}{\cos^2 x}} \nl 
+    &= \ln \par{x^5} + \ln \par{x^2 + 1}^{1/3} - \ln (\cos^2 x) \nl 
+    &= 5 \ln x + \tfrac{1}{3} \ln \par{x^2 + 1} - 2 \ln (\cos x) \pd
+    \ea 
+    \]
+    Using Implicit Differentiation,
+    we get 
+    \[
+    \ba 
+    \frac{1}{y} \deriv{y}{x} &= \frac{5}{x} + \frac{1}{3} \par{\frac{2x}{x^2 + 1}} - 2 \par{\frac{-\sin x}{\cos x}} \nl 
+    &= \frac{5}{x} + \frac{2x}{3x^2 + 3} + 2 \tan x \pd
+    \ea 
+    \]
+    Solving for \(\textderiv{y}{x}\) and remembering the explicit formula for \(y,\)
+    we attain 
+    \[
+    \ba 
+    \deriv{y}{x} &= y \par{\frac{5}{x} + \frac{2x}{3x^2 + 3} + 2 \tan x} \nl 
+    &= \boxed{\frac{x^5 \, \sqrt[3]{x^2 + 1}}{\cos^2 x} \par{\frac{5}{x} + \frac{2x}{3x^2 + 3} + 2 \tan x}}
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{x^{\sqrt[3] x}}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"> </button>
+<div id="solution6" class="solution">
+    <p>
+        Both the base and power are variable, 
+        so we cannot use the Power Rule.
+        Instead, there are two viable options—using Logarithmic Differentiation 
+        or converting the base to be \(e.\)
+    </p>
+    <p>
+        <span class="label-emph">Method 1</span>
+        Taking the natural logarithm of both sides of \(y = x^{\sqrt[3] x}\) gives 
+        \[
+        \ba 
+        \ln y &= \ln \par{x^{\sqrt[3] x}} \nl 
+        &= \sqrt[3] x \, \ln x \nl 
+        &= x^{1/3} \ln x \pd
+        \ea 
+        \]
+        Performing Implicit Differentiation, we have 
+        \[
+        \ba 
+        \frac{1}{y} \deriv{y}{x} &= \par{\tfrac{1}{3} x^{-2/3}} \ln x + x^{1/3} \par{\frac{1}{x}} \nl 
+        &= \frac{\ln x}{3 x^{2/3}} + \frac{1}{x^{2/3}} \nl 
+        &= \frac{\ln x + 3}{3 x^{2/3}} \pd
+        \ea 
+        \]
+        Solving for \(\textderiv{y}{x}\)
+        (and remembering <nobr>\(y = x^{\sqrt[3] x}\)),</nobr>
+        we attain 
+        \[
+        \ba 
+        \deriv{y}{x} &= y \par{\frac{\ln x + 3}{3 x^{2/3}}} \nl 
+        &= \boxed{x^{\sqrt[3] x} \par{\frac{\ln x + 3}{3 x^{2/3}}}}
+        \ea 
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Method 2</span>
+        Note that 
+        \[x^{\sqrt[3] x} = \par{e^{\ln x}}^{\sqrt[3] x} = e^{\sqrt[3] x \, \ln x} \pd\]
+        By the Chain Rule,
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{\sqrt[3] x \, \ln x}} 
+        &= e^{\sqrt[3] x \, \ln x} \deriv{}{x} \par{\sqrt[3] x \, \ln x} \nl 
+        &= e^{\sqrt[3] x \, \ln x} \par{\frac{\ln x + 3}{3 x^{2/3}}} \nl 
+        &= \boxed{x^{\sqrt[3] x} \par{\frac{\ln x + 3}{3 x^{2/3}}}}
+        \ea 
+        \]
+    </p>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(y = e^{\sin x},\) 
+        then find \(\textDeriv{y}{x}.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"> </button>
+<div id="solution4" class="solution">
+    It's possible to use the Chain Rule to find \(\textDeriv{y}{x},\)
+    but using logarithms is an alternate method.
+    Taking the natural logarithm of both sides of \(y = e^{\sin x}\)
+    and using Property <a href="#prop-c">(c)</a>, we get 
+    \[
+    \ba 
+    \ln y &= \ln \left(e^{\sin x}\right) \nonumber \nl
+    &= \sin(x) \ln e \pd \nonumber \nl
+    \ea 
+    \]
+    Because \(\ln e = 1,\) we have 
+    \begin{equation} \label{eq:ex-1-lny}
+    \ln y = \sin x \pd 
+    \end{equation}
+    We perform Implicit Differentiation with respect to \(x\) to solve for \(\textDeriv{y}{x}.\)
+    Differentiating both sides of \(\eqRefer{eq:ex-1-lny}\) gives 
+    \[\tfrac{1}{y} \deriv{y}{x} = \cos x \pd\]
+    We multiply both sides by \(y = e^{\sin x}\) to isolate \(\textDeriv{y}{x} \col\)
+    \[
+    \ba 
+    \deriv{y}{x} &= \boxed{e^{\sin x} \cos x}
+    \ea 
+    \]  
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(y = x \sin^2 x,\) 
+        then find \(\textDeriv{y}{x}.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"> </button>
+<div id="solution5" class="solution">
+    We take the natural logarithm of both sides and use logarithm properties 
+    <a href="#prop-a">(a)</a> and <a href="#prop-c">(c)</a> to get    
+    \[
+    \ba 
+    \ln y &= \ln \left[x (\sin x)^2 \right] \nl
+    &= \ln x + 2 \ln(\sin x) \pd
+    \ea 
+    \]
+    We differentiate both sides gives with respect to \(x.\)
+    We treat \(y\) as a function of \(x,\) so we use the Chain Rule:
+    \[
+    \ba 
+    \tfrac{1}{y} \deriv{y}{x} &= \frac{1}{x} + \frac{2 \cos x}{\sin x} \pd
+    \ea 
+    \]
+    At this point we solve for \(\textDeriv{y}{x}.\)
+    Multiplying both sides by \(y = x \sin^2 x\) yields 
+    \[
+    \ba     
+    \deriv{y}{x} &= x \sin^2 x \left[\frac{1}{x} + \frac{2 \cos x}{\sin x}\right] \nl 
+    &= \boxed{\sin^2 x + 2 x \cos x \sin x}
+    \ea 
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find \(\textDeriv{y}{x}\) if 
+        \[y = \sqrt{\frac{x^2 \sin x}{e^x}} \pd \]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"> </button>
+<div id="solution6" class="solution">
+    We take the natural logarithm of both sides:
+    \begin{equation} 
+    \ln y = \ln \sqrt{\frac{x^2 \sin x}{e^x}} \pd \label{eq:sqrt}
+    \end{equation}
+    The square root of a value is equivalent to raising the value to the power of \(1/2.\)
+    Thus, logarithm properties allow us to rewrite the right side of \(\eqref{eq:sqrt}\) as 
+    \[
+    \ba 
+    \tfrac{1}{2} \ln \frac{x^2 \sin x}{e^x} &= \tfrac{1}{2} \ln \left[x^2 \sin x\right] - \tfrac{1}{2} \ln(e^x) \nl
+    &= \tfrac{1}{2} \ln(x^2) + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \nl 
+    &= \ln x + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \pd 
+    \ea 
+    \]
+    Hence, \(\eqRefer{eq:sqrt}\) becomes 
+    \[\ln y = \ln x + \tfrac{1}{2} \ln(\sin x) - \tfrac{1}{2} x \pd\]
+    We use Implicit Differentiation with respect to \(x\) to find \(\textDeriv{y}{x} \col\)
+    \[
+    \ba 
+    \tfrac{1}{y} \deriv{y}{x} &= \frac{1}{x} + \frac{\cos x}{2 \sin x} - \frac{1}{2} \nl 
+    \deriv{y}{x} &= y \left[\frac{1}{x} + \frac{\cos x}{2 \sin x} - \frac{1}{2}\right] \nl 
+    &= \boxed{\sqrt{\frac{x^2 \sin x}{e^x}} \left[\frac{1}{x} + \frac{1}{2} \cot x - \frac{1}{2}\right]}
+    \ea 
+    \]
+</div> -->
+
+
+<h4 id="e-limit">The Number \(e\) as a Limit</h4>
+<p>
+    Since \(e\) is prevalent in calculus,
+    we often need to recognize limits as disguised versions of \(e.\)
+    If \(f(x) = \ln x,\) then \(f'(x) = 1/x\) and so \(f'(1) = 1.\)
+    From the limit definition of a derivative, we get
+    \[
+    \ba 
+    f'(1) &= \lim_{h \to 0} \frac{f(1 + h) - f(1)}{h} \nl 
+    &= \lim_{h \to 0} \frac{\ln(1 + h) - \ln 1}{h} \nl 
+    &= \lim_{h \to 0} \frac{1}{h} \ln (1 + h) \nl 
+    &= \lim_{h \to 0} \ln(1 + h)^{1/h} \pd
+    \ea 
+    \]
+    Since \(f'(1) = 1,\) we have
+    \[1 = \lim_{h \to 0} \ln(1 + h)^{1/h} \pd\]
+    Raising \(e\) to the power of each side, 
+    and noting that the exponential function is continuous,
+    we see
+    \begin{align} 
+    e^1 &= e^{\lim_{h \to 0} \ln(1 + h)^{1/h}} \nonum \nl 
+    e &= \lim_{h \to 0} e^{\ln (1 + h)^{1/h}} \nonum \nl 
+    e &= \lim_{h \to 0} (1 + h)^{1/h} \pd \label{eq:e-lim-x}
+    \end{align}
+</p>
+<p>
+    <span class="label-emph">Exponential Function</span>
+    Raising both sides of \(\eqref{eq:e-lim-x}\) to the power of \(x\) shows 
+    \[
+    \ba
+    e^x &= \parbr{\lim_{h \to 0} (1 + h)^{1/h}}^x \nl
+    &= \lim_{h \to 0} (1 + h)^{x/h} \pd 
+    \ea 
+    \]
+    By letting \(n = x/h,\)
+    we note that \(n \to \infty\) as \(h \to 0^+.\)
+    Because \(h = x/n,\) the limit becomes
+    \begin{equation} 
+    e^x = \lim_{n \to \infty} \par{1 + \frac{x}{n}}^n \pd \label{eq:exp-lim}
+    \end{equation}
+    Taking \(x = 1\) gives another limit representation of \(e \col\)
+    \begin{equation} 
+    e = \lim_{n \to \infty} \par{1 + \frac{1}{n}}^n \pd \label{eq:e-lim}
+    \end{equation}
+    This limit is famous,
+    and in <a href="/Valculus/Chapters/chapter8.html">Chapter 8</a>
+    we will investigate this limit's presence in compound interest. 
+</p>
+
+<div class="box-title">EXPONENTIAL FUNCTION DEFINED BY A LIMIT</div>
+<div class="box">
+    The exponential function is given by the limit 
+    \begin{equation} 
+    e^x = \lim_{n \to \infty} \par{1 + \frac{x}{n}}^n \pd \eqlabel{eq:exp-lim}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\lim_{n \to \infty} \par{\frac{5 + 2n}{2n}}^n\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"> </button>
+<div id="solution7" class="solution">
+    Rewriting the limit shows
+    \[
+    \ba 
+    \lim_{n \to \infty} \par{\frac{5 + 2n}{2n}}^n 
+    &= \lim_{n \to \infty} \par{1 + \frac{5/2}{n}}^n \pd
+    \ea 
+    \]
+    By comparison to \(\eqref{eq:exp-lim},\)
+    we see \(x = 5/2.\)
+    So the limit equals \(\boxed{e^{5/2}}.\)
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#deriv-ln" class="summary-anchor">Derivatives of Logarithmic Functions</a>
+        The <span class="emph">natural logarithm</span> is the inverse function of \(e^x.\)
+        We denote the natural logarithm as \(\ln x,\)
+        whose base is \(e\) and derivative is 
+        \begin{equation} 
+        \deriv{}{x} \par{\ln x} = \frac{1}{x} \pd \eqlabel{eq:deriv-ln-x}
+        \end{equation}
+        If \(b\) is a positive constant, then 
+        \begin{equation} 
+        \deriv{}{x} \par{\log_b x} = \frac{1}{x \ln b} \pd \eqlabel{eq:deriv-log-b}
+        \end{equation}
+        The following derivative is also noteworthy:
+        \begin{equation} 
+        \deriv{}{x} (\ln \abs x) = \frac{1}{x} \pd \eqlabel{eq:deriv-ln|x|}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#logarithmic-differentiation" class="summary-anchor">Logarithmic Differentiation</a>
+        Logarithmic Differentiation is an application of Implicit Differentiation 
+        that allows for simpler differentiation of products, quotients, and powers of functions.
+        If \(y = f(x),\) then to find \(\textDeriv{y}{x}\) using Logarithmic Differentiation,
+        use the following steps:
+        <ol class="list-num">
+            <li>
+                Take the natural logarithm of both sides to get  
+                \begin{equation} 
+                    \ln y = \ln[f(x)] \pd
+                    \eqlabel{eq:step-1}
+                \end{equation}
+                Use logarithm laws to expand \(\ln[f(x)]\) into a sum or difference of logarithms.
+            </li>
+            <li>
+                Differentiate both sides of \(\eqrefer{eq:step-1}\) implicitly; 
+                the resulting left-hand expression is \((1/y) \, \textderiv{y}{x}.\) 
+            </li>
+            <li>
+                Solve for \(\textDeriv{y}{x}\) by multiplying both sides by \(y = f(x).\)
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#e-limit" class="summary-anchor">The Number \(e\) as a Limit</a>
+        The exponential function is given by the limit 
+        \begin{equation} 
+        e^x = \lim_{n \to \infty} \par{1 + \frac{x}{n}}^n \pd \eqlabel{eq:exp-lim}
+        \end{equation}
+        The number \(e\) has the following limit representation:
+        \begin{equation} 
+        e = \lim_{n \to \infty} \par{1 + \frac{1}{n}}^n \pd \eqlabel{eq:e-lim}
+        \end{equation}
+    </p>
+</div>
+
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

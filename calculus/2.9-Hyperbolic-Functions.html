@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.9: Hyperbolic Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>2.9: Hyperbolic Functions</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.9-Hyperbolic-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="2.9-Hyperbolic-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Hyperbolic-Functions]]]--> 
+<p>
+    The exponential function has many applications; 
+    one such use involves defining special functions—<i>hyperbolic</i> functions,
+    which have many analogies to trigonometric functions. 
+    In this section we discuss the following topics:
+    <ul>
+        <li>
+            <a href="#defining-hyperbolic-functions" class="page-anchor">Defining Hyperbolic Functions</a>
+        </li>
+        <li>
+            <a href="#inverse-hyperbolic-functions" class="page-anchor">Inverse Hyperbolic Functions</a>
+        </li>
+        <li>
+            <a href="#deriv-hyperbolic-functions" class="page-anchor">Differentiating Hyperbolic Functions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="defining-hyperbolic-functions">Defining Hyperbolic Functions</h4>
+<p>
+    The <span class="emph">hyperbolic sine</span> and <span class="emph">hyperbolic cosine</span> 
+    functions are defined as follows:
+    \begin{align} 
+    \sinh x &= \frac{e^x - e^{-x}}{2} \cma \label{eq:sinh} \nl 
+    \cosh x &= \frac{e^x + e^{-x}}{2} \pd \label{eq:cosh}
+    \end{align}
+    It turns out that hyperbolic sine is odd since \(\sinh(-x) = -\sinh x\)
+    and hyperbolic cosine is even because \(\cosh(-x) = \cosh x.\)
+    Thus, \(\sinh\) is an odd combination of exponential functions 
+    and \(\cosh\) is an even combination of exponential functions.
+    The remaining four hyperbolic functions, 
+    similar to trigonometric functions, 
+    are named <span class="emph">hyperbolic tangent</span>, 
+    <span class="emph">hyperbolic secant</span>, 
+    <span class="emph">hyperbolic cosecant</span>, 
+    and <span class="emph">hyperbolic cotangent</span>. 
+    The following table summarizes the definitions of the six hyperbolic functions.
+</p>
+
+<div class="box-title">DEFINING HYPERBOLIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \sinh x = \frac{e^x - e^{-x}}{2}\)
+                </td>
+                <td>
+                    \(\ds \cosh x = \frac{e^x + e^{-x}}{2}\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \tanh x = \frac{\sinh x}{\cosh x}\)
+                </td>
+                <td>
+                    \(\ds \coth x = \frac{\cosh x}{\sinh x}\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \sech x = \frac{1}{\cosh x}\)
+                </td>
+                <td>
+                    \(\ds \csch x = \frac{1}{\sinh x}\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="figure-center">
+    <figure class="hyperbolic-functions-sinh" id="hyperbolic-functions-sinh">
+        <img src="../images/sectionImages/hyperbolic-functions-sinh.jpg" class="hyperbolic-functions-sinh" alt="Figure 1A">
+    </figure>
+    <figure class="hyperbolic-functions-cosh" id="hyperbolic-functions-cosh">
+        <img src="../images/sectionImages/hyperbolic-functions-cosh.jpg" class="hyperbolic-functions-cosh" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .hyperbolic-functions-sinh::before{
+        content:'FIGURE 1A';
+    }
+
+    .hyperbolic-functions-cosh::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<figure class="hyperbolic-functions-tanh" id="hyperbolic-functions-tanh">
+    <img src="../images/sectionImages/hyperbolic-functions-tanh.jpg" alt="Figure 2">
+</figure>
+<style>
+    .hyperbolic-functions-tanh::before{
+        content:'FIGURE 2';
+    }
+</style>
+
+<p>
+    The graph of \(y = \sinh x\) can be sketched by summing the \(y\)-values 
+    of \(y = \frac{1}{2} e^{x}\) and \(y = -\frac{1}{2} e^{-x},\)
+    as shown by 
+    <a href="#hyperbolic-functions-sinh">Figure 1A</a>.
+    A similar procedure gives the graph of \(y = \cosh x\) 
+    in <a href="#hyperbolic-functions-cosh">Figure 1B</a>.
+    The function \(\sinh x\) has a domain of \(\RR\) and a range of \(\RR,\)
+    whereas \(\cosh x\) has a domain of \(\RR\) and a range of \([1, \infty).\)
+    By the relationship \(\tanh x = (\sinh x)/(\cosh x),\)
+    the graph of \(\tanh\) can be attained by dividing \(y\)-values.
+    Doing so yields the graph in <a href="#hyperbolic-functions-tanh">Figure 2</a>,
+    which has horizontal asymptotes of \(y = -1\) and \(y = 1.\)
+    (In the Exercises section, 
+    you'll use limits to prove the existence of these asymptotes.)
+</p>
+
+<p>
+    Similar reasoning gives the graphs of \(y = \csch x\)
+    (<a href="#hyperbolic-functions-csch">Figure 3A</a>),
+    \(y = \sech x\) 
+    (<a href="#hyperbolic-functions-sech">Figure 3B</a>),
+    and \(y = \coth x\)
+    (<a href="#hyperbolic-functions-coth">Figure 3C</a>).
+    The graphs of \(y = \csch x\) and \(y = \coth x\) each have a vertical asymptote at \(x = 0,\)
+    whereas \(\sech x\) has a domain of \(\RR.\)
+    The graphs of \(y = \csch x\) and \(y = \sech x\) each have a horizontal asymptote of \(y = 0,\)
+    while the graph of \(y = \coth x\) has horizontal asymptotes of \(y = -1\) and \(y = 1.\) 
+</p>
+
+<div class="figure-center">
+    <figure class="hyperbolic-functions-csch" id="hyperbolic-functions-csch">
+        <img src="../images/sectionImages/hyperbolic-functions-csch.jpg" class="hyperbolic-functions-csch" alt="Figure 3A">
+    </figure>
+    <figure class="hyperbolic-functions-sech" id="hyperbolic-functions-sech">
+        <img src="../images/sectionImages/hyperbolic-functions-sech.jpg" class="hyperbolic-functions-sech" alt="Figure 3B">
+    </figure>
+    <figure class="hyperbolic-functions-coth" id="hyperbolic-functions-coth">
+        <img src="../images/sectionImages/hyperbolic-functions-coth.jpg" class="hyperbolic-functions-coth" alt="Figure 3C">
+    </figure>
+</div>
+
+<style>
+    .hyperbolic-functions-csch::before{
+        content:'FIGURE 3A';
+    }
+
+    .hyperbolic-functions-sech::before{
+        content:'FIGURE 3B';
+    }
+
+    .hyperbolic-functions-coth::before{
+        content:'FIGURE 3C';
+    }
+</style>
+
+<div class="box-title">HYPERBOLIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>Domain</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        
+        <!-- sinh -->
+        <tr>
+            <td>
+                \(\sinh x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+        </tr>
+
+        <!-- cosh -->
+        <tr>
+            <td>
+                \(\cosh x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \([1, \infty)\)
+            </td>
+        </tr>
+
+        <!-- tanh -->
+        <tr>
+            <td>
+                \(\tanh x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \((-1, 1)\)
+            </td>
+        </tr>
+
+        <!-- csch -->
+        <tr>
+            <td>
+                \(\csch x\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+        </tr>
+
+        <!-- sech -->
+        <tr>
+            <td>
+                \(\sech x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \((0, 1]\)
+            </td>
+        </tr>
+
+        <!-- coth -->
+        <tr>
+            <td>
+                \(\coth x\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+            <td>
+                \((-\infty, -1) \cup (1, \infty)\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="example-title" id="ex-cosh-sinh-1"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that 
+        \(\cosh^2 x - \sinh^2 x = 1.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    Using the definitions in 
+    \(\eqref{eq:sinh}\) and 
+    \(\eqref{eq:cosh},\) we see 
+    \[
+    \ba 
+    \cosh^2 x - \sinh^2 x &= \par{\frac{e^x + e^{-x}}{2}}^2 - \par{\frac{e^x - e^{-x}}{2}}^2 \nl 
+    &= \frac{e^{2x} + 2 \par{e^x} \par{e^{-x}} + e^{-2x}}{4} - \frac{e^{2x} - 2 \par{e^x} \par{e^{-x}} + e^{-2x}}{4} \nl 
+    &= \frac{4 \par{e^x} \par{e^{-x}}}{4} \nl 
+    &= e^{x - x} = 1 \pd
+    \ea 
+    \]
+</div>
+
+<p>
+    <span class="label-emph">Geometric Interpretation</span>
+    If \(t\) is any real number, then the point \((\cos t, \sin t)\)
+    is on the Unit Circle \(x^2 + y^2 = 1\)
+    since \(\cos^2 t + \sin^2 t = 1.\)
+    In this interpretation, \(t\) is the radian measure of
+    the angle subtended by the positive \(x\)-axis and segment \(\segment{OP}\)
+    in <a href="#hyperbolic-functions-unit-circle">Figure 4A</a>. 
+    Why are hyperbolic functions given their name?
+    Let's apply similar geometric reasoning:
+    Consider the hyperbola \(x^2 - y^2 = 1.\)
+    By analogy to the identity \(\cosh^2 t - \sinh^2 t\) \(= 1\)
+    (the result of <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-cosh-sinh-1">Example 1</a>), 
+    we let \(x = \cosh t\) and \(y = \sinh t.\)
+    Since \(\cosh t \geq 1,\) the point \(P(\cosh t, \sinh t)\) lies on the right branch of the hyperbola.
+    Instead of \(t\) representing an angle, 
+    it happens to be <i>double</i> 
+    the area of the region bounded by the hyperbola's right branch, the \(x\)-axis, 
+    and segment \(\overline{OP}.\)
+    (See <a href="#hyperbolic-functions-hyperbola">Figure 4B</a>.) 
+</p>
+
+<div class="figure-center">
+    <figure class="hyperbolic-functions-unit-circle" id="hyperbolic-functions-unit-circle">
+        <img src="../images/sectionImages/hyperbolic-functions-unit-circle.jpg" class="hyperbolic-functions-unit-circle" alt="Figure 4A">
+    </figure>
+    <figure class="hyperbolic-functions-hyperbola" id="hyperbolic-functions-hyperbola">
+        <img src="../images/sectionImages/hyperbolic-functions-hyperbola.jpg" class="hyperbolic-functions-hyperbola" alt="Figure 4B">
+    </figure>
+</div>
+
+<style>
+    .hyperbolic-functions-unit-circle::before{
+        content:'FIGURE 4A';
+    }
+
+    .hyperbolic-functions-hyperbola::before{
+        content:'FIGURE 4B';
+    }
+</style>
+
+<p>
+    Hyperbolic identities are highly analogous to trigonometric identities. 
+    We list some identities below, whose proofs are left as exercises.
+</p>
+
+<div class="box-title">HYPERBOLIC IDENTITIES</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\sinh(-x) = -\sinh x\)
+                </td>
+                <td>
+                    \(\cosh(-x) = \cosh x\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\cosh^2 x - \sinh^2 x = 1\)
+                </td>
+                <td>
+                    \(\tanh^2 x + \sechPower{2} x = 1\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\coth^2 x - \cschPower{2} x = 1\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\sinh(x + y) = \sinh x \cosh y + \cosh x \sinh y\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\cosh(x + y) = \cosh x \cosh y + \sinh x \sinh y\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 id="inverse-hyperbolic-functions">Inverse Hyperbolic Functions</h4>
+<p>
+    The graphs of \(y = \sinh x\) and \(y = \tanh x\) are one-to-one 
+    since they pass the Horizontal Line Test. 
+    We denote their inverse functions as \(\asinh x\) and \(\atanh x,\)
+    respectively.
+    Yet the graph of \(y = \cosh x\) only becomes one-to-one 
+    if we restrict its domain to \([0, \infty).\)
+    The inverse of this restricted function is the 
+    inverse hyperbolic cosine function, \(\acosh x.\)
+    The graphs of \(y = \asinh x,\) \(y = \acosh x,\) and \(y = \atanh x\)
+    are shown in 
+    <a href="#hyperbolic-functions-arsinh">Figure 5A</a>, 
+    <a href="#hyperbolic-functions-arcosh">Figure 5B</a>, and 
+    <a href="#hyperbolic-functions-artanh">Figure 5C</a>, respectively.
+    Likewise, the graphs of \(y = \csch x\) and \(y = \coth x\)
+    are one-to-one, 
+    while the graph of \(y = \sech x\) becomes one-to-one if its 
+    domain is restricted to \([0, \infty).\)
+    The same logic gives the graphs of \(y = \acsch x\)
+    (<a href="#hyperbolic-functions-arcsch">Figure 5D</a>), 
+    \(y = \asech x\)
+    (<a href="#hyperbolic-functions-arsech">Figure 5E</a>),
+    and 
+    \(y = \acoth x\)
+    (<a href="#hyperbolic-functions-arcoth">Figure 5F</a>).
+</p>
+
+<div class="figure-center">
+    <figure class="hyperbolic-functions-arsinh" id="hyperbolic-functions-arsinh">
+        <img src="../images/sectionImages/hyperbolic-functions-arsinh.jpg" class="hyperbolic-functions-arsinh" alt="Figure 5A">
+    </figure>
+    <figure class="hyperbolic-functions-arcosh" id="hyperbolic-functions-arcosh">
+        <img src="../images/sectionImages/hyperbolic-functions-arcosh.jpg" class="hyperbolic-functions-arcosh" alt="Figure 5B">
+    </figure>
+    <figure class="hyperbolic-functions-artanh" id="hyperbolic-functions-artanh">
+        <img src="../images/sectionImages/hyperbolic-functions-artanh.jpg" class="hyperbolic-functions-artanh" alt="Figure 5C">
+    </figure>
+</div>
+
+<style>
+    .hyperbolic-functions-arsinh::before{
+        content:'FIGURE 5A';
+    }
+
+    .hyperbolic-functions-arcosh::before{
+        content:'FIGURE 5B';
+    }
+
+    .hyperbolic-functions-artanh::before{
+        content:'FIGURE 5C';
+    }
+</style>
+
+<div class="figure-center">
+    <figure class="hyperbolic-functions-arcsch" id="hyperbolic-functions-arcsch">
+        <img src="../images/sectionImages/hyperbolic-functions-arcsch.jpg" class="hyperbolic-functions-arcsch" alt="Figure 5D">
+    </figure>
+    <figure class="hyperbolic-functions-arsech" id="hyperbolic-functions-arsech">
+        <img src="../images/sectionImages/hyperbolic-functions-arsech.jpg" class="hyperbolic-functions-arsech" alt="Figure 5E">
+    </figure>
+    <figure class="hyperbolic-functions-arcoth" id="hyperbolic-functions-arcoth">
+        <img src="../images/sectionImages/hyperbolic-functions-arcoth.jpg" class="hyperbolic-functions-arcoth" alt="Figure 5F">
+    </figure>
+</div>
+
+<style>
+    .hyperbolic-functions-arcsch::before{
+        content:'FIGURE 5D';
+    }
+
+    .hyperbolic-functions-arsech::before{
+        content:'FIGURE 5E';
+    }
+
+    .hyperbolic-functions-arcoth::before{
+        content:'FIGURE 5F';
+    }
+</style>
+
+<div class="box-title">INVERSE HYPERBOLIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Function</th>
+                <th>Domain</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        
+        <!-- sinh^-1 -->
+        <tr>
+            <td>
+                \(\asinh x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+        </tr>
+
+        <!-- cosh^-1 -->
+        <tr>
+            <td>
+                \(\acosh x\)
+            </td>
+            <td>
+                \([1, \infty)\)
+            </td>
+            <td>
+                \([0, \infty)\)
+            </td>
+        </tr>
+
+        <!-- tanh^-1 -->
+        <tr>
+            <td>
+                \(\atanh x\)
+            </td>
+            <td>
+                \((-1, 1)\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+        </tr>
+
+        <!-- csch^-1 -->
+        <tr>
+            <td>
+                \(\acsch x\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+        </tr>
+
+        <!-- sech^-1 -->
+        <tr>
+            <td>
+                \(\asech x\)
+            </td>
+            <td>
+                \((0, 1]\)
+            </td>
+            <td>
+                \([0, \infty)\)
+            </td>
+        </tr>
+
+        <!-- coth^-1 -->
+        <tr>
+            <td>
+                \(\acoth x\)
+            </td>
+            <td>
+                \((-\infty, -1) \cup (1, \infty)\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="example-title" id="ex-asin-ln"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that 
+        \[\asinh x = \ln \par{x + \sqrt{x^2 + 1}} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Let \(y = \asinh x;\)
+    then \(x = \sinh y\) and so by \(\eqref{eq:sinh}\)
+    \[x = \frac{e^y - e^{-y}}{2} \pd\]
+    Our objective is to solve for \(y\) in terms of \(x.\)
+    Multiplying both sides by \(2e^y\) gives 
+    \[
+    \ba 
+    2x e^y &= e^{2y} - 1 \nl 
+    e^{2y} - 2x e^y - 1 &= 0 \pd
+    \ea 
+    \]
+    This equation is a quadratic equation in terms of \(e^y \col\)
+    \[\par{e^y}^2 - 2x \par{e^y} - 1 = 0 \pd\]
+    So by the Quadratic Formula, 
+    \[
+    \ba 
+    e^y &= \frac{2x \pm \sqrt{4x^2 + 4}}{2} \nl 
+    &= x \pm \sqrt{x^2 + 1} \pd
+    \ea 
+    \]
+    Since \(e^y \gt 0\) and \(x - \sqrt{x^2 + 1} \lt 0\)
+    (because <nobr>\(x \lt \sqrt{x^2 + 1}\)),</nobr>
+    the negative solution is extraneous.
+    Hence, we stand with 
+    \[e^y = x + \sqrt{x^2 + 1} \pd\]
+    Taking the natural logarithm of both sides yields 
+    \[
+    \ba 
+    y &= \ln \par{x + \sqrt{x^2 + 1}} \nl 
+    \implies \asinh x &= \ln \par{x + \sqrt{x^2 + 1}} \pd
+    \ea 
+    \]
+</div>
+
+<p>
+    Applying the same procedure of 
+    <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-asin-ln">Example 2</a>
+    enables us to express the other inverse hyperbolic functions 
+    in terms of the natural logarithm. 
+    Because hyperbolic functions are defined in terms of the exponential function,
+    it's intuitive that inverse hyperbolic functions can be expressed in terms of the natural logarithm. 
+    The cases are listed in the following table. 
+</p>    
+
+<div class="box-title" id="inv-hyperbolic-ln">INVERSE HYPERBOLIC FUNCTIONS IN TERMS OF THE NATURAL LOGARITHM</div>
+<div class="box">
+    <table class="table-full-width table-tall">
+        <thead>
+            <tr>
+                <th>Identity</th>
+                <th>Domain</th>
+            </tr>
+        </thead>
+        
+        <!-- sinh^-1 -->
+        <tr>
+            <td>
+                \(\ds \asinh x = \ln \par{x + \sqrt{x^2 + 1}}\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+        </tr>
+
+        <!-- sinh^-1 -->
+        <tr>
+            <td>
+                \(\ds \acosh x = \ln \par{x + \sqrt{x^2 - 1}}\)
+            </td>
+            <td>
+                \([1, \infty)\)
+            </td>
+        </tr>
+
+        <!-- tanh^-1 -->
+        <tr>
+            <td>
+                \(\ds \atanh x = \tfrac{1}{2} \ln \par{\frac{1 + x}{1 - x}}\)
+            </td>
+            <td>
+                \((-1, 1)\)
+            </td>
+        </tr>
+
+        <!-- csch^-1 -->
+        <tr>
+            <td>
+                \(\ds \acsch x = \ln \par{\frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x}}\)
+            </td>
+            <td>
+                \((-\infty, 0) \cup (0, \infty)\)
+            </td>
+        </tr>
+
+        <!-- sech^-1 -->
+        <tr>
+            <td>
+                \(\ds \asech x = \ln \par{\frac{1 + \sqrt{1 - x^2}}{x}}\)
+            </td>
+            <td>
+                \((0, 1]\)
+            </td>
+        </tr>
+
+        <!-- coth^-1 -->
+        <tr>
+            <td>
+                \(\ds \acoth x = \tfrac{1}{2} \ln \par{\frac{x + 1}{x - 1}}\)
+            </td>
+            <td>
+                \((-\infty, -1) \cup (1, \infty)\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the exact value of 
+        \[\frac{\asinh 4 + 2 \, \atanh \frac{1}{2}}{\acosh 5} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    By <a href="#inv-hyperbolic-ln">Inverse Hyperbolic Functions in Terms of the Natural Logarithm</a>,
+    \[
+    \ba
+    \asinh 4 &= \ln \par{4 + \sqrt{4^2 + 1}} = \ln \par{4 + \sqrt{17}} \nl
+    2 \, \atanh \tfrac{1}{2} &= 2 \cdot \tfrac{1}{2} \ln \par{\frac{1 + \frac{1}{2}}{1 - \frac{1}{2}}} = \ln 3 \cma \nl
+    \acosh 5 &= \ln \par{5 + \sqrt{5^2 - 1}} = \ln \par{5 + \sqrt{24}} \pd 
+    \ea
+    \]
+    Hence,
+    \[
+    \ba 
+    \frac{\asinh 4 + 2 \, \atanh \frac{1}{2}}{\acosh 5} &= \frac{\ln \par{4 + \sqrt{17}} + \ln 3}{\ln \par{5 + \sqrt{24}}} \nl 
+    &= \boxed{\frac{\ln \par{12 + 3 \sqrt{17}}}{\ln \par{5 + \sqrt{24}}}}
+    \ea 
+    \]
+</div>
+
+<h4 id="deriv-hyperbolic-functions">Differentiating Hyperbolic Functions</h4>
+<p>
+    It's easy to differentiate hyperbolic functions by using the definitions 
+    of \(\eqref{eq:sinh}\)
+    and \(\eqref{eq:cosh}.\)
+    For example,
+    \[\deriv{}{x} (\sinh x) = \deriv{}{x} \par{\frac{e^x - e^{-x}}{2}} = \frac{e^x + e^{-x}}{2} = \cosh x \pd\]
+    Applying a similar procedure yields the following derivatives,
+    which show many similarities to the derivatives of trigonometric functions.
+    (Beware of the signs in some derivatives, however.)
+</p>
+
+<div class="box-title" id="deriv-hyperbolic-funcs">DERIVATIVES OF HYPERBOLIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\sinh x} = \cosh x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\cosh x} = \sinh x\)
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\tanh x} = \sechPower{2} x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\coth x} = -\cschPower{2} x\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\sech x} = -\sech x \tanh x\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\csch x} = -\csch x \coth x\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \tanh \par{4 \sqrt x \,}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    By the Chain Rule and <a href="#deriv-hyperbolic-funcs">Derivatives of Hyperbolic Functions</a>,
+    \[
+    \ba 
+    \deriv{}{x} \tanh \par{4 \sqrt x \,} 
+    &= \sechPower{2} \par{4 \sqrt x \,} \deriv{}{x} \par{4 \sqrt x \,} \nl 
+    &= \boxed{\frac{2 \, \sechPower{2} \par{4 \sqrt x \,}}{\sqrt x}}
+    \ea 
+    \]
+</div>
+
+<div class="example-title" id="ex-deriv-asinh"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} (\asinh x)\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <aside class="box-remark">
+        The same result can be attained by differentiating 
+        the right side of
+        \[\asinh x = \ln \par{x + \sqrt{x^2 + 1}} \pd\]
+    </aside>
+    Letting \(y = \asinh x,\) we have \(x = \sinh y.\)
+    Using Implicit Differentiation, 
+    we differentiate both sides with respect to \(x\) to attain 
+    \[
+    \ba
+    1 &= \cosh y \deriv{y}{x} \nl
+    \implies \deriv{y}{x} &= \frac{1}{\cosh y} \pd
+    \ea
+    \]
+    But since \(\cosh^2 y - \sinh^2 y = 1,\) 
+    it follows that \(\cosh^2 y = 1 + \sinh^2 y\) \(= 1 + x^2.\)
+    Because \(\cosh y \geq 1,\)
+    we have \(\cosh y = \sqrt{1 + x^2}\) and so 
+    \[\deriv{y}{x} = \boxed{\frac{1}{\sqrt{1 + x^2}}}\]
+</div>
+
+<p>
+    The procedure in <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html#ex-deriv-asinh">Example 5</a>
+    can be applied to the other inverse hyperbolic functions. 
+    Doing so gives the following list of derivatives;
+    the remaining proofs are left as exercises.
+</p>
+
+<aside class="box-remark">
+    The derivative functions of \(\atanh x\)
+    and \(\acoth x\) are identical. 
+    But \(\atanh x\) is defined for \(\abs x \lt 1,\)
+    while \(\acoth x\) is defined for \(\abs x \gt 1.\)
+</aside>
+
+<div class="box-title" id="deriv-inv-hyperbolic">DERIVATIVES OF INVERSE HYPERBOLIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-list">
+        <tbody>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\asinh x} = \frac{1}{\sqrt{1 + x^2}}\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\acosh x} = \frac{1}{\sqrt{x^2 - 1}}\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\atanh x} = \frac{1}{1 - x^2}\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\acoth x} = \frac{1}{1 - x^2}\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \(\ds \deriv{}{x} \par{\asech x} = -\frac{1}{x \sqrt{1 - x^2}}\)
+                </td>
+                <td>
+                    \(\ds \deriv{}{x} \par{\acsch x} = -\frac{1}{\abs x \sqrt{1 + x^2}}\)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        \[\deriv{}{x} \par{\frac{\atanh x}{x^4}}\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    Using the Quotient Rule in conjunction with 
+    <a href="#deriv-inv-hyperbolic">Derivatives of Inverse Hyperbolic Functions</a> gives 
+    \[
+    \ba 
+    \deriv{}{x} \par{\frac{\atanh x}{x^4}}
+    &= \frac{\ds \par{\frac{1}{1 - x^2}} x^4 - \par{4x^3} \, \atanh x}{\par{x^4}^2} \nl 
+    &= \boxed{\frac{1}{x^4 - x^6} - \frac{4 \, \atanh x}{x^5}}
+    \ea 
+    \]
+</div>
+
+<figure class="hyperbolic-functions-catenary" id="hyperbolic-functions-catenary">
+    <img src="../images/sectionImages/hyperbolic-functions-catenary.jpg" alt="Figure 6">
+</figure>
+<style>
+    .hyperbolic-functions-catenary::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Applications of Hyperbolic Functions</span>
+    The most famous application of hyperbolic functions is the 
+    <span class="emph">catenary</span>, 
+    the shape of a cable hanging freely under the influence of gravity.
+    This shape is not a parabola!
+    It turns out to be the curve 
+    \[
+    y = a \cosh \par{\frac{x}{a}} + c
+    \]
+    for constants \(a\) and \(c.\)
+    (See <a href="#hyperbolic-functions-catenary">Figure 6</a>.)
+    Hanging chains, power lines, and even spider webs all take the shape of a catenary.
+    Many landmark buildings were designed using a catenary 
+    (see the Exercises section).
+    The hyperbolic tangent function arises in another application: 
+    the speed of an ocean wave whose wavelength is \(L\)
+    and depth is \(d\) is given by 
+    \[v = \sqrt{\frac{gL}{2 \pi} \, \tanh \par{\frac{2 \pi d}{L}}} \cma\]
+    where \(g\) is the acceleration due to gravity, \(9.8\) meters per second squared.
+    (See <a href="#hyperbolic-functions-ocean-wave">Figure 7</a>.)
+</p>
+
+<figure class="hyperbolic-functions-ocean-wave figure-center-one" id="hyperbolic-functions-ocean-wave">
+    <img src="../images/sectionImages/hyperbolic-functions-ocean-wave.jpg" alt="Figure 7">
+</figure>
+<style>
+    .hyperbolic-functions-ocean-wave::before{
+        content:'FIGURE 7';
+    }
+</style>
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-hyperbolic-functions" class="summary-anchor">Defining Hyperbolic Functions</a>
+        The <span class="emph">hyperbolic sine</span> function is an odd combination of the exponential function, 
+        whereas the <span class="emph">hyperbolic cosine</span> function is an even combination of the exponential function.
+        These functions are defined as follows:
+        \begin{align} 
+        \sinh x &= \frac{e^x - e^{-x}}{2} \cma \eqlabel{eq:sinh} \nl 
+        \cosh x &= \frac{e^x + e^{-x}}{2} \pd \eqlabel{eq:cosh}
+        \end{align}
+        The other four hyperbolic functions—<span class="emph">hyperbolic tangent</span>, 
+        <span class="emph">hyperbolic secant</span>, 
+        <span class="emph">hyperbolic cosecant</span>, 
+        and <span class="emph">hyperbolic cotangent</span>—are defined as follows. 
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \tanh x = \frac{\sinh x}{\cosh x}\)
+                    </td>
+                    <td>
+                        \(\ds \coth x = \frac{\cosh x}{\sinh x}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \sech x = \frac{1}{\cosh x}\)
+                    </td>
+                    <td>
+                        \(\ds \csch x = \frac{1}{\sinh x}\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        The following table lists the properties of each function. 
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            
+            <!-- sinh -->
+            <tr>
+                <td>
+                    \(\sinh x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- cosh -->
+            <tr>
+                <td>
+                    \(\cosh x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \([1, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- tanh -->
+            <tr>
+                <td>
+                    \(\tanh x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \((-1, 1)\)
+                </td>
+            </tr>
+    
+            <!-- csch -->
+            <tr>
+                <td>
+                    \(\csch x\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- sech -->
+            <tr>
+                <td>
+                    \(\sech x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \((0, 1]\)
+                </td>
+            </tr>
+    
+            <!-- coth -->
+            <tr>
+                <td>
+                    \(\coth x\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, -1) \cup (1, \infty)\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        Hyperbolic functions satisfy identities that are analogous to 
+        those of trigonometric functions. 
+        Some identities are shown below. 
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\sinh(-x) = -\sinh x\)
+                    </td>
+                    <td>
+                        \(\cosh(-x) = \cosh x\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\cosh^2 x - \sinh^2 x = 1\)
+                    </td>
+                    <td>
+                        \(\tanh^2 x + \sechPower{2} x = 1\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\coth^2 x - \cschPower{2} x = 1\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\sinh(x + y) = \sinh x \cosh y + \cosh x \sinh y\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\cosh(x + y) = \cosh x \cosh y + \sinh x \sinh y\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        <a href="#inverse-hyperbolic-functions" class="summary-anchor">Inverse Hyperbolic Functions</a>
+        The graphs of all six hyperbolic functions except \(\cosh\) and \(\sech\) are one-to-one.
+        By restricting the domains of \(\cosh\) and \(\sech,\)
+        we attain the following six inverse hyperbolic functions. 
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            
+            <!-- sinh^-1 -->
+            <tr>
+                <td>
+                    \(\asinh x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- cosh^-1 -->
+            <tr>
+                <td>
+                    \(\acosh x\)
+                </td>
+                <td>
+                    \([1, \infty)\)
+                </td>
+                <td>
+                    \([0, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- tanh^-1 -->
+            <tr>
+                <td>
+                    \(\atanh x\)
+                </td>
+                <td>
+                    \((-1, 1)\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- csch^-1 -->
+            <tr>
+                <td>
+                    \(\acsch x\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- sech^-1 -->
+            <tr>
+                <td>
+                    \(\asech x\)
+                </td>
+                <td>
+                    \((0, 1]\)
+                </td>
+                <td>
+                    \([0, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- coth^-1 -->
+            <tr>
+                <td>
+                    \(\acoth x\)
+                </td>
+                <td>
+                    \((-\infty, -1) \cup (1, \infty)\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        Inverse hyperbolic functions can be expressed in terms of the natural logarithm. 
+        <table class="table-full-width table-tall">
+            <thead>
+                <tr>
+                    <th>Identity</th>
+                    <th>Domain</th>
+                </tr>
+            </thead>
+            
+            <!-- sinh^-1 -->
+            <tr>
+                <td>
+                    \(\ds \asinh x = \ln \par{x + \sqrt{x^2 + 1}}\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- sinh^-1 -->
+            <tr>
+                <td>
+                    \(\ds \acosh x = \ln \par{x + \sqrt{x^2 - 1}}\)
+                </td>
+                <td>
+                    \([1, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- tanh^-1 -->
+            <tr>
+                <td>
+                    \(\ds \atanh x = \tfrac{1}{2} \ln \par{\frac{1 + x}{1 - x}}\)
+                </td>
+                <td>
+                    \((-1, 1)\)
+                </td>
+            </tr>
+    
+            <!-- csch^-1 -->
+            <tr>
+                <td>
+                    \(\ds \acsch x = \ln \par{\frac{1}{x} + \frac{\sqrt{1 + x^2}}{\abs x}}\)
+                </td>
+                <td>
+                    \((-\infty, 0) \cup (0, \infty)\)
+                </td>
+            </tr>
+    
+            <!-- sech^-1 -->
+            <tr>
+                <td>
+                    \(\ds \asech x = \ln \par{\frac{1 + \sqrt{1 - x^2}}{x}}\)
+                </td>
+                <td>
+                    \((0, 1]\)
+                </td>
+            </tr>
+    
+            <!-- coth^-1 -->
+            <tr>
+                <td>
+                    \(\ds \acoth x = \tfrac{1}{2} \ln \par{\frac{x + 1}{x - 1}}\)
+                </td>
+                <td>
+                    \((-\infty, -1) \cup (1, \infty)\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#deriv-hyperbolic-functions" class="summary-anchor">Differentiating Hyperbolic Functions</a>
+        The derivative formulas for the hyperbolic functions 
+        are analogous to those for trigonometric functions, 
+        with a few differences in signs. 
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\sinh x} = \cosh x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\cosh x} = \sinh x\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\tanh x} = \sechPower{2} x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\coth x} = -\cschPower{2} x\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\sech x} = -\sech x \tanh x\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\csch x} = -\csch x \coth x\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        The derivatives of the inverse hyperbolic functions 
+        are shown below. 
+        <table class="table-list">
+            <tbody>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\asinh x} = \frac{1}{\sqrt{1 + x^2}}\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\acosh x} = \frac{1}{\sqrt{x^2 - 1}}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\atanh x} = \frac{1}{1 - x^2}\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\acoth x} = \frac{1}{1 - x^2}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\asech x} = -\frac{1}{x \sqrt{1 - x^2}}\)
+                    </td>
+                    <td>
+                        \(\ds \deriv{}{x} \par{\acsch x} = -\frac{1}{\abs x \sqrt{1 + x^2}}\)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

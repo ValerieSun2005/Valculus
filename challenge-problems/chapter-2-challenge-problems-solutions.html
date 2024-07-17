@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter 2 Challenge Problems Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>Chapter 2 Challenge Problems Solutions</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="chapter-2-challenge-problems.html">Problems <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f(x) = x^2\) and \(g(x) = -x^2 - C.\)
+        Find the value of \(C\) such that the line tangent to \(f\)
+        at \(x = 2\) is also tangent to \(g.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="deriv-4x-4-tan" id="deriv-4x-4-tan">
+<img alt="deriv-4x-4-tan.jpg" src="../images/sectionImages/deriv-4x-4-tan.jpg"/>
+</figure>
+        The word <i>tangent</i> means that the line intersects \(g(x)\)
+        at \(a\) with slope \(g'(a).\)
+        We anticipate that the tangent line to \(f\) at \(x = 2\) is also tangent to \(g\) in the third quadrant. 
+        So we are considering <i>only one tangent line</i>. 
+        We see \(f(2) = 4\) and \(f'(2) = 4,\)
+        so an equation of this tangent line is 
+        \[y - 4 = 4(x - 2) \or y = 4x - 4 \pd\]
+        This line has slope \(4\) and must be tangent to \(g(x) = -x^2 - C,\)
+        whose derivative is \(g'(x) = -2x.\)
+        Equating slopes shows 
+        \[-2x = 4 \implies x = -2 \pd\]
+        Thus, the line \(y = 4x - 4\) is tangent to \(f\) at \(x = 2\)
+        and tangent to \(g\) at \(x = -2.\)
+        The word <i>tangent</i> means that this line also intersects \(g(x)\) at \(x = -2.\)
+        When \(x = -2,\) the line's \(y\)-value is  
+        \[4(-2) - 4 = -12 \cma\]
+        so \(g(-2) = -12.\)
+        Thus, we see
+        \[g(-2) = -(-2)^2 - C = -12 \implies \boxed{C = 8}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        At some \(x,\) suppose that the slope of the tangent to \(f(x)\) equals the 
+        slope of the tangent to \(1/f(x).\) 
+        What is this slope?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The derivative of the reciprocal function is 
+        \[-\frac{f'(x)}{[f(x)]^2} \pd\]
+        If the slope to \(f\) equals the slope to \(1/f,\)
+        then their derivatives are equal:
+        \[f'(x) = -\frac{f'(x)}{[f(x)]^2} \pd\]
+        The only solution to this equation is \(f'(x) = 0.\)
+        If we disregard this solution and instead cancel the <nobr>\(f'(x)\)</nobr>'s on both sides, 
+        then we get 
+        \[
+        \ba 
+        1 &amp;= -\frac{1}{[f(x)]^2} \nl 
+        [f(x)]^2 &amp;= -1 \cma
+        \ea 
+        \]
+        which has no real solutions. 
+        Hence, the only possible value of the slope is \(\boxed{0}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(f\) is differentiable at \(a,\) then calculate the following limit in terms of \(f'(a) \col\)
+        \[\lim_{x \to a} \frac{f(x) - f(a)}{\sqrt x - \sqrt a} \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that the limit definition of \(f'(a)\) is 
+        \[f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \pd\]
+        Let's multiply the numerator and denominator of the given limit by \((\sqrt x + \sqrt a);\)
+        doing so shows 
+        \[
+        \ba 
+        \lim_{x \to a} \frac{f(x) - f(a)}{\sqrt x - \sqrt a} 
+        &amp;= \lim_{x \to a} \frac{f(x) - f(a)}{\sqrt x - \sqrt a} \frac{\par{\sqrt x + \sqrt a}}{\par{\sqrt x + \sqrt a}} \nl 
+        &amp;= \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \par{\sqrt x + \sqrt a} \nl 
+        &amp;= f'(a) \lim_{x \to a} \par{\sqrt x + \sqrt a} \nl 
+        &amp;= \boxed{2 f'(a) \sqrt a}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(R\) be the region in the first quadrant bounded between the coordinate axes and the 
+        line tangent to the curve \(y = 1/x\) at any point \((a, 1/a).\)
+        Does the area of \(R\) depend on \(a \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="deriv-1x-R" id="deriv-1x-R">
+<img alt="deriv-1x-R.jpg" src="../images/sectionImages/deriv-1x-R.jpg"/>
+</figure>
+        Region \(R\) is a triangle whose hypotenuse is the tangent line. 
+        The derivative of \(1/x\) is, by the Power Rule, 
+        \[-x^{-2} = -\frac{1}{x^2} \pd\]
+        Thus, the slope to the curve \(1/x\) at \(x = a\) is \(-1/a^2.\)
+        The point of tangency is \((a, 1/a),\)
+        so an equation of the tangent line is 
+        \[y - \frac{1}{a} = -\frac{1}{a^2}(x - a) \or y = -\frac{x}{a^2} + \frac{2}{a} \pd\]
+        To find the triangle's <i>base</i> \(b,\) we set \(y = 0 \col\)
+        \[0 = -\frac{b}{a^2} + \frac{2}{a} \implies b = 2a \pd\]
+        The triangle's <i>height</i> \(h\) is found by letting \(x = 0 \col\)
+        \[h = -\frac{0}{a^2} + \frac{2}{a} \implies h = \frac{2}{a} \pd\]
+        Hence, the triangle's area is 
+        \[\tfrac{1}{2} bh = \tfrac{1}{2}(2a) \par{\tfrac{2}{a}} = \boxed{2}\]
+        Surprisingly, the area does not depend on \(a \exclam\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find the value of 
+        \[\lim_{x \to \pi/2} \frac{e^{\cos x} - 1}{x - \dfrac{\strut \pi}{2}} \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(e^{\cos(\pi/2)}\) \(= e^0\) \(= 1.\)
+        So the limit is 
+        \[\lim_{x \to \pi/2} \frac{e^{\cos x} - e^{\cos(\pi/2)}}{x - \dfrac{\strut \pi}{2}} \pd\]
+        This is the limit definition of the derivative of \(e^{\cos x}\) at \(x = \pi/2.\)
+        Hence, the limit equals 
+        \[
+        \ba 
+        \deriv{}{x} \par{e^{\cos x}} \intEval_{x = \pi/2} &amp;= \par{- e^{\cos x} \sin x} \intEval_{x = \pi/2} \nl 
+        &amp;= \boxed{-1}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For what value of \(C\) does the equation \(x^2 = C + \ln x\)
+        have only one solution?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        For the curves of \(f(x) = x^2\) and \(g(x) = C + \ln x\)
+        to intersect once, they must be <i>tangent</i> 
+        at some point \(x = a.\)
+        Recall that the word tangent means \(f(a) = g(a)\)
+        and \(f'(a) = g'(a).\) 
+        Observe that \(f'(x) = 2x\) and \(g'(x) = 1/x.\)
+        Equating the derivatives at \(a\) shows 
+        \[2a = \tfrac{1}{a} \implies a = \tfrac{1}{\sqrt 2} \pd\]
+        Now we substitute this value into the equation \(x^2 = C + \ln x,\)
+        seeing 
+        \[
+        \ba 
+        \par{\tfrac{1}{\sqrt 2}}^2 &amp;= C + \ln \tfrac{1}{\sqrt 2} \nl 
+        \implies C &amp;= \boxed{\tfrac{1}{2} - \ln \tfrac{1}{\sqrt 2}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(k\) be a positive constant. 
+        Line \(\ell\) is the tangent to the curve \(f(x) = e^{kx}\)
+        at \(x = a\)
+        and strikes the \(x\)-axis at \((c, 0).\)
+        <ol class="list-alpha">
+<li>
+                Calculate \(\lim_{k \to \infty} c.\)
+            </li>
+<li>
+                Show that \(\lim_{k \to 0^+} c = -\infty.\)
+                What does this result mean geometrically?
+            </li>
+<li>
+                Using differentials, approximate the amount by which \(c\) changes 
+                as \(k\) increases from \(2\) to \(2.1.\)
+            </li>
+<li>
+                With \(a\) held constant, 
+                the value of \(k\) increases at a constant rate of \(2\) units per minute.
+                When \(k = 4,\) how quickly is \(c\) changing with time?
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<figure class="diff-rules-challenge-e-tan" id="diff-rules-challenge-e-tan">
+<img alt="diff-rules-challenge-e-tan.jpg" src="../images/sectionImages/diff-rules-challenge-e-tan.jpg"/>
+</figure>
+<ol class="list-alpha">
+<li>
+                We have \(f'(x) = ke^{kx}.\)
+                So an equation of the line tangent to \(f\) at \((a, e^{ka})\) is 
+                \[y - e^{ka} = k e^{ka} (x - a) \pd\]
+                This line has an \(x\)-intercept at \(x = c,\)
+                so substituting \((c, 0)\) gives 
+                \[
+                \ba 
+                0 - e^{ka} &amp;= k e^{ka} (c - a) \nl
+                \implies c &amp;= a - \frac{1}{k} \pd
+                \ea
+                \]
+                Then  
+                \[
+                \ba 
+                \lim_{k \to \infty} c 
+                &amp;= \lim_{k \to \infty} \par{a - \frac{1}{k}} \nl 
+                &amp;= \boxed a
+                \ea 
+                \]
+                This result is logical: as \(k\) increases, 
+                the curve \(f\) becomes steeper and so \(\ell\) becomes closer to the vertical line \(x = a.\)
+            </li>
+<hr/>
+<li>
+                As \(k \to 0^+,\) \(1/k \to \infty.\)
+                Accordingly, as requested,
+                \[\underbrace{a - \frac{1}{k}}_{c} \to -\infty \as k \to 0^+ \pd\] 
+                Geometrically, \(k \to 0^+\) means the curve \(f(x) = e^{kx}\)
+                becomes flatter, 
+                so line \(\ell\) becomes more horizontal. 
+                By making \(k\) arbitrarily close to \(0\) (with <nobr>\(k \gt 0\)),</nobr>
+                the \(x\)-intercept of line \(\ell\) continually shifts to the left, away from the \(y\)-axis.
+            </li>
+<hr/>
+<li>
+                Differentiating both sides of \(c = a - 1/k\) with respect to \(k,\)
+                we get 
+                \[
+                \ba
+                \deriv{c}{k} &amp;= \frac{1}{k^2} \nl 
+                \implies \dd c &amp;= \frac{1}{k^2} \di k \pd 
+                \ea 
+                \]
+                Taking \(k = 2,\) \(\Delta c \approx \dd c,\) and \(\di k = \Delta k\) \(= 0.1,\)
+                we have 
+                \[\Delta c \approx \frac{1}{(2)^2} (0.1) = \boxed{\frac{1}{40}}\]
+            </li>
+<hr/>
+<li>
+                Differentiating both sides of \(c = a - 1/k\) with respect to time, 
+                and noting that \(a\) is constant,
+                we get 
+                \[
+                \deriv{c}{t} = \frac{1}{k^2} \deriv{k}{t} \pd
+                \]
+                We are given \(\textderiv{k}{t} = 2\) and \(k = 4,\)
+                which we substitute to get 
+                \[
+                \ba 
+                \deriv{c}{t} \intEval_{k = 4} = \frac{1}{4^2} (2) = \boxed{\frac{1}{8}}
+                \ea 
+                \]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Is there a value of \(x\) at which the tangent lines to the graphs of \(f(x) = \tfrac{1}{4} x^4 + 12x,\)
+        \(g(x) = x^3 + 2x^2,\) and \(h(x) = 2x^2 + 27x + 2\) are all parallel to each other?
+        If so, then find this value of \(x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The functions' derivatives are, respectively, 
+        \[
+        \ba 
+        f'(x) &amp;= x^3 + 12 \cma \nl 
+        g'(x) &amp;= 3x^2 + 4x \cma \nl 
+        h'(x) &amp;= 4x + 27 \pd 
+        \ea 
+        \]
+        The tangents to all three graphs are parallel if and only if they have the same slope, namely,
+        \(f' = g' = h'.\)
+        There are three cases we need to satisfy: \(f' = g',\) \(f' = h',\) and \(g' = h'.\)
+        <ol class="list-num">
+<li>
+                Solving \(f' = g',\) we see 
+                \[
+                \ba 
+                x^3 + 12 &amp;= 3x^2 + 4x \nl 
+                x^3 - 3x^2 - 4x + 12 &amp;= 0 \nl 
+                x^2 (x - 3) - 4(x - 3) &amp;= 0 \nl 
+                (x - 3) (x^2 - 4) &amp;= 0 \nl 
+                \implies x &amp;= -2 \cma x = 2 \cma x = 3 \pd
+                \ea     
+                \]
+            </li>
+<li>
+                Equating \(f' = h',\) we see 
+                \[
+                \ba
+                x^3 + 12 &amp;= 4x + 27 \nl 
+                x^3 - 4x - 15 &amp;= 0 \pd
+                \ea
+                \]
+                Out of all the solutions from the first case—that is, \(x = -2,\) \(x = 2,\) 
+                and \(x = 3\)—only \(x = 3\) solves this equation.
+            </li>
+<li>
+                We solve \(g' = h',\) as follows:
+                \[
+                \ba 
+                3x^2 + 4x &amp;= 4x + 27 \nl 
+                x^2 &amp;= 9 \nl 
+                \implies x &amp;= -3 \cma x = 3 \pd
+                \ea     
+                \]
+            </li>
+</ol>
+        Hence, the only solution to \(f' = g' = h'\) is \(\boxed{x = 3}.\) 
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        A circle of radius \(r\) is centered at point \(C\) on the \(y\)-axis and is inscribed in the triangle formed by the graph of \(y = \abs x\)
+        and the horizontal line \(\ell,\)
+        as shown by <a href="#diff-ex-circle-inscribed-abs-l">Figure 1</a>. 
+        In terms of \(r,\) calculate the area of \(\Delta OPQ.\)
+        <figure class="diff-ex-circle-inscribed-abs-l figure-center-one" id="diff-ex-circle-inscribed-abs-l">
+<img alt="Figure 1" src="../images/sectionImages/diff-ex-circle-inscribed-abs-l.jpg"/>
+</figure>
+<style>
+            .diff-ex-circle-inscribed-abs-l::before{
+                content:'FIGURE 1';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The problem becomes trivial if the identity of line \(\ell\) is known;
+        this is our objective.
+        First let's express the coordinates of point \(C(0, y_C)\) in terms of \(r.\)
+        Note that point \(R\) is a point of tangency, 
+        so at \(R\) the graph \(y = \abs x\) and the circle share the same slope, \(1.\)
+        Accordingly, an equation of the <i>normal line</i> (see Section 
+        <a href="/Valculus/calculus/2.2-Differentiating-Power,-Exponential,-and-Sinusoidal-Functions.html">2.2</a>)
+        at \(R\) is 
+        \[y - y_C = -\frac{1}{1} (x - 0) \or y = y_C - x \pd\]
+        The circle and \(y = \abs x\) also have the same \(y\)-coordinate at \(R,\)
+        so we see 
+        \[y_C - x = x \implies x = \tfrac{1}{2} y_C \pd\]
+        Hence, the coordinates of \(R\) are \(\par{\tfrac{1}{2} y_C, \tfrac{1}{2} y_C}.\)
+        By the Distance Formula, 
+        we have 
+        \[
+        \ba 
+        r &amp;= \length{CR} \nl 
+        &amp;= \sqrt{\par{0 - \tfrac{1}{2} y_C}^2 + \par{y_C - \tfrac{1}{2} y_C}^2} \nl 
+        &amp;= \frac{y_C}{\sqrt 2} \pd
+        \ea 
+        \]
+        It follows that \(y_C = r \sqrt 2.\)
+        Hence, the identity of line \(\ell\) is 
+        \[
+        \ba
+        y &amp;= y_C + r \nl 
+        &amp;= r \sqrt 2 + r \nl 
+        &amp;= r (1 + \sqrt 2) \pd
+        \ea
+        \]
+        Line \(\ell\) therefore intersects \(y = \abs x\) in the first quadrant at 
+        \(Q(r(1 + \sqrt 2), r(1 + \sqrt 2))\)
+        and in the second quadrant at 
+        \(P(-r(1 + \sqrt 2), r(1 + \sqrt 2)).\)
+        Therefore, \(\Delta OPQ\) has a width of \(2r(1 + \sqrt 2)\)
+        and a height of \(r(1 + \sqrt 2).\)
+        So its area is 
+        \[
+        \ba
+        A &amp;= \tfrac{1}{2} \parbr{2r(1 + \sqrt 2)} \parbr{r(1 + \sqrt 2)} \nl 
+        &amp;= r^2 (1 + \sqrt 2)^2 \nl 
+        &amp;= \boxed{r^2 \par{2 + 2 \sqrt 2 + 1}} \approx 5.828 r^2 \pd
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The function \(f(x) = 1/x + \atan x\) is one-to-one for \(x \gt 0.\)
+        Show that 
+        \[\lim_{x \to (\pi/2)^+} \par{\inv f}'(x) = -\infty \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that \(f(x) \to (\pi/2)^+\)
+        as \(x \to \infty.\)
+        Consequently, \(\inv f(x) \to \infty\) as \(x \to (\pi/2)^+.\)
+        We have 
+        \[
+        \baf 
+        &amp;&amp;f'(x) &amp;= -\frac{1}{x^2} + \frac{1}{x^2 + 1} = -\frac{1}{x^4 + x^2} &amp;\nl 
+        \laWord{and} &amp;&amp;\lim_{x \to (\pi/2)^+} \par{\inv f}'(x) &amp;= \lim_{x \to (\pi/2)^+} \frac{1}{f' \par{\inv f(x)}} \pd 
+        \eaf
+        \]
+        To evaluate this limit, we substitute \(u = \inv f(x).\)
+        Then \(u \to \infty\) as \(x \to (\pi/2)^+,\)
+        so our limit becomes 
+        \[
+        \ba 
+        \lim_{u \to \infty} \frac{1}{f'(u)} &amp;= \lim_{u \to \infty} \frac{1}{-\dfrac{1}{u^4 + u^2}} \nl 
+        &amp;= \lim_{u \to \infty} - \par{u^4 + u^2} \nl 
+        &amp;= -\infty \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

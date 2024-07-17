@@ -143,3 +143,31 @@ function toggle16(){
     }
 }
 
+function toggle17(){
+    var clicked = document.getElementById("solution17");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle18(){
+    var clicked = document.getElementById("solution18");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+function toggle19(){
+    var clicked = document.getElementById("solution19");
+    if (clicked.style.display === "none") {
+        clicked.style.display = "block";
+    } else {
+        clicked.style.display = "none";
+    }
+}
+
+

@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.1: Fundamental Skills in Algebra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.1: Fundamental Skills in Algebra</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.1-Fundamental-Skills-in-Algebra-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.1-Fundamental-Skills-in-Algebra-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Fundamental-Skills-in-Algebra]]]-->
+<p>
+    <span class="emph">Algebra</span> is the branch of mathematics that studies operations with numbers.
+    It is the foundation of all mathematics;
+    any calculus student needs to master its basic operations. 
+    So this section covers the following topics:
+    <ul>
+        <li>
+            <a href="#solving-equations" class="page-anchor">Solving Equations and Inequalities</a>
+        </li>
+        <li>
+            <a href="#factoring-polynomials" class="page-anchor">Factoring Polynomials</a>
+        </li>
+        <li>
+            <a href="#operations-with-fractions" class="page-anchor">Operations with Fractions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="solving-equations">Solving Equations and Inequalities</h4>
+<p>
+    In a mathematical <i>equation</i>, 
+    two quantities have the same value. 
+    For example, \(3 = 2 + 1\) is a valid equation because both sides have the same value. 
+    But some equations have some unknown quantity, 
+    such as the equation \(2x + 5 = 7.\)
+    What does \(x\) equal?
+    We can manipulate equations by adding, subtracting, multiplying, or dividing 
+    a number on <i>both sides</i>.
+    On both sides of \(2x + 5 = 7,\)
+    subtracting \(5\) and then dividing by \(2\) yields \(2x = 2\)
+    and then \(x = 1.\)
+    The following guidelines generalize the strategy for solving similar equations.
+    In general, the objective is to perform operations to <i>isolate</i> the variable.
+</p>
+
+<aside class="box-recall">
+    A <i>variable</i> is a letter or symbol that represents an unknown number,
+    and a <i>coefficient</i> is a number by which the variable is multiplied. 
+    A <i>constant</i> is a number that stands alone.
+    For example, in the expression \(4x + 7,\)
+    the coefficient is \(4\) and the constant is \(7.\)
+</aside>
+
+<div class="steps-title">SOLVING EQUATIONS WITH ONE VARIABLE</div>
+<div class="steps">
+    To solve for \(x\) in an equation, use the following steps:
+    <ol class="list-num">
+        <li>
+            <span class="label-emph">Condense</span>
+            On each side, simply the expression by combining like terms.
+        </li>
+        <li>
+            <span class="label-emph">Separate</span>
+            By adding or subtracting,
+            gather all the variables on one side of the equation 
+            and all the constants on the other side.
+        </li>
+        <li>
+            <span class="label-emph">Isolate</span>
+            Divide both sides by the coefficient.
+        </li>
+        <li>
+            <span class="label-emph">Check</span>
+            Substitute your value of \(x\) back into the equation to verify whether it is correct.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve for \(x \col\)
+        \[3x + 6 + 10 = 7 - 8x + 2x \pd\]
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <ol class="list-num">
+        <li>
+            <span class="label-emph">Condense</span>
+            On the left side, 
+            adding \(6\) and \(10\) gives \(16.\)
+            On the right side, adding \(-8x\) to \(2x\)
+            yields \(-6x.\)
+            Thus, the condensed equation is 
+            \[3x + 16 = 7 - 6x \pd\]
+        </li>
+        <li>
+            <span class="label-emph">Separate</span>
+            We want to place all the <nobr>\(x\)'s</nobr> on the left 
+            and all the constants on the right. 
+            To clear the \(-6x\) on the right, 
+            we add \(6x\) to both sides; 
+            to clear the \(16\) on the left, 
+            we subtract \(16\) from both sides. 
+            Doing so yields 
+            \[9x = -9 \pd\]
+        </li>
+        <li>
+            <span class="label-emph">Isolate</span>
+            The coefficient is the number by which \(x\) is multiplied—namely, \(9.\)
+            To cancel out the \(9\) and therefore isolate \(x,\) 
+            we divide both sides by \(9\) to get 
+            \[x = \boxed{-1}\]
+        </li>
+        <li>
+            <span class="label-emph">Check</span>
+            Substituting \(x = -1\) back into the given equation, we see 
+            \[
+            \ba 
+            3(-1) + 6 + 10 &= 7 - 8(-1) + 2(-1) \nl 
+            -3 + 6 + 10 &= 7 + 8 - 2 \nl 
+            13 &\equalsCheck 13 \pd
+            \ea 
+            \]
+            This step verifies that \(x = -1\) is the correct solution.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve for \(x \col\)
+        \[4(x + 5) - 2x = 31 \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <ol class="list-num">
+        <li>
+            <span class="label-emph">Condense</span>
+            To expand \(4(x + 5),\)
+            we <i>distribute</i> the \(4\)—that is, multiply each term inside the parentheses by \(4.\)
+            Then the equation becomes
+            \[
+            \ba 
+            4x + 20 - 2x &= 31 \nl 
+            2x + 20 &= 31 \pd
+            \ea 
+            \]
+        </li>
+        <li>
+            <span class="label-emph">Separate</span>
+            We want all the <nobr>\(x\)'s</nobr> to be on the left side 
+            and all the constants to be on the right side. 
+            Subtracting \(20\) from both sides yields 
+            \[2x = 11 \pd\]
+        </li>
+        <li>
+            <span class="label-emph">Isolate</span>
+            To cancel out the coefficient of \(2,\)
+            we divide both sides by \(2\) to attain
+            \[x = \boxed{\tfrac{11}{2}}\]
+            (It is also correct to write \(x = 5.5;\)
+            in calculus we prefer to write fractions.)
+        </li>
+        <li>
+            <span class="label-emph">Check</span>
+            Substituting \(x = 11/2\) back into the given equation, we see 
+            \[
+            \ba
+            4 \par{\tfrac{11}{2} + 5} - 2 \par{\tfrac{11}{2}} &= 31 \nl 
+            (22 + 20) - 11 &= 31 \nl 
+            31 &\equalsCheck 31 \pd
+            \ea
+            \]
+            Hence, \(x = 11/2\) is the correct solution.
+        </li>
+    </ol>
+</div>
+
+<p>
+    An <span class="emph">inequality</span> is a mathematical statement that compares two quantities; 
+    for example, \(5 \gt 4\) means \(5\) is greater than \(4.\)
+    Likewise, the inequality \(x \leq 6\) means \(x\) can be <i>any number</i> that is less or equal to \(6.\)
+    We solve inequalities similarly to how we solve equations,
+    as shown by the following examples.
+</p>
+
+<div class="example-title" id="ex-inequalities"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve the following inequalities. 
+        <ol class="list-roman">
+            <li>
+                <span>\(6x + 3 \gt 15\)</span>
+            </li>
+            <li>
+                <span>\(-4x - 6 \leq 10\)</span>
+            </li>
+            <li>
+                <span>\(\dfrac{1}{x} - 2 \gt 5 \sspace\) if \(\sspace x \gt 0\) </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    In each problem, our goal is to isolate \(x.\)
+    <ol class="list-roman">
+        <li>
+            On both sides, we subtract \(3\) and then divide by \(6 \col\)
+            \[6x \gt 12 \implies \boxed{x \gt 2}\]
+        </li>
+        <hr>
+        <li>
+            On both sides, we add \(6\) and then divide by \(-4.\)
+            But when we multiply or divide both sides by a negative number, 
+            <i>the inequality sign is flipped</i>. 
+            So we have 
+            \[-4x \leq 16 \implies \boxed{x \geq -4}\]
+        </li>
+        <hr>
+        <li>
+            Adding \(2\) to both sides gives 
+            \[\frac{1}{x} \gt 7 \pd\]
+            We multiply both sides by \(x\) and then divide by \(7,\)
+            as follows:
+            \[1 \gt 7x \implies \tfrac{1}{7} \gt x \implies \boxed{x \lt \tfrac{1}{7}}\]
+            (Since \(x\) is given to be positive, we don't flip the inequality sign.)
+        </li>
+    </ol> 
+</div>
+
+<p>
+    Recall that exponents represent repeated multiplication;
+    for example, \(2^3\) \(= 2 \cdot 2 \cdot 2\) \(= 8.\)
+    Let \(a\) and \(b\) be positive numbers, 
+    and let \(m\) and \(n\) be any numbers. 
+    Then the <span class="emph">exponent laws</span> are as follows:
+    \begin{align} 
+    a^{m + n} &= a^m \, a^n \cma \label{eq:exp-law-add} \nl 
+    a^{m - n} &= \frac{a^m}{a^n} \cma \label{eq:exp-law-minus} \nl 
+    \par{a^{m}}^n &= a^{mn} \cma \label{eq:exp-law-mn} \nl 
+    \par{ab}^n &= a^n \, b^n \pd \label{eq:exp-law-a-b}
+    \end{align}
+    We won't prove these properties, 
+    but you can perform some testing to verify that they are true.
+    (We will study these properties more in depth in Section
+    <a href="/Valculus/calculus/0.7-Exponents-and-Logarithms.html">0.7</a>.)
+</p>
+
+<p>
+    A <span class="emph">polynomial</span> 
+    is a sum or difference of variables with nonnegative integer (whole number) powers.
+    A polynomial is classified by its <i>highest-power</i> term;
+    For example, \(x^3 + 5x^2 - 8\) is a <i>third-degree</i> polynomial
+    and \(x^6 + x - 2\) is a <i>sixth-degree</i> polynomial.
+    A <i>second-degree</i> polynomial is called <span class="emph">quadratic</span>; 
+    we investigate quadratic expressions and functions more in Section 
+    <a href="/Valculus/calculus/0.5-Quadratics.html">0.5</a>.
+    Polynomials are prevalent in calculus; 
+    we devote the remainder of this section to operations with polynomials.
+</p>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Simplify 
+        \[5x^2 + 7x - 3 - 4 \par{x^2 - 2x + 3}\]
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    We distribute the \(-4\) to each term within the parentheses
+    and add the result.
+    Doing so and combining like terms, we get
+    \[
+    \ba 
+    5x^2 + 7x - 3 + (- 4x^2 + 8x - 12 ) 
+    &= 5x^2 + 7x - 3 - 4x^2 + 8x - 12 \nl 
+    &= \boxed{x^2 + 15x - 15} 
+    \ea 
+    \]
+    Note that \(x^2\) and \(x\) are separate terms,
+    so we <span class="warning">cannot</span> combine \(x^2\) and \(15x.\)
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Expand the following quantities. 
+        <ol class="list-roman">
+            <li>
+                <span>\((2x + 4)(x - 3)\)</span>
+            </li>
+            <li>
+                <span>\((5x + 1)^2\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    <ol class="list-roman">
+        <li>
+            Breaking up the first set of parentheses, we get  
+            \[2x(x - 3) + 4(x - 3) \pd\]
+            Then distributing and combining like terms produce 
+            \[
+            \ba
+            (2x^2 - 6x) + (4x - 12) &= 2x^2 - 6x + 4x - 12 \nl
+            &=\boxed{2x^2 - 2x - 12}
+            \ea
+            \]
+        </li>
+        <hr>
+        <li>
+            It is <span class="warning">wrong</span> to write
+            \[\wrongMath{(5x + 1)^2 = (5x)^2 + 1^2 = 25x^2 + 1 \pd}\]
+            Instead, note that \((5x + 1)^2\) \(= (5x + 1)(5x + 1).\)
+            Breaking up the first set of parentheses, we have 
+            \[5x(5x + 1) + 1(5x + 1) \pd\]
+            Then we distribute and combine like terms, as follows:
+            \[
+            \ba 
+            (25x^2 + 5x) + (5x + 1) &= 25x^2 + 5x + 5x + 1 \nl 
+            &= \boxed{25x^2 + 10x + 1}
+            \ea 
+            \]
+        </li>
+    </ol>
+</div>
+
+
+<h4 id="factoring-polynomials">Factoring Polynomials</h4>
+<p>
+    <span class="emph">Factoring</span> is the process of decomposing 
+    a number or expression into the product of two or more terms (<i>factors</i>).
+    For example, the number \(10\) is factored as \(2 \times 5.\)
+    There are several techniques to factor polynomials.
+    The most important one is by extracting the <span class="emph">greatest common factor</span>
+    (<span class="emph">GCF</span>), 
+    the largest factor common to all terms in the expression.
+    This process is the <i>first step</i> of factoring a polynomial.
+</p>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor the following expressions.
+        <ol class="list-roman">
+            <li>
+                <span>\(4x + 8\)</span>
+            </li>
+            <li>
+                <span>\(9ab + 3b\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    <ol class="list-roman">
+        <li>
+            The greatest common factor of \(4x\) and \(8\) 
+            is \(4,\) which we extract to get
+            \[\boxed{4(x + 2)}\]
+        </li>
+        <hr>
+        <li>
+            The greatest common factor of the coefficients \(9\) and \(3\) 
+            is \(3.\)
+            Both terms also contain a \(b,\)
+            so extracting \(3b\) gives
+            \[\boxed{3b(3a + 1)}\]
+        </li>
+    </ol>
+</div>
+
+<p>
+    The following formulas enable us to factor <span class="emph">differences of squares</span>,
+    <span class="emph">sums of cubes</span>, and <span class="emph">differences of cubes</span>.
+</p>
+
+<div class="box-title">FACTORING SQUARES AND CUBES</div>
+<div class="box">
+    \begin{alignat}{2}
+    a^2 - b^2 &= (a + b)(a - b) \comment{\text{Difference of Squares}} \label{eq:diff-sq} \nl
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \comment{\text{Sum of Cubes}} \label{eq:sum-cb} \nl
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2) \comment{\text{Difference of Cubes}} \label{eq:diff-cb}
+    \end{alignat}
+</div>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor each expression.
+        <ol class="list-roman">
+            <li>
+                <span>\(x^2 - 81\)</span>
+            </li>
+            <li>
+                <span>\(y^3 + 27\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    <ol class="list-roman">
+        <li>
+            Observe that \(81\) \(= 9^2.\)
+            Using \(\eqref{eq:diff-sq}\) with \(a = x\) and \(b = 9,\)
+            we get
+            \[\boxed{(x + 9)(x - 9)}\]
+        </li>
+        <hr>
+        <li>
+            Note that \(27\) \(= 3^3.\)
+            Using \(\eqref{eq:sum-cb}\) with \(a = y\) and \(b = 3\)
+            yields 
+            \[\boxed{(y + 3)(y^2 - 3y + 9)}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor \(x^4 - 16\) completely.
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    By exponent law \(\eqref{eq:exp-law-mn},\) \(x^4\) \(= \par{x^2}^2.\) 
+    Also note that \(16 = 4^2,\)
+    so by \(\eqref{eq:diff-sq}\) we have 
+    \[(x^2 + 4)(x^2 - 4) \pd\]
+    We again use \(\eqref{eq:diff-sq}\) to factor \((x^2 - 4),\)
+    attaining 
+    \[\boxed{(x^2 + 4)(x + 2)(x - 2)}\]
+    The factor \((x^2 + 4)\) can't be factored any further,
+    so it is called <i>prime</i>. 
+</div>
+
+<p>
+    Next we examine the strategy for factoring the family of quadratics
+    \(x^2 + bx + c\) into two <i>binomials</i>.
+    (A binomial is the sum or difference of two terms.)
+    The objective is to find two numbers \(p\) and \(q\) whose product is \(c\)
+    and sum is \(b;\)
+    then 
+    \[x^2 + bx + c = (x + p)(x + q) \pd\] 
+    The following example demonstrates this procedure. 
+</p>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor \(x^2 - x - 20.\)
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button">  </button>
+<div id="solution9" class="solution">
+    <aside class="box-remark">
+        Because multiplication is commutative, the order in which we write factors does <i>not</i> matter:
+        \[(x - 5)(x + 4) = (x + 4)(x - 5) \pd\]
+    </aside>
+    We identify \(b = -1\) and \(c = -20.\)
+    What two numbers multiply to \(-20\) and add to \(-1 \ques\)
+    By trial and error, the two numbers are \(p = -5\) and \(q = 4.\)
+    Hence, the factored form is
+    \[\boxed{(x - 5)(x + 4)}\]
+</div>
+
+<div class="example-title"> EXAMPLE 10 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve for \(x \col\)
+        \[2x^2 = 12x - 16 \pd\]
+    </div>
+</div>
+<button onclick="toggle10()" class="solution-button">  </button>
+<div id="solution10" class="solution">
+    To clear the right side, we subtract \(12x\) and add \(16\) to both sides;
+    doing so gives 
+    \[2x^2 - 12x + 16 = 0 \pd\]
+    The GCF of the left side is \(2,\)
+    which we extract to get
+    \[2(x^2 - 6x + 8) = 0 \pd\]
+    Observe that \(p = -4\) and \(q = -2\) have a product of \(8\) and a sum of \(-6.\)
+    Hence, factoring the expression in parentheses gives 
+    \[2(x - 4)(x - 2) = 0 \pd\]
+    By the Zero Property of Multiplication, 
+    the left side equals \(0\)
+    if <i>at least one factor equals \(0.\)</i>
+    Equating each factor to \(0,\) we see
+    \[
+    \baat{2} 
+    x - 4 &= 0 \qquad &x - 2 &= 0 \nl 
+    \implies x &= \boxed 4 &\qquad \implies x &= \boxed 2
+    \eaat
+    \]
+</div>
+
+<p>
+    Let's now discuss <span class="emph">factoring by grouping</span>. 
+    Using this technique, we split a polynomial into pairs of terms, 
+    each of which we factor independently. 
+    Factoring by grouping works if each pair shares a common factor;
+    then the polynomial's factored form contains the shared factor
+    multiplied by the sum of the groups' GCFs, 
+    as shown by the following examples.
+</p>
+
+<div class="example-title"> EXAMPLE 11 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor \(x^3 + 5x^2 + 2x + 10.\)
+    </div>
+</div>
+<button onclick="toggle11()" class="solution-button">  </button>
+<div id="solution11" class="solution">
+    We skip the preliminary step of extracting a GCF because none exists.
+    To factor by grouping, we split the expression into two pairs and factor each independently by extracting GCFs:
+    \[
+    \underbrace{x^3 + 5x^2}_{\orange{x^2} (x + 5)} + \underbrace{2x + 10}_{\orange{2}(x + 5)} \pd
+    \]
+    Each pair shares the common factor \((x + 5),\)
+    and the sum of the GCFs is \((\orange{x^2} + \orange{2}).\)
+    So the factored form is
+    \[\boxed{(x + 5)(\orange{x^2} + \orange{2})}\]
+    Note that \((\orange{x^2} + \orange{2})\) is prime;
+    it can't be factored any further.
+</div>
+
+<p>
+    Factoring by grouping is useful for factoring quadratics 
+    in the form \(ax^2 + bx + c\) \((a \ne 0)\)
+    when no GCF is present. 
+    The objective is to find two numbers \(p\) and \(q\) 
+    whose product is \(c\) and sum is \(b,\)
+    and then split \(bx\) into \(px + qx.\)
+    The resulting expression can be factored by grouping,
+    as shown by the next example.
+</p>
+
+<div class="example-title"> EXAMPLE 12 </div>
+<div class="example">
+    <div class="example-problem">  
+        Factor \(6x^2 + 5x + 1.\)
+    </div>
+</div>
+<button onclick="toggle12()" class="solution-button">  </button>
+<div id="solution12" class="solution">
+    Identifying \(a = 6\) and \(c = 1,\)
+    we have \(ac = 6.\) 
+    The numbers \(p = 2\) and \(q = 3\) multiply to \(6\) and add to \(5.\)
+    We therefore split \(5x\) into \(2x + 3x\)
+    and factor by grouping:
+    \[\underbrace{6x^2 + 2x}_{\orange{2x} (3x + 1)} + \underbrace{3x + 1}_{\orange{1} (3x + 1)} \pd\]
+    The shared factor is \((3x + 1),\) and the sum of the GCFs is \((\orange{2x} + \orange{1}).\)
+    Hence, the factored form is
+    \[\boxed{(3x + 1)(\orange{2x} + \orange{1})}\]
+</div>
+
+<h4 id="operations-with-fractions">Operations with Fractions</h4>
+<p>
+    Fractions represent the division of two quantities.
+    Recall that the top part of a fraction is the numerator
+    and the bottom part is the denominator. 
+    Multiplying fractions is easy—we simply multiply across;
+    for example,
+    \[\tfrac{2}{3} \times \tfrac{5}{6} = \tfrac{10}{18} = \tfrac{5}{9} \pd\]
+    (In the last step we divided the numerator and denominator 
+    each by \(2.\) Multiplying or dividing the numerator and denominator by the same number 
+    <span class="good">does not alter the fraction's value</span>.)
+    In dividing two fractions, we <i>flip</i> the second fraction
+    and perform multiplication. 
+    As an example,
+    to divide \(\tfrac{4}{5}\) by \(\tfrac{8}{7},\)
+    we have 
+    \[\tfrac{4}{5} \times \tfrac{7}{8} = \tfrac{28}{40} = \tfrac{7}{10} \pd\]
+    The fractions \(\tfrac{8}{7}\) and \(\tfrac{7}{8}\)
+    are <i>reciprocals</i> of each other. 
+    The same logic with numerical fractions applies to fractions with algebraic expressions, 
+    as in the next examples.
+</p>
+
+<aside class="box-recall">
+    The result of dividing a number by \(0\) is always <span class="warning">undefined</span>.
+</aside>
+
+<div class="example-title"> EXAMPLE 13 </div>
+<div class="example">
+    <div class="example-problem">  
+        Assuming that no division by \(0\) occurs, simplify
+        \[\frac{x - 2}{6} \cdot \frac{5x}{x + 3} \pd\]
+    </div>
+</div>
+<button onclick="toggle13()" class="solution-button">  </button>
+<div id="solution13" class="solution">
+    Multiplying across and expanding, we get
+    \[
+    \frac{(x - 2)(5x)}{6 (x + 3)} = \boxed{\frac{5x^2 - 10x}{6x + 18}}
+    \]
+</div>
+
+<div class="example-title"> EXAMPLE 14 </div>
+<div class="example">
+    <div class="example-problem">  
+        If no division by \(0\) is present, then simplify
+        \[2 \cdot \frac{5}{x + 6} \pd\]
+    </div>
+</div>
+<button onclick="toggle14()" class="solution-button">  </button>
+<div id="solution14" class="solution">
+    Note that \(2\) \(= 2/1,\) so we have 
+    \[\frac{2}{1} \cdot \frac{5}{x + 6} = \boxed{\frac{10}{x + 6}}\]
+    Thus, multiplying a fraction by a whole number 
+    is equivalent to multiplying just the numerator by that number.
+</div>
+
+
+<div class="example-title"> EXAMPLE 15 </div>
+<div class="example">
+    <div class="example-problem">  
+        Solve for \(x \col\)
+        \[\frac{2x - 1}{6} = \frac{1}{x} \pd\]
+    </div>
+</div>
+<button onclick="toggle15()" class="solution-button">  </button>
+<div id="solution15" class="solution">
+    To clear the denominator on the left, 
+    we multiply both sides by \(6.\)
+    To clear the denominator on the right, 
+    we multiply both sides by \(x.\)
+    Doing so, we get 
+    \[x(2x - 1) = 6 \or 2x^2 - x - 6 = 0 \pd\]
+    Factoring gives 
+    \[(x - 2)(2x + 3) = 0 \pd\]
+    Equating each factor to \(0,\)
+    we have
+    \[
+    \baat{2} 
+    x - 2 &= 0 \qquad &2x + 3 &= 0 \nl 
+    \implies x &= \boxed 2 &\qquad \implies x &= \boxed{-\tfrac{3}{2}}
+    \eaat
+    \]
+    Neither solution yields division by \(0,\)
+    so both answers are valid.
+</div>
+
+<div class="example-title"> EXAMPLE 16 </div>
+<div class="example">
+    <div class="example-problem">  
+        Given that no denominators equal \(0,\) simplify
+        \[\frac{\dfrac{x^2 - 3x - 10}{x^3 + 1 \strut}}{\dfrac{\strut x^2 - 4x - 5}{x^2 + 2x + 1}} \pd\]
+    </div>
+</div>
+<button onclick="toggle16()" class="solution-button">  </button>
+<div id="solution16" class="solution">
+    This expression is equivalent to the top fraction multiplied by the reciprocal of the bottom fraction—namely,
+    \[
+    \frac{x^2 - 3x - 10}{x^3 + 1} \cdot \frac{x^2 + 2x + 1}{x^2 - 4x - 5} \pd
+    \]
+    Factoring each expression, we have
+    \[
+    \frac{\cancel{(x - 5)}(x + 2)}{\cancel{(x + 1)}(x^2 - x + 1)} \cdot \frac{\cancel{(x + 1)}\cancel{(x + 1)}}{\cancel{(x - 5)}\cancel{(x + 1)}}
+    = \boxed{\frac{x + 2}{x^2 - x + 1}}
+    \]
+</div>
+
+<p>
+    To add or subtract two fractions with the same denominator,
+    we simply add or subtract the numerators;
+    a simple example is \(\tfrac{3}{5} + \tfrac{1}{5}\) \(= \tfrac{4}{5}.\)
+    But if no common denominator is present, 
+    then we multiply both parts of one fraction (or both fractions) to force the existence of one.
+    For example,
+    \[\tfrac{1}{2} + \tfrac{1}{3} = \tfrac{3}{6} + \tfrac{2}{6} = \tfrac{5}{6} \pd\]
+    The same idea applies to rational functions.
+</p>
+
+<div class="example-title"> EXAMPLE 17 </div>
+<div class="example">
+    <div class="example-problem">  
+        Given that no denominators equal \(0,\) simplify
+        \[\frac{5x - 1}{x + 3} + \frac{6x}{x + 7} \pd\]
+    </div>
+</div>
+<button onclick="toggle17()" class="solution-button">  </button>
+<div id="solution17" class="solution">
+    To force the existence of a common denominator, 
+    we multiply the numerator and denominator of the first fraction by \((x + 7),\)
+    and we multiply the numerator and denominator of the second fraction by \((x + 3).\)
+    Doing so gives 
+    \[
+    \ba 
+    \frac{(5x - 1)(x + 7)}{(x + 3)(x + 7)} + \frac{6x (x + 3)}{(x + 3)(x + 7)}
+    &= \frac{(5x - 1)(x + 7) + 6x(x + 3)}{(x + 3)(x + 7)} \nl 
+    &= \boxed{\frac{11x^2 + 52x - 7}{x^2 + 10x + 21}}
+    \ea 
+    \]
+</div>
+
+<p>
+    To simplify a quotient of polynomials that may share no common factors, 
+    we use <span class="emph">polynomial division</span>,
+    which is analogous to standard long division for numbers.
+    The following steps describe how to perform this operation.
+</p>
+
+<div class="steps-title">HOW TO PERFORM POLYNOMIAL DIVISION</div>
+<div class="steps">
+    To divide a quotient \(P/Q,\)
+    where \(P\) and \(Q\) are polynomials such that the degree of \(Q\) 
+    is less than the degree of \(P,\)
+    use the following steps:
+    <ol class="list-num">
+        <li>
+            Write out the terms of \(P\) in order of descending powers.
+            To the left of the expression, draw a right parenthesis <q>\()\)</q>;
+            above the expression, draw a horizontal line.
+            To the left of the parenthesis, 
+            write out the terms of \(Q\) in order of descending powers. 
+        </li>
+        <li>
+            Divide the first term of \(P\) by the first term of \(Q;\)
+            place that answer above the horizontal line.
+            Multiply \(Q\) by that answer and write the result in a new row at the bottom.
+        </li>
+        <li>
+            Subtract the result of Step 2 from \(P\) to generate a new polynomial.
+        </li>
+        <li>
+            Divide the first term of the new polynomial by the first term of \(Q.\)
+            Multiply \(Q\) by that result and subtract it from the new polynomial.
+            Repeat this process until the resulting polynomial has a degree smaller than the degree of \(Q.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 18 </div>
+<div class="example">
+    <div class="example-problem">  
+        Perform polynomial division on 
+        \[\frac{2x^3 + x^2 + x - 4}{x - 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle18()" class="solution-button">  </button>
+<div id="solution18" class="solution">
+    We separate the expressions \(2x^3 + x^2 + x - 4\) and \(x - 1\) using a right parenthesis <q>\()\)</q>
+    and draw a horizontal line above the first polynomial.
+    Next we divide the first terms—that is, \(2x^3\) divided by \(x\)—to get \(2x^2,\)
+    which we write at the top. 
+    Then \(2x^2 (x - 1)\) \(= 2x^3 - 2x^2,\)
+    which we subtract from \(2x^3 + x^2\) \(+ \, x - 4\) to generate a new polynomial, 
+    \(3x^2 + x - 4.\)
+    We repeat this process, as shown by the following setup.
+    \[
+    \require{enclose}
+    \begin{array}{rll}
+        2x^2 + 3x + 4  \\[-3pt]
+        x - 1
+        \enclose{longdiv}{2x^3 + \phantom{2} x^2 + x - 4}\kern-.2ex \nl
+        \begin{alignedat}{3} 
+        2x^3 \hspace{0.32em} &- &&\, \, 2x^2 & \nl
+        \hline
+        & &&3x^2 &+ \phantom{3} x \phantom{-4} \nl 
+        & &&3x^2 &- 3x \phantom{+0} \nl 
+        \hline 
+        & && &\phantom{+} 4x - 4 \nl
+        & && &\phantom{+} 4x - 4 \nl
+        \hline
+        & && & \hspace{0.4em} 0
+        \end{alignedat}
+    \end{array}
+    \]
+    Thus, 
+    \[\frac{2x^3 + x^2 + x - 4}{x - 1} = \boxed{2x^2 + 3x + 4}\]
+</div>
+
+<div class="example-title"> EXAMPLE 19 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use polynomial division to simplify
+        \[\frac{x^4 + 3x^3 - x}{x^2 + 1} \pd\]
+    </div>
+</div>
+<button onclick="toggle19()" class="solution-button">  </button>
+<div id="solution19" class="solution">
+    Let's explicitly write \(+ 0x^2\) and \(+ 0\) to maintain alignment and organization.
+    We therefore have the following setup.
+    \[
+    \require{enclose}
+    \begin{array}{rll}
+        x^2 + 3x - 1  \\[-3pt]
+        x^2 + 1
+        \enclose{longdiv}{x^4 + 3x^3 + 0x^2 - x + 0}\kern-.2ex \nl
+        \begin{alignedat}{3} 
+        x^4 \hspace{0.48em} &\phantom{+} \phantom{3x^3} &&+ \hspace{0.05em} x^2 &\phantom{-} \phantom{x + 0} \hspace{0.3em} \nl
+        \hline
+        &\phantom{+} 3x^3 &&-x^2 &- x \phantom{+ 0} \hspace{1em} \nl 
+        &\phantom{+} 3x^3 &&\phantom{-x^2} &+ 3x \hspace{1.803em} \nl   
+        \hline 
+        &\phantom{+} &&-x^2 &-4x \hspace{1.85em} \nl 
+        &\phantom{+} &&-x^2 &\phantom{-4x} - 1 \nl 
+        \hline 
+        & && &-4x + 1 \nl 
+        \end{alignedat}
+    \end{array}
+    \]
+    The remainder \((-4x + 1)\) has a lower degree than \((x^2 + 1),\)
+    so no more division can occur. 
+    Therefore, we have 
+    \[\frac{x^4 + 3x^3 - x}{x^2 + 1} = \boxed{x^2 + 3x - 1 + \frac{-4x + 1}{x^2 + 1}}\]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#solving-equations" class="summary-anchor">Solving Equations and Inequalities</a>
+        <span class="emph">Algebra</span> is the branch of mathematics concerned with generalizing operations with numbers.
+        Solving <i>equations</i> and <i>inequalities</i> is the heart of algebra. 
+        The following steps enable us to solve an equation for some variable \(x \col\)
+        <ol class="list-num">
+            <li>
+                <span class="label-emph">Condense</span>
+                On each side, simplify the expression by combining like terms.
+            </li>
+            <li>
+                <span class="label-emph">Separate</span>
+                By adding or subtracting,
+                gather all the variables on one side of the equation 
+                and all the constants on the other side.
+            </li>
+            <li>
+                <span class="label-emph">Isolate</span>
+                Divide both sides by the coefficient.
+            </li>
+            <li>
+                <span class="label-emph">Check</span>
+                Substitute your value of \(x\) back into the equation to verify whether it is correct.
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        A similar process enables us to solve inequalities for \(x.\)
+        Remember that the inequality sign is flipped when both sides are multiplied or divided by a negative number.
+        If \(a\) and \(b\) are positive numbers, 
+        and \(m\) and \(n\) are any numbers, 
+        then the <span class="emph">exponent laws</span> are as follows:
+        \begin{align} 
+        a^{m + n} &= a^m \, a^n \cma \eqlabel{eq:exp-law-add} \nl 
+        a^{m - n} &= \frac{a^m}{a^n} \cma \eqlabel{eq:exp-law-minus} \nl 
+        \par{a^{m}}^n &= a^{mn} \cma \eqlabel{eq:exp-law-mn} \nl 
+        \par{ab}^n &= a^n \, b^n \pd \eqlabel{eq:exp-law-a-b}
+        \end{align}
+    </p>
+    <p>
+        <a href="#factoring-polynomials" class="summary-anchor">Factoring Polynomials</a>
+        <span class="emph">Factoring</span> is the process by which
+        a number or expression is decomposed into the product of two or more terms (<i>factors</i>).
+        A <span class="emph">polynomial</span> 
+        is a sum or difference of variables with nonnegative integer (whole number) powers;
+        a polynomial is classified by its highest power.
+        The first step to factoring a polynomial is to extract the <span class="emph">greatest common factor</span>
+        (<span class="emph">GCF</span>), 
+        the largest number or expression that goes into each term in the expression.
+        Subsequent methods of factoring are as follows.
+        <ul>
+            <li>
+                <span class="label-emph">Factoring \(x^2 + bx + c\)</span>
+                By finding two numbers \(p\) and \(q\) whose product is \(c\)
+                and sum is \(b,\) we attain
+                \[x^2 + bx + c = (x + p)(x + q) \pd\] 
+            </li>
+            <li>
+                <span class="label-emph">Factoring Squares and Cubes</span>
+                To factor two terms each raised to the power of \(2\) or \(3,\)
+                one can use the following formulas:
+                \begin{alignat}{2}
+                a^2 - b^2 &= (a + b)(a - b) \comment{\text{Difference of Squares}} \eqlabel{eq:diff-sq} \nl
+                a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \comment{\text{Sum of Cubes}} \eqlabel{eq:sum-cb} \nl
+                a^3 - b^3 &= (a - b)(a^2 + ab + b^2) \comment{\text{Difference of Cubes}} \eqlabel{eq:diff-cb}
+                \end{alignat}
+            </li>
+            <li>
+                <span class="label-emph">Factoring by Grouping</span>
+                A polynomial can be split into pairs of terms, 
+                each of which is factored independently. 
+                If each pair shares a common factor, then the resulting polynomial 
+                is the product of two sets of parentheses: one containing the shared factor, 
+                and the other containing the sum of the groups' GCFs.
+            </li>
+        </ul>
+    </p>
+    <p class="p-no-indent">
+        To factor \(ax^2 + bx + c\) \((a \ne 0),\)  
+        we find two numbers \(p\) and \(q\) whose product is \(c\) and sum is \(b.\)
+        Then we split \(bx\) into \(px + qx\)
+        and factor the resulting polynomial by grouping.
+    </p>
+    <p>
+        <a href="#operations-with-fractions" class="summary-anchor">Operations with Fractions</a>
+        The procedures for adding, subtracting, multiplying, and dividing numerical fractions
+        are identical to those for fractions containing algebraic expressions. 
+        Multiplying fractions is the simplest operation—simply multiply the numerators together 
+        and multiply the denominators together. 
+        Dividing two fractions is equivalent to multiplying the first fraction by the <i>reciprocal</i> of the second fraction.
+        To add or subtract two fractions, <i>attain a common denominator</i>; 
+        if one does not exist, then multiply the numerator and denominator of one fraction (or both fractions) 
+        to force the existence of a common denominator.
+        <span class="emph">Polynomial division</span> enables us to decompose a quotient of two polynomials;
+        it is analogous to long division for numbers. 
+        The steps for dividing \(P/Q,\)
+        where \(P\) and \(Q\) are polynomials such that the degree of \(Q\) 
+        is less than the degree of \(P,\)
+        are as follows:
+        <ol class="list-num">
+            <li>
+                Write out the terms of \(P\) in order of descending powers.
+                To the left of the expression, draw a right parenthesis <q>\()\)</q>;
+                above the expression, draw a horizontal line.
+                To the left of the parenthesis, 
+                write out the terms of \(Q\) in order of descending powers. 
+            </li>
+            <li>
+                Divide the first term of \(P\) by the first term of \(Q;\)
+                place that answer above the horizontal line.
+                Multiply \(Q\) by that answer and write the result in a new row at the bottom.
+            </li>
+            <li>
+                Subtract the result of Step 2 from \(P\) to generate a new polynomial.
+            </li>
+            <li>
+                Divide the first term of the new polynomial by the first term of \(Q.\)
+                Multiply \(Q\) by that result and subtract it from the new polynomial.
+                Repeat this process until the resulting polynomial has a degree smaller than the degree of \(Q.\)
+            </li>
+        </ol>
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

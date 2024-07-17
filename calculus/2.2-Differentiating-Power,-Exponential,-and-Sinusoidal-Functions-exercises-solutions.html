@@ -1507,38 +1507,31 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-<!--[[[HARD]]]-->
-        Let \(f(x) = x^2\) and \(g(x) = -x^2 - C.\)
-        Find the value of \(C\) such that the line tangent to \(f\)
-        at \(x = 2\) is also tangent to \(g.\)
+        There is a point \(P\) on the curve \(y = 6 e^x\)
+        such that the tangent line to the graph at \(P\) passes through the origin. 
+        Find the coordinates of \(P.\)
      
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
             
-<figure class="deriv-4x-4-tan" id="deriv-4x-4-tan">
-<img alt="deriv-4x-4-tan.jpg" src="../images/sectionImages/deriv-4x-4-tan.jpg"/>
-</figure>
-        The word <i>tangent</i> means that the line intersects \(g(x)\)
-        at \(a\) with slope \(g'(a).\)
-        We anticipate that the tangent line to \(f\) at \(x = 2\) is also tangent to \(g\) in the third quadrant. 
-        So we are considering <i>only one tangent line</i>. 
-        We see \(f(2) = 4\) and \(f'(2) = 4,\)
-        so an equation of this tangent line is 
-        \[y - 4 = 4(x - 2) \or y = 4x - 4 \pd\]
-        This line has slope \(4\) and must be tangent to \(g(x) = -x^2 - C,\)
-        whose derivative is \(g'(x) = -2x.\)
-        Equating slopes shows 
-        \[-2x = 4 \implies x = -2 \pd\]
-        Thus, the line \(y = 4x - 4\) is tangent to \(f\) at \(x = 2\)
-        and tangent to \(g\) at \(x = -2.\)
-        The word <i>tangent</i> means that this line also intersects \(g(x)\) at \(x = -2.\)
-        When \(x = -2,\) the line's \(y\)-value is  
-        \[4(-2) - 4 = -12 \cma\]
-        so \(g(-2) = -12.\)
-        Thus, we see
-        \[g(-2) = -(-2)^2 - C = -12 \implies \boxed{C = 8}\]
+        Since the line passes through the origin \((0, 0)\) and \(P(x, 6 e^x),\)
+        its slope is given by 
+        \[\frac{6e^x - 0}{x - 0} = \frac{6e^x}{x} \pd\]
+        Because the line is <i>tangent</i> to the curve,
+        its slope is also given by the derivative of \(y = 6 e^x\)—namely, 
+        \(\textderiv{y}{x} = 6 e^x.\)
+        Equating the two slope expressions, we see 
+        \[
+        \ba 
+        \frac{6 e^x}{x} &amp;= 6 e^x \nl 
+        \frac{1}{x} &amp;= 1 \nl 
+        \implies x &amp;= 1 \pd
+        \ea 
+        \]
+        Then \(y = 6e^1\) \(= 6e.\)
+        So point \(P\) is \(\boxed{(1, 6e)}.\)
      
         </div> 
        </div>  
@@ -1549,13 +1542,49 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        At what values of \(x\) do the tangent lines to the parabola \(f(x) = 2x^2 - 8x + 10\)
+        pass through the origin?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-48"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating shows 
+        \[f'(x) = 4x - 8 \pd\]
+        Consider a line that passes through the points \((x, f(x))\) and \((0, 0).\)
+        This line's slope is 
+        \[
+        \frac{f(x) - 0}{x - 0} = \frac{2x^2 - 8x + 10}{x} \pd
+        \]
+        Since the line is <i>tangent</i> to the graph of \(f,\)
+        its slope is also given by \(f'(x) = 4x - 8.\)
+        Equating the two slope expressions, we see 
+        \[
+        \ba 
+        \frac{2x^2 - 8x + 10}{x} &amp;= 4x - 8 \nl 
+        2x^2 - 8x + 10 &amp;= 4x^2 - 8x \nl 
+        x^2 &amp;= 5 \nl 
+        \implies x &amp;= \boxed{\pm \sqrt 5}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
 <!--[[[HARD]]]-->
         Find the value of \(b\) such that the parabola \(y = x^2 + b\)
         is tangent to \(y = \abs x.\)
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-48"> 
+        <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="deriv-x2-b" id="deriv-x2-b">
@@ -1583,8 +1612,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-49"> 
-  <div class="box-solution__head">     EXERCISE 49 </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1596,7 +1625,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-49"> 
+        <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
             
         This proof is nearly identical to the proof discussed in the section. 
@@ -1621,43 +1650,6 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-50"> 
-  <div class="box-solution__head">     EXERCISE 50 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-<!--[[[HARD]]]-->
-        Let \(R\) be the region in the first quadrant bounded between the coordinate axes and the 
-        line tangent to the curve \(y = 1/x\) at any point \((a, 1/a).\)
-        Calculate the area of \(R\) and justify that it is independent of \(a.\)
-     
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-50"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-<figure class="deriv-1x-R" id="deriv-1x-R">
-<img alt="deriv-1x-R.jpg" src="../images/sectionImages/deriv-1x-R.jpg"/>
-</figure>
-        Region \(R\) is a triangle whose hypotenuse is the tangent line. 
-        The derivative of \(1/x\) is, by the Power Rule, 
-        \[-x^{-2} = -\frac{1}{x^2} \pd\]
-        Thus, the slope to the curve \(1/x\) at \(x = a\) is \(-1/a^2.\)
-        The point of tangency is \((a, 1/a),\)
-        so an equation of the tangent line is 
-        \[y - \frac{1}{a} = -\frac{1}{a^2}(x - a) \or y = -\frac{x}{a^2} + \frac{2}{a} \pd\]
-        To find the triangle's <i>base</i> \(b,\) we set \(y = 0 \col\)
-        \[0 = -\frac{b}{a^2} + \frac{2}{a} \implies b = 2a \pd\]
-        The triangle's <i>height</i> \(h\) is found by letting \(x = 0 \col\)
-        \[h = -\frac{0}{a^2} + \frac{2}{a} \implies h = \frac{2}{a} \pd\]
-        Hence, the triangle's area is 
-        \[\tfrac{1}{2} bh = \tfrac{1}{2}(2a) \par{\tfrac{2}{a}} = \boxed{2}\]
-        It is surprising that the triangle's area is always \(2,\) regardless of the value of \(a.\)
-     
-        </div> 
-       </div>  
-   </div> 
 </div>
 </main>
 </main>
@@ -1667,16 +1659,16 @@
             <h3>Navigation</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html">Home</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/about.html">About</a> 
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html">FAQ</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Contact</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
                 </li>
             </ul>
         </div>
@@ -1684,10 +1676,10 @@
             <h3>Extra Help</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
                 </li>
             </ul>
         </div>
@@ -1695,16 +1687,16 @@
             <h3>Prerequisites</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/index.html"> Section Notes </a> 
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
                 </li>
             </ul>
         </div>
@@ -1712,27 +1704,27 @@
             <h3>Technical</h3>
             <ul>
                 <li>
-                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
                 </li>
                 <li>
-                    <a href="/Valculus/index.html">Report a Problem</a> 
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
                 </li>
 
                 <li>
-                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
                 </li>
                 <li>
-                    <a href="/Valculus/contact.html">Donate</a> 
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
                 </li>
             </ul>
         </div>
     </div>
 </footer> -->
 
-    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/Valculus/js/toggle-solutions.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
 </body>

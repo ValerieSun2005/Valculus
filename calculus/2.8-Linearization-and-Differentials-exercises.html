@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2.8 Exercises: Linearization and Differentials</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>2.8 Exercises: Linearization and Differentials</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="2.8-Linearization-and-Differentials.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="2.8-Linearization-and-Differentials-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<section><p class="exercises-hint">Click on a problem number to see its solution.</p> 
+<!--div1--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-1" target="_blank" rel="noopener">\(\hspace{0.56em}1.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        If \(y = f(x),\) then define and interpret the <b>differential</b> \(\dd y.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div2--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-2" target="_blank" rel="noopener">\(\hspace{0.56em}2.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        What is <b>linearization</b>?
+    </ques> 
+   </div>  
+</div> 
+</section><p class="problems-note">For each of exercises 3–7, determine the differential. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-3" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}3.\)</a> 
+        \(\ds \dd \par{x^3}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-4" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}4.\)</a> 
+        \(\ds \dd \par{e^{2x}}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-5" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}5.\)</a> 
+        \(\ds \dd \par{\sin 3t}\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-6" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}6.\)</a> 
+        \(\ds \dd \par{x^2 \sin 4x}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-7" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}7.\)</a> 
+        \(\ds \dd \par{\frac{x^2 + 4}{e^x}}\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><!--div8--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-8" target="_blank" rel="noopener">\(\hspace{0.56em}8.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<span class="label-emph">Walkthrough of Linearization</span>
+        Let's use <b>linearization</b> to estimate the value of \(\sqrt{5}.\)
+        The number \(5\) is closest to the perfect square \(4,\)
+        so we <b>center</b> our linearization at \(x = 4.\)
+        <ol class="list-alpha">
+<li>
+                We start by constructing a tangent line to the curve.
+                Write an equation for the line tangent to \(y = \sqrt x\)
+                at the center of the linearization, \(x = 4.\)
+            </li>
+<li>
+                Determine the \(y\)-value that your tangent line reaches when \(x = 5.\)
+                What does this value represent?
+            </li>
+<li>    
+                Linearization is effective for \(x\) near the center \(a = 4\) 
+                but loses accuracy for \(x\) far away from \(a.\)
+                We know that \(\sqrt{100} = 10,\)
+                but what value does your linearization provide for \(\sqrt{100} \ques\)
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+</section><p class="problems-note">For each of exercises 9–15, construct a linearization for the function at the given center \(a\). 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-9" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}9.\)</a> 
+        \(\ds f(x) = x^2 - x - 2 \scoll a = 3\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-10" class="problem-number" rel="noopener" target="_blank">\(10.\)</a> 
+        \(\ds g(x) = 2 - 3x^2 \scoll a = -1\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-11" class="problem-number" rel="noopener" target="_blank">\(11.\)</a> 
+        \(\ds f(x) = 4 - \cos 2x \scoll a = \frac{\pi}{4}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-12" class="problem-number" rel="noopener" target="_blank">\(12.\)</a> 
+        \(\ds g(x) = \frac{1}{x} \scoll a = 2\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-13" class="problem-number" rel="noopener" target="_blank">\(13.\)</a> 
+        \(\ds g(x) = \sin x \scoll a = \frac{\pi}{2}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-14" class="problem-number" rel="noopener" target="_blank">\(14.\)</a> 
+        \(\ds h(t) = 3 + \sqrt{2t} \scoll a = 8\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-15" class="problem-number" rel="noopener" target="_blank">\(15.\)</a> 
+        \(\ds f(x) = e^x - 2 \scoll a = 3\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><p class="problems-note">For each of exercises 16–18, using a calculator, compute the values of \(\dd y\) and \(\Delta y\) 
+        given the values of \(x\) and \(\dd x = \Delta x\). 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-16" class="problem-number" rel="noopener" target="_blank">\(16.\)</a> 
+        \(\ds y = 2 - x^2 \scoll x = 1 \cmaa \Delta x = 0.02\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-17" class="problem-number" rel="noopener" target="_blank">\(17.\)</a> 
+        \(\ds y = \frac{2}{x} \scoll x = 2 \cmaa \Delta x = 0.1\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-18" class="problem-number" rel="noopener" target="_blank">\(18.\)</a> 
+        \(\ds y = \sqrt{x - 5} \scoll x = 6 \cmaa \Delta x = 0.3\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><p class="problems-note">For each of exercises 19–26, use a tangent line approximation (or differentials) to estimate the value. 
+<table class="problems-grid"> 
+<tbody> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-19" class="problem-number" rel="noopener" target="_blank">\(19.\)</a> 
+        \(\ds \sqrt{23}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-20" class="problem-number" rel="noopener" target="_blank">\(20.\)</a> 
+        \(\ds \sqrt{41}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-21" class="problem-number" rel="noopener" target="_blank">\(21.\)</a> 
+        \(\ds e^{1.2}\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-22" class="problem-number" rel="noopener" target="_blank">\(22.\)</a> 
+        \(\ds \cos 0.1\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-23" class="problem-number" rel="noopener" target="_blank">\(23.\)</a> 
+        \(\ds 4.01^3\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-24" class="problem-number" rel="noopener" target="_blank">\(24.\)</a> 
+        \(\ds 1.1^5\)
+     
+</td> 
+</tr> 
+<tr> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-25" class="problem-number" rel="noopener" target="_blank">\(25.\)</a> 
+        \(\ds \frac{1}{2.05^2}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-26" class="problem-number" rel="noopener" target="_blank">\(26.\)</a> 
+        \(\ds e^{0.2} \cos 0.2\)
+     
+</td> 
+</tr> 
+</tbody> 
+</table> 
+</section></section><!--div27--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-27" target="_blank" rel="noopener">\(27.\)</a> 
+<div class="exercises-calculator-body">
+   <img src="../images/icons/calculator.png" class="exercises-calculator-icon">
+</div>
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!-- [[[CALC]]] -->
+        Let \(f(x) = \sqrt{2x + 3}.\)
+        <ol class="list-alpha">
+<li>
+                Show that a linearization for \(f\) centered at \(x = 3\) is 
+                \(f(x) \approx 2 + \tfrac{x}{3}.\)
+            </li>
+<li>
+                Determine the interval of \(x\) for which the linearization 
+                differs from \(f\) by no more than \(0.3.\)
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+<!--div28--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-28" target="_blank" rel="noopener">\(28.\)</a> 
+<div class="exercises-calculator-body">
+   <img src="../images/icons/calculator.png" class="exercises-calculator-icon">
+</div>
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!-- [[[CALC]]] -->
+        Let \(g(x) = \ln(x - 3).\)
+        <ol class="list-alpha">
+<li>
+                Derive a linearization for \(g\) centered at \(x = 4\) 
+                to show that it is given by
+                \(g(x) \approx x - 4.\)
+            </li>
+<li>
+                Find the interval of \(x\) such that the linearization 
+                estimates \(g\) accurately to one decimal place.
+            </li>
+</ol>
+</ques> 
+   </div>  
+</div> 
+<!--div29--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-29" target="_blank" rel="noopener">\(29.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        The sides of a cube are each \(10\) centimeters long. 
+        Using differentials, calculate the amount by which the cube's volume increases 
+        when each side is increased by \(0.01\) centimeter.
+    </ques> 
+   </div>  
+</div> 
+<!--div30--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-30" target="_blank" rel="noopener">\(30.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        A square's sides are measured to be \(4\) inches each 
+        with a maximum error of \(0.05\) inch.
+        Use differentials to approximate the maximum percent error in the square's area.
+    </ques> 
+   </div>  
+</div> 
+<!--div31--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-31" target="_blank" rel="noopener">\(31.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        A circle's radius is measured to be \(5.6 \pm 0.3\) inches. 
+        Using differentials, approximate the maximum percent error in the circle's area.
+    </ques> 
+   </div>  
+</div> 
+<!--div32--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-32" target="_blank" rel="noopener">\(32.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        The side \(s\) of a square is increased in length by \(1\%.\)
+        Using a linear approximation, estimate the square's new area in terms of \(s.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div33--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-33" target="_blank" rel="noopener">\(33.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Earth can be approximated by a sphere whose radius is roughly \(6360\) miles. 
+        If Earth's radius were shrunk by \(1\) mile, 
+        then approximately by what percent would its surface area decrease?
+    </ques> 
+   </div>  
+</div> 
+<!--div34--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-34" target="_blank" rel="noopener">\(34.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        Let \(g\) be a differentiable function that satisfies \(g(2) = 7\)
+        and \(g'(x) = x^2 - 1.\)
+        Approximate \(g(2.1).\)
+    </ques> 
+   </div>  
+</div> 
+<!--div35--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-35" target="_blank" rel="noopener">\(35.\)</a> 
+
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+        For nonzero \(x,\) let \(Q(x) = x^k\) where \(k \gt 0.\)
+        Show that the maximum relative error of \(Q\) is \(k\) times the maximum relative error of \(x.\) 
+    </ques> 
+   </div>  
+</div> 
+<!--div36--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-36" target="_blank" rel="noopener">\(36.\)</a> 
+
+<div class="exercises-difficult-body">
+   <img src="../images/icons/difficult.png" class="exercises-difficult-icon">
+</div>
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!--[[[HARD]]]-->
+        Let \(f(x) = x^2 + C\) and \(T(x) = 6x - 5.\)
+        Find the value of \(C\) such that \(T\) is the linearization of \(f\) at \(x = 3.\)
+    </ques> 
+   </div>  
+</div> 
+<!--div37--> 
+<div class="problem-display"> 
+   <div class="problem-number"> 
+      <a href="2.8-Linearization-and-Differentials-exercises-solutions.html#exercise-37" target="_blank" rel="noopener">\(37.\)</a> 
+
+<div class="exercises-difficult-body">
+   <img src="../images/icons/difficult.png" class="exercises-difficult-icon">
+</div>
+
+   </div> 
+    <div class="problem-display-body">
+       <ques>
+<!--[[[HARD]]]-->
+        The line \(T(x) = -4x - 3\) is a linearization of the parabola \(f(x) = x^2 + 1.\)
+        Find the \(x\)-value at which the linearization is centered.
+    </ques> 
+   </div>  
+</div> 
+</section>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>

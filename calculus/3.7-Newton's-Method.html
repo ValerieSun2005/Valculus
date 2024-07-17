@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.7: Newton's Method</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>3.7: Newton's Method</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="3.7-Newton's-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="3.7-Newton's-Method-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Newton's-Method]]]--> 
+<p>
+    Whereas quadratic equations \(ax^2 + bx + c = 0\) have solutions given by the Quadratic Formula,
+    other types of functions lack such a well-known formula (or any formula at all). 
+    How do we approximate the zeros of such a function?
+    In this section we present <span class="emph">Newton's Method</span>, 
+    in which we use successive tangent lines to estimate the roots of functions. 
+</p>
+<figure class="newtons-method-lines" id="newtons-method-lines">
+    <img src="../images/sectionImages/newtons-method-lines.jpg" alt="Figure 1">
+</figure>
+<style>
+    .newtons-method-lines::before{
+        content:'FIGURE 1';
+    }
+</style> 
+<p>
+    Suppose that a function \(f\) is differentiable on some interval containing a root \(r.\)
+    Our goal is to estimate the value of \(r\) in the equation \(f(r) = 0.\)
+    We first approximate the root to be some value \(x_1;\)
+    then we construct a tangent line \(\ell_1\) to \(f\) at \((x_1, f(x_1)).\)
+    The idea of Newton's Method is to approximate the curve's \(x\)-intercept 
+    to be the tangent line's \(x\)-intercept, denoted \(x_2.\)
+    (Since \(\ell_1\) is a line, its \(x\)-intercept is simple to calculate.)
+    An equation of \(\ell_1\) is, by point-slope form,
+    \[y - f(x_1) = f'(x_1)(x - x_1) \pd\]
+    The coordinates of the \(x\)-intercept are \((x_2, 0),\) 
+    which we substitute to get 
+    \[
+    \ba
+    0 - f(x_1) &= f'(x_1) (x_2 - x_1) \nl 
+    \implies x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \cma
+    \ea
+    \]
+    assuming \(f'(x_1) \ne 0.\)
+    Thus, \(x_2\) is the next (usually more accurate) approximation of the root \(r.\)
+    (See <a href="#newtons-method-lines">Figure 1</a>.)
+    Again, at \((x_2, f(x_2))\) 
+    we construct another tangent line \(\ell_2\) to \(f,\) 
+    whose \(x\)-intercept \(x_3\) is (usually) a better estimate of \(r.\)
+    An equation of \(\ell_2\) is 
+    \[y - f(x_2) = f'(x_2) (x - x_2) \pd\]
+    Substituting \((x_3, 0)\) produces 
+    \[
+    \ba
+    0 - f(x_2) &= f'(x_2) (x_3 - x_2) \nl 
+    \implies x_3 &= x_2 - \frac{f(x_2)}{f'(x_2)} \pd
+    \ea
+    \]
+    By repeating this process, 
+    we usually attain increasingly accurate approximations of \(r.\)
+    In general, if the <nobr>\(n\)th</nobr> approximation of \(r\) is \(x_n\) and \(f'(x_n) \ne 0,\)
+    then the subsequent approximation is given by 
+    \begin{equation} 
+    x_{n + 1} = x_n - \frac{f(x_n)}{f'(x_n)} \pd \label{eq:newton-n}
+    \end{equation}
+    Mathematically, we say \(x_n \to r\) as \(n \to \infty\)
+    if our approximations \(x_1,\) \(x_2, \dots\) get closer and closer to the true root \(r.\)
+    Then Newton's Method is said to <i>converge</i>.
+    (See <a href="#newtons-method-zeros">Animation 1</a>.)
+</p>
+
+<figure class="newtons-method-zeros" id="newtons-method-zeros">
+    <img src="../images/sectionAnimations/newtons-method-zeros.gif" alt="Animation 1">
+</figure>
+<style>
+    .newtons-method-zeros::before{
+        content:'ANIMATION 1';
+    }
+</style> 
+
+<div class="box-title">NEWTON'S METHOD</div>
+<div class="box">
+    If \(f\) is differentiable on some interval containing \(r\) and \(f(r) = 0,\) 
+    then using <span class="emph">Newton's Method</span> with the starting approximation \(r \approx x_1\)
+    and general approximation \(r \approx x_n\)
+    enables us to estimate \(r\) as
+    \begin{equation} 
+    x_{n + 1} = x_n - \frac{f(x_n)}{f'(x_n)} \pd \eqlabel{eq:newton-n}
+    \end{equation}
+</div>
+
+<p>
+    \(\eqrefer{eq:newton-n}\) represents an <i>iterative process</i> 
+    because we use the same rule to attain \(x_{n + 1}\) from \(x_n.\)
+    (Each application of Newton's Method is called an <i>iteration</i>.)
+    Thus, it is easy to write a computer script or calculator program to execute Newton's Method.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use three iterations of Newton's Method, starting with \(x_1 = 0,\)
+        to approximate the root of 
+        \[f(x) = x^3 + x - 1 \pd\]  
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="newtons-method-ex-x3" id="newtons-method-ex-x3">
+        <img src="../images/sectionImages/newtons-method-ex-x3.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .newtons-method-ex-x3::before{
+            content:'FIGURE 2';
+        }
+    </style> 
+    Note that 
+    \(f'(x) = 3x^2 + 1.\)
+    Using Newton's Method, as in \(\eqref{eq:newton-n},\)
+    with \(n = 1\) gives
+    \[
+    \ba
+    x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+    &= 0 - \frac{f(0)}{f'(0)} \nl 
+    &= 0 - \frac{(0)^3 + (0) - 1}{3(0)^2 + 1} \nl 
+    &= 1 \pd
+    \ea
+    \]
+    (<a href="#newtons-method-ex-x3">Figure 2</a> shows the tangent line for the first iteration.)
+    Likewise, with \(n = 2\) we find 
+    \[
+    \ba 
+    x_3 &= x_2 - \frac{f(x_2)}{f'(x_2)} \nl
+    &= 1 - \frac{f(1)}{f'(1)} \nl
+    &= 1 - \frac{(1)^3 + (1) - 1}{3(1)^2 + 1} \nl 
+    &= 0.75 \pd
+    \ea 
+    \]
+    Finally, with \(n = 3\) we get 
+    \[
+    \ba 
+    x_4 &= x_3 - \frac{f(x_3)}{f'(x_3)} \nl 
+    &= 0.75 - \frac{f(0.75)}{f'(0.75)} \nl
+    &= 0.75 - \frac{(0.75)^3 + (0.75) - 1}{3(0.75)^2 + 1} \nl 
+    &\approx \boxed{0.68605}
+    \ea 
+    \]
+    The true root is approximately \(r = 0.68233;\)
+    Newton's Method came close with just three iterations!
+</div> 
+
+<p>
+    To estimate a root to a desired accuracy threshold,
+    we generally cease using Newton's Method
+    if \(x_n\) and \(x_{n + 1}\) agree to the same desired number of decimal places.
+    (It is unlikely that further iterations will change the approximation significantly.)
+    The following example demonstrates this idea.
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Use Newton's Method to calculate \(\sqrt[5]{2}\)
+        correct to six decimal places.
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Note that \(\sqrt[5] 2\) is the zero of \(f(x) = x^5 - 2.\)
+    Differentiating gives \(f'(x) = 5x^4;\) 
+    let's begin with \(x_1 = 1.\)
+    So Newton's Method, as in \(\eqref{eq:newton-n},\) gives 
+    \[
+    \ba 
+    x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+    &= 1 - \frac{f(1)}{f'(1)} \nl
+    &= 1 - \frac{(1)^5 - 2}{5(1)^4} \nl 
+    &= 1.2 \pd
+    \ea 
+    \]
+    Subsequent iterations give 
+    \[
+    \ba 
+    x_3 &= 1.1529012 \cma \nl
+    x_4 &= 1.1487289 \cma \nl
+    x_5 &= 1.1486984 \pd
+    \ea 
+    \]
+    Because \(x_4\) and \(x_5\) both agree to six decimal points, 
+    we cease the approximations and use 
+    \(\sqrt[5]{2} \approx \boxed{1.148698}.\)
+</div>
+
+<figure class="newtons-method-fail-tan-line" id="newtons-method-fail-tan-line">
+    <img src="../images/sectionImages/newtons-method-fail-tan-line.jpg" alt="Figure 3">
+</figure>
+<style>
+    .newtons-method-fail-tan-line::before{
+        content:'FIGURE 3';
+    }
+</style> 
+
+<p>
+    <span class="label-emph">Failure</span>
+    Unfortunately, Newton's Method does not always work.
+    If the approximations \(x_1,\) \(x_2, \dots\)
+    do <i>not</i> converge to \(r,\)
+    then Newton's Method is said to <span class="warning">fail</span>.  
+    Obviously, if \(f'(x_n) = 0,\) 
+    then Newton's Method is invalid because the tangent line does not cross the \(x\)-axis. 
+    Newton's Method may also fail if a function has multiple roots,
+    since successive iterations may converge to a different root than the desired root.
+    Generally, the method fails or converges very slowly if we pick \(x_1\)
+    such that \(f'(x_1)\) is close to \(0.\)
+    In any of these cases, <i>we should select a better starting approximation</i> \(x_1.\)
+    In <a href="#newtons-method-fail-tan-line">Figure 3</a> 
+    the choice of \(x_1\) makes \(f'(x_1)\) close to \(0,\)
+    so the tangent line has a large range and therefore poorly models the behavior of \(f.\)
+    Accordingly, \(x_2\) is a <span class="warning">worse</span> approximation than \(x_1\) in estimating the root \(r.\)
+    (In fact, \(x_2\) is such a poor approximation that it falls outside the domain of <nobr>\(f \exclam\))</nobr> 
+    The following examples reveal additional situations in which Newton's Method fails.
+</p>
+
+<div class="example-title" id="ex-newtons-method-fail-bounce"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Choosing \(x_1 = 1,\)
+        show that Newton's Method fails to converge to the zero of 
+        \[f(x) = x^3 - 2x + 2 \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="newtons-method-ex-fail" id="newtons-method-ex-fail">
+        <img src="../images/sectionImages/newtons-method-ex-fail.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .newtons-method-ex-fail::before{
+            content:'FIGURE 4';
+        }
+    </style> 
+    We have \(f'(x) = 3x^2 - 2.\)
+    Using \(n = 1\) and \(x_1 = 1,\) Newton's Method [as in <nobr>\(\eqref{eq:newton-n}\)]</nobr> gives 
+    \[
+    \ba 
+    x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+    &= 1 - \frac{f(1)}{f'(1)} \nl
+    &= 1 - \frac{(1)^3 - 2(1) + 2}{3(1)^2 - 2} \nl 
+    &= 0 \pd
+    \ea 
+    \]
+    Then with \(n = 2\) and \(x_2 = 2,\) we get 
+    \[
+    \ba 
+    x_3 &= x_2 - \frac{f(x_2)}{f'(x_2)} \nl 
+    &= 0 - \frac{f(0)}{f'(0)} \nl
+    &= 0 - \frac{(0)^3 - 2(0) + 2}{3(0)^2 - 2} \nl 
+    &= 1 \pd
+    \ea 
+    \]
+    Subsequent iterations give \(x_4 = 0,\)
+    \(x_5 = 1,\) and \(x_6 = 0\)—a repeating pattern,
+    as shown by <a href="#newtons-method-ex-fail">Figure 4</a>. 
+    Because the approximations bounce back and forth, never settling to a final value,
+    Newton's Method fails. 
+    (Luckily, choosing a different value of \(x_1,\) such as \(x_1 = 2,\) remedies this issue.)
+</div>
+
+<div class="example-title" id="ex-newtons-method-cbrt"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Show that Newton's Method fails to converge to the zero of \(f(x) = \sqrt[3]{x}.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="newtons-method-cbrt" id="newtons-method-cbrt">
+        <img src="../images/sectionImages/newtons-method-cbrt.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .newtons-method-cbrt::before{
+            content:'FIGURE 5';
+        }
+    </style> 
+    It is clear that the root is \(x = 0.\)
+    But with Newton's Method,
+    observe that \(f'(x) = \tfrac{1}{3} x^{-2/3}\)
+    and thus
+    \[
+    \ba 
+    x_{n + 1} &= x_n - \frac{f(x_n)}{f'(x_n)} \nl 
+    &= x_n - \frac{\par{x_n}^{1/3}}{\tfrac{1}{3} \par{x_n}^{-2/3}} \nl 
+    &= x_n - 3 x_n \nl 
+    &= -2 x_n \pd
+    \ea 
+    \]
+    In words, each subsequent approximation of the root 
+    is double the magnitude of the preceding estimate. 
+    For example, if \(x_1 = 1\) then \(x_2 = -2,\)
+    \(x_3 = 4,\) \(x_4 = -8,\) and \(x_5 = 16.\)
+    Thus, Newton's Method produces approximations that lead <i>away from</i>
+    the true root \(x = 0,\)  
+    as shown by <a href="#newtons-method-cbrt">Figure 5</a>. 
+    This is a famous case in which Newton's Method fails <i>completely</i>. 
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+    <span class="emph">Newton's Method</span>
+    enables us to approximate a root of a function by using successive tangent lines,
+    an <i>iterative process</i>. 
+    If \(f\) is differentiable on some interval containing a root \(r,\)
+    and we take the starting approximation \(r \approx x_1\) and general approximation \(r \approx x_n,\)
+    then Newton's Method enables us to approximate \(r\) as 
+    \begin{equation} 
+    x_{n + 1} = x_n - \frac{f(x_n)}{f'(x_n)} \pd \eqlabel{eq:newton-n}
+    \end{equation}
+    Newton's Method is said to <i>converge</i> to a root \(r\)
+    if \(x_n \to r\) as \(n \to \infty\)—that is, 
+    if the approximations get closer and closer to the true value of \(r.\)
+    In general, we can cease the iterative process 
+    if \(x_n\) and \(x_{n + 1}\) both agree to a desired number of decimal places. 
+    But Newton's Method fails if the approximations do not approach \(r;\)
+    failure may occur in the following scenarios:
+    <ul>
+        <li>
+            If \(f'(x_n) = 0,\)
+            then the tangent line does not cross the \(x\)-axis.
+        </li>
+        <li>
+            If a function has multiple roots, 
+            then Newton's Method may converge to a different root.
+        </li>
+        <li>
+            If \(f'(x_1)\) is close to \(0,\)
+            then the tangent line poorly models the behavior of \(f,\)
+            leading to an approximation that may be a <i>worse</i> estimate for \(r.\)
+        </li>
+    </ul>
+    </p>
+    <p class="p-no-indent">
+        In any of these cases, try using a better choice of \(x_1.\)
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/ValCalc/ValCalc/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/ValCalc/ValCalc/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/ValCalc/ValCalc/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/ValCalc/ValCalc/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/ValCalc/ValCalc/js/toggle-solutions.js"></script>
+</body>
