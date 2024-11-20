@@ -23,6 +23,231 @@
 <!--APPEND PDF PANEL HERE-->
 <hr id="mainBodyBegin">
 <!--[[[crefId.Mathematical-Proofs-and-Logic]]]-->
+
+<link href="/ValCalc/ValCalc/css/notes-style.css" rel="stylesheet">
+<link href="/ValCalc/ValCalc/css/notes-style-print.css" media="print" rel="stylesheet">
+
+<h4 id="mathematical-logic">Mathematical Logic</h4>
+<p>
+    The phrases <i>if</i>, <i>only if</i>, and <i>if and only if</i> 
+    are similar, but they hold nuanced differences.
+    Let \(A\) and \(B\) be logical events.
+    The statement <q><b>\(B\) if \(A\)</b></q> means 
+    \(A\) is a sufficient condition for \(B.\)
+    When \(A\) is true, \(B\) must also be true;
+    symbolically, 
+    \(A \implies B.\)
+    (But when \(B\) is true, \(A\) doesn't need to be true.)
+    Conversely, <q><b>\(B\) only if \(A\)</b></q> 
+    says \(A\) is a necessary condition for \(B;\)
+    that is, \(B\) is only possible when \(A\) is true.
+    Thus, when \(B\) is true, \(A\) must also be true. 
+    We therefore say \(A\) is <i>implied by</i> \(B\)—mathematically, 
+    \(A \impliedby B.\) 
+    (Yet when \(A\) is true, \(B\) doesn't need to be true,
+    so \(A\) does not necessarily imply <nobr>\(B.\))</nobr>
+    A combination of the previous two logical statements, 
+    <q><b>\(B\) if and only if \(A\)</b></q> is the most restrictive statement.
+    It means \(A\) both implies <i>and is implied by</i> \(B\)—that is, 
+    \(A \iffArrow B.\)
+    Accordingly, a bidirectional relationship exists between \(A\) and \(B \col\)
+    either both are true or both are false.
+</p>
+
+<div class="box-title">LOGICAL STATEMENTS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Statement</th>
+                <th>Notation</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        
+        <!-- if -->
+        <tr>
+            <td>
+                \(B\) if \(A\)
+            </td>
+            <td>
+                \(A \implies B\)
+            </td>
+            <td>
+                \(A\) is a sufficient condition for \(B\)
+            </td>
+        </tr>
+
+        <!-- only if -->
+        <tr>
+            <td>
+                \(B\) only if \(A\)
+            </td>
+            <td>
+                \(A \impliedby B\)
+            </td>
+            <td>
+                \(A\) is a necessary condition for \(B\)
+            </td>
+        </tr>
+
+        <!-- iff -->
+        <tr>
+            <td>
+                \(B\) if and only if \(A\)
+            </td>
+            <td>
+                \(A \iffArrow B\)
+            </td>
+            <td>
+                \(A\) and \(B\)
+                are either both true or both false
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    Many logical statements remain correct when you replace <i>if and only if</i> with <i>if</i>
+    or <i>only if</i>,
+    but doing so sacrifices precision.
+    In mathematics, <i>if and only if</i> occurs frequently with definitions.
+    The following statements exemplify the uses of these statements. 
+</p>
+
+<ul>
+    <li>
+        The children will fall asleep <b>only if</b> a bedtime story is read.
+        (Reading the story is a <i>necessary condition</i> for the children to fall asleep,
+        but just reading might not guarantee it.) 
+    </li>
+    <li>
+        You will feel better <b>if</b> you take some medication.
+        (Taking the medication is a <i>sufficient condition</i> to ensure you feel better, 
+        but there might be other remedies.)
+    </li>
+    <li>
+        \(f\) is greater than \(g\) on \([a, b]\) <b>if and only if</b>
+        \(f(x) \gt g(x)\) on \([a, b].\)
+        (These statements are <i>synonymous</i> with each other.) 
+    </li>
+    <li>
+        The series \(\sum a_n\) is absolutely convergent <b>if and only if</b> \(\sum \abs{a_n}\) is convergent.
+        (In this definition, either \(\sum a_n\) is absolutely convergent
+        and \(\sum \abs{a_n}\) is convergent, or both are false.)
+    </li>
+    <li>
+        A function \(f\) is differentiable <b>only if</b> \(f\) is continuous.
+        (Continuity is a <i>necessary</i>, but not <i>sufficient</i>, condition for differentiability.
+        Without continuity, differentiability can't be established.)
+    </li>
+    <li>
+        A function \(f\) is continuous <b>if</b> \(f\) is differentiable. 
+        (Differentiability is a <i>sufficient</i>, but not <i>necessary</i>, condition for continuity.
+        The converse of this statement—\(f\) is differentiable if \(f\) is continuous—is generally <span class="warning">false</span>.)
+    </li>
+</ul>
+
+<h4 id="proof-types">Types of Mathematical Proofs</h4>
+<p>
+    A <span class="emph">mathematical proof</span> is an argument that logically guarantees the truth of some statement.
+    There are many types of mathematical proofs,
+    but we only cover a few.
+    The simplest type is a <span class="emph">direct proof</span>,
+    using a combination of definitions and theorems to validate some conclusion. 
+    Another method is a <span class="emph">Proof by Contradiction</span>,
+    in which we first make an assumption,
+    then discover that a logical contradiction occurs, and ultimately conclude that the entire statement is false.
+    Finally, to construct a <span class="emph">Proof by Induction</span>, 
+    we first prove a simple base case, then assume a general rule,
+    and lastly show that the general rule implies the next case.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that the sum of two even integers is even.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    Let's use a direct proof.
+    By definition, a number is even if and only if it's divisible by \(2.\)
+    Let two even integers be \(m\) and \(n;\)
+    then they can be written as \(m = 2a\) and \(n = 2b\)
+    for any integers \(a\) and \(b.\)
+    But
+    \[
+    \ba 
+    m + n &= 2a + 2b \nl 
+    &= 2(a + b) \pd
+    \ea 
+    \]
+    The quantity \(2(a + b)\) is even since it is divisible by \(2,\)
+    so the sum of two even integers is even.
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that the following equation has no solutions:
+        \[\frac{x + 4}{x + 5} = 1 \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    Let's use a Proof by Contradiction by first assuming a solution <i>does</i> exist.
+    Multiplying both sides by \((x + 5)\) gives
+    \[
+    \ba
+    x + 4 &= x + 5 \nl 
+    4 &= 5 \pd
+    \ea
+    \]
+    We have a contradiction: \(4 = 5\) is never true.
+    Hence, the entire process is false,
+    so <i>no</i> value of \(x\) satisfies
+    \[\frac{x + 4}{x + 5} = 1 \pd\]
+
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        For integers \(n \geq 3,\) prove that \(2^n \gt 2n.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    Let's use a Proof by Induction.
+    We first prove the statement for the base case, \(n = 3 \col\)
+    \[
+    \ba 
+    2^3 &\gt 2(3) \nl 
+    8 &\checkAbove{\gt} 6 \pd
+    \ea 
+    \]
+    Now we assume that \(2^n \gt 2n\) is true for any \(n = k,\)
+    where \(k \geq 3.\)
+    Our goal is to prove that the inequality is also true for \(n = k + 1\)—that is, 
+    \(2^{k + 1} \gt 2 (k + 1).\)
+    Starting with the induction hypothesis \(2^k \gt 2k,\)
+    multiplying both sides by \(2\) yields 
+    \[
+    \ba 
+    2 \cdot 2^k &\gt 2 \cdot 2k \nl 
+    2^{k + 1} &\gt 4k \pd 
+    \ea 
+    \]
+    Observe that \(4k \gt 2(k + 1)\)
+    because \(4k \gt 2k + 2\) \(\iffArrow 2k \gt 2\) \(\iffArrow k \gt 1,\)
+    which is true since we are given \(k \geq 3.\)
+    Hence, 
+    \[2^{k + 1} \gt 4k \gt 2(k + 1) \pd\]
+    Accordingly, 
+    \(2^n \gt 2n\) is also true for \(n = k + 1.\)
+    By mathematical induction, the given inequality is true for all \(n \geq 3.\) 
+</div>
 </main>
 </main>
 <!-- <footer>

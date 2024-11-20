@@ -37,7 +37,129 @@
   </div>
 </div>
 <hr id="mainBodyBegin">
-
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Over the interval \([1, x],\) \(f\) is increasing 
+        and has an arc length function given by 
+        \[s(x) = \int_0^x \sqrt{t^2 - 2t + 2} \di t \pd\]
+        If \(f(2) = 5,\) then determine the identity of \(f.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integrand of the arc length function takes the form 
+        \(\sqrt{1 + [f'(t)]^2}.\)
+        We therefore see 
+        \[
+        \ba 
+        \sqrt{1 + [f'(t)]^2} &amp;= \sqrt{t^2 - 2t + 2} \nl 
+        1 + [f'(t)]^2 &amp;= t^2 - 2t + 2 \nl 
+        [f'(t)]^2 &amp;= t^2 - 2t + 1 = (t - 1)^2 \nl 
+        \implies f'(t) &amp;= t - 1 \pd
+        \ea 
+        \] 
+        [Note that we choose the positive solution instead of \(f'(t) = -(t - 1)\)
+        because then \(f\) is increasing and so \(f'\) must be positive.] 
+        Solving this differential equation, we have 
+        \[f(t) = \tfrac{1}{2} t^2 - t + C \pd\]
+        Then substituting the initial condition \(f(2) = 5\) shows 
+        \[f(2) = \tfrac{1}{2} (2)^2 - 2 + C = 5 \implies C = 5 \pd\]
+        Hence, the identity of \(f\) is 
+        \[f(t) = \boxed{\tfrac{1}{2} t^2 - t + 5}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(a\) be any real number.
+        Prove that the graph of any smooth function \(y = f(x)\)
+        has an infinite arc length over \(a \leq x \lt \infty.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral expression for the arc length from \(x = a\) to \(x = \infty\) is given by  
+        \[L = \int_a^\infty \sqrt{1 + [f'(x)]^2} \di x\]
+        if \(f'(x)\) is continuous for \(x \geq a.\)
+        Because \([f'(x)]^2 \geq 0,\) we observe that 
+        \[\sqrt{1 + [f'(x)]^2} \geq \sqrt 1 \gt 0 \pd\]
+        We see 
+        \[\int_a^\infty \sqrt 1 \di x = \int_a^\infty \di x = x \intEval_a^\infty = \infty \cma\]
+        so \(\int_a^\infty \sqrt 1 \di x\) diverges.
+        By the Comparison Test for Improper Integrals 
+        (from Section <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>), 
+        the integral \(\int_a^\infty \sqrt{1 + [f'(x)]^2} \di x\)
+        also diverges. 
+        Hence, the arc length \(L\) is infinite.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The function \(f\) is positive on \([0, a],\) where \(a \gt 0.\)
+        Region \(R\) is bounded by the graph of \(y = f(x)\) and the line \(x = a\) in the first quadrant. 
+        Let \(y_c\) be the \(y\)-coordinate of the centroid of \(R.\)
+        Region \(S\) is bounded by the graph of \(y = f(x),\) the lines \(x = a\) and \(y = L,\) and the \(y\)-axis.
+        In terms of all the provided quantities, 
+        derive an expression for \(L\) such that region \(S\) balances on the \(x\)-axis.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Region \(S\) balances on the \(x\)-axis if and only if the \(y\)-coordinate of its centroid is \(0.\)
+        This can only occur if \(L \lt 0.\)
+        The area of region \(R\) is \(A_R = \int_0^a f(x) \di x,\)
+        and let \(A_S\) be the area of region \(S.\) 
+        The \(y\)-coordinate of the centroid of region \(S\) is therefore given by 
+        \[
+        \ba
+        \overline y &amp;= \frac{1}{A_S} \int_0^a \par{\tfrac{1}{2} [f(x)]^2 - \tfrac{1}{2} L^2} \di x \nl 
+        &amp;= \frac{1}{A_S} \int_0^a \par{\tfrac{1}{2} [f(x)]^2 - \tfrac{1}{2} L^2} \di x \pd
+        \ea
+        \]
+        Equating this expression to \(0,\) we get
+        \[
+        \ba 
+        \frac{1}{A_S} \int_0^a \par{\tfrac{1}{2} [f(x)]^2 - \tfrac{1}{2} L^2} \di x &amp;= 0 \nl 
+        \int_0^a \tfrac{1}{2} [f(x)]^2 \di x -  \int_0^a \tfrac{1}{2} L^2 \di x &amp;= 0 \nl 
+        \int_0^a \tfrac{1}{2} [f(x)]^2 \di x - \tfrac{1}{2} aL^2 &amp;= 0 \nl 
+        \int_0^a \tfrac{1}{2} [f(x)]^2 \di x &amp;= \tfrac{1}{2} aL^2 \pd
+        \ea 
+        \]
+        Dividing both sides by \(A_R\) gives 
+        \[
+        \ba 
+        \frac{1}{A_R} \int_0^a \tfrac{1}{2} [f(x)]^2 \di x &amp;= \frac{aL^2}{2A_R} \nl 
+        y_c &amp;= \frac{aL^2}{2A_R} \pd
+        \ea 
+        \]
+        Solving for \(L\) (and choosing the negative solution) yields 
+        \[L = -\sqrt{\frac{2 y_c}{a} A_R} = \boxed{-\sqrt{\frac{2 y_c}{a} \int_0^a f(x) \di x}}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
 </main>
 </main>
 <!-- <footer>

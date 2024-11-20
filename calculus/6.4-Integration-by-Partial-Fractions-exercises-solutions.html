@@ -727,6 +727,151 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^2 \frac{1}{x^4 + 4x^2} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<p>
+<span class="label-emph">Partial Fraction Decomposition</span>
+            Note that \(x^4 + 4x^2\) \(= x^2(x^2 + 4),\)
+            so we decompose the integrand as
+            \[\frac{1}{x^4 + 4x^2} = \frac{A}{x} + \frac{B}{x^2} + \frac{Cx + D}{x^2 + 4} \pd\]
+            To clear the denominators, we multiply both sides by \(x^2 (x^2 + 4)\) to attain
+            \[
+            \ba 
+            Ax(x^2 + 4) + B(x^2 + 4) + (Cx + D) x^2 &amp;= 1 \nl 
+            Ax^3 + 4Ax + Bx^2 + 4B + Cx^3 + Dx^2 &amp;= 1 \nl 
+            (A + C) x^3 + (B + D) x^2 + (4A) x + 4B &amp;= 1 \pd
+            \ea 
+            \]
+            Let's compare the coefficients:
+            The right side lacks terms with \(x,\) \(x^2,\) and \(x^3.\)
+            Thus, on the left side the coefficients of those expressions must equal \(0.\)
+            Equating the constants on both sides yields \(4B = 1.\)
+            We therefore have the following system of equations:
+            \[
+            \bc 
+            \ba
+            A + C &amp;= 0 \nl 
+            B + D &amp;= 0 \nl 
+            4A &amp;= 0 \nl 
+            4B &amp;= 1 \cma
+            \ea
+            \ec 
+            \]
+            for which the solution is \(A = 0,\)
+            \(B = 1/4,\) \(C = 0,\) and \(D = -1/4.\)
+            Hence, the integral becomes 
+            \[\int_1^2 \par{\frac{0}{x} + \frac{1/4}{x^2} + \frac{0x - 1/4}{x^2 + 4}} \di x 
+            = \int_1^2 \par{\frac{1/4}{x^2} - \frac{1/4}{x^2 + 4}} \di x \pd\]
+        </p>
+<aside class="box-recall">
+            \(\atan 1\) \(= \pi/4.\)
+        </aside>
+<p>
+<span class="label-emph">Integration</span>
+            By Part II of the Fundamental Theorem of Calculus, 
+            \[
+            \ba 
+            \int_1^2 \par{\frac{1/4}{x^2} - \frac{1/4}{x^2 + 4}} \di x 
+            &amp;= \parbr{-\frac{1}{4x} - \frac{1}{8} \atan \par{\frac{x}{2}}} \intEval_1^2 \nl 
+            &amp;= \parbr{\frac{1}{4x} + \frac{1}{8} \atan \par{\frac{x}{2}}} \intEval_2^1 \nl 
+            <!-- &= \frac{1}{4} + \frac{1}{8} \atan \par{\frac{1}{2}} - \par{\frac{1}{8} + \frac{1}{8} \atan 1} \nl  -->
+            &amp;= \boxed{\frac{1}{8} - \frac{\pi}{32} + \frac{1}{8} \atan \par{\frac{1}{2}}}
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_1^2 \frac{x + 4}{x^5 + x^3} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<p>
+<span class="label-emph">Partial Fraction Decomposition</span>
+            Since \(x^5 + x^3\) \(= x^3(x^2 + 1),\)
+            the integrand is decomposed as follows:
+            \[
+            \frac{x + 4}{x^5 + x^3} 
+            = \frac{A}{x} + \frac{B}{x^2} + \frac{C}{x^3} + \frac{Dx + E}{x^2 + 1} \pd
+            \]
+            Multiplying both sides by \(x^3(x^2 + 1)\) clears the denominators, giving 
+            \[
+            \ba 
+            Ax^2 (x^2 + 1) + Bx (x^2 + 1) + C (x^2 + 1) + (Dx + E)x^3 &amp;= x + 4 \nl 
+            Ax^4 + Ax^2 + Bx^3 + Bx + Cx^2 + C + Dx^4 + Ex^3 &amp;= x + 4 \nl 
+            (A + D) x^4 + (B + E) x^3 + (A + C) x^2 + Bx + C &amp;= x + 4 \pd
+            \ea 
+            \]
+            Comparing the coefficients of the constant, \(x,\) \(x^2,\) \(x^3,\) and \(x^4\) terms yields 
+            the following system of equations:
+            \[
+            \bc 
+            \ba
+            A + D &amp;= 0 \nl 
+            B + E &amp;= 0 \nl 
+            A + C &amp;= 0 \nl 
+            B &amp;= 1 \nl 
+            C &amp;= 4 \pd
+            \ea
+            \ec 
+            \]
+            Then \(A = -4,\) \(B = 1,\) \(C = 4,\) \(D = 4,\) and \(E = -1.\)
+            Accordingly, the integral becomes 
+            \[
+            \small
+            \int_1^2 \par{\frac{-4}{x} + \frac{1}{x^2} + \frac{4}{x^3} + \frac{4x - 1}{x^2 + 1}} \di x 
+            = \small \int_1^2 \par{-\frac{4}{x} + \frac{1}{x^2} + \frac{4}{x^3} + \frac{4x}{x^2 + 1} - \frac{1}{x^2 + 1}} \di x \pd
+            \]
+        </p>
+<p>
+<span class="label-emph">Integration</span>
+            To integrate \(\int 4x/(x^2 + 1) \di x,\)
+            we substitute \(u = x^2 + 1.\)
+            Then \(\dd u = 2x \di x,\)
+            so we see 
+            \[
+            \ba
+            \int \frac{4x}{x^2 + 1} \di x &amp;= \int \frac{2}{u} \di u \nl 
+            &amp;= 2 \ln \abs u \nl 
+            &amp;= 2 \ln \par{x^2 + 1} \pd
+            \ea
+            \]
+            (We omitted the constant of integration.)
+            Hence, we have 
+            \[
+            \ba 
+            \small
+            \int_1^2 \par{-\frac{4}{x} + \frac{1}{x^2} + \frac{4}{x^3} + \frac{4x}{x^2 + 1} - \frac{1}{x^2 + 1}} \di x 
+            &amp;= \small \par{-4 \ln \abs x - \frac{1}{x} - \frac{2}{x^2} + 2 \ln \par{x^2 + 1} - \atan x} \intEval_1^2 \nl
+            &amp;= \boxed{2 + \frac{\pi}{4} + 2 \ln 5 - 6 \ln 2 - \atan 2}
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
             
         The region bounded by the curve \(y = 7/x,\) the \(x\)-axis, 
         and the lines \(x = 1\) and \(x = 2\)
@@ -736,7 +881,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         At any \(x\) the rectangle has a cross-sectional area of 
@@ -766,8 +911,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -778,7 +923,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
         The average value is 
@@ -808,8 +953,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -821,7 +966,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
             
         The work done is \(W = \int_1^5 F(x) \di x.\)
@@ -849,8 +994,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -861,7 +1006,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
         Observe that 
@@ -884,8 +1029,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -894,7 +1039,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
             
         Letting \(u = \sin x,\) we get \(\dd u = \cos x \di x.\)
@@ -922,8 +1067,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -932,7 +1077,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
                
         Substituting \(u = e^x,\) we have \(\dd u = e^x \di x.\)
@@ -962,8 +1107,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -972,7 +1117,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         We first perform the trigonometric substitution \(x = \tan \theta.\)

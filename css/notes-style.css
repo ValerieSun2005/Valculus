@@ -23,11 +23,8 @@ tr, th{
 
 /* subheadings in a text */
 h4{
-    font-variant: small-caps;
     margin-bottom: -4%;
-    font-size: 25px;
     margin-top: 5%;
-    /* text-decoration: underline; */
 }
 
 blockquote{

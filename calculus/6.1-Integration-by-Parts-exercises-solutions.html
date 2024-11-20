@@ -1251,11 +1251,49 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \sin \alpha \cos \alpha \ln (\sec \alpha) \di \alpha\]
+        \[\ds \int \sin \sqrt{t} \di t\]
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Substituting \(w = \sqrt t,\) 
+        we have \(\dd w = 1/(2 \sqrt t) \di t\)
+        \(= 1/2w \di t.\)
+        The integral therefore becomes 
+        \[\int 2w \sin w \di w \pd\]
+        Let's now perform Integration by Parts with 
+        \[
+        \baat{2} 
+        u &amp;= 2w \lspace &amp;\dd v &amp;= \sin w \di w \nl 
+        \dd u &amp;= 2 \di w \lspace &amp;v &amp;= - \cos w \pd
+        \eaat
+        \]
+        Then the integral becomes 
+        \[
+        \ba
+        2w (- \cos w) - \int 2 (- \cos w) \di w 
+        &amp;= - 2w \cos w + 2 \int \cos w \di w \nl
+        &amp;= -2w \cos w + 2 \sin w + C \nl 
+        &amp;= \boxed{- 2 \sqrt t \cos \sqrt t + 2 \sin \sqrt t + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \sin \alpha \cos \alpha \ln (\sec \alpha) \di \alpha\]
+    </blockquote> evaluate the integral by first performing a substitution. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         Observe that 
@@ -1285,8 +1323,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1295,7 +1333,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         Substituting \(w = -2 \sqrt s,\) 
@@ -1317,8 +1355,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1327,7 +1365,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
         We first perform the substitution \(w = \acos y;\)
@@ -1363,8 +1401,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1373,7 +1411,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
             
         It is easiest to first determine an antiderivative of \(\sin(\ln x)\) and then apply the Fundamental Theorem of Calculus.
@@ -1407,8 +1445,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1417,7 +1455,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
             
         Using the Pythagorean identity, we rewrite the integral as
@@ -1454,8 +1492,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1467,7 +1505,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="ibp-atan-area" id="ibp-atan-area">
@@ -1527,8 +1565,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-36"> 
-  <div class="box-solution__head">     EXERCISE 36 </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1542,7 +1580,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-36"> 
+        <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
             
         We want to evaluate 
@@ -1569,8 +1607,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-37"> 
-  <div class="box-solution__head">     EXERCISE 37 </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1582,7 +1620,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
         The number of followers the user will have after \(6\) hours is given by 
@@ -1615,8 +1653,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-38"> 
-  <div class="box-solution__head">     EXERCISE 38 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1628,7 +1666,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-38"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
         In the first \(T\) seconds, the car travels a distance given by
@@ -1674,8 +1712,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-39"> 
-  <div class="box-solution__head">     EXERCISE 39 </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1687,7 +1725,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-39"> 
+        <div class="box-solution__solution" id="solution-40"> 
             <span class="solution-text">SOLUTION</span> 
             
         Over \(0 \lt x \lt 2\) the functions \(x,\) \(\sin x,\) and \(k''(x)\) are all positive. 
@@ -1726,18 +1764,18 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-40"> 
-  <div class="box-solution__head">     EXERCISE 40 </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Solve the initial-value problem 
+        Solve the initial value problem 
         \[\deriv{y}{x} = x^3 \ln 7x \cmaa y(1) = 2 \pd\]
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-40"> 
+        <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
             
         The <i>general solution</i> to the differential equation 
@@ -1767,14 +1805,14 @@
         \implies C &amp;= \tfrac{33}{16} - \tfrac{1}{4} \ln 7 \pd
         \ea 
         \]
-        Hence, the particular solution to the initial-value problem is 
+        Hence, the particular solution to the initial value problem is 
         \[y = \boxed{\tfrac{1}{4} x^4 \ln 7x - \tfrac{1}{16} x^4 + \tfrac{33}{16} - \tfrac{1}{4} \ln 7}\]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-41"> 
-  <div class="box-solution__head">     EXERCISE 41 </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1784,7 +1822,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-41"> 
+        <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
             
         This problem requires us to antidifferentiate \(f'(x)\)
@@ -1811,14 +1849,14 @@
         \implies C &amp;= \tfrac{23}{8} \pd
         \ea 
         \]
-        Thus, the particular solution to the initial-value problem is 
+        Thus, the particular solution to the initial value problem is 
         \[f(x) = \boxed{\tfrac{1}{2} x \sin 4x + \tfrac{1}{8} \cos 4x + \tfrac{23}{8}}\]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-42"> 
-  <div class="box-solution__head">     EXERCISE 42 </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1831,7 +1869,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-42"> 
+        <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
             
         As the particle moves from \(x = 1\) to \(x = 2,\)
@@ -1875,8 +1913,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-43"> 
-  <div class="box-solution__head">     EXERCISE 43 </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1885,7 +1923,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-43"> 
+        <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
             
         The expression for the average value of \(f\) over \([0, 2]\) is 
@@ -1910,8 +1948,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-44"> 
-  <div class="box-solution__head">     EXERCISE 44 </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1920,7 +1958,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-44"> 
+        <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
             
         The average value of \(g\) over \([0, \pi/4]\) is 
@@ -1951,8 +1989,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-45"> 
-  <div class="box-solution__head">     EXERCISE 45 </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1964,7 +2002,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-45"> 
+        <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
             
         (See Section <a href="/Valculus/calculus/5.2-Volumes-with-Cross-Sections.html">5.2</a>
@@ -1994,8 +2032,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-46"> 
-  <div class="box-solution__head">     EXERCISE 46 </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -2007,7 +2045,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-46"> 
+        <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
                
         (See Section <a href="/Valculus/calculus/5.2-Volumes-with-Cross-Sections.html">5.2</a>
@@ -2047,8 +2085,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-47"> 
-  <div class="box-solution__head">     EXERCISE 47 </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -2059,7 +2097,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-47"> 
+        <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
             
         Rewriting the integral as \(\int \cos^{n - 1} \theta \cos \theta \di \theta,\) 

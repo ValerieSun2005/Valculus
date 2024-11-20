@@ -698,7 +698,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int y \sqrt{y - 1} \di y\]
+    \[\ds \int_1^2 y \sqrt{y - 1} \di y\]
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
@@ -708,12 +708,17 @@
     The term \(\sqrt{y - 1}\) is problematic to us; we want to use a substitution to convert it to \(\sqrt u.\)
     Hence, we let \(u = y - 1.\)
     Then \(\dd u = \dd y\) and \(y = u + 1.\)
-    In the integrand, we replace the term \(y\) with \(u + 1.\)
-    Doing so gives 
-    \[\int (u + 1) \sqrt u \di u = \int \par{u^{3/2} + u^{1/2}} \di u \pd\]
-    Antidifferentiating, we attain 
-    \[\tfrac{2}{5} u^{5/2} + \tfrac{2}{3} u^{3/2} + C 
-    = \boxed{\tfrac{2}{5} (y - 1)^{5/2} + \tfrac{2}{3} (y - 1)^{3/2} + C}\]
+    When \(y = 1,\) \(u = 0;\) when \(y = 2,\) \(u = 1.\)
+    Consequently, the integral becomes
+    \[
+    \ba
+    \int_0^1 (u + 1) \sqrt u \di u &amp;= \int_0^1 (u + 1) \, u^{1/2} \di u \nl
+    &amp;= \int_0^1 \par{u^{3/2} + u^{1/2}} \di u \nl 
+    &amp;= \par{\tfrac{2}{5} u^{5/2} + \tfrac{2}{3} u^{3/2}} \intEval_0^1 \nl 
+    &amp;= \par{\tfrac{2}{5} + \tfrac{2}{3}} - \par{0 + 0} \nl 
+    &amp;= \boxed{\tfrac{16}{15}}
+    \ea
+    \]
  
         </div> 
        </div>  
@@ -824,16 +829,17 @@
             <span class="solution-text">SOLUTION</span> 
             
     Observe that 
-    \[\frac{1}{x^2 + 4} = \frac{1/4}{\dfrac{x^2}{4} + 1} = \frac{1/4}{\par{\dfrac{x}{2}}^2 + 1} \pd\]
+    \[\frac{1}{x^2 + 4} = \frac{1/4}{x^2/4 + 1} = \frac{1/4}{(x/2)^2 + 1} \pd\]
     The integral therefore becomes 
-    \[\tfrac{1}{4} \int \frac{1}{\par{\dfrac{x}{2}}^2 + 1} \di x \pd\]
-    Substituting \(u = x/2,\) we get \(\dd u = \tfrac{1}{2} \di x\)
+    \[\tfrac{1}{4} \int \frac{1}{(x/2)^2 + 1} \di x \pd\]
+    Substituting \(u = x/2,\) we get \(\dd u = \dd x/2\)
     and so the integral becomes 
     \[
     \ba
-    \tfrac{1}{2} \int \frac{1}{u^2 + 1} \di u 
+    \tfrac{1}{4} \int \frac{1}{u^2 + 1} (2) \di u 
+    &amp;= \tfrac{1}{2} \int \frac{1}{u^2 + 1} \di u  \nl
     &amp;= \tfrac{1}{2} \atan u + C \nl 
-    &amp;= \boxed{\tfrac{1}{2} \atan \par{x^2 + 4} + C}
+    &amp;= \boxed{\tfrac{1}{2} \atan \par{\frac{x}{2}} + C}
     \ea
     \]
  
@@ -846,28 +852,29 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{1}{\sin t \cos t} \di t\]
+    \[\ds \int_0^{10} \frac{1}{2x^2 + 200} \di x\]
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
-    The double-angle identity for sine gives 
-    \[\sin 2t = 2 \sin t \cos t \iffArrow \sin t \cos t = \tfrac{1}{2} \sin 2t \pd\]
+    Observe that 
+    \[\frac{1}{2x^2 + 200} = \frac{1/200}{x^2/100 + 1} = \frac{1/200}{(x/10)^2 + 1} \pd\]
+    The integral therefore becomes 
+    \[\tfrac{1}{200} \int \frac{1}{(x/10)^2 + 1} \di x \pd\]
+    Substituting \(u = x/10,\) we get \(\dd u = \dd x/10.\)
+    When \(x = 0,\) \(u = 0;\) when \(x = 10,\) \(u = 1.\)
     The integral therefore becomes 
     \[
-    \ba 
-    \int \frac{2}{\sin 2t} \di t = \int 2 \csc 2t \di t \pd 
-    \ea 
-    \]
-    Substituting \(u = 2t,\) we get \(\dd u = 2 \di t.\)
-    So we have 
-    \[
     \ba
-    \int \csc u \di u &amp;= -\ln \abs{\csc u + \cot u} + C \nl
-    &amp;= \boxed{-\ln \abs{\csc 2t + \cot 2t} + C}
-    \ea 
+    \tfrac{1}{200} \int_0^1 \frac{1}{u^2 + 1} (10) \di u 
+    &amp;= \tfrac{1}{20} \int_0^1 \frac{1}{u^2 + 1} \di u \nl
+    &amp;= \tfrac{1}{20} \atan u \intEval_0^1 \nl 
+    &amp;= \tfrac{1}{20} \par{\atan 1 - \atan 0} \nl 
+    &amp;= \tfrac{1}{20} \par{\frac{\pi}{4} - 0} \nl 
+    &amp;= \boxed{\frac{\pi}{80}}
+    \ea
     \]
  
         </div> 
@@ -879,21 +886,26 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{1}{\cos^2 \theta - \sin^2 \theta} \di \theta\]
+    \[\ds \int \frac{1}{\sqrt{81 - x^2}} \di x\]
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
-    By the double-angle identity for cosine, the integral becomes 
-    \[\int \frac{1}{\cos 2 \theta} \di \theta = \int \sec 2 \theta \di \theta \pd\]
-    Substituting \(u = 2 \theta,\) we have \(\dd u = 2 \di \theta\) and so the integral becomes 
+    Note that 
+    \[\frac{1}{\sqrt{81 - x^2}} = \frac{1}{\sqrt{81} \sqrt{1 - x^2/81}} = \frac{1/9}{\sqrt{1 - x^2/81}} \pd\]
+    Thus, the integral becomes 
+    \[
+    \int \frac{1/9}{\sqrt{1 - x^2/81}} \di x = \tfrac{1}{9} \int \frac{1}{\sqrt{1 - (x/9)^2}} \di x \pd
+    \]
+    Substituting \(u = x/9,\)
+    we attain \(\dd u = \dd x/9\) and so the integral becomes 
     \[
     \ba
-    \tfrac{1}{2} \int \sec u \di u 
-    &amp;= \tfrac{1}{2} \ln \abs{\sec u + \tan u} + C \nl
-    &amp;= \boxed{\tfrac{1}{2} \ln \abs{\sec 2 \theta + \tan 2 \theta}}
+    \int \frac{1}{\sqrt{1 - u^2}} \di x
+    &amp;= \asin u + C \nl 
+    &amp;= \boxed{\asin \par{\frac{x}{9}} + C}
     \ea
     \]
  
@@ -906,11 +918,260 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int \frac{4x}{x^4 + 4x^2 + 4} \di x\]
+    \[\ds \int \frac{2}{\sqrt{40 + x^2}} \di x\]
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Note that 
+    \[
+    \ba
+    \frac{2}{\sqrt{40 + x^2}} &amp;= \frac{2}{\sqrt{40} \sqrt{1 + x^2/40}} \nl 
+    &amp;= \frac{2/\sqrt{40}}{\sqrt{1 + \par{x/\sqrt{40}}^2}} \nl 
+    &amp;= \frac{1/\sqrt{10}}{\sqrt{1 + \par{x/\sqrt{40}}^2}} \pd
+    \ea
+    \]
+    Thus, the integral becomes 
+    \[
+    \int \frac{1/\sqrt{10}}{\sqrt{1 + \par{x/\sqrt{40}}^2}} \di x 
+    = \frac{1}{\sqrt{10}} \int \frac{1}{\sqrt{1 + \par{x/\sqrt{40}}^2}} \di x \pd
+    \]
+    Substituting \(u = x/\sqrt{40},\)
+    we attain \(\dd u = \dd x/\sqrt{40}\) and so the integral becomes 
+    \[
+    \ba
+    \frac{1}{\sqrt{10}} \int \frac{1}{\sqrt{1 + u^2}} \par{\sqrt{40}} \di u
+    &amp;= 2 \int \frac{1}{\sqrt{1 + u^2}} \di u \nl 
+    &amp;= 2 \, \asinh u + C \nl 
+    &amp;= \boxed{2 \, \asinh \par{\frac{x}{\sqrt{40}}} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{\sqrt{108 - 3y^2}} \di y\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Note that 
+    \[\frac{1}{\sqrt{108 - 3y^2}} = \frac{1}{\sqrt{108} \sqrt{1 - y^2/36}} = \frac{1/\sqrt{108}}{\sqrt{1 - (y/6)^2}} \pd\]
+    Thus, the integral becomes 
+    \[
+    \int \frac{1/\sqrt{108}}{\sqrt{1 - (y/6)^2}} \di y = \frac{1}{\sqrt{108}} \int \frac{1}{\sqrt{1 - (y/6)^2}} \di y \pd
+    \]
+    Substituting \(u = y/6,\)
+    we attain \(\dd u = \dd y/6\) and so the integral becomes 
+    \[
+    \ba
+    \frac{1}{\sqrt{108}} \int \frac{1}{\sqrt{1 - u^2}} (6) \di u
+    &amp;= \frac{6}{\sqrt{108}} \, \asin u + C \nl 
+    &amp;= \frac{1}{\sqrt{3}} \, \asin u + C \nl 
+    &amp;= \boxed{\frac{1}{\sqrt{3}} \, \asin \par{\frac{y}{6}} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{\sin^2 \theta}{\cos \theta} \di \theta\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-32"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The Pythagorean identity gives \(\sin^2 \theta = 1 - \cos^2 \theta,\)
+    so the integral becomes
+    \[
+    \ba 
+    \int \frac{1 - \cos^2 \theta}{\cos \theta} \di \theta 
+    &amp;= \int \par{\sec \theta - \cos \theta} \di \theta \nl 
+    &amp;= \boxed{\ln \abs{\sec \theta + \tan \theta} - \sin \theta + C}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \cot \theta \cos \theta \di \theta\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-33"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Let's rewrite the integrand to be in terms of sine and cosine, as follows: 
+    \[\int \frac{\cos \theta}{\sin \theta} \, \cos \theta \di \theta 
+    = \int \frac{\cos^2 \theta}{\sin \theta} \di \theta \pd\]
+    The Pythagorean identity then gives \(\cos^2 \theta = 1 - \sin^2 \theta,\)
+    so the integral becomes 
+    \[
+    \ba 
+    \int \frac{1 - \sin^2 \theta}{\sin \theta} \di \theta 
+    &amp;= \int \par{\csc \theta - \sin \theta} \di \theta \nl 
+    &amp;= \boxed{- \ln \abs{\csc \theta + \cot \theta} + \cos \theta + C}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{\tan^4 x}{\cos^2 x} \di x\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-34"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    We rewrite the integral as 
+    \[\int \tan^4 x \sec^2 x \di x \pd\]
+    Substituting \(u = \tan x,\) we have \(\dd u = \sec^2 x \di x\) and so the integral becomes 
+    \[
+    \ba 
+    \int u^4 \di u &amp;= \tfrac{1}{5} u^5 + C \nl 
+    &amp;= \boxed{\tfrac{1}{5} \tan^5 x + C}
+    \ea 
+    \]
+    In Section 
+    <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
+    we will formulate a strategy to evaluate most integrals 
+    that contain tangent and secant terms.
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int_1^e \log_{e^x} x \di x\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    By the Change of Base Formula for Logarithms, 
+    \[\log_{e^x} x = \frac{\ln x}{\ln \par{e^x}} = \frac{\ln x}{x} \pd\]
+    So the integral is 
+    \[\int_1^e \frac{\ln x}{x} \di x \pd\]
+    Substituting \(u = \ln x\) gives \(\dd u = (1/x) \di x.\)
+    When \(x = 1,\) \(u = 0;\) when \(x = e,\) \(u = 1.\)
+    So the integral becomes 
+    \[\int_0^1 u \di u = \tfrac{1}{2} u^2 \intEval_0^1 = \boxed{\tfrac{1}{2}}\]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{1}{\cos^2 \theta - \sin^2 \theta} \di \theta\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-36"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    By the double-angle identity for cosine, the integral becomes 
+    \[\int \frac{1}{\cos 2 \theta} \di \theta = \int \sec 2 \theta \di \theta \pd\]
+    Substituting \(u = 2 \theta,\) we have \(\dd u = 2 \di \theta\) and so the integral becomes 
+    \[
+    \ba
+    \tfrac{1}{2} \int \sec u \di u 
+    &amp;= \tfrac{1}{2} \ln \abs{\sec u + \tan u} + C \nl
+    &amp;= \boxed{\tfrac{1}{2} \ln \abs{\sec 2 \theta + \tan 2 \theta} + C}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int_{\pi/6}^{\pi/3} \frac{1}{\sin t \cos t} \di t\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The double-angle identity for sine gives 
+    \[\sin 2t = 2 \sin t \cos t \iffArrow \sin t \cos t = \tfrac{1}{2} \sin 2t \pd\]
+    The integral therefore becomes 
+    \[
+    \ba 
+    \int_{\pi/6}^{\pi/3} \frac{2}{\sin 2t} \di t = \int_{\pi/6}^{\pi/3} 2 \csc 2t \di t \pd 
+    \ea 
+    \]
+    Substituting \(u = 2t,\) we get \(\dd u = 2 \di t.\)
+    When \(t = \pi/6,\) \(u = \pi/3;\)
+    when \(t = \pi/3,\) \(u = 2 \pi/3.\)
+    So the integral becomes 
+    \[
+    \ba
+    \int_{\pi/3}^{2 \pi/3} \csc u \di u &amp;= -\ln \abs{\csc u + \cot u} \intEval_{\pi/3}^{2 \pi/3} \nl
+    &amp;= -\ln \abs{\csc \frac{2 \pi}{3} + \cot \frac{2 \pi}{3}} + \ln \abs{\csc \frac{\pi}{3} + \cot \frac{\pi}{3}} \nl 
+    &amp;= -\ln \par{\frac{2 \sqrt 3}{3} - \frac{\sqrt 3}{3}} + \ln \par{\frac{2 \sqrt 3}{3} + \frac{\sqrt 3}{3}} \nl 
+    &amp;= -\ln \par{\frac{\sqrt 3}{3}} + \ln \par{\sqrt 3} \nl 
+    &amp;= \ln \par{\frac{\sqrt 3}{\sqrt 3/3}} \nl
+    &amp;= \boxed{\ln 3}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int \frac{4x}{x^4 + 4x^2 + 4} \di x\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
     The denominator is the perfect square \((x^2 + 2)^2,\)
@@ -923,8 +1184,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -933,13 +1194,13 @@
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
     Recall that 
-    \[\deriv{}{u} \parbr{\tan^{-1} u} = \frac{1}{1 + u^2} \pd\]
-    This indefinite integral mimics this form; the only difference is the term \(x\) in the numerator.
-    To rectify this factor, we substitute \(u = x^2\) 
+    \[\deriv{}{u} \par{\tan^{-1} u} = \frac{1}{1 + u^2} \pd\]
+    This indefinite integral mimics the right side; the only difference is the term \(x\) in the numerator.
+    So we substitute \(u = x^2\) 
     because then \(\dd u = 2x \di x,\)
     or \(\dd x = (1/2x) \di u.\)
     The integral then becomes 
@@ -957,8 +1218,40 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int_1^e \frac{(\ln x)^2}{x + x (\ln x)^2} \di x\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    Let's rewrite the integral as 
+    \[\int_1^e \frac{1}{x} \frac{(\ln x)^2}{1 + (\ln x)^2} \di x \pd\]
+    To clear the factor \(1/x,\) we substitute \(u = \ln x\) because then \(\dd u = (1/x) \di x.\)
+    When \(x = 1,\) \(u = 0;\) when \(x = e,\) \(u = 1.\)
+    The integral therefore becomes 
+    \[
+    \ba
+    \int_0^1 \frac{u^2}{1 + u^2} \di u &amp;= \int_0^1 \frac{1 + u^2 - 1}{1 + u^2} \di u \nl 
+    &amp;= \int_0^1 \par{\frac{1 + u^2}{1 + u^2} - \frac{1}{1 + u^2}} \di u \nl 
+    &amp;= \int_0^1 \par{1 - \frac{1}{1 + u^2}} \di u \nl 
+    &amp;= \par{u - \atan u} \intEval_0^1 \nl 
+    &amp;= (1 - \atan 1) - (0 - \atan 0) \nl 
+    &amp;= \boxed{1 - \frac{\pi}{4}}
+    \ea
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -979,7 +1272,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
@@ -1017,8 +1310,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1028,7 +1321,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
             
         By exponent laws,
@@ -1054,8 +1347,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1066,7 +1359,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -1087,8 +1380,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1099,7 +1392,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -1121,8 +1414,68 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-36"> 
-  <div class="box-solution__head">     EXERCISE 36 </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(a\) be a positive constant. 
+        Prove the following formulas. 
+        <ol class="list-alpha">
+<li>
+<span>\(\ds \int \frac{1}{x^2 + a^2} \di x = \frac{1}{a} \atan \par{\frac{x}{a}} + C\)</span>
+</li>
+<li>
+<span>\(\ds \int \frac{1}{\sqrt{a^2 - x^2}} \di x= \asin \par{\frac{x}{a}} + C\)</span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-45"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Note that 
+                \[\frac{1}{x^2 + a^2} = \frac{1/a^2}{x^2/a^2 + 1} = \frac{1/a^2}{(x/a)^2 + 1} \pd\]
+                Then the integral becomes 
+                \[\int \frac{1/a^2}{(x/a)^2 + 1} \di x = \frac{1}{a^2} \int \frac{1}{(x/a)^2 + 1} \di x \pd\]
+                Substituting \(u = x/a,\) we attain \(\dd u = \dd x/a.\)
+                We therefore have 
+                \[
+                \ba 
+                \frac{1}{a^2} \int \frac{1}{u^2 + 1} (a) \di u &amp;= \frac{1}{a} \int \frac{1}{u^2 + 1} \di u \nl 
+                &amp;= \frac{1}{a} \, \atan u + C \nl 
+                &amp;= \frac{1}{a} \, \atan \par{\frac{x}{a}} + C \cma
+                \ea 
+                \]
+                as requested.
+            </li>
+<hr/>
+<li>
+                Note that 
+                \[\frac{1}{\sqrt{a^2 - x^2}} = \frac{1}{\sqrt{a^2} \sqrt{1 - x^2/a^2}} = \frac{1/a}{\sqrt{1 - (x/a)^2}} \pd\]
+                Then the integral becomes 
+                \[\int \frac{1/a}{\sqrt{1 - (x/a)^2}} \di x = \frac{1}{a} \int \frac{1}{\sqrt{1 - (x/a)^2}} \di x \pd\]
+                Substituting \(u = x/a,\) we attain \(\dd u = \dd x/a.\)
+                We therefore have 
+                \[
+                \ba 
+                \int \frac{1}{\sqrt{1 - u^2}} \di u &amp;= \asin u + C \nl 
+                &amp;= \asin \par{\frac{x}{a}} + C \cma
+                \ea 
+                \]
+                as requested.
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1134,7 +1487,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-36"> 
+        <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
             
         In this new form, we have 
@@ -1148,93 +1501,140 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-37"> 
-  <div class="box-solution__head">     EXERCISE 37 </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds \int \frac{\sin^2 \theta}{\cos \theta} \di \theta\]
-    </blockquote> evaluate the trigonometric integral. 
+            
+        Calculate the area of the region bounded by the curve \(y = x^3 \sqrt{x^4 + 2},\)
+        the \(x\)-axis, the \(y\)-axis, and the line \(x = 1.\) 
+     
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
+        <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The Pythagorean identity gives \(\sin^2 \theta = 1 - \cos^2 \theta,\)
-        so the integral becomes
+        Since the \(y\)-axis is synonymous with the line \(x = 0,\) 
+        the area of the region is given by 
+        \[A = \int_0^1 x^3 \sqrt{x^4 + 2} \di x \pd \]
+        To evaluate this integral, 
+        we substitute \(u = x^4 + 2;\)
+        then \(\dd u = 4x^3 \di x.\)
+        When \(x = 0,\) \(u = 2;\)
+        when \(x = 1,\) \(u = 3.\)
+        So we have 
         \[
         \ba 
-        \int \frac{1 - \cos^2 \theta}{\cos \theta} \di \theta 
-        &amp;= \int \par{\sec \theta - \cos \theta} \di \theta \nl 
-        &amp;= \boxed{\ln \abs{\sec \theta + \tan \theta} - \sin \theta + C}
+        A &amp;= \tfrac{1}{4} \int_2^3 \sqrt u \di u \nl 
+        &amp;= \tfrac{1}{4} \par{\tfrac{2}{3} u^{3/2}} \intEval_2^3 \nl 
+        &amp;= \tfrac{1}{6} \par{3^{3/2} - 2^{3/2}} \nl
+        &amp;= \frac{3 \sqrt 3}{6} - \frac{2 \sqrt 2}{6} \nl
+        &amp;= \boxed{\frac{\sqrt 3}{2} - \frac{\sqrt 2}{3}} \approx 0.395 \pd
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-38"> 
-  <div class="box-solution__head">     EXERCISE 38 </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds \int \cot \theta \cos \theta \di \theta\]
-    </blockquote> evaluate the trigonometric integral. 
+            
+        A power supply unit outputs a power load that varies with time according to the function 
+        \(P(t) = 60 t \sin \par{t^2}.\) 
+        How much energy does the unit supply over \(0 \leq t \leq 1 \ques\) 
+     
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-38"> 
+        <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Let's rewrite the integrand to be in terms of sine and cosine, as follows: 
-        \[\int \frac{\cos \theta}{\sin \theta} \, \cos \theta \di \theta 
-        = \int \frac{\cos^2 \theta}{\sin \theta} \di \theta \pd\]
-        The Pythagorean identity then gives \(\cos^2 \theta = 1 - \sin^2 \theta,\)
-        so the integral becomes 
+        The energy is given by 
+        \[E = \int_0^1 P(t) \di t = \int_0^1 60 t \sin \par{t^2} \di t \pd\]
+        Substituting \(u = t^2,\) we have \(\dd u = 2t \di t.\)
+        When \(t = 0,\) \(u = 0;\) when \(t = 1,\) \(u = 1.\)
+        We therefore acquire
         \[
-        \ba 
-        \int \frac{1 - \sin^2 \theta}{\sin \theta} \di \theta 
-        &amp;= \int \par{\csc \theta - \sin \theta} \di \theta \nl 
-        &amp;= \boxed{- \ln \abs{\csc \theta + \cot \theta} + \cos \theta + C}
-        \ea 
+        \ba
+        \int_0^1 30 \sin u \di u &amp;= -30 \cos u \intEval_0^1 \nl 
+        &amp;= \boxed{30(1 - \cos 1)} \approx 13.791 \pd
+        \ea
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-39"> 
-  <div class="box-solution__head">     EXERCISE 39 </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
-        \[\ds \int \frac{\tan^4 x}{\cos^2 x} \di x\]
-    </blockquote> evaluate the trigonometric integral. 
+            
+        A particle moves along the \(x\)-axis with time \(t \geq 0\) as given by
+        the velocity function \(v(t) = t^2 \, e^{-t^3}.\) 
+        If the particle's initial position is \(x = 2,\)
+        then calculate its position at \(t = 1.\)
+     
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-39"> 
+        <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
             
-        We rewrite the integral as 
-        \[\int \tan^4 x \sec^2 x \di x \pd\]
-        Substituting \(u = \tan x,\) we have \(\dd u = \sec^2 x \di x\) and so the integral becomes 
-        \[
-        \ba 
-        \int u^4 \di u &amp;= \tfrac{1}{5} u^5 + C \nl 
-        &amp;= \boxed{\tfrac{1}{5} \tan^5 x + C}
-        \ea 
-        \]
-        In Section 
-        <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>
-        we will formulate a strategy to evaluate most integrals 
-        that contain tangent and secant terms.
-     
+        Velocity is the time derivative of position; that is, 
+        \(v = \textderiv{x}{t}.\)
+        There are two viable methods to work with this differential equation.
+        <p>
+<span class="label-emph">Method 1</span>
+            Since \(v = \textderiv{x}{t},\) it follows that 
+            \(x(t) = \int v(t) \di t\) \(= \int t^2 \, e^{-t^3} \di t.\) 
+            To evaluate the indefinite integral, we substitute \(u = -t^3.\)
+            Then \(\dd u = -3t^2 \di t\)
+            and so the integral becomes 
+            \[
+            \ba
+            -\tfrac{1}{3} \int e^u \di u &amp;= -\tfrac{1}{3} e^u + C \nl 
+            &amp;= -\tfrac{1}{3} e^{-t^3} + C \pd
+            \ea
+            \]
+            Accordingly, the particle's position function is 
+            \[x(t) = -\tfrac{1}{3} e^{-t^3} + C \pd\]
+            Substituting the initial condition \(x(0) = 2\) shows 
+            \[
+            \ba
+            x(0) = -\tfrac{1}{3} e^0 + C &amp;= 2 \nl 
+            \implies C &amp;= \tfrac{7}{3} \pd
+            \ea 
+            \]
+            Hence, the particle's position function is
+            \[x(t) = -\tfrac{1}{3} e^{-t^3} + \tfrac{7}{3} \pd\]
+            So its position at \(t = 1\) is 
+            \[
+            x(1) = \boxed{\frac{7}{3} - \frac{1}{3e}} \approx 2.211 \pd
+            \]
+        </p>
+<p>
+<span class="label-emph">Method 2</span>
+            Using the Net Change Theorem 
+            (Section <a href="/Valculus/calculus/4.3-Fundamental-Theorem-of-Calculus.html">4.3</a>) 
+            gives 
+            \[
+            \ba 
+            x(1) &amp;= x(0) + \int_0^1 v(t) \di t \nl 
+            &amp;= x(0) + \int_0^1 t^2 \, e^{-t^3} \di t \nl 
+            &amp;= 2 + \par{-\tfrac{1}{3} e^{-t^3}} \intEval_0^1 \nl 
+            &amp;= \boxed{\frac{7}{3} - \frac{1}{3e}}
+            \ea 
+            \]
+        </p>
+ 
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-40"> 
-  <div class="box-solution__head">     EXERCISE 40 </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1245,7 +1645,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-40"> 
+        <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
             
         Substituting \(u = a + b - x,\) 
@@ -1264,8 +1664,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-41"> 
-  <div class="box-solution__head">     EXERCISE 41 </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1295,7 +1695,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-41"> 
+        <div class="box-solution__solution" id="solution-51"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">

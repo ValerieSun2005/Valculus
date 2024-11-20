@@ -37,7 +37,191 @@
   </div>
 </div>
 <hr id="mainBodyBegin">
-
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        An infinite geometric series converges to a positive number \(S.\)
+        If the second term in the series is \(2,\)
+        then what is the smallest possible value of \(S \ques\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because the second term of the series is \(2,\)
+        the first term must be \(2/r,\) where \(r\) is the common ratio. 
+        Thus,
+        \[S = \frac{2/r}{1 - r} = \frac{2}{r - r^2} \pd\]
+        Now we minimize \(S \col\)
+        Taking its derivative and equating it to \(0,\) we attain 
+        \[\deriv{S}{r} = \frac{-2(1 - 2r)}{(r - r^2)^2} = 0 \implies r = \tfrac{1}{2} \pd\]
+        This value corresponds to an absolute minimum of \(S,\)
+        as you may verify. 
+        (See Section 
+        <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>.)
+        Hence, the smallest possible value is
+        \[S_{\text{min}} = \frac{2}{\frac{1}{2} - \par{\frac{1}{2}}^2} = \frac{2}{1/4} = \boxed 8\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Calculate the exact value of 
+        \[\tfrac{1}{4} + \tfrac{2}{3} + \tfrac{5}{6} + \tfrac{1}{16} - \tfrac{2}{9} - \tfrac{5}{12} + \tfrac{1}{64} + \tfrac{2}{27} + \tfrac{5}{24} + \cdots \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Noting the pattern and regrouping the terms, we attain 
+        \[
+        \ba 
+        S &amp;= \par{\tfrac{1}{4} + \tfrac{1}{16} + \tfrac{1}{64} + \cdots} 
+        + \par{\tfrac{2}{3} - \tfrac{2}{9} + \tfrac{2}{27} + \cdots}
+        + \par{\tfrac{5}{6} - \tfrac{5}{12} + \tfrac{5}{24} + \cdots} \nl 
+        &amp;= \sum_{n = 0}^\infty \tfrac{1}{4} \par{\tfrac{1}{4}}^n 
+        + \sum_{n = 0}^\infty \tfrac{2}{3} \par{-\tfrac{1}{3}}^n
+        + \sum_{n = 0}^\infty \tfrac{5}{6} \par{-\tfrac{1}{2}}^n \pd
+        \ea
+        \]
+        All three geometric series are convergent because their common ratios are each between \(-1\) and \(1.\)
+        The sum of three convergent series is also convergent, so 
+        \[
+        \ba 
+        S &amp;= \frac{1/4}{1 - \tfrac{1}{4}} + \frac{2/3}{1 - \par{-\tfrac{1}{3}}} + \frac{5/6}{1 - \par{-\tfrac{1}{2}}} \nl 
+        &amp;= \tfrac{1}{3} + \tfrac{1}{2} + \tfrac{5}{9} \nl 
+        &amp;= \boxed{\tfrac{25}{18}}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Find the values of \(c\) such that 
+        \[\int_1^\infty \frac{1}{(x - c)^2} \di x \and \sum_{n = 1}^\infty \frac{1}{n^{c^2 - 3}}\]
+        both converge.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        First note that the \(p\)-series converges if and only if \(c^2 - 3 \gt 1\)—that is,
+        \(c^2 \gt 4,\) meaning \(c \in (-\infty, -2) \cup (2, \infty).\)
+        In addition, if \(c \notin [1, \infty),\) 
+        then the improper integral becomes 
+        \[-\frac{1}{x - c} \intEval_1^\infty = \frac{1}{1 - c} \cma\]
+        which converges.
+        If \(c \in [1, \infty),\) then the vertical asymptote at \(x = c\) would be included 
+        in the region of integration, and so the integral would diverge. 
+        Thus, the improper integral and infinite series both converge for \(c\) in 
+        \[\boxed{(-\infty, -2)}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Show that 
+        \[\int_0^x \sum_{n = 1}^\infty \frac{(-1)^n \, t^{n - 1}}{(n - 1)!} \di t = e^{-x} - 1 \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral is equivalent to the following infinite series:
+        \[
+        \ba
+        \sum_{n = 1}^\infty \frac{(-1)^n}{(n - 1)!} \int_0^x t^{n - 1} \di t 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^n}{(n - 1)!} \frac{t^n}{n} \intEval_0^x \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^n}{(n - 1)!} \frac{x^n}{n} \nl 
+        &amp;= \sum_{n = 1}^\infty \frac{(-1)^n}{n!} \, x^n \cma
+        \ea
+        \]
+        where the last step is true because \(n!\) \(= n(n - 1)!.\)
+        The series can be rewritten as 
+        \[\sum_{n = 1}^\infty \frac{(-x)^n}{n!} \cma\]
+        which resembles the Maclaurin series for \(e^{-x}.\)
+        (See Section <a href="/Valculus/calculus/10.8-Taylor-and-Maclaurin-Series.html">10.8</a>.)
+        The only difference is the starting index; we have
+        \[
+        \ba
+        \sum_{n = 0}^\infty \frac{(-x)^n}{n!} &amp;= e^{-x} \nl 
+        1 + \sum_{n = 1}^\infty \frac{(-x)^n}{n!} &amp;= e^{-x} \nl 
+        \implies \sum_{n = 1}^\infty \frac{(-x)^n}{n!} &amp;= e^{-x} - 1 \cma
+        \ea
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Determine whether the following series converges or diverges:
+        \[\sum_{n = 2}^\infty \int_1^\infty \frac{1}{x^n} \di x \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Because \(n \ne 1,\)
+        \[
+        \ba
+        \int_1^\infty \frac{1}{x^n} \di x &amp;= \int_1^\infty x^{-n} \di x \nl
+        &amp;= \frac{x^{1 - n}}{1 - n} \intEval_1^\infty \nl 
+        &amp;= \frac{1}{1  - n} \cma
+        \ea 
+        \]
+        where the last step is true because \(x^{1 - n} \to 0\) as \(x \to \infty\)
+        (since the power \(1 - n\) is negative.)
+        So the given sum becomes 
+        \[\sum_{n = 2}^\infty \frac{1}{1 - n} \pd\]
+        This series resembles the negative Harmonic series, \(\sum_{n = 2}^\infty (-1/n),\)
+        which is known to diverge.
+        Applying the Limit Comparison Test
+        (Section <a href="/Valculus/calculus/10.4-Comparison-Tests.html">10.4</a>) with \(a_n = 1/(1 - n)\)
+        and \(b_n = -1/n,\) we get 
+        \[
+        \ba 
+        L &amp;= \lim_{n \to \infty} \frac{\dfrac{1}{1 - n}}{-1/n} \nl 
+        &amp;= \lim_{n \to \infty} \frac{n}{n - 1} \nl 
+        &amp;= 1 \pd
+        \ea 
+        \]
+        Because \(L\) is positive and finite, 
+        the Limit Comparison Test asserts that the given sum is also <b>divergent</b>.
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
 </main>
 </main>
 <!-- <footer>

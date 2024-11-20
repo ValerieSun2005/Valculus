@@ -615,20 +615,23 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
-            
-        For \(x\) near \(2,\) the function \(f\) satisfies 
-        \[3x + 4 \leq f(x) \leq 3x^2 - 2 \pd\]
-        Calculate \(\lim_{x \to 2} f(x).\)
-     
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to -3} \frac{\sin(x + 3)}{x^2 + x - 6}\]
+    </blockquote> evaluate the limit. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Observe that, by Direct Substitution,
-        \[\lim_{x \to 2} (3x + 4) = \lim_{x \to 2} \par{3x^2 - 2} = 10 \pd\]
-        So the Squeeze Theorem gives
-        \[\lim_{x \to 2} f(x) = \boxed{10}\]
+        Factoring the denominator, we attain 
+        \[
+        \ba
+        \lim_{x \to -3} \frac{\sin(x + 3)}{(x + 3)(x - 2)} 
+        &amp;= \lim_{x \to -3} \frac{\sin(x + 3)}{x + 3} \cdot \lim_{x \to -3} \frac{1}{x - 2} \nl 
+        &amp;= (1) \par{\frac{1}{-3 - 2}} \nl 
+        &amp;= \boxed{-\frac{1}{5}}
+        \ea
+        \]
      
         </div> 
        </div>  
@@ -639,7 +642,30 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Let function \(f\) satisfy 
+        For \(x\) near \(2,\) the function \(f\) satisfies 
+        \[3x + 4 \leq f(x) \leq 3x^2 - 2 \pd\]
+        Calculate \(\lim_{x \to 2} f(x).\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Observe that, by Direct Substitution,
+        \[\lim_{x \to 2} (3x + 4) = \lim_{x \to 2} \par{3x^2 - 2} = 10 \pd\]
+        So the Squeeze Theorem gives
+        \[\lim_{x \to 2} f(x) = \boxed{10}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let the function \(f\) satisfy 
         \[
         \frac{\sin x}{2x} \leq f(x) \leq \frac{x + 1 - \cos x}{2x}
         \]
@@ -648,7 +674,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
         Observe that 
@@ -669,8 +695,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -679,7 +705,7 @@
     </blockquote> prove the limit statement. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         The function \(\cos(4/x)\) behaves erratically as \(x \to 0.\)
@@ -698,8 +724,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -708,7 +734,7 @@
     </blockquote> prove the limit statement. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
         First note that it's <span class="warning">wrong</span>
@@ -734,8 +760,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-27"> 
-  <div class="box-solution__head">     EXERCISE 27 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -744,7 +770,7 @@
     </blockquote> prove the limit statement. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
         The function \(\sin(\pi/x)\) behaves erratically as \(x \to 0.\)
@@ -764,8 +790,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -774,7 +800,7 @@
     </blockquote> prove the limit statement. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
         Because the range of cosine is \([-1, 1],\) we also have 
@@ -788,8 +814,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -798,7 +824,7 @@
     </blockquote> prove the limit statement. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
         Since the range of sine is \([-1, 1],\) we see 
@@ -816,13 +842,13 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Function \(f\) satisfies the following properties:
+        The function \(f\) satisfies the following properties:
         \[\andThree{\lim_{x \to 0^-} f(x) = 5}{\lim_{x \to 0^+} f(x) = 8}{f(0) = 7} \pd\]
         Find the following limits if they exist.
         <ol class="list-alpha">
@@ -840,7 +866,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
@@ -867,8 +893,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -879,7 +905,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0,\) \(t \to 0.\)
@@ -889,8 +915,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -902,7 +928,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
         With \(t = x \sin(1/x),\)

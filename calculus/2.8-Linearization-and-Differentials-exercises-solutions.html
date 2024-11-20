@@ -1096,13 +1096,100 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        If two points are known, 
+        then linearization can approximate nearby values by assuming a constant slope between the two output values.
+        Suppose that \(f(1) = 4\) and \(f(3) = 8.\) 
+        <ol class="list-alpha">
+<li>
+                Construct a linearization for \(f\) centered at \(x = 3.\)
+            </li>
+<li>
+                Use this linearization to <b>extrapolate</b> the value of \(f(3.2).\)
+            </li>
+<li>
+                Use this linearization to <b>interpolate</b> the value of \(f(2.6).\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-29"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                By assuming a constant slope, we assume \(f'(1)\) \(= f'(3)\) \(= m,\) 
+                where 
+                \[m = \frac{8 - 4}{3 - 1} = 2 \pd\]
+                Hence, the linearization centered at \(3\) is 
+                \[f(x) \approx \boxed{8 + 2(x - 3)}\]
+            </li>
+<hr/>
+<li>
+                We have 
+                \[f(3.2) \approx 8 + 2(3.2 - 3) = \boxed{8.4}\]
+            </li>
+<hr/>
+<li>
+                We have 
+                \[f(2.6) \approx 8 + 2(2.6 - 3) = \boxed{7.2}\]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        At higher pressures, water boils at a higher temperature.
+        (Pressure cookers supply a high pressure, 
+        allowing food to cook more rapidly by reducing energy losses due to evaporation.)
+        At standard atmospheric pressure (\(101.325\) kilopascals), 
+        water's boiling temperature is \(99.97 \celcius.\)
+        At an increased pressure of \(125\) kilopascals,
+        water's boiling temperature rises to \(105.97 \celcius.\)
+        Using this information in a linear approximation,
+        interpolate water's boiling temperature at a pressure of \(110\) kilopascals. 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(T(P)\) be water's boiling point as a function of pressure. 
+        We are given \(T(101.325)\) \(= 99.97\) and \(T(125)\) \(= 105.97;\)
+        our goal is to approximate \(T(110)\) through a linear approximation.
+        We assume \(T'(101.325)\) \(= T'(125)\) \(= m,\) where 
+        \[m = \frac{105.97 - 99.97}{125 - 101.325} = 0.253 \pd\]
+        Thus, the linearization centered at either given point—say, \((101.325, 99.97)\)—is 
+        \[
+        T(P) \approx 99.97 + 0.253 (P - 101.325) \pd
+        \]
+        At a pressure of \(110 \un{kPa},\) we approximate a boiling temperature of 
+        \[T(110) \approx 99.97 + 0.253 (110 - 101.325) = \boxed{102.16 \celcius}\]
+        Linearization is highly useful for interpolating physical quantities, 
+        because the exact relationship between pressure and boiling temperature cannot be determined exactly.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         The sides of a cube are each \(10\) centimeters long. 
         Using differentials, calculate the amount by which the cube's volume increases 
         when each side is increased by \(0.01\) centimeter.
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         Let \(s\) be one of the cube's sides and \(V\) be its volume. 
@@ -1117,8 +1204,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1129,7 +1216,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         We will call \(s\) one of the square's sides and \(A\) its area. 
@@ -1151,8 +1238,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1162,7 +1249,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
         The notation \(5.6 \pm 0.3\) means that the radius is measured to be \(5.6 \un{in}\)
@@ -1182,8 +1269,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1193,7 +1280,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
             
         Let \(A\) denote the square's area. Then \(A = s^2,\) from which we attain 
@@ -1212,8 +1299,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-33"> 
-  <div class="box-solution__head">     EXERCISE 33 </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1224,7 +1311,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-33"> 
+        <div class="box-solution__solution" id="solution-35"> 
             <span class="solution-text">SOLUTION</span> 
             
         A sphere of radius \(r\) has surface area given by the formula \(A = 4 \pi r^2.\)
@@ -1245,8 +1332,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-34"> 
-  <div class="box-solution__head">     EXERCISE 34 </div> 
+</div><div id="exercise-36"> 
+  <div class="box-solution__head">     EXERCISE 36 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1257,7 +1344,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-34"> 
+        <div class="box-solution__solution" id="solution-36"> 
             <span class="solution-text">SOLUTION</span> 
             
         We don't know the function \(g;\) we only have its derivative \(g'.\)
@@ -1279,8 +1366,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-35"> 
-  <div class="box-solution__head">     EXERCISE 35 </div> 
+</div><div id="exercise-37"> 
+  <div class="box-solution__head">     EXERCISE 37 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1290,7 +1377,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-35"> 
+        <div class="box-solution__solution" id="solution-37"> 
             <span class="solution-text">SOLUTION</span> 
             
         The maximum <b>relative error</b> of \(x\) is \(\Delta x/x,\)
@@ -1306,8 +1393,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-36"> 
-  <div class="box-solution__head">     EXERCISE 36 </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1318,7 +1405,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-36"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
         The line \(T(x)\) is the linearization of \(f(x)\) at \(x = 3\)
@@ -1338,8 +1425,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-37"> 
-  <div class="box-solution__head">     EXERCISE 37 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1350,7 +1437,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
         A linearization \(T(x)\) is <b>centered</b> at \(x = a\) if and only if \(T\)

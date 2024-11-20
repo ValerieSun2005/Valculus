@@ -1311,13 +1311,72 @@
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{1}{(\sin x + \cos x)^2} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-37"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        There are two viable methods to evaluate this integral. 
+        <p>
+<span class="label-emph">Method 1</span>
+            Factoring \(\cos x\) out of the parentheses gives 
+            \[
+            \ba 
+            \int \frac{1}{\ds \cos^2 x \par{\frac{\sin x}{\cos x} + 1}^2} \di x
+            &amp;= \int \frac{1}{\cos^2 x (\tan x + 1)^2} \di x \nl 
+            &amp;= \int \frac{\sec^2 x}{(\tan x + 1)^2} \di x \pd
+            \ea 
+            \]
+            Substituting \(u = \tan x + 1,\)
+            we have \(\dd u = \sec^2 x \di x\) and so the integral becomes 
+            \[
+            \ba 
+            \int \frac{1}{u^2} \di u 
+            &amp;= -\frac{1}{u} + C \nl 
+            &amp;= \boxed{-\frac{1}{\tan x + 1} + C}
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Method 2</span>
+            Expanding the parentheses, we get 
+            \[
+            \ba 
+            \int \frac{1}{\sin^2 x + 2 \sin x \cos x + \cos^2 x} \di x 
+            &amp;= \int \frac{1}{1 + 2 \sin x \cos x} \di x \nl 
+            &amp;= \int \frac{1}{1 + \sin 2x} \di x \pd
+            \ea 
+            \]
+            Multiplying the numerator and denominator by the conjugate, \((1 - \sin 2x),\) 
+            we find 
+            \[
+            \ba 
+            \int \frac{1 - \sin 2x}{1 - \sin^2 2x} \di x 
+            &amp;= \int \frac{1 - \sin 2x}{\cos^2 2x} \di x \nl 
+            &amp;= \int \par{\sec^2 2x - \sec 2x \tan 2x} \di x \nl 
+            &amp;= \boxed{\tfrac{1}{2} \tan 2x - \tfrac{1}{2} \sec 2x + C}
+            \ea 
+            \]
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-38"> 
+  <div class="box-solution__head">     EXERCISE 38 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
             
         Calculate the average value of \(f(x) = \tan^5 x \sec^3 x\) 
         on \(0 \leq x \leq \pi/4.\)
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-37"> 
+        <div class="box-solution__solution" id="solution-38"> 
             <span class="solution-text">SOLUTION</span> 
             
         The average value 
@@ -1350,8 +1409,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-38"> 
-  <div class="box-solution__head">     EXERCISE 38 </div> 
+</div><div id="exercise-39"> 
+  <div class="box-solution__head">     EXERCISE 39 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1363,7 +1422,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-38"> 
+        <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
         The work done (see Section <a href="/Valculus/calculus/5.5-Work.html">5.5</a>)
@@ -1381,8 +1440,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-39"> 
-  <div class="box-solution__head">     EXERCISE 39 </div> 
+</div><div id="exercise-40"> 
+  <div class="box-solution__head">     EXERCISE 40 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1393,7 +1452,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-39"> 
+        <div class="box-solution__solution" id="solution-40"> 
             <span class="solution-text">SOLUTION</span> 
             
         The displacement is given by
@@ -1424,8 +1483,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-40"> 
-  <div class="box-solution__head">     EXERCISE 40 </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1437,7 +1496,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-40"> 
+        <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
             
         See Section 
@@ -1464,8 +1523,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-41"> 
-  <div class="box-solution__head">     EXERCISE 41 </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1475,7 +1534,7 @@
         upon rotating the bounded region about the specified axis. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-41"> 
+        <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
             
         The distance from the curve \(y = \sin 2x\) to the \(x\)-axis 
@@ -1501,8 +1560,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-42"> 
-  <div class="box-solution__head">     EXERCISE 42 </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1512,7 +1571,7 @@
         upon rotating the bounded region about the specified axis. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-42"> 
+        <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
             
         When we rotate a region about a vertical line using the Disk Method, 
@@ -1536,8 +1595,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-43"> 
-  <div class="box-solution__head">     EXERCISE 43 </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1547,7 +1606,7 @@
         upon rotating the bounded region about the specified axis. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-43"> 
+        <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
             
         Using the Washer Method
@@ -1574,8 +1633,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-44"> 
-  <div class="box-solution__head">     EXERCISE 44 </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1587,7 +1646,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-44"> 
+        <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
             
         We decompose the integral as 
@@ -1611,8 +1670,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-45"> 
-  <div class="box-solution__head">     EXERCISE 45 </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1621,7 +1680,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-45"> 
+        <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
             
         With \(n = 6,\)
@@ -1654,8 +1713,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-46"> 
-  <div class="box-solution__head">     EXERCISE 46 </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1669,7 +1728,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-46"> 
+        <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
             
         Since \(\sec^2 x\) is easy to integrate, 
@@ -1700,8 +1759,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-47"> 
-  <div class="box-solution__head">     EXERCISE 47 </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1711,7 +1770,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-47"> 
+        <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
             
         We identify \(n = 5,\) 

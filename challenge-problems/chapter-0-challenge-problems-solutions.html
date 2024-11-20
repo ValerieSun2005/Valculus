@@ -43,15 +43,84 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        tttt 
-     
+        Let 
+        \[f(x) = \tfrac{1}{2} x - 1 \and g(x) = 4^x \pd\]
+        <ol class="list-alpha">
+<li>
+                Find \((f \circ g)(x)\) and \((g \circ f)(x)\)
+                and their domains.
+            </li>
+<li>
+                For what \(x\) is \((f \circ g)(x)\) positive?
+            </li>
+<li>
+                Solve the inequality \((g \circ f)(x) \gt (f \circ g)(x) + 1.\)
+            </li>
+</ol>
+ 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
             
-        ssss
-     
+<ol class="list-alpha">
+<li>
+                We have 
+                \[
+                \ba 
+                (f \circ g)(x) &amp;= f(g(x)) \nl 
+                &amp;= f \par{4^x} \nl 
+                &amp;= \boxed{\tfrac{1}{2} \par{4^x} - 1}
+                \ea 
+                \]
+                The domain is \(\boxed{(-\infty, \infty)}.\)
+                Also, 
+                \[
+                \ba 
+                (g \circ f)(x) &amp;= g(f(x)) \nl 
+                &amp;= g \par{x/2 - 1} \nl 
+                &amp;= \boxed{4^{x/2 - 1}}
+                \ea 
+                \]
+                The domain is \(\boxed{(-\infty, \infty)}.\)
+            </li>
+<hr/>
+<li>
+                The composite function \(f \circ g\) is positive when 
+                \[
+                \ba
+                \tfrac{1}{2} \par{4^x} - 1 &amp;\gt 0 \nl 
+                4^x &amp;\gt 2 \pd
+                \ea
+                \]
+                Since \(2 = 4^{1/2},\)
+                the inequality becomes \(4^x \gt 4^{1/2},\) which is true for \(x \gt 1/2.\)
+                Hence, the solution interval is 
+                \[\{x \mid x \gt \tfrac{1}{2}\} = \boxed{\par{\tfrac{1}{2}, \infty}}\]
+            </li>
+<hr/>
+<li>
+                We have 
+                \[
+                \ba
+                4^{x/2 - 1} &amp;\gt \par{\tfrac{1}{2} \par{4^x} - 1} + 1 \nl 
+                \par{4^{1/2}}^x \, 4^{-1} &amp;\gt 2^{-1} \, \par{2^2}^x \nl 
+                2^x \, 2^{-2} &amp;\gt 2^{-1} \, 2^{2x} \nl 
+                2^{x - 2} &amp;\gt 2^{2x - 1} \pd
+                \ea
+                \]
+                By comparing exponents, we have 
+                \[
+                \ba 
+                x - 2 &amp;\gt 2x - 1 \nl 
+                x &amp;\lt -1 \pd
+                \ea 
+                \]
+                So the solution interval is 
+                \[\{x \mid x \lt -1\} = \boxed{(-\infty, -1)}\]
+            </li>
+</ol>
+ 
         </div> 
        </div>  
    </div> 

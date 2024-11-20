@@ -63,6 +63,7 @@ window.MathJax = {
             as: "\\qquad \\text{as} \\qquad",
             or: "\\qquad \\text{or} \\qquad",
             for: "\\qquad \\text{for} \\qquad",
+            but: "\\qquad \\text{but} \\qquad",
             if: "\\qquad \\text{if} \\qquad",
             vdotss: "\\; \\; \\vdots", // \vdots aligned with equals sign
             sspace: "\\hspace{1em}",  // space between inline math
@@ -130,6 +131,7 @@ window.MathJax = {
             slashFrac: ["{}^{#1} \\hspace{-0.4em} / \\hspace{-0.4em} {}_{#2}", 2],
             cancelColor: ["{\\color{#1} \\cancel{\\color{white} #2}}", 2],
             equalsCheck: "\\textAbove{\\large \\color{green}\\checkmark}{=}",
+            checkAbove: ["\\textAbove{\\large \\color{green}\\checkmark}{#1}", 1],
             orange: ["{\\color{orange}#1}", 1],
             teal: ["{\\color{SkyBlue}#1}", 1],
             qedproof: "\\tag*{$\\color{Emerald} \\blacksquare$}",

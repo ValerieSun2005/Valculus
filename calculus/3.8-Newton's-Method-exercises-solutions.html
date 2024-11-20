@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.8 Exercise Solutions: Newton's Method</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/exercises-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>3.8 Exercise Solutions: Newton's Method</h1>
+<main>
+<div class="pdf-panel">
+  <div class="pdf-panel-left">
+    <ul>
+      <li>
+        <button>
+          <a href="3.8-Newton's-Method.html">Section <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a href="3.8-Newton's-Method-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+      <li>
+        <button>
+          <a class="link-deactivate" rel="noopener">Exercise Solutions <i class="fa fa-external-link"></i></a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<hr id="mainBodyBegin">
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The graph of \(y = f(x)\) is shown in
+        <a href="#newtons-method-ex-points">Figure 6</a>.
+        The initial approximation \(x_1\) is selected to be either \(a,\) \(b,\) or \(c.\)
+        For which choice of \(x_1\) does Newton's Method fail?
+        <figure class="newtons-method-ex-points figure-wide" id="newtons-method-ex-points">
+<img alt="Figure 6" src="../images/sectionImages/newtons-method-ex-points.jpg"/>
+</figure>
+<style>
+            .newtons-method-ex-points::before{
+                content:'FIGURE 6';
+            }
+        </style>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Choosing \(x_1 = c\) results in Newton's Method failing
+        because the tangent line to \(f\) at \(x = c\)
+        is horizontal and so does not intersect the \(x\)-axis.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[2x^3 + 4x^2 + x - 3 \cmaa x_1 = 0\]
+    </blockquote> use two iterations of Newton's Method with the given initial approximation to estimate the function's zero. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating gives \(f'(x) = 6x^2 + 8x + 1.\)
+        So the first iteration of Newton's Method yields
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 0 - \frac{f(0)}{f'(0)} \nl 
+        &amp;= 0 - \frac{2(0)^3 + 4(0)^2 + (0) - 3}{6(0)^2 + 8(0) + 1} \nl 
+        &amp;= 3 \pd
+        \ea 
+        \]
+        The next iteration then gives 
+        \[
+        \ba 
+        x_3 &amp;= x_2 - \frac{f(x_2)}{f'(x_2)} \nl 
+        &amp;= 3 - \frac{f(3)}{f'(3)} \nl 
+        &amp;= 3 - \frac{2(3)^3 + 4(3)^2 + (3) - 3}{6(3)^2 + 8(3) + 1} \nl
+        &amp;= \frac{147}{79} \approx \boxed{1.861}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[x^5 + 2x^3 - 2 \cmaa x_1 = 1\]
+    </blockquote> use two iterations of Newton's Method with the given initial approximation to estimate the function's zero. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating gives \(f'(x) = 5x^4 + 6x^2.\)
+        So the first iteration of Newton's Method yields
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{f(1)}{f'(1)} \nl 
+        &amp;= 1 - \frac{(1)^5 + 2(1)^3 - 2}{5(1)^4 + 6(1)^2} \nl 
+        &amp;= \frac{10}{11} \approx 0.910 \pd
+        \ea 
+        \]
+        The next iteration then gives 
+        \[
+        \ba 
+        x_3 &amp;= x_2 - \frac{f(x_2)}{f'(x_2)} \nl 
+        &amp;= \frac{10}{11} - \frac{f \par{\tfrac{10}{11}}}{f' \par{\tfrac{10}{11}}} \nl 
+        &amp;= \frac{10}{11} - \frac{\par{\tfrac{10}{11}}^5 + 2\par{\tfrac{10}{11}}^3 - 2}{5\par{\tfrac{10}{11}}^4 + 6\par{\tfrac{10}{11}}^2} \nl 
+        &amp;\approx \boxed{0.894}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[x^7 + 3x^3 - 5 \cmaa x_1 = 1\]
+    </blockquote> use two iterations of Newton's Method with the given initial approximation to estimate the function's zero. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating gives \(f'(x) = 7x^6 + 9x^2.\)
+        So the first iteration of Newton's Method yields
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{f(1)}{f'(1)} \nl 
+        &amp;= 1 - \frac{(1)^7 + 3(1)^3 - 5}{7(1)^6 + 9(1)^2} \nl 
+        &amp;= 1.0625 \pd
+        \ea 
+        \]
+        The next iteration then gives 
+        \[
+        \ba 
+        x_3 &amp;= x_2 - \frac{f(x_2)}{f'(x_2)} \nl 
+        &amp;= 1.0625 - \frac{f(1.0625)}{f'(1.0625)} \nl 
+        &amp;= 1.0625 - \frac{(1.0625)^7 + 3(1.0625)^3 - 5}{7(1.0625)^6 + 9(1.0625)^2} \nl 
+        &amp;\approx \boxed{1.056}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\sqrt[7]{3}\) correct to five decimal places
+    </blockquote> use Newton's Method to approximate the number to the accuracy threshold provided. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This number is the zero of the function \(f(x) = x^7 - 3.\)
+        Differentiating gives \(f'(x) = 7x^6.\)
+        Let's start with any nonzero initial approximation—say, \(x_1 = 1.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{f(1)}{f'(1)} \nl 
+        &amp;= 1 - \frac{(1)^7 - 3}{7(1)^6} \nl 
+        &amp;= \frac{9}{7} \approx 1.285714 \pd
+        \ea 
+        \] 
+        Repeating this process gives 
+        \[
+        \ba 
+        x_3 &amp;= 1.196917 \cma \nl
+        x_4 &amp;= 1.171689 \cma \nl
+        x_5 &amp;= 1.169939 \cma \nl
+        x_6 &amp;= 1.169931 \pd \nl
+        \ea 
+        \]
+        Because \(x_5\) and \(x_6\) both agree to five decimal places, 
+        we stop the approximation and conclude \(\sqrt[7]{3}\) \(\approx \boxed{1.16993}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-6"> 
+  <div class="box-solution__head">     EXERCISE 6 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\sqrt[6]{4}\) correct to seven decimal places
+    </blockquote> use Newton's Method to approximate the number to the accuracy threshold provided. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-6"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This number is the positive zero of the function \(f(x) = x^6 - 4.\)
+        Differentiating gives \(f'(x) = 6x^5.\)
+        Let's start with any nonzero initial approximation—say, \(x_1 = 1.\) 
+        (Choosing a positive \(x_1\) avoids converging to the negative zero, <nobr>\(x = -\sqrt[6]{4}.\))</nobr>
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{f(1)}{f'(1)} \nl 
+        &amp;= 1 - \frac{(1)^6 - 4}{6(1)^5} \nl 
+        &amp;= 1.5 \pd
+        \ea 
+        \] 
+        Subsequent iterations yield 
+        \[
+        \ba
+        x_3 &amp;= 1.33779150 \cma \nl
+        x_4 &amp;= 1.27041084 \cma \nl
+        x_5 &amp;= 1.26013522 \cma \nl
+        x_6 &amp;= 1.25992114 \cma \nl
+        x_7 &amp;= 1.25992105 \cma \nl
+        x_8 &amp;= 1.25992105 \pd
+        \ea
+        \]
+        Because \(x_7\) and \(x_8\) both agree to seven decimal places, 
+        we halt the approximation and conclude \(\sqrt[6]{4}\) \(\approx \boxed{1.2599210}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-7"> 
+  <div class="box-solution__head">     EXERCISE 7 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\ln 0.2\) correct to eight decimal places
+    </blockquote> use Newton's Method to approximate the number to the accuracy threshold provided. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-7"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This number is the zero of the function \(f(x) = e^x - 0.2.\)
+        Differentiating gives \(f'(x) = e^x.\)
+        Let's start with any initial approximation—say, \(x_1 = 0.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 0 - \frac{f(0)}{f'(0)} \nl 
+        &amp;= 0 - \frac{e^0 - 0.2}{e^0} \nl 
+        &amp;= -0.8 \pd
+        \ea 
+        \] 
+        Subsequent iterations yield 
+        \[
+        \ba 
+        x_3 &amp;= -1.354891814 \cma \nl
+        x_4 &amp;= -1.579623500 \cma \nl
+        x_5 &amp;= -1.608997847 \cma \nl
+        x_6 &amp;= -1.609437816 \cma \nl
+        x_7 &amp;= -1.609437912 \cma \nl
+        x_8 &amp;= -1.609437912 \pd
+        \ea 
+        \]
+        Because \(x_7\) and \(x_8\) both agree to eight decimal places, 
+        we halt the approximation and conclude \(\ln 0.2\) \(\approx \boxed{-1.60943791}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-8"> 
+  <div class="box-solution__head">     EXERCISE 8 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \(\sin 0.6\) to five decimal places
+    </blockquote> use Newton's Method to approximate the number to the accuracy threshold provided. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        This number is the zero of the function \(f(x) = \asin x - 0.6.\)
+        Differentiating gives \(f'(x) = 1/\sqrt{1 - x^2}.\)
+        Let's start with any initial approximation—say, \(x_1 = 0.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 0 - \frac{f(0)}{f'(0)} \nl 
+        &amp;= 0 - \frac{\asin 0 - 0.6}{1/\sqrt{1 - 0^2}} \nl 
+        &amp;= 0.6 \pd
+        \ea 
+        \] 
+        Subsequent iterations yield 
+        \[
+        \ba 
+        x_3 &amp;= 0.565199 \cma \nl
+        x_4 &amp;= 0.564643 \cma \nl
+        x_5 &amp;= 0.564642 \pd
+        \ea 
+        \]
+        Because \(x_4\) and \(x_5\) both agree to five decimal places, 
+        we halt the approximation and conclude \(\sin 0.6\) \(\approx \boxed{0.56464}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[6 \ln x = x\]
+    </blockquote> use Newton's Method to approximate the solution to the equation correct to five decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We seek the zero of \(f(x) = 6 \ln x - x.\)
+        Differentiating gives \(f'(x) = 6/x - 1.\)
+        Let's first estimate the root to be any nonzero value—say, \(x_1 = 1.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{6 \ln 1 - 1}{6/1 - 1} \nl 
+        &amp;= 1.2 \pd
+        \ea 
+        \]
+        Subsequent approximations are 
+        \[
+        \ba 
+        x_3 &amp;= 1.226518 \cma \nl
+        x_4 &amp;= 1.226889 \cma \nl
+        x_5 &amp;= 1.226889 \pd
+        \ea 
+        \]
+        Since \(x_4\) and \(x_5\) both agree to five decimal places,
+        we approximate the solution to be \(\boxed{x \approx 1.22688}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds x = \cos x \cmaa 0 \leq x \leq \frac{\pi}{2}\]
+    </blockquote> use Newton's Method to approximate the solution to the equation correct to five decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-10"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Letting \(f(x) = x - \cos x,\)
+        we seek the zero of \(f\) in \([0, \pi/2].\)
+        Differentiating gives \(f'(x) = 1 + \sin x.\)
+        Let's first estimate the root to be some arbitrary value—say, \(x_1 = 0.3.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 0.3 - \frac{0.3 - \cos 0.3}{1 + \sin 0.3} \nl 
+        &amp;\approx 0.805848 \pd
+        \ea 
+        \]
+        Subsequent approximations are 
+        \[
+        \ba 
+        x_3 &amp;= 0.740002 \cma \nl
+        x_4 &amp;= 0.739085 \cma \nl
+        x_5 &amp;= 0.739085 \pd
+        \ea 
+        \]
+        Because \(x_4\) and \(x_5\) both agree to five decimal places,
+        we approximate the solution to be \(\boxed{x \approx 0.73908}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[x^2 = e^x\]
+    </blockquote> use Newton's Method to approximate the solution to the equation correct to five decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We seek the zero of \(f(x) = x^2 - e^x.\)
+        Differentiating gives \(f'(x) = 2x - e^x.\)
+        Let's first estimate the root to be some arbitrary value—say, \(x_1 = 1.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{(1)^2 - e^1}{2(1) - e^1} \nl 
+        &amp;\approx -1.392211 \pd
+        \ea 
+        \]
+        Subsequent approximations are 
+        \[
+        \ba 
+        x_3 &amp;= -0.835088 \cma \nl
+        x_4 &amp;= -0.709834 \cma \nl
+        x_5 &amp;= -0.703483 \cma \nl
+        x_6 &amp;= -0.703467 \cma \nl
+        x_7 &amp;= -0.703467 \pd
+        \ea 
+        \]
+        Since \(x_6\) and \(x_7\) both agree to five decimal places,
+        we approximate the solution to be \(\boxed{x \approx -0.70346}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\sqrt{x^3 + 2} = 4x\]
+    </blockquote> use Newton's Method to approximate the solution to the equation correct to five decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We seek the zero of \(f(x) = \sqrt{x^3 + 2} - 4x.\)
+        Differentiating gives 
+        \[f'(x) = \frac{3x^2}{2 \sqrt{x^3 + 2}} - 4 \pd\]
+        Let's first estimate the root to be some arbitrary value—say, \(x_1 = 0.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 0 - \frac{\sqrt{(0)^3 + 2} - 4(0)}{\ds \frac{3(0)^2}{2 \sqrt{(0)^3 + 2}} - 4} \nl 
+        &amp;= \frac{\sqrt 2}{4} \approx 0.353553 \pd
+        \ea 
+        \]
+        Subsequent approximations are 
+        \[
+        \ba 
+        x_3 &amp;= 0.357570 \cma \nl
+        x_4 &amp;= 0.357572 \pd
+        \ea 
+        \]
+        Since \(x_3\) and \(x_4\) both agree to five decimal places,
+        we approximate the solution to be \(\boxed{x \approx 0.35757}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[e^{-x} = \sqrt[3] x\]
+    </blockquote> use Newton's Method to approximate the solution to the equation correct to five decimal places. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We seek the zero of \(f(x) = e^{-x} - \sqrt[3] x.\)
+        Differentiating gives 
+        \[f'(x) = -e^{-x} - \frac{1}{3 x^{2/3}} \pd\]
+        Let's first estimate the root to be some arbitrary value—say, \(x_1 = 1.\) 
+        Then 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= 1 - \frac{e^{-1} - \sqrt[3] 1}{\ds -e^{-1} - \frac{1}{3 (1)^{2/3}}} \nl 
+        &amp;\approx 0.098532 \pd
+        \ea 
+        \]
+        Subsequent approximations are 
+        \[
+        \ba 
+        x_3 &amp;= 0.278502 \cma \nl
+        x_4 &amp;= 0.346016 \cma \nl
+        x_5 &amp;= 0.349958 \cma \nl
+        x_6 &amp;= 0.349970 \cma \nl
+        x_7 &amp;= 0.349970 \pd
+        \ea 
+        \]
+        Since \(x_6\) and \(x_7\) both agree to five decimal places,
+        we approximate the solution to be \(\boxed{x \approx 0.34997}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Consider the polynomial \(f(x) = x^7 + x - 1.\)
+        <ol class="list-alpha">
+<li>
+                Prove that \(f\) has exactly one zero in \([0, 1].\)
+            </li>
+<li>
+                Use Newton's Method with three iterations to estimate the zero, 
+                starting from \(x_1 = 0.\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-14"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                Observe that \(f(0) = -1\) and \(f(1) = 1.\)
+                Because \(f(x)\) is a polynomial, it is continuous for all \(x,\)
+                including on \([0, 1].\)
+                Note that \(0\) is between \(-1\) and \(1.\)
+                Thus, the Intermediate Value Theorem (see Section <a href="/Valculus/calculus/1.4-Continuity.html">1.4</a>)
+                guarantees a number \(r\) in \([0, 1]\) such that \(f(r) = 0.\)
+                So \(f\) has a zero in \([0, 1].\)
+                In addition, \(f'(x) = 7x^6 + 1 \gt 0,\)
+                so \(f\) is increasing for all \(x.\)
+                Therefore, \(f\) must only have one zero in \([0, 1].\)
+            </li>
+<hr/>
+<li>
+                Newton's Method gives 
+                \[
+                \ba 
+                x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+                &amp;= 0 - \frac{(0)^7 + (0) - 1}{7(0)^6 + 1} \nl 
+                &amp;= 1 \pd
+                \ea 
+                \]
+                The next iteration yields 
+                \[
+                \ba 
+                x_3 &amp;= x_2 - \frac{f(x_2)}{f'(x_2)} \nl 
+                &amp;= 1 - \frac{(1)^7 + (1) - 1}{7(1)^6 + 1} \nl 
+                &amp;= 0.875 \pd
+                \ea 
+                \]
+                Our final approximation for the zero is
+                \[
+                \ba 
+                x_4 &amp;= x_3 - \frac{f(x_3)}{f'(x_3)} \nl 
+                &amp;= 0.875 - \frac{(0.875)^7 + (0.875) - 1}{7(0.875)^6 + 1} \nl 
+                &amp;\approx \boxed{0.810}
+                \ea 
+                \]
+            </li>
+</ol>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For positive \(k,\)
+        let \(f(x) = (1 + x)^k - 1.\)
+        Prove that the <nobr>\(n\)th</nobr> iteration of Newton's Method gives
+        \[x_{n + 1} = x_n + \frac{1 - (1 + x_n)^k}{k (1 + x_n)^{k - 1}} \pd\]
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(f'(x) = k(1 + x)^{k - 1}.\)
+        We therefore have 
+        \[
+        \ba 
+        x_{n + 1} &amp;= x_n - \frac{f(x_n)}{f'(x_n)} \nl 
+        &amp;= x_n - \frac{(1 + x_n)^k - 1}{k (1 + x_n)^{k - 1}} \nl 
+        &amp;= x_n + \frac{1 - (1 + x_n)^k}{k (1 + x_n)^{k - 1}} \cma
+        \ea 
+        \]
+        as requested.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Using Newton's Method, 
+        calculate the critical numbers of 
+        \[f(x) = x^5 - \ln \abs x\]
+        correct to four decimal places.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's first find the critical numbers algebraically 
+        and then use Newton's Method to approximate their values.
+        <p>
+<span class="label-emph">Critical Numbers</span>
+            Recall, from Section 
+            <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>,
+            that \(f\) has a critical point 
+            at \(x\) if \(f'(x) = 0\)
+            <i>or</i> if \(f(x)\) is defined but \(f'(x)\) is undefined. 
+            Differentiating shows 
+            \[f'(x) = 5x^4 - \frac{1}{x} \pd\]
+            Note that \(f'(0)\) is undefined, 
+            yet \(x = 0\) is not a critical number since \(f(0)\) is also undefined.
+            Instead, solving \(f'(x) = 0\) shows 
+            \[
+            \ba 
+            5x^4 - \frac{1}{x} &amp;= 0 \nl 
+            5x^5 &amp;= 1 \nl 
+            \implies x &amp;= \sqrt[5]{\frac{1}{5}} \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Newton's Method</span>
+            The number \(\sqrt[5]{1/5}\) is the zero of \(g(x) = x^5 - 1/5.\)
+            Note that \(g'(x) = 5x^4.\)
+            Let's use Newton's Method with any nonzero starting approximation—say, \(x_1 = 1.\)
+            So 
+            \[
+            \ba
+            x_2 &amp;= x_1 - \frac{g(x_1)}{g'(x_1)} \nl 
+            &amp;= 1 - \frac{(1)^5 - \tfrac{1}{5}}{5(1)^4} \nl 
+            &amp;= \frac{21}{25} = 0.84 \pd
+            \ea
+            \]
+            Subsequent approximations are 
+            \[
+            \ba 
+            x_3 &amp;= 0.75234 \cma \nl
+            x_4 &amp;= 0.72673 \cma \nl
+            x_5 &amp;= 0.72479 \pd
+            \ea 
+            \]
+            Let's cease the approximation since \(x_4\) and \(x_5\) both agree to 
+            the desired four decimal places. 
+            The critical number is therefore \(\sqrt[5]{1/5} \approx \boxed{0.7247}.\)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Using Newton's Method, 
+        calculate the critical numbers of 
+        \[f(x) = x^3 + 8 \ln \abs x - 2\]
+        correct to six decimal places.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's first find the critical numbers algebraically 
+        and then use Newton's Method to approximate their values.
+        <p>
+<span class="label-emph">Critical Numbers</span>
+            Recall, from Section 
+            <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>,
+            that \(f\) has a critical point 
+            at \(x\) if \(f'(x) = 0\)
+            <i>or</i> if \(f(x)\) is defined but \(f'(x)\) is undefined. 
+            Differentiating shows 
+            \[f'(x) = 3x^2 + \frac{8}{x} \pd\]
+            Note that \(f'(0)\) is undefined, 
+            yet \(x = 0\) is not a critical number since \(f(0)\) is also undefined.
+            Instead, solving \(f'(x) = 0\) shows 
+            \[
+            \ba 
+            3x^2 + \frac{8}{x} &amp;= 0 \nl 
+            3x^3 + 8 &amp;= 0 \nl 
+            \implies x &amp;= \sqrt[3]{-\frac{8}{3}} \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Newton's Method</span>
+            The number \(\sqrt[3]{-8/3}\) is the zero of \(g(x) = x^3 + 8/3.\)
+            Note that \(g'(x) = 3x^2.\)
+            Let's use Newton's Method with any nonzero starting approximation—say, \(x_1 = 1.\)
+            So 
+            \[
+            \ba
+            x_2 &amp;= x_1 - \frac{g(x_1)}{g'(x_1)} \nl 
+            &amp;= 1 - \frac{(1)^3 + \tfrac{8}{3}}{3(1)^2} \nl 
+            &amp;= -\frac{2}{9} \approx -0.2222222 \pd
+            \ea
+            \]
+            Subsequent approximations are 
+            \[
+            \ba 
+            x_3 &amp;= -18.1481481 \cma \nl
+            x_4 &amp;= -12.1014643 \cma \nl
+            x_5 &amp;= -8.0737126 \cma \nl
+            x_6 &amp;= -5.3961115 \cma \nl
+            x_7 &amp;= -3.6279348 \cma \nl
+            x_8 &amp;= -2.4861581 \cma \nl
+            x_9 &amp;= -1.8012491 \cma \nl
+            x_{10} &amp;= -1.4748008 \cma \nl
+            x_{11} &amp;= -1.3918780 \cma \nl
+            x_{12} &amp;= -1.3867416 \cma \nl
+            x_{13} &amp;= -1.3867225 \cma \nl
+            x_{14} &amp;= -1.3867225 \pd
+            \ea 
+            \]
+            Let's cease the approximation since \(x_{13}\) and \(x_{14}\) both agree to 
+            the desired six decimal places. 
+            The critical number is therefore \(\sqrt[3]{-8/3} \approx \boxed{-1.386722}.\)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f(x) = \tfrac{1}{5} x^5 + 8x^2.\)
+        Use Newton's Method to approximate the inflection points of \(f\)
+        correct to five decimal places.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's first locate the inflection points algebraically 
+        and then use Newton's Method to approximate their values.
+        <p>
+<span class="label-emph">Inflection Points</span>
+            Recall, from Section 
+            <a href="/Valculus/calculus/3.3-Using-the-First-and-Second-Derivatives.html">3.3</a>,
+            that \(f\) has an inflection point 
+            at \(x\) if \(f''\) changes sign at \(x.\)
+            Differentiating shows 
+            \[
+            \ba 
+            f'(x) &amp;= x^4 + 16x \cma \nl
+            f''(x) &amp;= 4x^3 + 16 \pd 
+            \ea 
+            \]
+            The solution to \(f''(x) = 0\) is \(x = \sqrt[3]{-4}.\)
+            Note that \(f''(x) \lt 0\) for \(x \lt \sqrt[3]{-4}\)
+            and \(f''(x) \gt 0\) for \(x \gt \sqrt[3]{-4}.\)
+            Thus, \(f\) has an inflection point at this value of \(x.\)
+        </p>
+<p>
+<span class="label-emph">Newton's Method</span>
+            The number \(\sqrt[3]{-4}\) is the zero of \(g(x) = x^3 + 4.\)
+            Note that \(g'(x) = 3x^2.\)
+            Let's use Newton's Method with any nonzero starting approximation—say, \(x_1 = 1.\)
+            Then
+            \[
+            \ba
+            x_2 &amp;= x_1 - \frac{g(x_1)}{g'(x_1)} \nl 
+            &amp;= 1 - \frac{(1)^3 + 4}{3(1)^2} \nl 
+            &amp;= -\frac{2}{3} \approx -0.666667 \pd
+            \ea
+            \]
+            Subsequent approximations give 
+            \[
+            \ba 
+            x_3 &amp;= -3.444444 \cma \nl
+            x_4 &amp;= -2.408679 \cma \nl
+            x_5 &amp;= -1.835602 \cma \nl
+            x_6 &amp;= -1.619449 \cma \nl
+            x_7 &amp;= -1.588031 \cma \nl
+            x_8 &amp;= -1.587401 \cma \nl
+            x_9 &amp;= -1.587401 \pd
+            \ea 
+            \]
+            Let's cease the approximation since \(x_8\) and \(x_9\) both agree to 
+            the desired five decimal places. 
+            The inflection point is therefore at \(x = \sqrt[3]{-4} \approx \boxed{-1.58740}.\)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f(x) = x^5 + x + 1.\)
+        Use Newton's Method to approximate, correct to four decimal places, 
+        the values of \(c\) that satisfy the Mean Value Theorem for \(f\)
+        on \([-1, 1].\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-19"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's first solve for \(c\) algebraically and then use Newton's Method to 
+        attain numerical estimates.
+        <p>
+<span class="label-emph">Mean Value Theorem</span>
+            See Section
+            <a href="/Valculus/calculus/3.2-Mean-Value-Theorem-and-Rolle's-Theorem.html">3.2</a>
+            to review the hypothesis of the Mean Value Theorem.
+            Since \(f\) is a polynomial, it is differentiable for all \(x.\)
+            Thus, \(f\) is continuous on \([-1, 1]\) and differentiable on \((-1, 1)\)
+            and so the Mean Value Theorem guarantees at least one value \(c\) in \((-1, 1)\)
+            such that 
+            \[
+            \ba
+            f'(c) &amp;= \frac{f(1) - f(-1)}{1 - (-1)} \nl 
+            &amp;= \frac{3 - (-1)}{1 - (-1)} = 2 \pd
+            \ea
+            \]
+            Differentiating gives \(f'(x) = 5x^4 + 1.\)
+            Therefore, we have 
+            \[
+            \ba 
+            f'(c) = 5c^4 + 1 &amp;= 2 \nl 
+            5c^4 &amp;= 1 \nl 
+            \implies c &amp;= \pm \sqrt[4]{\frac{1}{5}} \pd
+            \ea 
+            \]
+        </p>
+<p>
+<span class="label-emph">Newton's Method</span>
+            The number \(\sqrt[4]{1/5}\) is the positive zero of \(g(x) = x^4 - 1/5.\)
+            Note that \(g'(x) = 4x^3.\)
+            Let's use Newton's Method with any nonzero starting approximation—say, \(x_1 = 1.\)
+            (This should be positive to avoid converging to the negative zero, <nobr>\(x = -\sqrt[4]{1/5}.\))</nobr>
+            Then
+            \[
+            \ba
+            x_2 &amp;= x_1 - \frac{g(x_1)}{g'(x_1)} \nl 
+            &amp;= 1 - \frac{(1)^4 - \tfrac{1}{5}}{4(1)^3} \nl 
+            &amp;= \frac{4}{5} = 0.8 \pd
+            \ea
+            \]
+            Subsequent approximations give 
+            \[
+            \ba 
+            x_3 &amp;= 0.69766 \cma \nl
+            x_4 &amp;= 0.67049 \cma \nl
+            x_5 &amp;= 0.66875 \cma \nl
+            x_6 &amp;= 0.66874 \pd
+            \ea 
+            \]
+            Let's cease the approximation since \(x_5\) and \(x_6\) both agree to 
+            the desired four decimal places. 
+            Given \(c = \pm \sqrt[4]{1/5},\) the values of \(c\) are approximated to be 
+            \(\boxed{c \approx -0.6687}\) and \(\boxed{c \approx 0.6687}.\)
+        </p>
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Using Newton's Method for the equation \(x^2 - a = 0,\)
+        show that \(\sqrt a\) is approximated by the algorithm
+        \[x_{n + 1} = \frac{1}{2} \par{x_n + \frac{a}{x_n}} \pd\]
+        Then use this formula to calculate \(\sqrt{500}\)
+        correct to four decimal places.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-20"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Letting \(f(x) = x^2 - a,\)
+        we have \(f'(x) = 2x.\)
+        Then Newton's Method gives 
+        \[
+        \ba 
+        x_{n + 1} &amp;= x_n - \frac{f(x_n)}{f'(x_n)} \nl 
+        &amp;= x_n - \frac{\par{x_n}^2 - a}{2 x_n} \nl 
+        &amp;= x_n - \frac{x_n}{2} + \frac{a}{2 x_n} \nl 
+        &amp;= \frac{x_n}{2} + \frac{a}{2 x_n} \nl 
+        &amp;= \frac{1}{2} \par{x_n + \frac{a}{x_n}} \cma
+        \ea 
+        \]
+        as requested.
+        Let's begin our approximations with some reasonable guess, such as \(x_1 = 20.\)
+        Then 
+        \[
+        \baat{2}
+        x_2 &amp;= \frac{1}{2} \par{20 + \frac{500}{20}} &amp;&amp;= 22.5 \cma \nl
+        x_3 &amp;= \frac{1}{2} \par{22.5 + \frac{500}{22.5}} &amp;&amp;\approx 22.36111 \cma \nl 
+        x_4 &amp;= \frac{1}{2} \par{22.36111 + \frac{500}{22.36111}} &amp;&amp;\approx 22.36068 \cma \nl 
+        x_5 &amp;= \frac{1}{2} \par{22.36068 + \frac{500}{22.36068}} &amp;&amp;\approx 22.36068 \pd \nl 
+        \eaat
+        \]
+        Note that \(x_4\) and \(x_5\) both agree to four decimal places.
+        Thus, we estimate \(\sqrt{500} \approx \boxed{22.3606}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        If \(x_1 \ne 0,\) then prove that Newton's Method completely fails to locate the zero of \(f(x) = \sqrt x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-21"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(f'(x) = 1/(2 \sqrt x)\)
+        and so 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= x_1 - \frac{\sqrt{x_1}}{\dfrac{1}{2 \sqrt{x_1}}} \nl 
+        &amp;= x_1 - 2 x_1 \nl 
+        &amp;= -x_1 \pd
+        \ea 
+        \]
+        But the domain of \(f(x) = \sqrt x\) is \([0, \infty).\)
+        Thus, any choice of \(x_1\) (apart from <nobr>\(0\))</nobr> must be positive;
+        then \(x_2 = -x_1\) is negative.
+        So Newton's Method gives an approximation that is outside of the domain of \(f,\)
+        thus failing <i>completely</i>.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Determine the interval of starting approximations \(x_1\)
+        such that Newton's Method yields invalid approximations for the zero of \(f(x) = 1 + \ln x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(f'(x) = 1/x.\)
+        So Newton's Method gives 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= x_1 - \frac{1 + \ln x_1}{1/x_1} \nl 
+        &amp;= x_1 - x_1 - x_1 \ln x_1 \nl 
+        &amp;= - x_1 \ln x_1 \pd
+        \ea 
+        \]
+        The domain of \(f(x) = 1 + \ln x\) is \(x \gt 0.\)
+        Newton's Method therefore yields invalid zeros if \(x_2 \leq 0\)—that is, 
+        \[
+        -x_1 \ln x_1 \leq 0 
+        \iffArrow
+        x_1 \ln x_1 \geq 0 \pd  
+        \]
+        Note that \(\ln x_1 \geq 0\) for \(\boxed{x_1 \geq 1}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Let \(f(x) = x^3 - 5.\)
+        Find all the starting approximations \(x_1\) for which 
+        Newton's Method yields a second approximation of \(x_2 = 1.\) 
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Differentiating gives \(f'(x) = 3x^2.\)
+        So Newton's Method gives 
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= x_1 - \frac{\par{x_1}^3 - 5}{3 \par{x_1}^2} \nl 
+        &amp;= x_1 - \frac{x_1}{3} + \frac{5}{3 \par{x_1}^2} \nl 
+        &amp;= \frac{2 x_1}{3} + \frac{5}{3 \par{x_1}^2} \pd
+        \ea 
+        \]
+        Equating \(x_2 = 1\) gives 
+        \[
+        \ba 
+        1 &amp;= \frac{2 x_1}{3} + \frac{5}{3 \par{x_1}^2} \nl 
+        3 \par{x_1}^2 &amp;= 2 \par{x_1}^3 + 5 \pd
+        \ea 
+        \]
+        By inspection, a solution to the preceding equation is \(x_1 = -1.\)
+        Using polynomial division, we find 
+        \[2 \par{x_1}^3 - 3 \par{x_1}^2 + 5 = \par{x_1 + 1} \parbr{2 \par{x_1}^2 - 5 x_1 + 5} \pd\]
+        The discriminant of the expression in brackets is \((-5)^2 - 4(2)(5)\) \(= -15.\)
+        Since this value is negative, the quadratic expression has no zeros. 
+        Hence, the only solution is \(\boxed{x_1 = -1}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+<!-- [[[HARD]]] -->
+        Determine all the starting approximations \(x_1\) in \([0, 1]\)
+        for which Newton's Method fails to converge to the zero of \(f(x) = x^3 + 2.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that \(f'(x) = 3x^2.\)
+        The graph of \(f\) therefore has a horizontal tangent when \(f'(x) = 0,\)
+        that is, at \(x = 0.\)
+        So \(x_1 = 0\) causes Newton's Method to fail because the tangent line never strikes the \(x\)-axis. 
+        For other values of \(x_1,\) the iterative formula is
+        \[
+        \ba 
+        x_2 &amp;= x_1 - \frac{f(x_1)}{f'(x_1)} \nl 
+        &amp;= x_1 - \frac{\par{x_1}^3 + 2}{3 \par{x_1}^2} \nl 
+        &amp;= x_1 - \frac{x_1}{3} - \frac{2}{3 \par{x_1}^2} \nl 
+        &amp;= \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2} \pd
+        \ea 
+        \]
+        Newton's Method fails to converge if it yields \(x_2 = 0,\)
+        the location of the horizontal tangent. 
+        Solving shows
+        \[
+        \ba 
+        0 &amp;= \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2} \nl 
+        0 &amp;= \par{x_1}^3 - 1 \nl 
+        \implies x_1 &amp;= 1 \pd
+        \ea
+        \]
+        Newton's Method also fails if it yields \(x_2 = 1,\)
+        since the following approximation would be \(x_3 = 0.\)
+        The function \(2x_1/3 - 2/[3(x_1)^2]\) is increasing for positive \(x_1,\)
+        so the solution to
+        \[
+        1 = \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2} 
+        \]
+        satisfies \(x_1 \gt 1\)
+        <nobr>(the solution is \(x_1 \approx 1.806\)).</nobr>
+        Newton's Method <i>also</i> fails if it yields \(x_2 \approx 1.806\)
+        (because then \(x_3 = 1\) and <nobr>\(x_4 = 0\)),</nobr>
+        yet the solution to 
+        \[
+        1.806 = \frac{2 x_1}{3} - \frac{2}{3 \par{x_1}^2}
+        \]
+        satisfies \(x_1 \gt 1.806\)
+        <nobr>(the solution is \(x_1 \approx 2.834\)).</nobr>
+        This pattern is repeating—subsequent defective values of \(x_1\)
+        are all outside \([0, 1].\)
+        But inside \([0, 1],\) there are no other cases in which Newton's Method fails. 
+        Note that \(f'\) is nonnegative, so \(f\) is always increasing. 
+        Hence, \(f\) has only one zero,
+        and Newton's Method cannot converge to another zero.
+        Additionally, in 
+        <a href="/Valculus/calculus/3.8-Newton's-Method.html#ex-newtons-method-fail-bounce" target="_blank">Example 3</a>
+        Newton's Method fails because the approximations bounce back and forth. 
+        But \(f\) is increasing, so the tangent lines always have nonnegative slope,
+        thus avoiding the bouncing issue.
+        Hence, the defective starting approximations \(x_1 \in [0, 1]\) are \(\boxed{x_1 = 0}\)
+        and \(\boxed{x_1 = 1}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

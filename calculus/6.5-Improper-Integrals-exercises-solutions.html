@@ -467,11 +467,41 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int_0^1 t \ln t \di t\]
+        \[\ds \int_{-1}^1 \frac{1}{\sqrt[3] x} \di x\]
     </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-17"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The graph of \(y = 1/\sqrt[3] x\) has a vertical asymptote at \(x = 0.\)
+        Thus, the integral is improper and we split it at \(x = 0.\)
+        Doing so yields
+        \[
+        \ba
+        \int_{-1}^0 \frac{1}{\sqrt[3] x} \di x + \int_0^1 \frac{1}{\sqrt[3] x} \di x 
+        &amp;= \lim_{P \to 0^-} \int_{-1}^P \frac{1}{\sqrt[3] x} \di x + \lim_{Q \to 0^+} \int_Q^1 \frac{1}{\sqrt[3] x} \di x \nl 
+        &amp;= \lim_{P \to 0^-} \par{\tfrac{3}{2} x^{2/3}} \intEval_{-1}^P + \lim_{Q \to 0^+} \par{\tfrac{3}{2} x^{2/3}} \intEval_Q^1 \nl 
+        &amp;= \lim_{P \to 0^-} \par{\tfrac{3}{2} P^{2/3} - \tfrac{3}{2}} + \lim_{Q \to 0^+} \par{\tfrac{3}{2} - \tfrac{3}{2} Q^{2/3}} \nl 
+        &amp;=  \lim_{P \to 0^-} \par{\tfrac{3}{2} P^{2/3}} +  \lim_{Q \to 0^+} \par{\tfrac{3}{2} Q^{2/3}} \nl 
+        &amp;= 0 + 0 = \boxed 0
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int_0^1 t \ln t \di t\]
+    </blockquote> evaluate the integral or justify that it diverges. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
             
         The integrand is undefined at \(t = 0.\)
@@ -511,8 +541,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -521,7 +551,7 @@
     </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
         We substitute 
@@ -549,8 +579,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -559,7 +589,7 @@
     </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         Performing a trigonometric substitution with \(x = 2 \tan \theta,\)
@@ -587,8 +617,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -597,7 +627,7 @@
     </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
         We factor the denominator as follows:
@@ -632,8 +662,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -642,7 +672,7 @@
     </blockquote> evaluate the integral or justify that it diverges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
                
         In the square root, we multiply the numerator and denominator each by the conjugate, \((8 + 8 \sin \theta).\)
@@ -677,8 +707,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -687,7 +717,7 @@
     </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
         The integral takes the form \(\int_1^\infty (1/x^p) \di x\) with \(p = 1 - 3n.\)
@@ -698,8 +728,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -708,7 +738,7 @@
     </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
             
         The integral is a \(p\)-integral with \(p = 5n - 1.\)
@@ -719,8 +749,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -729,7 +759,7 @@
     </blockquote> find the values of \(n\) such that the integral converges. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
         We equate the exponent of \(x\) to be greater than \(1.\) 
@@ -747,8 +777,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -758,7 +788,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         From the given information, we deduce that  
@@ -779,8 +809,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -790,7 +820,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
         Since 
@@ -803,8 +833,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-27"> 
-  <div class="box-solution__head">     EXERCISE 27 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -814,7 +844,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
         We substitute \(u = g(x);\)
@@ -838,8 +868,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -850,33 +880,10 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        The integral \(\int_2^\infty g(x) \di x\) could be \(-\infty.\)
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-        If \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1,\) 
-        and \(\lim_{x \to \infty} f(x) = 0,\) 
-        then must \(\int_1^\infty f(x) \di x\) be convergent?
-     
-        </div> 
-        <hr> 
         <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
-<b>No</b>, the integral could diverge.
-        For example, \(f(x) = 1/x\) is continuous, positive, and decreasing for all \(x \geq 1,\)
-        and it satisfies \(\lim_{x \to \infty} f(x) = 0.\)
-        However, \(\int_1^\infty (1/x) \di x\) diverges.
+        The integral \(\int_2^\infty g(x) \di x\) could be \(-\infty.\)
      
         </div> 
        </div>  
@@ -887,12 +894,76 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+<span class="true-or-false"></span>
+        If \(f(x)\) is continuous, positive, and decreasing for all \(x \geq 1,\) 
+        and \(\lim_{x \to \infty} f(x) = 0,\) 
+        then \(\int_1^\infty f(x) \di x\) is convergent.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-30"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<b>False</b>.
+        For example, \(f(x) = 1/x\) is continuous, positive, and decreasing for all \(x \geq 1,\)
+        and it satisfies \(\lim_{x \to \infty} f(x) = 0.\)
+        But \(\int_1^\infty (1/x) \di x\) diverges.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For what values of \(q\) does \(\int_0^1 \par{1/x^q} \di x\) converge?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        The integral is 
+        \[
+        \ba
+        \lim_{k \to 0^+} \int_k^1 x^{-q} \di x 
+        &amp;= \lim_{k \to 0^+} \frac{x^{1 - q}}{1 - q} \intEval_k^1 \nl 
+        &amp;= \frac{1}{1 - q} - \lim_{k \to 0^+} \frac{k^{1 - q}}{1 - q} \pd
+        \ea 
+        \]
+        If \(q \lt 1,\) then \(1 - q\) is positive
+        and so \(k^{1 - q}/(1 - q) \to 0\) as \(k \to 0^+.\)
+        Then the integral converges. 
+        But if \(q \gt 1,\) then \(1 - q\) is negative 
+        and so \(k^{1 - q}/(1 - q) \to \infty\) as \(k \to 0^+,\)
+        meaning the integral diverges. 
+        And if \(q = 1,\) then the integral becomes 
+        \[
+        \ba
+        \lim_{k \to 0^+} \ln x \intEval_k^1 
+        &amp;= 0 - \lim_{k \to 0^+} \ln x \nl 
+        &amp;= \infty \pd
+        \ea
+        \]
+        Accordingly, \(\int_0^1 \par{1/x^q} \di x\) converges for \(\boxed{q \lt 1}.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         The rate at which people like a social media post is given by \(S(t) = 200e^{-t/10},\) where \(t\) is time in hours.
         How many likes will the post receive?
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         The total number of likes is \(\int_0^\infty S(t) \di t.\)
@@ -910,20 +981,20 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
+</div><div id="exercise-33"> 
+  <div class="box-solution__head">     EXERCISE 33 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        For \(t \gt 1,\) a particle moves indefinitely along a line at a velocity given by
+        For \(t \geq 1,\) a particle moves indefinitely along a line at a velocity given by
         \(v(t) = 2/t^{2/3},\)
         where \(v(t)\) is measured in meters per second and \(t\) is measured in seconds.
         Show that the particle travels an infinite distance.  
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-33"> 
             <span class="solution-text">SOLUTION</span> 
             
         The distance traveled by the particle is \(\int_1^\infty \abs{v(t)} \di t.\)
@@ -945,8 +1016,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-32"> 
-  <div class="box-solution__head">     EXERCISE 32 </div> 
+</div><div id="exercise-34"> 
+  <div class="box-solution__head">     EXERCISE 34 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -959,7 +1030,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-32"> 
+        <div class="box-solution__solution" id="solution-34"> 
             <span class="solution-text">SOLUTION</span> 
             
         We take \(K \to \infty\) in order to cover the entire forest. 
@@ -976,6 +1047,113 @@
         \]
         Thus, the maximum number of trees in the forest is \(145 \pi,\)
         which is less than \(700.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-35"> 
+  <div class="box-solution__head">     EXERCISE 35 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        Consider the family of functions 
+        \[f(x) = \frac{2x - 11}{x^2 + bx - 12} \cma\]
+        where \(b\) is a constant. 
+        Evaluate \(\int_0^2 f(x) \di x\) for 
+        <ol class="list-alpha">
+<li>
+<span>\(b = -11\)</span>
+</li>
+<li>
+<span>\(b = -1\)</span>
+</li>
+<!-- <li>
+                <span>\(b = 6\)</span>
+            </li> -->
+<li>
+<span>\(b = 11\)</span>
+</li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-35"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+<ol class="list-alpha">
+<li>
+                We have 
+                \[\int_0^2 \frac{2x - 11}{x^2 - 11x - 12} \di x \pd\]
+                Substituting \(u = x^2 - 11x - 12,\)
+                we get \(\dd u = 2x - 11.\)
+                When \(x = 0,\) \(u = -12;\)
+                when \(x = 2,\) \(u = -30.\)
+                The integral therefore becomes 
+                \[
+                \ba
+                \int_{-12}^{-30} \frac{1}{u} \di u 
+                &amp;= \ln \abs u \intEval_{-12}^{-30} \nl 
+                &amp;= \ln \par{\tfrac{30}{12}} \nl 
+                &amp;= \boxed{\ln \par{\tfrac{5}{2}}}
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Using partial fraction decomposition (Section <a href="/Valculus/calculus/6.4-Integration-by-Partial-Fractions.html">6.4</a>), 
+                we get 
+                \[
+                \ba
+                \int_0^2 \frac{2x - 11}{x^2 - x - 12} \di x 
+                &amp;= \int_0^2 \frac{2x - 11}{(x - 4)(x + 3)} \di x \nl
+                &amp;= \int_0^2 \par{\frac{-3/7}{x - 4} + \frac{17/7}{x + 3}} \di x \nl 
+                &amp;= \par{-\tfrac{3}{7} \ln \abs{x - 4} + \tfrac{17}{7} \ln \abs{x + 3}} \intEval_0^2 \nl
+                &amp;= \boxed{\tfrac{3}{7} \ln 2 + \tfrac{17}{7} \ln \par{\tfrac{5}{3}}}
+                \ea\]
+            </li>
+<hr/>
+<li>
+                We have 
+                \[\int_0^2 \frac{2x - 11}{x^2 + 11x - 12} \di x = \int_0^2 \frac{2x - 11}{(x + 12)(x - 1)} \di x \pd\]
+                Since the integrand has a vertical asymptote at \(x = 1,\)
+                the integral is improper.
+                We split the integral into 
+                \[\int_0^1 \frac{2x - 11}{(x + 12)(x - 1)} \di x + \int_1^2 \frac{2x - 11}{(x + 12)(x - 1)} \di x \pd\]
+                The first integral becomes 
+                \[
+                \ba 
+                \lim_{k \to 1^-} \int_0^k \frac{2x - 11}{(x + 12)(x - 1)} \di x 
+                &amp;= \lim_{k \to 1^-} \int_0^k \par{\frac{35/13}{x + 12} + \frac{-9/13}{x - 1}} \di x \nl 
+                &amp;= \lim_{k \to 1^-} \par{\tfrac{35}{13} \ln \abs{x + 12} - \tfrac{9}{13} \ln \abs{x - 1}} \intEval_0^k \nl 
+                &amp;= \lim_{k \to 1^-} \parbr{\tfrac{35}{13} \ln \par{\frac{k + 12}{12}} - \tfrac{9}{13} \ln (k - 1)} \nl 
+                &amp;= \infty \pd
+                \ea 
+                \]
+                Thus, the entire integral \(\int_0^2 f(x) \di x\) <b>diverges</b>. 
+            </li>
+<hr/>
+<!-- <li>
+                By completing the square, we see 
+                \[\int_0^2 \frac{2x - 11}{x^2 + 6x - 12} \di x
+                = \int_0^2 \frac{2x - 11}{(x + 3)^2 - 21} \di x \pd
+                \]
+                Note that a trigonometric substitution is impossible. 
+                For example,
+                substituting \(x + 4 = \sqrt{28} \, \sec \theta\)
+                leads to a converted lower bound given by \(4 = \sqrt{28} \, \sec \theta\)
+                \(\iffArrow 4/\sqrt{28} = \sec \theta,\) 
+                but the range of \(\sec \theta\) is \((-\infty, 1] \cup [1, \infty).\)
+                Instead, we <i>can</i> split the integral into 
+                \[
+                \int_0^2 \frac{2x}{x^2 + 6x - 12} \di x + \int_0^2 \frac{-11}{(x + 3)^2 - 21} \di x \pd
+                \]
+
+                Exercise becomes highly difficult.
+
+            </li> -->
+</ol>
+        This problem demonstrates that altering a single number can yield acutely different conclusions about definite integrals.
      
         </div> 
        </div>  

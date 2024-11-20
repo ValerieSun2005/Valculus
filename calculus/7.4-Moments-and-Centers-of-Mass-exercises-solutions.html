@@ -1711,6 +1711,53 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        Let \(R\) be the region in the first quadrant bounded by the parabola \(y = x^2\)
+        and the line \(x = k,\) where \(k \gt 0.\)
+        If \(C\) is the centroid of \(R,\) 
+        then calculate \(k\) such that the \(x\)-coordinate of \(C\) 
+        is half the \(y\)-coordinate of \(C.\)  
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-31"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let \(A\) be the area of \(R.\) The \(x\)-coordinate of \(R\) is 
+        \[
+        \ba 
+        \overline x &amp;= \frac{1}{A} \int_0^k x \par{x^2} \di x \nl 
+        &amp;= \frac{1}{A} \int_0^k x^3 \di x \nl 
+        &amp;= \frac{1}{4A} x^4 \intEval_0^k \nl 
+        &amp;= \frac{1}{4A} k^4 \pd
+        \ea 
+        \] 
+        The \(y\)-coordinate of \(R\) is 
+        \[
+        \ba 
+        \overline y &amp;= \frac{1}{A} \int_0^k \tfrac{1}{2} \par{x^2}^2 \di x \nl 
+        &amp;= \frac{1}{2A} \int_0^k x^4 \di x \nl 
+        &amp;= \frac{1}{10A} x^5 \intEval_0^k \nl 
+        &amp;= \frac{1}{10A} k^5 \pd
+        \ea 
+        \]
+        We need \(\overline x = 2 \overline y,\) so we have 
+        \[
+        \ba
+        \frac{1}{4A} k^4 &amp;= 2 \par{\frac{1}{10A} k^5} \nl 
+        \tfrac{1}{4} k^4 &amp;= \tfrac{1}{5} k^5 \nl 
+        \implies k &amp;= \boxed{\tfrac{5}{4}}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-32"> 
+  <div class="box-solution__head">     EXERCISE 32 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
 <!-- [[[HARD]]] -->
         A lamina with density \(\rho = 50\) is the shape of the infinite region bounded by \(f(x) = e^{-x}\) 
         in the first quadrant.
@@ -1718,7 +1765,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
+        <div class="box-solution__solution" id="solution-32"> 
             <span class="solution-text">SOLUTION</span> 
             
         The moment about the \(y\)-axis is given by 
@@ -1751,7 +1798,7 @@
         The limit \(\lim_{k \to \infty} k e^{-k}\) is in the indeterminate form \(0 \times \infty.\)
         We force the limit into the indeterminate form \(\indInfty\) by rewriting the function as \(k/e^k.\)
         Then by L'Hôpital's Rule
-        (from Section <a href="/Valculus/calculus/3.4-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.4</a>),
+        (from Section <a href="/Valculus/calculus/3.5-Indeterminate-Forms-and-L'Hopital's-Rule.html">3.5</a>),
         we find
         \[\lim_{k \to \infty} \frac{k}{e^k} = \lim_{k \to \infty} \frac{1}{e^k} = 0 \pd\]
         Hence, the moment is

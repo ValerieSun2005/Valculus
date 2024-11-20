@@ -395,7 +395,8 @@
         L &amp;= \int_1^4 \sqrt{1 + \par{\deriv{x}{y}}^2 } \di y \nl 
         &amp;= \int_1^4 \sqrt{1 + (y - 1)} \di y \nl 
         &amp;= \int_1^4 \sqrt y \di y = \tfrac{2}{3} y^{3/2} \intEval_1^4 \nl 
-        &amp;= \tfrac{2}{3} (8 - 1) = \boxed{\tfrac{14}{3}} \approx 4.667 \pd
+        &amp;= \tfrac{2}{3} (8 - 1) \nl 
+        &amp;= \boxed{\tfrac{14}{3}} \approx 4.667 \pd
         \ea 
         \]
      
@@ -470,7 +471,7 @@
         L &amp;= \int_1^2 \par{\frac{x^6 + 1}{2x^3}} \di x \nl 
         &amp;= \int_1^2 \par{\frac{x^3}{2} + \frac{1}{2x^3}} \di x \nl 
         &amp;= \par{\frac{x^4}{8} - \frac{1}{4 x^2}} \intEval_1^2 \nl 
-        &amp;= \boxed{\frac{33}{16}} = 2.0625 \pd
+        &amp;= \boxed{\tfrac{33}{16}} = 2.0625 \pd
         \ea 
         \]
      
@@ -483,11 +484,56 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds y = \tfrac{1}{4} \ln \par{\sin 4 x} \cmaa \frac{\pi}{16} \leq x \leq \frac{\pi}{12}\]
+        \[\ds 16xy^2 - y^6 = 8 \cmaa 1 \leq y \leq 2\]
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-15"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Solving for \(x\) gives 
+        \[x = \frac{y^6 + 8}{16y^2} \pd\]
+        Differentiating gives 
+        \[
+        \ba 
+        \deriv{x}{y} &amp;= \frac{64y^7 - 256 y}{256y^4} \nl 
+        &amp;= \frac{y^3}{4} - \frac{1}{y^3} \pd
+        \ea 
+        \]   
+        We see 
+        \[
+        \ba 
+        \sqrt{1 + \par{\deriv{x}{y}}^2} 
+        &amp;= \sqrt{1 + \par{\frac{y^3}{4} - \frac{1}{y^3}}^2} \nl 
+        &amp;= \sqrt{1 + \frac{y^6}{16} - \frac{1}{2} + \frac{1}{y^6}} \nl 
+        &amp;= \sqrt{\frac{y^6}{16} + \frac{1}{2} + \frac{1}{y^6}} \nl 
+        &amp;= \sqrt{\par{\frac{y^3}{4} + \frac{1}{y^3}}^2} \nl 
+        &amp;= \frac{y^3}{4} + \frac{1}{y^3} \pd
+        \ea 
+        \]     
+        Thus, the arc length over \(1 \leq y \leq 2\) is 
+        \[
+        \ba 
+        L &amp;= \int_1^2 \par{\frac{y^3}{4} + \frac{1}{y^3}} \di y \nl 
+        &amp;= \par{\frac{y^4}{16} - \frac{1}{2 y^2}} \intEval_1^2 \nl 
+        &amp;= \boxed{\tfrac{21}{16}} = 1.3125 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds y = \tfrac{1}{4} \ln \par{\sin 4 x} \cmaa \frac{\pi}{16} \leq x \leq \frac{\pi}{12}\]
+    </blockquote> calculate the exact arc length of the graph over the given interval. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
             
         Differentiating the function \(y = \tfrac{1}{4} \ln \par{\sin 4 x},\) we see 
@@ -516,8 +562,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-16"> 
-  <div class="box-solution__head">     EXERCISE 16 </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -526,7 +572,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-16"> 
+        <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
             
         We see 
@@ -580,8 +626,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-17"> 
-  <div class="box-solution__head">     EXERCISE 17 </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -590,7 +636,7 @@
     </blockquote> calculate the exact arc length of the graph over the given interval. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-17"> 
+        <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
             
         We see \(\textderiv{x}{y} = e^y\)
@@ -632,20 +678,20 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Use the arc length formula to show that the distance between 
+        Use the arc length formula to verify that the distance between 
         the points \((x_1, y_1)\) and \((x_2, y_2)\) 
         on a line is 
         \[d = \sqrt{\par{x_2 - x_1}^2 + \par{y_2 - y_1}^2} \pd\]
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
         Because the points \((x_1, y_1)\) and \((x_2, y_2)\) lie on a line,
@@ -670,8 +716,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -725,7 +771,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         To be organized, let's define 
@@ -791,8 +837,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -847,7 +893,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
         To be organized, let's define 
@@ -913,8 +959,91 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The hyperbolic cosine function satisfies many fascinating properties. 
+        Calculate 
+        <ol class="list-alpha">
+<li>
+                the slope of the line tangent to the curve \(y = \cosh x\) at \(x = 2\)
+            </li>
+<li>
+                the area under the curve \(y = \cosh x\) from \(x = 0\) to \(x = 2\)
+            </li>
+<li>
+                the arc length of the curve \(y = \cosh x\) over \(0 \leq x \leq 2\)
+            </li>
+</ol>
+ 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-22"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Recall that 
+        \[\sinh x = \frac{e^x - e^{-x}}{2} \and \cosh x = \frac{e^x + e^{-x}}{2} \pd\]
+        (See Section <a href="/Valculus/calculus/2.9-Hyperbolic-Functions.html">2.9</a>.)
+        <ol class="list-alpha">
+<li>
+                The slope of the tangent line is \(\textderiv{y}{x} = \sinh x.\)
+                So at \(x = 2\) the tangent line has slope
+                \[
+                \ba
+                \deriv{y}{x} \intEval_{x = 2} &amp;= \sinh 2 \nl 
+                &amp;= \boxed{\frac{e^2 - e^{-2}}{2}} 
+                \approx 3.627 \pd
+                \ea
+                \] 
+            </li>
+<hr/>
+<li>
+                The area is 
+                \[
+                \ba 
+                \int_0^2 \cosh x \di x &amp;= \sinh x \intEval_0^2 \nl 
+                &amp;= \sinh 2 - \sinh 0 \nl 
+                &amp;= \frac{e^2 - e^{-2}}{2} - \frac{e^0 - e^{0}}{2} \nl 
+                &amp;= \boxed{\frac{e^2 - e^{-2}}{2}} \approx 3.627 \pd
+                \ea 
+                \]
+            </li>
+<hr/>
+<li>
+                Since \(\textderiv{y}{x} = \sinh x,\)
+                we have 
+                \[
+                \ba
+                \sqrt{1 + \par{\deriv{y}{x}}^2} &amp;= \sqrt{1 + \sinh^2 x} \nl 
+                &amp;= \sqrt{\cosh^2 x} \nl 
+                &amp;= \cosh x \cma
+                \ea
+                \]
+                where the last step is true because \(\cosh^2 x - \sinh^2 x = 1\)
+                and \(\cosh x \gt 0.\)
+                The arc length is 
+                \[
+                \ba 
+                L &amp;= \int_0^2 \sqrt{1 + \par{\deriv{y}{x}}^2} \di x \nl 
+                &amp;= \int_0^2 \cosh x \di x \nl 
+                &amp;= \sinh x \intEval_0^2 \nl 
+                &amp;= \boxed{\frac{e^2 - e^{-2}}{2}} \approx 3.627 \pd
+                \ea 
+                \]
+            </li>
+<hr/>
+</ol>
+        All three answers are equal due to the deep harmony between \(\sinh x\) and \(\cosh x.\) 
+        Trust your calculus abilities!
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -927,7 +1056,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
         Using a graphing calculator, we see 
@@ -941,8 +1070,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -956,7 +1085,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
             
         We seek the length of the trajectory from \(x = 0\) to \(x = 30.\)
@@ -971,8 +1100,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -984,7 +1113,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
 <figure class="arclength-perimeter-ex" id="arclength-perimeter-ex">
@@ -1003,8 +1132,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1018,7 +1147,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         The two curves intersect when \(x = 0.171\)
@@ -1036,8 +1165,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1047,7 +1176,7 @@
         starting at the given point. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
         We note that \(\textderiv{y}{t} = 3,\) so 
@@ -1058,8 +1187,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1069,7 +1198,7 @@
         starting at the given point. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
             
         We note that \(\textderiv{x}{t} = (t - 2)^{1/2},\) so 
@@ -1086,8 +1215,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-27"> 
-  <div class="box-solution__head">     EXERCISE 27 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1097,7 +1226,7 @@
         starting at the given point. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-27"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
         Note that 
@@ -1120,8 +1249,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-28"> 
-  <div class="box-solution__head">     EXERCISE 28 </div> 
+</div><div id="exercise-30"> 
+  <div class="box-solution__head">     EXERCISE 30 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1131,7 +1260,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-28"> 
+        <div class="box-solution__solution" id="solution-30"> 
             <span class="solution-text">SOLUTION</span> 
             
         By Part I of the Fundamental Theorem of Calculus, we see 
@@ -1143,8 +1272,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-29"> 
-  <div class="box-solution__head">     EXERCISE 29 </div> 
+</div><div id="exercise-31"> 
+  <div class="box-solution__head">     EXERCISE 31 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1155,7 +1284,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-29"> 
+        <div class="box-solution__solution" id="solution-31"> 
             <span class="solution-text">SOLUTION</span> 
             
         The function \(s(x)\) is an arc length function 
@@ -1164,79 +1293,6 @@
         \[s'(x) = \sqrt{\tfrac{1}{2} + x} \pd\]
         Solving \(s'(x) \geq 1,\) we see
         \[\sqrt{\tfrac{1}{2} + x} \geq 1 \iffArrow \tfrac{1}{2} + x \geq 1 \iffArrow \boxed{x \geq \tfrac{1}{2}}\]
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-30"> 
-  <div class="box-solution__head">     EXERCISE 30 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-<!--[[[HARD]]]-->
-        Over the interval \([1, x],\) \(f\) is increasing 
-        and has an arc length function given by 
-        \[s(x) = \int_0^x \sqrt{t^2 - 2t + 2} \di t \pd\]
-        If \(f(2) = 5,\) then determine the identity of \(f.\)
-     
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-30"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        The integrand of the arc length function takes the form 
-        \(\sqrt{1 + [f'(t)]^2}.\)
-        We therefore see 
-        \[
-        \ba 
-        \sqrt{1 + [f'(t)]^2} &amp;= \sqrt{t^2 - 2t + 2} \nl 
-        1 + [f'(t)]^2 &amp;= t^2 - 2t + 2 \nl 
-        [f'(t)]^2 &amp;= t^2 - 2t + 1 = (t - 1)^2 \nl 
-        \implies f'(t) &amp;= t - 1 \pd
-        \ea 
-        \] 
-        [Note that we choose the positive solution instead of \(f'(t) = -(t - 1)\)
-        because \(f\) is increasing and so \(f'\) must be positive.] 
-        Solving this differential equation, we have 
-        \[f(t) = \tfrac{1}{2} t^2 - t + C \pd\]
-        Then substituting the initial condition \(f(2) = 5\) shows 
-        \[f(2) = \tfrac{1}{2} (2)^2 - 2 + C = 5 \implies C = 5 \pd\]
-        Hence, the identity of \(f\) is 
-        \[f(t) = \boxed{\tfrac{1}{2} t^2 - t + 5}\]
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-31"> 
-  <div class="box-solution__head">     EXERCISE 31 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            
-<!--[[[HARD]]]-->
-        Let \(a\) be any real number.
-        Prove that the graph of any smooth function \(y = f(x)\)
-        has an infinite arc length over \(a \leq x \lt \infty.\)
-     
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-31"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        The integral expression for the arc length from \(x = a\) to \(x = \infty\) is given by  
-        \[L = \int_a^\infty \sqrt{1 + [f'(x)]^2} \di x\]
-        if \(f'(x)\) is continuous for \(x \geq a.\)
-        Because \([f'(x)]^2 \geq 0,\) we observe that 
-        \[\sqrt{1 + [f'(x)]^2} \geq \sqrt 1 \gt 0 \pd\]
-        We see 
-        \[\int_a^\infty \sqrt 1 \di x = \int_a^\infty \di x = x \intEval_a^\infty = \infty \cma\]
-        so \(\int_a^\infty \sqrt 1 \di x\) diverges.
-        By the Comparison Test for Improper Integrals 
-        (from Section <a href="/Valculus/calculus/6.5-Improper-Integrals.html">6.5</a>), 
-        the integral \(\int_a^\infty \sqrt{1 + [f'(x)]^2} \di x\)
-        also diverges. 
-        Hence, the arc length \(L\) is infinite.
      
         </div> 
        </div>  

@@ -37,7 +37,241 @@
   </div>
 </div>
 <hr id="mainBodyBegin">
-
+<div id="exercise-1"> 
+  <div class="box-solution__head">     EXERCISE 1 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{\tan^3 x + \tan x}{6 \tan^2 x - 2} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-1"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By factoring the numerator, 
+        the integral becomes 
+        \[
+        \int \frac{\tan x (\tan^2 x + 1)}{6 \tan^2 x - 2} \di x 
+        = \frac{\tan x \sec^2 x}{6 \tan^2 x - 2} \di x \pd
+        \]
+        Substituting \(u = 6 \tan^2 x - 2,\) 
+        we attain \(\dd u = 12 \tan x \sec^2 x \di x\)
+        and so the integral becomes 
+        \[
+        \ba
+        \int \frac{1}{12 u} \di u &amp;= \tfrac{1}{12} \ln \abs u + C \nl 
+        &amp;= \boxed{\tfrac{1}{2} \ln \par{6 \tan^2 x - 2} + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-2"> 
+  <div class="box-solution__head">     EXERCISE 2 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{1}{\sin^6 x + \cos^6 x} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-2"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Multiplying the numerator and denominator each by \(\sec^6 x\) yields 
+        \[\int \frac{\sec^6 x}{\tan^6 x + 1} \di x \pd\]
+        Since the power of secant is even, 
+        we can conserve an extra \(\sec^2 x\) factor, similar to the strategy in 
+        Section <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>.
+        Because \(\sec^2 x\) \(= \tan^2 x + 1,\)
+        we have
+        \[\int \frac{\sec^4 x \sec^2 x}{\tan^6 x + 1} \di x = \int \frac{(\tan^2 x + 1)^2 \sec^2 x}{\tan^6 x + 1} \di x \pd\]
+        Substituting \(u = \tan x,\) we attain \(\dd u = \sec^2 x \di x\) and so the integral becomes
+        \[
+        \ba
+        \int \frac{(u^2 + 1)^2}{u^6 + 1} \di u &amp;= \int \frac{(u^2 + 1)^2}{(u^2 + 1)(u^4 - u^2 + 1)} \di u \nl 
+        &amp;= \int \frac{u^2 + 1}{u^4 - u^2 + 1} \di u \pd
+        \ea
+        \]
+        Dividing the numerator and denominator each by \(u^2\) yields 
+        \[
+        \int \frac{1 + \dfrac{1}{\strut u^2}}{u^2 - 1 + \dfrac{\strut 1}{u^2}} \di u 
+        = \int \frac{1 + \dfrac{1}{\strut u^2}}{\par{u - \dfrac{1}{u}}^2 + 1} \di u \pd
+        \]
+        Letting \(v = u - 1/u,\) we get \(\dd v = (1 + 1/u^2) \di u\)
+        and thus 
+        \[
+        \ba
+        \int \frac{1}{v^2 + 1} \di v &amp;= \atan v + C \nl 
+        &amp;= \atan \par{u - \frac{1}{u}} + C \nl 
+        &amp;= \atan \par{\tan x - \frac{1}{\tan x}} + C \nl 
+        &amp;= \boxed{\atan \par{\tan x - \cot x} + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-3"> 
+  <div class="box-solution__head">     EXERCISE 3 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \par{\cos^4 x - \sin^4 x} e^{\sqrt x} \sec 2x \sqrt x \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-3"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        While it appears menacing, the integrand can be drastically simplified.
+        Note that 
+        \[
+        \ba
+        \cos^4 x - \sin^4 x &amp;= (\cos^2 x + \sin^2 x)(\cos^2 x - \sin^2 x) \nl 
+        &amp;= \cos^2 x - \sin^2 x \nl 
+        &amp;= \cos 2x \pd 
+        \ea 
+        \] 
+        Thus, the integral becomes 
+        \[\int \cos 2x e^{\sqrt x} \sec 2x \sqrt x \di x = \int \sqrt x \, e^{\sqrt x} \di x \pd\]
+        Substituting \(t = \sqrt x,\)
+        we get \(\dd t = 1/(2 \sqrt x) \di x\)
+        \(= 1/2t \di x.\)
+        Accordingly, \(\dd x = 2t \di t\)
+        and so the integral becomes 
+        \[\int t e^t (2t) \di t = \int 2t^2 e^t \di t \pd\]
+        Performing Integration by Parts 
+        (Section <a href="/Valculus/calculus/6.1-Integration-by-Parts.html">6.1</a>)
+        with 
+        \[
+        \baat{2} 
+        u &amp;= 2t^2 \lspace &amp;\dd v &amp;= e^t \di t \nl 
+        \dd u &amp;= 4t \di t \lspace &amp;v &amp;= e^t
+        \eaat
+        \]
+        yields 
+        \[2 t^2 e^t - \int 4t e^t \di t \pd\]
+        We use Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= 4t \lspace &amp;\dd v &amp;= e^t \di t \nl 
+        \dd u &amp;= 4 \di t \lspace &amp;v &amp;= e^t \cma
+        \eaat
+        \]
+        attaining 
+        \[
+        \ba
+        2t^2 e^t - \par{4t e^t - \int 4 e^t \di t} 
+        &amp;= 2t^2 e^t - \par{4t e^t - 4 e^t} + C \nl 
+        &amp;= 2t^2 e^t - 4t e^t + 4e^t + C \nl 
+        &amp;= \boxed{2x e^{\sqrt x} - 4 \sqrt x e^{\sqrt x} + 4 e^{\sqrt x} + C}
+        \ea
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-4"> 
+  <div class="box-solution__head">     EXERCISE 4 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For what values of \(c\) does \(\int_c^{2c} \frac{1}{x^2 - 8x + 16} \di x\) diverge?
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-4"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        By factoring the denominator, the integral becomes 
+        \[\int_c^{2c} \frac{1}{(x - 4)^2} \di x \pd\]
+        The graph of \(y = 1/(x - 4)^2\) has a vertical asymptote at \(x = 4.\)
+        For any \(a \lt 4 \lt b,\) observe that 
+        \[
+        \ba
+        \int_4^b \frac{1}{(x - 4)^2} \di x 
+        &amp;= \lim_{k \to 4^+} \int_k^b \frac{1}{(x - 4)^2} \di x \nl 
+        &amp;= \lim_{k \to 4^+} \par{-\frac{1}{x - 4}} \intEval_k^b \nl 
+        &amp;= \lim_{k \to 4^+} \par{\frac{1}{k - 4} - \frac{1}{b - 4}} \nl 
+        &amp;= \infty \pd
+        \ea
+        \]
+        Also, 
+        \[
+        \ba 
+        \int_a^4 \frac{1}{(x - 4)^2} \di x 
+        &amp;= \lim_{k \to 4^-} \int_a^k \frac{1}{(x - 4)^2} \di x \nl 
+        &amp;= \lim_{k \to 4^+} \par{-\frac{1}{x - 4}} \intEval_a^k \nl 
+        &amp;= \lim_{k \to 4^+} \par{\frac{1}{a - 4} - \frac{1}{k - 4}} \nl 
+        &amp;= -\infty \pd
+        \ea 
+        \]
+        Thus, any integral whose bounds run through the vertical asymptote is divergent. 
+        Hence, the values of \(c\) must cross \(x = 4,\)
+        meaning \(c \lt 4 \lt 2c.\)
+        With \(4 \lt 2c,\) we have \(c \gt 2.\)
+        We have 
+        \[
+        \ba 
+        \{c \mid c \gt 2 \text{ and } c \lt 4\} = \boxed{(2, 4)}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-5"> 
+  <div class="box-solution__head">     EXERCISE 5 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        For any integer \(n \geq 1,\) 
+        develop a formula for \(\int x^n e^x \di x.\)
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-5"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Let's perform Integration by Parts with
+        \[
+        \baat{2} 
+        u &amp;= x^n \lspace &amp;\dd v &amp;= e^x \di t \nl 
+        \dd u &amp;= n x^{n - 1} \di x \lspace &amp;v &amp;= e^x \pd
+        \eaat
+        \]
+        Doing so gives 
+        \[\int x^n e^x \di x = x^n e^x - \int n x^{n - 1} e^x \di x \pd\]
+        Performing Integration by Parts again with 
+        \[
+        \baat{2} 
+        u &amp;= n x^{n - 1} \lspace &amp;\dd v &amp;= e^x \di x \nl 
+        \dd u &amp;= n (n - 1) x^{n - 2} \di x \lspace &amp;v &amp;= e^x
+        \eaat
+        \]
+        shows 
+        \[\int x^n e^x \di x = x^n e^x - n x^{n - 1} e^x + \int n (n - 1) x^{n - 2} e^x \di x \pd\]
+        Continuing this pattern, we have 
+        \[
+        \ba 
+        \int x^n e^x \di x &amp;= \small x^n e^x - n x^{n - 1} e^x + n (n - 1) (n - 2) x^{n - 2} e^x - n (n - 1)(n - 2)(n - 3) x^{n - 3} e^x + \cdots \nl 
+        &amp;= \boxed{\sum_{i = 0}^n x^{n - 1} \, e^x \frac{n!}{(n - i)!}}
+        \ea
+        \]
+        Note that \(0! = 1.\)
+     
+        </div> 
+       </div>  
+   </div> 
+</div>
 </main>
 </main>
 <!-- <footer>

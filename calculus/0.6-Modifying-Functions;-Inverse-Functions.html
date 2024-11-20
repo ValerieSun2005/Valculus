@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.6: Modifying Functions; Inverse Functions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.6: Modifying Functions; Inverse Functions</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.6-Modifying-Functions;-Inverse-Functions-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.6-Modifying-Functions;-Inverse-Functions-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Modifying-Functions;-Inverse-Functions]]]-->
+
+<p>
+    A basic understanding of functions raises questions about the next step—how 
+    do we <i>modify</i> functions and their graphs?
+    Doing so enables us to graph new realms of functions 
+    grounded on known, foundational functions.
+    What functions can we produce by combining two or more functions?
+    Finally, how do we map a function's output back onto its input?
+    These answers are explained through the following topics:
+    <ul>
+        <li>
+            <a href="#transforming-functions" class="page-anchor">Transforming Functions</a>
+        </li>
+        <li>
+            <a href="#function-combinations" class="page-anchor">Combinations of Functions</a>
+        </li>
+        <li>
+            <a href="#inverse-functions" class="page-anchor">Inverse Functions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="transforming-functions">Transforming Functions</h4>
+<p>
+    A <span class="emph">function transformation</span>
+    modifies the graph of \(y = f(x)\) by stretching, compressing, or relocating it.
+    The simplest types are <span class="emph">translations</span>, 
+    which shift the graph vertically or horizontally.
+    Let \(c\) be a positive constant. 
+    Then adding \(c\) to \(f(x)\) raises all the \(y\)-values by \(c,\)
+    so the graph of \(y = f(x) + c\) is the graph of \(y = f(x)\)
+    shifted up \(c\) units (<a href="#functions-translate-up">Figure 1A</a>). 
+    By the same logic, the graph of \(y = f(x) - c\) is the graph of \(y = f(x)\) 
+    moved \(c\) units down. 
+</p>
+<p>
+    If \(c \gt 0,\) then each output value of \(f(x - c)\) is reached when \(x\) is \(c\) units greater than 
+    in \(f(x).\) 
+    Hence, the graph of \(y = f(x - c)\) is the graph of \(y = f(x)\) shifted \(c\) units to the <i>right</i>
+    (<a href="#functions-translate-right">Figure 1B</a>).
+    Equally counterintuitive, the graph of \(y = f(x + c)\) is the graph of \(y = f(x)\)
+    shifted \(c\) units to the <i>left</i>.
+</p>
+
+<div class="figure-center">
+    <figure class="functions-translate-up" id="functions-translate-up">
+        <img src="../images/sectionImages/functions-translate-up.jpg" class="functions-translate-up" alt="Figure 1A">
+    </figure>
+    <figure class="functions-translate-right" id="functions-translate-right">
+        <img src="../images/sectionImages/functions-translate-right.jpg" class="functions-translate-right" alt="Figure 1B">
+    </figure>
+</div>
+
+<style>
+    .functions-translate-up::before{
+        content:'FIGURE 1A';
+    }
+
+    .functions-translate-right::before{
+        content:'FIGURE 1B';
+    }
+</style>
+
+<div class="box-title">TRANSLATING GRAPHS</div>
+<div class="box">
+    Let \(c \gt 0.\)
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>New Function</th>
+                <th>Translation</th>
+            </tr>
+        </thead>
+        
+        <!-- f(x) + c -->
+        <tr>
+            <td>
+                \(y = f(x) + c\)
+            </td>
+            <td>
+                Shift \(y = f(x)\) up \(c\) units
+            </td>
+        </tr>
+
+        <!-- f(x) - c -->
+        <tr>
+            <td>
+                \(y = f(x) - c\)
+            </td>
+            <td>
+                Shift \(y = f(x)\) down \(c\) units
+            </td>
+        </tr>
+
+        <!-- f(x - c) -->
+        <tr>
+            <td>
+                \(y = f(x - c)\)
+            </td>
+            <td>
+                Shift \(y = f(x)\) to the right \(c\) units
+            </td>
+        </tr>
+
+        <!-- f(x + c) -->
+        <tr>
+            <td>
+                \(y = f(x + c)\)
+            </td>
+            <td>
+                Shift \(y = f(x)\) to the left \(c\) units
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="figure-center">
+    <figure class="functions-stretch" id="functions-stretch">
+        <img src="../images/sectionImages/functions-stretch.jpg" class="functions-stretch" alt="Figure 2A">
+    </figure>
+    <figure class="functions-compress" id="functions-compress">
+        <img src="../images/sectionImages/functions-compress.jpg" class="functions-compress" alt="Figure 2B">
+    </figure>
+</div>
+
+<style>
+    .functions-stretch::before{
+        content:'FIGURE 2A';
+    }
+
+    .functions-compress::before{
+        content:'FIGURE 2B';
+    }
+</style>
+
+<p>
+    Next we consider stretching and compressing graphs.
+    First suppose that \(a \gt 1.\)
+    Accordingly, the output values of \(a f(x)\) are \(a\) times <i>bigger</i> than the output values of \(f(x).\)
+    So the graph of \(y = a f(x)\) is the graph of \(y = f(x)\) <i>stretched</i> vertically by a factor of \(a\)
+    (<a href="#functions-stretch">Figure 2A</a>). 
+    Conversely, the output values of \(\tfrac{1}{a} f(x)\) are \(a\) times <i>smaller</i> than the output values of \(f(x).\)
+    Hence, the graph of \(y = \tfrac{1}{a} f(x)\) is <i>compressed</i> vertically by a factor of \(a\)
+    (<a href="#functions-compress">Figure 2B</a>). 
+    Through the same logic, because \(ax\) is \(a\) times larger than \(x,\)
+    the output values of \(f(ax)\) are reached \(a\) times sooner than in \(f(x).\)
+    Thus, the graph of \(y = f(ax)\) is \(y = f(x)\) <i>compressed</i> horizontally by a factor of \(a\)
+    (<a href="#functions-compress-x">Figure 3A</a>).
+    Similarly, \(x/a\) is \(a\) times smaller than \(x,\)
+    meaning the output values of \(f(x/a)\) are attained \(a\) times later than in \(f(x).\)
+    The graph of \(y = f(x/a)\) is therefore the result of <i>stretching</i> \(y = f(x)\) horizontally by a factor of \(a\)
+    (<a href="#functions-stretch-x">Figure 3B</a>).
+</p>
+
+<div class="figure-center">
+    <figure class="functions-compress-x" id="functions-compress-x">
+        <img src="../images/sectionImages/functions-compress-x.jpg" class="functions-compress-x" alt="Figure 3A">
+    </figure>
+    <figure class="functions-stretch-x" id="functions-stretch-x">
+        <img src="../images/sectionImages/functions-stretch-x.jpg" class="functions-stretch-x" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .functions-compress-x::before{
+        content:'FIGURE 3A';
+    }
+
+    .functions-stretch-x::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<div class="box-title">DILATING GRAPHS</div>
+<div class="box">
+    Let \(a \gt 1.\)
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>New Function</th>
+                <th>Translation</th>
+            </tr>
+        </thead>
+        
+        <!-- a f(x) -->
+        <tr>
+            <td>
+                \(y = a f(x)\)
+            </td>
+            <td>
+                Stretch \(y = f(x)\) vertically by a factor of \(a\) 
+            </td>
+        </tr>
+
+        <!-- (1/a) f(x) -->
+        <tr>
+            <td>
+                \(y = \tfrac{1}{a} f(x)\)
+            </td>
+            <td>
+                Compress \(y = f(x)\) vertically by a factor of \(a\) 
+            </td>
+        </tr>
+
+        <!-- f(ax) -->
+        <tr>
+            <td>
+                \(y = f(ax)\)
+            </td>
+            <td>
+                Compress \(y = f(x)\) horizontally by a factor of \(a\) 
+            </td>
+        </tr>
+
+        <!-- f(x/a) -->
+        <tr>
+            <td>
+                \(y = f(x/a)\)
+            </td>
+            <td>
+                Stretch \(y = f(x)\) horizontally by a factor of \(a\) 
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    The output value of \(y = -f(x)\) has the opposite sign of \(y = f(x).\)
+    Because \((x, y)\) is replaced by \((x, -y),\) 
+    the graph of \(y = -f(x)\) is the graph of \(y = f(x)\) reflected across the \(x\)-axis 
+    (<a href="#functions-reflect-x">Figure 4A</a>). 
+    Likewise, because a point on the graph of \(y = f(x)\) is \((x, y),\) 
+    a point on \(y = f(-x)\) is \((-x, y).\) 
+    Hence, the graph of \(y = f(-x)\) is a reflection of \(y = f(x)\)
+    across the \(y\)-axis 
+    (<a href="#functions-reflect-y">Figure 4B</a>). 
+</p>
+
+<div class="figure-center">
+    <figure class="functions-reflect-x" id="functions-reflect-x">
+        <img src="../images/sectionImages/functions-reflect-x.jpg" class="functions-reflect-x" alt="Figure 4A">
+    </figure>
+    <figure class="functions-reflect-y" id="functions-reflect-y">
+        <img src="../images/sectionImages/functions-reflect-y.jpg" class="functions-reflect-y" alt="Figure 4B">
+    </figure>
+</div>
+
+<style>
+    .functions-reflect-x::before{
+        content:'FIGURE 4A';
+    }
+
+    .functions-reflect-y::before{
+        content:'FIGURE 4B';
+    }
+</style>
+
+<div class="box-title">REFLECTING GRAPHS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>New Function</th>
+                <th>Translation</th>
+            </tr>
+        </thead>
+        
+        <tr>
+            <td>
+                \(y = -f(x)\)
+            </td>
+            <td>
+                Reflect \(y = f(x)\) across the \(x\)-axis
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                \(y = f(-x)\)
+            </td>
+            <td>
+                Reflect \(y = f(x)\) across the \(y\)-axis
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    These rules of transformations enable us to hand-draw many custom functions 
+    starting from their parent functions.
+    A <span class="emph">parent function</span> is the simplest form of function within a particular category of functions. 
+    For example, \(y = x\) is the parent function of linear functions;
+    it's the foundation for all linear functions.
+    When multiple transformations are present, we apply <i>translations</i> last. 
+    The following examples demonstrate these procedures.
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Sketch the graph of \(y = 2 \sqrt{x + 4} - 3.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    <figure class="functions-translate-sqrt-ex-1" id="functions-translate-sqrt-ex-1">
+        <img src="../images/sectionImages/functions-translate-sqrt-ex-1.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .functions-translate-sqrt-ex-1::before{
+            content:'FIGURE 5';
+        }
+    </style> 
+    We begin with the parent function, \(y = \sqrt x,\)
+    which we graphed in 
+    <a href="/Valculus/calculus/0.4-Defining-a-Function.html#ex-func-sqrt"target = "_blank">Example 0.4-4</a>. 
+    (See <a href="#functions-translate-sqrt-ex-1">Figure 5</a>.)
+    Then we stretch the graph vertically by a factor of \(2,\)
+    attaining the graph of \(y = 2 \sqrt x\) in <a href="#functions-translate-sqrt-ex-2">Figure 6A</a>. 
+    Lastly, we shift this graph \(4\) units left and \(3\) units down 
+    to attain the final graph in <a href="#functions-translate-sqrt-ex-3">Figure 6B</a>.
+    <div class="figure-center">
+        <figure class="functions-translate-sqrt-ex-2" id="functions-translate-sqrt-ex-2">
+            <img src="../images/sectionImages/functions-translate-sqrt-ex-2.jpg" class="functions-translate-sqrt-ex-2" alt="Figure 6A">
+        </figure>
+        <figure class="functions-translate-sqrt-ex-3" id="functions-translate-sqrt-ex-3">
+            <img src="../images/sectionImages/functions-translate-sqrt-ex-3.jpg" class="functions-translate-sqrt-ex-3" alt="Figure 6B">
+        </figure>
+    </div>
+    
+    <style>
+        .functions-translate-sqrt-ex-2::before{
+            content:'FIGURE 6A';
+        }
+    
+        .functions-translate-sqrt-ex-3::before{
+            content:'FIGURE 6B';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Graph the function \(y = \abs{2x - 4} - 5.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    <figure class="functions-translate-abs-x-ex-1" id="functions-translate-abs-x-ex-1">
+        <img src="../images/sectionImages/functions-translate-abs-x-ex-1.jpg" alt="Figure 7">
+    </figure>
+    <style>
+        .functions-translate-abs-x-ex-1::before{
+            content:'FIGURE 7';
+        }
+    </style> 
+    The parent function is \(y = \abs x,\)
+    which we graphed in Section
+    <a href="/Valculus/calculus/0.4-Defining-a-Function.html">0.4</a>. 
+    (See <a href="#functions-translate-abs-x-ex-1">Figure 7</a>.)
+    Rewriting the function as 
+    \[y = \abs{2(x - 2)} - 5\]
+    reveals that the parent graph must be compressed horizontally by a factor of \(2,\)
+    and then translated \(2\) units right and \(5\) units down.
+    Compressing \(y = \abs x\) by a factor of \(2\) yields the graph of \(y = \abs{2x}\)
+    in <a href="#functions-translate-abs-x-ex-2">Figure 8A</a>. 
+    Finally, we shift this graph \(2\) units right and \(5\) units down 
+    to attain the graph in <a href="#functions-translate-abs-x-ex-3">Figure 8B</a>.
+    <div class="figure-center">
+        <figure class="functions-translate-abs-x-ex-2" id="functions-translate-abs-x-ex-2">
+            <img src="../images/sectionImages/functions-translate-abs-x-ex-2.jpg" class="functions-translate-abs-x-ex-2" alt="Figure 8A">
+        </figure>
+        <figure class="functions-translate-abs-x-ex-3" id="functions-translate-abs-x-ex-3">
+            <img src="../images/sectionImages/functions-translate-abs-x-ex-3.jpg" class="functions-translate-abs-x-ex-3" alt="Figure 8B">
+        </figure>
+    </div>
+    
+    <style>
+        .functions-translate-abs-x-ex-2::before{
+            content:'FIGURE 8A';
+        }
+    
+        .functions-translate-abs-x-ex-3::before{
+            content:'FIGURE 8B';
+        }
+    </style>
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Plot the graph of \(y = \abs{x^2 - 1}.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="functions-translate-abs-parabola-ex-1" id="functions-translate-abs-parabola-ex-1">
+        <img src="../images/sectionImages/functions-translate-abs-parabola-ex-1.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .functions-translate-abs-parabola-ex-1::before{
+            content:'FIGURE 9';
+        }
+    </style> 
+    The graph of \(y = x^2 - 1\) is the parabola \(y = x^2\) shifted down \(1\) unit 
+    (<a href="#functions-translate-abs-parabola-ex-1">Figure 9</a>). 
+    This graph lies under the \(x\)-axis for \(-1 \lt x \lt 1,\)
+    so we reflect this portion across the \(x\)-axis to attain the graph of \(y = \abs{x^2 - 1}\)
+    in <a href="#functions-translate-abs-parabola-ex-2">Figure 10</a>. 
+    <figure class="functions-translate-abs-parabola-ex-2 figure-center-one" id="functions-translate-abs-parabola-ex-2">
+        <img src="../images/sectionImages/functions-translate-abs-parabola-ex-2.jpg" alt="Figure 9">
+    </figure>
+    <style>
+        .functions-translate-abs-parabola-ex-2::before{
+            content:'FIGURE 10';
+        }
+    </style> 
+</div>
+
+<h4 id="function-combinations">Combinations of Functions</h4>
+<p>
+    We often combine two functions \(f\) and \(g\) to attain new functions
+    \(f + g,\) \(f - g,\) \(fg,\) and \(f/g.\)
+    Doing so is similar to the process for manipulating numbers. 
+    The sum and difference functions are defined by, respectively,
+    \begin{align} 
+    (f + g)(x) &= f(x) + g(x) \cma \label{eq:func-sum} \nl 
+    (f - g)(x) &= f(x) - g(x) \pd \label{eq:func-diff}
+    \end{align}
+    Likewise, the product and quotient functions are defined by, respectively,
+    \begin{align} 
+    (fg)(x) &= f(x) g(x) \cma \label{eq:func-prod} \nl 
+    \par{\frac{f}{g}} (x) &= \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \pd \label{eq:func-quot}
+    \end{align}
+    If the domain of \(f\) is \(D_1\) and the domain of \(g\) is \(D_2,\)
+    then the domain of each function combination is the intersection \(D_1 \cap D_2\)
+    because both functions must be defined. 
+    The domain of \(f/g\) has one additional restriction—namely, \(g(x) \ne 0\)—because division by \(0\) is impossible. 
+    Thus, the domain of \(f/g\) is \(\{x \in D_1 \cap D_2 \mid g(x) \ne 0\}.\)
+</p>
+
+<div class="box-title">COMBINING FUNCTIONS</div>
+<div class="box">
+    If \(f\) and \(g\) are functions, then 
+    \begin{align} 
+    (f + g)(x) &= f(x) + g(x) \cma \eqlabel{eq:func-sum} \nl 
+    (f - g)(x) &= f(x) - g(x) \cma \eqlabel{eq:func-diff} \nl
+    (fg)(x) &= f(x) g(x) \cma \eqlabel{eq:func-prod} \nl 
+    \par{\frac{f}{g}} (x) &= \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \pd \eqlabel{eq:func-quot}
+    \end{align}
+    Let the domain of \(f\) be \(D_1\)
+    and the domain of \(g\) be \(D_2.\) 
+    The domains of \(f + g,\) \(f - g,\) and \(fg\) are 
+    \(\{x \in D_1 \cap D_2\},\)
+    and the domain of \(f/g\) is \(\{x \in D_1 \cap D_2 \mid g(x) \ne 0\}.\)
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(f(x) = x^2\) and \(g(x) = \sqrt{x + 2},\)
+        then find 
+        <ol class="list-alpha">
+            <li>
+                <span>\((f + g)(2)\)</span>
+            </li>
+            <li>
+                <span>\(\ds \par{\frac{f}{g}}(7)\)</span>
+            </li>
+            <li>
+                <span>\(\ds \par{\frac{g}{f}}(x)\) and its domain</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <ol class="list-alpha">
+        <li>
+            Note that \(f(2) = 2^2 = 4\) and \(g(2) = \sqrt{2 + 2} = 2.\)
+            So 
+            \[
+            \ba 
+            (f + g)(2) &= f(2) + g(2) \nl 
+            &= 4 + 2 \nl 
+            &= \boxed 6
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We see \(f(7) = 49\) and \(g(7) = 3.\)
+            Thus, 
+            \[
+            \ba 
+            \par{\frac{f}{g}}(7) &= \frac{f(7)}{g(7)} \nl 
+            &= \boxed{\tfrac{49}{3}}
+            \ea 
+            \]
+        </li>
+        <hr>
+        <li>
+            We have 
+            \[
+            \ba 
+            \par{\frac{g}{f}}(x) &= \frac{g(x)}{f(x)} \nl 
+            &= \boxed{\frac{\sqrt{x + 2}}{x^2}}
+            \ea 
+            \]
+            The domain of \(g(x) = \sqrt{x + 2}\) is \([-2, \infty),\)
+            and the domain of \(f(x) = x^2\) is \((-\infty, \infty).\)
+            The intersection of these two sets is 
+            \[[-2, \infty) \cap (-\infty, \infty) = [-2, \infty) \pd\]
+            Accordingly, the domain of \(g/f\) is 
+            \[
+            \ba
+            \{x \in [-2, \infty) \mid x^2 \ne 0\} 
+            &= \{x \in [-2, \infty) \mid x \ne 0\} \nl 
+            &= \boxed{[-2, 0) \cup (0, \infty)}
+            \ea
+            \]
+        </li>
+    </ol>
+</div>
+
+<p>
+    Next we examine <span class="emph">composite functions</span>, 
+    in which one function is inputted into another. 
+    Given two functions \(f\) and \(g,\)
+    the composition of \(f\) and \(g\) is
+    \begin{equation} 
+    (f \circ g)(x) = f(g(x)) \cma \label{eq:func-composite} 
+    \end{equation}
+    read as  <q>\(f\) composed with \(g.\)</q> 
+    Simply put, the function \(g(x)\) is substituted into the function \(f.\)
+    We call \(g\) the <i>inner function</i> and \(f\) the <i>outer function</i>.
+    The domain of \(f \circ g\) is all \(x\) such that \(g(x)\) and \(f(g(x))\) are both defined.
+    The following examples show cases of composite functions.
+</p>
+
+<div class="box-title">COMPOSITE FUNCTIONS</div>
+<div class="box">
+    For two functions \(f\) and \(g,\) 
+    the <span class="emph">composite function</span> \(f \circ g\) is defined by
+    \begin{equation} 
+    (f \circ g)(x) = f(g(x)) \pd \eqlabel{eq:func-composite} 
+    \end{equation}
+    The domain of \(f \circ g\) is all \(x\) for which \(g(x)\) and \(f(g(x))\) are both defined.
+</div>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(f(x) = 2x - 1\) and \(g(x) = x^2,\) 
+        then find \((f \circ g)(x)\) and \((f \circ g)(3).\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    Let's rewrite \((f \circ g)(x)\) as \(f(g(x)).\)
+    We substitute \(g(x) = x^2\) into \(f(x) = 2x - 1,\) as follows:
+    \[
+    \ba
+    f(g(x)) &= f \par{x^2} \nl 
+    &= 2 \par{x^2} - 1 \nl 
+    &= \boxed{2x^2 - 1}
+    \ea
+    \]
+    Then \((f \circ g)(3)\) is  
+    \[f(g(3)) = 2(3)^2 - 1 = \boxed{17}\]
+</div>
+
+<div class="example-title" id="ex-comp-functions"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Given \(f(x) = \sqrt x\) and \(g(x) = x + 3,\)
+        find each composite function and its domain.
+        <ol class="list-alpha">
+            <li>
+                <span>\(f \circ g\)</span>
+            </li>   
+            <li>
+                <span>\(g \circ f\)</span>
+            </li>
+            <li>
+                <span>\(f \circ f\)</span>
+            </li>
+            <li>    
+                <span>\(g \circ g\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <ol class="list-alpha">
+        <li>
+            We have 
+            \[
+            \ba 
+            (f \circ g)(x) &= f(g(x)) \nl 
+            &= f(x + 3) \nl 
+            &= \boxed{\sqrt{x + 3}}
+            \ea 
+            \]
+            The domain is \(\boxed{[-3, \infty)}.\)
+        </li>
+        <hr>
+        <li>
+            We have 
+            \[
+            \ba 
+            (g \circ f)(x) &= g(f(x)) \nl 
+            &= g \par{\sqrt x} \nl 
+            &= \boxed{\sqrt x + 3}
+            \ea 
+            \]
+            The domain is \(\boxed{[0, \infty)}.\)
+        </li>
+        <hr>
+        <li>
+            Functions can be composed with each other:
+            \[
+            \ba 
+            (f \circ f)(x) &= f(f(x)) \nl 
+            &= f \par{\sqrt x} \nl 
+            &= \sqrt{\sqrt{x}} \nl 
+            &= \par{x^{1/2}}^{1/2} \nl 
+            &= x^{1/4} = \boxed{\sqrt[4] x}
+            \ea 
+            \]
+            The domain is \(\boxed{[0, \infty)}.\)
+        </li>
+        <hr>
+        <li>
+            We see 
+            \[
+            \ba 
+            (g \circ g)(x) &= g(g(x)) \nl 
+            &= g(x + 3) \nl 
+            &= (x + 3) + 3 \nl 
+            &= \boxed{x + 6}
+            \ea 
+            \]
+            The domain is \(\boxed{(-\infty, \infty)}.\)
+        </li>
+    </ol>
+</div>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    <a href="/Valculus/calculus/0.6-Modifying-Functions;-Inverse-Functions.html#ex-comp-functions">Example 6</a>
+    shows that the order of composition matters; generally, \(f \circ g \ne g \circ f.\)
+</p>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Given \(f(x) = \sqrt x,\) \(g(x) = x^3 + x,\) and \(h(x) = 6 - x,\)
+        find \((f \circ g \circ h)(x).\)
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    We have 
+    \[
+    \ba 
+    (f \circ g \circ h)(x) &= f(g(h(x))) \nl 
+    &= f(g(6 - x)) \nl 
+    &= f \par{(6 - x)^3 + (6 - x)} \nl 
+    &= \boxed{\sqrt{(6 - x)^3 + (6 - x)}}
+    \ea 
+    \]
+</div>
+
+<h4 id="inverse-functions">Inverse Functions</h4>
+<p>
+    We appreciate how functions map one number \(x\) in the domain \(D\) onto another number \(f(x)\) in the range \(E.\)
+    But how do we reverse this process—going from a number in \(E\) to another in \(D \ques\)
+</p>
+<p>
+    To answer this question, we first construct a definition. 
+    If each input in the domain \(D\) is mapped to a single <i>unique</i> output in the range \(E,\)
+    then the function \(f\) is called <span class="emph">one-to-one</span>.
+    Formally, \(f\) satisfies 
+    \[f(x_1) \ne f(x_2) \for x_1 \ne x_2 \pd\]
+    Simply put, \(y = f(x)\) is one-to-one if no \(y\)-value is outputted more than once.
+    Accordingly, a horizontal line must not strike the graph more than once. 
+    This criterion is called the <span class="emph">Horizontal Line Test</span>,
+    a geometric method for testing whether a function is one-to-one. 
+</p>
+
+<div class="box-title">ONE-TO-ONE FUNCTIONS</div>
+<div class="box">
+    A function \(f\) is <span class="emph">one-to-one</span> if and only if it never outputs the same value twice:
+    \[f(x_1) \ne f(x_2) \for x_1 \ne x_2 \pd\]
+    By the <span class="emph">Horizontal Line Test</span>, 
+    a function is one-to-one if and only if no horizontal line intersects its graph multiple times.
+</div>
+
+<div class="figure-center">
+    <figure class="func-one-to-one-x2" id="func-one-to-one-x2">
+        <img src="../images/sectionImages/func-one-to-one-x2.jpg" class="func-one-to-one-x2" alt="Figure 11A">
+    </figure>
+    <figure class="func-one-to-one-x3" id="func-one-to-one-x3">
+        <img src="../images/sectionImages/func-one-to-one-x3.jpg" class="func-one-to-one-x3" alt="Figure 11B">
+    </figure>
+</div>
+
+<style>
+    .func-one-to-one-x2::before{
+        content:'FIGURE 11A';
+    }
+
+    .func-one-to-one-x3::before{
+        content:'FIGURE 11B';
+    }
+</style>
+
+<p>
+    As an example, the function \(f(x) = x^2\) is <span class="warning">not</span>
+    one-to-one because many horizontal lines strike its curve multiple times 
+    (<a href="#func-one-to-one-x2">Figure 11A</a>). 
+    Conversely, \(g(x) = x^3\) <span class="good">is</span> one-to-one since no horizontal line strikes its graph 
+    more than once 
+    (<a href="#func-one-to-one-x3">Figure 11B</a>). 
+    A function that is increasing or decreasing over an interval is one-to-one over that interval.  
+    One-to-one functions enable us to discuss <span class="emph">inverse functions</span>, 
+    defined below. 
+</p>
+
+<aside class="box-caution">
+    The superscript in an inverse function does 
+    <span class="warning">not</span>
+    denote a power, so 
+    \[\inv f(x) \ne \frac{1}{f(x)} \pd\]
+    Instead, the reciprocal <i>is</i> denoted by 
+    \[[f(x)]^{-1} = \frac{1}{f(x)} \pd\]
+</aside>
+
+
+<div class="box-title">INVERSE FUNCTIONS</div>
+<div class="box">
+    Let \(f\) be a one-to-one function with domain \(D\) and range \(E.\)
+    The <span class="emph">inverse function</span> \(\inv f\) has domain \(E\) and range \(D\) 
+    and satisfies 
+    \[\inv f(y) = x \iffArrow f(x) = y\]
+    for any \(y\) in \(E.\)
+</div>
+
+<figure class="functions-inverse-diagram" id="functions-inverse-diagram">
+    <img src="../images/sectionImages/functions-inverse-diagram.jpg" alt="Figure 12">
+</figure>
+<style>
+    .functions-inverse-diagram::before{
+        content:'FIGURE 12';
+    }
+</style> 
+
+<p>
+    In words, \(f\) maps \(x\) onto \(y\) and \(\inv f\) maps \(y\) back onto \(x.\)
+    Since \(f\) is one-to-one, each output \(y\) in the range \(E\) can be routed back to uniquely one input \(x\) in the domain \(D.\)
+    (See <a href="#functions-inverse-diagram">Figure 12</a>.)
+    Thus, the domain of \(\inv f\) is the range of \(f,\) and the range of \(\inv f\) is the domain of \(f.\)
+</p>
+
+<p>
+    As an example, suppose that a town's population as a function of time is \(P = f(t),\)
+    where \(t\) is measured in years.
+    If the population is \(600\) after \(2\) years, then \(f(2) = 600.\)
+    But what if we require the <i>time</i> at which the population is some number?
+    The inverse function therefore says \(\inv f(600) = 2,\)
+    connecting the population of \(600\) back to the time, \(2\) years.
+    In general, \(t = \inv f(P)\) gives the time at which the population is \(P,\)
+    effectively reversing the input and output.
+</p>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        A one-to-one function \(f\) satisfies \(f(2) = 5,\)
+        \(f(5) = 7,\) and \(f(6) = -4.\)
+        Find \(\inv f(5),\) \(\inv f(7),\) and \(\inv f(-4).\)
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    <figure class="functions-inverse-diagram-ex" id="functions-inverse-diagram-ex">
+        <img src="../images/sectionImages/functions-inverse-diagram-ex.jpg" alt="Figure 13">
+    </figure>
+    <style>
+        .functions-inverse-diagram-ex::before{
+            content:'FIGURE 13';
+        }
+    </style> 
+    The inverse function \(\inv f\) reverses the effect of \(f.\)
+    We therefore have
+    \[
+    \baat{4} 
+    &f(2) &&= 5 \, &\iffArrow \, && \inv f(5) &= \boxed 2 \nl 
+    &f(5) &&= 7 \, &\iffArrow \, && \inv f(7) &= \boxed 5 \nl 
+    &f(6) &&= -4 \, &\iffArrow \, && \inv f(-4) &= \boxed 6 \nl 
+    \eaat
+    \]
+    (See <a href="#functions-inverse-diagram-ex">Figure 13</a>.)
+</div>
+
+<p>
+    Because \(\inv f\) reverses the effect of \(f,\)
+    the following <span class="emph">cancelation equations</span> are true:
+    \begin{align}
+    f \par{\inv f(x)} &= x \cma \label{eq:cancel-f} \nl 
+    \inv f \par{f(x)} &= x \pd \label{eq:cancel-f-1}
+    \end{align}
+    In both equations, \(x\) must be within the domains of \(f\) and \(\inv f.\) 
+    The following example reveals how this information can prove whether two functions are inverses.
+</p>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Are \(g(x) = \sqrt[3]{x + 2}\) and \(h(x) = x^3 - 2\) inverse functions?
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    The two functions are inverses if and only if \(g(h(x)) = x\) and \(h(g(x)) = x.\)
+    We see
+    \[
+    \ba
+    g(h(x)) &= g \par{x^3 - 2} \nl 
+    &= \sqrt[3]{(x^3 - 2) + 2} \nl 
+    &= \sqrt[3]{x^3} \nl 
+    &\equalsCheck x \pd
+    \ea 
+    \]
+    Also, 
+    \[
+    \ba 
+    h(g(x)) &= h \par{\sqrt[3]{x + 2}} \nl
+    &= \par{\sqrt[3]{x + 2}}^3 - 2 \nl 
+    &= (x + 2) - 2 \nl 
+    &\equalsCheck x \pd
+    \ea  
+    \]
+    Thus, \(g\) and \(h\) are inverses of each other.
+</div>
+
+<figure class="functions-inverse-reflection" id="functions-inverse-reflection">
+    <img src="../images/sectionImages/functions-inverse-reflection.jpg" alt="Figure 14">
+</figure>
+<style>
+    .functions-inverse-reflection::before{
+        content:'FIGURE 14';
+    }
+</style> 
+
+<p>
+    If \(f(a) = b,\) then \(\inv f(b) = a.\)
+    Geometrically, the point \((a, b)\) lies on the graph of \(y = f(x),\)
+    and the point \((b, a)\) lies on the graph of \(y = \inv f(x).\)
+    Recall that swapping a point's \(x\)- and \(y\)-coordinates is equivalent to reflecting that 
+    point across the line \(y = x.\)
+    Consequently, the graphs of \(f\) and \(\inv f\) are reflections of each other across the line \(y = x.\)  
+    (See <a href="#functions-inverse-reflection">Figure 14</a>.)
+</p>
+
+<p>
+    With an understanding of inverse functions, 
+    we must discuss how to determine one.
+    To find an inverse function algebraically, 
+    we execute the following procedure.
+</p>
+
+<div class="steps-title">DETERMINING AN INVERSE FUNCTION ALGEBRAICALLY</div>
+<div class="steps">
+    To find the inverse function of \(f(x),\)
+    use the following steps. 
+    <ol class="list-num">
+        <li>
+            Write \(y = f(x).\)
+        </li>
+        <li>
+            Interchange \(x\) and \(y.\)
+        </li>
+        <li>
+            Solve for \(y.\)
+            The resulting equation is \(y = \inv f(x).\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 10 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the inverse function of \(f(x) = 4x^5 - 8.\)
+    </div>
+</div>
+<button onclick="toggle10()" class="solution-button"></button>
+<div id="solution10" class="solution">
+    <figure class="functions-inverse-reflection-ex" id="functions-inverse-reflection-ex">
+        <img src="../images/sectionImages/functions-inverse-reflection-ex.jpg" alt="Figure 15">
+    </figure>
+    <style>
+        .functions-inverse-reflection-ex::before{
+            content:'FIGURE 15';
+        }
+    </style> 
+    <ol class="list-num">
+        <li>
+            We write 
+            \[y = 4x^5 - 8 \pd\]
+        </li>
+        <li>
+            Swapping \(x\) and \(y\) yields 
+            \[x = 4y^5 - 8 \pd\]
+        </li>
+        <li>
+            Solving for \(y\) in the equation in Step 2, we have 
+            \[
+            \ba 
+            x + 8 &= 4y^5 \nl 
+            y^5 &= \frac{x + 8}{4} \nl 
+            y &= \sqrt[5]{\frac{x + 8}{4}} \pd
+            \ea 
+            \]
+            Hence, the inverse function is 
+            \[\inv f(x) = \boxed{\sqrt[5]{\frac{x + 8}{4}}}\]
+            (See <a href="#functions-inverse-reflection-ex">Figure 15</a>.)
+        </li>
+    </ol>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#transforming-functions" class="summary-anchor">Transforming Functions</a>
+        A <span class="emph">function transformation</span>
+        modifies the graph of \(y = f(x)\) in some way, by stretching, compressing, or relocating it.
+        A <span class="emph">translation</span> moves the graph vertically or horizontally.
+        Let \(c\) be a positive constant; then the following rules of translations are applicable.
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>New Function</th>
+                    <th>Translation</th>
+                </tr>
+            </thead>
+            
+            <!-- f(x) + c -->
+            <tr>
+                <td>
+                    \(y = f(x) + c\)
+                </td>
+                <td>
+                    Shift \(y = f(x)\) up \(c\) units
+                </td>
+            </tr>
+
+            <!-- f(x) - c -->
+            <tr>
+                <td>
+                    \(y = f(x) - c\)
+                </td>
+                <td>
+                    Shift \(y = f(x)\) down \(c\) units
+                </td>
+            </tr>
+
+            <!-- f(x - c) -->
+            <tr>
+                <td>
+                    \(y = f(x - c)\)
+                </td>
+                <td>
+                    Shift \(y = f(x)\) to the right \(c\) units
+                </td>
+            </tr>
+
+            <!-- f(x + c) -->
+            <tr>
+                <td>
+                    \(y = f(x + c)\)
+                </td>
+                <td>
+                    Shift \(y = f(x)\) to the left \(c\) units
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        If \(a \gt 1,\) then the following rules describe dilations to functions' graphs.
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>New Function</th>
+                    <th>Translation</th>
+                </tr>
+            </thead>
+            
+            <!-- a f(x) -->
+            <tr>
+                <td>
+                    \(y = a f(x)\)
+                </td>
+                <td>
+                    Stretch \(y = f(x)\) vertically by a factor of \(a\) 
+                </td>
+            </tr>
+    
+            <!-- (1/a) f(x) -->
+            <tr>
+                <td>
+                    \(y = \tfrac{1}{a} f(x)\)
+                </td>
+                <td>
+                    Compress \(y = f(x)\) vertically by a factor of \(a\) 
+                </td>
+            </tr>
+    
+            <!-- f(ax) -->
+            <tr>
+                <td>
+                    \(y = f(ax)\)
+                </td>
+                <td>
+                    Compress \(y = f(x)\) horizontally by a factor of \(a\) 
+                </td>
+            </tr>
+    
+            <!-- f(x/a) -->
+            <tr>
+                <td>
+                    \(y = f(x/a)\)
+                </td>
+                <td>
+                    Stretch \(y = f(x)\) horizontally by a factor of \(a\) 
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p class="p-no-indent">
+        The following rules describe reflections of graphs across axes.
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>New Function</th>
+                    <th>Translation</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>
+                    \(y = -f(x)\)
+                </td>
+                <td>
+                    Reflect \(y = f(x)\) across the \(x\)-axis
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    \(y = f(-x)\)
+                </td>
+                <td>
+                    Reflect \(y = f(x)\) across the \(y\)-axis
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#function-combinations" class="summary-anchor">Combinations of Functions</a>
+        If \(f\) and \(g\) are functions, then combinations of these functions are
+        \begin{align} 
+        (f + g)(x) &= f(x) + g(x) \cma \eqlabel{eq:func-sum} \nl 
+        (f - g)(x) &= f(x) - g(x) \cma \eqlabel{eq:func-diff} \nl
+        (fg)(x) &= f(x) g(x) \cma \eqlabel{eq:func-prod} \nl 
+        \par{\frac{f}{g}} (x) &= \frac{f(x)}{g(x)} \cmaa g(x) \ne 0 \pd \eqlabel{eq:func-quot}
+        \end{align}
+        Suppose that the domain of \(f\) is \(D_1\)
+        and the domain of \(g\) is \(D_2.\) 
+        The domains of \(f + g,\) \(f - g,\) and \(fg\) are 
+        \(\{x \in D_1 \cap D_2\},\)
+        and the domain of \(f/g\) is \(\{x \in D_1 \cap D_2 \mid g(x) \ne 0\}.\)
+        A <span class="emph">composite function</span> involves one function inputted into another. 
+        For two functions \(f\) and \(g,\) 
+        the composite function \(f \circ g\) is defined by
+        \begin{equation} 
+        (f \circ g)(x) = f(g(x)) \pd \eqlabel{eq:func-composite} 
+        \end{equation}
+        The domain of \(f \circ g\) is all \(x\) for which \(g(x)\) and \(f(g(x))\) are both defined.
+        The order of composition cannot be swapped; namely, \(f \circ g \ne g \circ f.\)
+    </p>
+    <p>
+        <a href="#inverse-functions" class="summary-anchor">Inverse Functions</a>
+        A function \(f\) is <span class="emph">one-to-one</span> if and only if it never outputs the same value twice:
+        \[f(x_1) \ne f(x_2) \for x_1 \ne x_2 \pd\]
+        By the <span class="emph">Horizontal Line Test</span>, 
+        a function is one-to-one if and only if no horizontal line intersects its graph multiple times.
+        An increasing or decreasing function is one-to-one.
+        If \(f\) is a one-to-one function with domain \(D\) and range \(E,\)
+        then the <span class="emph">inverse function</span> \(\inv f\) has domain \(E\) and range \(D\) 
+        and satisfies 
+        \[\inv f(y) = x \iffArrow f(x) = y\]
+        for any \(y\) in \(E.\)
+        The inverse function \(\inv f\) maps \(y\) back onto \(x,\)
+        thus canceling the effect of \(f.\)
+        As a result, the following <span class="emph">cancelation equations</span> are true:
+        \begin{align}
+        f \par{\inv f(x)} &= x \cma \eqlabel{eq:cancel-f} \nl 
+        \inv f \par{f(x)} &= x \cma \eqlabel{eq:cancel-f-1}
+        \end{align}
+        where \(x\) is within the domain of \(f.\)
+        Note that \(\inv f(x) \ne 1/f(x).\)
+        The graph of \(y = f(x)\) and \(y = \inv f(x)\) are reflections of each other across the line \(y = x.\)
+        To find the inverse function of \(f(x)\) algebraically,
+        we perform the following steps. 
+        <ol class="list-num">
+            <li>
+                Write \(y = f(x).\)
+            </li>
+            <li>
+                Interchange \(x\) and \(y.\)
+            </li>
+            <li>
+                Solve for \(y.\)
+                The resulting equation is \(y = \inv f(x).\)
+            </li>
+        </ol>
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

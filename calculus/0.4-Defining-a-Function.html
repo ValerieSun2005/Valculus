@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.4: Defining a Function</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.4: Defining a Function</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.4-Defining-a-Function-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.4-Defining-a-Function-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Defining-a-Function]]]-->
+<p>
+    In mathematics, functions communicate relationships between numbers, 
+    enabling us to go from one number to another.
+    How do we describe these functions' properties, 
+    and what are their applications?
+    In this section we discuss the following topics:
+    <ul>
+        <li>
+            <a href="#defining-function" class="page-anchor">Defining a Function</a>
+        </li>
+        <li>
+            <a href="#piecewise-functions" class="page-anchor">Piecewise Functions</a>
+        </li>
+        <li>
+            <a href="#even-odd-functions" class="page-anchor">Even and Odd Functions</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="defining-function">Defining a Function</h4>
+<figure class="function-sets" id="function-sets">
+    <img src="../images/sectionImages/function-sets.jpg" alt="Figure 1">
+</figure>
+<style>
+    .function-sets::before{
+        content:'FIGURE 1';
+    }
+</style>
+<p>
+    A <span class="emph">function</span> is a rule that maps one number onto another. 
+    Formally, a function \(f\) assigns each element \(x\) in some set \(D\) (the <span class="emph">domain</span>)
+    to exactly one element, \(f(x),\) in another set \(E\) (the <span class="emph">range</span>).
+    We read \(f(x)\) as <q>\(f\) of <nobr>\(x\)</q>;</nobr> it represents the value of \(f\) <i>at</i> \(x.\)
+    Thus, a function works similarly to a machine:
+    When we input a number \(x\) within \(D\) into the machine, 
+    the machine yields an output \(f(x)\) within \(E.\)
+    (See <a href="#function-sets">Figure 1</a>.)
+    Accordingly, <i>the domain is the set of all possible inputs and the range is the set of all possible outputs</i>.
+</p>
+
+<div class="box-title">DEFINITION OF A FUNCTION</div>
+<div class="box">
+    A <span class="emph">function</span> \(f\) is a rule that maps each element \(x\) in 
+    the <span class="emph">domain</span> \(D\) onto exactly one element, \(f(x),\) 
+    in the <span class="emph">range</span> \(E.\) 
+</div>
+
+<p>
+    We have four ways of conveying a function—<i>verbally</i> (through a description in words), 
+    <i>visually</i> (through a graph), <i>numerically</i> (through a table of values), 
+    and <i>algebraically</i> (through a formula). 
+    Graphs are the most common method of visualizing a function:
+    if \(f\) is a function with domain \(D,\) 
+    then the graph of \(y = f(x)\) consists of all ordered pairs
+    \[\{(x, f(x)) \mid x \in D\} \pd\]
+    In words, the function \(f\) gives the \(y\)-value at a particular value of \(x\) in the domain.
+</p>
+
+<aside class="box-remark">
+    The function in <a href="/Valculus/calculus/0.4-Defining-a-Function.html#ex-func-evaluate">Example 1</a>
+    can be defined verbally as <i>the result of multiplying a number by \(8\) and then adding \(4.\)</i>
+</aside>
+
+<div class="example-title" id="ex-func-evaluate"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(f(x) = 8x + 4,\) then find \(f(-2).\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    The function \(f\) maps any number \(x\) onto the number \(8x + 4.\) 
+    Replacing \(x\) with \(-2\) shows 
+    \[f(-2) = 8(-2) + 4 = \boxed{-12}\] 
+</div>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        The graph of \(y = f(x)\) is shown in <a href="#functions-graph-ex">Figure 2</a>. 
+        Find \(f(-2),\) \(f(0),\) and \(f(4).\)
+        <figure class="functions-graph-ex figure-center-one" id="functions-graph-ex">
+            <img src="../images/sectionImages/functions-graph-ex.jpg" alt="Figure 2">
+        </figure>
+        <style>
+            .functions-graph-ex::before{
+                content:'FIGURE 2';
+            }
+        </style> 
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    The graph of \(y = f(x)\) includes the points \((-2, -3),\)
+    \((0, 1),\) and \((4, -3).\)
+    [The point \((0, 3)\) is a <i>hole</i>, so it's not on the graph of <nobr>\(f.\)]</nobr>
+    So \(\boxed{f(-2) = -3},\)
+    \(\boxed{f(0) = 1},\) and \(\boxed{f(4) = -3}.\)
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        The following table shows a town's population at various years.
+        Let \(P(t)\) be the population \(t\) years after 2020.
+        Find and interpret \(P(3).\)
+        <table class="table-full-width">
+            <tr>
+                <td class="table-function-label">
+                    Year
+                </td>
+                <td>
+                    2020
+                </td>
+                <td>
+                    2021
+                </td>
+                <td>
+                    2022
+                </td>
+                <td>
+                    2023
+                </td>
+                <td>
+                    2024
+                </td>
+            </tr>
+            <tr>
+                <td class="table-function-label">
+                    Population
+                </td>
+                <td>
+                    \(5600\)
+                </td>
+                <td>
+                    \(5750\)
+                </td>
+                <td>
+                    \(5900\)
+                </td>
+                <td>
+                    \(6200\)
+                </td>
+                <td>
+                    \(6600\)
+                </td>
+            </tr>
+        </table> 
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The expression \(P(3)\) is the town's population \(3\) years after 2020—namely, 
+    in 2023. 
+    From the table, this population is \(6200,\)
+    so \(\boxed{P(3) = 6200}.\)
+</div>
+
+<p>
+    Plotting a function in the \(xy\)-plane yields a graph. 
+    But do all graphs represent functions?
+    The answer is <i>no</i>.  
+    A function assigns each \(x\) to exactly one \(y,\)
+    so any vertical line must intersect the graph only once.
+    Otherwise, the graph does <span class="warning">not</span> represent a function of \(x.\)
+    This condition is called the <span class="emph">Vertical Line Test</span>. 
+</p>
+
+<div class="box-title">VERTICAL LINE TEST</div>
+<div class="box">
+    The <span class="emph">Vertical Line Test</span> states that a graph in the \(xy\)-plane represents a function of \(x\) 
+    if and only if no vertical line intersects the graph more than once.
+</div>
+
+<aside class="box-remark">
+    Although \(x = y^2 - 3\) does not define \(y\) as a function of \(x,\)
+    it <i>does</i> define \(x\) as a function of \(y,\)
+    where \(y\) is the independent variable
+    and \(x\) is the dependent variable. 
+</aside>
+
+<p>
+    In <a href="#function-yes">Figure 3A</a> the graph of \(y = x^2 - 4\)
+    represents \(y\) as a function of \(x\) because a vertical line drawn at any \(x = a\) strikes the curve only once
+    at \((a, b).\)
+    Conversely, the graph of \(x = y^2 - 3\) does <span class="warning">not</span>
+    represent \(y\) as a function of \(x,\) since a vertical line shown in <a href="#function-no">Figure 3B</a>
+    hits the curve at both \((a, b)\) and \((a, c).\)
+</p>
+
+<div class="figure-center">
+    <figure class="function-yes" id="function-yes">
+        <img src="../images/sectionImages/function-yes.jpg" class="function-yes" alt="Figure 3A">
+    </figure>
+    <figure class="function-no" id="function-no">
+        <img src="../images/sectionImages/function-no.jpg" class="function-no" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .function-yes::before{
+        content:'FIGURE 3A';
+    }
+
+    .function-no::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<p>
+    In the next examples, 
+    we plot a variety of essential mathematical functions.
+    When we find domains of functions, 
+    it's easiest to consider what numbers the inputs <span class="warning">cannot</span> be. 
+    Then the domain is all real numbers <i>excluding</i> those values, as shown by the following examples. 
+</p>
+
+<aside class="box-recall">
+    See Section
+   <a href="/Valculus/calculus/0.2-Numbers,-Sets,-and-Absolute-Values.html">0.2</a>
+    to review set notation and interval notation.
+</aside>
+
+<div class="example-title" id="ex-func-sqrt"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Plot the graph of \(y = \sqrt x,\)
+        and give the domain and range.
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="graph-sqrt-x" id="graph-sqrt-x">
+        <img src="../images/sectionImages/graph-sqrt-x.jpg" alt="Figure 4">
+    </figure>
+    <style>
+        .graph-sqrt-x::before{
+            content:'FIGURE 4';
+        }
+    </style> 
+    Let's make a table of values of \(\sqrt x.\)
+    It is easiest to sample the function at perfect squares, as follows. 
+    (Note that <nobr>\(\sqrt 0 = 0.\))</nobr>
+    <table class="table-full-width">
+        <tr>
+            <td class="table-function-label">
+                \(x\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(4\)
+            </td>
+            <td>
+                \(9\)
+            </td>
+        </tr>
+        <tr>
+            <td class="table-function-label">
+                \(\sqrt x\)
+            </td>
+            <td>
+                \(0\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(2\)
+            </td>
+            <td>
+                \(3\)
+            </td>
+        </tr>
+    </table> 
+    Plotting and connecting these points, 
+    we attain the graph in <a href="#graph-sqrt-x">Figure 4</a>. 
+    Because the square root of a negative number is undefined (as a real number), 
+    the domain is 
+    \[\{x \mid x \geq 0\} = \boxed{[0, \infty)}\]
+    Since the square root returns nonnegative outputs, 
+    the range is 
+    \[\{y \mid y \geq 0\} = \boxed{[0, \infty)}\]
+</div>
+
+<div class="example-title" id="ex-graph-1/x"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Plot the graph of \(y = 1/x,\)
+        and find the domain and range.
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <figure class="graph-recip-x" id="graph-recip-x">
+        <img src="../images/sectionImages/graph-recip-x.jpg" alt="Figure 5">
+    </figure>
+    <style>
+        .graph-recip-x::before{
+            content:'FIGURE 5';
+        }
+    </style> 
+    We make a table of values with convenient values of \(x,\) as follows.
+    <table class="table-full-width">
+        <tr>
+            <td class="table-function-label">
+                \(x\)
+            </td>
+            <td>
+                \(-3\)
+            </td>
+            <td>
+                \(-2\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(-1/2\)
+            </td>
+            <td>
+                \(1/2\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(2\)
+            </td>
+            <td>
+                \(3\)
+            </td>
+        </tr>
+        <tr>
+            <td class="table-function-label">
+                \(1/x\)
+            </td>
+            <td>
+                \(-1/3\)
+            </td>
+            <td>
+                \(-1/2\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(-2\)
+            </td>
+            <td>
+                \(2\)
+            </td>
+            <td>
+                \(1\)
+            </td>
+            <td>
+                \(1/2\)
+            </td>
+            <td>
+                \(1/3\)
+            </td>
+        </tr>
+    </table> 
+    Plotting and connecting these points yield the graph in <a href="#graph-recip-x">Figure 5</a>.
+    Because division by \(0\) is undefined, \(1/x\) is undefined at \(x = 0.\)
+    Consequently, the domain is 
+    \[\{x \mid x \ne 0\} = \boxed{(-\infty, 0) \cup (0, \infty)}\]
+    It's <span class="warning">impossible</span> to attain \(0\) through dividing \(1\) by any number \(x,\)
+    so the range is 
+    \[\{y \mid y \ne 0\} = \boxed{(-\infty, 0) \cup (0, \infty)}\]
+    The graph of \(y = 1/x\) has a <i>vertical asymptote</i> at \(x = 0,\)
+    meaning the curve becomes unbounded on either side of the line \(x = 0.\)
+    In addition, the graph has a <i>horizontal asymptote</i> at \(y = 0;\)
+    the curve gets closer and closer to this line without crossing it.
+    (We will formally define asymptotes in <a href="/Valculus/Chapters/chapter1.html">Chapter 1</a>.)
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the domain of each function. 
+        <ol class="list-alpha">
+            <li>
+                <span>\(\ds f(x) = \sqrt{x - 5}\)</span>
+            </li>
+            <li>
+                <span>\(\ds g(x) = \frac{1}{x^2 - 4x}\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The square root of a negative number is undefined (as a real number). 
+            Therefore, the domain of \(f\) is all \(x\)-values such that \(x - 5\) is nonnegative—namely, 
+            \[
+            \ba
+            \{x \mid x - 5 \geq 0\} &= \{x \mid x \geq 5\} \nl 
+            &= \boxed{[5, \infty)}
+            \ea
+            \]
+        </li>
+        <hr>
+        <li>
+            Recall that division by \(0\) is undefined, 
+            so the domain of \(g\) is restricted to all \(x\) such that the denominator is nonzero. 
+            The denominator equals \(0\) when 
+            \[x^2 - 4x = x(x - 4) = 0 \cma\]
+            whose solutions are \(x = 0\) and \(x = 4.\)
+            Hence, the domain of \(g\) is 
+            \[\{x \mid x \ne 0 \text{ and } x \ne 4 \} = \boxed{(-\infty, 0) \cup (0, 4) \cup (4, \infty)}\]
+        </li>
+    </ol>
+</div>
+
+<aside class="box-remark">
+    Many graphing calculators take inputs as <i>functions</i>, 
+    so the circle represented by \(\eqref{eq:circle-r}\)
+    can be graphed by inputting the semicircles \(y = \sqrt{r^2 - x^2}\)
+    and \(y = -\sqrt{r^2 - x^2}.\)
+</aside>
+
+<p>
+    <span class="label-emph">Semicircles</span>
+    Recall, from Section 
+    <a href="/Valculus/calculus/0.3-Coordinates-and-Geometry.html">0.3</a>, 
+    that the Cartesian equation of a circle of radius \(r\) centered at the origin is 
+    \begin{equation} 
+    x^2 + y^2 = r^2 \pd \label{eq:circle-r}
+    \end{equation}
+    (See <a href="#graph-circle-radius-r">Figure 6A</a>.)
+    Circles clearly fail the Vertical Line Test, 
+    but a function <i>can</i> represent either the top or bottom portion.
+    Solving for \(y\) in \(\eqref{eq:circle-r}\) yields \(y^2 = r^2 - x^2.\) 
+    Taking the square root of both sides gives
+    \[
+    \ba
+    \abs y &= \sqrt{r^2 - x^2} \nl 
+    y &= \pm \sqrt{r^2 - x^2} \pd
+    \ea
+    \]
+    Accordingly, we have two solutions:
+    \[y = \sqrt{r^2 - x^2} \and y = -\sqrt{r^2 - x^2} \cma\]
+    which each represent \(y\) as a function of \(x.\)
+    The positive solution, \(y = \sqrt{r^2 - x^2},\) is the upper half of the circle—that 
+    is, a semicircle of radius \(r\) <i>above</i> the \(x\)-axis. 
+    Likewise, the negative solution, \(y = -\sqrt{r^2 - x^2},\) represents the bottom half of the circle—namely, 
+    a semicircle of radius \(r\) <i>below</i> the \(x\)-axis. 
+    (See <a href="#graph-semicircles-radius-r">Figure 6B</a>.)
+    Both functions have a domain of \([-r, r].\)
+</p>
+
+<div class="figure-center">
+    <figure class="graph-circle-radius-r" id="graph-circle-radius-r">
+        <img src="../images/sectionImages/graph-circle-radius-r.jpg" class="graph-circle-radius-r" alt="Figure 6A">
+    </figure>
+    <figure class="graph-semicircles-radius-r" id="graph-semicircles-radius-r">
+        <img src="../images/sectionImages/graph-semicircles-radius-r.jpg" class="graph-semicircles-radius-r" alt="Figure 6B">
+    </figure>
+</div>
+
+<style>
+    .graph-circle-radius-r::before{
+        content:'FIGURE 6A';
+    }
+
+    .graph-semicircles-radius-r::before{
+        content:'FIGURE 6B';
+    }
+</style>
+
+
+<aside class="box-remark">
+    <a href="/Valculus/calculus/0.4-Defining-a-Function.html#ex-f-diff-quot">Example 7</a> 
+    shows a <i>difference quotient</i>, 
+    which we will use in <a href="/Valculus/Chapters/chapter2.html">Chapter 2</a>.
+</aside>
+
+<div class="example-title" id="ex-f-diff-quot"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        If \(f(x) = x^2 + x\) and \(h\) is a nonzero constant, then simplify 
+        \[\frac{f(x + h) - f(x)}{h} \pd\]
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    In \(f(x) = x^2 + x,\) replacing \(x\) with \(x + h\) yields 
+    \[
+    \ba
+    f(x + h) &= (x + h)^2 + (x + h) \nl 
+    &= x^2 + 2xh + h^2 + x + h \pd 
+    \ea 
+    \]
+    Then we see 
+    \[
+    \ba 
+    \frac{f(x + h) - f(x)}{h} &= \frac{x^2 + 2xh + h^2 + x + h - \par{x^2 + x}}{h} \nl 
+    &= \frac{2xh + h^2 + h}{h} \nl 
+    &= \boxed{2x + h + 1}
+    \ea 
+    \]
+</div>
+
+<h4 id="piecewise-functions">Piecewise Functions</h4>
+<p>
+    A <span class="emph">piecewise function</span> is defined by different subfunctions for various parts of its domain.
+    In the following examples, we graph these functions.
+</p>
+
+<figure class="graph-abs-x" id="graph-abs-x">
+    <img src="../images/sectionImages/graph-abs-x.jpg" alt="Figure 7">
+</figure>
+<style>
+    .graph-abs-x::before{
+        content:'FIGURE 7';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Absolute Value Function</span>
+    Recall, from Section <a href="/Valculus/calculus/0.2-Numbers,-Sets,-and-Absolute-Values.html">0.2</a>, 
+    that taking the <i>absolute value</i> of a number \(a\) removes its negative sign.
+    (For example, <nobr>\(\abs{-4} = 4.\))</nobr> 
+    Therefore, the <span class="emph">absolute value function</span>
+    \(\abs x\) makes any input \(x\) nonnegative.
+    As discussed in 
+    Section <!--[[[crefId.Numbers,-Sets,-and-Absolute-Values]]]-->, 
+    we can define the following piecewise function:
+    \begin{equation} 
+    \abs x = 
+    \bc 
+    x \; \; &x \geq 0 \nl
+    -x \; \; &x \lt 0 \pd
+    \ec
+    \label{eq:abs-cases}
+    \end{equation}
+    Starting in the second quadrant, we graph \(y = -x\) until we reach \(x = 0;\)
+    <i>then</i> we graph \(y = x.\)
+    Doing so yields the graph in 
+    <a href="#graph-abs-x">Figure 7</a>.
+</p>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Graph the piecewise function 
+        \[f(x) = 
+        \bc 
+        2 \; \; &-6 \leq x \lt -3 \nl 
+        x \; \; &-3 \leq x \leq 2 \nl 
+        -3 \; \; &\phantom{-} 2 \lt x \lt 5 \pd
+        \ec 
+        \]
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
+    From \(x = -6\) to \(x = -3,\) the graph of \(f\) is the horizontal line \(y = 2.\)
+    Then from \(x = -3\) to \(x = 2,\) the graph is the oblique line \(y = x.\) 
+    Lastly, from \(x = 2\) to \(x = 5,\) the graph is the horizontal line \(y = -3.\)
+    We draw open circles at \((-3, 2),\) \((2, -3),\) and \((5, -3)\) 
+    because they are 
+    <span class="warning">not</span>
+    on the graph of \(f.\)
+    (See <a href="#functions-ex-piecewise">Figure 8</a>.)
+    <figure class="functions-ex-piecewise figure-center-one" id="functions-ex-piecewise">
+        <img src="../images/sectionImages/functions-ex-piecewise.jpg" alt="Figure 8">
+    </figure>
+    <style>
+        .functions-ex-piecewise::before{
+            content:'FIGURE 8';
+        }
+    </style>
+</div>
+
+<h4 id="even-odd-functions">Even and Odd Functions</h4>
+<p>
+    Functions can be categorized as <i>even</i>, <i>odd</i>, or neither.
+    A function \(f\) is called <span class="emph">even</span> if and only if 
+    \(f(-x) = f(x)\) is true for all \(x\) in the domain.
+    If so, then the graph of \(y = f(x)\) is symmetric about the \(y\)-axis
+    (<a href="#f-graph-even">Figure 9A</a>). 
+    In words, the function becomes unchanged if \(x\) is replaced with \(-x.\)
+    Conversely, \(f\) is called <span class="emph">odd</span> if and only if 
+    \(f(-x) = -f(x)\) is true for all \(x\) in the domain.
+    Then the graph of \(y = f(x)\) is <i>symmetric about the origin</i>, 
+    meaning the point \((x, f(x))\) can be rotated \(180 \degree\) about the origin 
+    to attain the point \((-x, f(-x)).\)
+    (See <a href="#f-graph-odd">Figure 9B</a>.) 
+    Hence, if we already know the graph of \(f\) for \(x \geq 0,\)
+    then the entire graph is attained by rotating this portion about the origin by \(180 \degree.\)  
+</p>
+
+<div class="figure-center">
+    <figure class="f-graph-even" id="f-graph-even">
+        <img src="../images/sectionImages/f-graph-even.jpg" class="f-graph-even" alt="Figure 9A">
+    </figure>
+    <figure class="f-graph-odd" id="f-graph-odd">
+        <img src="../images/sectionImages/f-graph-odd.jpg" class="f-graph-odd" alt="Figure 9B">
+    </figure>
+</div>
+
+<style>
+    .f-graph-even::before{
+        content:'FIGURE 9A';
+    }
+
+    .f-graph-odd::before{
+        content:'FIGURE 9B';
+    }
+</style>
+
+<div class="box-title">EVEN AND ODD FUNCTIONS</div>
+<div class="box">
+    A function \(f\) is 
+    <ol class="list-alpha">
+        <li>
+            <span class="emph">even</span> if and only if \(f(-x) = f(x)\) for all \(x\) in its domain.
+        </li>
+        <li>
+            <span class="emph">odd</span> if and only if \(f(-x) = -f(x)\) for all \(x\) in its domain.
+        </li>
+    </ol>
+</div>
+
+<p>
+    For example, the function \(f(x) = x^2\) is <i>even</i> because for all \(x,\)
+    \[f(-x) = (-x)^2 = x^2 = f(x) \pd\]
+    The graph of \(y = x^2\) is called a <i>parabola</i>, 
+    a symmetrical <i>U</i>-shaped curve (<a href="#func-graph-x2">Figure 10A</a>),
+    which we will study further in Section <a href="/Valculus/calculus/0.7-Quadratics.html">0.7</a>. 
+    In contrast, the cubic function \(g(x) = x^3\) is <i>odd</i> since for all \(x,\)
+    \[g(-x) = (-x)^3 = -x^3 = -g(x) \pd\]
+    (See <a href="#func-graph-x3">Figure 10B</a>.)
+</p>
+
+<div class="figure-center">
+    <figure class="func-graph-x2" id="func-graph-x2">
+        <img src="../images/sectionImages/func-graph-x2.jpg" class="func-graph-x2" alt="Figure 10A">
+    </figure>
+    <figure class="func-graph-x3" id="func-graph-x3">
+        <img src="../images/sectionImages/func-graph-x3.jpg" class="func-graph-x3" alt="Figure 10B">
+    </figure>
+</div>
+
+<style>
+    .func-graph-x2::before{
+        content:'FIGURE 10A';
+    }
+
+    .func-graph-x3::before{
+        content:'FIGURE 10B';
+    }
+</style>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine whether each function is even, odd, or neither.
+        <ol class="list-alpha">
+            <li>
+                <span>\(f(x) = x^4 - 1\)</span>
+            </li>
+            <li>
+                <span>\(g(x) = x^7 + 4x\)</span>
+            </li>
+            <li>
+                <span>\(h(x) = x^2 + 6x\)</span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
+    In each function, let's replace \(x\) with \(-x\) and observe any connections to the original function.
+    <ol class="list-alpha">
+        <li>
+            Note that 
+            \[
+            \ba
+            f(-x) &= (-x)^4 - 1 \nl 
+            &= x^4 - 1 = f(x) \pd
+            \ea
+            \]
+            Since \(f(-x) = f(x),\)
+            \(f\) is <b>even</b>.
+        </li>
+        <hr>
+        <li>
+            We see 
+            \[
+            \ba
+            g(-x) &= (-x)^7 + 4(-x) \nl 
+            &= -x^7 - 4x \nl 
+            &= - (x^7 + 4x) = -g(x) \pd
+            \ea
+            \]
+            Because \(g(-x) = -g(x),\) \(g\) is <b>odd</b>.
+        </li>
+        <hr>
+        <li>
+            We observe that
+            \[
+            \ba 
+            h(-x) &= (-x)^2 + 6(-x) \nl 
+            &= x^2 - 6x \pd
+            \ea 
+            \]
+            But \(h(-x) \ne h(x)\) and \(h(-x) \ne -h(x),\)
+            so \(h\) is <b>neither even nor odd</b>.
+        </li>
+    </ol>
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#defining-function" class="summary-anchor">Defining a Function</a>
+        A <span class="emph">function</span> \(f\) is a mathematical rule that maps each element \(x\) in 
+        the <span class="emph">domain</span> \(D\) to exactly one element, \(f(x),\) 
+        in the <span class="emph">range</span> \(E.\) 
+        We can describe functions verbally, visually, numerically, or algebraically. 
+        The most common way of communicating a function is through a graph, 
+        which consists of all ordered pairs 
+        \[\{(x, f(x)) \mid x \in D\} \pd\]
+        The <span class="emph">Vertical Line Test</span> says that a curve in the \(xy\)-plane represents a function of \(x\) 
+        if and only if no vertical line intersects the curve multiple times.
+    </p>
+    <p>
+        <a href="#piecewise-functions" class="summary-anchor">Piecewise Functions</a>
+        A <span class="emph">piecewise function</span> is defined by different subfunctions for various parts of its domain.
+        For example, the absolute value function can be defined by
+        \begin{equation} 
+        \abs x = 
+        \bc 
+        x \; \; &x \geq 0 \nl
+        -x \; \; &x \lt 0 \pd
+        \ec
+        \eqlabel{eq:abs-cases}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#even-odd-functions" class="summary-anchor">Even and Odd Functions</a>
+        A function \(f\) is 
+        <ol class="list-alpha">
+            <li>
+                <span class="emph">even</span> if and only if \(f(-x) = f(x)\) for all \(x\) in its domain.
+            </li>
+            <li>
+                <span class="emph">odd</span> if and only if \(f(-x) = -f(x)\) for all \(x\) in its domain.
+            </li>
+        </ol>
+    </p>
+    <p class="p-no-indent">
+        Graphs of even functions are symmetric about the \(y\)-axis.
+        In contrast, graphs of odd functions are symmetric about the origin, 
+        meaning \((x, f(x))\) can be rotated \(180 \degree\) about the origin to attain \((-x, f(-x)).\)
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

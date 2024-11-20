@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>0.8: Trigonometry</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>0.8: Trigonometry</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.8-Trigonometry-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="0.8-Trigonometry-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Trigonometry]]]-->
+
+<p>
+    Whereas algebra is the study of operations with numbers, 
+    <span class="emph">trigonometry</span> is the study of triangles. 
+    But the ideas in trigonometry extend far beyond relating triangles' sides and angles; 
+    they have applications in broadcasting signals, supplying electricity, 
+    and swinging objects—and many other periodic phenomena. 
+    In this section we perform a rapid review of trigonometry 
+    through the following topics:
+    <ul>
+        <li>
+            <a href="#trig-right-triangles" class="page-anchor">Trigonometry in Right Triangles</a>
+        </li>
+        <li>
+            <a href="#unit-circle" class="page-anchor">Unit Circle</a>
+        </li>
+        <li>
+            <a href="#graphs-trig" class="page-anchor">Graphs of Trigonometric Functions</a>
+        </li>
+        <li>
+            <a href="#inverse-trig-functions" class="page-anchor">Inverse Trigonometric Functions</a>
+        </li>
+        <li>
+            <a href="#law-sin-cos" class="page-anchor">Laws of Sine and Cosine</a>
+        </li>
+        <li>
+            <a href="#trig-identities" class="page-anchor">Trigonometric Identities</a>
+        </li>
+    </ul>
+</p>
+
+<h4 id="trig-right-triangles">Trigonometry in Right Triangles</h4>
+
+<figure class="trig-right-angle" id="trig-right-angle">
+    <img src="../images/sectionImages/trig-right-angle.jpg" 
+    class="trig-right-angle" alt="Figure 1">
+</figure>
+<style>
+    .trig-right-angle::before{
+        content:'FIGURE 1';
+    }
+</style>
+
+<p>
+    Let's consider a right triangle in which one non-right angle is \(\theta,\)
+    as in <a href="#trig-right-angle">Figure 1</a>.
+    The leg across from the angle \(\theta\) has a length of \(\text{opposite},\)
+    just as the leg nearest to the angle has a length of \(\text{adjacent}.\)
+    Also suppose that the hypotenuse has a length given by \(\text{hypotenuse}.\)
+    Then the <span class="emph">sine</span> of the angle is defined by the ratio 
+    \[\sin \theta = \frac{\text{opposite}}{\text{hypotenuse}} \pd\]
+    Conversely, the <span class="emph">cosine</span> of the angle is given by 
+    \[\cos \theta = \frac{\text{adjacent}}{\text{hypotenuse}} \pd\]
+    We also define the <span class="emph">tangent</span> of the angle 
+    to be
+    \[\tan \theta = \frac{\text{opposite}}{\text{adjacent}} \pd\]
+    A classic mnemonic for remembering these three trigonometric ratios 
+    is <span class="emph">SOH CAH TOA</span>:
+    <nobr><b>S</b>ine</nobr>
+    is the <nobr><b>O</b>pposite</nobr> side divided by the <nobr><b>H</b>ypotenuse</nobr>.
+    Likewise, <nobr><b>C</b>osine</nobr>
+    is the <nobr><b>A</b>djacent</nobr> side divided by the <nobr><b>H</b>ypotenuse</nobr>.
+    Finally, <nobr><b>T</b>angent</nobr>
+    is the <nobr><b>O</b>pposite</nobr> side divided by the <nobr><b>A</b>djacent</nobr> side.
+</p>
+
+<div class="box-title">TRIGONOMETRY IN RIGHT TRIANGLES</div>
+<div class="box">
+    In a right triangle, let \(\theta\) be any of the two non-right angles. 
+    If \(\text{opposite}\) is the length of the leg across from \(\theta\)
+    and \(\text{adjacent}\) is the length of the leg beside \(\theta,\) then
+    \[
+    \ba 
+    \sin \theta &= \frac{\text{opposite}}{\text{hypotenuse}} \cma \nl
+    \cos \theta &= \frac{\text{adjacent}}{\text{hypotenuse}} \cma \nl
+    \tan \theta &= \frac{\text{opposite}}{\text{adjacent}} \pd \nl
+    \ea 
+    \]
+</div>
+
+<p>
+    By dividing trigonometric ratios, we see
+    \[
+    \ba
+    \frac{\text{opposite}}{\text{adjacent}} 
+    &= \frac{\dfrac{\text{opposite}}{\text{hypotenuse}}}{\dfrac{\text{adjacent}}{\text{hypotenuse}}} \nl 
+    \tan \theta &= \frac{\sin \theta}{\cos \theta} \pd
+    \ea
+    \]
+    Through this relationship, \(\tan \theta\)
+    is easily found if \(\sin \theta\) and \(\cos \theta\) are both known.
+</p>
+
+<aside class="box-tip">
+    When using a calculator to evaluate trigonometric functions, 
+    double-check whether the calculator is set to <code>RADIAN</code> mode or <code>DEGREE</code> mode.
+</aside>
+
+<p>
+    Trigonometric functions can be evaluated using a calculator. 
+    Doing so enables us to find the lengths of all the sides of a right triangle
+    if only one side and one non-right angle are known.
+    We can measure an angle either in degrees or in radians; 
+    recall that there are \(\pi\) radians in \(180\) degrees. 
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        In <a href="#trig-sin-cos-ex">Figure 2</a>, 
+        determine \(x\) and \(y\) accurate to three decimal places.
+        <figure class="trig-sin-cos-ex figure-center-one" id="trig-sin-cos-ex">
+            <img src="../images/sectionImages/trig-sin-cos-ex.jpg" 
+            class="trig-sin-cos-ex" alt="Figure 2">
+        </figure>
+        <style>
+            .trig-sin-cos-ex::before{
+                content:'FIGURE 2';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    <aside class="box-tip">
+        If you calculator is returning
+        \[
+        \ba
+        \sin 27 &\approx 0.956 \cma \nl 
+        \cos 27 &\approx -0.291 \cma
+        \ea
+        \]
+        then your calculator is set to <code>RADIAN</code> mode;
+        you need to switch it to <code>DEGREE</code> mode.
+    </aside>
+    Using a calculator, we have 
+    \[\sin 27 \degree \approx 0.454 \and \cos 27 \degree \approx 0.891 \pd\]
+    Sine is the ratio of the opposite leg to the hypotenuse, so we have 
+    \[
+    \ba
+    \sin 27 \degree &= \frac{y}{7} \nl 
+    y &= 7 \sin 27 \degree \approx 7(0.454) = \boxed{3.178}
+    \ea
+    \]
+    Because cosine is the ratio of the adjacent leg to the hypotenuse, we see
+    \[
+    \ba
+    \cos 27 \degree &= \frac{x}{7} \nl 
+    x &= 7 \cos 27 \degree \approx 7(0.891) = \boxed{6.237}
+    \ea
+    \]
+</div>
+
+<div class="figure-center">
+    <figure class="right-tri-45-45" id="right-tri-45-45">
+        <img src="../images/sectionImages/right-tri-45-45.jpg" class="right-tri-45-45" alt="Figure 3A">
+    </figure>
+    <figure class="right-tri-60-30" id="right-tri-60-30">
+        <img src="../images/sectionImages/right-tri-60-30.jpg" class="right-tri-60-30" alt="Figure 3B">
+    </figure>
+</div>
+
+<style>
+    .right-tri-45-45::before{
+        content:'FIGURE 3A';
+    }
+
+    .right-tri-60-30::before{
+        content:'FIGURE 3B';
+    }
+</style>
+
+<p>
+    <span class="label-emph">Special Right Triangles</span>
+    While we need a calculator to evaluate most trigonometric expressions, 
+    there are a few values of \(\theta\) such that \(\sin \theta\) and \(\cos \theta\)
+    are known exactly.
+    In an isosceles right triangle, 
+    both legs have the same length \(x\) and so the angles are 
+    \(45 \degree,\) \(90 \degree,\) and \(45 \degree\)
+    (<a href="#right-tri-45-45">Figure 3A</a>).
+    This special triangle is called the <span class="emph">45–90–45 triangle</span>.
+    Then by the Pythagorean theorem, the hypotenuse's length is \(x \sqrt 2.\)
+    We therefore see 
+    \[
+    \baat{2}
+    \sin 45 \degree &= \frac{x}{x \sqrt 2} &&= \frac{1}{\sqrt 2} &= \frac{\sqrt 2}{2} \cma \nl 
+    \cos 45 \degree &= \frac{x}{x \sqrt 2} &&= \frac{1}{\sqrt 2} &= \frac{\sqrt 2}{2} \pd
+    \eaat
+    \]
+    Since \(\tan 45 \degree = (\sin 45 \degree)/(\cos 45 \degree),\) we see
+    \[\tan 45 \degree = \frac{\sqrt 2/2}{\sqrt 2/2} = 1 \pd\]
+    Another special right triangle is formed 
+    when the angles are \(60 \degree,\) \(30 \degree,\) and \(90 \degree.\)
+    (It is called the <span class="emph">60–30–90 triangle</span>.)
+    If the leg adjacent to the \(60 \degree\) angle has length \(x,\)
+    then the other leg has length \(x \sqrt 3\) (adjacent to the \(30 \degree\) angle)
+    and the hypotenuse has length \(2x.\)
+    (See <a href="#right-tri-60-30">Figure 3B</a>.)
+    Then we see
+    \[\sin 60 \degree = \frac{x \sqrt 3}{2x} = \frac{\sqrt 3}{2} 
+    \lspace \cos 60 \degree = \frac{x}{2x} = \frac{1}{2} \pd\]
+    We also observe
+    \[
+    \sin 30 \degree = \cos 60 \degree = \frac{1}{2} 
+    \lspace \cos 30 \degree = \sin 60 \degree = \frac{\sqrt 3}{2} \pd
+    \]
+    It then follows that
+    \[\tan 30 \degree = \frac{1/2}{\sqrt 3/2} = \frac{\sqrt 3}{3} 
+    \lspace \tan 60 \degree = \frac{\sqrt 3/2}{1/2} = \sqrt 3 \pd\]
+    The following table summarizes these results. 
+    Since we use these values often, it is imperative to have them memorized.
+</p>
+
+<table class="table-full-width">
+    <thead>
+        <tr>
+            <th>\(\theta\)</th>
+            <th>\(\sin \theta\)</th>
+            <th>\(\cos \theta\)</th>
+            <th>\(\tan \theta\)</th>
+        </tr>
+    </thead>
+    
+    <!-- theta = 30° -->
+    <tr class="tall-row">
+        <td>
+            \(30 \degree \;\) or \(\; \ds \frac{\pi}{6}\)
+        </td>
+        <td>
+            \(\ds \frac{1}{2}\)
+        </td>
+        <td>
+            \(\ds \frac{\sqrt 3}{2}\)
+        </td>
+        <td>
+            \(\ds \frac{\sqrt 3}{3}\)
+        </td>
+    </tr>
+
+    <!-- theta = 45° -->
+    <tr class="tall-row">
+        <td>
+            \(45 \degree \;\) or \(\; \ds \frac{\pi}{4}\)
+        </td>
+        <td>
+            \(\ds \frac{\sqrt 2}{2}\)
+        </td>
+        <td>
+            \(\ds \frac{\sqrt 2}{2}\)
+        </td>
+        <td>
+            \(1\)
+        </td>
+    </tr>
+    <!-- theta = 60° -->
+    <tr class="tall-row">
+        <td>
+            \(60 \degree \;\) or \(\; \ds \frac{\pi}{3}\)
+        </td>
+        <td>
+            \(\ds \frac{\sqrt 3}{2}\)
+        </td>
+        <td>
+            \(\ds \frac{1}{2}\)
+        </td>
+        <td>
+            \(\ds \sqrt 3\)
+        </td>
+    </tr>
+</table>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the exact value of
+        \[\frac{(3 \sin 45 \degree) - (6 \cos 60 \degree)}{\tan 60 \degree} \pd\]
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    From the preceding table, we attain the following exact values: 
+    \[\sin 45 \degree = \frac{\sqrt 2}{2} \cmaa \cos 60 \degree = \frac{1}{2} \cmaa \tan 60 \degree = \sqrt 3 \pd\]
+    So the given expression becomes
+    \[
+    \frac{3 \par{\dfrac{\sqrt 2}{2}} - 6 \par{\dfrac{1}{2}}}{\sqrt 3} 
+    = \boxed{\frac{\dfrac{3 \sqrt 2}{2} - 3}{\sqrt 3}}
+    \]
+</div>
+
+<p>
+    <span class="label-emph">Reciprocal Trigonometric Functions</span>
+    In calculus we often work with complicated combinations of sine and cosine. 
+    Hence, it is sometimes convenient to use the three reciprocal functions 
+    <span class="emph">cosecant</span> \((\csc \theta),\) 
+    <span class="emph">secant</span> \((\sec \theta),\)
+    and <span class="emph">cotangent</span> \((\cot \theta),\)
+    defined as follows:
+    \[\csc \theta = \frac{1}{\sin \theta} \cmaa \sec \theta = \frac{1}{\cos \theta} \cmaa \cot \theta = \frac{1}{\tan \theta} \pd\]
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Determine the exact value of
+        \[\frac{\par{4 \sec \dfrac{\pi}{3}} - 8 \csc \dfrac{\pi}{3}}{\ds \cot \frac{\pi}{6}} \pd\]
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    It is a good idea to rewrite the expression in terms of sines and cosines.
+    By the definitions of the reciprocal functions, 
+    \[
+    \baat{3} 
+    \sec \frac{\pi}{3} &= \frac{1}{\cos \dfrac{\pi}{3}} &&= \frac{1}{1/2} &&= 2 \cma \nl 
+    \csc \frac{\pi}{3} &= \frac{1}{\sin \dfrac{\pi}{3}} &&= \frac{1}{\sqrt 3/2} &&= \frac{2 \sqrt 3}{3} \cma \nl 
+    \cot \frac{\pi}{6} &= \frac{\cos \dfrac{\pi}{6}}{\sin \dfrac{\pi}{6}} &&= \frac{\sqrt 3/2}{1/2} &&= \sqrt 3 \pd
+    \eaat
+    \]
+    Therefore, we have
+    \[
+    \ba
+    \frac{\par{4 \sec \dfrac{\pi}{3}} - 8 \csc \dfrac{\pi}{3}}{\ds \cot \frac{\pi}{6}}
+    &= \frac{4(2) - 8 \par{\dfrac{2 \sqrt 3}{3}}}{\sqrt 3} \nl 
+    &= \boxed{\frac{8 \sqrt 3 - 16}{3}}
+    \ea
+    \]
+</div>
+
+<h4 id="unit-circle">Unit Circle</h4>
+<p>
+    Whereas the right triangle provides simple definitions of the sine, cosine, and tangent functions, 
+    the domain of these functions is limited to \(0 \lt \theta \lt 90 \degree.\)
+    (Otherwise, the triangle would be invalid.)
+    But we're interested in extending these functions' domains;
+    many physical phenomena rely on sine and cosine to be defined for <i>all real numbers</i>. 
+    We construct a circle of radius \(1\)—called the <span class="emph">Unit Circle</span>,
+    since its radius is a single unit—centered at the origin. 
+    Let \(\theta\) be the angle subtended between the <i>initial side</i> \(\segment{OA}\)
+    and the <i>terminal side</i> \(\segment{OB}.\)
+    Side \(\segment{OA}\) is static; imagine rotating the side \(\segment{OB}\)
+    counterclockwise about the pivot \(O\) to increase \(\theta.\)
+    We then define \(\cos \theta\) to be the \(x\)-coordinate of point \(B,\)
+    and we define \(\sin \theta\) to be the \(y\)-coordinate of \(B.\)
+    For example, point \(B\) lands on \((0, 1)\) when the terminal side \(\segment{OB}\) is rotated \(90 \degree\) counterclockwise;
+    hence, \(\cos 90 \degree = 0\) and \(\sin 90 \degree = 1.\)
+    If \(\theta\) is in the first quadrant, as shown by <a href="#trig-unit-circle-A">Figure 4A</a>, 
+    then we see \(\length{BC} = y\) \(= \sin \theta\) and \(\length{OC} = x\) \(= \cos \theta.\)
+    Thus, the Unit Circle definitions of \(\sin \theta\) and \(\cos \theta\) 
+    agree with their definitions using right triangles. 
+    But using the Unit Circle, we allow \(\theta\) to rotate past \(90 \degree;\)
+    <a href="#trig-unit-circle-B">Figure 4B</a> shows an example in which \(\segment{OB}\)
+    is in the third quadrant. 
+</p>
+
+<div class="figure-center">
+    <figure class="trig-unit-circle-A" id="trig-unit-circle-A">
+        <img src="../images/sectionImages/trig-unit-circle-A.jpg" class="trig-unit-circle-A" alt="Figure 4A">
+    </figure>
+    <figure class="trig-unit-circle-B" id="trig-unit-circle-B">
+        <img src="../images/sectionImages/trig-unit-circle-B.jpg" class="trig-unit-circle-B" alt="Figure 4B">
+    </figure>
+</div>
+
+<style>
+    .trig-unit-circle-A::before{
+        content:'FIGURE 4A';
+    }
+
+    .trig-unit-circle-B::before{
+        content:'FIGURE 4B';
+    }
+</style>
+
+
+<div class="example-title" id="ex-sin-cos-240"> EXAMPLE 4</div>
+<div class="example">
+    <div class="example-problem">  
+        Find the exact values of \(\sin 240 \degree\) and \(\cos 240 \degree.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    <div class="figure-center">
+        <figure class="unit-circle-240-deg" id="unit-circle-240-deg">
+            <img src="../images/sectionImages/unit-circle-240-deg.jpg" class="unit-circle-240-deg" alt="Figure 5A">
+        </figure>
+        <figure class="unit-circle-240-deg-tri" id="unit-circle-240-deg-tri">
+            <img src="../images/sectionImages/unit-circle-240-deg-tri.jpg" class="unit-circle-240-deg-tri" alt="Figure 5B">
+        </figure>
+    </div>
+    
+    <style>
+        .unit-circle-240-deg::before{
+            content:'FIGURE 5A';
+        }
+    
+        .unit-circle-240-deg-tri::before{
+            content:'FIGURE 5B';
+        }
+    </style>
+    On the Unit Circle, we rotate the terminal side \(\segment{OB}\) into the third quadrant
+    so that the angle between \(\segment{OA}\) and \(\segment{OB}\) is \(240 \degree\)
+    (<a href="#unit-circle-240-deg">Figure 5A</a>).
+    Our goal is to determine the <nobr>\(x\)-</nobr> and <nobr>\(y\)-</nobr>coordinates
+    of \(B;\) then \(x = - \length{OC}\) \(= \cos 240 \degree\) and \(y = -\length{BC}\) \(= \sin 240 \degree.\)
+    Points \(O,\) \(B,\) and \(C\) form a 60–30–90 right triangle
+    whose hypotenuse has length \(1.\)
+    (The \(60 \degree\) angle is called the <i>reference angle</i>,
+    the acute angle from the \(x\)-axis.)
+    By comparison to <a href="#right-tri-60-30">Figure 3B</a>,
+    we see \(\length{OC} = 1/2\) and \(\length{BC} = \sqrt 3/2.\)
+    (See <a href="#unit-circle-240-deg-tri">Figure 5B</a>.)
+    So  
+    \[
+    \boxed{
+        \ba
+        \cos 240 \degree &= -\frac{1}{2} \nl
+        \sin 240 \degree &= -\frac{\sqrt 3}{2}
+    \ea}
+    \]
+</div>
+
+<p>
+    The same procedure in 
+    <a href="/Valculus/calculus/0.8-Trigonometry.html#ex-sin-cos-240">Example 4</a>
+    enables us to attain exact values of \(\sin \theta\) and \(\cos \theta\)
+    for many choices of \(\theta\) around the Unit Circle. 
+    (See <a href="#unit-circle-values">Figure 6</a>.)
+    Just as performing algebra requires that you memorize the Times Table, 
+    it is equally vital to know these special values on the Unit Circle for trigonometry.
+    It is helpful to memorize the points in the first quadrant
+    and exploit symmetry to attain the sines and cosines in the other three quadrants.
+</p>
+
+<figure class="unit-circle-values figure-wide" id="unit-circle-values">
+    <img src="../images/sectionImages/unit-circle-values.jpg" 
+    class="unit-circle-values" alt="Figure 6">
+</figure>
+<style>
+    .unit-circle-values::before{
+        content:'FIGURE 6';
+    }
+</style>
+
+<p>
+    When \(\theta\) is \(360 \degree\) (or \(2 \pi\) radians) on the Unit Circle,
+    \(\segment{OB}\) reaches the same position of \(\segment{OA};\)
+    as we increase \(\theta\) further, \(\segment{OB}\) is again traced out in a counterclockwise
+    path. 
+    Thus, \(\segment{OB}\) lands in the same position if it is rotated \(360 \degree\) (or \(2 \pi\) radians)
+    counterclockwise or clockwise.
+    The angles \(\theta\) and \(\theta \pm 2 \pi\) are therefore said to be <span class="emph">coterminal</span>;
+    they produce the same position of the terminal side \(\segment{OB}.\)
+    So we also have the same values of sine and cosine—namely,
+    \begin{equation}  
+    \sin \theta = \sin (\theta \pm 2 \pi) \lspace \cos \theta = \cos (\theta \pm 2 \pi) \pd \label{eq:sin-cos-2pi}
+    \end{equation}
+    On the other hand, \(\theta\) is <i>decreasing</i> if we rotate \(\segment{OB}\)
+    <i>clockwise</i>.
+    For example, an angle of \(\theta = -30 \degree\) places \(\segment{OB}\) in the fourth quadrant.
+    Then \(\sin(-30 \degree)\) \(= \sin 330 \degree\) \(= -1/2.\)
+    Thus, <i>the Unit Circle enables us to extend the domain of the sine and cosine
+    functions to all real numbers</i>.
+</p>
+
+<aside class="box-remark">
+    When we exponentiate trigonometric functions, 
+    we place the exponent between the function and its argument—for example, 
+    \[\sin^2 \theta = (\sin \theta)^2 \pd\]
+    But do <span class="warning">not</span> confuse this notation with \(\sin \par{\theta^2}.\)
+</aside>
+
+<div class="example-title" id="ex-sin-quadratic"> EXAMPLE 5</div>
+<div class="example">
+    <div class="example-problem">  
+        If \(0 \leq \theta \lt \pi,\) then find the solutions to 
+        \[2 \sin^2 \theta - \sin \theta = 0 \pd\]
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
+    We treat \(\sin \theta\) as a singular term.
+    Factoring the left side, we get 
+    \[(\sin \theta)(2 \sin \theta - 1) = 0 \pd\]
+    For \(0 \leq \theta \lt \pi\) the only solution to \(\sin \theta = 0\) 
+    is \(\theta = 0,\) and the only solution to \(2 \sin \theta - 1 = 0\) \(\iffArrow \sin \theta = 1/2\)
+    is \(\theta = \pi/6.\)
+    (See <a href="#unit-circle-values">Figure 6</a>.)
+    The solutions to the equation are therefore 
+    \[
+    \boxed{
+    \ba 
+    \theta &= 0 \nl 
+    \theta &= \frac{\pi}{6}
+    \ea 
+    }
+    \]
+</div>
+
+<div class="example-title" id="ex-cos-quadratic"> EXAMPLE 6</div>
+<div class="example">
+    <div class="example-problem">  
+        Find all the solutions to 
+        \[-2 \cos^2 \theta - \cos \theta + 1 = 0 \pd\]
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
+    Factoring the left side, we attain 
+    \[(-2 \cos \theta + 1)(\cos \theta + 1) = 0 \pd\]
+    We then have 
+    \[
+    \baat{2} 
+    -2 \cos \theta + 1 &= 0 \lspace &\cos \theta + 1 &= 0 \nl
+    \cos \theta &= \frac{1}{2} \lspace &\cos \theta &= -1 \pd
+    \eaat
+    \]
+    Consulting <a href="#unit-circle-values">Figure 6</a>,
+    we see \(\cos \theta = -1\) when \(\theta = \pi.\)
+    We also observe \(\cos \theta = 1/2\) when \(\theta = \pi/3\) and \(\theta = 5\pi/3.\)
+    To account for all the possible coterminal angles, 
+    we let \(n\) be a positive integer and write 
+    \[\boxed
+    {\ba
+    \theta &= \pi \pm 2 \pi n \nl 
+    \theta &= \frac{\pi}{3} \pm 2 \pi n \nl 
+    \theta &= \frac{5 \pi}{3} \pm 2 \pi n 
+    \ea}\]
+    (Compare this procedure to <a href="/Valculus/calculus/0.8-Trigonometry.html#ex-sin-quadratic">Example 5</a>,
+    in which we found solutions of \(\theta\) within a limited interval.)
+</div>
+
+<h4 id="graphs-trig">Graphs of Trigonometric Functions</h4>
+<p>
+    From <a href="#unit-circle-values">Figure 6</a> we can gather values of 
+    \(\sin \theta\) and \(\cos \theta\) for several choices of \(\theta.\)
+    By plotting the values of \(\theta\) on the horizontal axis and 
+    the values of \(\sin \theta\) on the vertical axis, we attain the graph of \(y = \sin x\) in 
+    <a href="#trig-graph-sin">Figure 7A</a>. 
+    Doing the same procedure for \(\cos \theta\) yields the graph of \(y = \cos x\) in 
+    <a href="#trig-graph-cos">Figure 7B</a>. 
+    These graphs are called <span class="emph">periodic</span> because they contain endless waves,
+    which repeat after \(2 \pi\) radians, as consistent with \(\eqref{eq:sin-cos-2pi}.\)
+    (The <span class="emph">period</span>,
+    the time in which a trigonometric function completes one revolution, 
+    is therefore \(2 \pi\) for \(\sin x\) and <nobr>\(\cos x.\))</nobr>
+    Each graph has a minimum of \(-1\) and a maximum of \(1.\)
+    The graph of \(y = \sin x\) crosses the origin; sine is an odd function because \(\sin(-x)\) \(= - \sin x.\)
+    Conversely, \(y = \cos x\) crosses \((0, 1)\) and is an even function since \(\cos(-x) = \cos x;\)
+    the graph is therefore symmetric about the \(y\)-axis.
+    Sine and cosine functions are fundamental in modeling many oscillating phenomena,
+    with applications to radio waves, tires spinning, and temperatures fluctuating.
+</p>
+
+<div class="figure-center">
+    <figure class="trig-graph-sin" id="trig-graph-sin">
+        <img src="../images/sectionImages/trig-graph-sin.jpg" class="trig-graph-sin" alt="Figure 7A">
+    </figure>
+    <figure class="trig-graph-cos" id="trig-graph-cos">
+        <img src="../images/sectionImages/trig-graph-cos.jpg" class="trig-graph-cos" alt="Figure 7B">
+    </figure>
+</div>
+
+<style>
+    .trig-graph-sin::before{
+        content:'FIGURE 7A';
+    }
+
+    .trig-graph-cos::before{
+        content:'FIGURE 7B';
+    }
+</style>
+
+<p>
+    By a similar method, we attain the graphs of \(y = \csc x\) (<a href="#trig-graph-csc">Figure 8A</a>) 
+    and \(y = \sec x\) (<a href="#trig-graph-sec">Figure 8B</a>).
+    Note that \(y = \csc x\) has <i>vertical asymptotes</i>—vertical lines at which the graph 
+    becomes unbounded (approaching \(\infty\) or <nobr>\(-\infty\))</nobr>—at \(x = 0,\) \(x = \pm \pi,\) \(x = \pm 2 \pi, \dots.\)
+    So the domain is \(x \ne n \pi,\) where \(n\) is any integer.
+    Conversely, \(y = \sec x\) has vertical asymptotes at \(x = \pm \pi/2,\) \(x = \pm 3 \pi/2,\) \(x = \pm 5 \pi/2, \dots;\)
+    the graph's domain is then \(x \ne \pi/2 \pm n \pi\) for any integer \(n.\)
+    Each graph has the same period of \(2 \pi\)
+    and a range of \((-\infty, 1] \cup [1, \infty).\)
+</p>
+
+<div class="figure-center">
+    <figure class="trig-graph-csc" id="trig-graph-csc">
+        <img src="../images/sectionImages/trig-graph-csc.jpg" class="trig-graph-csc" alt="Figure 8A">
+    </figure>
+    <figure class="trig-graph-sec" id="trig-graph-sec">
+        <img src="../images/sectionImages/trig-graph-sec.jpg" class="trig-graph-sec" alt="Figure 8B">
+    </figure>
+</div>
+
+<style>
+    .trig-graph-csc::before{
+        content:'FIGURE 8A';
+    }
+
+    .trig-graph-sec::before{
+        content:'FIGURE 8B';
+    }
+</style>
+
+<p>
+    Now we investigate the graphs of tangent and cotangent. 
+    The curve \(y = \tan x\) (<a href="#trig-graph-tan">Figure 9A</a>)
+    has vertical asymptotes at \(x = \pm \pi/2,\) \(x = \pm 3\pi/2,\) \(x = \pm 5 \pi/2, \dots.\)
+    Its domain is therefore \(x \ne \pi/2 \pm n \pi\) for all integers \(n.\)
+    But the curve \(y = \cot x\) (<a href="#trig-graph-cot">Figure 9B</a>)
+    has vertical asymptotes at \(x = 0,\) \(x = \pm \pi,\) \(x = \pm 2 \pi, \dots.\)
+    So its domain is \(x \ne n \pi\) for all integers \(n.\)
+    Unlike the graphs of the other four trigonometric functions, 
+    \(y = \tan x\) and \(y = \cot x\) each have a period of \(\pi\)
+    and a range of all real numbers.
+</p>
+
+<div class="figure-center">
+    <figure class="trig-graph-tan" id="trig-graph-tan">
+        <img src="../images/sectionImages/trig-graph-tan.jpg" class="trig-graph-tan" alt="Figure 9A">
+    </figure>
+    <figure class="trig-graph-cot" id="trig-graph-cot">
+        <img src="../images/sectionImages/trig-graph-cot.jpg" class="trig-graph-cot" alt="Figure 9B">
+    </figure>
+</div>
+
+<style>
+    .trig-graph-tan::before{
+        content:'FIGURE 9A';
+    }
+
+    .trig-graph-cot::before{
+        content:'FIGURE 9B';
+    }
+</style>
+
+<div class="box-title">PROPERTIES OF TRIGONOMETRIC GRAPHS</div>
+<div class="box">
+    Let \(n\) be any integer.
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Graph</th>
+                <th>Domain</th>
+                <th>Range</th>
+                <th>Period</th>
+            </tr>
+        </thead>
+        
+        <!-- sin -->
+        <tr class="tall-row">
+            <td>
+                \(y = \sin x\)
+            </td>
+            <td>
+                all \(x\)
+            </td>
+            <td>
+                \([-1, 1]\)
+            </td>
+            <td>
+                \(2 \pi\)
+            </td>
+        </tr>
+    
+        <!-- cos -->
+        <tr class="tall-row">
+            <td>
+                \(y = \cos x\)
+            </td>
+            <td>
+                all \(x\)
+            </td>
+            <td>
+                \([-1, 1]\)
+            </td>
+            <td>
+                \(2 \pi\)
+            </td>
+        </tr>
+
+        <!-- csc -->
+        <tr class="tall-row">
+            <td>
+                \(y = \csc x\)
+            </td>
+            <td>
+                \(\ds x \ne n \pi\)
+            </td>
+            <td>
+                \((-\infty, -1] \cup [1, \infty)\)
+            </td>
+            <td>
+                \(2 \pi\)
+            </td>
+        </tr>
+    
+        <!-- sec -->
+        <tr class="tall-row">
+            <td>
+                \(y = \sec x\)
+            </td>
+            <td>
+                \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+            </td>
+            <td>
+                \((-\infty, -1] \cup [1, \infty)\)
+            </td>
+            <td>
+                \(2 \pi\)
+            </td>
+        </tr>
+        
+        <!-- tan -->
+        <tr class="tall-row">
+            <td>
+                \(y = \tan x\)
+            </td>
+            <td>
+                \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \(\pi\)
+            </td>
+        </tr>
+
+        <!-- cot -->
+        <tr class="tall-row">
+            <td>
+                \(y = \cot x\)
+            </td>
+            <td>
+                \(\ds x \ne n \pi\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \(\pi\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h4 id="inverse-trig-functions">Inverse Trigonometric Functions</h4>
+<p>
+    The functions \(y = \sin x\) and \(y = \cos x\) are not inherently invertible. 
+    Yet their inverse functions would have great utility, 
+    enabling us to find an angle that corresponds to an inputted trigonometric ratio.
+    Let's define inverse functions of sine and cosine
+    based on <i>half a full wave</i>, which touches both the minimum and maximum values only once. 
+    We restrict sine's domain to \([-\pi/2, \pi/2];\)
+    then the graph's range is still \([-1, 1],\) but it passes the Horizontal Line Test.
+    So we define the inverse function of \(f(x) = \sin x\) to be \(\inv f(x) = \asin x,\)
+    whose domain is \([-1, 1]\) and range is \([-\pi/2, \pi/2].\)
+    (See <a href="#trig-asinx">Figure 10A</a>.)
+    Likewise, we restrict the domain of cosine to \([0, \pi];\)
+    doing so yields an invertible portion of \(y = \cos x\) whose range of \([-1, 1]\) is preserved. 
+    We therefore define the inverse function of \(f(x) = \cos x\) to be \(\inv f(x) = \acos x,\)
+    whose domain is \([-1, 1]\) and range is \([0, \pi].\)
+    (See <a href="#trig-acosx">Figure 10B</a>.)
+    These definitions enable us to input any trigonometric ratio \(x \in [-1, 1]\) into \(y = \asin x\) and \(y = \acos x;\)
+    these functions then output an angle \(y\) whose sine or cosine is \(x.\)
+</p>
+
+<div class="figure-center">
+    <figure class="trig-asinx" id="trig-asinx">
+        <img src="../images/sectionImages/trig-asinx.jpg" class="trig-asinx" alt="Figure 10A">
+    </figure>
+    <figure class="trig-acosx" id="trig-acosx">
+        <img src="../images/sectionImages/trig-acosx.jpg" class="trig-acosx" alt="Figure 10B">
+    </figure>
+</div>
+
+<style>
+    .trig-asinx::before{
+        content:'FIGURE 10A';
+    }
+
+    .trig-acosx::before{
+        content:'FIGURE 10B';
+    }
+</style>
+
+<p>
+    Similarly, the graph of \(y = \tan x\) becomes invertible if we restrict the domain to \((-\pi/2, \pi/2).\)
+    Since the range of tangent is \((-\infty, \infty),\) the domain of \(y = \atan x\) is \((-\infty, \infty);\)
+    its range is \((-\pi/2, \pi/2).\)
+    By making \(x\) larger and larger—that is, by letting \(x\) grow without bound—the graph of \(y = \atan x\) approaches 
+    the value \(\pi/2.\)
+    Likewise, by letting \(x\) decrease without bound (toward <nobr>\(-\infty\)),</nobr>
+    the graph of \(y = \atan x\) edges toward \(-\pi/2.\)
+    (See <a href="#trig-atanx">Figure 11</a>.)
+</p>
+
+<figure class="trig-atanx" id="trig-atanx">
+    <img src="../images/sectionImages/trig-atanx.jpg" 
+    class="trig-atanx" alt="Figure 11">
+</figure>
+<style>
+    .trig-atanx::before{
+        content:'FIGURE 11';
+    }
+</style>
+
+<p>
+    <span class="text-remark">REMARK</span>
+    By the laws of exponents, \(k^{-1}\) is equivalent to \(1/k\) for any nonzero \(k.\) 
+    Yet the inverse prefix on a function does <span class="warning">not</span> imply a reciprocal function;
+    thus,
+    \[\asin x \ne \frac{1}{\sin x} = \csc x \pd\]
+    To avoid this confusion, some texts use the <i>arc-</i> prefix to denote an inverse trigonometric function—for example, 
+    \[\arcsin x = \asin x \pd\]
+    This notation is chosen since \(\asin x\) \(= \arcsin x\) 
+    returns the angle that intercepts the <i>arc</i> on the Unit Circle whose sine is \(x.\)
+    The inverse trigonometric functions \(\acsc x,\) \(\asec x,\) and \(\acot x\)
+    also exist, but we have little use for them in this section.
+    (To find an angle given the side lengths of a right triangle, 
+    only inverse sine, inverse cosine, and inverse tangent are necessary.)
+</p>
+
+<div class="box-title">INVERSE TRIGONOMETRIC FUNCTIONS</div>
+<div class="box">
+    <table class="table-full-width">
+        <thead>
+            <tr>
+                <th>Graph</th>
+                <th>Domain</th>
+                <th>Range</th>
+            </tr>
+        </thead>
+        
+        <!-- arcsin -->
+        <tr class="tall-row">
+            <td>
+                \(y = \asin x\)
+            </td>
+            <td>
+                \([-1, 1]\)
+            </td>
+            <td>
+                \([-\pi/2, \pi/2]\)
+            </td>
+        </tr>
+    
+        <!-- arccos -->
+        <tr class="tall-row">
+            <td>
+                \(y = \acos x\)
+            </td>
+            <td>
+                \([-1, 1]\)
+            </td>
+            <td>
+                \([0, \pi]\)
+            </td>
+        </tr>
+
+        <!-- arctan -->
+        <tr class="tall-row">
+            <td>
+                \(y = \atan x\)
+            </td>
+            <td>
+                \((-\infty, \infty)\)
+            </td>
+            <td>
+                \((-\pi/2, \pi/2)\)
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    The inverse trigonometric functions can be misleading.
+    Since the range of \(\asin x\) is \([-\pi/2, \pi/2],\)
+    inverse sine <i>cannot</i> return angles in the second or third quadrants of the Unit Circle. 
+    Likewise, the range of \(\acos x\) is \([0, \pi],\)
+    meaning the function <i>cannot</i> output angles in the third or fourth quadrants of the Unit Circle. 
+    And because the range of \(\atan x\) is \((-\pi/2, \pi/2),\)
+    inverse tangent only yields angles in the first and fourth quadrants. 
+    For example, if you want to find the angle \(\theta\) <i>in the third quadrant</i> 
+    for which \(\sin \theta = -\sqrt 3/2,\) 
+    then you have \(\asin (-\sqrt 3/2)\) \(= -\pi/3,\) an angle <i>in the fourth quadrant</i>—thus misleading you.
+    Instead, consult the Unit Circle in <a href="#unit-circle-values">Figure 6</a>
+    to see \(\theta = 4 \pi/3.\)
+    (We employed this strategy
+    in
+    <a href="/Valculus/calculus/0.8-Trigonometry.html#ex-sin-quadratic">Example 5</a>
+    and 
+    <a href="/Valculus/calculus/0.8-Trigonometry.html#ex-cos-quadratic">Example 6</a>.)
+</p>
+
+<div class="example-title"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        In <a href="#trig-ex-inverses">Figure 12</a>
+        use a calculator to find the three angles \(\alpha,\) \(\beta,\) and \(\phi\)
+        correct to three decimal places.
+        (These greek symbols are called <i>alpha</i>, <i>beta</i>, and <i>phi</i>, respectively.)
+        <figure class="trig-ex-inverses figure-center-one" id="trig-ex-inverses">
+            <img src="../images/sectionImages/trig-ex-inverses.jpg" 
+            class="trig-ex-inverses" alt="Figure 12">
+        </figure>
+        <style>
+            .trig-ex-inverses::before{
+                content:'FIGURE 12';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
+    <aside class="box-remark">
+        We could also attain \(\beta\) by writing
+        \[\beta = \atan \par{\frac{7}{10}} \cma\]
+        which also evaluates to \(34.992 \degree.\)
+        Trigonometry works!
+    </aside>
+    Inverse trigonometric functions permit us to find an angle if we 
+    input a trigonometric ratio. 
+    We get
+    \[
+    \baat{2}
+    \tan \, &\alpha &&= \frac{\text{opposite}}{\text{adjacent}} = \frac{10}{7} \nl 
+    &\alpha &&= \atan \par{\frac{10}{7}} = 55.008 \degree \pd
+    \eaat
+    \]
+    Since \(\alpha\) and \(\beta\) are complimentary angles, we have 
+    \(\alpha + \beta = 90 \degree,\) or
+    \[
+    \ba
+    \beta &= 90 \degree - \alpha \nl 
+    &= 90 \degree - 55.008 \degree = 34.992 \degree \pd
+    \ea
+    \]
+    Finally, we attain \(\phi\) by noticing that 
+    \[
+    \baat{2}
+    \sin \, &\phi &&= \frac{\text{opposite}}{\text{hypotenuse}} = \frac{10}{15} \nl
+    &\phi &&= \asin \par{\frac{10}{15}} = 41.810 \degree \pd
+    \eaat
+    \]
+    So our three angles are 
+    \[\boxed{\alpha = 55.008 \degree} \qquad \boxed{\beta = 34.992 \degree} \qquad 
+    \boxed{\phi = 41.810 \degree}\]
+    (If you attained much smaller values, 
+    then your calculator may be set to <code>RADIAN</code> mode instead of <code>DEGREE</code> mode.)
+</div>
+
+<div class="example-title"> EXAMPLE 8 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following expressions without a calculator.
+        <ol class="list-alpha">
+            <li>
+                \(\asin \par{\sin 60 \degree}\)
+            </li>
+            <li>
+                \(\asin \par{\sin 240 \degree}\)
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
+    <ol class="list-alpha">
+        <li>
+            The value \(60 \degree\) is in the range of inverse sine.
+            So by the definition of inverse functions, we get
+            \[\asin \par{\sin 60 \degree} = \boxed{60 \degree}\]
+        </li>
+        <hr>
+        <li>
+            Observe that \(240 \degree\) is <span class="warning">not</span>
+            in the range of inverse sine. 
+            We therefore <span class="warning">cannot</span> 
+            <q>cancel out</q> the sine with the inverse sine.
+            Instead, note that \(\sin 240 \degree = -\sqrt 3/2,\) so
+            \[\asin \par{\sin 240 \degree} = \asin \par{-\frac{\sqrt 3}{2}} = \boxed{-60 \degree}\]
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 9 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following expressions without a calculator.
+        <ol class="list-alpha">
+            <li>
+                \(\cos \par{\acos 1}\)
+            </li>
+            <li>
+                \(\cos \par{\acos 2}\)
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle9()" class="solution-button">  </button>
+<div id="solution9" class="solution">
+    <ol class="list-alpha">
+        <li>
+            Because cosine and inverse cosine are inverse functions, 
+            and \(1\) is in the range of cosine, 
+            we have 
+            \[\cos \par{\acos 1} = \boxed 1\]
+        </li>
+        <hr>
+        <li>
+            <span class="warning">It is wrong to write</span>
+            \[\cos \par{\acos 2} = 2\]
+            because cosine's range is \([-1, 1],\) so 
+            cosine cannot output the value \(2.\)
+            In fact, the expression \(\acos 2\) is undefined;
+            hence, \(\cos \par{\acos 2}\) <b>is undefined</b>.
+        </li>
+    </ol>
+</div>
+
+<h4 id="law-sin-cos">Laws of Sine and Cosine</h4>
+
+<figure class="trig-sin-cos-law" id="trig-sin-cos-law">
+    <img src="../images/sectionImages/trig-sin-cos-law.jpg" 
+    class="trig-sin-cos-law" alt="Figure 13">
+</figure>
+<style>
+    .trig-sin-cos-law::before{
+        content:'FIGURE 13';
+    }
+</style>
+
+<p>
+    Using the six trigonometric ratios, it is easy to find all the parts of a right triangle. 
+    But these ratios cannot be used for non-right triangles,
+    so let's discuss two additional laws that relate the lengths and angles of <i>any</i> triangle.
+    In <a href="#trig-sin-cos-law">Figure 13</a> the non-right triangle's sides have lengths 
+    \(a,\) \(b,\) and \(c.\) The angles opposite to these sides are, respectively, \(A,\) \(B,\) and \(C.\)
+    By the <span class="emph">Law of Sines</span>, 
+    \begin{equation}
+    \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \pd \label{eq:law-sin}
+    \end{equation}
+    In words, for all three angles in a triangle, the ratio of any angle's sine to 
+    its opposite side is the same.
+    Conversely, the <span class="emph">Law of Cosines</span> gives 
+    \begin{equation}
+    c^2 = a^2 + b^2 - 2ab \cos C \pd \label{eq:law-cos}
+    \end{equation}
+</p>
+
+<div class="box-title">LAWS OF SINE AND COSINE</div>
+<div class="box">
+    Suppose that any triangle has side lengths \(a,\) \(b,\) and \(c,\)
+    which are opposite to the angles \(A,\) \(B,\) and \(C,\) respectively.
+    The <span class="emph">Law of Sines</span> gives 
+    \begin{equation}
+    \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \pd \eqlabel{eq:law-sin}
+    \end{equation}
+    The <span class="emph">Law of Cosines</span> gives
+    \begin{equation}
+    c^2 = a^2 + b^2 - 2ab \cos C \pd \eqlabel{eq:law-cos}
+    \end{equation}
+</div>
+
+<div class="example-title"> EXAMPLE 10 </div>
+<div class="example">
+    <div class="example-problem">  
+        In <a href="#trig-law-sin-cos-ex">Figure 14</a> determine the lengths \(x\) and \(y,\)
+        and find all four angles \(\theta_1,\) \(\theta_2,\) \(\theta_3,\) and \(\theta_4.\)
+        (Use a calculator and report three decimal places of accuracy.)
+        <figure class="trig-law-sin-cos-ex figure-center-one" id="trig-law-sin-cos-ex">
+            <img src="../images/sectionImages/trig-law-sin-cos-ex.jpg" 
+            class="trig-law-sin-cos-ex" alt="Figure 14">
+        </figure>
+        <style>
+            .trig-law-sin-cos-ex::before{
+                content:'FIGURE 14';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle10()" class="solution-button">  </button>
+<div id="solution10" class="solution">
+    Since no right triangles are present,
+    we <span class="warning">cannot</span> use the trigonometric ratios in 
+    <a href="#trig-right-triangles" class="page-anchor">Trigonometry in Right Triangles</a>. 
+    We instead use the Laws of Sines and Cosines since they apply to all triangles.
+    Using the Law of Cosines, we have 
+    \[
+    \ba
+    y^2 &= 7^2 + 9^2 - 2(7)(9) \cos 35 \degree \nl 
+    y^2 &= 26.787 \nl 
+    y &\approx 5.176 \pd
+    \ea
+    \]
+    Then by the Law of Sines, 
+    \[\frac{\sin \theta_1}{9} = \frac{\sin \theta_2}{7} = \frac{\sin 35 \degree}{5.176} \pd\]
+    We therefore attain 
+    \[
+    \baat{2} 
+    \frac{\sin \theta_1}{9} &= \frac{\sin 35 \degree}{5.176} 
+    \qquad &\frac{\sin \theta_2}{7} &= \frac{\sin 35 \degree}{5.176} \nl 
+    \theta_1 &= \asin \par{\frac{9 \sin 35 \degree}{5.176}} \qquad &\theta_2 &= \asin \par{\frac{7 \sin 35 \degree}{5.176}} \nl 
+    \theta_1 &\approx 85.813 \degree \qquad &\theta_2 &\approx 50.869 \degree \pd
+    \eaat
+    \]
+    Applying the Law of Sines again, we get 
+    \[\frac{\sin 115 \degree}{7} = \frac{\sin \theta_3}{x} = \frac{\sin \theta_4}{5.176} \pd\]
+    Then
+    \[\theta_4 = \asin \par{\frac{5.176 \sin 115 \degree}{7}} \approx 42.079 \degree \pd\]
+    Since the angles \(\theta_3,\) \(\theta_4 \approx 42.079 \degree,\) and \(115 \degree\) must sum to \(180 \degree,\) we find 
+    \[\theta_3 \approx 180 \degree - 115 \degree - 42.079 \degree = 22.921 \degree \pd\]
+    Thus, we see 
+    \[
+    \ba
+    \frac{\sin 115 \degree}{7} &= \frac{\sin 22.921 \degree}{x} \nl 
+    x &= \frac{7 \sin 22.921 \degree}{\sin 115 \degree} \approx 3.008 \pd
+    \ea
+    \]
+    Hence, the side lengths are 
+    \[
+    \boxed{\ba     
+    x &\approx 3.008\nl
+    y &\approx 5.176\ea} 
+    \]
+    The angles are 
+    \[
+    \boxed{
+    \baat{2}
+    \theta_1 &\approx 85.813 \degree \qquad \theta_2 &&\approx 50.869 \degree \nl
+    \theta_3 &\approx 22.921 \degree \qquad \theta_4 &&\approx 42.079 \degree
+    \eaat}
+    \]
+</div>
+
+<h4 id="trig-identities">Trigonometric Identities</h4>
+<p>
+    A <span class="emph">trigonometric identity</span> 
+    is a relationship between trigonometric functions. 
+    The most fundamental property is the <span class="emph">Pythagorean identity</span>:
+    \begin{equation}
+    \sin^2 \theta + \cos^2 \theta = 1 \pd \label{eq:pythag-identity}
+    \end{equation}
+    We can derive two other useful variants by performing some division:
+    Dividing both sides of \(\eqref{eq:pythag-identity}\) by \(\cos^2 \theta,\) we get 
+    \begin{equation}
+    \tan^2 \theta + 1 = \sec^2 \theta \pd \label{eq:pythag-tan-sec}
+    \end{equation}
+    Likewise, dividing both sides of \(\eqref{eq:pythag-identity}\) by \(\sin^2 \theta\) produces 
+    \begin{equation}
+    \cot^2 \theta + 1 = \csc^2 \theta \pd \label{eq:pythag-cot-csc}
+    \end{equation}
+</p>
+
+<div class="box-title">PYTHAGOREAN IDENTITY</div>
+<div class="box">
+    \begin{align}
+    \sin^2 \theta + \cos^2 \theta &= 1 \eqlabel{eq:pythag-identity} \nl 
+    \tan^2 \theta + 1 &= \sec^2 \theta \eqlabel{eq:pythag-tan-sec} \nl 
+    \cot^2 \theta + 1 &= \csc^2 \theta \eqlabel{eq:pythag-cot-csc}
+    \end{align}
+</div>
+
+<p>
+    <span class="proof">PROOF OF \(\eqref{eq:pythag-identity}\)</span> 
+    On the Unit Circle (<a href="#trig-unit-circle-A">Figure 4A</a>), 
+    we have \(x = \cos \theta\) and \(y = \sin \theta.\)
+    The lengths \(\abs x\) \(= \abs{\cos \theta}\) and \(\abs y\)
+    \(= \abs{\sin \theta}\) form a right triangle whose hypotenuse has length \(1.\)
+    So by the Pythagorean Theorem, we have 
+    \[
+    \ba
+    \abs{x}^2 + \abs{y}^2 &= 1^2 \nl 
+    \abs{\cos \theta}^2 + \abs{\sin \theta}^2 &= 1 \pd
+    \ea
+    \]
+    Squaring a real number can never produce a negative number,
+    so \(\abs{\cos \theta}^2 = \cos^2 \theta\) and \(\abs{\sin \theta}^2 = \sin^2 \theta.\)
+    Thus, we have derived \(\eqref{eq:pythag-identity}.\)
+    \[\qedproof\]
+</p>
+
+<div class="example-title"> EXAMPLE 11 </div>
+<div class="example">
+    <div class="example-problem">  
+        For \(\pi/2 \lt \theta \lt \pi,\) \(\sin \theta = 12/13.\)
+        Find \(\cos \theta.\)
+    </div>
+</div>
+<button onclick="toggle11()" class="solution-button">  </button>
+<div id="solution11" class="solution">
+    By the Pythagorean identity as in \(\eqref{eq:pythag-identity},\)
+    we have 
+    \[
+    \ba
+    \par{\frac{12}{13}}^2 + \cos^2 \theta &= 1 \nl 
+    \cos^2 \theta &= \frac{25}{169} \nl 
+    \cos \theta &= \pm \frac{5}{13} \pd
+    \ea
+    \]
+    Because \(\pi/2 \lt \theta \lt \pi,\) the angle \(\theta\) lies in the second quadrant
+    on the Unit Circle
+    and so \(\cos \theta\) is negative.
+    We therefore choose the negative solution:
+    \[\boxed{\cos \theta = -\frac{5}{13}}\]
+</div>
+
+<div class="example-title"> EXAMPLE 12 </div>
+<div class="example">
+    <div class="example-problem">  
+        Assuming \(\cos^2 \theta \ne \sin^2 \theta,\) simplify
+        \[\frac{\cos^4 \theta - \sin^4 \theta}{\cos^2 \theta - \sin^2 \theta} \pd\]
+    </div>
+</div>
+<button onclick="toggle12()" class="solution-button">  </button>
+<div id="solution12" class="solution">
+    The numerator is a difference of squares,
+    so factoring shows
+    \[
+    \ba 
+    \frac{\cos^4 \theta - \sin^4 \theta}{\cos^2 \theta - \sin^2 \theta}
+    &= \frac{(\cos^2 \theta + \sin^2 \theta)\cancel{(\cos^2 \theta - \sin^2 \theta)}}{\cancel{\cos^2 \theta - \sin^2 \theta}} \nl 
+    &= \cos^2 \theta + \sin^2 \theta = \boxed 1
+    \ea     
+    \]
+    where the last step is true by the Pythagorean identity.
+</div>
+
+<div class="example-title"> EXAMPLE 13 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that 
+        \[\frac{1 - \sec \theta}{\tan \theta} = -\frac{\tan \theta}{1 + \sec \theta} \pd\]
+    </div>
+</div>
+<button onclick="toggle13()" class="solution-button">  </button>
+<div id="solution13" class="solution">
+    On the left, we multiply the numerator and denominator each by \((1 + \sec \theta)\)
+    to see
+    \[
+    \ba
+    \frac{1 - \sec \theta}{\tan \theta} &= 
+    \frac{1 - \sec \theta}{\tan \theta} \cdot \frac{1 + \sec \theta}{1 + \sec \theta} \nl
+    &= \frac{1 - \sec^2 \theta}{(\tan \theta)(1 + \sec \theta)} \pd
+    \ea
+    \] 
+    But by \(\eqref{eq:pythag-tan-sec}\) we have
+    \[\frac{1 - \sec \theta}{\tan \theta} = \frac{-\tan^2 \theta}{(\tan \theta) (1 + \sec \theta)} \equalsCheck -\frac{\tan \theta}{1 + \sec \theta} \pd\]
+</div>
+
+<p>
+    <span class="label-emph">Addition and Subtraction Identities</span>
+    Using geometry, it can be shown that, for two angles \(\alpha\) and \(\beta,\)
+    \begin{align}
+    \sin(\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \cma \label{eq:sin-addition} \nl
+    \cos(\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \pd \label{eq:cos-addition}
+    \end{align}
+    These formulas are called the <span class="emph">addition identity for sine</span>
+    and <span class="emph">addition identity for cosine</span>, respectively.
+    Since \(\sin(-x) = -\sin x\) and \(\cos(-x) = \cos x,\) 
+    replacing \(\beta\) with \(-\beta\) in \(\eqref{eq:sin-addition}\) and \(\eqref{eq:cos-addition}\) gives
+    \begin{align}
+    \sin(\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \cma \label{eq:sin-subtraction} \nl
+    \cos(\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \pd \label{eq:cos-subtraction}
+    \end{align}
+    Likewise, these respective equations are called the <span class="emph">subtraction identity for sine</span>
+    and <span class="emph">subtraction identity for cosine</span>.
+    Dividing \(\eqref{eq:sin-addition}\) by \(\eqref{eq:cos-addition}\) and 
+    dividing \(\eqref{eq:sin-subtraction}\) by \(\eqref{eq:cos-subtraction},\) we get 
+    \begin{align}
+    \tan(\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \cma \label{eq:tan-addition} \nl 
+    \tan(\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \cma \label{eq:tan-subtraction}
+    \end{align}
+    assuming that no division by zero occurs.
+    Of course, these equations are called the <span class="emph">addition identity for tangent</span>
+    and <span class="emph">subtraction identity for tangent</span>, respectively.
+</p>
+
+<div class="box-title">ADDITION AND SUBTRACTION IDENTITIES</div>
+<div class="box">
+    For two angles \(\alpha\) and \(\beta,\) the addition and subtraction identities for sine 
+    are, respectively,
+    \begin{align}
+    \sin(\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \cma \eqlabel{eq:sin-addition} \nl
+    \sin(\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \pd \eqlabel{eq:sin-subtraction}
+    \end{align}
+    The addition and subtraction identities for cosine are, respectively,
+    \begin{align}
+    \cos(\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \cma \eqlabel{eq:cos-addition} \nl
+    \cos(\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \pd \eqlabel{eq:cos-subtraction}
+    \end{align}
+    Finally, the addition and subtraction identities for tangent are, respectively,
+    \begin{align}
+    \tan(\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \cma \eqlabel{eq:tan-addition} \nl 
+    \tan(\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \pd \eqlabel{eq:tan-subtraction}
+    \end{align}
+</div>
+
+<div class="example-title"> EXAMPLE 14 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the exact values of \(\sin 15 \degree,\) \(\cos 15 \degree,\) and \(\tan 15 \degree.\)
+    </div>
+</div>
+<button onclick="toggle14()" class="solution-button">  </button>
+<div id="solution14" class="solution">
+    <p>
+        <span class="label-emph">Sine and Cosine</span>
+        Note that \(15 \degree = 45 \degree - 30 \degree.\)
+        By the subtraction identity for sine, as in \(\eqref{eq:sin-subtraction},\) we get
+        \[
+        \ba 
+        \sin 15 \degree &= \sin(45 \degree - 30 \degree) \nl 
+        &= \sin 45 \degree \cos 30 \degree - \cos 45 \degree \sin 30 \degree \nl 
+        &= \par{\frac{\sqrt 2}{2}} \par{\frac{\sqrt 3}{2}} - \par{\frac{\sqrt 2}{2}} \par{\frac{1}{2}} \nl 
+        &= \boxed{\frac{\sqrt 6 - \sqrt 2}{4}}
+        \ea
+        \]
+        Likewise, the subtraction identity for cosine <nobr>[\(\eqref{eq:cos-subtraction}\)]</nobr> gives 
+        \[
+        \ba 
+        \cos 15 \degree &= \cos(45 \degree - 30 \degree) \nl 
+        &= \cos 45 \degree \cos 30 \degree + \sin 45 \degree \sin 30 \degree \nl 
+        &= \par{\frac{\sqrt 2}{2}} \par{\frac{\sqrt 3}{2}} + \par{\frac{\sqrt 2}{2}} \par{\frac{1}{2}} \nl 
+        &= \boxed{\frac{\sqrt 6 + \sqrt 2}{4}}
+        \ea
+        \]
+    </p>
+    <p>
+        <span class="label-emph">Tangent</span>
+        We could use the subtraction identity for tangent, but it is far easier to deduce
+        \[
+        \ba
+        \tan 15 \degree &= \frac{\sin 15 \degree}{\cos 15 \degree} \nl
+        &= \frac{\dfrac{\sqrt 6 - \sqrt 2}{4}}{\dfrac{\sqrt 6 + \sqrt 2}{4}} 
+        = \boxed{\frac{\sqrt 6 - \sqrt 2}{\sqrt 6 + \sqrt 2}}
+        \ea
+        \]
+    </p>
+</div>
+
+<p>
+    <span class="label-emph">More Identities</span>
+    By replacing \(\beta\) with \(\alpha\) in the addition identities, 
+    we obtain the following three <span class="emph">double-angle identities</span>:
+    \begin{align}
+    \sin 2 \alpha &= 2 \sin \alpha \cos \alpha \cma \label{eq:sin-double-angle} \nl
+    \cos 2 \alpha &= \cos^2 \alpha - \sin^2 \alpha \cma \label{eq:cos-double-angle} \nl
+    \tan 2 \alpha &= \frac{2 \tan \alpha}{1 - \tan^2 \alpha} \pd \label{eq:tan-double-angle}
+    \end{align}
+    Using the Pythagorean identity in conjunction with \(\eqref{eq:cos-double-angle},\) we get 
+    \begin{equation}
+    \ba
+    \cos 2 \alpha &= 2 \cos^2 \alpha - 1 \nl 
+    &= 1 - 2 \sin^2 \alpha \pd 
+    \ea
+    \label{eq:cos-2-square}
+    \end{equation}
+    Of course, many other trigonometric identities exist, 
+    but the ones in this section are used frequently in calculus. 
+</p>
+
+<div class="box-title">MORE TRIGONOMETRIC IDENTITIES</div>
+<div class="box">
+    The <span class="emph">double-angle identities</span> are
+    \begin{align}
+    \sin 2 \alpha &= 2 \sin \alpha \cos \alpha \cma \eqlabel{eq:sin-double-angle} \nl 
+    \cos 2 \alpha &= \cos^2 \alpha - \sin^2 \alpha \cma \eqlabel{eq:cos-double-angle} \nl
+    \tan 2 \alpha &= \frac{2 \tan \alpha}{1 - \tan^2 \alpha} \pd \eqlabel{eq:tan-double-angle}
+    \end{align}
+    The double-angle identity for cosine can be reexpressed as follows:
+    \begin{equation}
+    \ba
+    \cos 2 \alpha &= 2 \cos^2 \alpha - 1 \nl 
+    &= 1 - 2 \sin^2 \alpha \pd 
+    \ea
+    \eqlabel{eq:cos-2-square}
+    \end{equation}
+</div>
+
+<div class="example-title" id="ex-power-red-cos"> EXAMPLE 15 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove the following identities:
+        \[
+        \ba
+        \cos^2 \theta &= \tfrac{1}{2} (1 + \cos 2 \theta) \cma \nl 
+        \sin^2 \theta &= \tfrac{1}{2} (1 - \cos 2 \theta) \pd
+        \ea
+        \]
+        (These identities are called <span class="emph">power-reduction formulas</span>;
+        they will be useful in Section
+        <a href="/Valculus/calculus/6.2-Trigonometric-Integrals.html">6.2</a>.)
+    </div>
+</div>
+<button onclick="toggle15()" class="solution-button">  </button>
+<div id="solution15" class="solution">
+    In \(\eqref{eq:cos-2-square}\) we solve for \(\cos^2 \theta\) and \(\sin^2 \theta,\)
+    as follows:
+    \[
+    \baat{2}
+    \cos 2 \theta &= 2 \cos^2 \theta - 1 \lspace &\cos 2 \theta &= 1 - 2 \sin^2 \theta \nl
+    \cos^2 \theta &\equalsCheck \tfrac{1}{2} (1 + \cos 2 \theta) \lspace &\sin^2 \theta &\equalsCheck \tfrac{1}{2} (1 - \cos 2 \theta) \pd
+    \eaat 
+    \]  
+</div>
+
+<div class="example-title"> EXAMPLE 16 </div>
+<div class="example">
+    <div class="example-problem">  
+        Prove that 
+        \[\frac{\cos^2 \theta}{2 \cot \theta \cos 2 \theta} = \frac{\tan \theta}{2 - 2 \tan^2 \theta} \pd\]
+    </div>
+</div>
+<button onclick="toggle16()" class="solution-button">  </button>
+<div id="solution16" class="solution">
+    The right side is \(\tfrac{1}{4} \tan \theta\) by comparison to \(\eqref{eq:tan-double-angle}.\)
+    Performing some algebraic manipulation on the left side
+    and noting that \(\cot \theta = (\cos \theta)/(\sin \theta),\) we see
+    \[
+    \ba
+    \frac{\cos^2 \theta}{2 \cot \theta \cos 2 \theta} 
+    &= \frac{\cos^2 \theta}{2 \par{\dfrac{\cos \theta}{\sin \theta}} \cos 2 \theta} \nl
+    &= \frac{\sin \theta \cos \theta}{2 \cos 2 \theta} \nl 
+    &= \frac{2 \sin \theta \cos \theta}{4 \cos 2 \theta} \nl 
+    &= \frac{\sin 2 \theta}{4 \cos 2 \theta} \nl 
+    &= \tfrac{1}{4} \tan 2 \theta \pd
+    \ea
+    \]
+    Thus, we have 
+    \[
+    \ba
+    \frac{\cos^2 \theta}{2 \cot \theta \cos 2 \theta} &= \frac{\tan \theta}{2 - 2 \tan^2 \theta} \nl
+    \tfrac{1}{4} \tan 2 \theta &\equalsCheck \tfrac{1}{4} \tan 2 \theta \pd
+    \ea
+    \]
+</div>
+
+<div class="section-summary">
+    <p>
+        <a href="#trig-right-triangles" class="summary-anchor">Trigonometry in Right Triangles</a>
+        <span class="emph">Trigonometry</span> is the study of triangles,
+        specifically the relationship between their side lengths and angles. 
+        In a right triangle, let \(\theta\) be any of the two non-right angles. 
+        If \(\text{opposite}\) is the length of the leg across from \(\theta\)
+        and \(\text{adjacent}\) is the length of the leg beside \(\theta,\) then
+        \[
+        \ba 
+        \sin \theta &= \frac{\text{opposite}}{\text{hypotenuse}} \cma \nl
+        \cos \theta &= \frac{\text{adjacent}}{\text{hypotenuse}} \cma \nl
+        \tan \theta &= \frac{\text{opposite}}{\text{adjacent}} \pd \nl
+        \ea 
+        \]
+        By dividing ratios, we prove \(\tan \theta\) \(= (\sin \theta)/(\cos \theta).\)
+        These trigonometric ratios enable us to find all the parts of a right triangle 
+        if only one non-right angle and one side length are known.
+        Trigonometric functions can take an argument in either degrees or radians; 
+        there are \(\pi\) radians in \(180\) degrees.
+        When using a calculator to evaluate a trigonometric expression, 
+        double-check whether the calculator is set to <code>RADIAN</code> mode or <code>DEGREE</code> mode.
+        The <span class="emph">reciprocal trigonometric functions</span> are 
+        \[\csc \theta = \frac{1}{\sin \theta} \cmaa \sec \theta = \frac{1}{\cos \theta} \cmaa \cot \theta = \frac{1}{\tan \theta} \pd\]
+        Whereas a calculator is needed to calculate most trigonometric expressions, 
+        there are a few trigonometric expressions whose values are known exactly.
+        In a <span class="emph">45–90–45 triangle</span> the 
+        two legs each have the same length \(x,\) and the hypotenuse has a length of \(x \sqrt 2.\)
+        In a <span class="emph">60–30–90 triangle</span>
+        the side adjacent to the \(60 \degree\) angle has length \(x,\)
+        the side adjacent to the \(30 \degree\) angle has length \(x \sqrt 3,\)
+        and the hypotenuse's length is \(2x.\)
+        Accordingly, the following table displays the exact trigonometric ratios for 
+        the angles \(30 \degree,\) \(45 \degree,\) and \(60 \degree.\)
+        It is crucial that you have these values memorized. 
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>\(\theta\)</th>
+                    <th>\(\sin \theta\)</th>
+                    <th>\(\cos \theta\)</th>
+                    <th>\(\tan \theta\)</th>
+                </tr>
+            </thead>
+            
+            <!-- theta = 30° -->
+            <tr class="tall-row">
+                <td>
+                    \(30 \degree \;\) or \(\; \ds \frac{\pi}{6}\)
+                </td>
+                <td>
+                    \(\ds \frac{1}{2}\)
+                </td>
+                <td>
+                    \(\ds \frac{\sqrt 3}{2}\)
+                </td>
+                <td>
+                    \(\ds \frac{\sqrt 3}{3}\)
+                </td>
+            </tr>
+        
+            <!-- theta = 45° -->
+            <tr class="tall-row">
+                <td>
+                    \(45 \degree \;\) or \(\; \ds \frac{\pi}{4}\)
+                </td>
+                <td>
+                    \(\ds \frac{\sqrt 2}{2}\)
+                </td>
+                <td>
+                    \(\ds \frac{\sqrt 2}{2}\)
+                </td>
+                <td>
+                    \(1\)
+                </td>
+            </tr>
+            <!-- theta = 60° -->
+            <tr class="tall-row">
+                <td>
+                    \(60 \degree \;\) or \(\; \ds \frac{\pi}{3}\)
+                </td>
+                <td>
+                    \(\ds \frac{\sqrt 3}{2}\)
+                </td>
+                <td>
+                    \(\ds \frac{1}{2}\)
+                </td>
+                <td>
+                    \(\ds \sqrt 3\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#unit-circle" class="summary-anchor">Unit Circle</a>
+        The <span class="emph">Unit Circle</span> is a circle of unit \(1\) centered at the origin \(O;\)
+        it enables us to extend the domain of 
+        sine and cosine functions to all real numbers. 
+        Instead of defining these two functions using right triangles,
+        we construct two line segments—\(\segment{OA},\) the <i>initial side</i>,
+        and \(\segment{OB},\) the <i>terminal side</i>. 
+        The angle \(\theta\) is the angle between \(\segment{OA}\) and \(\segment{OB};\)
+        it increases as \(\segment{OB}\) is rotated counterclockwise about the origin 
+        but decreases as \(\segment{OB}\) is rotated clockwise about the origin.
+        We define \(\cos \theta\) as the <nobr>\(x\)-</nobr>coordinate of \(B\) 
+        and \(\sin \theta\) as the <nobr>\(y\)-</nobr> coordinate of \(B.\)
+        One revolution occurs in \(2 \pi\) radians <nobr>(\(360\)</nobr> degrees), at which
+        \(\segment{OB}\) is in the same position as the initial side \(\segment{OA}.\)
+        Hence, \(\theta \pm 2 \pi\) is said to be a <span class="emph">coterminal angle</span> of \(\theta,\)
+        meaning
+        \begin{equation}  
+        \sin \theta = \sin (\theta \pm 2 \pi) \lspace \cos \theta = \cos (\theta \pm 2 \pi) \pd \eqlabel{eq:sin-cos-2pi}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#graphs-trig" class="summary-anchor">Graphs of Trigonometric Functions</a>
+        The graphs of all six trigonometric functions are periodic.
+        The following table shows their key properties.
+        Let \(n\) be any integer.
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Graph</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                    <th>Period</th>
+                </tr>
+            </thead>
+            
+            <!-- sin -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \sin x\)
+                </td>
+                <td>
+                    all \(x\)
+                </td>
+                <td>
+                    \([-1, 1]\)
+                </td>
+                <td>
+                    \(2 \pi\)
+                </td>
+            </tr>
+        
+            <!-- cos -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \cos x\)
+                </td>
+                <td>
+                    all \(x\)
+                </td>
+                <td>
+                    \([-1, 1]\)
+                </td>
+                <td>
+                    \(2 \pi\)
+                </td>
+            </tr>
+
+            <!-- csc -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \csc x\)
+                </td>
+                <td>
+                    \(\ds x \ne n \pi\)
+                </td>
+                <td>
+                    \((-\infty, -1] \cup [1, \infty)\)
+                </td>
+                <td>
+                    \(2 \pi\)
+                </td>
+            </tr>
+        
+            <!-- sec -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \sec x\)
+                </td>
+                <td>
+                    \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+                </td>
+                <td>
+                    \((-\infty, -1] \cup [1, \infty)\)
+                </td>
+                <td>
+                    \(2 \pi\)
+                </td>
+            </tr>
+            
+            <!-- tan -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \tan x\)
+                </td>
+                <td>
+                    \(\ds x \ne \frac{\pi}{2} \pm n \pi\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \(\pi\)
+                </td>
+            </tr>
+
+            <!-- cot -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \cot x\)
+                </td>
+                <td>
+                    \(\ds x \ne n \pi\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \(\pi\)
+                </td>
+            </tr>
+        </table> 
+    </p>
+    <p>
+        <a href="#inverse-trig-functions" class="summary-anchor">Inverse Trigonometric Functions</a>
+        By restricting the domains of sine, cosine, and tangent, we define the 
+        <span class="emph">inverse trigonometric functions</span> \(\asin x,\) \(\acos x,\) and \(\atan x\)
+        using the following table. (But using an inverse trigonometric function can be misleading; 
+        double-check its range to verify that you will attain the angle you want.)
+        <table class="table-full-width">
+            <thead>
+                <tr>
+                    <th>Graph</th>
+                    <th>Domain</th>
+                    <th>Range</th>
+                </tr>
+            </thead>
+            
+            <!-- arcsin -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \asin x\)
+                </td>
+                <td>
+                    \([-1, 1]\)
+                </td>
+                <td>
+                    \([-\pi/2, \pi/2]\)
+                </td>
+            </tr>
+        
+            <!-- arccos -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \acos x\)
+                </td>
+                <td>
+                    \([-1, 1]\)
+                </td>
+                <td>
+                    \([0, \pi]\)
+                </td>
+            </tr>
+    
+            <!-- arctan -->
+            <tr class="tall-row">
+                <td>
+                    \(y = \atan x\)
+                </td>
+                <td>
+                    \((-\infty, \infty)\)
+                </td>
+                <td>
+                    \((-\pi/2, \pi/2)\)
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <a href="#law-sin-cos" class="summary-anchor">Laws of Sine and Cosine</a>
+        The six trigonometric ratios apply only to right triangles; 
+        they are useless for non-right triangles. 
+        But to relate the side lengths and angles of <i>any</i> triangle, 
+        we use the two following laws:
+        Suppose that any triangle has side lengths \(a,\) \(b,\) and \(c,\)
+        which are opposite to the angles \(A,\) \(B,\) and \(C,\) respectively.
+        The <span class="emph">Law of Sines</span> gives 
+        \begin{equation}
+        \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c} \pd \eqlabel{eq:law-sin}
+        \end{equation}
+        The <span class="emph">Law of Cosines</span> gives
+        \begin{equation}
+        c^2 = a^2 + b^2 - 2ab \cos C \pd \eqlabel{eq:law-cos}
+        \end{equation}
+    </p>
+    <p>
+        <a href="#trig-identities" class="summary-anchor">Trigonometric Identities</a>
+        <span class="emph">Trigonometric identities</span> relate trigonometric functions to each other. 
+        Whereas many trigonometric identities exist, we often use the following identities in calculus. 
+        The <span class="emph">Pythagorean identity</span> and its variants are as follows:
+        \begin{align}
+        \sin^2 \theta + \cos^2 \theta &= 1 \eqlabel{eq:pythag-identity} \cma \nl 
+        \tan^2 \theta + 1 &= \sec^2 \theta \eqlabel{eq:pythag-tan-sec} \cma \nl 
+        \cot^2 \theta + 1 &= \csc^2 \theta \eqlabel{eq:pythag-cot-csc} \pd
+        \end{align}
+        For two angles \(\alpha\) and \(\beta,\) the addition and subtraction identities for sine 
+        are, respectively,
+        \begin{align}
+        \sin(\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \cma \eqlabel{eq:sin-addition} \nl
+        \sin(\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \pd \eqlabel{eq:sin-subtraction}
+        \end{align}
+        The addition and subtraction identities for cosine are, respectively,
+        \begin{align}
+        \cos(\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \cma \eqlabel{eq:cos-addition} \nl
+        \cos(\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \pd \eqlabel{eq:cos-subtraction}
+        \end{align}
+        Finally, the addition and subtraction identities for tangent are, respectively,
+        \begin{align}
+        \tan(\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \cma \eqlabel{eq:tan-addition} \nl 
+        \tan(\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \pd \eqlabel{eq:tan-subtraction}
+        \end{align}
+        The <span class="emph">double-angle identities</span> are
+        \begin{align}
+        \sin 2 \alpha &= 2 \sin \alpha \cos \alpha \cma \eqlabel{eq:sin-double-angle} \nl 
+        \cos 2 \alpha &= \cos^2 \alpha - \sin^2 \alpha \cma \eqlabel{eq:cos-double-angle} \nl
+        \tan 2 \alpha &= \frac{2 \tan \alpha}{1 - \tan^2 \alpha} \pd \eqlabel{eq:tan-double-angle}
+        \end{align}
+        The double-angle identity for cosine can be reexpressed as follows:
+        \begin{equation}
+        \ba
+        \cos 2 \alpha &= 2 \cos^2 \alpha - 1 \nl 
+        &= 1 - 2 \sin^2 \alpha \pd 
+        \ea
+        \eqlabel{eq:cos-2-square}
+        \end{equation}
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>

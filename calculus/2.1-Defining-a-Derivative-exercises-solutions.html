@@ -424,7 +424,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} [7x]\]
+        \[\ds \deriv{}{x} \par{7x}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -434,7 +434,7 @@
         By the limit definition of the derivative, we find 
         \[
         \ba 
-        \deriv{}{x} [7x] &amp;= \lim_{h \to 0} \frac{7(x + h) - 7x}{h} \nl 
+        \deriv{}{x} \par{7x} &amp;= \lim_{h \to 0} \frac{7(x + h) - 7x}{h} \nl 
         &amp;= \lim_{h \to 0} \frac{7h}{h} \nl 
         &amp;= \lim_{h \to 0} 7 \nl 
         &amp;= \boxed{7}
@@ -450,7 +450,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} [\pi]\]
+        \[\ds \deriv{}{x} (\pi)\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -463,7 +463,7 @@
         and 
         \[
         \ba 
-        \deriv{}{x} [\pi] &amp;= \lim_{h \to 0} \frac{\pi - \pi}{h} \nl 
+        \deriv{}{x} (\pi) &amp;= \lim_{h \to 0} \frac{\pi - \pi}{h} \nl 
         &amp;= \lim_{h \to 0} \frac{0}{h} \nl 
         &amp;= \boxed{0}
         \ea 
@@ -482,7 +482,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} [x + 3]\]
+        \[\ds \deriv{}{x} (x + 3)\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -492,7 +492,7 @@
         Using the limit definition of the derivative and simplifying the resulting limit give 
         \[
         \ba 
-        \deriv{}{x} [x + 3] 
+        \deriv{}{x} (x + 3) 
         &amp;= \lim_{h \to 0} \frac{(x + h + 3) - (x + 3)}{h} \nl 
         &amp;= \lim_{h \to 0} \frac{h}{h} \nl 
         &amp;= \lim_{h \to 0} 1 \nl 
@@ -509,7 +509,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} \left[5x - 4\right]_{x = 1}\]
+        \[\ds \deriv{}{x} \par{5x - 4} \intEval_{x = 1}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -533,7 +533,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} \left[2x^2 \right]\]
+        \[\ds \deriv{}{x} \par{2x^2}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -564,7 +564,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{t} \left[4t^2 - 2\right]_{t = 1}\]
+        \[\ds \deriv{}{t} \par{4t^2 - 2} \intEval_{t = 1}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -595,7 +595,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{t} \left[\sqrt{t + 1}\right]_{t = 3}\]
+        \[\ds \deriv{}{t} \par{\sqrt{t + 1} \,} \intEval_{t = 3}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -626,7 +626,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} \left[\frac{3}{x} \right]\]
+        \[\ds \deriv{}{x} \par{\frac{3}{x}}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -634,13 +634,13 @@
             <span class="solution-text">SOLUTION</span> 
             
         We use the limit definition of the derivative to obtain 
-        \[\deriv{}{x} \left[\frac{3}{x} \right] = \lim_{h \to 0} \frac{1}{h} \left(\frac{3}{x + h} - \frac{3}{x}\right) \pd\]
+        \[\deriv{}{x} \par{\frac{3}{x}} = \lim_{h \to 0} \frac{1}{h} \left(\frac{3}{x + h} - \frac{3}{x}\right) \pd\]
         We can't immediately plug in \(h = 0,\) since doing so yields the indeterminate form \(\indZero.\)
         Instead, we find a common denominator for the fractions and merge them. 
         Doing so gives 
         \[
         \ba 
-        \deriv{}{x} \left[\frac{3}{x} \right] &amp;= \lim_{h \to 0} \frac{1}{h} \left(\frac{3x - 3(x + h)}{x(x + h)}\right) \nl 
+        \deriv{}{x} \par{\frac{3}{x}} &amp;= \lim_{h \to 0} \frac{1}{h} \left(\frac{3x - 3(x + h)}{x(x + h)}\right) \nl 
         &amp;= \lim_{h \to 0} \frac{1}{h} \left(\frac{-3h}{x(x + h)}\right) \nl 
         &amp;= \lim_{h \to 0} \frac{-3}{x(x + h)} \nl 
         &amp;= \boxed{-\frac{3}{x^2}}
@@ -656,7 +656,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} \left[\frac{1}{x + 2}\right]\]
+        \[\ds \deriv{}{x} \par{\frac{1}{x + 2}}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -664,12 +664,12 @@
             <span class="solution-text">SOLUTION</span> 
             
         Using the limit definition of the derivative gives 
-        \[\deriv{}{x} \left[\frac{1}{x + 2}\right] = \lim_{h \to 0} \frac{1}{h} \left[\frac{1}{x + h + 2} - \frac{1}{x + 2}\right] \pd\]
+        \[\deriv{}{x} \par{\frac{1}{x + 2}} = \lim_{h \to 0} \frac{1}{h} \left[\frac{1}{x + h + 2} - \frac{1}{x + 2}\right] \pd\]
         This limit is in the indeterminate form \(\indZero.\)
         Finding a common denominator and merging the fractions yield 
         \[
         \ba 
-        \deriv{}{x} \left[\frac{1}{x + 2}\right] 
+        \deriv{}{x} \par{\frac{1}{x + 2}} 
         &amp;= \lim_{h \to 0} \frac{1}{h} \left[\frac{(x + 2) - (x + h + 2)}{(x + h + 2)(x + 2)}\right] \nl 
         &amp;= \lim_{h \to 0} \frac{1}{h} \left[\frac{-h}{(x + h + 2)(x + 2)}\right] \nl 
         &amp;= \lim_{h \to 0} \frac{-1}{(x + h + 2)(x + 2)} \nl 
@@ -686,7 +686,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{u} \left[u^3\right]\]
+        \[\ds \deriv{}{u} \par{u^3}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -716,7 +716,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{x} \left[\frac{1}{x^2}\right]_{x = 2}\]
+        \[\ds \deriv{}{x} \par{\frac{1}{x^2}} \intEval_{x = 2}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -751,7 +751,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{t} \left[\frac{1}{t^2 - 1}\right]_{t = 3}\]
+        \[\ds \deriv{}{t} \par{\frac{1}{t^2 - 1}} \intEval_{t = 3}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -778,7 +778,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \deriv{}{t} \left[\frac{1}{\sqrt t}\right]\]
+        \[\ds \deriv{}{t} \par{\frac{1}{\sqrt t}}\]
     </blockquote> use limits to calculate the derivative. 
         </div> 
         <hr> 
@@ -786,7 +786,7 @@
             <span class="solution-text">SOLUTION</span> 
             
         The limit of our difference quotient is 
-        \[\deriv{}{t} \left[\frac{1}{\sqrt t}\right] = 
+        \[\deriv{}{t} \par{\frac{1}{\sqrt t}} = 
         \lim_{h \to 0} \frac{1}{h} \left(\frac{1}{\sqrt{t + h}} - \frac{1}{\sqrt t} \right) \pd\]
         We find a common denominator in the fractions and merge them. 
         Doing so yields  
@@ -1072,17 +1072,17 @@
         Evaluate the following derivatives. 
         <ol class="list-alpha">
 <li>
-                \(\ds \deriv{}{x} [f(x) + g(x)]_{x = 2}\)
-            </li>
+<span>\(\ds \deriv{}{x} [f(x) + g(x)]_{x = 2}\)</span>
+</li>
 <li>
-                \(\ds \deriv{}{x} [f(x) - g(x)]_{x = 2}\)
-            </li>
+<span>\(\ds \deriv{}{x} [f(x) - g(x)]_{x = 2}\)</span>
+</li>
 <li>
-                \(\ds \deriv{}{x} [2f(x)]_{x = 2}\)
-            </li>
+<span>\(\ds \deriv{}{x} [2f(x)]_{x = 2}\)</span>
+</li>
 <li>
-                \(\ds \deriv{}{x} [4f(x) - 3g(x)]_{x = 2}\)
-            </li>
+<span>\(\ds \deriv{}{x} [4f(x) - 3g(x)]_{x = 2}\)</span>
+</li>
 </ol>
  
         </div> 
@@ -1141,17 +1141,17 @@
         Evaluate the following derivatives. 
         <ol class="list-alpha">
 <li>
-                \(\ds \deriv{}{x} [f(x) + g(x)]_{x = -1}\)
-            </li>
+<span>\(\ds \deriv{}{x} [f(x) + g(x)]_{x = -1}\)</span>
+</li>
 <li>
-                \(\ds \deriv{}{x} [g(x) - f(x)]_{x = -1}\)
-            </li>
-<li> 
-                \(\ds \deriv{}{x} [4f(x)]_{x = -1}\)
-            </li>
+<span>\(\ds \deriv{}{x} [g(x) - f(x)]_{x = -1}\)</span>
+</li>
 <li>
-                \(\ds \deriv{}{x} [2g(x) - 5f(x)]_{x = -1}\)
-            </li>
+<span>\(\ds \deriv{}{x} [4f(x)]_{x = -1}\)</span>
+</li>
+<li>
+<span>\(\ds \deriv{}{x} [2g(x) - 5f(x)]_{x = -1}\)</span>
+</li>
 </ol>
  
         </div> 

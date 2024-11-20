@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3.4: Particle Motion</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="Valerie" name="author">
+    <meta charset="UTF-8">
+    <link href="/Valculus/css/hamburger-menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Valculus/css/layout.css" rel="stylesheet">
+    <link href="/Valculus/css/layout-print.css" media="print" rel="stylesheet">
+    <link href="/Valculus/images/favicon.png" rel="icon">
+    <script crossorigin="anonymous" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="/Valculus/css/notes-style.css" rel="stylesheet">
+<link href="/Valculus/css/notes-style-print.css" media="print" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/Valculus/index.html">
+    <img src="/Valculus/images/logo.png" class="logo-image" alt="">
+    </a>
+<h1>3.4: Particle Motion</h1>
+<main>
+<div class="pdf-panel">
+    <div class="pdf-panel-left">
+      <ul>
+        <li>
+          <button>
+            <a class="link-deactivate" rel="noopener">Section <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="3.4-Particle-Motion-exercises.html">Exercises <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a href="3.4-Particle-Motion-exercises-solutions.html">Exercise Solutions <i class="fa fa-external-link"></i></a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<hr id="mainBodyBegin">
+<!--[[[crefId.Particle-Motion]]]-->
+<p>
+    Isaac Newton invented calculus to model motion in physics.
+    In Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>
+    we used calculus to connect position, velocity and acceleration.
+    Yet properties of first and second derivatives enable us to further analyze these contexts.
+    In this section we study properties of particle motion: calculating when an object changes direction, 
+    how much distance it covers, and whether it is speeding up or slowing down.
+</p>
+
+<p>
+    Let's first review the fundamental terminology in particle motion.
+    Suppose that a particle travels along a line with time \(t.\)
+    Then its position (from a reference point) is given by some function of time, namely, \(s(t).\)
+    If \(s_1\) is the particle's position at \(t = t_1\) and \(s_2\) is its position at some later time \(t = t_2,\)
+    then the particle's <span class="emph">displacement</span> is \(\Delta s\) \(= s_2 - s_1.\)
+    In words, displacement is the difference in a particle's position.
+    (If you walk \(5\) units north and then \(4\) units south, 
+    then your displacement is \(1\) unit north.) 
+    Recall, from Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>, that 
+    the velocity function is the time derivative of position:
+    \[v(t) = \deriv{s}{t} \pd\]
+    The acceleration function is the time derivative of velocity—namely,
+    \[a(t) = \deriv{v}{t} = \derivOrder{s}{t}{2} \pd\]
+    The axis along which the particle travels contains a positive direction and a negative direction.  
+    For example, if a particle moving to the right is defined to have a positive velocity,
+    then its velocity becomes negative upon turning around and moving to the left.  
+    <span class="emph">Speed</span> is the absolute value of velocity,
+    so we define a particle's speed function to be 
+    \[\abs{v(t)} = \abs{s'(t)} \pd\]
+    Hence, velocity is the speed in a certain direction. 
+</p>
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        An object travels in a straight line with time as modeled by the position function 
+        \(s(t) = t^3 + 3t - 4\) for \(t \geq 0.\)
+        Calculate the object's initial velocity and acceleration.
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button">  </button>
+<div id="solution1" class="solution">
+    The word <i>initial</i> means at \(t = 0.\)
+    Taking derivatives, we see 
+    \[
+    \baat{2}
+    v(t) &= s'(t) &&= 3t^2 + 3 \cma \nl 
+    a(t) &= v'(t) &&= 6t \pd
+    \eaat 
+    \]
+    So the initial velocity and acceleration are, respectively,
+    \[
+    \baat{2} 
+    v(0) &= 3(0)^2 + 3 &&= \boxed{3} \nl
+    a(0) &= 6(0) &&= \boxed 0
+    \eaat
+    \]
+</div>
+
+<p>
+    An object changes direction when its velocity function swaps sign. 
+    The First-Derivative Test 
+    (from Section <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>)
+    asserts that a function has relative extrema 
+    when its derivative function changes sign.
+    Since \(s'(t)\) \(= v(t),\) the times at which a particle changes direction correspond 
+    to the relative extrema of \(s(t).\)
+</p>
+
+<div class="example-title"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        A particle travels along a line with time \(t \geq 0\)
+        as represented by the position function 
+        \[s(t) = \tfrac{1}{3} t^3 - 5t^2 + 16t + 4 \pd\]
+        When does the particle change direction?
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button">  </button>
+<div id="solution2" class="solution">
+    <figure class="particle-turning-pts-graph" id="particle-turning-pts-graph">
+        <img src="../images/sectionImages/particle-turning-pts-graph.jpg" alt="Figure 1">
+    </figure>
+    <style>
+        .particle-turning-pts-graph::before{
+            content:'FIGURE 1';
+        }
+    </style> 
+    The particle changes direction when the velocity function \(v(t)\) \(= s'(t)\) switches sign.
+    Differentiating and factoring, we see
+    \[
+    \ba
+    v(t) &= t^2 - 10t + 16 \nl 
+    &= (t - 8)(t - 2) \pd
+    \ea
+    \]
+    The zeros of \(v(t)\) are \(t = 2\) and \(t = 8;\)
+    the following table gives the function's sign across the intervals bounded by these zeros.
+    <table class="table-vertical table-centered">
+        <tr>
+            <td class="label-cell">
+                Interval of \(t\)
+            </td>
+            <td class="label-cell">
+                \(v(t) = (t - 8)(t - 2)\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((0, 2)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((2, 8)\)
+            </td>
+            <td>
+                \(-\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((8, \infty)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+        </tr>
+    </table>
+    Hence, the particle turns around at \(\boxed{t = 2}\) and \(\boxed{t = 8}.\)
+    The graph of \(s(t)\) is shown in <a href="#particle-turning-pts-graph">Figure 1</a>,
+    and a (figurative) schematic diagram of the particle's path is shown in 
+    <a href="#particle-turning-pts-line">Figure 2</a>.
+    <figure class="particle-turning-pts-line figure-wide" id="particle-turning-pts-line">
+        <img src="../images/sectionImages/particle-turning-pts-line.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .particle-turning-pts-line::before{
+            content:'FIGURE 2';
+        }
+    </style> 
+</div>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        A bicyclist rides along the \(x\)-axis with time \(t \geq 0\)
+        as modeled by the position function 
+        \[x(t) = 2t^4 - 8t^3 + 8t^2 + 16 \pd\]
+        Calculate the total distance the bicyclist travels from \(t = 0\)
+        to \(t = 3.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button">  </button>
+<div id="solution3" class="solution">
+    <aside class="box-caution">
+        Do not confuse <i>distance</i> with <i>displacement</i>. 
+        The bicyclist's displacement over \(0 \leq t \leq 3\) is 
+        \[x(3) - x(0) = 18 \pd\]
+    </aside>
+    By differentiating, the velocity function is
+    \[
+    \ba
+    v(t) &= 8t^3 - 24t^2 + 16t \nl 
+    &= 8t (t^2 - 3t + 2) \nl 
+    &= 8t (t - 2)(t - 1) \pd
+    \ea
+    \]
+    The zeros of \(v(t)\) are \(t = 0,\) \(t = 1,\) and \(t = 2.\)
+    The following table shows the function's sign across the intervals bounded by these zeros.
+    <table class="table-vertical table-centered table-full-width">
+        <tr>
+            <td class="label-cell">
+                Interval of \(t\)
+            </td>
+            <td class="label-cell">
+                \(v(t) = 8t (t - 2)(t - 1)\)
+            </td>
+            <td class="label-cell">
+                Displacement
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((0, 1)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+            <td>
+                \(x(1) - x(0) = 2\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((1, 2)\)
+            </td>
+            <td>
+                \(-\)
+            </td>
+            <td>
+                \(x(2) - x(1) = -2\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((2, 3)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+            <td>
+                \(x(3) - x(2) = 18\)
+            </td>
+        </tr>
+    </table>
+    The bicycle's turning points are at \(t = 1\) and \(t = 2.\)
+    The total distance traveled over \(0 \leq t \leq 3\) is the sum of the 
+    absolute values of the displacements—namely, 
+    \[d = \abs{2} + \abs{-2} + \abs{18} = \boxed{22}\]
+    Geometrically, these absolute value expressions are the lengths of the horizontal segments of the schematic diagram in
+    <a href="#particle-bike-pts-line">Figure 3</a>.
+    <figure class="particle-bike-pts-line figure-wide" id="particle-bike-pts-line">
+        <img src="../images/sectionImages/particle-bike-pts-line.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .particle-bike-pts-line::before{
+            content:'FIGURE 3';
+        }
+    </style> 
+</div>
+
+<p>
+    When you step on the gas pedal, the car is propelled in the same direction it's facing, 
+    so you speed up. 
+    In contrast, by pressing the brake pedal, the car is pushed in the opposite direction 
+    and so you slow down. 
+    Thus, a particle is <span class="emph">speeding up</span> if the acceleration is in the direction of motion,
+    and <span class="emph">slowing down</span> if the acceleration is <i>opposite</i> the direction of motion. 
+    For example, a particle with negative velocity and negative acceleration is speeding up.
+    But the particle is slowing down if the acceleration is positive, 
+    since it is being pushed in the positive direction (opposing its motion in the negative direction).
+    We summarize this logic as follows.
+</p>
+
+<div class="box-title">SPEEDING UP AND SLOWING DOWN</div>
+<div class="box">
+    A particle moving along a straight line is 
+    <ol class="list-alpha">
+        <li>
+            <span class="emph">speeding up</span> if its velocity and acceleration have the same sign.
+        </li>
+        <li>
+            <span class="emph">slowing down</span> if its velocity and acceleration have opposite signs.
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        An object moves along the \(y\)-axis with time \(t \geq 0\)
+        according to the position function \(y(t) = \sin^2 4t.\)
+        When \(t = \pi/12,\) is the object speeding up or slowing down?
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button">  </button>
+<div id="solution4" class="solution">
+    Differentiating \(y(t)\) gives the velocity function 
+    \[
+    \ba
+    v(t) &= 8 \sin 4t \cos 4t \nl 
+    &= 4 \sin 8t \pd
+    \ea
+    \]
+    (The last step is true by the double-angle identity for sine.)
+    Then the acceleration function is \(v'(t),\) that is,
+    \[a(t) = 32 \cos 8t \pd\]
+    We see \(v(\pi/12) = 2 \sqrt 3\) and \(a(\pi/12) = -16.\)
+    Because these signs are different, the object is <b>slowing down</b>.
+</div>
+
+<div class="section-summary">
+    <p class="p-no-indent">
+        If a particle travels along a line with time \(t,\) 
+        as modeled by the position function \(s(t),\) 
+        then its velocity function is \(v(t) = \textderiv{s}{t}\)
+        and its acceleration function is \(a(t)\) \(= \textderiv{v}{t}\) \(= \textderivOrder{s}{t}{2}.\)
+        If \(s(t_1) = s_1\) and \(s(t_2) = s_2,\) where \(t_2 \gt t_1,\)
+        then the particle's <span class="emph">displacement</span> on \([t_1, t_2]\) is 
+        \(\Delta s =\) \(s_2 - s_1.\)
+        Since <span class="emph">speed</span> is the absolute value of velocity, 
+        we define a particle's speed function to be \(\abs{v(t)}.\)
+        The times at which a particle changes direction correspond to the relative extrema of \(s(t);\)
+        the object switches direction when the velocity function changes sign.
+        In addition, a particle is 
+        <ol class="list-alpha">
+            <li>
+                <span class="emph">speeding up</span> if its velocity and acceleration have the same sign.
+            </li>
+            <li>
+                <span class="emph">slowing down</span> if its velocity and acceleration have opposite signs.
+            </li>
+        </ol>
+    </p>
+</div>
+</main>
+</main>
+<!-- <footer>
+    <div class="footer-body">
+        <div class="footer-nav-column">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html">Home</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/about.html">About</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html">FAQ</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Contact</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Extra Help</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/test-taking-tips.html">Test-Taking Tips</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/additional-resources.html">Additional Resources</a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/index.html"> Section Notes </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> AP Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Before Taking Calculus  </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/faq.html"> Practice Tests  </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="footer-nav-column">
+            <h3>Technical</h3>
+            <ul>
+                <li>
+                    <a href="/Valculus/terms-of-use.html"> Terms of Use </a> 
+                </li>
+                <li>
+                    <a href="/Valculus/index.html">Report a Problem</a> 
+                </li>
+
+                <li>
+                    <a href="/Valculus/faq.html">Privacy Policy</a> 
+                </li>
+                <li>
+                    <a href="/Valculus/contact.html">Donate</a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer> -->
+
+    <script src="/Valculus/js/mathjax-config.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script async="async" id="AMSmath" src="TeX/AMSmath.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/Valculus/js/toggle-solutions.js"></script>
+</body>
