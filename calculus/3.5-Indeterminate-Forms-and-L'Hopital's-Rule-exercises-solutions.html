@@ -48,7 +48,7 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \lim_{x \to 0} \frac{2x}{\sin x }\]
+        \[\ds \lim_{x \to 0} \frac{2x}{\sin x}\]
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
@@ -146,7 +146,7 @@
         \]
         The graph of \(y = 1/(8 - 2x)\) has a vertical asymptote at \(x = 4,\)
         so the curve is unbounded there.
-        Thus, the limit does not exist.
+        Thus, the limit <b>does not exist</b>.
      
         </div> 
        </div>  
@@ -366,7 +366,7 @@
         \[\sqrt{x^2 + 4x} \to \infty \and x \to \infty \pd \] 
         Both terms tend to infinity, so the limit of their difference is in the indeterminate form 
         \(\infty - \infty.\) 
-        But we re-express the difference by rationalizing:
+        But we reexpress the difference by rationalizing:
         \[
         \ba 
         \sqrt{x^2 + 4x} - x &amp;= \frac{\sqrt{x^2 + 4x} - x}{1} \cdot \frac{\sqrt{x^2 + 4x} + x}{\sqrt{x^2 + 4x} + x} \nl
@@ -458,9 +458,9 @@
         which is in the indeterminate form \(\indZero.\) 
         Therefore, we apply L'Hôpital's Rule to get 
         \[\lim_{x \to 0} \frac{1 - 2 \cos x}{\sin x + x \cos x} \pd \]
-        As \(x \to 0,\)
-        \[1 - 2 \cos x \to -1 \and \sin x + x \cos x \to 0 \cma\]
-        so the limit does not exist.
+        The graph of this function has a vertical asymptote at \(x = 0\)
+        since the denominator is \(0\) while the numerator is nonzero.
+        The limit therefore <b>does not exist</b>.
      
         </div> 
        </div>  
@@ -489,8 +489,12 @@
         We then apply L'Hôpital's Rule to get 
         \[\lim_{x \to 1^+} \frac{\dfrac{x - 4 \sqrt{x - 1}}{2x\sqrt{x - 1}}}{\dfrac{2x + x \ln x - 2}{2x \sqrt{x - 1}}} 
         = \lim_{x \to 1^+} \frac{x - 4 \sqrt{x - 1}}{2x + x \ln x - 2} \pd \]
-        Performing direct substitution gives the form \(1/0,\) 
-        so the limit does not exist.
+        The graph of 
+        \[y = \frac{x - 4 \sqrt{x - 1}}{2x + x \ln x - 2}\]
+        has a vertical asymptote at \(x = 1\)
+        because the denominator is \(0\) while the numerator is nonzero.
+        As \(x \to 1^+,\) the fraction is positive,
+        so the limit is \(\boxed{\infty}.\)
      
         </div> 
        </div>  
@@ -501,53 +505,11 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \lim_{x \to 1^+} \left(\frac{2}{3x - 3} \right)^{\ln x }\]
-    </blockquote> evaluate the limit if it exists. 
-        </div> 
-        <hr> 
-        <div class="box-solution__solution" id="solution-16"> 
-            <span class="solution-text">SOLUTION</span> 
-            
-        As \(x \to 1^+,\) 
-        \[\frac{2}{3x - 3} \to \infty \and \ln x \to 0 \cma \] 
-        so this limit is in the indeterminate form \(\infty^0.\) 
-        We let 
-        \[y = \left(\frac{2}{3x - 3}\right)^{\ln x} \pd \]
-        Then 
-        \[ 
-        \ba 
-        \ln y &amp;= \ln(x) \ln \left(\frac{2}{3x - 3}\right) \nl
-        &amp;= \ln \left(\frac{2}{3x - 3} + x \right) \pd 
-        \ea 
-        \]
-        We then find 
-        \[
-        \ba 
-        \lim_{x \to 1^+} \ln y &amp;= \lim_{x \to 1^+} \ln \left(\frac{2}{3x - 3} + x \right) \nl
-        &amp;= \ln \left(\lim_{x \to 1^+} \left(\frac{2}{3x - 3} + x \right) \right) \nl
-        &amp;= \ln \infty \nl
-        &amp;= \infty \pd 
-        \ea 
-        \]
-
-        It then follows that 
-        \[\lim_{x \to 1^+} y = e^\infty \] 
-        or that the limit does not exist. 
-     
-        </div> 
-       </div>  
-   </div> 
-</div><div id="exercise-17"> 
-  <div class="box-solution__head">     EXERCISE 17 </div> 
-  <div class="box-solution">
-   <div class="box-solution__body"> 
-        <div class="box-solution__problem"> 
-            For <blockquote class="box-problem-display"> 
         \[\ds \lim_{t \to 1^+} \left(1 + \ln t \right)^{2/(t - 1)}\]
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-17"> 
+        <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(t \to 1^+,\) 
@@ -577,8 +539,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -587,7 +549,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0^-,\)
@@ -630,8 +592,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -640,7 +602,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0^+,\) \(\tan x\to 0\) and \(x \to 0.\) 
@@ -673,8 +635,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -683,7 +645,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
         The limit is in the indeterminate form \(\infty^0\) 
@@ -713,8 +675,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -723,7 +685,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         The limit is in the indeterminate form \(\infty^0.\)
@@ -739,7 +701,7 @@
         \[
         \ba 
         \lim_{x \to 0^+} \ln y 
-        &amp;= \lim_{x \to 0^+} \frac{-\csc(x)\cot(x)/\csc(x)}{-1/x^2} \nl
+        &amp;= \lim_{x \to 0^+} \frac{-\csc x \cot x/\csc x}{-1/x^2} \nl
         &amp;= \lim_{x \to 0^+} x^2 \cot x \nl
         &amp;= \lim_{x \to 0^+} \frac{x^2 \cos x}{\sin x} \cma 
         \ea 
@@ -759,8 +721,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -769,7 +731,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0^+,\) \(x \to 0\) and \(1/\ln x \to 0.\) 
@@ -789,8 +751,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -799,7 +761,7 @@
     </blockquote> evaluate the limit if it exists. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
             
         As \(x \to 0^+,\) 
@@ -815,13 +777,57 @@
         \lim_{x \to 0^+} \ln y &amp;= \lim_{x \to 0^+} \frac{1}{x} \ln \left(1 + \frac{2}{x} - x \right) \pd 
         \ea 
         \]
-
         As \(x \to 0^+,\)
         \(1/x \to \infty\) and \((1 + 2/x - x) \to \infty.\)  
         Thus, \(\lim_{x \to 0^+} \ln y = \infty.\)  
         Then 
         \[\lim_{x \to 0^+} y = e^\infty = \infty \cma \]
         or we say that \(\lim_{x \to 0^+} y\) does not exist.
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \lim_{x \to 1^+} \left(\frac{2}{3x - 3} \right)^{\ln x }\]
+    </blockquote> evaluate the limit if it exists. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        As \(x \to 1^+,\) 
+        \[\frac{2}{3x - 3} \to \infty \and \ln x \to 0 \cma \] 
+        so this limit is in the indeterminate form \(\infty^0.\) 
+        We let 
+        \[y = \left(\frac{2}{3x - 3}\right)^{\ln x} \pd \]
+        Then 
+        \[ 
+        \ba 
+        \ln y = (\ln x) \ln \left(\frac{2}{3x - 3}\right) \pd
+        \ea 
+        \]
+        As \(x \to 1^+,\) 
+        \[\ln x \to 0 \and \ln \left(\frac{2}{3x - 3}\right) \to \infty \cma\]
+        so \(\lim_{x \to 1^+} \ln y\) is in the indeterminate form \(0 \times \infty.\)
+        We rewrite the product as a quotient:
+        \[\ln y = \frac{\ln \left(\dfrac{2}{3x - 3}\right)}{1/\ln x} = \frac{-\ln (3x - 3) + \ln 2}{1/\ln x} \pd\]
+        Then by L'Hôpital's rule, 
+        \[
+        \ba 
+        \lim_{x \to 1^+} \ln y &amp;= \lim_{x \to 1^+} \frac{-\dfrac{3}{3x - 3}}{-\dfrac{1}{x (\ln x)^2}} \nl 
+        &amp;= \lim_{x \to 1^+} \frac{x (\ln x)^2}{x - 1} \nl 
+        &amp;= \lim_{x \to 1^+} \frac{(\ln x)^2 + \dfrac{2x \ln x}{x}}{1} \nl 
+        &amp;= \lim_{x \to 1^+} \left[(\ln x)^2 + 2 \ln x\right] \nl 
+        &amp;= 0 \pd
+        \ea 
+        \]
+        It then follows that 
+        \[\lim_{x \to 1^+} y = e^0 = \boxed{1}\] 
      
         </div> 
        </div>  
@@ -918,7 +924,7 @@
         and 
         \(\ds \lim_{x \to \infty} g'(x) = 8.\)
         Find 
-        \[\lim_{x \to \infty} \left(\frac{f(x)}{g(x)}\right)^2\]
+        \[\lim_{x \to \infty} \left[\frac{f(x)}{g(x)}\right]^2\]
         if it exists.
      
         </div> 
@@ -928,14 +934,14 @@
             
         We rewrite the limit as 
         \[
-        \left(\lim_{x \to \infty} \frac{f(x)}{g(x)} \right)^2 \pd 
+        \left[\lim_{x \to \infty} \frac{f(x)}{g(x)} \right]^2 \pd 
         \]
         As \(x \to \infty,\) \(f(x) \to 0\) and \(g(x) \to 0.\) 
         Thus, \(\lim_{x \to \infty} f(x)/g(x)\) is in the indeterminate form \(\indZero.\)
-        So we apply L'Hôpital's Rule—differentiating \(f\) and \(g\)—to find 
+        So we apply L'Hôpital's Rule, differentiating \(f\) and \(g,\) as well as the Limit Laws to find 
         \[
         \ba 
-        \left(\lim_{x \to \infty} \frac{f(x)}{g(x)} \right)^2 &amp;= \left(\lim_{x \to \infty} \frac{f'(x)}{g'(x)} \right)^2 \nl
+        \left[\lim_{x \to \infty} \frac{f(x)}{g(x)} \right]^2 &amp;= \left[\lim_{x \to \infty} \frac{f'(x)}{g'(x)} \right]^2 \nl
         &amp;= \left(\frac{5}{8}\right)^2 \nl 
         &amp;= \boxed{\frac{25}{64}}
         \ea 
@@ -950,12 +956,14 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
-        Let \(f\) be a twice-differentiable function. It is known that 
-        \(\ds \lim_{x \to 0} f(x) = 3,\) 
-        \(\ds \lim_{x \to 0} f'(x) = 0,\) and 
-        \(\ds \lim_{x \to 0} f''(x) = 1.\) 
+        Let \(f\) and \(g\) be twice-differentiable functions.
+        It is known that 
+        \[\lim_{x \to \infty} f(x) = \lim_{x \to \infty} g(x) = 0 \cma\]
+        \(\lim_{x \to \infty} f'(x) = 5,\)
+        and 
+        \(\lim_{x \to \infty} g'(x) = 8.\)
         Find 
-        \[\lim_{x \to 0} \frac{4f(x) - 12 \cos x}{x^2}\]  
+        \[\lim_{x \to \infty} \left[\frac{f(x)}{g(x)}\right]^2\]
         if it exists.
      
         </div> 
@@ -963,16 +971,18 @@
         <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
-        As \(x \to 0,\) 
-        \[[4f(x) - 12 \cos(x)] \to 0 \and x^2 \to 0 \pd \] 
-        Therefore, the limit is in the indeterminate form \(\indZero.\) 
-        Applying L'Hôpital's Rule then shows 
+        We rewrite the limit as 
+        \[
+        \left[\lim_{x \to \infty} \frac{f(x)}{g(x)} \right]^2 \pd 
+        \]
+        As \(x \to \infty,\) \(f(x) \to 0\) and \(g(x) \to 0.\) 
+        Thus, \(\lim_{x \to \infty} f(x)/g(x)\) is in the indeterminate form \(\indZero.\)
+        So we apply L'Hôpital's Rule, differentiating \(f\) and \(g,\) as well as the Limit Laws to find 
         \[
         \ba 
-        \lim_{x \to 0} \frac{4f(x) - 12 \cos(x)}{x^2} &amp;= \lim_{x \to 0} \frac{4f'(x) + 12 \sin x}{2x} \nl 
-        &amp;= \lim_{x \to 0} \frac{4f''(x) + 12 \cos x}{2} \nl
-        &amp;= \frac{4(1) + 12 \cos 0}{2} \nl
-        &amp;= \boxed{8}
+        \left[\lim_{x \to \infty} \frac{f(x)}{g(x)} \right]^2 &amp;= \left[\lim_{x \to \infty} \frac{f'(x)}{g'(x)} \right]^2 \nl
+        &amp;= \left(\frac{5}{8}\right)^2 \nl 
+        &amp;= \boxed{\frac{25}{64}}
         \ea 
         \]
      
@@ -1076,7 +1086,7 @@
                 \]
             </li>
 <li>
-                Let us introduce a new variable \(q\) such that 
+                Let's introduce a new variable \(q\) such that 
                 \(q = -p.\) 
                 We then have 
                 \[\lim_{x \to \infty} k(x) = \lim_{x \to \infty} x^q \ln x \cma q \gt 0 \pd\]  

@@ -302,7 +302,7 @@
 <div class="example">
     <div class="example-problem">  
         Compute the following derivatives.
-        <ol class="list-roman">
+        <ol class="list-alpha">
             <li>
                 <span>\(\ds \deriv{}{x}(3x + 2)\)</span>
             </li>
@@ -319,7 +319,7 @@
 <div id="solution2" class="solution">
     In each part, we need a derivative <i>function</i>. 
     Thus, we use \(\eqrefer{eq:lim-defn}\) for each part.
-    <ol class="list-roman">
+    <ol class="list-alpha">
         <li>
             Using \(\eqref{eq:lim-defn},\) we have \(f(x) = 3x + 2\) and \(f(x + h) = 3(x + h) + 2.\)  
             Thus, 
@@ -478,7 +478,7 @@
             }
         </style>
         In <a href="#deriv-ex-graph">Figure 7</a>, evaluate the following derivatives if they exist. 
-        <ol class="list-roman">
+        <ol class="list-alpha">
             <li>
                 <span>\(g'(-4)\)</span>
             </li>
@@ -501,7 +501,7 @@
 <div id="solution3" class="solution">
     It is important not to confuse \(g\) and \(g'.\)
     The value \(g'(x)\) is the <i>slope</i> of \(g\) at \(x.\)
-    <ol class="list-roman">
+    <ol class="list-alpha">
         <li>
             At \(x = -4\) the slope of \(g\) is \(1.\)
             Therefore, \(g'(-4) = 1.\)
@@ -736,7 +736,7 @@
             }
         </style>
         In <a href="#deriv-ex-graph-properties">Figure 12</a>, evaluate the following derivatives if they exist. 
-        <ol class="list-roman">
+        <ol class="list-alpha">
             <li>
                 <span>\((f + g)'(2)\)</span>
             </li>
@@ -755,7 +755,7 @@
 </div>
 <button onclick="toggle5()" class="solution-button"></button>
 <div id="solution5" class="solution">
-    <ol class="list-roman">
+    <ol class="list-alpha">
         <li>
             By the Sum Rule for Derivatives,
             the derivative of a sum is the sum of derivatives. 
@@ -1037,12 +1037,12 @@
         The process of calculating the derivative of \(f\) at point \(P(x, f(x))\) is as follows:
         Construct a <span class="emph">secant</span> line that passes through point \(P\)
         and another point \(Q(x + h, f(x + h))\) on the graph of \(f.\) 
-        Taking \(h \to 0,\) the secant line becomes the tangent line, whose slope is 
+        By taking \(h \to 0,\) the secant line becomes the tangent line, whose slope is 
         \begin{equation} 
         f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \pd \eqlabel{eq:lim-defn}  
         \end{equation}
         If the limit exists, then \(\eqref{eq:lim-defn}\) gives the derivative of \(f\) as a <i>function</i> of \(x;\)
-        we call \(\eqref{eq:lim-defn}\) the <span class="emph">derivative function</span> of \(f.\)
+        we call \(f'\) the <span class="emph">derivative function</span> of \(f.\)
     </p>
     <p>
         <a class="summary-anchor" href="#deriv-point">Derivative at a Point</a>
@@ -1096,6 +1096,8 @@
         Using prime notation, the second derivative of \(y = f(x)\) is \(f''(x)\) or \(y''(x).\)
         The \(n\)th derivative is \(f^{(n)}(x)\) or \(y^{(n)}(x).\)
         Do <span class="warning">not</span> write \(f^{n}(x).\)
+        In Leibniz notation, we have
+        \[\deriv{^2 y}{x^2} = \deriv{}{x} \left(\deriv{y}{x} \right) \pd\]
     </p>
     <p>
         <a class="summary-anchor" href="#pos-vel-acc">Position, Velocity, and Acceleration</a>

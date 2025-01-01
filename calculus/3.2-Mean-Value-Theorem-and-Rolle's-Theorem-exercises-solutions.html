@@ -48,23 +48,22 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) = \cos(2x) \comma 0 \leq x \leq \frac{\pi}{2} \]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) = \cos(2x) \cmaa 0 \leq x \leq \frac{\pi}{2} \]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-1"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The average rate of change of \(f(x)\) over \(0 \leq x \leq \frac{\pi}{2}\) is 
-        \[\frac{\sin \frac{\pi}{2} - \sin 0}{\frac{\pi}{2} - 0} = 0 \period \] 
-        Because \(f(x)\) is continuous on \(0 \leq x \leq \frac{\pi}{2}\) 
-        and differentiable on \(0 \lt x \lt \frac{\pi}{2},\)
-        the Mean Value Theorem (or Rolle's Theorem, given that the average rate of change is zero)  
-        guarantees a value \(c\) such that 
-        \[f'(c) = 0 \period\]
-        We then have 
+        The average rate of change of \(f(x)\) over \([0, \pi/2]\) is 
+        \[\frac{\sin \frac{\pi}{2} - \sin 0}{\frac{\pi}{2} - 0} = 0 \pd \] 
+        Because \(f(x)\) is continuous on \([0, \pi/2]\) 
+        and differentiable on \((0, \pi/2),\)
+        Rolle's Theorem
+        guarantees a value \(c\) in \((0, \pi/2)\) such that 
+        \[f'(c) = 0 \pd\]
+        Solving shows
         \[f'(c) = 2 \cos(2c) = 0 \implies \boxed{c = \frac{\pi}{4}}\]
-        as the value that satisfies the Mean Value Theorem for \(f\) over \([0, \frac{\pi}{2}].\)
      
         </div> 
        </div>  
@@ -75,22 +74,22 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) =  3x^2 - 8x + 11 \comma 1 \leq x \leq 4\]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) =  3x^2 - 8x + 11 \cmaa 1 \leq x \leq 4\]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-2"> 
             <span class="solution-text">SOLUTION</span> 
             
-        The average rate of change of \(f(x)\) over the interval \(1 \leq x \leq 4\) is 
-        \[\frac{f(4) - f(1)}{4 - 1} = 7 \period \] 
-        \(f(x)\) is a polynomial, so it's continuous over \(1 \leq x \leq 4\) 
-        and differentiable over \(1 \lt x \lt 4.\)
+        The average rate of change of \(f(x)\) over the interval \([1, 4]\) is 
+        \[\frac{f(4) - f(1)}{4 - 1} = 7 \pd \] 
+        Since \(f(x)\) is a polynomial, it's continuous over \([1, 4]\) 
+        and differentiable over \((1, 4).\)
         Thus, the Mean Value Theorem guarantees a value \(c\) in \((1, 4)\) such that 
-        \[f'(c) = 7 \period\]
+        \[f'(c) = 7 \pd\]
         Solving, we have 
         \[
-        f'(c) = 6c - 8 = 7 \implies \boxed{c = \frac{5}{2}}
+        f'(c) = 6c - 8 = 7 \implies \boxed{c = \tfrac{5}{2}}
         \]
      
         </div> 
@@ -102,27 +101,27 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) = \frac{1}{3} x^3 - x^2 -3x - 15 \comma 0 \leq x \leq 3 \]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) = \tfrac{1}{3} x^3 - x^2 -3x - 15 \cmaa 0 \leq x \leq 3 \]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-3"> 
             <span class="solution-text">SOLUTION</span> 
             
-        Since \(f\) is a polynomial, \(f(x)\) is continuous for \(0 \leq x \leq 3\)
-        and differentiable for \(0 \lt x \lt 3.\)
+        Since \(f\) is a polynomial, it is continuous on \([0, 3]\)
+        and differentiable on \((0, 3).\)
         Therefore, the Mean Value Theorem guarantees a value \(c\) in \((0, 3)\)
         such that 
-        \[f'(c) = \frac{f(3) - f(0)}{3 - 0} = -3 \period\]
-        Moreover, \(f'(x) = x^2 - 2x - 3.\) Then we set \(f'(c) = -3\) to get 
+        \[f'(c) = \frac{f(3) - f(0)}{3 - 0} = -3 \pd\]
+        Moreover, \(f'(x) = x^2 - 2x - 3,\) so we solve \(f'(c) = -3\) as follows: 
         \[
         \ba 
-        f'(c) = c^2 - 2c - 3 &amp;= -3 \\
-        c^2 - 2c &amp;= 0 \implies c = 0 \comma c = 2 \period
+        f'(c) = c^2 - 2c - 3 &amp;= -3 \nl
+        c^2 - 2c &amp;= 0 \nl 
+        \implies c &amp;= 0 \cma c = 2 \pd
         \ea 
         \]
-        We find \(\boxed{c = 2}\) to be in \((0, 3),\) so this value satisfies the Mean Value Theorem
-        for \(f\) over \([0, 3].\)
+        Only \(\boxed{c = 2}\) is in \((0, 3).\)
      
         </div> 
        </div>  
@@ -133,15 +132,15 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) = \abs{2 - x} \comma 0 \leq x \leq 4\]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) = \abs{2 - x} \cmaa 0 \leq x \leq 4\]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-4"> 
             <span class="solution-text">SOLUTION</span> 
             
         The function \(f(x)\) isn't differentiable at \(x = 2,\)
-        so no value satisfies the Mean Value Theorem over \(0 \leq x \leq 4.\)
+        so <b>no value</b> satisfies the Mean Value Theorem over \(0 \leq x \leq 4.\)
      
         </div> 
        </div>  
@@ -152,24 +151,24 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) = 5e^x \comma 0 \leq x \leq \ln 3\]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) = 5e^x \cmaa 0 \leq x \leq \ln 3\]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-5"> 
             <span class="solution-text">SOLUTION</span> 
             
         Exponential functions are continuous and differentiable for all values in their domain.
-        Thus, \(f(x)\) is continuous for \(0 \leq x \leq \ln 3\) and 
-        differentiable for \(0 \lt x \lt \ln 3.\) 
+        Thus, \(f(x)\) is continuous on \([0, \ln 3]\) and 
+        differentiable on \((0, \ln 3).\) 
         The Mean Value Theorem then guarantees a value \(c\) in \((0, \ln 3)\) such that 
-        \[f'(c) = \frac{f(\ln 3) - f(0)}{\ln(3) - 0} = \frac{10}{\ln 3} \period\]
+        \[f'(c) = \frac{f(\ln 3) - f(0)}{\ln(3) - 0} = \frac{10}{\ln 3} \pd\]
         Solving, we have 
         \[
         \ba 
-        f'(c) = 5e^c &amp;= \frac{10}{\ln 3} \\[2ex]
-        e^c &amp;= \frac{2}{\ln 3} \\[2ex] 
-        c &amp;= \boxed{\ln \left( \frac{2}{\ln 3} \right)}
+        f'(c) = 5e^c &amp;= \frac{10}{\ln 3} \nl
+        e^c &amp;= \frac{2}{\ln 3} \nl 
+        \implies c &amp;= \boxed{\ln \left( \frac{2}{\ln 3} \right)} \approx 0.599 \pd
         \ea 
         \]
      
@@ -182,8 +181,8 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds f(x) = \frac{1}{3} x^3 - x^2 -x + 8 \comma -3 \leq x \leq 3\]
-    </blockquote> find the values that satisfy the Mean Value Theorem for \(f\) on the given interval. 
+        \[\ds f(x) = \tfrac{1}{3} x^3 - x^2 -x + 8 \cmaa -3 \leq x \leq 3\]
+    </blockquote> find the values that satisfy the Mean Value Theorem or Rolle's Theorem for the function on the given interval. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-6"> 
@@ -191,15 +190,15 @@
             
         Since \(f\) is a polynomial, it is continuous on \([-3, 3]\) and differentiable on \((-3, 3).\)
         Thus, the Mean Value Theorem guarantees a value \(c\) in \((-3, 3)\) such that 
-        \[f'(c) = \frac{f(3) - f(-3)}{3 - (-3)} = 2 \period\]
+        \[f'(c) = \frac{f(3) - f(-3)}{3 - (-3)} = 2 \pd\]
         Solving, we have 
         \[
         \ba 
-        f'(c) = c^2 - 2c - 1 &amp;= 2 \\
-        c^2 - 2c - 3 &amp;= 0 \comma \\
+        f'(c) = c^2 - 2c - 1 &amp;= 2 \nl
+        c^2 - 2c - 3 &amp;= 0 \cma
         \ea 
         \]
-        whose solution in \((-3, 3)\) is \(\boxed{c = -1 \period}\)
+        whose solution in \((-3, 3)\) is \(\boxed{c = -1}.\)
      
         </div> 
        </div>  
@@ -223,19 +222,20 @@
         Moreover, the average rate of change of \(g\) over \([0, k]\) is 
         \[
         \ba 
-        \frac{g(k) - g(0)}{k - 0} &amp;= \frac{ak^2 + bk}{k} \\[2ex]
-        &amp;= ak + b \period
+        \frac{g(k) - g(0)}{k - 0} &amp;= \frac{ak^2 + bk}{k} \nl
+        &amp;= ak + b \pd
         \ea 
         \]
         Therefore, the Mean Value Theorem guarantees a value \(c\) in \((0, k)\) such that
-        \[g'(c) = ak + b \period \]
+        \[g'(c) = ak + b \pd \]
         Solving, we have 
         \[
         \ba 
-        g'(c) = 2ac + b &amp;= ak + b \\
-        c &amp;= k/2 \period
+        g'(c) = 2ac + b &amp;= ak + b \nl
+        \implies c &amp;= k/2 \cma
         \ea 
         \]
+        as requested.
      
         </div> 
        </div>  
@@ -254,9 +254,9 @@
                 content: 'FIGURE 6'
             }
         </style>
-        The graph of \(y = \) \(f(x)\) is shown in <a href="#graph-mvt-ex1">Figure 6</a>.
+        The graph of \(y = f(x)\) is shown in <a href="#graph-mvt-ex1">Figure 6</a>.
         For \(-2 \lt x \lt 3,\) 
-        \[f(x) = (x - 1)^2 - 6 \period\]
+        \[f(x) = (x - 1)^2 - 6 \pd\]
 
         <ol class="list-alpha">
 <li>
@@ -280,17 +280,17 @@
 <ol class="list-alpha">
 <li>
                 The average rate of change of \(f(x)\) over \(-2 \leq x \leq 3\) is 
-                \[\frac{f(3) - f(-2)}{3 - (-2)} = -1 \period\]
+                \[\frac{f(3) - f(-2)}{3 - (-2)} = \boxed{-1}\]
             </li>
 <li>
-                \(f(x)\) is continuous on \(-2 \leq x \leq 3\) and differentiable on \(-2 \lt x \lt 3.\)
+                Note that \(f(x)\) is continuous on \(-2 \leq x \leq 3\) and differentiable on \(-2 \lt x \lt 3.\)
                 Thus, the Mean Value Theorem guarantees a value \(c\) in \((-2, 3)\) such that 
                 \(f'(c) = -1.\) 
-                We then get 
-                \[f'(c) = 2(c - 1) = -1 \implies \boxed{c = \frac{1}{2}} \]
+                Solving shows
+                \[f'(c) = 2(c - 1) = -1 \implies \boxed{c = \tfrac{1}{2}} \]
             </li>
 <li>
-                No, because \(f(x)\) is not differentiable at every point in \(-6 \lt x \lt 3:\)
+<b>No</b>. The function \(f(x)\) is not differentiable at every point in \(-6 \lt x \lt 3:\)
                 at \(x = -2,\) there is a sharp turn in the graph of \(y = f(x).\)
                 Therefore, the conditions of Rolle's Theorem are not met.
             </li>
@@ -307,7 +307,7 @@
             
 <!--[[[CALC]]]-->
         The amount of snow, in inches, on a road after \(t\) hours is modeled by 
-        \[s(t) = 5 \left(1 - e^{-t/5}\right) \period\]
+        \[s(t) = 5 \left(1 - e^{-t/5}\right) \pd\]
         For what value of \(k,\) \(0 \leq k \leq 5,\) is \(s'(k)\) equal to
         the average rate of change of \(s(t)\) over \(0 \leq t \leq 5 \ques\)
      
@@ -317,8 +317,8 @@
             <span class="solution-text">SOLUTION</span> 
             
         We find the average rate of change of \(s(t)\) over \(0 \leq t \leq 5\) to be 
-        \[\frac{s(5) - s(0)}{5 - 0} \approx 0.632 \; \text{inches}/\text{hr} \period\]
-        We then have \(s(t) = 0.632\) at \(\boxed{t \approx 2.293 \period}\)
+        \[\frac{s(5) - s(0)}{5 - 0} \approx 0.632 \; \text{inches}/\text{hr} \pd\]
+        We then have \(s(t) = 0.632\) at \(\boxed{t \approx 2.293 \pd}\)
      
         </div> 
        </div>  
@@ -346,11 +346,11 @@
         We now show that \(f\) has no other zeros using a Proof By Contradiction:
         We first start by assuming that \(f\) has two zeros, \(x = a\) and \(x = b.\)
         It then follows that 
-        \[f(a) = f(b) = 0 \period\]
+        \[f(a) = f(b) = 0 \pd\]
         Because \(f\) is a polynomial, it is continuous on \([a, b]\) and differentiable on \((a, b).\)
         Thus, Rolle's Theorem states that a value \(c\) in \((a, b)\) must satisfy \(f'(c) = 0.\)
         We then differentiate \(f(x)\) to find 
-        \[f'(c) = 5c^4 + 18c^2 + 4 = 0 \comma\]
+        \[f'(c) = 5c^4 + 18c^2 + 4 = 0 \cma\]
         which has no solution.  
         Therefore, we have a contradiction: 
         \(f\) does not satisfy \(f(a) = f(b) = 0,\)

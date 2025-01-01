@@ -49,7 +49,7 @@
 <tr> 
 <td class="grid-problem-cell"> 
 <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-1" class="problem-number" rel="noopener" target="_blank">\(\hspace{0.56em}1.\)</a> 
-        \(\ds \lim_{x \to 0} \frac{2x}{\sin x }\)
+        \(\ds \lim_{x \to 0} \frac{2x}{\sin x}\)
      
 </td> 
 <td class="grid-problem-cell"> 
@@ -134,46 +134,46 @@
 <tr> 
 <td class="grid-problem-cell"> 
 <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-16" class="problem-number" rel="noopener" target="_blank">\(16.\)</a> 
-        \(\ds \lim_{x \to 1^+} \left(\frac{2}{3x - 3} \right)^{\ln x }\)
-     
-</td> 
-<td class="grid-problem-cell"> 
-<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-17" class="problem-number" rel="noopener" target="_blank">\(17.\)</a> 
         \(\ds \lim_{t \to 1^+} \left(1 + \ln t \right)^{2/(t - 1)}\)
      
 </td> 
 <td class="grid-problem-cell"> 
-<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-18" class="problem-number" rel="noopener" target="_blank">\(18.\)</a> 
+<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-17" class="problem-number" rel="noopener" target="_blank">\(17.\)</a> 
         \(\ds \lim_{x \to 0^-} \left(1 + \sin x\right)^{1/x^2}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-18" class="problem-number" rel="noopener" target="_blank">\(18.\)</a> 
+        \(\ds \lim_{x \to 0^+} \left(\tan x \right)^x\)
      
 </td> 
 </tr> 
 <tr> 
 <td class="grid-problem-cell"> 
 <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-19" class="problem-number" rel="noopener" target="_blank">\(19.\)</a> 
-        \(\ds \lim_{x \to 0^+} \left(\tan x \right)^x\)
-     
-</td> 
-<td class="grid-problem-cell"> 
-<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-20" class="problem-number" rel="noopener" target="_blank">\(20.\)</a> 
         \(\ds \lim_{x \to \infty} \left(\sqrt{x}\right)^{e^{-x}}\)
      
 </td> 
 <td class="grid-problem-cell"> 
-<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-21" class="problem-number" rel="noopener" target="_blank">\(21.\)</a> 
+<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-20" class="problem-number" rel="noopener" target="_blank">\(20.\)</a> 
         \(\ds \lim_{x \to 0^+} \left(\csc x \right)^{x}\)
+     
+</td> 
+<td class="grid-problem-cell"> 
+<a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-21" class="problem-number" rel="noopener" target="_blank">\(21.\)</a> 
+        \(\ds \lim_{x \to 0^+} \left(x\right)^{1/\ln x}\)
      
 </td> 
 </tr> 
 <tr> 
 <td class="grid-problem-cell"> 
 <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-22" class="problem-number" rel="noopener" target="_blank">\(22.\)</a> 
-        \(\ds \lim_{x \to 0^+} \left(x\right)^{1/\ln x}\)
+        \(\ds \lim_{x \to 0^+} \left(1 + \frac{2}{x}\right)^{1/(x \ln x)}\)
      
 </td> 
 <td class="grid-problem-cell"> 
 <a href="3.5-Indeterminate-Forms-and-L'Hopital's-Rule-exercises-solutions.html#exercise-23" class="problem-number" rel="noopener" target="_blank">\(23.\)</a> 
-        \(\ds \lim_{x \to 0^+} \left(1 + \frac{2}{x}\right)^{1/(x \ln x)}\)
+        \(\ds \lim_{x \to 1^+} \left(\frac{2}{3x - 3} \right)^{\ln x }\)
      
 </td> 
 <td class="grid-problem-cell"> 
@@ -217,7 +217,7 @@
         and 
         \(\ds \lim_{x \to \infty} g'(x) = 8.\)
         Find 
-        \[\lim_{x \to \infty} \left(\frac{f(x)}{g(x)}\right)^2\]
+        \[\lim_{x \to \infty} \left[\frac{f(x)}{g(x)}\right]^2\]
         if it exists.
     </ques> 
    </div>  
@@ -231,12 +231,14 @@
    </div> 
     <div class="problem-display-body">
        <ques>
-        Let \(f\) be a twice-differentiable function. It is known that 
-        \(\ds \lim_{x \to 0} f(x) = 3,\) 
-        \(\ds \lim_{x \to 0} f'(x) = 0,\) and 
-        \(\ds \lim_{x \to 0} f''(x) = 1.\) 
+        Let \(f\) and \(g\) be twice-differentiable functions.
+        It is known that 
+        \[\lim_{x \to \infty} f(x) = \lim_{x \to \infty} g(x) = 0 \cma\]
+        \(\lim_{x \to \infty} f'(x) = 5,\)
+        and 
+        \(\lim_{x \to \infty} g'(x) = 8.\)
         Find 
-        \[\lim_{x \to 0} \frac{4f(x) - 12 \cos x}{x^2}\]  
+        \[\lim_{x \to \infty} \left[\frac{f(x)}{g(x)}\right]^2\]
         if it exists.
     </ques> 
    </div>  

@@ -303,7 +303,7 @@
         \ba 
         \int \frac{4 - 3x}{(7x + 3)(4 - x)} \di x 
         &amp;= \int \frac{37/31}{7x + 3} - \frac{8/31}{4 - x} \di x \nl
-        &amp;= \boxed{\frac{37}{217} \ln|7x + 3| + \frac{8}{31} \ln|4 - x| + C }
+        &amp;= \boxed{\frac{37}{217} \ln|7x + 3| + \frac{8}{31} \ln|4 - x| + c }
         \ea 
         \]
      
@@ -316,11 +316,66 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \frac{x}{2x^2 - 5x - 3} \di x\]
+        \[\ds \int \frac{x}{x^2 - x - 12} \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-8"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        Note that the denominator has a higher degree than the numerator,
+        so we immediately proceed with partial fraction decomposition.  
+        We factor the denominator as \((x - 4)(x + 3)\)
+        and write
+        \[
+        \ba 
+        \frac{x}{(x - 4)(x + 3)} = \frac{A}{x - 4} + \frac{B}{x + 3} \pd
+        \ea 
+        \]
+        Both sides have a common denominator, so we equate the numerators to get 
+        \[x = A(x + 3) + B(x - 4) \pd\]
+        At this point, to solve for \(A\) and \(B,\) 
+        we perform a series of substitutions. 
+        If \(x = -3,\) then we obtain
+        \[
+        \ba 
+        -3 &amp;= A(-3 + 3) + B(-3 - 4) \nl
+        -3 &amp;= -7B \nl
+        \frac{3}{7} &amp;= B \pd
+        \ea 
+        \]
+        Similarly, let \(x = 4.\) We then have 
+        \[
+        \ba 
+        4 &amp;= A(4 + 3) + B(4 - 4) \nl 
+        4 &amp;= 7A \nl
+        \frac{4}{7} &amp;= A \pd 
+        \ea
+        \]
+        Therefore, we have 
+        \[
+        \ba
+        \int \frac{x}{(x - 4)(x + 3)} \di x 
+        &amp;= \int \frac{A}{x - 4} + \frac{B}{x + 3} \di x \nl
+        &amp;= \int \frac{4/7}{x - 4} + \frac{3/7}{x + 3} \di x \nl 
+        &amp;= \boxed{\frac{4}{7} \ln|x - 4| + \frac{3}{7} \ln|x + 3| + c}
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-9"> 
+  <div class="box-solution__head">     EXERCISE 9 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{x}{2x^2 - 5x - 3} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-9"> 
             <span class="solution-text">SOLUTION</span> 
             
         Factoring the denominator gives 
@@ -337,15 +392,15 @@
         \[
         \ba 
         \int \frac{x}{2x^2 - 5x - 3} \di x &amp;= \int \frac{3/7}{x - 3} + \frac{1/7}{2x + 1} \di x  \nl
-        &amp;= \boxed{\frac{3}{7} \ln|x - 3| + \frac{1}{14} \ln|2x + 1| + C }
+        &amp;= \boxed{\frac{3}{7} \ln|x - 3| + \frac{1}{14} \ln|2x + 1| + c}
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-9"> 
-  <div class="box-solution__head">     EXERCISE 9 </div> 
+</div><div id="exercise-10"> 
+  <div class="box-solution__head">     EXERCISE 10 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -354,7 +409,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-9"> 
+        <div class="box-solution__solution" id="solution-10"> 
             <span class="solution-text">SOLUTION</span> 
             
         The degree of the numerator isn't less than the degree of the denominator,
@@ -378,24 +433,95 @@
         \ba 
         \int \frac{3t^2 + 2}{5t^2 - 25t} \di t 
         &amp;= \int \frac{3}{5} + \frac{1}{5} \par{ \frac{-2/5}{t} + \frac{77/5}{t - 5} } \di t \nl
-        &amp;= \boxed{\frac{3}{5} t - \frac{2}{25} \ln|t| + \frac{77}{25} \ln|t - 5| + C }
+        &amp;= \boxed{\frac{3}{5} t - \frac{2}{25} \ln|t| + \frac{77}{25} \ln|t - 5| + c }
         \ea 
         \] 
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-10"> 
-  <div class="box-solution__head">     EXERCISE 10 </div> 
+</div><div id="exercise-11"> 
+  <div class="box-solution__head">     EXERCISE 11 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-        \[\ds \int \frac{3}{x(x + 3)(x^2-4)} \di x\]
+        \[\ds \int \frac{2x^2 + 3}{(2x - 3)(4 - x)} \di x\]
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-10"> 
+        <div class="box-solution__solution" id="solution-11"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        In the integrand, the degree of the numerator is equal to the degree of the denominator.
+        Thus, we must first perform polynomial division.
+        Doing so gives 
+        \[\frac{2x^2 + 3}{(2x - 3)(4 - x)} = -1 + \frac{11x - 9}{(4 - x)(2x - 3)} \pd\]
+        We now determine the partial fraction decomposition of \(\frac{11x - 9}{(4 - x)(2x - 3)}.\)
+        The expression contains two linear factors, \((4 - x)\) and \((2x - 3),\) 
+        so we have 
+        \[\frac{11x - 9}{(4 - x)(2x - 3)} = \frac{A}{4 - x} + \frac{B}{2x - 3} \pd\]
+        Multiplying both sides by \((4 - x)(2x - 3)\) produces 
+        \[11x - 9 = A(2x - 3) + B(4 - x) \pd\]
+        To solve for \(A,\) we let \(x = 4 \col\)
+        \[35 = 5A \implies A = 7 \pd\]
+        Similarly, assigning \(x = 3/2\) yields 
+        \[\frac{15}{2} = 0 + \frac{5}{2} B \implies B = 3 \pd\]
+        The new integral is therefore
+        \[\int -1 + \left(\frac{7}{4 - x} + \frac{3}{2x - 3} \right) \di x \pd\]
+        Our final answer is then 
+        \[\boxed{-x - 7\ln|4 - x| + \frac{3}{2} \ln|2x - 3| + c}\]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-12"> 
+  <div class="box-solution__head">     EXERCISE 12 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{x - 1}{x(9 - x^2)} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-12"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        We factor the integrand as 
+        \[\frac{x - 1}{x(3 - x)(3 + x)},\]
+        whose partial fraction decomposition is expressed by
+        \[\frac{x - 1}{x(3 - x)(3 + x)} = \frac{A}{x} + \frac{B}{3 - x} + \frac{C}{3 + x} \pd\]
+        Multiplying both sides by \(x(3 - x)(3 + x)\) produces 
+        \[x - 1 = A(3 - x)(3 + x) + Bx(3 + x) + Cx(3 - x) \pd\]
+        We notice that two terms have the factor \(x,\) 
+        so we eliminate them by letting \(x = 0.\)
+        Doing so allows us to solve for \(A\col\)
+        \[-1 = 9A \implies A = -\frac{1}{9} \pd\]
+        Likewise, letting \(x = 3\) gives 
+        \[2 = 0 + 18B + 0 \implies B = \frac{1}{9} \pd\]
+        Finally, we let \(x = -3\) to get 
+        \[-4 = -18C \implies C = \frac{2}{9} \pd\]
+        Thus, our partial fraction decomposition is 
+        \[\frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \pd\]
+        Integrating, we obtain 
+        \[\int \frac{-1/9}{x} + \frac{1/9}{3 - x} + \frac{2/9}{3 + x} \di x = 
+        \boxed{-\frac{1}{9} \ln|x| - \frac{1}{9} \ln|3 - x| + \frac{2}{9} \ln|3 + x| + c} \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-13"> 
+  <div class="box-solution__head">     EXERCISE 13 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+        \[\ds \int \frac{3}{x(x + 3)(x^2 - 4)} \di x\]
+    </blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-13"> 
             <span class="solution-text">SOLUTION</span> 
             
         The partial fraction decomposition for the integrand is 
@@ -413,13 +539,13 @@
         Substituting these coefficients and integrating yield
         \[\small \int \frac{-1/4}{x} - \frac{1/5}{x + 3} + \frac{3/8}{x + 2} + \frac{3/40}{x - 2} \di x \nl
         = \boxed{-\frac{1}{4} \ln\abs x - \frac{1}{5} \ln|x + 3| + 
-        \frac{3}{8} \ln|x + 2| + \frac{3}{40} \ln|x - 2| + C } \]
+        \frac{3}{8} \ln|x + 2| + \frac{3}{40} \ln|x - 2| + c } \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-11"> 
-  <div class="box-solution__head">     EXERCISE 11 </div> 
+</div><div id="exercise-14"> 
+  <div class="box-solution__head">     EXERCISE 14 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -428,7 +554,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-11"> 
+        <div class="box-solution__solution" id="solution-14"> 
             <span class="solution-text">SOLUTION</span> 
             
         We rewrite the integrand as
@@ -451,15 +577,15 @@
         \ba 
         \int \frac{5}{t(t - 3)^2} \di t 
         &amp;= \int \frac{5/9}{t} - \frac{5/9}{t - 3} + \frac{5/3}{(t - 3)^2} \di t \nl 
-        &amp;= \boxed{\frac{5}{9} \ln|t| - \frac{5}{9} \ln|t - 3| - \frac{5/3}{t - 3} + C }
+        &amp;= \boxed{\frac{5}{9} \ln|t| - \frac{5}{9} \ln|t - 3| - \frac{5/3}{t - 3} + c }
         \ea 
         \] 
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-12"> 
-  <div class="box-solution__head">     EXERCISE 12 </div> 
+</div><div id="exercise-15"> 
+  <div class="box-solution__head">     EXERCISE 15 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -468,7 +594,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-12"> 
+        <div class="box-solution__solution" id="solution-15"> 
             <span class="solution-text">SOLUTION</span> 
             
         We rewrite the integrand as
@@ -489,8 +615,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-13"> 
-  <div class="box-solution__head">     EXERCISE 13 </div> 
+</div><div id="exercise-16"> 
+  <div class="box-solution__head">     EXERCISE 16 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -499,7 +625,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-13"> 
+        <div class="box-solution__solution" id="solution-16"> 
             <span class="solution-text">SOLUTION</span> 
             
         We re-express the integrand as 
@@ -518,15 +644,15 @@
         \[
         \ba 
         \int \frac{9 + 5q^2}{q^3 - q^2 - 12q} \di q &amp;= \int \frac{-3/4}{q} + \frac{89/28}{q - 4} + \frac{18/7}{q + 3} \di q \nl 
-        &amp;= \boxed{\frac{89}{28} \ln|q - 4| + \frac{18}{7} \ln|q + 3| - \frac{3}{4} \ln|q| + C } 
+        &amp;= \boxed{\frac{89}{28} \ln|q - 4| + \frac{18}{7} \ln|q + 3| - \frac{3}{4} \ln|q| + c } 
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-14"> 
-  <div class="box-solution__head">     EXERCISE 14 </div> 
+</div><div id="exercise-17"> 
+  <div class="box-solution__head">     EXERCISE 17 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -535,7 +661,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-14"> 
+        <div class="box-solution__solution" id="solution-17"> 
             <span class="solution-text">SOLUTION</span> 
             
         The degree of the numerator is greater than the degree of the denominator, 
@@ -567,15 +693,15 @@
         \ba 
         \int \frac{x^4 + 1}{16x - 4x^3} \di x 
         &amp;= \int -\frac{x}{4} + \frac{1}{16x} - \frac{17/32}{2 + x} + \frac{17/32}{2 - x} \di x \nl
-        &amp;= \boxed{-\frac{1}{8}x^2 + \frac{1}{16} \ln\abs x - \frac{17}{32} \ln|2 + x| - \frac{17}{32} \ln|2 - x| + C } 
+        &amp;= \boxed{-\frac{1}{8}x^2 + \frac{1}{16} \ln\abs x - \frac{17}{32} \ln|2 + x| - \frac{17}{32} \ln|2 - x| + c } 
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-15"> 
-  <div class="box-solution__head">     EXERCISE 15 </div> 
+</div><div id="exercise-18"> 
+  <div class="box-solution__head">     EXERCISE 18 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -584,7 +710,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-15"> 
+        <div class="box-solution__solution" id="solution-18"> 
             <span class="solution-text">SOLUTION</span> 
             
         The partial fraction composition of the integrand is expressed by 
@@ -604,13 +730,13 @@
         \[\int \frac{2/3}{2x + 1} - \frac{x + 2}{3(x^2 + 4x + 1)}  \di x \pd\]
         The integral \(\int \frac{x + 2}{3(x^2 + 4x + 1)} \di x\) can be evaluated using the substitution \(u = x^2 + 4x + 1.\)
         We then acquire, for our final answer,
-        \[\boxed{\frac{1}{3} \ln|2x + 1| - \frac{1}{6} \ln|x^2 + 4x + 1| + C }\]
+        \[\boxed{\frac{1}{3} \ln|2x + 1| - \frac{1}{6} \ln|x^2 + 4x + 1| + c }\]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-16"> 
-  <div class="box-solution__head">     EXERCISE 16 </div> 
+</div><div id="exercise-19"> 
+  <div class="box-solution__head">     EXERCISE 19 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -619,7 +745,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-16"> 
+        <div class="box-solution__solution" id="solution-19"> 
             <span class="solution-text">SOLUTION</span> 
             
         The degree of the numerator is equal to the degree of the denominator. 
@@ -650,15 +776,15 @@
         \ba 
         \int \frac{7w^3 - 9}{(w + 2)(4 - w^2)} \di w 
         &amp;= \int -7 + \par{\frac{271/16}{w + 2} - \frac{65/4}{(w + 2)^2} + \frac{47/16}{2 - w} } \di w \nl 
-        &amp;= \boxed{-7w + \frac{271}{16} \ln|w + 2| + \frac{65/4}{w + 2} - \frac{47}{16} \ln|2 - w| + C }
+        &amp;= \boxed{-7w + \frac{271}{16} \ln|w + 2| + \frac{65/4}{w + 2} - \frac{47}{16} \ln|2 - w| + c }
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-17"> 
-  <div class="box-solution__head">     EXERCISE 17 </div> 
+</div><div id="exercise-20"> 
+  <div class="box-solution__head">     EXERCISE 20 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -667,7 +793,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-17"> 
+        <div class="box-solution__solution" id="solution-20"> 
             <span class="solution-text">SOLUTION</span> 
             
         We factor the denominator to get 
@@ -709,21 +835,21 @@
         \[
         \ba 
         \int \frac{10x}{6x^2 + 9} \di x = \frac{10}{12} \int \frac{1}{u} \di u 
-        &amp;= \frac{5}{6} \ln|u| + C \nl
-        &amp;= \frac{5}{6} \ln(6x^2 + 9) + C \pd
+        &amp;= \frac{5}{6} \ln|u| + c \nl
+        &amp;= \frac{5}{6} \ln(6x^2 + 9) + c \pd
         \ea 
         \]
         Therefore, 
         \[
         \int \frac{5/3}{x} + \frac{-10x/3}{2x^2 + 3} \di x 
-        = \boxed{\frac{5}{3} \ln\abs x - \frac{5}{6} \ln(6x^2 + 9) + C }
+        = \boxed{\frac{5}{3} \ln\abs x - \frac{5}{6} \ln(6x^2 + 9) + c }
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-18"> 
-  <div class="box-solution__head">     EXERCISE 18 </div> 
+</div><div id="exercise-21"> 
+  <div class="box-solution__head">     EXERCISE 21 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -732,7 +858,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-18"> 
+        <div class="box-solution__solution" id="solution-21"> 
             <span class="solution-text">SOLUTION</span> 
             
 <p>
@@ -789,8 +915,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-19"> 
-  <div class="box-solution__head">     EXERCISE 19 </div> 
+</div><div id="exercise-22"> 
+  <div class="box-solution__head">     EXERCISE 22 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -799,7 +925,7 @@
     </blockquote> evaluate the integral. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-19"> 
+        <div class="box-solution__solution" id="solution-22"> 
             <span class="solution-text">SOLUTION</span> 
             
 <p>
@@ -867,8 +993,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-20"> 
-  <div class="box-solution__head">     EXERCISE 20 </div> 
+</div><div id="exercise-23"> 
+  <div class="box-solution__head">     EXERCISE 23 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -881,7 +1007,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-20"> 
+        <div class="box-solution__solution" id="solution-23"> 
             <span class="solution-text">SOLUTION</span> 
             
         At any \(x\) the rectangle has a cross-sectional area of 
@@ -911,8 +1037,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-21"> 
-  <div class="box-solution__head">     EXERCISE 21 </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -923,7 +1049,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-21"> 
+        <div class="box-solution__solution" id="solution-24"> 
             <span class="solution-text">SOLUTION</span> 
             
         The average value is 
@@ -953,8 +1079,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-22"> 
-  <div class="box-solution__head">     EXERCISE 22 </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -966,7 +1092,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-22"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
         The work done is \(W = \int_1^5 F(x) \di x.\)
@@ -994,8 +1120,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-23"> 
-  <div class="box-solution__head">     EXERCISE 23 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1006,7 +1132,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         Observe that 
@@ -1016,21 +1142,21 @@
         \[
         \ba
         \int \frac{x^{2022}}{x^{2023} - 1} \di x &amp;= \int \frac{1}{2023 u} \di u \nl 
-        &amp;= \tfrac{1}{2023} \ln \abs u + C \nl 
-        &amp;= \tfrac{1}{2023} \ln \abs{x^{2023} - 1} + C \pd
+        &amp;= \tfrac{1}{2023} \ln \abs u + c \nl 
+        &amp;= \tfrac{1}{2023} \ln \abs{x^{2023} - 1} + c \pd
         \ea
         \]
         Hence, we have
         \[
         \int \frac{1}{x^{2024} - x} \di x 
-        = \boxed{-\ln \abs x + \tfrac{1}{2023} \ln \abs{x^{2023} - 1} + C}
+        = \boxed{-\ln \abs x + \tfrac{1}{2023} \ln \abs{x^{2023} - 1} + c}
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-27"> 
+  <div class="box-solution__head">     EXERCISE 27 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1039,7 +1165,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-27"> 
             <span class="solution-text">SOLUTION</span> 
             
         Letting \(u = \sin x,\) we get \(\dd u = \cos x \di x.\)
@@ -1059,16 +1185,16 @@
         \ba 
         \int \frac{3}{2u^2 + 5u} \di u 
         &amp;= \int \par{\frac{3/5}{u} - \frac{6/5}{2u + 5}} \di u \nl 
-        &amp;= \tfrac{3}{5} \ln \abs u - \tfrac{3}{5} \ln \abs{2u + 5} + C \nl 
-        &amp;= \boxed{\tfrac{3}{5} \ln \abs{\sin x} - \tfrac{3}{5} \ln \abs{2 \sin x + 5} + C}
+        &amp;= \tfrac{3}{5} \ln \abs u - \tfrac{3}{5} \ln \abs{2u + 5} + c \nl 
+        &amp;= \boxed{\tfrac{3}{5} \ln \abs{\sin x} - \tfrac{3}{5} \ln \abs{2 \sin x + 5} + c}
         \ea 
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-25"> 
-  <div class="box-solution__head">     EXERCISE 25 </div> 
+</div><div id="exercise-28"> 
+  <div class="box-solution__head">     EXERCISE 28 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1077,7 +1203,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-25"> 
+        <div class="box-solution__solution" id="solution-28"> 
             <span class="solution-text">SOLUTION</span> 
                
         Substituting \(u = e^x,\) we have \(\dd u = e^x \di x.\)
@@ -1098,17 +1224,17 @@
         \[
         \ba
         \int \par{\frac{1}{u - 3} - \frac{1}{u - 2}} \di u 
-        &amp;= \ln \abs{u - 3} - \ln \abs{u - 2} + C \nl 
-        &amp;= \ln \abs{\frac{u - 3}{u - 2}} + C \nl 
-        &amp;= \boxed{\ln \abs{\frac{e^x - 3}{e^x - 2}} + C}
+        &amp;= \ln \abs{u - 3} - \ln \abs{u - 2} + c \nl 
+        &amp;= \ln \abs{\frac{u - 3}{u - 2}} + c \nl 
+        &amp;= \boxed{\ln \abs{\frac{e^x - 3}{e^x - 2}} + c}
         \ea
         \]
      
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-26"> 
-  <div class="box-solution__head">     EXERCISE 26 </div> 
+</div><div id="exercise-29"> 
+  <div class="box-solution__head">     EXERCISE 29 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1117,7 +1243,7 @@
     </blockquote> evaluate the integral by first performing a substitution. 
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-26"> 
+        <div class="box-solution__solution" id="solution-29"> 
             <span class="solution-text">SOLUTION</span> 
             
         We first perform the trigonometric substitution \(x = \tan \theta.\)
@@ -1149,13 +1275,13 @@
         \ba 
         \int \frac{u}{(u + 5)(4u - 1)} \di u 
         &amp;= \int \par{\frac{5/21}{u + 5} + \frac{1/21}{4u - 1}} \di u \nl 
-        &amp;= \tfrac{5}{21} \ln \abs{u + 5} + \tfrac{1}{84} \ln \abs{4u - 1} + C \nl 
-        &amp;= \tfrac{5}{21} \ln \abs{\sec \theta + 5} + \tfrac{1}{84} \ln \abs{4 \sec \theta - 1} + C \pd
+        &amp;= \tfrac{5}{21} \ln \abs{u + 5} + \tfrac{1}{84} \ln \abs{4u - 1} + c \nl 
+        &amp;= \tfrac{5}{21} \ln \abs{\sec \theta + 5} + \tfrac{1}{84} \ln \abs{4 \sec \theta - 1} + c \pd
         \ea 
         \]
         Because \(x = \tan \theta,\) it follows that \(\sec \theta = \sqrt{x^2 + 1}.\)
         The result therefore becomes 
-        \[\boxed{\tfrac{5}{21} \ln \par{\sqrt{x^2 + 1} + 5} + \tfrac{1}{84} \ln \par{4 \sqrt{x^2 + 1} - 1} + C}\]
+        \[\boxed{\tfrac{5}{21} \ln \par{\sqrt{x^2 + 1} + 5} + \tfrac{1}{84} \ln \par{4 \sqrt{x^2 + 1} - 1} + c}\]
         (The absolute value bars are unnecessary, so we drop them.)
      
         </div> 

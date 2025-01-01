@@ -119,25 +119,6 @@
     </ol>
 </div>
 
-<br>
-
-<!-- 2nd derivative test -->
-<div class="box-title"> SECOND DERIVATIVE TEST </div>
-<div class="box">
-    Let \(x = a\) be the location of a critical point of \(f.\)
-    <ol class="list-alpha">
-        <li>
-            If \(f''(a) \gt 0,\) then \(f(a)\) is a relative minimum of \(f.\) 
-        </li>
-        <li>
-            If \(f''(a) \lt 0,\) then \(f(a)\) is a relative maximum of \(f.\) 
-        </li>
-        <li>
-            If \(f''(a) = 0,\) then the test is <span class="warning">inconclusive.</span>
-        </li>
-    </ol>
-</div>
-
 <div class="example-title"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
@@ -147,15 +128,15 @@
 </div>
 <button onclick="toggle1()" class="solution-button"></button>
 <div id="solution1" class="solution">
+    <figure class="optimization-ex-product" id="optimization-ex-product">
+        <img src="../images/sectionImages/optimization-ex-product.jpg" alt="optimization-ex-product.jpg">
+    </figure>
+    <style>
+        .optimization-ex-product::before{
+            content:'FIGURE 1';
+        }
+    </style>    
     <p>
-        <figure class="optimization-ex-product" id="optimization-ex-product">
-            <img src="../images/sectionImages/optimization-ex-product.jpg" alt="optimization-ex-product.jpg">
-        </figure>
-        <style>
-            .optimization-ex-product::before{
-                content:'FIGURE 1';
-            }
-        </style>
         To understand the problem, we experiment with some possibilities: 
         <ul>
             <li>
@@ -262,16 +243,16 @@
         \ea 
         \]
     </p>
+    <figure class="optimization-ex-farmer-graph" id="optimization-ex-farmer-graph">
+        <img src="../images/sectionImages/optimization-ex-farmer-graph.jpg" alt="optimization-ex-farmer-graph.jpg">
+    </figure>
+    <style>
+        .optimization-ex-farmer-graph::before{
+            content:'FIGURE 3';
+        }
+    </style>
     <p>
-        <figure class="optimization-ex-farmer-graph" id="optimization-ex-farmer-graph">
-            <img src="../images/sectionImages/optimization-ex-farmer-graph.jpg" alt="optimization-ex-farmer-graph.jpg">
-        </figure>
-        <style>
-            .optimization-ex-farmer-graph::before{
-                content:'FIGURE 3';
-            }
-        </style>
-        The width must satisfy \(0 \leq w \leq 20;\) otherwise, \(A \lt 0.\) 
+        The width must satisfy \(0 \leq w \leq 20;\) otherwise, \(A \lt 0,\) which is impossible. 
         The <i>absolute</i> maximum either of \(A\) lies either at the endpoints of \(0 \leq w \leq 20\) or at its critical numbers.  
         By the First-Derivative Test, \(w = 10\) corresponds to a relative maximum of \(A\) since 
         \(A'(w)\) switches sign from positive to negative at \(w = 10.\)
@@ -293,15 +274,15 @@
 </div>
 <button onclick="toggle3()" class="solution-button"> </button>
 <div id="solution3" class="solution">
+    <figure class="optimization-ex-can-diagram" id="optimization-ex-can-diagram">
+        <img src="../images/sectionImages/optimization-ex-can-diagram.jpg" alt="optimization-ex-can-diagram.jpg">
+    </figure>
+    <style>
+        .optimization-ex-can-diagram::before{
+            content:'FIGURE 4';
+        }
+    </style>
     <p>
-        <figure class="optimization-ex-can-diagram" id="optimization-ex-can-diagram">
-            <img src="../images/sectionImages/optimization-ex-can-diagram.jpg" alt="optimization-ex-can-diagram.jpg">
-        </figure>
-        <style>
-            .optimization-ex-can-diagram::before{
-                content:'FIGURE 4';
-            }
-        </style>
         To understand the problem, 
         we construct a picture (<a href="#optimization-ex-can-diagram">Figure 4</a>). 
         Let \(r\) be the can's radius and \(h\) be its height.
@@ -335,15 +316,15 @@
         \ea 
         \]
     </p>
+    <figure class="optimization-ex-can-graph" id="optimization-ex-can-graph">
+        <img src="../images/sectionImages/optimization-ex-can-graph.jpg" alt="optimization-ex-can-graph.jpg">
+    </figure>
+    <style>
+        .optimization-ex-can-graph::before{
+            content:'FIGURE 5';
+        }
+    </style>
     <p>
-        <figure class="optimization-ex-can-graph" id="optimization-ex-can-graph">
-            <img src="../images/sectionImages/optimization-ex-can-graph.jpg" alt="optimization-ex-can-graph.jpg">
-        </figure>
-        <style>
-            .optimization-ex-can-graph::before{
-                content:'FIGURE 5';
-            }
-        </style>
         For \(r \lt \sqrt[3]{20/\pi},\) \(S' \lt 0;\) for \(r \gt \sqrt[3]{20/\pi},\) \(S' \gt 0.\)
         Since \(S'\) changes sign from negative to positive at \(r = \sqrt[3]{20/\pi},\) 
         this value corresponds to a <i>relative</i> minimum of \(S\) by the First-Derivative Test. 
@@ -485,7 +466,7 @@
     \implies x &= \nspace -\sqrt 3 \cma x = \sqrt 3 \pd 
     \ea 
     \]
-    The domain of \(A(x)\) is \(0 \leq x \leq 3,\)
+    The domain of \(A(x)\) in context is \(0 \leq x \leq 3,\)
     so we discard \(x = - \sqrt 3.\)
     The value \(x = \sqrt 3\) corresponds to a <i>relative</i> maximum of \(A\) because 
     \(A'\) changes sign from positive to negative at that point.
@@ -594,7 +575,7 @@
     Thus, we have
     \[\theta = \pi - \tan^{-1} \left( \frac{x}{4} \right) - \tan^{-1} \left(\frac{3}{x + 1}\right) \pd\]
     Graphing the function \(y = \theta(x)\) 
-    reveals the maximum of \(\theta\) to occur when \(\boxed{x = 0.899}.\)
+    reveals the absolute maximum of \(\theta\) to occur when \(\boxed{x = 0.899}.\)
 </div>
 
 <div class="example-title"> EXAMPLE 8 </div>

@@ -897,17 +897,92 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             
+        A log has circular cross sections, and its radius \(r\) as a function of the distance \(x\) from the left end is 
+        \(r(x) = 9 - x^2\) for \(0 \leq x \leq 3,\)
+        where both \(x\) and \(r(x)\) are measured in centimeters. 
+        Calculate the log's volume on this interval.
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-23"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        At each \(x,\) the log's cross-sectional area is 
+        \[
+        \ba 
+        A(x) &amp;= \pi [r(x)]^2 \nl 
+        &amp;= \pi (9 - x^2)^2 \nl 
+        &amp;= \pi \par{x^4 - 18x^2 + 81} \pd
+        \ea 
+        \]
+        So the log's volume over \(0 \leq x \leq 3\) is 
+        \[
+        \ba 
+        V &amp;= \int_0^3 A(x) \di x \nl 
+        &amp;= \pi \int_0^3 \par{x^4 - 18x^2 + 81} \di x \nl 
+        &amp;= \pi \par{\tfrac{1}{5} x^5 - 6x^3 + 81x} \intEval_0^3 \nl 
+        &amp;= \boxed{\frac{648 \pi}{5}} \approx 407.150 \un{cm}^3 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-24"> 
+  <div class="box-solution__head">     EXERCISE 24 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
+        The diameter of a pipe with circular cross sections \(y\) inches above the bottom is given by 
+        \(d(y) = \sqrt{50 - 3y^2}.\)
+        If the pipe is \(2\) inches tall, 
+        then calculate the volume of water the pipe can fit.  
+     
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-24"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+        At each \(y,\) the pipe's cross-sectional area is 
+        \[
+        \ba 
+        A(y) &amp;= \pi [\frac{d(y)}{2}]^2 \nl 
+        &amp;= \frac{\pi}{4} [d(y)]^2 \nl 
+        &amp;= \frac{\pi}{4} (50 - 3y^2) \pd
+        \ea 
+        \]
+        The pipe's volume equals the volume of water it can fit.
+        The pipe's volume over its entire height, \(0 \leq y \leq 2,\) is 
+        \[
+        \ba 
+        V &amp;= \int_0^2 A(y) \di x \nl 
+        &amp;= \frac{\pi}{4} \int_0^2 (50 - 3y^2) \di y \nl 
+        &amp;= \frac{\pi}{4} (50y - y^3) \intEval_0^2 \nl 
+        &amp;= \boxed{23 \pi} \approx 72.257 \un{in}^3 \pd
+        \ea 
+        \]
+     
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-25"> 
+  <div class="box-solution__head">     EXERCISE 25 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            
         Let \(R\) be the region bounded by the parabola \(y = x^2,\)
         the \(x\)-axis, the \(y\)-axis, and the line \(x = k,\)
         where \(k\) is a positive constant.
         Let \(S\) be the solid whose base is region \(R\)
         and whose cross sections perpendicular to the \(x\)-axis are squares.
         Find the value of \(k\) for which the area of \(R\)
-        equals the volume of \(S.\)
+        and the volume of \(S\) have equal magnitudes.
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-23"> 
+        <div class="box-solution__solution" id="solution-25"> 
             <span class="solution-text">SOLUTION</span> 
             
         The enclosed region \(R\) has area given by 
@@ -927,8 +1002,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-24"> 
-  <div class="box-solution__head">     EXERCISE 24 </div> 
+</div><div id="exercise-26"> 
+  <div class="box-solution__head">     EXERCISE 26 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -945,7 +1020,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-24"> 
+        <div class="box-solution__solution" id="solution-26"> 
             <span class="solution-text">SOLUTION</span> 
             
         At each \(x,\) the cross section perpendicular to the \(x\)-axis 

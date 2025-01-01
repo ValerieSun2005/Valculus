@@ -66,7 +66,7 @@
     Quantity \(x\) varies with time, so we treat it as a function of time.
     And \(y\) is constant, so we don't perceive it as depending on time.
     We want to find the rate at which the triangle's area is changing—this represents \(\textDeriv{A}{t}.\)
-    And so we differentiate both sides of \(\eqRefer{eq:triangle-area}\) with respect to time, 
+    So we differentiate both sides of \(\eqRefer{eq:triangle-area}\) with respect to time, 
     using the Chain Rule:
     \begin{equation} 
     \deriv{A}{t} = \tfrac{1}{2} \deriv{x}{t} y \pd \label{eq:triangle-dA/dt}
@@ -108,7 +108,7 @@
     A = x^2 \pd \label{eq:square-A}
     \end{equation}
     Both \(x\) and \(A\) vary with time, so we treat them as functions of time.
-    And so we differentiate both sides of \(\eqRefer{eq:square-A}\)
+    We therefore differentiate both sides of \(\eqRefer{eq:square-A}\)
     with respect to time (by the Chain Rule), obtaining 
     \begin{equation} 
     \deriv{A}{t} = 2x \deriv{x}{t} \pd \label{eq:square-dA/dt}
@@ -116,7 +116,7 @@
     We are interested in the <i>instant</i> at which \(x = 6,\)
     and we are given that \(\textDeriv{x}{t} = -2.\) 
     Thus, we substitute these values in \(\eqRefer{eq:square-dA/dt}\) to get 
-    \[\deriv{A}{t} \Big|_{x = 6} = 2(6)(-2) = -24 \pd\]
+    \[\deriv{A}{t} \intEval_{x = 6} = 2(6)(-2) = -24 \pd\]
     We conclude that the square's area is <i>decreasing</i> at a rate of \(24 \un{in}^2/\un{min}.\)
  
         </div> 
@@ -186,7 +186,7 @@
     Plugging these expressions into \(\eqRefer{eq:chain-rule-dy/dt}\) yields 
     \[\deriv{y}{t} = (4x + 3)(-2) = -8x - 6 \pd\]
     When \(x = 2\) we have 
-    \[\deriv{y}{t} \Big|_{x = 2} = -8(2) - 6 = \boxed{-22}\] 
+    \[\deriv{y}{t} \intEval_{x = 2} = -8(2) - 6 = \boxed{-22}\] 
  
         </div> 
        </div>  
@@ -205,7 +205,7 @@
             <span class="solution-text">SOLUTION</span> 
             
     The problem implies that \(x\) is a function of \(t.\)
-    By the Chain Rule 
+    By the Chain Rule, 
     \begin{equation} 
     \deriv{y}{t} = \deriv{y}{x} \deriv{x}{t} \pd \label{eq:chain-rule-dy/dt-2}
     \end{equation}
@@ -215,7 +215,7 @@
     Substituting these expressions in \(\eqRefer{eq:chain-rule-dy/dt-2}\) then gives 
     \[\deriv{y}{t} = \frac{1}{2 \sqrt{x + 4}} \cdot 4 \pd\]
     When \(x = 12\) 
-    \[\deriv{y}{t} \Big|_{x = 12} = \frac{1}{2 \sqrt{12 + 4}} \cdot 4 = \boxed{\frac{1}{2}}\]
+    \[\deriv{y}{t} \intEval_{x = 12} = \frac{1}{2 \sqrt{12 + 4}} \cdot 4 = \boxed{\frac{1}{2}}\]
  
         </div> 
        </div>  
@@ -1406,13 +1406,8 @@
             There are \(2 \pi\) radians in one revolution.
         </li>
 </ul>
-    For clarity we use dimensional analysis, beginning with the first remark, to convert
-    revolutions per hour to radians per minute:
-    \[\frac{1 {\color{green} \cancel{\un{rev}}}}{1 {\color{orange} \cancel{\un{hr}}}} \times 
-    \frac{1 {\color{orange} \cancel{\un{hr}}}}{60 \un{min}} \times \frac{2 \pi \un{rad}}{1 {\color{green} \cancel{\un{rev}}}}
-    = \frac{\pi \un{rad}}{30 \un{min}} \pd\]
-    Thus, \(\textDeriv{\theta}{t} = \frac{\pi}{30} \undiv{rad}{min}.\)
-    \(\eqRefer{eq:clock-dA/dt}\) then becomes 
+    Hence, \(1 \undiv{rev}{hr}\) \(= 1 \times 2 \pi/60\) \(= \pi/30\) \(\undiv{rad}{min}.\)
+    Thus, \(\eqRefer{eq:clock-dA/dt}\) becomes 
     \[\deriv{A}{t} = \tfrac{1}{2} \ell^2 \par{\frac{\pi}{30}} = \boxed{\frac{\pi}{60} \ell^2}\]
  
         </div> 
@@ -1446,7 +1441,7 @@
     \begin{equation} 
     \tan \theta = \frac{y}{x} \pd \label{eq:ladder-angle}
     \end{equation}
-    In \(\eqRefer{eq:ladder-angle}\) \(x\) and \(y\) are functions of time.
+    In \(\eqRefer{eq:ladder-angle},\) \(x\) and \(y\) are functions of time.
     Therefore, we use the Chain Rule in differentiating both sides with respect to time:
     \begin{equation} 
     \sec^2 \theta \deriv{\theta}{t} = \frac{\deriv{y}{t} \, x - y \deriv{x}{t}}{x^2} \pd \label{eq:ladder-angle-diff} 
@@ -1507,10 +1502,7 @@
     We therefore want to find \(\textDeriv{x}{t}\) when \(x = 20.\)
     The camera rotates at a speed of \(10 \undiv{rev}{min},\) which we convert to radians per minute
     because radians are a dimensionless quantity. 
-    We have 
-    \[\frac{10 \cancel{\un{rev}}}{1 \un{min}} \times \frac{2 \pi \un{rad}}{1 \cancel{\un{rev}}} = \frac{20 \pi \un{rad}}{1 \un{min}} \pd
-    \]
-    Thus, \(\textDeriv{\theta}{t} = 20 \pi \undiv{rad}{min}.\)
+    Note that \(\textDeriv{\theta}{t} =\) \(10 \undiv{rev}{min}\) \(= 20 \pi\) \(\undiv{rad}{min}.\) 
     We relate \(x\) and \(\theta\) through 
     \begin{equation} 
     \tan \theta = \frac{x}{40} \pd \label{eq:camera}
@@ -1668,7 +1660,7 @@
     How is this result possible? It turns out that \(t = 0.2 \un{hr}\) is the time 
     at which the distance between \(A\) and Danielle changes from decreasing to increasing.
     (In calculus, remember that rates are <i>instantaneous</i>: 
-    Just before \(t = 0.2 \un{hr},\) Danielle is getting closer to \(A.\)
+    Just before \(t = 0.2 \un{hr},\) Danielle is flying closer to \(A.\)
     But just after \(t = 0.2 \un{hr},\) she is flying farther away from <nobr>\(A.\))</nobr>
  
         </div> 
@@ -1719,7 +1711,7 @@
     \end{align}
     When \(x = 60,\) \(\eqRefer{eq:baseball-pythag}\) gives 
     \[z = \sqrt{(90 - 60)^2 + 90^2} = \sqrt{9000} = 30 \sqrt{10} \pd\]
-    Substituting this value, along with \(x = 60\) and \(\textDeriv{x}{t} = 20,\) in \(\eqRefer{eq:baseball-dz/dt}\) gives 
+    Substituting this value, along with \(x = 60\) and \(\textDeriv{x}{t} = 20,\) into \(\eqRefer{eq:baseball-dz/dt}\) gives 
     \[\deriv{z}{t} = \frac{60 - 90}{30 \sqrt{10}} \cdot 20 = -2 \sqrt{10} \pd \]
     Thus, the distance between the player and home base is <i>decreasing</i>
     at a rate of \(2 \sqrt{10}\) \(\approx 6.325 \undiv{ft}{sec}.\)

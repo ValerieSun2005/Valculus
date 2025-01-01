@@ -50,13 +50,18 @@
     over an interval. 
     But calculus provides us one more property—<i>concavity</i>, 
     which describes the change in a function's rate of change.  
-    In this section we discuss the following:
+    Moreover, how do we test whether a function has a relative minimum or maximum?
+    A function's first and second derivatives play vital roles in answering these questions.
+    In this section we discuss the following topics:
     <ul>
         <li>
-            <a class="page-anchor" href="#first-deriv">Connecting \(f'\) to \(f\)</a>
+            <a class="page-anchor" href="#increasing-and-decreasing">Increasing and Decreasing</a>
         </li>
         <li>
-            <a class="page-anchor" href="#concavity">Concavity: Connecting \(f''\) to \(f\)</a>
+            <a class="page-anchor" href="#first-derivative-test">First-Derivative Test</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#concavity">Concavity</a>
         </li>
         <li>
             <a class="page-anchor" href="#second-deriv-test">Second-Derivative Test</a>
@@ -64,7 +69,7 @@
     </ul>
 </p>
 
-<h4 id="first-deriv">Connecting \(f'\) to \(f\)</h4>
+<h4 id="increasing-and-decreasing">Increasing and Decreasing</h4>
 
 <figure class="deriv-geometry-ABCD" id="deriv-geometry-ABCD">
     <img src="../images/sectionImages/deriv-geometry-ABCD.jpg" alt="Figure 1">
@@ -92,7 +97,7 @@
     (from Section <a href="/Valculus/calculus/3.2-Mean-Value-Theorem-and-Rolle's-Theorem.html">3.2</a>). 
 </p>
 
-<div class="box-title">HOW \(f'\) AFFECTS \(f\)</div>
+<div class="box-title">INCREASING AND DECREASING</div>
 <div class="box">
     <ol class="list-alpha">
         <li id="first-deriv-a">
@@ -111,8 +116,8 @@
     and so \(f\) is increasing. 
     Then we aim to show that if \(f'(x) \lt 0\) in this interval, then \(f(x_1) \gt f(x_2),\)
     indicating that \(f\) is decreasing. 
-    We assume that \(f\) is continuous over \(x_1 \leq x \leq x_2\) and differentiable over 
-    \(x_1 \lt x \lt x_2.\)
+    We assume that \(f\) is continuous over \([x_1, x_2]\) and differentiable over 
+    \((x_1, x_2).\)
     Thus, the Mean Value Theorem guarantees a number \(c\) in \((x_1, x_2)\) such that 
     \begin{equation} 
     f(x_2) - f(x_1) = f'(c) (x_2 - x_1) \pd \label{eq:proof-f'-mvt}
@@ -165,7 +170,10 @@
 <div class="example-title" id="ex-g'"> EXAMPLE 2 </div>
 <div class="example">
     <div class="example-problem">  
-        <figure class="interpreting-derivatives-geometrically-g-deriv" id="interpreting-derivatives-geometrically-g-deriv">
+        In <a h ref="#interpreting-derivatives-geometrically-g-deriv">Figure 3</a>, 
+        the graph of \(y = g'(x)\) is shown. 
+        Where is \(g\) increasing, and where is \(g\) decreasing?
+        <figure class="interpreting-derivatives-geometrically-g-deriv figure-center-one" id="interpreting-derivatives-geometrically-g-deriv">
             <img src="../images/sectionImages/interpreting-derivatives-geometrically-g-deriv.jpg" alt="Figure 3">
         </figure>
         <style>
@@ -173,10 +181,6 @@
                 content:'FIGURE 3';
             }
         </style>
-        In <a h ref="#interpreting-derivatives-geometrically-g-deriv">Figure 3</a>, 
-        the graph of \(y = g'(x)\) is shown. 
-        Where is \(g\) increasing, and where is \(g\) decreasing?
-        <span class="white-space"></span>
     </div>
 </div>
 <button onclick="toggle2()" class="solution-button">  </button>
@@ -189,30 +193,265 @@
     Thus, \(g(x)\) is <i>decreasing</i> over \([-6, -4]\) and \([3, 6].\)
 </div>
 
-<h4 id="concavity">Concavity: Connecting \(f''\) to \(f\)</h4>
+<h4 id="first-derivative-test">First-Derivative Test</h4>
+<figure class="min-max-deriv-sign-change" id="min-max-deriv-sign-change">
+    <img src="../images/sectionImages/min-max-deriv-sign-change.jpg" alt="Figure 4">
+</figure>
+<style>
+    .min-max-deriv-sign-change::before{
+        content:'FIGURE 4';
+    }
+</style>
+<p>
+    In Section <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>
+    we learned to find a function's relative extrema by analyzing its critical numbers.
+    Yet how do we test whether the function has a relative <i>minimum</i> or relative <i>maximum</i> at the critical number?
+    In <a href="#min-max-deriv-sign-change">Figure 4</a> 
+    the function \(f\) has a relative <i>minimum</i> at \((a, f(a))\)
+    and a relative <i>maximum</i> at \((b, f(b)).\)
+    Observe that \(f\) is decreasing to the left of \(a\)
+    and increasing to the right of \(a.\)
+    Through our discussion of <a href="#increasing-and-decreasing">Increasing and Decreasing</a>,
+    \(f'\) therefore flips sign from negative to positive at \(a.\)
+    Conversely, \(f\) is increasing to the left of \(b\) and decreasing to the right of \(b.\)
+    Consequently, \(f'\) changes sign from positive to negative at \(b.\)
+    These observations describe the <span class="emph">First-Derivative Test</span>,
+    defined below. 
+</p>
+
+<div class="box-title"> FIRST-DERIVATIVE TEST </div>
+<div class="box">
+    If \(c\) is a critical number of \(f,\) then
+    <ol class="list-alpha">
+        <li>
+            \(f\) has a <span class="emph">relative minimum</span> at \(c\) if 
+            \(f'\) changes sign from negative to positive at \(c.\)
+        </li>
+        <li>
+            \(f\) has a <span class="emph">relative maximum</span> at \(c\) if 
+            \(f'\) changes sign from positive to negative at \(c.\)
+        </li>
+        <li>
+            \(f\) has <span class="warning">no relative extremum</span> \(c\) if 
+            \(f'\) does not change sign at \(c.\)
+        </li>
+    </ol>
+</div>
+
+<figure class="min-max-x3" id="min-max-x3">
+    <img src="../images/sectionImages/min-max-x3.jpg" alt="Figure 5">
+</figure>
+<style>
+    .min-max-x3::before{
+        content:'FIGURE 5';
+    }
+</style>
+
+<p>
+    The First-Derivative Test can also prove the <i>nonexistence</i> of a relative extremum.
+    For example, the derivative of \(g(x) = x^3\) is \(g'(x) = 3x^2.\) 
+    Note that \(g'(0) = 0,\) but \(g'\) does <span class="warning">not</span>
+    change sign at \(0\) because \(g'(x) = 3x^2\) is strictly nonnegative. 
+    Accordingly, the First-Derivative Test asserts that \(g(x) = x^3\)
+    does <span class="warning">not</span> have a relative extremum at \(x = 0.\)
+    (See <a href="#min-max-x3">Figure 5</a>.) 
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        Locate and classify all the relative extrema of \(g(x) = 2x^3 - 3x^2 - 1.\)
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    <figure class="relative-extrema-g-2x3-ex" id="relative-extrema-g-2x3-ex">
+        <img src="../images/sectionImages/relative-extrema-g-2x3-ex.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .relative-extrema-g-2x3-ex::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    First we find the critical numbers of \(g\) by solving \(g'(x) = 0,\) as follows:
+    \[
+    \ba 
+    g'(x) = 6x^2 - 6x &= 0 \nl 
+    6x(x - 1) &= 0 \nl 
+    \implies x &= 0 \cma x = 1 \pd 
+    \ea 
+    \]
+    Note that \(g'\) is never undefined, 
+    so \(0\) and \(1\) are the only critical numbers.
+    The following table shows the sign of \(g'\)
+    on intervals bounded by the critical numbers.
+    <table class="table-vertical table-centered">
+        <tr>
+            <td class="label-cell">
+                Interval of \(x\)
+            </td>
+            <td class="label-cell">
+                \(g'(x) = 6x(x - 1)\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((-\infty, 0)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((0, 1)\)
+            </td>
+            <td>
+                \(-\)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                \((1, \infty)\)
+            </td>
+            <td>
+                \(+\)
+            </td>
+        </tr>
+    </table>
+    At \(x = 0,\) \(g'\) changes sign from positive to negative.
+    Thus, the First-Derivative Test asserts that \(g\) has a <i>relative maximum</i>
+    at \(x = 0;\)
+    this value is 
+    \[g(0) = 2(0)^3 - 3(0)^2 - 1 = -1 \pd\]
+    Conversely, \(g'\) switches sign from negative to positive at \(x = 1,\)
+    so \(g\) has a <i>relative minimum</i> at \(x = 1.\)
+    This value is
+    \[g(1) = 2(1)^3 - 3(1)^2 - 1 = -2 \pd\]
+    (See <a href="#relative-extrema-g-2x3-ex">Figure 6</a>.)
+</div> 
+
+<div class="example-title"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        The function \(g\) is continuous on \([-6, 6].\)
+        The graph of \(y = g'(x)\) is shown in 
+        <a href="#min-max-ex-g-deriv-critical-pt">Figure 7</a>.
+        Find the critical numbers of \(g.\)
+        At each critical number, determine whether \(g\) has a relative minimum, a relative maximum, or neither.
+        <figure class="min-max-ex-g-deriv-critical-pt figure-center-one" id="min-max-ex-g-deriv-critical-pt">
+            <img src="../images/sectionImages/min-max-ex-g-deriv-critical-pt.jpg" alt="Figure 7">
+        </figure>
+        <style>
+            .min-max-ex-g-deriv-critical-pt::before{
+                content:'FIGURE 7';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <p>
+        A number \(c\) is a critical number of \(g\) if it's in the domain of \(g\)
+        and if \(g'(c) = 0\) or \(g'(c)\) is undefined.
+        From <a href="#min-max-ex-g-deriv-critical-pt">Figure 7</a>, 
+        \(g'(x) = 0\) when \(x = -4\) and \(x = 5.\)
+        Also, \(g'(x)\) is undefined at \(x = 1\) and \(x = 3,\)
+        but both numbers are in the domain of \(g\) because \(g\) is given to be continuous on \([-6, 6].\)
+        Therefore, the critical numbers of \(g\) are \(-4,\) \(1,\) \(3,\) and \(5.\)
+        The following table shows the sign of \(g'\) for intervals bounded by these values.
+        <table class="table-vertical table-centered">
+            <tr>
+                <td class="label-cell">
+                    Interval of \(x\)
+                </td>
+                <td class="label-cell">
+                    \(g'(x)\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \([-6, -4)\)
+                </td>
+                <td>
+                    \(-\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \((-4, 1)\)
+                </td>
+                <td>
+                    \(+\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \((1, 3)\)
+                </td>
+                <td>
+                    \(-\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \((3, 5)\)
+                </td>
+                <td>
+                    \(-\)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    \((5, 6]\)
+                </td>
+                <td>
+                    \(-\)
+                </td>
+            </tr>
+        </table>
+        Thus, \(g(x)\) has 
+        <ul>
+            <li>
+                a <b>relative minimum</b> at \(x = -4\)
+                because the sign of \(g'\) flips from negative to positive at \(x = -4.\)
+            </li>
+            <li>
+                a <b>relative maximum</b> at \(x = 1\)
+                because the sign of \(g'\) flips from positive to negative at \(x = 1.\)
+            </li>
+            <li>
+                <b>no extrema</b> at \(x = 3\) or \(x = 5\)
+                because \(g'\) does not change sign at those points.
+            </li>
+        </ul>
+    </p>
+</div>
+
+<h4 id="concavity">Concavity</h4>
 
 <div class="figure-center">
     <figure class="concave-up" id="concave-up">
-        <img src="../images/sectionImages/concave-up.jpg" class="concave-up" alt="Figure 4A">
+        <img src="../images/sectionImages/concave-up.jpg" class="concave-up" alt="Figure 8A">
     </figure>
     <figure class="concave-down" id="concave-down">
-        <img src="../images/sectionImages/concave-down.jpg" class="concave-down" alt="Figure 4B">
+        <img src="../images/sectionImages/concave-down.jpg" class="concave-down" alt="Figure 8B">
     </figure>
 </div>
 <style>
     .concave-up::before{
-        content:'FIGURE 4A';
+        content:'FIGURE 8A';
     }
 
     .concave-down::before{
-        content:'FIGURE 4B';
+        content:'FIGURE 8B';
     }
 </style>
 
 <p>
     We can determine whether a function is increasing or decreasing over an interval. 
     But we delve one step deeper to consider <i>concavity</i>. 
-    In <a href="#concave-up">Figure 4A</a> and <a href="#concave-down">Figure 4B</a>, 
+    In <a href="#concave-up">Figure 8A</a> and <a href="#concave-down">Figure 8B</a>, 
     both functions \(f\) and \(g\) are increasing,
     but they are bent differently: 
     We call \(f\) <span class="emph">concave upward</span> 
@@ -220,40 +459,40 @@
     and \(g\) <span class="emph">concave downward</span> 
     (or <span class="emph">concave down</span>).
     The word <i>concave</i> means curving inward;
-    it's easy to remember the phrase "cave in."
+    it's easy to remember the phrase <q>cave in.</q>
     The graph of \(f\) appears to bend inward when viewed from above,
     whereas the graph of \(g\) looks to arch inward if we view it from below. 
 </p>
 
 <div class="figure-center">
     <figure class="concave-up-tangents" id="concave-up-tangents">
-        <img src="../images/sectionImages/concave-up-tangents.jpg" class="concave-up-tangents" alt="Figure 5A">
+        <img src="../images/sectionImages/concave-up-tangents.jpg" class="concave-up-tangents" alt="Figure 9A">
     </figure>
     <figure class="concave-down-tangents" id="concave-down-tangents">
-        <img src="../images/sectionImages/concave-down-tangents.jpg" class="concave-down-tangents" alt="Figure 5B">
+        <img src="../images/sectionImages/concave-down-tangents.jpg" class="concave-down-tangents" alt="Figure 9B">
     </figure>
 </div>
 <style>
     .concave-up-tangents::before{
-        content:'FIGURE 5A';
+        content:'FIGURE 9A';
     }
 
     .concave-down-tangents::before{
-        content:'FIGURE 5B';
+        content:'FIGURE 9B';
     }
 </style>
 
 <p>
     If we draw tangents to the graph of \(f,\)
     whose graph is concave up, then we see that the graph lies above all the tangents 
-    (<a href="#concave-up-tangents">Figure 5A</a>). 
+    (<a href="#concave-up-tangents">Figure 9A</a>). 
     Thus, the <i>rate of change</i> of \(f\) is increasing.
     In other words, the derivative \(f'\) is an increasing function;
     accordingly, the second derivative \(f''\) is positive.
     By contrast, drawing tangents to the graph of \(g\)
     (whose graph is concave <i>down</i>) shows that 
     the graph lies below all the tangents 
-    (<a href="#concave-down-tangents">Figure 5B</a>).
+    (<a href="#concave-down-tangents">Figure 9B</a>).
     Because the slopes of the tangents are decreasing, \(f'\) is a decreasing function
     and so \(f''\) is negative.
 </p>
@@ -272,25 +511,23 @@
     </ol>
 </div>
 
-<div class="example-title" id="ex-concavity-f-pt"> EXAMPLE 3 </div>
+<div class="example-title" id="ex-concavity-f-pt"> EXAMPLE 5 </div>
 <div class="example">
     <div class="example-problem">  
         Let \(f(x) = \tfrac{1}{6}x^3 - x^2 + 6x + 1.\)
         Describe the graph of \(f(x)\) at \(x = 1.\)
     </div>
 </div>
-<button onclick="toggle3()" class="solution-button">  </button>
-<div id="solution3" class="solution">
+<button onclick="toggle5()" class="solution-button">  </button>
+<div id="solution5" class="solution">
     <figure class="concavity-example-pt" id="concavity-example-pt">
-        <img src="../images/sectionImages/concavity-example-pt.jpg" alt="Figure 6">
+        <img src="../images/sectionImages/concavity-example-pt.jpg" alt="Figure 10">
     </figure>
     <style>
         .concavity-example-pt::before{
-            content:'FIGURE 6';
+            content:'FIGURE 10';
         }
     </style>
-    We first need to determine whether \(f\) is increasing or decreasing when \(x = 1;\)
-    we'll then identify the graph's <b>concavity</b>. 
     Taking derivatives, we find 
     \[f'(x) = \tfrac{1}{2} x^2 - 2x + 6 \and f''(x) = x - 2 \pd\]
     Then 
@@ -300,30 +537,30 @@
     f''(1) &= 1 - 2 = -1 \pd 
     \ea 
     \]
-    Because \(f'(1) \gt 0,\) \(f\) is <b>increasing</b> when \(x = 1.\)
-    Also, \(f''(1) \lt 0,\) meaning the graph of \(f\) is <b>concave down</b>
+    Because \(f'(1) \gt 0,\) \(f\) is <b>increasing</b> at \(x = 1.\)
+    Also, since \(f''(1) \lt 0,\) the graph of \(f\) is <b>concave down</b>
     at \(x = 1.\)
     Drawing a tangent line to \(f\) at \(x = 1,\)  
     we see that the graph lies below this tangent—the geometric meaning of \(f\) being <i>concave down</i>.
-    (See <a href="#concavity-example-pt">Figure 6</a>.) 
+    (See <a href="#concavity-example-pt">Figure 10</a>.) 
     
 </div>
 
-<div class="example-title" id="ex-concavity-f-1/3"> EXAMPLE 4 </div>
+<div class="example-title" id="ex-concavity-f-1/3"> EXAMPLE 6 </div>
 <div class="example">
     <div class="example-problem">  
         Let \(f(x) = \tfrac{1}{3}x^3 - 2x^2 + x + 4.\)
         Where is the graph of \(f\) concave up, and where is it concave down?
     </div>
 </div>
-<button onclick="toggle4()" class="solution-button">  </button>
-<div id="solution4" class="solution">
+<button onclick="toggle6()" class="solution-button">  </button>
+<div id="solution6" class="solution">
     <figure class="concavity-example-f" id="concavity-example-f">
-        <img src="../images/sectionImages/concavity-example-f.jpg" alt="Figure 7">
+        <img src="../images/sectionImages/concavity-example-f.jpg" alt="Figure 11">
     </figure>
     <style>
         .concavity-example-f::before{
-            content:'FIGURE 7';
+            content:'FIGURE 11';
         }
     </style>
     The graph of \(f\) is concave up when \(f''(x) \gt 0\)
@@ -337,7 +574,7 @@
     Thus, the graph of \(f(x)\) is concave up 
     over \((2, \infty)\) 
     and concave down over \((-\infty, 2).\)
-    In <a href="#concavity-example-f">Figure 7</a>, 
+    In <a href="#concavity-example-f">Figure 11</a>, 
     the tangents to the graph of \(f\) are <i>above</i>
     the graph for \(x \lt 2\)
     and <i>below</i> the graph for \(x \gt 2.\)
@@ -348,7 +585,7 @@
     concave up to concave down or from concave down to concave up—is 
     called an <span class="emph">inflection point</span>.
     For example, in 
-    <a href="#ex-concavity-f-1/3">Example 4</a> 
+    <a href="/Valculus/calculus/3.3-Using-the-First-and-Second-Derivatives.html#ex-concavity-f-1/3">Example 6</a>
     the graph of \(f\) switches from concave down to concave up at \(x = 2.\)
     Thus, \(x = 2\) is the location of an inflection point of \(f.\)
     An easy way to estimate the location of an inflection point of \(f\) 
@@ -366,21 +603,21 @@
     \(x = a\) if the graph of \(f\) switches concavity at \(x = a.\)
 </div>
 
-<div class="example-title" id="ex-inflection-pt"> EXAMPLE 5 </div>
+<div class="example-title" id="ex-inflection-pt"> EXAMPLE 7 </div>
 <div class="example">
     <div class="example-problem">  
         Let \(f(x) = x^4 - 2x^3 - 12x^2 - 17x + 4.\)
-        Find all inflection points of \(f.\)
+        Find the \(x\)-coordinates of all the inflection points of \(f.\)
     </div>
 </div>
-<button onclick="toggle5()" class="solution-button">  </button>
-<div id="solution5" class="solution">
+<button onclick="toggle7()" class="solution-button">  </button>
+<div id="solution7" class="solution">
     <figure class="concavity-ex-inflection-pt" id="concavity-ex-inflection-pt">
-        <img src="../images/sectionImages/concavity-ex-inflection-pt.jpg" alt="Figure 8">
+        <img src="../images/sectionImages/concavity-ex-inflection-pt.jpg" alt="Figure 12">
     </figure>
     <style>
         .concavity-ex-inflection-pt::before{
-            content:'FIGURE 8';
+            content:'FIGURE 12';
         }
     </style>
     At an <b>inflection point</b>, the graph of \(f\) changes concavity,
@@ -406,14 +643,13 @@
     Likewise, \(f''(x) \gt 0\) for \(x \gt 2;\)
     accordingly, \(f\) has an inflection point at \(x = 2\) 
     because \(f\) switches from concave down to concave up at that point. 
-    (See <a href="#concavity-ex-inflection-pt">Figure 8</a>.)
+    (See <a href="#concavity-ex-inflection-pt">Figure 12</a>.)
 </div>
 
 <h4 id="second-deriv-test">Second-Derivative Test</h4>
 <p>
     Another application of second derivatives is the <span class="emph">Second-Derivative Test</span>, 
-    shown below. This test is an alternative to the First-Derivative Test (from 
-    Section <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html">3.1</a>). 
+    shown below. This test is an alternative to the First-Derivative Test.
 </p>
 
 <div class="box-title">SECOND-DERIVATIVE TEST</div>
@@ -448,35 +684,35 @@
     because \(f''(c) \gt 0,\) \(f\) is concave up at \(c.\)
     Accordingly, the graph of \(f\) must be <i>above</i>
     the tangent at \(c,\) so \(f\) has a relative minimum at \(c.\)
-    (See <a href="#second-deriv-test-min">Figure 9A</a>.) 
+    (See <a href="#second-deriv-test-min">Figure 13A</a>.) 
     Conversely, in part <a href="#second-deriv-test-b">(b)</a>
     \(f''(c) \lt 0,\) meaning \(f\) is concave down at \(c.\)
     So the graph of \(f\) lies <i>below</i>
     the tangent at \(c;\) accordingly, \(c\) must be a relative maximum of \(f,\)
-    as in <a href="#second-deriv-test-max">Figure 9B</a>.
+    as in <a href="#second-deriv-test-max">Figure 13B</a>.
     Part <a href="#second-deriv-test-c">(c)</a> states that \(f\) 
     can have either a relative minimum, relative maximum, or neither at
     the critical number \(c\) if \(f''(c)\) equals \(0\) or does not exist.
 </p>
 <div class="figure-center">
     <figure class="second-deriv-test-min" id="second-deriv-test-min">
-        <img src="../images/sectionImages/second-deriv-test-min.jpg" class="second-deriv-test-min" alt="Figure 9A">
+        <img src="../images/sectionImages/second-deriv-test-min.jpg" class="second-deriv-test-min" alt="Figure 13A">
     </figure>
     <figure class="second-deriv-test-max" id="second-deriv-test-max">
-        <img src="../images/sectionImages/second-deriv-test-max.jpg" class="second-deriv-test-max" alt="Figure 9B">
+        <img src="../images/sectionImages/second-deriv-test-max.jpg" class="second-deriv-test-max" alt="Figure 13B">
     </figure>
 </div>
 <style>
     .second-deriv-test-min::before{
-        content:'FIGURE 9A';
+        content:'FIGURE 13A';
     }
 
     .second-deriv-test-max::before{
-        content:'FIGURE 9B';
+        content:'FIGURE 13B';
     }
 </style>
 
-<div class="example-title" id="ex-second-deriv-test"> EXAMPLE 6 </div>
+<div class="example-title" id="ex-second-deriv-test"> EXAMPLE 8 </div>
 <div class="example">
     <div class="example-problem">  
         Find and classify the relative extrema of 
@@ -484,14 +720,14 @@
         using the Second-Derivative Test.
     </div>
 </div>
-<button onclick="toggle6()" class="solution-button">  </button>
-<div id="solution6" class="solution">
+<button onclick="toggle8()" class="solution-button">  </button>
+<div id="solution8" class="solution">
     <figure class="second-deriv-test-ex" id="second-deriv-test-ex">
-        <img src="../images/sectionImages/second-deriv-test-ex.jpg" class="second-deriv-test-ex" alt="Figure 10">
+        <img src="../images/sectionImages/second-deriv-test-ex.jpg" class="second-deriv-test-ex" alt="Figure 14">
     </figure>
     <style>
         .second-deriv-test-ex::before{
-            content:'FIGURE 10';
+            content:'FIGURE 14';
         }
     </style>
     We locate the critical numbers of \(f\) by letting \(f'(x) = 0.\)
@@ -509,12 +745,12 @@
     has a relative <i>maximum</i> at \(x = -1.\)
     Since \(f''(3) \gt 0,\) \(f\) has a 
     relative <i>minimum</i> at \(x = 3.\)
-    (See <a href="#second-deriv-test-ex">Figure 10</a>.)
+    (See <a href="#second-deriv-test-ex">Figure 14</a>.)
 </div>
 
 <div class="section-summary">
     <p>
-        <a href="#first-deriv" class="summary-anchor">Connecting \(f'\) to \(f\)</a>
+        <a href="#increasing-and-decreasing" class="summary-anchor">Increasing and Decreasing</a>
         The function \(f',\) the first derivative of \(f,\)
         signifies whether \(f\) is increasing or decreasing over an interval. 
         <ol class="list-alpha">
@@ -527,7 +763,28 @@
         </ol>
     </p>
     <p>
-        <a href="#concavity" class="summary-anchor">Concavity: Connecting \(f''\) to \(f\)</a>
+        <a href="#first-derivative-test" class="summary-anchor">First-Derivative Test</a>
+        The <span class="emph">First-Derivative Test</span> enables us to determine 
+        whether a function has a relative maximum, a relative minimum, or neither  
+        at a critical number. 
+        If \(c\) is a critical number of \(f,\) then
+        <ol class="list-alpha">
+            <li>
+                \(f\) has a <span class="emph">relative minimum</span> at \(c\) if 
+                \(f'\) changes sign from negative to positive at \(c.\)
+            </li>
+            <li>
+                \(f\) has a <span class="emph">relative maximum</span> at \(c\) if 
+                \(f'\) changes sign from positive to negative at \(c.\)
+            </li>
+            <li>
+                \(f\) has <span class="warning">no relative extremum</span> at \(c\) if 
+                \(f'\) does not change sign at \(c.\)
+            </li>
+        </ol>
+    </p>
+    <p>
+        <a href="#concavity" class="summary-anchor">Concavity</a>
         We use the second derivative \(f''\) to determine the concavity of the graph of \(f.\)
         The graph of \(f\) is <span class="emph">concave up</span>
         over an interval if the graph lies above its tangents on that interval.
@@ -551,7 +808,8 @@
     <p>
         <a href="#second-deriv-test" class="summary-anchor">Second-Derivative Test</a>
         The <span class="emph">Second-Derivative Test</span> enables us to classify 
-        critical points of \(f\) as relative minima or relative maxima. 
+        critical points of \(f\) as corresponding to relative minima or relative maxima. 
+        It is an alternative to the First-Derivative Test.
         <ol class="list-alpha">
             <li id="second-deriv-test-a">
                 If \(f'(c) = 0\) and \(f''(c) \gt 0,\)

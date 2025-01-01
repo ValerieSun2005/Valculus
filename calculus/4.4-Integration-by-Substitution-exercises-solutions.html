@@ -1197,9 +1197,11 @@
         <div class="box-solution__solution" id="solution-39"> 
             <span class="solution-text">SOLUTION</span> 
             
+    The integrand can be rewritten as 
+    \[\frac{x}{1 + \par{x^2}^2} \pd\]
     Recall that 
-    \[\deriv{}{u} \par{\tan^{-1} u} = \frac{1}{1 + u^2} \pd\]
-    This indefinite integral mimics the right side; the only difference is the term \(x\) in the numerator.
+    \[\deriv{}{u} \par{\atan u} = \frac{1}{1 + u^2} \pd\]
+    This indefinite integral mimics the right side; the only difference is the \(x\) in the numerator.
     So we substitute \(u = x^2\) 
     because then \(\dd u = 2x \di x,\)
     or \(\dd x = (1/2x) \di u.\)
@@ -1208,12 +1210,12 @@
     \ba 
     \int \frac{x}{1 + (u)^2} \cdot \frac{1}{2x} \di u 
     &amp;= \tfrac{1}{2} \int \frac{1}{1 + u^2} \di u \nl 
-    &amp;= \tfrac{1}{2} \tan^{-1} u + C \pd
+    &amp;= \tfrac{1}{2} \atan u + C \pd
     \ea 
     \]
     Our final step is to reexpress this answer in terms of \(x.\)
     We chose \(u = x^2,\) so our final answer is 
-    \[\boxed{\tfrac{1}{2} \tan^{-1} (x^2) + C}\]
+    \[\boxed{\tfrac{1}{2} \atan (x^2) + C}\]
  
         </div> 
        </div>  
@@ -1224,11 +1226,48 @@
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
             For <blockquote class="box-problem-display"> 
-    \[\ds \int_1^e \frac{(\ln x)^2}{x + x (\ln x)^2} \di x\]
+    \[\ds \int_{-1}^1 \frac{t^2}{t^6 + 1} \di t\]
 </blockquote> evaluate the integral. 
         </div> 
         <hr> 
         <div class="box-solution__solution" id="solution-40"> 
+            <span class="solution-text">SOLUTION</span> 
+            
+    The integrand can be rewritten as 
+    \[\frac{t^2}{\par{t^3}^2 + 1} \pd\]
+    Recall that 
+    \[\deriv{}{u} \par{\atan u} = \frac{1}{u^2 + 1} \pd\]
+    This indefinite integral mimics the right side; the only difference is the \(x^2\) in the numerator.
+    So we substitute \(u = t^3\) 
+    because then \(\dd u = 3t^2 \di x,\)
+    or \(\dd x = (1/3t^2) \di u.\)
+    When \(t = -1,\) \(u = -1;\)
+    when \(t = 1,\) \(u = 1.\)
+    The integral then becomes 
+    \[
+    \ba 
+    \tfrac{1}{3} \int_{-1}^1 \frac{1}{u^2 + 1} \di u 
+    &amp;= \tfrac{1}{3} \atan u \intEval_{-1}^1 \nl 
+    &amp;= \tfrac{1}{3} \parbr{\atan 1 - \atan(-1)} \nl 
+    &amp;= \tfrac{1}{3} \parbr{\frac{\pi}{4} - \par{-\frac{\pi}4}} \nl 
+    &amp;= \boxed{\frac{\pi}{6}}
+    \ea 
+    \]
+ 
+        </div> 
+       </div>  
+   </div> 
+</div><div id="exercise-41"> 
+  <div class="box-solution__head">     EXERCISE 41 </div> 
+  <div class="box-solution">
+   <div class="box-solution__body"> 
+        <div class="box-solution__problem"> 
+            For <blockquote class="box-problem-display"> 
+    \[\ds \int_1^e \frac{(\ln x)^2}{x + x (\ln x)^2} \di x\]
+</blockquote> evaluate the integral. 
+        </div> 
+        <hr> 
+        <div class="box-solution__solution" id="solution-41"> 
             <span class="solution-text">SOLUTION</span> 
             
     Let's rewrite the integral as 
@@ -1250,8 +1289,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-41"> 
-  <div class="box-solution__head">     EXERCISE 41 </div> 
+</div><div id="exercise-42"> 
+  <div class="box-solution__head">     EXERCISE 42 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1272,7 +1311,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-41"> 
+        <div class="box-solution__solution" id="solution-42"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
@@ -1310,8 +1349,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-42"> 
-  <div class="box-solution__head">     EXERCISE 42 </div> 
+</div><div id="exercise-43"> 
+  <div class="box-solution__head">     EXERCISE 43 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1321,7 +1360,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-42"> 
+        <div class="box-solution__solution" id="solution-43"> 
             <span class="solution-text">SOLUTION</span> 
             
         By exponent laws,
@@ -1347,8 +1386,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-43"> 
-  <div class="box-solution__head">     EXERCISE 43 </div> 
+</div><div id="exercise-44"> 
+  <div class="box-solution__head">     EXERCISE 44 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1359,7 +1398,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-43"> 
+        <div class="box-solution__solution" id="solution-44"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -1380,8 +1419,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-44"> 
-  <div class="box-solution__head">     EXERCISE 44 </div> 
+</div><div id="exercise-45"> 
+  <div class="box-solution__head">     EXERCISE 45 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1392,7 +1431,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-44"> 
+        <div class="box-solution__solution" id="solution-45"> 
             <span class="solution-text">SOLUTION</span> 
             
         We convert the integral to a form whose antiderivative we readily identify. 
@@ -1414,8 +1453,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-45"> 
-  <div class="box-solution__head">     EXERCISE 45 </div> 
+</div><div id="exercise-46"> 
+  <div class="box-solution__head">     EXERCISE 46 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1433,7 +1472,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-45"> 
+        <div class="box-solution__solution" id="solution-46"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">
@@ -1474,8 +1513,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-46"> 
-  <div class="box-solution__head">     EXERCISE 46 </div> 
+</div><div id="exercise-47"> 
+  <div class="box-solution__head">     EXERCISE 47 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1487,7 +1526,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-46"> 
+        <div class="box-solution__solution" id="solution-47"> 
             <span class="solution-text">SOLUTION</span> 
             
         In this new form, we have 
@@ -1501,8 +1540,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-47"> 
-  <div class="box-solution__head">     EXERCISE 47 </div> 
+</div><div id="exercise-48"> 
+  <div class="box-solution__head">     EXERCISE 48 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1512,7 +1551,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-47"> 
+        <div class="box-solution__solution" id="solution-48"> 
             <span class="solution-text">SOLUTION</span> 
             
         Since the \(y\)-axis is synonymous with the line \(x = 0,\) 
@@ -1537,8 +1576,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-48"> 
-  <div class="box-solution__head">     EXERCISE 48 </div> 
+</div><div id="exercise-49"> 
+  <div class="box-solution__head">     EXERCISE 49 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1549,7 +1588,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-48"> 
+        <div class="box-solution__solution" id="solution-49"> 
             <span class="solution-text">SOLUTION</span> 
             
         The energy is given by 
@@ -1567,8 +1606,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-49"> 
-  <div class="box-solution__head">     EXERCISE 49 </div> 
+</div><div id="exercise-50"> 
+  <div class="box-solution__head">     EXERCISE 50 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1580,7 +1619,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-49"> 
+        <div class="box-solution__solution" id="solution-50"> 
             <span class="solution-text">SOLUTION</span> 
             
         Velocity is the time derivative of position; that is, 
@@ -1633,8 +1672,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-50"> 
-  <div class="box-solution__head">     EXERCISE 50 </div> 
+</div><div id="exercise-51"> 
+  <div class="box-solution__head">     EXERCISE 51 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1645,7 +1684,7 @@
      
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-50"> 
+        <div class="box-solution__solution" id="solution-51"> 
             <span class="solution-text">SOLUTION</span> 
             
         Substituting \(u = a + b - x,\) 
@@ -1664,8 +1703,8 @@
         </div> 
        </div>  
    </div> 
-</div><div id="exercise-51"> 
-  <div class="box-solution__head">     EXERCISE 51 </div> 
+</div><div id="exercise-52"> 
+  <div class="box-solution__head">     EXERCISE 52 </div> 
   <div class="box-solution">
    <div class="box-solution__body"> 
         <div class="box-solution__problem"> 
@@ -1695,7 +1734,7 @@
  
         </div> 
         <hr> 
-        <div class="box-solution__solution" id="solution-51"> 
+        <div class="box-solution__solution" id="solution-52"> 
             <span class="solution-text">SOLUTION</span> 
             
 <ol class="list-alpha">

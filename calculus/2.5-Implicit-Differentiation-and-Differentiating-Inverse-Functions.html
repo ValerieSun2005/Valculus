@@ -48,9 +48,9 @@
     We have differentiated functions in the form \(y = f(x)\).
     But sometimes it's impossible to express \(y\) as a function of \(x.\)
     In these cases, we write <i>implicit equations</i> to relate \(x\) and \(y.\)
-    The method of <i>implicit differentiation</i> enables us to find slopes to a curve 
+    The method of <i>Implicit Differentiation</i> enables us to find slopes to a curve 
     without needing to solve for \(y\) explicitly. 
-    We apply implicit differentiation to differentiate inverse functions, which make up
+    We apply Implicit Differentiation to differentiate inverse functions, which make up
     the remaining functions we have yet to discuss. 
     We cover the following topics:
     <ul>
@@ -76,7 +76,7 @@
     relates \(x\) and \(y\) through an equation in which \(y\) isn't expressed as a function of \(x.\)
     Examples of implicit equations are 
     \[x^2 + xy = 6 \and 9x - 4y = 0 \pd\]
-    <span class="emph">Implicit differentiation</span> is the process by which we obtain 
+    <span class="emph">Implicit Differentiation</span> is the process by which we obtain 
     \(\textderiv{y}{x}\) by treating \(y\) as a function of \(x\) and applying the Chain Rule 
     (from Section <a href="/Valculus/calculus/2.4-Chain-Rule.html">2.4</a>).
 </p>
@@ -91,7 +91,7 @@
     Writing the implicit equation \(\eqref{eq:unit-circle}\) 
     enables us to represent the entire circle without needing to solve for \(y.\)
     To determine the slope of this circle at any point \((x, y),\)
-    we use <b>implicit differentiation</b> to attain \(\textderiv{y}{x} \col\)
+    we use <b>Implicit Differentiation</b> to attain \(\textderiv{y}{x} \col\)
     We treat \(y\) as \(y(x),\) a function of \(x,\)
     so \(\eqRef{eq:unit-circle}\) should be thought of as   
     \[x^2 + [y(x)]^2 = 1 \pd\]
@@ -125,7 +125,7 @@
     &= \frac{-x}{y} &&= \frac{x}{y} \pd
     \eaat 
     \]  
-    These results agree with our result \(\textDeriv{y}{x} = -x/y,\) obtained from implicit differentiation. 
+    These results agree with our result \(\textDeriv{y}{x} = -x/y,\) obtained from Implicit Differentiation. 
     Note that \(g'(x) = x/y\) is correct because \(y \lt 0.\)
 <p>
 <p>
@@ -133,10 +133,10 @@
     just as we did with \(\eqref{eq:unit-circle}.\)
     Similar to the unit circle example, 
     the implicit equation \(xy = 1\) can be written explicitly as \(y = 1/x.\)
-    Thus, \(\textderiv{y}{x}\) can be found by simply applying the Power Rule—no implicit differentiation needed.
-    Yet in most cases, <i>solving for \(y\) explicitly is impossible</i> 
-    and implicit differentiation is needed to acquire \(\textderiv{y}{x}.\)
-    Let's establish a set of steps to perform implicit differentiation. 
+    Thus, \(\textderiv{y}{x}\) can be found by simply applying the Power Rule—no Implicit Differentiation needed.
+    Yet in many cases, <i>solving for \(y\) explicitly is impossible</i> 
+    and Implicit Differentiation is needed to acquire \(\textderiv{y}{x}.\)
+    Let's establish a set of steps to perform Implicit Differentiation. 
 </p>
 
 <div class="steps-title">STEPS OF IMPLICIT DIFFERENTIATION</div>
@@ -168,7 +168,7 @@
 <button onclick="toggle1()" class="solution-button"></button>
 <div id="solution1" class="solution">
     The equation is an <b>implicit equation</b> where solving for \(y\) isn't feasible. 
-    Thus, we use the method of <b>implicit differentiation</b>. 
+    Thus, we use the method of <b>Implicit Differentiation</b>. 
     <ol class="list-num">
         <li>
             We first differentiate both sides of the equation with respect to \(x.\)
@@ -347,7 +347,7 @@
 </p>
 <p>
     Let \(f\) be an invertible and differentiable function.
-    To differentiate its inverse function \(\inv f,\) we apply implicit differentiation to the equation 
+    To differentiate its inverse function \(\inv f,\) we apply Implicit Differentiation to the equation 
     \[f \par{\inv{f} (x)} = x \pd\]
     Our goal is to obtain an expression for \(\par{\inv f}'(x),\)
     the derivative of \(\inv{f} \) with respect to \(x.\)
@@ -437,7 +437,7 @@
 <p>
     We now differentiate the inverse trigonometric functions \(\asin x,\)
     \(\acos x,\) \(\atan x,\) \(\asec x,\) \(\acsc x,\) and \(\acot x.\)
-    All of these derivatives can be obtained by using inverse differentiation (or implicit differentiation). 
+    All of these derivatives can be obtained by using Inverse Differentiation (or Implicit Differentiation). 
     Let's do an example.
 </p>
 
@@ -455,7 +455,7 @@
     &&\cos y = \sqrt{1 - \sin^2 y} &= \sqrt{1 - x^2} \nonum &\nl 
     \laWord{and} &&\deriv{}{x} \par{\asin x} &= \frac{1}{\sqrt{1 - x^2}} \pd \label{eq:deriv-arcsin}
     \end{flalign}
-    We could also use implicit differentiation to obtain this same result, as follows:
+    We could also use Implicit Differentiation to obtain this same result, as follows:
     \[
     \ba 
     \deriv{}{x} \par{x} &= \deriv{}{x} \par{\sin y} \nl 
@@ -516,7 +516,7 @@
 </div>
 
 <p>
-    Applying the method of inverse differentiation (or implicit differentiation) gives us
+    Applying the method of Inverse Differentiation (or Implicit Differentiation) gives us
     formulas for all six inverse trigonometric functions. \(\eqrefer{eq:deriv-arcsin}\)
     gives the derivative of \(\asin x;\) and we found the derivatives of \(\atan x\) and 
     \(\asec x\) in  <a href="#ex-arctan">Example 5</a> and <a href="#ex-asec">Example 6</a>, respectively.
@@ -603,7 +603,7 @@
         <span class="emph">explicit equation</span>, whereas 
         in an <span class="emph">implicit equation</span> \(y\)
         is not expressed as a function of \(x.\)
-        We use <span class="emph">implicit differentiation</span>
+        We use <span class="emph">Implicit Differentiation</span>
         to solve for \(\textderiv{y}{x}\) in implicit equations, as given by the following steps:
         <ol class="list-num">
             <li>
@@ -623,17 +623,17 @@
     </p>
     <p>
         <a href="#inverse-diff" class="summary-anchor">Differentiating Inverse Functions</a>
-        Applying implicit differentiation provides us with two formulas to 
+        Applying Implicit Differentiation provides us with two formulas to 
         differentiate inverse functions: 
         If \(f\) is a differentiable, invertible function, then 
         \[\par{\inv f}'(x) = \frac{1}{f'\par{\inv f(x)}} \pd \eqlabel{eq:f-inverse-deriv}\]
         Alternatively, if \(y\) is an invertible, differentiable function of \(x,\) then 
         \[\deriv{y}{x} = \frac{1}{\textderiv{x}{y}} \pd \eqlabel{eq:dx/dy}\]
-        You can either use these formulas or perform implicit differentiation to attain derivatives of inverse functions. 
+        You can either use these formulas or perform Implicit Differentiation to attain derivatives of inverse functions. 
     </p>
     <p>
         <a href="#deriv-inv-trig-functions" class="summary-anchor">Differentiating Inverse Trigonometric Functions</a>
-        The method of inverse differentiation (or implicit differentiation) enables us to 
+        The method of Inverse Differentiation (or Implicit Differentiation) enables us to 
         differentiate all six inverse trigonometric functions, as shown below:
         <table class="table-list">
             <tbody>

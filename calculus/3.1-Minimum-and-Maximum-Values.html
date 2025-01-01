@@ -44,8 +44,31 @@
   </div>
 <hr id="mainBodyBegin">
 <!--[[[crefId.Minimum-and-Maximum-Values]]]--> 
+
+<p>
+    Efficiency drives the need for models to be be minimized or maximized.
+    For example, a bank may wish to maximize its profits while minimizing 
+    its customers' waiting times.
+    The process of maximizing or minimizing a real-world quantity is called 
+    <i>optimization</i>, 
+    which we will study in depth in 
+    Section 
+    <a href="/Valculus/calculus/3.6-Optimization.html">3.6</a>.
+    In this section we set the foundations by defining minimum and maximum values 
+    and learning how to find them.
+    We discuss the following topics:
+    <ul>
+        <li>
+            <a class="page-anchor" href="#extrema">Extrema</a>
+        </li>
+        <li>
+            <a class="page-anchor" href="#locating-extrema">Locating Extrema</a>
+        </li>
+    </ul>
+</p>
+<h4 id="extrema">Extrema</h4>
 <figure class="min-max-abs-max" id="min-max-abs-max">
-    <img src="../images/sectionImages/min-max-abs-max.jpg" alt="min-max-abs-max.jpg">
+    <img src="../images/sectionImages/min-max-abs-max.jpg" alt="Figure 1">
 </figure>
 <style>
     .min-max-abs-max::before{
@@ -53,111 +76,510 @@
     }
 </style>
 <p>
-    In the world, many phenomena require efficiency. 
-    Therefore, locating the <i>extrema</i>—the minima or maxima—of a model
-    is a fundamental skill of calculus.
-    In this section, we define the forms of extrema:
-    We begin with <a class="page-anchor" href="#absolute-extrema">Absolute Extrema</a>, 
-    which we define using the <a class="page-anchor" href="#extreme-value-theorem">Extreme Value Theorem</a>. 
-    Then we examine <a class="page-anchor" href="#critical-points">Critical Points</a>
-    to define <a class="page-anchor" href="#relative-extrema">Relative Extrema</a>. 
-    This section culminates in the 
-    <a class="page-anchor" href="#closed-interval-method">Closed Interval Method</a>,
-    a problem-solving strategy for finding extrema.
+    Locating the <span class="emph">extrema</span>—the minimum and maximum values—of 
+    a function is a vital skill in calculus.
+    Let's begin with definitions.
+    In <a href="#min-max-abs-max">Figure 1</a> 
+    we say \(g(1) = 8/3\) is the <i>absolute minimum</i> value of \(g\) because \((1, 8/3)\) is the <i>lowest</i> point on the graph. 
+    Conversely, \(g(3) = 4\) is the <i>absolute maximum</i> value of \(g\) because \((3, 4)\) is the <i>highest</i> point on the graph.
+    Both \(g(1)\) and \(g(3)\) are called <i>extrema</i> of \(f.\)
+    We formally define these terms as follows.
 </p>
-<h4 id="absolute-extrema">Absolute Extrema</h4>
-<p>
-    <a href="#min-max-abs-max">Figure 1</a> shows the graph of \(y = g(x).\)
-    We say \(g(1) = 8/3\) is the <i>absolute minimum</i> of \(g\) because \((1, 8/3)\) is the <i>lowest</i> point on the graph. 
-    Conversely, \(g(3) = 4\) is the <i>absolute maximum</i> of \(g\) because \((3, 4)\) is the <i>highest</i> point on the graph.
-    Each of these values is an <i>absolute extremum</i> (plural, <i>extrema</i>) of \(g.\)
-    To formally define these terms, 
-    consider \(f(x)\) for \(a \leq x \leq b.\)
-    Let \(c\) be in \([a, b].\)
-    <ul>
-        <li>
-            \(f(c)\) is the <span class="emph">absolute maximum</span> value of \(f\) 
-            if \(f(c) \geq f(x)\) for all \(a \leq x \leq b.\) 
-        </li>
-        <li>
-            \(f(c)\) is the <span class="emph">absolute minimum</span> value of \(f\) 
-            if \(f(c) \leq f(x)\) for all \(a \leq x \leq b.\) 
-        </li>
-    </ul>
-    We may also call \(f(c)\) the <i>global</i> maximum or <i>global</i> minimum, respectively.  
-</p>
-<figure class="min-max-x2" id="min-max-x2">
-    <img src="../images/sectionImages/min-max-x2.jpg" alt="min-max-x2.jpg">
-</figure>
-<style>
-    .min-max-x2::before{
-        content:'FIGURE 2';
-    }
-</style>
 
-<!--box absolute extrema -->
+
 <div class="box-title"> ABSOLUTE EXTREMA </div>
 <div class="box">
-    Consider \(f(x)\) for \(a \leq x \leq b.\) Suppose \(c\) is in \([a, b].\) 
+    If \(c\) is some number in the domain \(D\) of a function \(f,\) 
+    then \(f(c)\) is the
     <ul>
         <li>
-            \(f(c)\) is the <span class="emph">absolute maximum</span> value of \(f\) 
-            if \(f(c) \geq f(x)\) for all \(a \leq x \leq b.\) 
+            <span class="emph">absolute maximum</span> 
+            (or <span class="emph">global maximum</span>)
+            value of \(f\) 
+            if \(f(c) \geq f(x)\) for all \(x\) in \(D.\)
         </li>
         <li>
-            \(f(c)\) is the <span class="emph">absolute minimum</span> value of \(f\) 
-            if \(f(c) \leq f(x)\) for all \(a \leq x \leq b.\) 
+            <span class="emph">absolute minimum</span> 
+            (or <span class="emph">global minimum</span>)
+            value of \(f\) 
+            if \(f(c) \leq f(x)\) for all \(x\) in \(D.\)
         </li>
     </ul>
 </div>
 
 <p>
-    As shown by <a href="#min-max-x2">Figure 2</a>, 
-    the absolute <i>minimum</i> of \(g(x) = x^2\) is \(g(0) = 0.\) 
-    But \(g\) has no maximum because the graph of \(y = x^2\) has no highest value. 
-    Similarly, \(h(x) = x^3\) has no extrema, since its graph has no lowest point or highest point
-    (<a href="#min-max-x3">Figure 3</a>). 
-    Thus, we conclude that a function may not have an absolute minimum or absolute maximum over its entire domain.
-    Over a closed interval, however, a continuous function must have both an absolute minimum and absolute maximum.
-    This is by the <span class="emph">Extreme Value Theorem</span>.
+    Many functions have both an absolute minimum and an absolute maximum,
+    but some have just one or neither. 
+    The following examples demonstrate these cases.
 </p>
-<figure class="min-max-x3" id="min-max-x3">
-    <img src="../images/sectionImages/min-max-x3.jpg" alt="min-max-x3.jpg">
+
+<div class="example-title"> EXAMPLE 1 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the absolute extrema of \(f(x) = x^2.\)
+    </div>
+</div>
+<button onclick="toggle1()" class="solution-button"></button>
+<div id="solution1" class="solution">
+    As shown in <a href="#min-max-x2">Figure 2</a>, 
+    the <i>absolute minimum</i> value of \(f(x) = x^2\) is \(f(0) = 0.\) 
+    But the parabola has no definitive highest point, so \(f(x) = x^2\) has
+    no <i>absolute maximum</i> value. 
+    <figure class="min-max-x2 figure-center-one" id="min-max-x2">
+        <img src="../images/sectionImages/min-max-x2.jpg" alt="Figure 2">
+    </figure>
+    <style>
+        .min-max-x2::before{
+            content:'FIGURE 2';
+        }
+    </style>
+</div>
+
+<div class="example-title" id="ex-extrema-x3"> EXAMPLE 2 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the absolute extrema of \(f(x) = x^3.\)
+    </div>
+</div>
+<button onclick="toggle2()" class="solution-button"></button>
+<div id="solution2" class="solution">
+    The graph of \(y = x^3\) has no definitive lowest point or highest point (<a href="#min-max-x3">Figure 3</a>). 
+    Thus, the function has no absolute extrema.
+    <figure class="min-max-x3 figure-center-one" id="min-max-x3">
+        <img src="../images/sectionImages/min-max-x3.jpg" alt="Figure 3">
+    </figure>
+    <style>
+        .min-max-x3::before{
+            content:'FIGURE 3';
+        }
+    </style>
+</div>
+
+<figure class="local-extrema-graph" id="local-extrema-graph">
+    <img src="../images/sectionImages/local-extrema-graph.jpg" alt="Figure 4">
 </figure>
 <style>
-    .min-max-x3::before{
-        content:'FIGURE 3';
+    .local-extrema-graph::before{
+        content:'FIGURE 4';
     }
 </style>
 
-<!-- extreme value theorem -->
-<div class="box-title" id="extreme-value-theorem"> EXTREME VALUE THEOREM </div>
+<p>
+    <span class="label-emph">Relative Extrema</span>
+    The graphs of many functions have peaks and troughs.
+    As an example, the graph of \(y = f(x)\) in <a href="#local-extrema-graph">Figure 4</a>
+    has a <i>peak</i> at \((C, f(C))\) 
+    and a <i>trough</i> at \((B, f(B)).\)
+    We call \(f(C)\) a <span class="emph">relative maximum</span> value of \(f\)
+    because \(f(C)\) is the largest value for \(x\) near \(C.\) 
+    Similarly, \(f(B)\) is a <span class="emph">relative minimum</span> value of \(f\)
+    since \(f(B)\) is the smallest value for \(x\) near \(B.\)
+    But these numbers are <span class="warning">not</span> <i>absolute</i> extrema of \(f.\)
+    Instead, \(f(A)\) is the <i>absolute maximum</i> value of \(f\)
+    and \(f(D)\) is the <i>absolute minimum</i> value of \(f.\) 
+    Formally, we define <span class="emph">relative extrema</span> as follows.
+</p>
+
+<div class="box-title">RELATIVE EXTREMA</div>
+<div class="box">
+    The value \(f(c)\) is a 
+    <ul>
+        <li>
+            <span class="emph">relative maximum</span> value of \(f\) 
+            if \(f(c) \geq f(x)\) for \(x\) near \(c.\)
+        </li>
+        <li>
+            <span class="emph">relative minimum</span> value of \(f\) 
+            if \(f(c) \leq f(x)\) for \(x\) near \(c.\)
+        </li>
+    </ul>
+</div>
+
+<p>
+    The term <span class="emph">local extremum</span>
+    is interchangeable with <i>relative extremum.</i>
+    When we say <q>\(x\) <i>near</i> \(c,\)</q>
+    we mean it is true on an open interval containing \(c.\)
+    In <a href="#local-extrema-graph">Figure 4</a>
+    \(f(B)\) is a relative minimum value of \(f\)
+    since it's the smallest value of \(f\) on some open interval containing \(B\)—say,
+    \((B - \delta, B + \delta)\) for sufficiently small \(\delta \gt 0.\)
+</p>
+
+<div class="example-title"> EXAMPLE 3 </div>
+<div class="example">
+    <div class="example-problem">  
+        In <a href="#min-max-ABC">Figure 5</a>,
+        classify what type of extremum \(f\) has at points \(A,\) \(B,\) and \(C.\) 
+        <figure class="min-max-ABC figure-center-one" id="min-max-ABC">
+            <img src="../images/sectionImages/min-max-ABC.jpg" alt="min-max-ABC.jpg">
+        </figure>
+        <style>
+            .min-max-ABC::before{
+                content:'FIGURE 5';
+            }
+        </style>
+    </div>
+</div>
+<button onclick="toggle3()" class="solution-button"></button>
+<div id="solution3" class="solution">
+    The function \(f\) has 
+    <ul>
+        <li>
+            a relative minimum at \(A.\)
+        </li>
+        <li>
+            a relative maximum at \(B.\)
+        </li>
+        <li>
+            a relative maximum and the absolute minimum at \(C.\)
+        </li>
+    </ul>
+</div> 
+
+<div class="example-title" id="ex-extrema-cos"> EXAMPLE 4 </div>
+<div class="example">
+    <div class="example-problem">  
+        Discuss the extrema of \(f(x) = \cos x.\)
+    </div>
+</div>
+<button onclick="toggle4()" class="solution-button"></button>
+<div id="solution4" class="solution">
+    <figure class="extrema-cos-ex" id="extrema-cos-ex">
+        <img src="../images/sectionImages/extrema-cos-ex.jpg" alt="Figure 6">
+    </figure>
+    <style>
+        .extrema-cos-ex::before{
+            content:'FIGURE 6';
+        }
+    </style>
+    The range of cosine is \([-1, 1].\)
+    The graph of \(y = \cos x\) hits its absolute maximum (and relative maximum) value of \(1\) 
+    infinitely many times because \(\cos(2n \pi) = 1\)
+    for any integer \(n.\) 
+    Similarly, the function takes on its absolute minimum (and relative minimum) value of \(-1\)
+    infinitely many times since \(\cos [(2n + 1) \pi] = -1.\)
+    (See <a href="#extrema-cos-ex">Figure 6</a>.)
+</div>
+
+<p>
+    Next we discuss a function's extrema on a closed interval. 
+    Instead of considering an entire graph, 
+    what if we just examine a portion?
+    For example, in 
+    <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html#ex-extrema-x3">Example 2</a>
+    we concluded that \(f(x) = x^3\) has no absolute extrema over its domain, \(\RR.\)
+    But over the closed interval \([-1, 1],\) the absolute minimum of \(f(x) = x^3\)
+    is \(f(-1) = -1\) and the absolute maximum is \(f(1) = 1.\)
+    It therefore appears that any continuous function must have both an absolute minimum and an absolute maximum
+    <i>over a closed interval</i>. 
+    This observation turns out to be true by the <span class="emph">Extreme Value Theorem</span>,
+    defined below.
+</p>
+
+<div class="box-title"> EXTREME VALUE THEOREM </div>
 <div class="box">
     If \(f\) is continuous over \([a, b],\) 
     then \(f\) attains an absolute minimum value \(f(c)\) and an absolute maximum value \(f(d),\)
     where \(c\) and \(d\) are in \([a, b].\)
 </div>
 
+<figure class="evt-not-satisfied" id="evt-not-satisfied">
+    <img src="../images/sectionImages/evt-not-satisfied.jpg" alt="Figure 7">
+</figure>
+<style>
+    .evt-not-satisfied::before{
+        content:'FIGURE 7';
+    }
+</style>
+
 <p>
-    For example, the maximum value of \(g(x) = x^2\) in \(0 \leq x \leq 2\) is \(g(2) = 4,\)
-    while the minimum value in this interval is \(g(0) = 0.\)
-    Similarly, \(h(x) = x^3\) for \(-1 \leq x \leq 1\) has a maximum of \(h(1) = 1\) and a minimum of \(h(-1) = -1.\)
-    In each of these cases, the extrema lie at the <i>endpoints</i> of a closed interval.
-    By the Extreme Value Theorem, an extreme value can be attained multiple times.
-    For example, the graph of \(y = \sin x\) has infinitely many peaks and 
-    troughs—corresponding to the <i>absolute</i> maxima and absolute minima, respectively.
-    If \(f\) is uniform, then the minimum value and maximum value are the same. 
-    For example, the absolute minimum and absolute maximum of \(g(x) = 5\) are both \(5.\) 
+    While intuitive, the Extreme Value Theorem turns out to be 
+    difficult to prove,
+    so we omit the proof.
+    Extreme values can be taken on more than once,
+    as shown by 
+    <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html#ex-extrema-cos">Example 4</a>.
+    We emphasize that both conditions of the Extreme Value Theorem—continuity and closed interval—must be satisfied. 
+    If either is omitted, then a function is <span class="warning">not</span> guaranteed 
+    to have any extrema.
+    As an example, the graph of \(y = f(x)\) in 
+    <a href="#evt-not-satisfied">Figure 7</a>
+    is discontinuous and undefined at \(x = 0\) and \(x = 3.\)
+    Thus, the Extreme Value Theorem bestows <i>no guarantees</i> 
+    that \(f\) has any extrema. 
+    Indeed, \(f\) has neither an absolute minimum nor an absolute maximum 
+    on \([0, 3].\)  
 </p>
 
-<aside class="box-caution">
-    The derivative of \(f(x) = 1/x\) is \(f'(x) = -1/x^2,\)
-    which is undefined at \(x = 0.\) But since \(f(0)\) is also undefined, 
-    \(x = 0\) does <span class="warning">not</span> correspond to a critical point of \(f.\)
-</aside> 
 
-<h4 id="critical-points">Critical Points</h4>
+<h4 id="locating-extrema">Locating Extrema</h4>
+
 <p>
+    A connection exists between a function's extrema and its derivatives. 
+    As shown in
+    <a href="#graph-extrema-horiz-tangent">Figure 8</a>, 
+    the graph of \(y = f(x)\) has horizontal tangents at the relative minimum \((c, f(c))\) 
+    and at the relative maximum \((d, f(d)).\) 
+    Because the derivative is the slope of the tangent line, 
+    which is \(0,\)
+    it follows that \(f'(c) = 0\) and \(f'(d) = 0.\)
+    Simply put, the function's derivative equals \(0\) at a relative extremum.
+    By <span class="emph">Fermat's Theorem</span>, defined below, 
+    this observation is always true for differentiable functions.
+</p>
+
+<figure class="graph-extrema-horiz-tangent" id="graph-extrema-horiz-tangent">
+    <img src="../images/sectionImages/graph-extrema-horiz-tangent.jpg" alt="Figure 8">
+</figure>
+<style>
+    .graph-extrema-horiz-tangent::before{
+        content:'FIGURE 8';
+    }
+</style>
+
+<div class="box-title">FERMAT'S THEOREM</div>
+<div class="box">
+    If \(f\) has a relative extremum at \(c\) 
+    and \(f'(c)\) exists, then \(f'(c) = 0.\)
+</div>
+
+<p>
+    <span class="proof">PROOF</span>
+    First suppose that \(f\) is differentiable at \(c.\)
+    Then by the limit definition of a derivative 
+    (Section <a href="/Valculus/calculus/2.1-Defining-a-Derivative.html">2.1</a>),
+    \[
+    \ba
+    f'(c) &= \lim_{h \to 0} \frac{f(c + h) - f(c)}{h} \nl 
+    &= \lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h} \nl
+    &= \lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h} \pd
+    \ea
+    \]
+    (A limit exists if and only if the one-sided limits exist and equal each other.)
+    Next suppose that \(f\) has a relative maximum at \(c.\)
+    Then \(f(c) \geq f(x)\) for \(x\) sufficiently close to \(c.\)
+    Formally, if \(h\) is sufficiently close to \(0,\)
+    with \(h\) either positive or negative, then 
+    \begin{flalign}
+    &&f(c) &\geq f(c + h) \nonum &\nl
+    \laWord{so} && f(c + h) - f(c) &\leq 0 \pd \label{eq:f-c-h-inequality}
+    \end{flalign}
+    For positive \(h,\) dividing both sides of \(\eqref{eq:f-c-h-inequality}\) by \(h\)
+    yields 
+    \[
+    \frac{f(c + h) - f(c)}{h} \leq 0 \pd
+    \]
+    Taking the right-hand limit of both sides, we get 
+    \[
+    \lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h} \leq \underbrace{\lim_{h \to 0^+} 0}_0 \pd
+    \]
+    But the limit on the left is simply \(f'(c),\)
+    so we have \(f'(c) \leq 0.\)
+    Conversely, if \(h \lt 0\) then we flip the inequality sign in \(\eqref{eq:f-c-h-inequality}\)
+    after dividing by \(h \col\)
+    \[\frac{f(c + h) - f(c)}{h} \geq 0 \pd\]
+    Taking the left-hand limits of both sides produces 
+    \[
+    \lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h} \geq \underbrace{\lim_{h \to 0^-} 0}_0 \pd
+    \]
+    Yet the left side is \(f'(c),\)
+    so we attain 
+    \(f'(c) \geq 0.\)
+    Accordingly, we have \(f'(c) \geq 0\) and \(f'(c) \leq 0;\)
+    both can only be true if \(f'(c) = 0.\)
+    Thus, Fermat's Theorem is proved for the case of a relative maximum at \(c.\)
+    Proving Fermat's Theorem for the case of a relative minimum is performed similarly.
+    \[\qedproof\]
+</p>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    The converse of Fermat's Theorem is
+    <span class="warning">not</span> generally true:
+    Just because \(f'(c) = 0\) does not mean \(f\) has a relative extremum at \(c.\)
+    For example, if \(f(x) = x^3\) then \(f'(x) = 3x^2\) and \(f'(0) = 0.\)
+    But \(x^3\) does <span class="warning">not</span> 
+    have an extremum at \(x = 0,\)
+    as discussed in 
+    <a href="/Valculus/calculus/3.1-Minimum-and-Maximum-Values.html#ex-extrema-x3">Example 2</a>.
+</p>
+
+<figure class="graph-abs-x" id="graph-abs-x">
+    <img src="../images/sectionImages/graph-abs-x.jpg" alt="Figure 9">
+</figure>
+<style>
+    .graph-abs-x::before{
+        content:'FIGURE 9';
+    }
+</style>
+
+<p>
+    Instead, Fermat's Theorem says \(f\) <i>could have</i> a relative extrema at \(c\)
+    if \(f'(c) = 0.\)
+    Yet \(f\) may also have an extremum at \(c\) when \(f'(c)\) does not exist. 
+    For example, \(g(x) = \abs x\) has an absolute minimum (and a relative minimum) value
+    at \(x = 0,\) even though \(g'(0)\) is undefined
+    (<a href="#graph-abs-x">Figure 9</a>). 
+    Thus, to find the relative extrema of \(f,\) our objective is clear:
+    <i>We examine points at which \(f'(c) = 0\) or \(f'(c)\) does not exist</i>. 
+    We call these \(c\) <span class="emph">critical numbers</span>,
+    and the point \((c, f(c))\) is a <span class="emph">critical point</span>.
+</p>
+
+<div class="box-title">CRITICAL NUMBERS</div>
+<div class="box">
+    If \(c\) is in the domain of \(f,\)
+    and \(f'(c) = 0\) or \(f'(c)\) does not exist, 
+    then \(c\) is a <span class="emph">critical number</span> 
+    of \(f.\)
+    The point \((c, f(c))\) is a <span class="emph">critical point</span>.
+</div>
+
+<p>
+    Thus, we can rephrase Fermat's Theorem as follows:
+    if \(f\) has a relative extremum at \(c,\)
+    then \(c\) is a critical number of \(f.\)
+    Accordingly, finding a function's critical numbers allows us 
+    to locate its relative extrema.
+</p>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    It is easy to forget that \(c\) must be within the domain of \(f.\)
+    For example, the derivative of \(f(x) = 1/x\) is \(f'(x) = -1/x^2,\)
+    which is undefined at \(x = 0.\) But since \(f(0)\) is <i>also</i> undefined, 
+    \(0\) is <span class="warning">not</span> a critical number of \(f.\)
+</p>
+
+<div class="example-title"> EXAMPLE 5 </div>
+<div class="example">
+    <div class="example-problem">  
+        Find the critical numbers of \(f(x) = 15x^{4/5} - 5x^{9/5}.\)
+    </div>
+</div>
+<button onclick="toggle5()" class="solution-button"></button>
+<div id="solution5" class="solution">
+    <figure class="graph-crit-numbers-ex" id="graph-crit-numbers-ex">
+        <img src="../images/sectionImages/graph-crit-numbers-ex.jpg" alt="Figure 10">
+    </figure>
+    <style>
+        .graph-crit-numbers-ex::before{
+            content:'FIGURE 10';
+        }
+    </style>
+    Applying the Power Rule and rearranging,
+    we attain
+    \[
+    \ba
+    f'(x) &= 12 x^{-1/5} - 9 x^{4/5} \nl  
+    &= \frac{12}{x^{1/5}} - \frac{9 x^{5/5}}{x^{1/5}} \nl 
+    &= \frac{12 - 9x}{x^{1/5}} \pd
+    \ea
+    \]
+    We see \(f'(x) = 0\) when \(12 - 9x = 0\)—that is, 
+    when \(x = 4/3.\)
+    Also, \(f'(x)\) is undefined when \(x = 0.\)
+    Because both numbers are within the domain of \(f,\)
+    the critical numbers are \(\boxed{0}\) and \(\boxed{4/3}.\)
+    <a href="#graph-crit-numbers-ex">Figure 10</a> shows the graph of \(y = f(x);\)
+    its relative extrema are at the critical numbers, \(x = 0\) and \(x = 4/3.\)
+</div>
+
+<p>
+    We now present a coherent strategy for locating <i>absolute</i> extrema:
+    If \(f\) is continuous over \([a, b],\)
+    then \(f\) has both an absolute minimum value and an absolute maximum value in \([a, b]\)
+    by the Extreme Value Theorem.
+    The absolute extrema of \(f\) must either match the relative extrema
+    or reside at the endpoints.
+    Hence, the endpoints and critical numbers are possible locations of absolute extrema, 
+    so we must evaluate \(f\) at these values.
+    This strategy is called the <span class="emph">Closed Interval Method</span>.
+</p>
+
+<div class="steps-title"> CLOSED INTERVAL METHOD </div>
+<div class="steps">
+    Suppose \(f\) is continuous over \([a, b].\) To find the absolute minimum and absolute maximum values of \(f,\)
+    use the following procedure. 
+    <ol class="list-num">
+        <li>
+            Evaluate \(f\) at its critical numbers in \((a, b).\) 
+        </li>
+        <li>
+            Evaluate \(f\) at the endpoints \(a\) and \(b.\)
+        </li>
+        <li>
+            Determine the smallest and largest of the values in Steps 1 and 2.
+            The largest value is the absolute maximum of \(f,\) 
+            while the smallest value is the absolute minimum of \(f.\)
+        </li>
+    </ol>
+</div>
+
+<div class="example-title"> EXAMPLE 6 </div>
+<div class="example">
+    <div class="example-problem">  
+        Let \(g(x) = x^3 - \frac{3}{2} x^2 - 6x.\)
+        Find the absolute minimum value and absolute maximum value of \(g\) over the interval \(-2 \leq x \leq 4.\)
+    </div>
+</div>
+<button onclick="toggle6()" class="solution-button"></button>
+<div id="solution6" class="solution">
+    By the Closed Interval Method, the absolute extrema of \(g\) 
+    must lie either at the endpoints of \([-2, 4]\) or at the critical numbers in \((-2, 4).\) 
+    We find the critical numbers of \(g\) as follows:
+    \[
+    \ba 
+    g'(x) = 3x^2 - 3x - 6 &= 0 \nl 
+    3(x^2 - x - 2) &= 0 \nl 
+    3(x - 2)(x + 1) &= 0 \nl
+    \implies x &= -1 \cma x = 2 \pd 
+    \ea 
+    \]
+    The following table shows the values of \(g\) at its endpoints and critical points,
+    which are all the possible locations for the absolute extrema.
+    <table class="table-full-width">
+        <tr>
+            <td class="table-function-label">
+                \(x\)
+            </td>
+            <td>
+                \(-2\)
+            </td>
+            <td>
+                \(-1\)
+            </td>
+            <td>
+                \(2\)
+            </td>
+            <td>
+                \(4\)
+            </td>
+        </tr>
+        <tr>
+            <td class="table-function-label">
+                \(g(x)\)
+            </td>
+            <td>
+                \(-2\)
+            </td>
+            <td>
+                \(7/2\)
+            </td>
+            <td>
+                \(-10\)
+            </td>
+            <td>
+                \(16\)
+            </td>
+        </tr>
+    </table> 
+    Thus, on \([-2, 4]\) the <i>absolute minimum</i> is \(g(2) = \boxed{-10}\)
+    and the <i>absolute maximum</i> is \(g(4) = \boxed{16}.\)
+</div> 
+
+<!-- <p>
     A function \(f\) has a <span class="emph">critical point</span> when \(x = c\) if   
     \(f'(c) = 0\) or if \(f'(c)\) is undefined and \(f(c)\) is defined. 
     We then call \(c\) a <span class="emph">critical number</span> of \(f.\)
@@ -172,9 +594,9 @@
     \] 
     whose solutions are \(x = 1\) and \(x = 3.\)
     So these are the critical numbers of \(g.\)
-</p>
+</p> -->
 
-<div class="example-title"> EXAMPLE 1 </div>
+<!-- <div class="example-title"> EXAMPLE 1 </div>
 <div class="example">
     <div class="example-problem">  
         For each of (i)–(iii), determine the critical numbers of the given function \(g.\)
@@ -231,9 +653,9 @@
             Therefore, \(t = 0\) and \(t = 1\) are critical numbers of \(g.\)
         </li>
     </ol>
-</div> 
+</div>  -->
 
-<h4 id="relative-extrema">Relative Extrema</h4>
+<!-- <h4 id="relative-extrema">Relative Extrema</h4>
 <figure class="min-max-deriv-sign-change" id="min-max-deriv-sign-change">
     <img src="../images/sectionImages/min-max-deriv-sign-change.jpg" alt="min-max-deriv-sign-change.jpg">
 </figure>
@@ -278,7 +700,6 @@
     Hence, \(x = 0\) is <i>not</i> a relative extremum of \(g\) (see <a href="#min-max-x3">Figure 3</a>).
 </p>
 
-<!-- 1st derivative test -->
 <div class="box-title" id="first-derivative-test"> FIRST-DERIVATIVE TEST </div>
 <div class="box">
     If \(c\) is a critical number of \(f,\) then
@@ -298,29 +719,6 @@
     </ol>
 </div>
 
-<div class="example-title"> EXAMPLE 2 </div>
-<div class="example">
-    <div class="example-problem">  
-        <figure class="min-max-ABC" id="min-max-ABC">
-            <img src="../images/sectionImages/min-max-ABC.jpg" alt="min-max-ABC.jpg">
-        </figure>
-        <style>
-            .min-max-ABC::before{
-                content:'FIGURE 5';
-            }
-        </style>
-        In <a href="#min-max-ABC">Figure 5</a>,
-        classify what type of extremum \(f\) has at points \(A,\) \(B,\) and \(C.\) 
-        <div class="white-space">
-        </div>
-    </div>
-</div>
-<button onclick="toggle2()" class="solution-button"></button>
-<div id="solution2" class="solution">
-    Point \(A\) is the location of a relative minimum of \(f.\)
-    Point \(B\) is the location of a relative maximum of \(f.\)
-    Point \(C\) is the location of a relative minimum and the absolute minimum of \(f.\)
-</div> 
 
 <div class="example-title"> EXAMPLE 3 </div>
 <div class="example">
@@ -402,116 +800,73 @@
         Conversely, at \(x = 3\) and \(x = 5,\) \(g'\) does not change sign.
         Thus, these critical numbers do not correspond to relative minima or relative maxima.  
     </p>
-</div> 
+</div>  -->
 
-<p>
-    We now present a coherent strategy for locating absolute extrema.
-    If \(f\) is continuous over \([a, b],\)
-    then the <a href="#extreme-value-theorem">Extreme Value Theorem</a>
-    guarantees that \(f\) has both an absolute minimum and absolute maximum in \([a, b].\)
-    <!-- The <a href="#first-derivative-test">First Derivative Test</a> 
-    provides us an outline of determining critical points.  -->
-    We deduce the following: If \(f\) is continuous over \([a, b]\) and has a critical number \(c\) in \((a, b),\)
-    then the absolute minimum or absolute maximum of \(f\) must lie at the critical number \(c\) or at the endpoints \(a\) and \(b.\)
-    In other words, an extreme value must be at a critical point or an endpoint.
-    To find the absolute minimum and absolute maximum of \(f,\) 
-    we use the <span class="emph">Closed Interval Method</span>, shown below.
-</p>
-
-<!--box closed interval method -->
-<div class="steps-title" id="closed-interval-method"> CLOSED INTERVAL METHOD </div>
-<div class="steps">
-    Suppose \(f\) is continuous over \([a, b].\) To find the absolute minimum and absolute maximum of \(f,\)
-    use the following procedure. 
-    <ol class="list-num">
-        <li>
-            Evaluate \(f\) at the critical numbers in \((a, b).\) 
-        </li>
-        <li>
-            Evaluate \(f\) at the endpoints \(a\) and \(b.\)
-        </li>
-        <li>
-            Determine the smallest and largest of the values in Steps 1 and 2.
-            The largest value is the absolute maximum of \(f,\) 
-            while the smallest value is the absolute minimum of \(f.\)
-        </li>
-    </ol>
-</div>
-
-<div class="example-title"> EXAMPLE 5 </div>
-<div class="example">
-    <div class="example-problem">  
-        Let \(g(x) = x^3 - \frac{3}{2} x^2 - 6x.\)
-        Find the absolute minimum and absolute maximum of \(g\) over the interval \(-2 \leq x \leq 4.\)
-    </div>
-</div>
-<button onclick="toggle5()" class="solution-button"></button>
-<div id="solution5" class="solution">
-    <p>
-        The Closed Interval Method asserts that an absolute extremum of \(g\) 
-        must either lie at the endpoints of \([-2, 4]\) or at a critical number in \((-2, 4).\) 
-        We differentiate \(g\) to determine its critical numbers:
-        \[
-        \ba 
-        g'(x) = 3x^2 - 3x - 6 &= 0 \nl 
-        \implies x &= -1 \comma x = 2 \pd 
-        \ea 
-        \]
-    </p>
-    <p>
-        We now evaluate \(g\) at these two critical numbers and at the endpoints. 
-        The values of \(g\) at the critical points are  
-        \[g(-1) = 7/2 \and g(2) = -10 \pd\]
-        Additionally, the values of \(g\) at the endpoints of \([-2, 4]\) are 
-        \[g(-2) = -2 \and g(4) = 16 \pd\] 
-        The smallest of these values is \(g(2) = -10,\) and the largest is \(g(4) = 16.\)
-        Thus, the <span class="emph">minimum value</span> of \(g\) in \([-2, 4]\) is \(-10,\)
-        and the <span class="emph">maximum value</span> is \(16.\)
-    </p>
-</div> 
 
 <div class="section-summary">
     <p>
-        A function \(f\) may have two types of extrema: absolute extrema and relative extrema. 
-        Consider \(f(x)\) for \(a \leq x \leq b.\) Suppose \(c\) is in \([a, b].\) 
-        We call \(f(c)\) the <span class="emph">absolute maximum</span> value of \(f\) 
-        if \(f(c) \geq f(x)\) for all \(a \leq x \leq b.\) 
-        In contrast, \(f(c)\) is the <span class="emph">absolute minimum</span> value of \(f\) 
-        if \(f(c) \leq f(x)\) for all \(a \leq x \leq b.\) 
-    </p>
-    <p>
-        The <span class="emph">Extreme Value Theorem</span>
-        states the following: if \(f\) is continuous over \([a, b],\) 
-        then \(f\) attains an absolute minimum value \(f(c)\) and an absolute maximum value \(f(d),\)
-        where \(c\) and \(d\) are in \([a, b].\)
-    </p>
-    <p>
-        A function \(f(x)\) has a <span class="emph">critical point</span> at \(c\) 
-        if \(f'(c) = 0\) or if \(f'(c)\) is undefined and \(f(c)\) is defined. 
-        Then \(x = c\) is called a <span class="emph">critical number</span> of \(f(x).\)
-    </p>
-    <p>
-        The <span class="emph">First-Derivative Test</span> states the following: 
-        If \(c\) is a critical number of \(f,\) then 
-        <ol class="list-alpha">
+        <a class="summary-anchor" href="#extrema">Extrema</a>
+        <span class="emph">Extrema</span> (singular, <i>extremum</i>) are the minimum or maximum values of a function. 
+        A function \(f\) may have two types of extrema: 
+        <span class="emph">absolute extrema</span> 
+        (or <span class="emph">global extrema</span>)
+        and <span class="emph">relative extrema</span>
+        (or <span class="emph">local extrema</span>).
+        If \(c\) is in the domain \(D\) of \(f,\)
+        then \(f(c)\) is the 
+        <ul>
             <li>
-                \(f\) has a <span class="emph">relative minimum</span> at \(c\) if 
-                \(f'\) changes sign from negative to positive at \(c.\)
+                <span class="emph">absolute maximum</span> 
+                (or <span class="emph">global maximum</span>)
+                value of \(f\) 
+                if \(f(c) \geq f(x)\) for all \(x\) in \(D.\)
             </li>
             <li>
-                \(f\) has a <span class="emph">relative maximum</span> at \(c\) if 
-                \(f'\) changes sign from positive to negative at \(c.\)
+                <span class="emph">absolute minimum</span> 
+                (or <span class="emph">global minimum</span>)
+                value of \(f\) 
+                if \(f(c) \leq f(x)\) for all \(x\) in \(D.\)
             </li>
-            <li>
-                \(f\) has neither a relative minimum nor relative maximum at \(c\) if 
-                \(f'\) does <i>not</i> change sign at \(c.\)
-            </li>
-        </ol>
+        </ul>
+        <p class="p-no-indent">
+            While many functions have both an absolute minimum and an absolute maximum,
+            some have just one or no absolute extrema.
+            Additionally, the value \(f(c)\) is a 
+            <ul>
+                <li>
+                    <span class="emph">relative maximum</span> value of \(f\) 
+                    if \(f(c) \geq f(x)\) for \(x\) near \(c.\)
+                </li>
+                <li>
+                    <span class="emph">relative minimum</span> value of \(f\) 
+                    if \(f(c) \leq f(x)\) for \(x\) near \(c.\)
+                </li>
+            </ul>
+        </p>
+        <p class="p-no-indent">
+            Relative maxima correspond to peaks in the graph of \(f,\)
+            while \(f\) has troughs at relative minima.
+            By the <span class="emph">Extreme Value Theorem</span>, 
+            if \(f\) is continuous over \([a, b],\) 
+            then \(f\) attains an absolute minimum value \(f(c)\) and an absolute maximum value \(f(d),\)
+            where \(c\) and \(d\) are in \([a, b].\)
+        </p>
     </p>
     <p>
-        We use the <span class="emph">Closed Interval Method</span>
-        to determine the absolute minimum and absolute maximum of a function \(f\) over a closed interval \([a, b].\)
-        The procedure is as follows. 
+        <a class="summary-anchor" href="#locating-extrema">Locating Extrema</a>
+        By <span class="emph">Fermat's Theorem</span>, 
+        if \(f\) has a relative extremum at \(c\) and \(f'(c)\) exists,
+        then \(f'(c) = 0.\)
+        Simply put, the graph of a differentiable function has horizontal tangents
+        at its relative extrema.
+        But the converse of Fermat's Theorem is not generally true: if \(f'(c) = 0,\)
+        then \(f\) <span class="warning">doesn't need to</span>
+        have a relative extremum at \(c.\)
+        <span class="emph">Critical numbers</span> \(c\) 
+        in the domain of \(f\) satisfy \(f'(c) = 0\) or \(f'(c)\) failing to exist. 
+        Then \((c, f(c))\) is called a <span class="emph">critical point</span>. 
+        The <span class="emph">Closed Interval Method</span> provides the following guide 
+        for locating absolute extrema on an interval \([a, b].\)
         <ol class="list-num">
             <li>
                 Evaluate \(f\) at the critical numbers in \((a, b).\) 

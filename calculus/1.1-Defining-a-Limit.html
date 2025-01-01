@@ -717,8 +717,33 @@
     In such cases, we aim to determine whether \(f(x)\) tends to a fixed number as \(x \to \infty\)
     or as \(x \to -\infty.\) 
     We call these matters <i>limits at infinity</i>. 
-    Let's consider a few examples.
 </p>
+
+<p>
+    In general, the notation 
+    \[\lim_{x \to \infty} f(x) = L\]
+    means that \(f(x)\) approaches some number \(L\) as we make \(x\) arbitrarily large (as large as we wish)—in other words,
+    as \(x\) <i>increases without bound</i>.
+    Similarly, writing 
+    \[\lim_{x \to -\infty} f(x) = L\]
+    indicates that \(f(x)\) tends to \(L\) if we let \(x\) <i>decrease</i> without bound. 
+</p>
+
+<div class="box-title">LIMITS AT INFINITY</div>
+<div class="box">
+    <ol class="list-alpha">
+        <li>
+            If \(f(x)\) is defined for all \(x \geq a,\) then 
+            \[\lim_{x \to \infty} f(x) = L\]
+            means that \(f(x)\) approaches \(L\) as \(x\) increases without bound.
+        </li>
+        <li>
+            If \(f(x)\) is defined for all \(x \leq a,\) then 
+            \[\lim_{x \to -\infty} f(x) = L\]
+            means that \(f(x)\) approaches \(L\) as \(x\) decreases without bound.
+        </li>
+    </ol>
+</div>
 
 <div class="example-title" id="ex-1/x"> EXAMPLE 6 </div>
 <div class="example">
@@ -779,46 +804,140 @@
     </table>
     As we increase \(x,\) the value \(1/x\)
     shrinks to \(0\) because the number \(1\) is divided by a larger and larger value. 
-    If we trace the graph of \(y = 1/x\) (shown in <a href="#lim-recip-x">Figure 7</a>) 
+    If we trace the graph of \(y = 1/x\) (<a href="#lim-recip-x">Figure 7</a>) 
     in the direction of increasing \(x,\) then we observe that the curve plunges toward the \(x\)-axis.
     So  
     \[\lim_{x \to \infty} \frac{1}{x} = \boxed 0\]
 </div>
 
 <p>
-    More generally, the notation 
-    \[\lim_{x \to \infty} f(x) = L\]
-    means that \(f(x)\) approaches some number \(L\) as we make \(x\) arbitrarily large (as large as we wish)—in other words,
-    as \(x\) <i>increases without bound</i>.
-    Similarly, writing 
-    \[\lim_{x \to -\infty} f(x) = L\]
-    indicates that \(f(x)\) tends to \(L\) if we let \(x\) <i>decrease</i> without bound. 
+    <span class="label-emph">Infinite Limits</span>
+    The notation 
+    \[\lim_{x \to a} f(x) = \infty\]
+    means that the values of \(f(x)\) become bigger and bigger—increasing without bound—as \(x\) is made closer and closer to \(a.\)
+    We may choose to say a limit <q>equals infinity</q> instead of writing <q>does not exist,</q>
+    which provides less information about a function's behavior.
+    The former statement concedes that a limit doesn't exist while communicating that the function 
+    approaches \(\infty.\)
+    Likewise, writing 
+    \[\lim_{x \to a} f(x) = -\infty\]
+    asserts that the values of \(f(x)\) decrease without bound as \(x\) approaches \(a.\)
+    This statement suggests that the limit fails to exist <i>because</i> \(f(x)\) approaches negative infinity.
+    In either definition, the value of \(f(a)\) (or whether it is undefined) is irrelevant.
 </p>
 
-<div class="box-title">LIMITS AT INFINITY</div>
+<div class="box-title">INFINITE LIMITS</div>
 <div class="box">
+    Let \(f\) be a function defined on both sides of \(a,\) except possibly at \(a\) itself. 
     <ol class="list-alpha">
         <li>
-            If \(f(x)\) is defined for all \(x \geq a,\) then 
-            \[\lim_{x \to \infty} f(x) = L\]
-            means that \(f(x)\) approaches \(L\) as \(x\) increases without bound.
+            The statement 
+            \[\lim_{x \to a} f(x) = \infty\]
+            means that \(f(x)\) increases without bound as \(x\) is made closer to \(a\)
+            (but not equal to \(a\)).
         </li>
         <li>
-            If \(f(x)\) is defined for all \(x \leq a,\) then 
-            \[\lim_{x \to -\infty} f(x) = L\]
-            means that \(f(x)\) approaches \(L\) as \(x\) decreases without bound.
+            The statement 
+            \[\lim_{x \to a} f(x) = -\infty\]
+            means that \(f(x)\) decreases without bound as \(x\) is made closer to \(a\)
+            (but not equal to \(a\)).
         </li>
     </ol>
 </div>
 
-<div class="example-title" id="ex-lim-sin"> EXAMPLE 7 </div>
+<p>
+    Now let's merge the ideas of <i>limits at infinity</i> with <i>infinite limits</i>:
+    The family of functions \(1/x^k,\) 
+    where \(k\) is a positive constant, satisfies 
+    \begin{equation} 
+    \lim_{x \to \infty} x^k = \infty \pd \label{eq:lim-x^k}
+    \end{equation}
+    This formula is intuitive because if \(x\) is large, 
+    then \(x^k\) is also large.
+    Hence, \(x^k\) grows with \(x.\)
+    Accordingly, the fraction \(1/x^k\) shrinks to \(0\)
+    due to the division of \(1\) by an increasingly large number. 
+    Thus, 
+    \begin{equation} 
+    \lim_{x \to \infty} \frac{1}{x^k} = 0 \pd \label{eq:lim-1/x^k}
+    \end{equation}
+    In <a href="#ex-1/x">Example 6</a> we used this logic
+    to verify \(\eqref{eq:lim-1/x^k}\) for \(k = 1.\) 
+</p>
+
+<p>
+    <span class="text-caution">CAUTION</span>
+    Understand that <span class="warning">\(\infty\) is not a number</span>. 
+    Saying a limit equals \(\infty\) or \(-\infty\) simply describes <i>how</i> the limit fails to exist, 
+    therefore providing us with more information about the function's behavior.
+    We will elaborate on limits with infinity in Section <a href="/Valculus/calculus/1.6-Limits-with-Infinity.html">1.6</a>.
+</p>
+
+<div class="box-title">THE FAMILY OF FUNCTIONS \(x^k\) AND \(1/x^k\)</div>
+<div class="box">
+    If \(k\) is a positive constant, then 
+    \begin{flalign} 
+    &&\lim_{x \to \infty} x^k &= \infty \eqlabel{eq:lim-x^k} &\nl
+    \laWord{and} &&\lim_{x \to \infty} \frac{1}{x^k} &= 0 \pd \eqlabel{eq:lim-1/x^k}
+    \end{flalign}
+</div>
+
+<div class="example-title" id="ex-x^k"> EXAMPLE 7 </div>
+<div class="example">
+    <div class="example-problem">  
+        Evaluate the following limits.
+        <ol class="list-alpha">
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} \frac{1}{x^5}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} \sqrt[3]{x}\)
+                </span>
+            </li>
+            <li>
+                <span>
+                    \(\ds \lim_{x \to \infty} x^{-2}\)
+                </span>
+            </li>
+        </ol>
+    </div>
+</div>
+<button onclick="toggle7()" class="solution-button"></button>
+<div id="solution7" class="solution">
+    <ol class="list-alpha">
+        <li>
+            We use \(\eqref{eq:lim-1/x^k},\) 
+            where \(k = 5 \gt 0,\) to assert that 
+            \[\lim_{x \to \infty} \frac{1}{x^5} = \boxed 0\]
+        </li>
+        <hr>
+        <li>
+            Rewriting \(\sqrt[3]{x}\) as \(x^{1/3},\) we apply \(\eqref{eq:lim-x^k}\)
+            with \(k = 1/3 \gt 0\) to conclude
+            \[\lim_{x \to \infty} \sqrt[3]{x} = \boxed{\infty}\]
+            (We could also say the limit <b>does not exist</b>.)
+        </li>
+        <hr>
+        <li>
+            Since \(x^{-2} = 1/x^2,\) 
+            using \(\eqref{eq:lim-1/x^k}\) with \(k = 2 \gt 0\) shows 
+            \[\lim_{x \to \infty} x^{-2} = \lim_{x \to \infty} \frac{1}{x^2} = \boxed 0\]
+        </li>
+    </ol>
+</div>
+
+
+<div class="example-title" id="ex-lim-sin"> EXAMPLE 8 </div>
 <div class="example">
     <div class="example-problem">  
         \[\lim_{x \to \infty} \sin x\]
     </div>
 </div>
-<button onclick="toggle7()" class="solution-button"></button>
-<div id="solution7" class="solution">
+<button onclick="toggle8()" class="solution-button"></button>
+<div id="solution8" class="solution">
     <figure class="lim-sine" id="lim-sine">
         <img src="../images/sectionImages/lim-sine.jpg" alt="Figure 8">
     </figure>
@@ -895,14 +1014,14 @@
     \(x\) increases or decreases without bound.
 </p>
 
-<div class="example-title" id="1/x2"> EXAMPLE 8 </div>
+<div class="example-title" id="1/x2"> EXAMPLE 9 </div>
 <div class="example">
     <div class="example-problem">  
         \[\lim_{x \to 0} \frac{1}{x^2}\]
     </div>
 </div>
-<button onclick="toggle8()" class="solution-button"></button>
-<div id="solution8" class="solution">
+<button onclick="toggle9()" class="solution-button"></button>
+<div id="solution9" class="solution">
     <figure class="lim-recip-x2" id="lim-recip-x2">
         <img src="../images/sectionImages/lim-recip-x2.jpg" alt="Figure 9">
     </figure>
@@ -978,129 +1097,127 @@
     </div>
     In fact, the values of \(1/x^2\) can be made <i>arbitrarily large</i> by making \(x\) sufficiently small, 
     as shown by the graph in <a href="#lim-recip-x2">Figure 9</a>.
-    Since \(1/x^2\) does not approach a final value as \(x \to 0,\) we say 
-    the limit \(\lim_{x \to 0} \par{1/x^2}\) <b>does not exist</b>.
+    Thus, we say 
+    \[\lim_{x \to 0} \frac{1}{x^2} = \boxed{\infty}\]
+    Alternatively, since \(1/x^2\) does not approach a final value as \(x \to 0,\) 
+    it is equally correct to say the limit <b>does not exist</b>.
 </div>
 
+<figure class="limit-at-asymptote" id="limit-at-asymptote">
+    <img src="../images/sectionImages/limit-at-asymptote.jpg" alt="Figure 10">
+</figure>
+<style>
+    .limit-at-asymptote::before{
+        content:'FIGURE 10';
+    }
+</style>
+
 <p>
-    <a href="#1/x2">Example 8</a> shows an example of a function that becomes unbounded as 
-    \(x\) is made closer to a value. 
-    To better describe the behavior of \(y = 1/x^2\) as \(x \to 0,\) we could also write 
-    \[\lim_{x \to 0} \frac{1}{x^2} = \infty \pd\]
-    But understand that <span class="warning">\(\infty\) is not a number, nor does this limit exist</span>. 
-    This notation simply describes <i>how</i> the limit fails to exist, 
-    therefore providing us with more information about the function's behavior.
-    We will elaborate on limits with infinity in Section <a href="/Valculus/calculus/1.6-Limits-with-Infinity.html">1.6</a>.
-</p>
-<p>
-    <span class="label-emph">Infinite Limits</span>
-    In general, the notation 
-    \[\lim_{x \to a} f(x) = \infty\]
-    means that the values of \(f(x)\) become bigger and bigger—increasing without bound—as \(x\) is made closer and closer to \(a.\)
-    We may choose to say a limit <q>equals infinity</q> instead of writing <q>does not exist,</q>
-    which provides less information about a function's behavior.
-    The former statement concedes that a limit doesn't exist while communicating that the function 
-    approaches \(\infty.\)
-    Likewise, writing 
-    \[\lim_{x \to a} f(x) = -\infty\]
-    asserts that the values of \(f(x)\) decrease without bound as \(x\) approaches \(a.\)
-    This statement suggests that the limit fails to exist <i>because</i> \(f(x)\) approaches negative infinity.
-    In either definition, the value of \(f(a)\) (or whether it is undefined) is irrelevant.
+    <a href="/Valculus/calculus/1.1-Defining-a-Limit.html#1/x2">Example 9</a> 
+    shows that \(y = 1/x^2\) grows without bound as 
+    \(x\) is made closer to \(0.\)
+    Specifically, \(y = 1/x^2\) has a <span class="emph">vertical asymptote</span> 
+    at \(x = 0\) because the curve becomes unbounded as \(x\) gets closer to \(0.\)
+    Generally, a function \(f(x)\) has a vertical asymptote at \(x = p\)
+    if any of the following is true:
+    \[
+    \baat{2} 
+    \lim_{x \to p^-} f(x) &= \infty \lspace &&\lim_{x \to p^+} f(x) = \infty \nl 
+    \lim_{x \to p^-} f(x) &= -\infty \lspace &&\lim_{x \to p^+} f(x) = -\infty \pd
+    \eaat
+    \]
+    In <a href="#limit-at-asymptote">Figure 10</a>, 
+    observe that 
+    the graph of \(y = 1/(x - p)\) has a vertical asymptote at \(x = p\)
+    because \(\lim_{x \to p^-} f(x) = -\infty\)
+    and \(\lim_{x \to p^+} f(x) = \infty.\)
 </p>
 
-<div class="box-title">INFINITE LIMITS</div>
+<div class="box-title">VERTICAL ASYMPTOTES</div>
 <div class="box">
-    Let \(f\) be a function defined on both sides of \(a,\) except possibly at \(a\) itself. 
-    <ol class="list-alpha">
-        <li>
-            The statement 
-            \[\lim_{x \to a} f(x) = \infty\]
-            means that \(f(x)\) increases without bound as \(x\) is made closer to \(a\)
-            (but not equal to \(a\)).
-        </li>
-        <li>
-            The statement 
-            \[\lim_{x \to a} f(x) = -\infty\]
-            means that \(f(x)\) decreases without bound as \(x\) is made closer to \(a\)
-            (but not equal to \(a\)).
-        </li>
-    </ol>
+    The line \(x = p\) is a <span class="emph">vertical asymptote</span> of \(f(x)\)
+    if any of the following is true:
+    \[
+    \baat{2} 
+    \lim_{x \to p^-} f(x) &= \infty \lspace &&\lim_{x \to p^+} f(x) = \infty \nl 
+    \lim_{x \to p^-} f(x) &= -\infty \lspace &&\lim_{x \to p^+} f(x) = -\infty \pd
+    \eaat
+    \]
 </div>
+
+<figure class="graph-lnx" id="graph-lnx">
+    <img src="../images/sectionImages/graph-lnx.jpg" alt="Figure 11">
+</figure>
+<style>
+    .graph-lnx::before{
+        content:'FIGURE 11';
+    }
+</style>
 
 <p>
-    Now let's merge the ideas of <i>limits at infinity</i> with <i>infinite limits</i>:
-    The family of functions \(1/x^k,\) 
-    where \(k\) is a positive constant, satisfies 
-    \begin{equation} 
-    \lim_{x \to \infty} x^k = \infty \pd \label{eq:lim-x^k}
-    \end{equation}
-    This formula is intuitive because if \(x\) is large, 
-    then \(x^k\) is also large.
-    Hence, \(x^k\) grows with \(x.\)
-    Accordingly, the fraction \(1/x^k\) shrinks to \(0\)
-    due to the division of \(1\) by an increasingly large number. 
-    Thus, 
-    \begin{equation} 
-    \lim_{x \to \infty} \frac{1}{x^k} = 0 \pd \label{eq:lim-1/x^k}
-    \end{equation}
-    In <a href="#ex-1/x">Example 6</a> we used this logic
-    to verify \(\eqref{eq:lim-1/x^k}\) for \(k = 1.\) 
+    The graphs of many functions feature vertical asymptotes. 
+    The natural logarithmic function \(y = \ln x,\)
+    for example, has a vertical asymptote at the \(y\)-axis (that is, at <nobr>\(x = 0\))</nobr> 
+    because \(\lim_{x \to 0^+} \ln x = -\infty.\)
+    (See <a href="#graph-lnx">Figure 11</a>.)
+    Moreover, the graph of the periodic function \(y = \tan x\) has vertical asymptotes 
+    at \(x = \pi/2,\) \(x = 3 \pi/2, \dots\) as well as at \(x = -\pi/2,\) \(x = -3 \pi/2, \dots.\)
+    Generally, all the vertical asymptotes are the lines \(x = \pi/2 + n \pi,\) where \(n\) is an integer.
+    (See <a href="#trig-graph-tan">Figure 12</a>.)
 </p>
 
-<div class="box-title">THE FAMILY OF FUNCTIONS \(x^k\) AND \(1/x^k\)</div>
-<div class="box">
-    If \(k\) is a positive constant, then 
-    \begin{flalign} 
-    &&\lim_{x \to \infty} x^k &= \infty \eqlabel{eq:lim-x^k} &\nl
-    \laWord{and} &&\lim_{x \to \infty} \frac{1}{x^k} &= 0 \pd \eqlabel{eq:lim-1/x^k}
-    \end{flalign}
-</div>
+<figure class="trig-graph-tan figure-center-one" id="trig-graph-tan">
+    <img src="../images/sectionImages/trig-graph-tan.jpg" alt="Figure 12">
+</figure>
+<style>
+    .trig-graph-tan::before{
+        content:'FIGURE 12';
+    }
+</style>
 
-<div class="example-title" id="ex-x^k"> EXAMPLE 9 </div>
+<div class="example-title"> EXAMPLE 10 </div>
 <div class="example">
     <div class="example-problem">  
-        Evaluate the following limits.
-        <ol class="list-alpha">
-            <li>
-                <span>
-                    \(\ds \lim_{x \to \infty} \frac{1}{x^5}\)
-                </span>
-            </li>
-            <li>
-                <span>
-                    \(\ds \lim_{x \to \infty} \sqrt[3]{x}\)
-                </span>
-            </li>
-            <li>
-                <span>
-                    \(\ds \lim_{x \to \infty} x^{-2}\)
-                </span>
-            </li>
-        </ol>
+        If \(f(x) = 3x/(x - 4),\) then find
+        \[\lim_{x \to 4^-} f(x) \and \lim_{x \to 4^+} f(x) \pd\]
     </div>
 </div>
-<button onclick="toggle9()" class="solution-button"></button>
-<div id="solution9" class="solution">
-    <ol class="list-alpha">
-        <li>
-            We use \(\eqref{eq:lim-1/x^k},\) 
-            where \(k = 5 \gt 0,\) to assert that 
-            \[\lim_{x \to \infty} \frac{1}{x^5} = \boxed 0\]
-        </li>
-        <hr>
-        <li>
-            Rewriting \(\sqrt[3]{x}\) as \(x^{1/3},\) we apply \(\eqref{eq:lim-x^k}\)
-            with \(k = 1/3 \gt 0\) to conclude
-            \[\lim_{x \to \infty} \sqrt[3]{x} = \boxed{\infty}\]
-            (We could also say the limit <b>does not exist</b>.)
-        </li>
-        <hr>
-        <li>
-            Since \(x^{-2} = 1/x^2,\) 
-            using \(\eqref{eq:lim-1/x^k}\) with \(k = 2 \gt 0\) shows 
-            \[\lim_{x \to \infty} x^{-2} = \lim_{x \to \infty} \frac{1}{x^2} = \boxed 0\]
-        </li>
-    </ol>
+<button onclick="toggle10()" class="solution-button"></button>
+<div id="solution10" class="solution">
+    Let's examine the behavior of \(f(x)\) on both sides of \(x = 4.\)
+    <figure class="graph-3x-x-4" id="graph-3x-x-4">
+        <img src="../images/sectionImages/graph-3x-x-4.jpg" alt="Figure 13">
+    </figure>
+    <style>
+        .graph-3x-x-4::before{
+            content:'FIGURE 13';
+        }
+    </style>
+    <p>
+        <span class="label-emph">Left-Hand Limit</span>
+        If \(x\) is close to \(4\) but <i>smaller</i> than \(4,\)
+        then the denominator \((x - 4)\) is a small negative number
+        while the numerator \(3x\) remains positive. Accordingly, 
+        the fraction \(f(x) = 3x/(x - 4)\) is a large <i>negative</i> number.
+        (A positive number is divided by a small negative number.)
+        For example, \(f(3.9) = -117\) and \(f(3.99) = -1197.\) 
+        Thus, \(f(x)\) approaches \(-\infty\) as \(x \to 4^-,\)
+        so we write 
+        \[\lim_{x \to 4^-} f(x) = \boxed{-\infty}\]
+    </p>
+    <p>
+        <span class="label-emph">Right-Hand Limit</span>
+        For \(x\) close to \(4\) but <i>bigger</i> than \(4,\)
+        the denominator \((x - 4)\) is a small positive number. 
+        At the same time, the numerator \(3x\) is positive. 
+        Hence, \(f(x) = 3x/(x - 4)\) is a large <i>positive</i> number. 
+        (A positive number is divided by a small positive number.)
+        As an example, \(f(4.1) = 123\) and \(f(4.01) = 1203.\)
+        The pattern is clear: As \(x \to 4^+,\) \(f(x)\) approaches \(\infty.\)
+        So 
+        \[\lim_{x \to 4^+} f(x) = \boxed{\infty}\]
+        (See <a href="#graph-3x-x-4">Figure 13</a>.)
+    </p>
 </div>
 
 <div class="section-summary">
@@ -1196,6 +1313,15 @@
         &&\lim_{x \to \infty} x^k &= \infty \eqlabel{eq:lim-x^k} &\nl
         \laWord{and} &&\lim_{x \to \infty} \frac{1}{x^k} &= 0 \pd \eqlabel{eq:lim-1/x^k}
         \end{flalign}
+        The line \(x = p\) is a <span class="emph">vertical asymptote</span> of \(f(x)\)
+        if any of the following is true:
+        \[
+        \baat{2} 
+        \lim_{x \to p^-} f(x) &= \infty \lspace &&\lim_{x \to p^+} f(x) = \infty \nl 
+        \lim_{x \to p^-} f(x) &= -\infty \lspace &&\lim_{x \to p^+} f(x) = -\infty \pd
+        \eaat
+        \]
+        Then the curve \(y = f(x)\) becomes unbounded on either side of the vertical asymptote.
     </p>
 </div>
 </main>
